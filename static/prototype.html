@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Churn Prediction Tool</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --sidebar-bg: #1a1a1f;
+  --sidebar-text: #a8a8b0;
+  --sidebar-active: #ffffff;
+  --text: #1a1a1f;
+  --text-secondary: #6b6b76;
+  --border: #e8e8e4;
+  --accent: #c8842e;
+  --accent-light: #fdf6ed;
+  --accent-dark: #9e6820;
+  --success: #2d7a4f;
+  --success-light: #edf7f1;
+  --warning: #b45309;
+  --warning-light: #fef9ee;
+  --danger: #c43333;
+  --danger-light: #fef2f2;
+  --radius: 10px;
+  --font: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== LOGIN SCREEN ===== */
+#loginScreen {
+  position: fixed; inset: 0; z-index: 1000;
+  background: var(--sidebar-bg);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+}
+
+.login-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 0 24px;
+}
+
+.login-icon {
+  width: 64px; height: 64px;
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 32px;
+}
+
+.login-icon svg { width: 28px; height: 28px; }
+
+.login-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.login-content p {
+  color: var(--sidebar-text);
+  font-size: 15px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.google-btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 14px 32px;
+  background: #fff;
+  border: none; border-radius: 8px;
+  font-family: var(--font);
+  font-size: 15px; font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.google-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.google-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+  position: fixed; left: 0; top: 0; bottom: 0; width: 260px;
+  background: var(--sidebar-bg);
+  display: flex; flex-direction: column;
+  z-index: 100;
+  transition: transform 0.25s ease;
+}
+#sidebar.hidden { transform: translateX(-260px); }
+
+.sidebar-header {
+  padding: 20px 16px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; gap: 10px;
+}
+.sidebar-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; flex-shrink: 0;
+}
+.sidebar-name {
+  flex: 1; font-size: 13px; font-weight: 500;
+  color: var(--sidebar-active);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.sidebar-logout {
+  font-size: 11px; color: var(--sidebar-text);
+  cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.sidebar-logout:hover { color: var(--sidebar-active); }
+
+.sidebar-new-btn {
+  margin: 16px 16px 8px;
+  padding: 10px 0;
+  background: var(--accent);
+  color: #fff; border: none; border-radius: 6px;
+  font-family: var(--font);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.sidebar-new-btn:hover { background: var(--accent-dark); }
+
+.sidebar-section-label {
+  padding: 16px 16px 6px;
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: rgba(255,255,255,0.25);
+}
+
+.sidebar-sessions { flex: 1; overflow-y: auto; }
+
+.session-entry {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.1s;
+}
+.session-entry:hover { background: rgba(255,255,255,0.04); }
+.session-entry.active {
+  background: rgba(255,255,255,0.06);
+  border-left-color: var(--accent);
+}
+.session-entry-name {
+  font-size: 13px; font-weight: 500;
+  color: var(--sidebar-active);
+  margin-bottom: 4px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.session-entry-meta {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; color: var(--sidebar-text);
+}
+.session-badge {
+  display: inline-block;
+  padding: 2px 8px; border-radius: 3px;
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.3px;
+}
+.session-badge.ready { background: rgba(45,122,79,0.2); color: #5ec98a; }
+.session-badge.building { background: rgba(200,132,46,0.2); color: var(--accent); }
+.session-badge.uploaded { background: rgba(168,168,176,0.15); color: var(--sidebar-text); }
+
+/* ===== MOBILE HAMBURGER ===== */
+#hamburger {
+  display: none; position: fixed; top: 12px; left: 12px; z-index: 200;
+  width: 40px; height: 40px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px;
+  cursor: pointer; font-size: 18px;
+  line-height: 40px; text-align: center;
+}
+
+@media (max-width: 768px) {
+  #sidebar { transform: translateX(-260px); }
+  #sidebar.open { transform: translateX(0); }
+  #hamburger { display: block; }
+  .main-content { margin-left: 0 !important; }
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 40px;
+  max-width: 1000px;
+}
+
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* ===== STEP INDICATOR ===== */
+.steps {
+  display: flex; align-items: center; gap: 0;
+  margin-bottom: 40px;
+  padding: 0 4px;
+}
+.step-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 500;
+  color: var(--text-secondary);
+}
+.step-item.active { color: var(--text); }
+.step-item.done { color: var(--success); }
+
+.step-number {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 600;
+  border: 2px solid var(--border);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+.step-item.active .step-number {
+  border-color: var(--accent); color: var(--accent);
+  background: var(--accent-light);
+}
+.step-item.done .step-number {
+  border-color: var(--success); color: #fff;
+  background: var(--success);
+}
+
+.step-line {
+  width: 40px; height: 2px;
+  background: var(--border);
+  margin: 0 12px;
+  flex-shrink: 0;
+}
+.step-line.done { background: var(--success); }
+
+/* ===== SCREEN: UPLOAD ===== */
+.screen-title {
+  font-size: 24px; font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+.screen-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.guidance-box {
+  background: var(--accent-light);
+  border: 1px solid #f0e0c4;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+.guidance-box h3 {
+  font-size: 13px; font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--accent-dark);
+}
+.guidance-list {
+  list-style: none;
+  margin-bottom: 12px;
+}
+.guidance-list li {
+  font-size: 14px;
+  padding: 4px 0;
+  display: flex; gap: 8px;
+}
+.guidance-list li span.label { font-weight: 600; min-width: 100px; }
+.guidance-list li span.desc { color: var(--text-secondary); }
+
+.guidance-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 13px; color: var(--text-secondary);
+  padding-top: 8px;
+  border-top: 1px solid #f0e0c4;
+}
+.guidance-footer a {
+  color: var(--accent);
+  text-decoration: none; font-weight: 500;
+}
+.guidance-footer a:hover { text-decoration: underline; }
+
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 48px 32px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--surface);
+  transition: border-color 0.2s, background 0.2s;
+  margin-bottom: 16px;
+}
+.drop-zone:hover, .drop-zone.dragover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.drop-zone-icon { font-size: 32px; margin-bottom: 12px; opacity: 0.4; }
+.drop-zone-text { font-size: 14px; color: var(--text-secondary); }
+.drop-zone-filename {
+  font-family: var(--mono);
+  font-size: 14px; font-weight: 500;
+  color: var(--text);
+  margin-top: 8px;
+}
+
+.desc-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 14px;
+  resize: vertical;
+  min-height: 72px;
+  margin-bottom: 16px;
+  background: var(--surface);
+  transition: border-color 0.15s;
+}
+.desc-field:focus { outline: none; border-color: var(--accent); }
+.desc-field::placeholder { color: #b0b0b8; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px;
+  border: none; border-radius: 8px;
+  font-family: var(--font);
+  font-size: 14px; font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.15s, background 0.15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) { background: var(--accent-dark); box-shadow: 0 4px 12px rgba(200,132,46,0.3); }
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover:not(:disabled) { background: #f5f5f3; }
+
+.btn-large {
+  padding: 16px 40px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+/* Data summary card */
+.data-summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-top: 24px;
+}
+.data-summary h3 {
+  font-size: 16px; font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.data-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.data-stat {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 16px;
+}
+.data-stat-label {
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.data-stat-value {
+  font-family: var(--mono);
+  font-size: 20px; font-weight: 500;
+  color: var(--text);
+}
+
+.column-list { margin-bottom: 24px; }
+.column-list h4 {
+  font-size: 13px; font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+.column-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.column-row:last-child { border-bottom: none; }
+.column-check {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--success-light); color: var(--success);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; flex-shrink: 0;
+}
+.column-role { font-weight: 600; min-width: 120px; }
+.column-arrow { color: var(--text-secondary); font-size: 12px; }
+.column-source {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.summary-actions {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.edit-link {
+  font-size: 13px; color: var(--text-secondary);
+  text-decoration: none; cursor: pointer;
+}
+.edit-link:hover { color: var(--text); text-decoration: underline; }
+
+/* ===== SCREEN: BUSINESS ===== */
+.business-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.form-section {
+  margin-bottom: 28px;
+}
+.form-section:last-of-type { margin-bottom: 0; }
+
+.form-label {
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 4px;
+}
+.form-hint {
+  font-size: 13px; color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.mcq-group {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+.mcq-group:last-of-type { border-bottom: none; padding-bottom: 0; }
+.mcq-question {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 14px;
+}
+.mcq-options {
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.mcq-option {
+  display: flex; align-items: center;
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background: var(--surface);
+  transition: border-color 0.15s, background 0.15s;
+}
+.mcq-option:hover { border-color: var(--accent); background: var(--accent-light); }
+.mcq-option.selected { border-color: var(--accent); background: var(--accent-light); }
+.mcq-option input { display: none; }
+
+.business-actions {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 32px;
+}
+
+/* ===== SCREEN: PREDICTIONS ===== */
+
+/* Building phase */
+.building-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.building-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+}
+.building-spinner {
+  width: 20px; height: 20px;
+  border: 2.5px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.building-header h2 {
+  font-size: 18px; font-weight: 600;
+}
+
+.round-block {
+  margin-bottom: 24px;
+}
+.round-label {
+  font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.round-steps {
+  border-left: 2px solid var(--border);
+  padding-left: 20px;
+  margin-left: 4px;
+}
+.round-step {
+  position: relative;
+  padding: 8px 0;
+  font-size: 14px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.round-step::before {
+  content: '';
+  position: absolute;
+  left: -25px; top: 12px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+}
+.round-step.done::before { background: var(--success); }
+.round-step.active::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+.round-step.warning::before { background: var(--warning); }
+
+.round-step-text { font-weight: 500; }
+.round-step-detail {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-family: var(--mono);
+  font-weight: 400;
+}
+.round-step-warning {
+  font-size: 13px;
+  color: var(--warning);
+  background: var(--warning-light);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.building-footer {
+  font-size: 13px; color: var(--text-secondary);
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* Results phase */
+.results-container { }
+
+.results-hero {
+  background: var(--success-light);
+  border: 2px solid #b8e0c8;
+  border-radius: var(--radius);
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.results-hero-label {
+  font-size: 13px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--success);
+  margin-bottom: 16px;
+}
+.results-hero-number {
+  font-family: var(--mono);
+  font-size: 56px; font-weight: 700;
+  color: var(--success);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.results-hero-caption {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.results-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.results-card h3 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.feature-bar {
+  display: flex; align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.feature-rank {
+  font-family: var(--mono);
+  font-size: 12px; font-weight: 500;
+  color: var(--text-secondary);
+  width: 20px; text-align: right; flex-shrink: 0;
+}
+.feature-name {
+  font-size: 14px; font-weight: 500;
+  width: 220px; flex-shrink: 0;
+}
+.feature-track {
+  flex: 1; height: 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.feature-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+.feature-pct {
+  font-family: var(--mono);
+  font-size: 13px; font-weight: 500;
+  width: 36px; text-align: right; flex-shrink: 0;
+}
+
+.download-section {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.details-toggle {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 12px 0;
+  border: none; background: none;
+  font-family: var(--font);
+  width: 100%;
+}
+.details-toggle:hover { color: var(--text); }
+.details-toggle-arrow {
+  transition: transform 0.2s;
+  font-size: 12px;
+}
+.details-toggle.open .details-toggle-arrow { transform: rotate(90deg); }
+
+.details-content {
+  display: none;
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.details-content.open { display: block; }
+
+.details-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 13px;
+}
+.details-table th, .details-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.details-table th {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+.details-table td { font-family: var(--mono); font-size: 13px; }
+.details-table tr.highlight { background: var(--success-light); }
+
+/* Chat bar */
+.chat-bar {
+  position: fixed;
+  bottom: 0; left: 260px; right: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  z-index: 50;
+  transition: height 0.25s ease;
+}
+.chat-bar.collapsed { height: 52px; overflow: hidden; }
+.chat-bar.expanded { height: 320px; }
+
+.chat-bar-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+}
+.chat-bar-header:hover { color: var(--text); }
+
+.chat-bar-body {
+  display: flex; flex-direction: column;
+  height: calc(100% - 52px);
+}
+.chat-messages {
+  flex: 1; overflow-y: auto;
+  padding: 0 24px 12px;
+}
+.chat-msg {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.chat-msg.user { text-align: right; }
+.chat-bubble {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 12px;
+  max-width: 70%;
+  line-height: 1.5;
+}
+.chat-msg.user .chat-bubble { background: var(--accent); color: #fff; }
+.chat-msg.system .chat-bubble { background: var(--bg); color: var(--text); }
+
+.chat-input-row {
+  display: flex; gap: 8px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--border);
+}
+.chat-input-field {
+  flex: 1; padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 14px;
+  background: var(--bg);
+}
+.chat-input-field:focus { outline: none; border-color: var(--accent); }
+.chat-send-btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #fff; border: none;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer;
+}
+.chat-send-btn:hover { background: var(--accent-dark); }
+
+/* Analyzing spinner overlay */
+.analyzing-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(250,250,248,0.85);
+  align-items: center; justify-content: center;
+  flex-direction: column; gap: 16px;
+}
+.analyzing-overlay.active { display: flex; }
+.analyzing-text {
+  font-size: 16px; font-weight: 500;
+  color: var(--text);
+}
+.analyzing-spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .main-content { padding: 20px 16px; }
+  .data-stats { grid-template-columns: 1fr; }
+  .mcq-options { flex-direction: column; }
+  .feature-name { width: 140px; }
+  .results-hero { padding: 24px; }
+  .results-hero-number { font-size: 40px; }
+  .chat-bar { left: 0; }
+}
+
+@media (max-width: 480px) {
+  .steps { gap: 0; }
+  .step-line { width: 20px; margin: 0 6px; }
+  .step-item span { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== LOGIN ===== -->
+<div id="loginScreen">
+  <div class="login-content">
+    <div class="login-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#c8842e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    </div>
+    <h1>Predict which customers will leave</h1>
+    <p>Upload your transaction history. Get a risk score for every customer.</p>
+    <button class="google-btn" onclick="showApp()">
+      <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      Sign in with Google
+    </button>
+  </div>
+</div>
+
+<!-- ===== HAMBURGER ===== -->
+<button id="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
+
+<!-- ===== SIDEBAR ===== -->
+<div id="sidebar" class="hidden">
+  <div class="sidebar-header">
+    <div class="sidebar-avatar">RK</div>
+    <span class="sidebar-name">Rahul Kumar</span>
+    <span class="sidebar-logout" onclick="showLogin()">Logout</span>
+  </div>
+  <button class="sidebar-new-btn" onclick="goToScreen('upload')">+ New Session</button>
+
+  <div class="sidebar-section-label">Sessions</div>
+  <div class="sidebar-sessions">
+    <div class="session-entry active" onclick="goToScreen('results')">
+      <div class="session-entry-name">Q4 Retail Transactions</div>
+      <div class="session-entry-meta">
+        <span class="session-badge ready">Predictions ready</span>
+        <span>28 Feb</span>
+      </div>
+    </div>
+    <div class="session-entry" onclick="goToScreen('building')">
+      <div class="session-entry-name">Wholesale Accounts 2024</div>
+      <div class="session-entry-meta">
+        <span class="session-badge building">Building model</span>
+        <span>27 Feb</span>
+      </div>
+    </div>
+    <div class="session-entry" onclick="goToScreen('upload')">
+      <div class="session-entry-name">Jan-Feb Pilot Data</div>
+      <div class="session-entry-meta">
+        <span class="session-badge uploaded">Data uploaded</span>
+        <span>25 Feb</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ANALYZING OVERLAY ===== -->
+<div class="analyzing-overlay" id="analyzingOverlay">
+  <div class="analyzing-spinner"></div>
+  <div class="analyzing-text" id="analyzingText">Analyzing your file...</div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main-content" id="mainContent" style="display:none;">
+
+  <!-- STEP INDICATOR -->
+  <div class="steps" id="stepIndicator">
+    <div class="step-item active" id="step1">
+      <div class="step-number">1</div>
+      <span>Upload</span>
+    </div>
+    <div class="step-line" id="line1"></div>
+    <div class="step-item" id="step2">
+      <div class="step-number">2</div>
+      <span>Your Business</span>
+    </div>
+    <div class="step-line" id="line2"></div>
+    <div class="step-item" id="step3">
+      <div class="step-number">3</div>
+      <span>Predictions</span>
+    </div>
+  </div>
+
+  <!-- ===== UPLOAD SCREEN ===== -->
+  <div class="screen active" id="screenUpload">
+    <h1 class="screen-title">Upload your transaction data</h1>
+    <p class="screen-subtitle">We need your customer transaction history to build predictions.</p>
+
+    <div class="guidance-box">
+      <h3>Your file should have:</h3>
+      <ul class="guidance-list">
+        <li><span class="label">Customer ID</span><span class="desc">— who made the purchase</span></li>
+        <li><span class="label">Date</span><span class="desc">— when it happened</span></li>
+        <li><span class="label">Amount</span><span class="desc">— how much they spent</span></li>
+      </ul>
+      <div class="guidance-footer">
+        <span>Optional: Product, Category, Region, Channel</span>
+        <a href="#">Download sample file</a>
+      </div>
+    </div>
+
+    <div class="drop-zone" id="dropZone" onclick="simulateUpload()">
+      <div class="drop-zone-icon">&#128195;</div>
+      <div class="drop-zone-text">Drop CSV files here or click to upload</div>
+      <div class="drop-zone-filename" id="dropFileName"></div>
+    </div>
+
+    <textarea class="desc-field" id="descField" placeholder="What does this data represent?" style="display:none;"></textarea>
+    <div id="uploadBtnWrap" style="display:none;">
+      <button class="btn btn-primary" id="uploadBtn" onclick="doUpload()">Upload & Analyze</button>
+    </div>
+
+    <!-- Data Summary (hidden until "uploaded") -->
+    <div class="data-summary" id="dataSummary" style="display:none;">
+      <h3>Your data at a glance</h3>
+
+      <div class="data-stats">
+        <div class="data-stat">
+          <div class="data-stat-label">Customers</div>
+          <div class="data-stat-value">1,247</div>
+        </div>
+        <div class="data-stat">
+          <div class="data-stat-label">Transactions</div>
+          <div class="data-stat-value">34,892</div>
+        </div>
+        <div class="data-stat">
+          <div class="data-stat-label">Date Range</div>
+          <div class="data-stat-value">Jan — Dec 2024</div>
+        </div>
+      </div>
+
+      <div class="column-list">
+        <h4>We identified these columns:</h4>
+        <div class="column-row">
+          <div class="column-check">&#10003;</div>
+          <span class="column-role">Customer ID</span>
+          <span class="column-arrow">&#8592;</span>
+          <span class="column-source">cust_id</span>
+        </div>
+        <div class="column-row">
+          <div class="column-check">&#10003;</div>
+          <span class="column-role">Purchase Date</span>
+          <span class="column-arrow">&#8592;</span>
+          <span class="column-source">order_date</span>
+        </div>
+        <div class="column-row">
+          <div class="column-check">&#10003;</div>
+          <span class="column-role">Amount</span>
+          <span class="column-arrow">&#8592;</span>
+          <span class="column-source">total_amount</span>
+        </div>
+        <div class="column-row">
+          <div class="column-check">&#10003;</div>
+          <span class="column-role">Product</span>
+          <span class="column-arrow">&#8592;</span>
+          <span class="column-source">item_name</span>
+        </div>
+        <div class="column-row">
+          <div class="column-check">&#10003;</div>
+          <span class="column-role">Region</span>
+          <span class="column-arrow">&#8592;</span>
+          <span class="column-source">city</span>
+        </div>
+      </div>
+
+      <div class="summary-actions">
+        <a class="edit-link">Something wrong? Edit mappings</a>
+        <button class="btn btn-primary" onclick="goToScreen('business')">Looks good &#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BUSINESS SCREEN ===== -->
+  <div class="screen" id="screenBusiness">
+    <h1 class="screen-title">Help us understand your business</h1>
+    <p class="screen-subtitle">Your answers help us focus on the patterns that matter for your customers.</p>
+
+    <div class="business-form">
+      <div class="form-section">
+        <div class="form-label">Anything we should know about your customers?</div>
+        <div class="form-hint">Optional. Share context about purchase patterns, seasonal trends, or churn signals you have noticed.</div>
+        <textarea class="desc-field" placeholder='e.g. "Customers who buy only during festivals tend to leave after the season"'></textarea>
+      </div>
+
+      <div class="mcq-group">
+        <div class="mcq-question">How often do your customers purchase?</div>
+        <div class="mcq-options">
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="freq">Weekly</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="freq">Monthly</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="freq">Quarterly</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="freq">Varies</label>
+        </div>
+      </div>
+
+      <div class="mcq-group">
+        <div class="mcq-question">After how many days without a purchase would you consider a customer lost?</div>
+        <div class="mcq-options">
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="churn">30 days</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="churn">60 days</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="churn">90 days</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="churn">120 days</label>
+        </div>
+      </div>
+
+      <div class="mcq-group">
+        <div class="mcq-question">What type of business is this?</div>
+        <div class="mcq-options">
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="biz">Subscription</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="biz">One-time purchase</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="biz">Repeat purchase</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="biz">Other</label>
+        </div>
+      </div>
+
+      <div class="mcq-group">
+        <div class="mcq-question">Does your business have seasonal patterns?</div>
+        <div class="mcq-options">
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="season">Yes, holiday peaks</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="season">Yes, weather-driven</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="season">No, consistent year-round</label>
+          <label class="mcq-option" onclick="selectOption(this)"><input type="radio" name="season">Not sure</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="business-actions">
+      <button class="btn btn-secondary" onclick="goToScreen('upload')">&#8592; Back</button>
+      <button class="btn btn-primary btn-large" onclick="goToScreen('building')">Build Predictions</button>
+    </div>
+  </div>
+
+  <!-- ===== BUILDING SCREEN ===== -->
+  <div class="screen" id="screenBuilding">
+    <div class="building-container">
+      <div class="building-header">
+        <div class="building-spinner"></div>
+        <h2>Building your prediction model...</h2>
+      </div>
+
+      <!-- Round 1 -->
+      <div class="round-block">
+        <div class="round-label">Round 1</div>
+        <div class="round-steps">
+          <div class="round-step done">
+            <div class="round-step-text">Prepared 10 customer features</div>
+            <div class="round-step-detail">recency, purchase frequency (30d, 60d, 90d), total spend, average order value, frequency trend, spending trend, purchase gap average, purchase gap variation</div>
+          </div>
+          <div class="round-step done">
+            <div class="round-step-text">Trained prediction models</div>
+          </div>
+          <div class="round-step done warning">
+            <div class="round-step-text">Evaluated results</div>
+            <div class="round-step-warning">
+              "Days since last purchase" dominated predictions at 62%. Removing it and adding new features to build a more balanced model.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Round 2 -->
+      <div class="round-block">
+        <div class="round-label">Round 2</div>
+        <div class="round-steps">
+          <div class="round-step done">
+            <div class="round-step-text">Added 3 new features</div>
+            <div class="round-step-detail">purchase frequency trend, product variety change, weekend shopping ratio</div>
+          </div>
+          <div class="round-step active">
+            <div class="round-step-text">Training models...</div>
+          </div>
+          <div class="round-step">
+            <div class="round-step-text" style="color: var(--text-secondary);">Evaluating results</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="building-footer">
+        This can take 1-3 minutes. Your session is saved — you can come back to it.
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 24px;">
+      <button class="btn btn-secondary" onclick="goToScreen('results')" style="font-size: 13px;">
+        Skip to results (demo) &#8594;
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== RESULTS SCREEN ===== -->
+  <div class="screen" id="screenResults">
+
+    <div class="results-hero">
+      <div class="results-hero-label">Predictions Ready</div>
+      <div class="results-hero-number">85 out of 100</div>
+      <div class="results-hero-caption">at-risk customers identified</div>
+    </div>
+
+    <div class="results-card">
+      <h3>What drives customers to leave</h3>
+      <div class="feature-bar">
+        <span class="feature-rank">1.</span>
+        <span class="feature-name">Purchase frequency declining</span>
+        <div class="feature-track"><div class="feature-fill" style="width:100%"></div></div>
+        <span class="feature-pct">34%</span>
+      </div>
+      <div class="feature-bar">
+        <span class="feature-rank">2.</span>
+        <span class="feature-name">Fewer products per order</span>
+        <div class="feature-track"><div class="feature-fill" style="width:65%"></div></div>
+        <span class="feature-pct">22%</span>
+      </div>
+      <div class="feature-bar">
+        <span class="feature-rank">3.</span>
+        <span class="feature-name">Longer gaps between orders</span>
+        <div class="feature-track"><div class="feature-fill" style="width:53%"></div></div>
+        <span class="feature-pct">18%</span>
+      </div>
+      <div class="feature-bar">
+        <span class="feature-rank">4.</span>
+        <span class="feature-name">Stopped buying from top category</span>
+        <div class="feature-track"><div class="feature-fill" style="width:35%"></div></div>
+        <span class="feature-pct">12%</span>
+      </div>
+      <div class="feature-bar">
+        <span class="feature-rank">5.</span>
+        <span class="feature-name">Switched from weekday purchases</span>
+        <div class="feature-track"><div class="feature-fill" style="width:24%"></div></div>
+        <span class="feature-pct">8%</span>
+      </div>
+    </div>
+
+    <div class="download-section">
+      <button class="btn btn-primary btn-large" onclick="alert('Download triggered (mock)')">
+        &#8595; Download Predictions
+      </button>
+    </div>
+
+    <div class="results-card">
+      <button class="details-toggle" onclick="toggleDetails(this)">
+        <span class="details-toggle-arrow">&#9654;</span>
+        View model details
+      </button>
+      <div class="details-content">
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
+          Model: Random Forest &mdash; trained across 2 rounds with 12 features on 1,247 customers.
+        </p>
+        <table class="details-table">
+          <thead>
+            <tr><th>Round</th><th>Model</th><th>AUC</th><th>F1</th><th>Precision</th><th>Recall</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td><td>XGBoost</td><td>0.91</td><td>0.82</td><td>0.79</td><td>0.85</td>
+            </tr>
+            <tr>
+              <td>1</td><td>Random Forest</td><td>0.89</td><td>0.84</td><td>0.88</td><td>0.81</td>
+            </tr>
+            <tr class="highlight">
+              <td>2</td><td>Random Forest</td><td>0.90</td><td>0.87</td><td>0.89</td><td>0.85</td>
+            </tr>
+            <tr>
+              <td>2</td><td>XGBoost</td><td>0.92</td><td>0.84</td><td>0.82</td><td>0.87</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CHAT BAR ===== -->
+<div class="chat-bar collapsed" id="chatBar" style="display:none;">
+  <div class="chat-bar-header" onclick="toggleChat()">
+    <span>&#9654; Have a question? Ask here...</span>
+    <span style="font-size:12px; color:var(--text-secondary)">&#9650;&#9660;</span>
+  </div>
+  <div class="chat-bar-body">
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-msg system">
+        <div class="chat-bubble">Your model is ready. Ask me about the predictions, features, or methodology.</div>
+      </div>
+    </div>
+    <div class="chat-input-row">
+      <input class="chat-input-field" id="chatInput" type="text" placeholder="Type a message...">
+      <button class="chat-send-btn" onclick="sendChat()">Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Navigation state
+let currentScreen = 'login';
+
+function showLogin() {
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('mainContent').style.display = 'none';
+  document.getElementById('sidebar').classList.add('hidden');
+  document.getElementById('chatBar').style.display = 'none';
+  currentScreen = 'login';
+}
+
+function showApp() {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('mainContent').style.display = 'block';
+  document.getElementById('sidebar').classList.remove('hidden');
+  goToScreen('upload');
+}
+
+function goToScreen(screen) {
+  // Hide all screens
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  currentScreen = screen;
+
+  // Update step indicator
+  const steps = ['upload', 'business', 'building', 'results'];
+  const stepIndex = screen === 'building' || screen === 'results' ? 2 :
+                    screen === 'business' ? 1 : 0;
+
+  ['step1','step2','step3'].forEach((id, i) => {
+    const el = document.getElementById(id);
+    el.classList.remove('active', 'done');
+    if (i < stepIndex) el.classList.add('done');
+    else if (i === stepIndex) el.classList.add('active');
+  });
+  ['line1','line2'].forEach((id, i) => {
+    const el = document.getElementById(id);
+    el.classList.toggle('done', i < stepIndex);
+  });
+
+  // Show/hide chat bar
+  const showChat = (screen === 'building' || screen === 'results');
+  document.getElementById('chatBar').style.display = showChat ? 'block' : 'none';
+
+  // Show target screen
+  const screenMap = {
+    upload: 'screenUpload',
+    business: 'screenBusiness',
+    building: 'screenBuilding',
+    results: 'screenResults',
+  };
+  document.getElementById(screenMap[screen]).classList.add('active');
+
+  // Update sidebar active state
+  document.querySelectorAll('.session-entry').forEach(e => e.classList.remove('active'));
+}
+
+// Upload simulation
+function simulateUpload() {
+  document.getElementById('dropFileName').textContent = 'transactions_q4_2024.csv';
+  document.getElementById('descField').style.display = 'block';
+  document.getElementById('uploadBtnWrap').style.display = 'block';
+}
+
+function doUpload() {
+  const overlay = document.getElementById('analyzingOverlay');
+  document.getElementById('analyzingText').textContent = 'Analyzing your file...';
+  overlay.classList.add('active');
+
+  setTimeout(() => {
+    document.getElementById('analyzingText').textContent = 'Mapping columns...';
+  }, 800);
+
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    document.getElementById('dropZone').style.display = 'none';
+    document.getElementById('descField').style.display = 'none';
+    document.getElementById('uploadBtnWrap').style.display = 'none';
+    document.getElementById('dataSummary').style.display = 'block';
+  }, 2000);
+}
+
+// MCQ selection
+function selectOption(label) {
+  const group = label.closest('.mcq-group');
+  group.querySelectorAll('.mcq-option').forEach(o => o.classList.remove('selected'));
+  label.classList.add('selected');
+  label.querySelector('input').checked = true;
+}
+
+// Details toggle
+function toggleDetails(btn) {
+  btn.classList.toggle('open');
+  const content = btn.nextElementSibling;
+  content.classList.toggle('open');
+}
+
+// Chat
+function toggleChat() {
+  const bar = document.getElementById('chatBar');
+  bar.classList.toggle('collapsed');
+  bar.classList.toggle('expanded');
+  if (bar.classList.contains('expanded')) {
+    document.getElementById('chatInput').focus();
+  }
+}
+
+function sendChat() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const messages = document.getElementById('chatMessages');
+
+  const userMsg = document.createElement('div');
+  userMsg.className = 'chat-msg user';
+  userMsg.innerHTML = '<div class="chat-bubble">' + escapeHtml(text) + '</div>';
+  messages.appendChild(userMsg);
+
+  input.value = '';
+
+  setTimeout(() => {
+    const sysMsg = document.createElement('div');
+    sysMsg.className = 'chat-msg system';
+    sysMsg.innerHTML = '<div class="chat-bubble">I can answer questions about your predictions once the model is ready. For now, the pipeline is processing your data.</div>';
+    messages.appendChild(sysMsg);
+    messages.scrollTop = messages.scrollHeight;
+  }, 600);
+
+  messages.scrollTop = messages.scrollHeight;
+}
+
+document.getElementById('chatInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') sendChat();
+});
+
+function escapeHtml(str) {
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,2697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Churn Intervention — Call List</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --sidebar-bg: #1a1a1f;
+  --sidebar-text: #a8a8b0;
+  --sidebar-active: #ffffff;
+  --text: #1a1a1f;
+  --text-secondary: #6b6b76;
+  --border: #e8e8e4;
+  --accent: #c8842e;
+  --accent-light: #fdf6ed;
+  --accent-dark: #9e6820;
+  --success: #2d7a4f;
+  --success-light: #edf7f1;
+  --warning: #b45309;
+  --warning-light: #fef9ee;
+  --danger: #c43333;
+  --danger-light: #fef2f2;
+  --high: #c43333;
+  --med: #b45309;
+  --low: #6b6b76;
+  --radius: 10px;
+  --font: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== LANDING PAGE (Pre-Login) ===== */
+#landingScreen {
+  position: fixed; inset: 0; z-index: 1000;
+  background: var(--sidebar-bg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-inner {
+  max-width: 680px;
+  width: 100%;
+  padding: 60px 24px 80px;
+}
+
+.landing-headline {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+/* Sample call list on landing */
+.landing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.landing-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--sidebar-text);
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.landing-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  vertical-align: top;
+}
+.landing-table tr:last-child td { border-bottom: none; }
+.landing-table .cust-name { font-weight: 600; color: #fff; white-space: nowrap; }
+.landing-table .last-order { font-family: var(--mono); font-size: 13px; color: var(--sidebar-text); white-space: nowrap; }
+.landing-table .what-changed { color: rgba(255,255,255,0.6); font-size: 13px; }
+
+.risk-dot {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.risk-dot::before {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.risk-dot.high { color: #f87171; }
+.risk-dot.high::before { background: #ef4444; }
+.risk-dot.med { color: #fbbf24; }
+.risk-dot.med::before { background: #f59e0b; }
+.risk-dot.low { color: var(--sidebar-text); }
+.risk-dot.low::before { background: #6b7280; }
+
+.landing-cta-block {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 48px;
+}
+.landing-cta-line {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.landing-cta-sub {
+  font-size: 16px;
+  color: var(--sidebar-text);
+  margin-bottom: 28px;
+}
+
+.google-btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 14px 32px;
+  background: #fff;
+  border: none; border-radius: 8px;
+  font-family: var(--font);
+  font-size: 15px; font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.google-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.google-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.landing-section {
+  margin-bottom: 40px;
+}
+.landing-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--sidebar-text);
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 20px;
+}
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.how-step-num {
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.how-step-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.how-step-desc {
+  font-size: 13px;
+  color: var(--sidebar-text);
+  line-height: 1.5;
+}
+
+.diff-item {
+  margin-bottom: 24px;
+}
+.diff-item:last-child { margin-bottom: 0; }
+.diff-item-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.diff-item-desc {
+  font-size: 14px;
+  color: var(--sidebar-text);
+  line-height: 1.6;
+}
+
+.coming-list {
+  list-style: none;
+}
+.coming-list li {
+  font-size: 14px;
+  color: var(--sidebar-text);
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+}
+.coming-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 13px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+}
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+  position: fixed; left: 0; top: 0; bottom: 0; width: 260px;
+  background: var(--sidebar-bg);
+  display: flex; flex-direction: column;
+  z-index: 100;
+  transition: transform 0.25s ease;
+}
+#sidebar.hidden { transform: translateX(-260px); }
+
+.sidebar-header {
+  padding: 20px 16px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; gap: 10px;
+}
+.sidebar-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; flex-shrink: 0;
+}
+.sidebar-name {
+  flex: 1; font-size: 13px; font-weight: 500;
+  color: var(--sidebar-active);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.sidebar-logout {
+  font-size: 11px; color: var(--sidebar-text);
+  cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.sidebar-logout:hover { color: var(--sidebar-active); }
+
+.sidebar-new-btn {
+  margin: 16px 16px 8px;
+  padding: 10px 0;
+  background: var(--accent);
+  color: #fff; border: none; border-radius: 6px;
+  font-family: var(--font);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.sidebar-new-btn:hover { background: var(--accent-dark); }
+
+.sidebar-section-label {
+  padding: 16px 16px 6px;
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: rgba(255,255,255,0.25);
+}
+
+.sidebar-sessions { flex: 1; overflow-y: auto; }
+
+.session-entry {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.1s;
+}
+.session-entry:hover { background: rgba(255,255,255,0.04); }
+.session-entry.active {
+  background: rgba(255,255,255,0.06);
+  border-left-color: var(--accent);
+}
+.session-entry-name {
+  font-size: 13px; font-weight: 500;
+  color: var(--sidebar-active);
+  margin-bottom: 4px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.session-entry-meta {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; color: var(--sidebar-text);
+}
+.session-badge {
+  display: inline-block;
+  padding: 2px 8px; border-radius: 3px;
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.3px;
+}
+.session-badge.ready { background: rgba(45,122,79,0.2); color: #5ec98a; }
+.session-badge.building { background: rgba(200,132,46,0.2); color: var(--accent); }
+.session-badge.uploaded { background: rgba(168,168,176,0.15); color: var(--sidebar-text); }
+
+/* ===== MOBILE HAMBURGER ===== */
+#hamburger {
+  display: none; position: fixed; top: 12px; left: 12px; z-index: 200;
+  width: 40px; height: 40px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px;
+  cursor: pointer; font-size: 18px;
+  line-height: 40px; text-align: center;
+}
+
+@media (max-width: 768px) {
+  #sidebar { transform: translateX(-260px); }
+  #sidebar.open { transform: translateX(0); }
+  #hamburger { display: block; }
+  .main-content { margin-left: 0 !important; }
+  .how-steps { grid-template-columns: 1fr; }
+  .chat-bar { left: 0 !important; }
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 40px;
+  max-width: 1000px;
+}
+
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* ===== STEP INDICATOR ===== */
+.steps {
+  display: flex; align-items: center; gap: 0;
+  margin-bottom: 40px;
+  padding: 0 4px;
+}
+.step-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 500;
+  color: var(--text-secondary);
+}
+.step-item.active { color: var(--text); }
+.step-item.done { color: var(--success); }
+
+.step-number {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 600;
+  border: 2px solid var(--border);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+.step-item.active .step-number {
+  border-color: var(--accent); color: var(--accent);
+  background: var(--accent-light);
+}
+.step-item.done .step-number {
+  border-color: var(--success); color: #fff;
+  background: var(--success);
+}
+
+.step-line {
+  width: 40px; height: 2px;
+  background: var(--border);
+  margin: 0 12px;
+  flex-shrink: 0;
+}
+.step-line.done { background: var(--success); }
+
+/* ===== SHARED COMPONENTS ===== */
+.screen-title {
+  font-size: 24px; font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+.screen-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 48px 32px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--surface);
+  transition: border-color 0.2s, background 0.2s;
+  margin-bottom: 16px;
+}
+.drop-zone:hover, .drop-zone.dragover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.drop-zone-icon { font-size: 32px; margin-bottom: 12px; opacity: 0.4; }
+.drop-zone-text { font-size: 14px; color: var(--text-secondary); }
+.drop-zone-compat {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 12px;
+  opacity: 0.7;
+}
+.drop-zone-filename {
+  font-family: var(--mono);
+  font-size: 14px; font-weight: 500;
+  color: var(--text);
+  margin-top: 8px;
+}
+
+.desc-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 14px;
+  resize: vertical;
+  min-height: 72px;
+  margin-bottom: 16px;
+  background: var(--surface);
+  transition: border-color 0.15s;
+}
+.desc-field:focus { outline: none; border-color: var(--accent); }
+.desc-field::placeholder { color: #b0b0b8; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px;
+  border: none; border-radius: 8px;
+  font-family: var(--font);
+  font-size: 14px; font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.15s, background 0.15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover:not(:disabled) { background: var(--accent-dark); box-shadow: 0 4px 12px rgba(200,132,46,0.3); }
+
+.btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover:not(:disabled) { background: #f5f5f3; }
+
+.btn-large { padding: 16px 40px; font-size: 16px; border-radius: 10px; }
+
+/* Data summary card */
+.data-summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-top: 24px;
+}
+.data-summary h3 {
+  font-size: 16px; font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.data-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.data-stat {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 16px;
+}
+.data-stat-label {
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.data-stat-value {
+  font-family: var(--mono);
+  font-size: 20px; font-weight: 500;
+  color: var(--text);
+}
+
+.column-list { margin-bottom: 24px; }
+.column-list h4 {
+  font-size: 13px; font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+.column-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.column-row:last-child { border-bottom: none; }
+.column-check {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--success-light); color: var(--success);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; flex-shrink: 0;
+}
+.column-role { font-weight: 600; min-width: 120px; }
+.column-arrow { color: var(--text-secondary); font-size: 12px; }
+.column-source {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.summary-actions {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.edit-link {
+  font-size: 13px; color: var(--text-secondary);
+  text-decoration: none; cursor: pointer;
+}
+.edit-link:hover { color: var(--text); text-decoration: underline; }
+
+/* ===== BUSINESS SCREEN ===== */
+.business-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.form-section { margin-bottom: 28px; }
+.form-section:last-of-type { margin-bottom: 0; }
+.form-label { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.form-hint { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
+
+.mcq-group {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+.mcq-group:last-of-type { border-bottom: none; padding-bottom: 0; }
+.mcq-question { font-size: 15px; font-weight: 600; margin-bottom: 14px; }
+.mcq-options { display: flex; flex-wrap: wrap; gap: 10px; }
+.mcq-option {
+  display: flex; align-items: center;
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background: var(--surface);
+  transition: border-color 0.15s, background 0.15s;
+}
+.mcq-option:hover { border-color: var(--accent); background: var(--accent-light); }
+.mcq-option.selected { border-color: var(--accent); background: var(--accent-light); }
+.mcq-option input { display: none; }
+
+.business-actions {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 32px;
+}
+
+/* ===== BUILDING SCREEN ===== */
+.building-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.building-header {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-bottom: 28px; flex-wrap: wrap;
+}
+.building-spinner {
+  width: 20px; height: 20px;
+  border: 2.5px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.building-header h2 { font-size: 18px; font-weight: 600; }
+.building-subtitle { font-size: 13px; color: var(--text-secondary); width: 100%; margin-left: 32px; }
+
+.round-block { margin-bottom: 24px; }
+.round-label {
+  font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+.round-steps {
+  border-left: 2px solid var(--border);
+  padding-left: 20px;
+  margin-left: 4px;
+}
+.round-step {
+  position: relative;
+  padding: 8px 0;
+  font-size: 14px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.round-step::before {
+  content: '';
+  position: absolute;
+  left: -25px; top: 12px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+}
+.round-step.done::before { background: var(--success); }
+.round-step.active::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+.round-step.warning::before { background: var(--warning); }
+
+.round-step-text { font-weight: 500; }
+.round-step-detail {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-family: var(--mono);
+  font-weight: 400;
+}
+.round-step-warning {
+  font-size: 13px;
+  color: var(--warning);
+  background: var(--warning-light);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.building-footer {
+  font-size: 13px; color: var(--text-secondary);
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== RESULTS SCREEN ===== */
+
+/* Hero */
+.results-hero {
+  background: var(--accent-light);
+  border: 2px solid #e8d4b0;
+  border-radius: var(--radius);
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.results-hero-number {
+  font-family: var(--mono);
+  font-size: 48px; font-weight: 700;
+  color: var(--accent-dark);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.results-hero-caption {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.risk-breakdown {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.risk-box {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+.risk-box-num {
+  font-family: var(--mono);
+  font-size: 28px; font-weight: 700;
+}
+.risk-box-num.high { color: var(--danger); }
+.risk-box-num.med { color: var(--warning); }
+.risk-box-num.low { color: var(--text-secondary); }
+.risk-box-label {
+  font-size: 12px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.4px;
+  color: var(--text-secondary);
+}
+
+.results-context {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Customer list */
+.results-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.results-card h3 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.list-controls {
+  display: flex; gap: 12px; align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.list-search {
+  flex: 1; min-width: 200px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 14px;
+  background: var(--bg);
+}
+.list-search:focus { outline: none; border-color: var(--accent); }
+
+.filter-tabs {
+  display: flex; gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.filter-tab {
+  padding: 8px 16px;
+  font-size: 13px; font-weight: 500;
+  background: var(--surface);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  color: var(--text-secondary);
+  border-right: 1px solid var(--border);
+  transition: background 0.1s;
+}
+.filter-tab:last-child { border-right: none; }
+.filter-tab:hover { background: var(--bg); }
+.filter-tab.active { background: var(--accent-light); color: var(--accent-dark); font-weight: 600; }
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.customer-table th {
+  text-align: left;
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  border-bottom: 2px solid var(--border);
+}
+.customer-table td {
+  padding: 14px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.customer-table tr:last-child td { border-bottom: none; }
+.customer-table .cust-name { font-weight: 600; }
+.customer-table .last-order { font-family: var(--mono); font-size: 13px; color: var(--text-secondary); }
+.customer-table .what-changed { font-size: 13px; color: var(--text-secondary); }
+.customer-table th:nth-child(2),
+.customer-table td:nth-child(2) { padding-left: 8px; padding-right: 8px; }
+
+.risk-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+.risk-pill.high { background: var(--danger-light); color: var(--danger); }
+.risk-pill.med { background: var(--warning-light); color: var(--warning); }
+.risk-pill.low { background: #f3f3f1; color: var(--text-secondary); }
+
+.show-more {
+  display: block;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.show-more a {
+  color: var(--accent);
+  text-decoration: none; cursor: pointer;
+}
+.show-more a:hover { text-decoration: underline; }
+
+/* Feature importance */
+.feature-bar {
+  display: flex; align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.feature-rank {
+  font-family: var(--mono);
+  font-size: 12px; font-weight: 500;
+  color: var(--text-secondary);
+  width: 20px; text-align: right; flex-shrink: 0;
+}
+.feature-name {
+  font-size: 14px; font-weight: 500;
+  width: 220px; flex-shrink: 0;
+}
+.feature-track {
+  flex: 1; height: 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.feature-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+.feature-pct {
+  font-family: var(--mono);
+  font-size: 13px; font-weight: 500;
+  width: 36px; text-align: right; flex-shrink: 0;
+}
+
+/* Download */
+.download-section {
+  text-align: center;
+  padding: 24px 0;
+}
+.download-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 12px;
+}
+
+/* Give to team */
+.give-to-team {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.give-to-team h3 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.give-step {
+  display: flex; gap: 14px;
+  margin-bottom: 16px;
+}
+.give-step:last-child { margin-bottom: 0; }
+.give-step-num {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  flex-shrink: 0;
+}
+.give-step-text {
+  font-size: 14px;
+  color: var(--text);
+  padding-top: 4px;
+  line-height: 1.6;
+}
+
+/* Backtest */
+.backtest-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.backtest-section h3 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 8px;
+}
+.backtest-explainer {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.backtest-stats {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 2;
+}
+.backtest-stats strong {
+  font-family: var(--mono);
+  font-weight: 600;
+}
+
+.backtest-prompt {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.backtest-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+.backtest-table th {
+  text-align: left;
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  border-bottom: 2px solid var(--border);
+}
+.backtest-table td {
+  padding: 12px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.backtest-table tr:last-child td { border-bottom: none; }
+.backtest-table .cust-name { font-weight: 600; }
+.backtest-table .date { font-family: var(--mono); font-size: 13px; color: var(--text-secondary); }
+
+.backtest-footer {
+  font-size: 14px;
+  color: var(--text-secondary);
+  background: var(--accent-light);
+  padding: 14px 18px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Roadmap */
+.roadmap-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.roadmap-section h3 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.roadmap-block { margin-bottom: 20px; }
+.roadmap-block:last-child { margin-bottom: 0; }
+.roadmap-when {
+  font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.6px;
+  color: var(--accent-dark);
+  margin-bottom: 6px;
+}
+.roadmap-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.roadmap-list {
+  list-style: none;
+  margin-top: 8px;
+}
+.roadmap-list li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 4px 0 4px 18px;
+  position: relative;
+}
+.roadmap-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 12px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+/* Model details toggle */
+.details-toggle {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 12px 0;
+  border: none; background: none;
+  font-family: var(--font);
+  width: 100%;
+}
+.details-toggle:hover { color: var(--text); }
+.details-toggle-arrow {
+  transition: transform 0.2s;
+  font-size: 12px;
+}
+.details-toggle.open .details-toggle-arrow { transform: rotate(90deg); }
+
+.details-content {
+  display: none;
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.details-content.open { display: block; }
+
+.details-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 13px;
+}
+.details-table th, .details-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.details-table th {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+.details-table td { font-family: var(--mono); font-size: 13px; }
+.details-table tr.highlight { background: var(--success-light); }
+
+/* Chat bar */
+.chat-bar {
+  position: fixed;
+  bottom: 0; left: 260px; right: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  z-index: 50;
+  transition: height 0.25s ease;
+}
+.chat-bar.collapsed { height: 52px; overflow: hidden; }
+.chat-bar.expanded { height: 320px; }
+
+.chat-bar-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+}
+.chat-bar-header:hover { color: var(--text); }
+
+.chat-bar-body {
+  display: flex; flex-direction: column;
+  height: calc(100% - 52px);
+}
+.chat-messages {
+  flex: 1; overflow-y: auto;
+  padding: 0 24px 12px;
+}
+.chat-msg { margin-bottom: 8px; font-size: 13px; }
+.chat-msg.user { text-align: right; }
+.chat-bubble {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 12px;
+  max-width: 70%;
+  line-height: 1.5;
+}
+.chat-msg.user .chat-bubble { background: var(--accent); color: #fff; }
+.chat-msg.system .chat-bubble { background: var(--bg); color: var(--text); }
+
+.chat-input-row {
+  display: flex; gap: 8px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--border);
+}
+.chat-input-field {
+  flex: 1; padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 14px;
+  background: var(--bg);
+}
+.chat-input-field:focus { outline: none; border-color: var(--accent); }
+.chat-send-btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #fff; border: none;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer;
+}
+.chat-send-btn:hover { background: var(--accent-dark); }
+
+/* Overlay */
+.analyzing-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(250,250,248,0.85);
+  align-items: center; justify-content: center;
+  flex-direction: column; gap: 16px;
+}
+.analyzing-overlay.active { display: flex; }
+.analyzing-text { font-size: 16px; font-weight: 500; color: var(--text); }
+.analyzing-spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content { padding: 20px 16px; }
+  .data-stats { grid-template-columns: 1fr; }
+  .mcq-options { flex-direction: column; }
+  .feature-name { width: 140px; }
+  .results-hero { padding: 24px; }
+  .results-hero-number { font-size: 36px; }
+  .risk-breakdown { grid-template-columns: 1fr; }
+  .customer-table .what-changed { display: none; }
+  .list-controls { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .steps { gap: 0; }
+  .step-line { width: 20px; margin: 0 6px; }
+  .step-item span { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== LANDING PAGE ===== -->
+<div id="landingScreen">
+  <div class="landing-inner">
+
+    <h1 class="landing-headline">Your team's call list for this week.</h1>
+
+    <table class="landing-table">
+      <thead>
+        <tr>
+          <th>Customer</th>
+          <th>Risk</th>
+          <th>Last Order</th>
+          <th>What Changed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cust-name">Sharma Brothers</td>
+          <td><span class="risk-dot high">High</span></td>
+          <td class="last-order">38 days ago</td>
+          <td class="what-changed">No orders in 38 days</td>
+        </tr>
+        <tr>
+          <td class="cust-name">Patel & Sons</td>
+          <td><span class="risk-dot high">High</span></td>
+          <td class="last-order">12 days ago</td>
+          <td class="what-changed">Order frequency dropped 60%</td>
+        </tr>
+        <tr>
+          <td class="cust-name">MK Traders</td>
+          <td><span class="risk-dot med">Med</span></td>
+          <td class="last-order">21 days ago</td>
+          <td class="what-changed">Stopped buying Category A</td>
+        </tr>
+        <tr>
+          <td class="cust-name">City Pharmacy</td>
+          <td><span class="risk-dot med">Med</span></td>
+          <td class="last-order">8 days ago</td>
+          <td class="what-changed">Order value declining</td>
+        </tr>
+        <tr>
+          <td class="cust-name">Kumar Stores</td>
+          <td><span class="risk-dot low">Low</span></td>
+          <td class="last-order">5 days ago</td>
+          <td class="what-changed">Shifted to weekends</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="landing-cta-block">
+      <div class="landing-cta-line">This is what you get.</div>
+      <div class="landing-cta-sub">Your data. 5 minutes.</div>
+      <button class="google-btn" id="googleSignInBtn">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Sign in with Google
+      </button>
+    </div>
+
+    <div class="landing-section">
+      <div class="landing-section-title">How it works</div>
+      <div class="how-steps">
+        <div>
+          <div class="how-step-num">1.</div>
+          <div class="how-step-label">Upload</div>
+          <div class="how-step-desc">Any transaction export you already have. No formatting. We figure out the columns.</div>
+        </div>
+        <div>
+          <div class="how-step-num">2.</div>
+          <div class="how-step-label">We build</div>
+          <div class="how-step-desc">We read your data, find patterns, and test against your own history.</div>
+        </div>
+        <div>
+          <div class="how-step-num">3.</div>
+          <div class="how-step-label">Act</div>
+          <div class="how-step-desc">A list of who to call this week. Names, reasons, risk levels.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="landing-section">
+      <div class="landing-section-title">What makes this different</div>
+      <div class="diff-item">
+        <div class="diff-item-title">A name, not a number.</div>
+        <div class="diff-item-desc">"Sharma Brothers &mdash; no orders in 38 days." Your rep reads that and knows if it is true before picking up the phone.</div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-item-title">5 minutes, not 4 months.</div>
+        <div class="diff-item-desc">No data science team. No IT project. Upload the export you already pull.</div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-item-title">Tested on your own history.</div>
+        <div class="diff-item-desc">We show you which customers the model would have flagged before they left. You check the names. If they match &mdash; the list is real.</div>
+      </div>
+    </div>
+
+    <div class="landing-section">
+      <div class="landing-section-title">Coming soon</div>
+      <ul class="coming-list">
+        <li>Assign at-risk customers to your field team</li>
+        <li>Send tasks via WhatsApp</li>
+        <li>Track whether interventions worked</li>
+        <li>Model improves with each cycle</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== HAMBURGER ===== -->
+<button id="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
+
+<!-- ===== SIDEBAR ===== -->
+<div id="sidebar" class="hidden">
+  <div class="sidebar-header">
+    <div class="sidebar-avatar" id="sidebarAvatar"></div>
+    <span class="sidebar-name" id="sidebarName"></span>
+    <span class="sidebar-logout" id="logoutBtn">Logout</span>
+  </div>
+  <button class="sidebar-new-btn" id="newSessionBtn">+ New Session</button>
+
+  <div class="sidebar-section-label">Sessions</div>
+  <div class="sidebar-sessions" id="sessionListContainer"></div>
+</div>
+
+<!-- ===== ANALYZING OVERLAY ===== -->
+<div class="analyzing-overlay" id="analyzingOverlay">
+  <div class="analyzing-spinner"></div>
+  <div class="analyzing-text" id="analyzingText">Analyzing your file...</div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main-content" id="mainContent" style="display:none;">
+
+  <!-- STEP INDICATOR -->
+  <div class="steps" id="stepIndicator">
+    <div class="step-item active" id="step1">
+      <div class="step-number">1</div>
+      <span>Upload</span>
+    </div>
+    <div class="step-line" id="line1"></div>
+    <div class="step-item" id="step2">
+      <div class="step-number">2</div>
+      <span>Your Business</span>
+    </div>
+    <div class="step-line" id="line2"></div>
+    <div class="step-item" id="step3">
+      <div class="step-number">3</div>
+      <span>Your List</span>
+    </div>
+  </div>
+
+  <!-- ===== UPLOAD SCREEN ===== -->
+  <div class="screen active" id="screenUpload">
+    <h1 class="screen-title">Upload your transaction history</h1>
+    <p class="screen-subtitle">Any export from your ERP, CRM, or billing system. We figure out the columns. No formatting needed.</p>
+
+    <div class="drop-zone" id="dropZone">
+      <input type="file" id="fileInput" accept=".csv" style="display:none;">
+      <div class="drop-zone-icon">&#128195;</div>
+      <div class="drop-zone-text">Drop CSV or Excel files here, or click to browse</div>
+      <div class="drop-zone-compat">Works with Tally, SAP, Zoho, Salesforce exports, or any spreadsheet.</div>
+      <div class="drop-zone-filename" id="dropFileName"></div>
+    </div>
+
+    <div id="descWrap" style="display:none;">
+      <label style="font-size:13px;font-weight:600;display:block;margin-bottom:6px;">Tell us about this file:</label>
+      <textarea class="desc-field" id="descField" placeholder='e.g. "Distributor purchase orders, North region, last 12 months"'></textarea>
+      <button class="btn btn-primary" id="uploadBtn">Upload & Analyze</button>
+    </div>
+
+    <!-- Data Summary (hidden until "uploaded") -->
+    <div class="data-summary" id="dataSummary" style="display:none;">
+      <h3>Here is what we found</h3>
+
+      <div class="data-stats">
+        <div class="data-stat">
+          <div class="data-stat-label">Customers</div>
+          <div class="data-stat-value" id="statCustomers">—</div>
+        </div>
+        <div class="data-stat">
+          <div class="data-stat-label">Orders</div>
+          <div class="data-stat-value" id="statOrders">—</div>
+        </div>
+        <div class="data-stat">
+          <div class="data-stat-label">Date Range</div>
+          <div class="data-stat-value" id="statDateRange">—</div>
+        </div>
+      </div>
+
+      <div class="column-list">
+        <h4>We identified these columns:</h4>
+        <div id="columnRows"></div>
+      </div>
+
+      <div class="summary-actions">
+        <a class="edit-link" id="editMappingsLink">Something wrong? Edit</a>
+        <button class="btn btn-primary" id="approveColumnsBtn">Looks right &#8594;</button>
+      </div>
+
+      <!-- Edit mappings panel (hidden by default) -->
+      <div id="editMappingsPanel" style="display:none; margin-top:16px;">
+        <table style="width:100%; border-collapse:collapse; font-size:13px; margin-bottom:12px;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="text-align:left; padding:8px;">Column</th>
+              <th style="text-align:left; padding:8px;">Type</th>
+              <th style="text-align:left; padding:8px;">Role</th>
+              <th style="text-align:left; padding:8px;">Confidence</th>
+            </tr>
+          </thead>
+          <tbody id="editMappingsBody"></tbody>
+        </table>
+        <textarea id="mappingFeedback" class="desc-field" placeholder="Feedback on the mappings (optional)..." style="margin-bottom:8px;"></textarea>
+        <div style="display:flex; gap:8px;">
+          <button class="btn btn-secondary" id="rerunMappingBtn">Re-run with Feedback</button>
+          <button class="btn btn-primary" id="saveEditedMappingsBtn">Save & Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BUSINESS SCREEN ===== -->
+  <div class="screen" id="screenBusiness">
+    <h1 class="screen-title">Help us understand your business</h1>
+    <p class="screen-subtitle">Your answers shape which patterns we look for. The more we know, the more relevant your call list.</p>
+
+    <div class="business-form">
+      <div class="form-section">
+        <div class="form-label">Anything we should know about your customers?</div>
+        <div class="form-hint">(optional)</div>
+        <textarea class="desc-field" id="businessFreeText" placeholder='e.g. "Festival buyers tend to disappear after the season"'></textarea>
+      </div>
+
+      <div id="mcqContainer">
+        <!-- MCQ questions populated from API -->
+        <div style="text-align:center; padding:24px; color:var(--text-secondary);">
+          <div class="building-spinner" style="margin:0 auto 12px;"></div>
+          Analyzing your business...
+        </div>
+      </div>
+    </div>
+
+    <div class="business-actions">
+      <button class="btn btn-secondary" id="businessBackBtn">&#8592; Back</button>
+      <button class="btn btn-primary btn-large" id="buildListBtn">Build My List &#8594;</button>
+    </div>
+  </div>
+
+  <!-- ===== BUILDING SCREEN ===== -->
+  <div class="screen" id="screenBuilding">
+    <div class="building-container">
+      <div class="building-header" id="buildingHeader">
+        <div class="building-spinner"></div>
+        <h2>Building your call list...</h2>
+      </div>
+
+      <div id="roundsContainer">
+        <!-- Rounds populated dynamically from WebSocket -->
+      </div>
+
+      <div class="building-footer">
+        <span id="buildingTimer">0:00</span> elapsed &mdash;
+        This can take 1-3 minutes. Your session is saved.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RESULTS SCREEN ===== -->
+  <div class="screen" id="screenResults">
+
+    <!-- Hero: The Number -->
+    <div class="results-hero">
+      <div class="results-hero-number" id="heroNumber">—</div>
+      <div class="results-hero-caption">customers need a call this week.</div>
+    </div>
+
+    <div class="risk-breakdown">
+      <div class="risk-box">
+        <div class="risk-box-num high" id="riskHigh">—</div>
+        <div class="risk-box-label">High risk</div>
+      </div>
+      <div class="risk-box">
+        <div class="risk-box-num med" id="riskMed">—</div>
+        <div class="risk-box-label">Medium risk</div>
+      </div>
+      <div class="risk-box">
+        <div class="risk-box-num low" id="riskLow">—</div>
+        <div class="risk-box-label">Low risk</div>
+      </div>
+    </div>
+
+    <div class="results-context" id="resultsContext"></div>
+
+    <!-- Customer List -->
+    <div class="results-card">
+      <div class="list-controls">
+        <input class="list-search" type="text" placeholder="Search customers..." id="customerSearch" oninput="filterCustomers()">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="high">High</button>
+          <button class="filter-tab" data-filter="med">Medium</button>
+          <button class="filter-tab" data-filter="low">Low</button>
+        </div>
+      </div>
+
+      <table class="customer-table" id="customerTable">
+        <thead>
+          <tr><th>Customer</th><th>Risk</th><th>Last Order</th><th>What Changed</th></tr>
+        </thead>
+        <tbody id="customerTableBody">
+          <!-- Populated from inference API -->
+        </tbody>
+      </table>
+      <div class="show-more" id="showMoreRow" style="display:none;">
+        Showing <span id="showCount"></span> of <span id="totalCount"></span> at-risk customers. <a id="showAllLink" href="#">Show all</a>
+      </div>
+    </div>
+
+    <!-- What Changed -->
+    <div class="results-card">
+      <h3>What changed in these customers' behavior</h3>
+      <div id="featureImportanceContainer">
+        <!-- Populated from champion feature_importance -->
+      </div>
+    </div>
+
+    <!-- Download -->
+    <div class="download-section">
+      <button class="btn btn-primary btn-large" id="downloadBtn">
+        &#8595; Download Call List (CSV)
+      </button>
+      <div class="download-desc">
+        Includes: Customer ID, Risk Level, Risk Score, What Changed, Last Order Date. Sorted by risk.
+      </div>
+    </div>
+
+    <!-- Give to team -->
+    <div class="give-to-team">
+      <h3>Give this to your team</h3>
+      <div class="give-step">
+        <div class="give-step-num">1</div>
+        <div class="give-step-text" id="giveStep1Text">Start with the High risk names.</div>
+      </div>
+      <div class="give-step">
+        <div class="give-step-num">2</div>
+        <div class="give-step-text">The "What Changed" column tells the rep what to look for in the conversation.</div>
+      </div>
+      <div class="give-step">
+        <div class="give-step-num">3</div>
+        <div class="give-step-text">Reach out this week. These customers are showing the same patterns as the ones you lost last quarter.</div>
+      </div>
+    </div>
+
+    <!-- Backtest: Why you can trust this list -->
+    <div class="backtest-section" id="backtestSection" style="display:none;">
+      <h3>Why you can trust this list</h3>
+      <div class="backtest-explainer" id="backtestExplainer"></div>
+      <div class="backtest-stats" id="backtestStats"></div>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="roadmap-section">
+      <h3>What happens next</h3>
+      <div class="roadmap-block">
+        <div class="roadmap-when">This week</div>
+        <div class="roadmap-text" id="roadmapThisWeek">Your team reaches out to the high-risk customers.</div>
+      </div>
+      <div class="roadmap-block">
+        <div class="roadmap-when">Next month</div>
+        <div class="roadmap-text">Upload new data. The model rebuilds. The list updates. Customers your team saved will drop off. New risks will appear.</div>
+      </div>
+      <div class="roadmap-block">
+        <div class="roadmap-when">Coming soon</div>
+        <ul class="roadmap-list">
+          <li>Assign customers to team members here</li>
+          <li>Send tasks to your team via WhatsApp</li>
+          <li>Track whether each customer was saved</li>
+          <li>Model improves with each cycle</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Model Details -->
+    <div class="results-card">
+      <button class="details-toggle" id="detailsToggleBtn">
+        <span class="details-toggle-arrow">&#9654;</span>
+        View model details
+      </button>
+      <div class="details-content" id="detailsContent">
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;" id="modelSummaryText"></p>
+        <table class="details-table">
+          <thead>
+            <tr>
+              <th>Round</th><th>Model</th>
+              <th title="Area Under Curve — overall ranking ability">Accuracy</th>
+              <th title="Harmonic mean of precision and recall">Balance</th>
+              <th title="Of those flagged, how many were correct">Exactness</th>
+              <th title="Of actual churners, how many were found">Coverage</th>
+            </tr>
+          </thead>
+          <tbody id="modelDetailsBody">
+            <!-- Populated from agent history -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Bottom spacing for chat bar -->
+    <div style="height: 60px;"></div>
+  </div>
+</div>
+
+<!-- ===== CHAT BAR ===== -->
+<div class="chat-bar collapsed" id="chatBar" style="display:none;">
+  <div class="chat-bar-header" id="chatBarHeader">
+    <span>&#9654; Have a question? Ask here...</span>
+    <span style="font-size:12px; color:var(--text-secondary)">&#9650;&#9660;</span>
+  </div>
+  <div class="chat-bar-body">
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input-row">
+      <input class="chat-input-field" id="chatInput" type="text" placeholder="Type a message...">
+      <button class="chat-send-btn" id="chatSendBtn">Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+const API = window.location.origin + '/api';
+let sessionId = null;
+let ws = null;
+let currentUser = null;
+let currentScreen = 'landing';
+let currentFilter = 'all';
+let currentMappings = [];
+let mcqData = null;
+let allPredictions = [];
+let championData = null;
+let currentRound = 0;
+let buildingStartTime = 0;
+let buildingTimerInterval = null;
+let buildingPollInterval = null;
+let showAllCustomers = false;
+const ROLES = ['customer_id','transaction_date','amount','product','quantity','category','channel','region','other'];
+
+const FEATURE_LABELS = {
+  recency: 'No recent purchases',
+  frequency_30d: 'Purchase frequency (30 days)',
+  frequency_60d: 'Purchase frequency (60 days)',
+  frequency_trend: 'Purchase frequency declining',
+  monetary_total: 'Total spending',
+  monetary_avg: 'Average order value',
+  monetary_trend: 'Spending less over time',
+  days_between_purchases_avg: 'Longer gaps between orders',
+  days_between_purchases_std: 'Purchase timing inconsistent',
+  basket_diversity: 'Fewer products per order',
+  category_concentration: 'Stopped buying top category',
+  weekend_vs_weekday: 'Shifted to weekend orders',
+};
+
+const ROLE_LABELS = {
+  customer_id: 'Customer ID',
+  transaction_date: 'Order Date',
+  amount: 'Amount',
+  product: 'Product',
+  quantity: 'Quantity',
+  category: 'Category',
+  channel: 'Channel',
+  region: 'Region',
+  other: 'Other',
+};
+
+// ============================================================
+// AUTH
+// ============================================================
+function getJwt() { return localStorage.getItem('churn_jwt'); }
+function setJwt(token) { localStorage.setItem('churn_jwt', token); }
+function clearJwt() { localStorage.removeItem('churn_jwt'); localStorage.removeItem('churn_current_session'); }
+
+function authHeaders() {
+  const token = getJwt();
+  return token ? { 'Authorization': 'Bearer ' + token } : {};
+}
+
+function authFetch(url, opts = {}) {
+  opts.headers = { ...authHeaders(), ...(opts.headers || {}) };
+  return fetch(url, opts);
+}
+
+// Capture OAuth redirect token from URL
+(function checkUrlToken() {
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get('token');
+  if (token) {
+    setJwt(token);
+    window.history.replaceState({}, '', window.location.pathname);
+  }
+})();
+
+async function initAuth() {
+  const jwt = getJwt();
+  if (!jwt) { showLanding(); return; }
+  try {
+    const res = await authFetch(`${API}/auth/me`);
+    if (!res.ok) throw new Error('Invalid token');
+    currentUser = await res.json();
+    onLoggedIn();
+  } catch (e) {
+    clearJwt();
+    showLanding();
+  }
+}
+
+document.getElementById('googleSignInBtn').addEventListener('click', () => {
+  window.location.href = `${API}/auth/google`;
+});
+
+document.getElementById('logoutBtn').addEventListener('click', () => {
+  clearJwt();
+  sessionId = null;
+  currentUser = null;
+  if (ws) { ws.close(); ws = null; }
+  showLanding();
+});
+
+// ============================================================
+// NAVIGATION
+// ============================================================
+function showLanding() {
+  document.getElementById('landingScreen').style.display = 'flex';
+  document.getElementById('mainContent').style.display = 'none';
+  document.getElementById('sidebar').classList.add('hidden');
+  document.getElementById('chatBar').style.display = 'none';
+  document.getElementById('analyzingOverlay').classList.remove('active');
+  currentScreen = 'landing';
+}
+
+function showApp() {
+  document.getElementById('landingScreen').style.display = 'none';
+  document.getElementById('mainContent').style.display = 'block';
+  document.getElementById('sidebar').classList.remove('hidden');
+}
+
+function onLoggedIn() {
+  showApp();
+  if (currentUser) {
+    const initials = (currentUser.name || currentUser.email || '?').split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
+    document.getElementById('sidebarAvatar').textContent = initials;
+    document.getElementById('sidebarName').textContent = currentUser.name || currentUser.email;
+  }
+  loadSessionList();
+  const lastSession = localStorage.getItem('churn_current_session');
+  if (lastSession) {
+    loadSession(lastSession);
+  } else {
+    goToScreen('upload');
+  }
+}
+
+function goToScreen(screen) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  currentScreen = screen;
+
+  const stepIndex = screen === 'building' || screen === 'results' ? 2 :
+                    screen === 'business' ? 1 : 0;
+
+  ['step1','step2','step3'].forEach((id, i) => {
+    const el = document.getElementById(id);
+    el.classList.remove('active', 'done');
+    if (i < stepIndex) el.classList.add('done');
+    else if (i === stepIndex) el.classList.add('active');
+  });
+  ['line1','line2'].forEach((id, i) => {
+    document.getElementById(id).classList.toggle('done', i < stepIndex);
+  });
+
+  const showChat = (screen === 'building' || screen === 'results');
+  document.getElementById('chatBar').style.display = showChat ? 'block' : 'none';
+
+  const screenMap = {
+    upload: 'screenUpload',
+    business: 'screenBusiness',
+    building: 'screenBuilding',
+    results: 'screenResults',
+  };
+  document.getElementById(screenMap[screen]).classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// ============================================================
+// SESSION LIST (Sidebar)
+// ============================================================
+document.getElementById('newSessionBtn').addEventListener('click', () => {
+  sessionId = null;
+  localStorage.removeItem('churn_current_session');
+  if (ws) { ws.close(); ws = null; }
+  resetUploadScreen();
+  goToScreen('upload');
+  highlightActiveSession();
+});
+
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.toggle('open');
+});
+
+async function loadSessionList() {
+  try {
+    const res = await authFetch(`${API}/sessions`);
+    if (!res.ok) return;
+    const sessions = await res.json();
+    renderSessionList(sessions);
+  } catch (e) {
+    console.error('Failed to load sessions', e);
+  }
+}
+
+function getSessionBadge(session) {
+  if (session.status === 'results' || session.status === 'completed' || session.status === 'success') return { cls: 'ready', text: 'List ready' };
+  if (session.status === 'agent' || session.status === 'running') return { cls: 'building', text: 'Building' };
+  if (session.stage >= 5) return { cls: 'building', text: 'Building' };
+  if (session.stage >= 3) return { cls: 'building', text: 'Setting up' };
+  return { cls: 'uploaded', text: 'Uploaded' };
+}
+
+function renderSessionList(sessions) {
+  const container = document.getElementById('sessionListContainer');
+  container.innerHTML = '';
+  sessions.forEach(s => {
+    const div = document.createElement('div');
+    div.className = 'session-entry' + (s.id === sessionId ? ' active' : '');
+    div.dataset.id = s.id;
+    const displayName = s.name || s.filename || s.id;
+    const date = s.updated_at ? new Date(s.updated_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) : '';
+    const badge = getSessionBadge(s);
+
+    div.innerHTML = `
+      <div class="session-entry-name">${escapeHtml(displayName)}</div>
+      <div class="session-entry-meta">
+        <span class="session-badge ${badge.cls}">${badge.text}</span>
+        <span>${date}</span>
+      </div>
+    `;
+    div.addEventListener('click', () => loadSession(s.id));
+    container.appendChild(div);
+  });
+}
+
+function highlightActiveSession() {
+  document.querySelectorAll('.session-entry').forEach(e => {
+    e.classList.toggle('active', e.dataset.id === sessionId);
+  });
+}
+
+async function loadSession(id) {
+  sessionId = id;
+  localStorage.setItem('churn_current_session', id);
+  highlightActiveSession();
+  if (ws) { ws.close(); ws = null; }
+
+  try {
+    const res = await authFetch(`${API}/sessions/${id}/agent/status`);
+    if (res.ok) {
+      const state = await res.json();
+      if (state.status === 'completed' || state.status === 'success' || state.champion) {
+        championData = state.champion || null;
+        await showResultsFromAgent(state);
+        return;
+      }
+      if (state.status === 'running') {
+        goToScreen('building');
+        currentRound = state.iteration || 0;
+        document.getElementById('buildingHeader').innerHTML = '<div class="building-spinner"></div><h2>Building your call list...</h2><div id="buildingSubtitle" class="building-subtitle"></div>';
+        buildingStartTime = Date.now();
+        updateBuildingTimer();
+        startBuildingPoll();
+        restoreBuildingRounds(state);
+        if (currentRound > 0) {
+          const sub = document.getElementById('buildingSubtitle');
+          if (sub) sub.textContent = 'Round ' + currentRound + ' of up to 5';
+        }
+        connectWebSocket();
+        return;
+      }
+    }
+  } catch (e) {}
+
+  // Determine stage from session list
+  try {
+    const res = await authFetch(`${API}/sessions`);
+    if (res.ok) {
+      const sessions = await res.json();
+      const sess = sessions.find(s => s.id === id);
+      if (sess) {
+        if (sess.stage >= 6 && (sess.status === 'results' || sess.status === 'completed')) {
+          const agentRes = await authFetch(`${API}/sessions/${id}/agent/status`);
+          if (agentRes.ok) {
+            const state = await agentRes.json();
+            championData = state.champion || null;
+            await showResultsFromAgent(state);
+            return;
+          }
+          goToScreen('results');
+          await runInference();
+          return;
+        }
+        if (sess.stage >= 5) { goToScreen('building'); return; }
+        if (sess.stage >= 3) { goToScreen('business'); enterBusinessScreen(); return; }
+      }
+    }
+  } catch (e) {}
+
+  goToScreen('upload');
+}
+
+// ============================================================
+// UPLOAD
+// ============================================================
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+let selectedFile = null;
+
+dropZone.addEventListener('click', () => fileInput.click());
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  const files = Array.from(e.dataTransfer.files).filter(f => f.name.endsWith('.csv'));
+  if (files.length) handleFileSelect(files[0]);
+});
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length) handleFileSelect(fileInput.files[0]);
+});
+
+function handleFileSelect(file) {
+  selectedFile = file;
+  document.getElementById('dropFileName').textContent = file.name;
+  document.getElementById('descWrap').style.display = 'block';
+  document.getElementById('uploadBtn').disabled = false;
+}
+
+document.getElementById('uploadBtn').addEventListener('click', doUpload);
+
+async function doUpload() {
+  if (!selectedFile) return;
+  const btn = document.getElementById('uploadBtn');
+  btn.disabled = true;
+  btn.textContent = 'Uploading...';
+
+  const overlay = document.getElementById('analyzingOverlay');
+  document.getElementById('analyzingText').textContent = 'Analyzing your file...';
+  overlay.classList.add('active');
+
+  try {
+    const form = new FormData();
+    form.append('file', selectedFile);
+    const res = await authFetch(`${API}/sessions`, { method: 'POST', body: form });
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    sessionId = data.session_id;
+    localStorage.setItem('churn_current_session', sessionId);
+    loadSessionList();
+
+    // Store profile for display
+    const profile = data.profile;
+
+    // Now run column mapping
+    document.getElementById('analyzingText').textContent = 'Mapping columns...';
+    const mapRes = await authFetch(`${API}/sessions/${sessionId}/column-mapping`, { method: 'POST' });
+    if (!mapRes.ok) throw new Error('Column mapping failed: ' + await mapRes.text());
+    const mapData = await mapRes.json();
+    currentMappings = mapData.columns;
+
+    overlay.classList.remove('active');
+
+    // Populate data summary
+    populateDataSummary(profile, currentMappings);
+
+    // Show summary, hide drop zone
+    document.getElementById('dropZone').style.display = 'none';
+    document.getElementById('descWrap').style.display = 'none';
+    document.getElementById('dataSummary').style.display = 'block';
+
+  } catch (e) {
+    overlay.classList.remove('active');
+    alert('Upload failed: ' + e.message);
+    btn.disabled = false;
+    btn.textContent = 'Upload & Analyze';
+  }
+}
+
+function populateDataSummary(profile, mappings) {
+  document.getElementById('statOrders').textContent = (profile.row_count || 0).toLocaleString();
+
+  // Try to extract customer count from mappings
+  const custCol = mappings.find(m => m.llm_role === 'customer_id');
+  document.getElementById('statCustomers').textContent = custCol ? (profile.distinct_counts?.[custCol.name] || '—') : '—';
+
+  if (profile.date_range) {
+    const fmt = d => d ? new Date(d).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' }) : '?';
+    document.getElementById('statDateRange').textContent = fmt(profile.date_range.min) + ' \u2014 ' + fmt(profile.date_range.max);
+  }
+
+  // Column rows
+  const container = document.getElementById('columnRows');
+  container.innerHTML = '';
+  mappings.forEach(col => {
+    if (col.llm_role === 'other') return;
+    const row = document.createElement('div');
+    row.className = 'column-row';
+    row.innerHTML = `
+      <div class="column-check">&#10003;</div>
+      <span class="column-role">${ROLE_LABELS[col.llm_role] || col.llm_role}</span>
+      <span class="column-arrow">&#8592;</span>
+      <span class="column-source">${escapeHtml(col.name)}</span>
+    `;
+    container.appendChild(row);
+  });
+}
+
+function resetUploadScreen() {
+  selectedFile = null;
+  document.getElementById('dropZone').style.display = 'block';
+  document.getElementById('dropFileName').textContent = '';
+  document.getElementById('descWrap').style.display = 'none';
+  document.getElementById('descField').value = '';
+  document.getElementById('dataSummary').style.display = 'none';
+  document.getElementById('editMappingsPanel').style.display = 'none';
+  document.getElementById('uploadBtn').disabled = false;
+  document.getElementById('uploadBtn').textContent = 'Upload & Analyze';
+  document.getElementById('roundsContainer').innerHTML = '';
+  currentRound = 0;
+}
+
+// Edit mappings toggle
+document.getElementById('editMappingsLink').addEventListener('click', (e) => {
+  e.preventDefault();
+  const panel = document.getElementById('editMappingsPanel');
+  if (panel.style.display === 'none') {
+    showEditMappings();
+    panel.style.display = 'block';
+  } else {
+    panel.style.display = 'none';
+  }
+});
+
+function showEditMappings() {
+  const body = document.getElementById('editMappingsBody');
+  body.innerHTML = '';
+  currentMappings.forEach((col, i) => {
+    const options = ROLES.map(r => `<option value="${r}" ${r === col.llm_role ? 'selected' : ''}>${ROLE_LABELS[r] || r}</option>`).join('');
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="padding:6px 8px;">${escapeHtml(col.name)}</td>
+      <td style="padding:6px 8px;">${escapeHtml(col.dtype)}</td>
+      <td style="padding:6px 8px;"><select data-idx="${i}" style="font-size:12px; padding:2px 4px; border:1px solid var(--border); border-radius:4px;">${options}</select></td>
+      <td style="padding:6px 8px;">${(col.confidence * 100).toFixed(0)}%</td>
+    `;
+    body.appendChild(tr);
+  });
+}
+
+document.getElementById('rerunMappingBtn').addEventListener('click', async () => {
+  const feedback = document.getElementById('mappingFeedback').value.trim();
+  if (!feedback) return;
+
+  const selects = document.querySelectorAll('#editMappingsBody select');
+  const cols = currentMappings.map((c, i) => ({
+    name: c.name, dtype: c.dtype,
+    llm_role: selects[i] ? selects[i].value : c.llm_role,
+    confidence: c.confidence,
+  }));
+
+  const overlay = document.getElementById('analyzingOverlay');
+  document.getElementById('analyzingText').textContent = 'Re-mapping columns...';
+  overlay.classList.add('active');
+
+  try {
+    const res = await authFetch(`${API}/sessions/${sessionId}/column-mapping/feedback`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ feedback, columns: cols }),
+    });
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    currentMappings = data.columns;
+    overlay.classList.remove('active');
+    populateDataSummary({ row_count: parseInt(document.getElementById('statOrders').textContent.replace(/,/g,'')) || 0 }, currentMappings);
+    showEditMappings();
+    document.getElementById('mappingFeedback').value = '';
+  } catch (e) {
+    overlay.classList.remove('active');
+    alert('Re-run failed: ' + e.message);
+  }
+});
+
+// Approve columns and move to business screen
+document.getElementById('approveColumnsBtn').addEventListener('click', async () => {
+  const selects = document.querySelectorAll('#editMappingsBody select');
+  const cols = currentMappings.map((c, i) => ({
+    name: c.name, dtype: c.dtype,
+    llm_role: selects[i] ? selects[i].value : c.llm_role,
+    confidence: c.confidence,
+  }));
+
+  try {
+    await authFetch(`${API}/sessions/${sessionId}/column-mapping`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ columns: cols }),
+    });
+  } catch (_) {}
+
+  goToScreen('business');
+  enterBusinessScreen();
+});
+
+document.getElementById('saveEditedMappingsBtn').addEventListener('click', async () => {
+  const selects = document.querySelectorAll('#editMappingsBody select');
+  const cols = currentMappings.map((c, i) => ({
+    name: c.name, dtype: c.dtype,
+    llm_role: selects[i] ? selects[i].value : c.llm_role,
+    confidence: c.confidence,
+  }));
+
+  try {
+    await authFetch(`${API}/sessions/${sessionId}/column-mapping`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ columns: cols }),
+    });
+  } catch (_) {}
+
+  goToScreen('business');
+  enterBusinessScreen();
+});
+
+// ============================================================
+// BUSINESS SCREEN
+// ============================================================
+async function enterBusinessScreen() {
+  const container = document.getElementById('mcqContainer');
+  container.innerHTML = '<div style="text-align:center; padding:24px; color:var(--text-secondary);"><div class="building-spinner" style="margin:0 auto 12px;"></div>Analyzing your business...</div>';
+
+  const freeText = document.getElementById('businessFreeText').value.trim();
+
+  try {
+    const res = await authFetch(`${API}/sessions/${sessionId}/hypothesis`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ free_text: freeText || null }),
+    });
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    mcqData = data.questions;
+    renderMcqQuestions(data.questions);
+  } catch (e) {
+    container.innerHTML = `<div style="color:var(--danger); padding:16px;">Failed to generate questions: ${escapeHtml(e.message)}</div>`;
+  }
+}
+
+function renderMcqQuestions(questions) {
+  const container = document.getElementById('mcqContainer');
+  container.innerHTML = '';
+  questions.forEach(q => {
+    const group = document.createElement('div');
+    group.className = 'mcq-group';
+    group.innerHTML = `<div class="mcq-question">${escapeHtml(q.question)}</div><div class="mcq-options"></div>`;
+    const opts = group.querySelector('.mcq-options');
+    q.options.forEach(opt => {
+      const label = document.createElement('label');
+      label.className = 'mcq-option';
+      label.innerHTML = `<input type="radio" name="${q.id}" value="${opt.value}"> ${escapeHtml(opt.label)}`;
+      label.addEventListener('click', () => selectOption(label));
+      opts.appendChild(label);
+    });
+    container.appendChild(group);
+  });
+}
+
+function selectOption(label) {
+  const group = label.closest('.mcq-group');
+  group.querySelectorAll('.mcq-option').forEach(o => o.classList.remove('selected'));
+  label.classList.add('selected');
+  label.querySelector('input').checked = true;
+}
+
+document.getElementById('businessBackBtn').addEventListener('click', () => goToScreen('upload'));
+
+document.getElementById('buildListBtn').addEventListener('click', async () => {
+  const answers = {};
+  if (mcqData) {
+    mcqData.forEach(q => {
+      const sel = document.querySelector(`input[name="${q.id}"]:checked`);
+      if (sel) answers[q.id] = sel.value;
+    });
+  }
+
+  const btn = document.getElementById('buildListBtn');
+  btn.disabled = true;
+  btn.textContent = 'Starting...';
+
+  try {
+    const res = await authFetch(`${API}/sessions/${sessionId}/features`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answers }),
+    });
+    if (!res.ok) throw new Error(await res.text());
+
+    goToScreen('building');
+    startAgent();
+  } catch (e) {
+    alert('Feature computation failed: ' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Build My List \u2192';
+  }
+});
+
+// ============================================================
+// BUILDING SCREEN + AGENT
+// ============================================================
+async function startAgent() {
+  currentRound = 0;
+  document.getElementById('roundsContainer').innerHTML = '';
+  document.getElementById('buildingHeader').innerHTML = '<div class="building-spinner"></div><h2>Building your call list...</h2><div id="buildingSubtitle" class="building-subtitle"></div>';
+  buildingStartTime = Date.now();
+  updateBuildingTimer();
+  startBuildingPoll();
+
+  // Wait for WebSocket to connect before starting agent
+  await connectWebSocket();
+
+  try {
+    const res = await authFetch(`${API}/sessions/${sessionId}/agent/start`, { method: 'POST' });
+    if (!res.ok) {
+      const text = await res.text();
+      let detail = text;
+      try { detail = JSON.parse(text).detail; } catch (_) {}
+      throw new Error(detail);
+    }
+  } catch (e) {
+    addRoundStep(1, 'Agent failed to start: ' + e.message, 'warning');
+  }
+}
+
+function connectWebSocket() {
+  return new Promise((resolve) => {
+    if (ws) { ws.close(); ws = null; }
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const jwt = getJwt();
+    const tokenParam = jwt ? `?token=${jwt}` : '';
+    ws = new WebSocket(`${protocol}//${window.location.host}/api/sessions/${sessionId}/chat${tokenParam}`);
+
+    ws.onmessage = (event) => {
+      const msg = JSON.parse(event.data);
+      handleWsMessage(msg);
+    };
+    ws.onopen = () => {
+      document.getElementById('chatInput').disabled = false;
+      resolve();
+    };
+    ws.onerror = () => { resolve(); };
+    ws.onclose = () => {
+      document.getElementById('chatInput').disabled = true;
+    };
+  });
+}
+
+function handleWsMessage(msg) {
+  switch (msg.type) {
+    case 'chat_history':
+      addChatMessage(msg.role || 'system', msg.text);
+      break;
+    case 'agent_progress':
+      handleAgentProgress(msg);
+      break;
+    case 'iteration_result':
+      handleIterationResult(msg);
+      break;
+    case 'agent_response':
+      addChatMessage('system', msg.text);
+      break;
+    case 'champion_selected':
+      handleChampionSelected(msg);
+      break;
+  }
+}
+
+function handleAgentProgress(msg) {
+  const status = msg.status || '';
+  const round = msg.iteration || currentRound || 1;
+  if (round > currentRound) currentRound = round;
+
+  if (status === 'suggesting_features') {
+    addRoundStep(round, 'Generating new feature ideas', 'active');
+  } else if (status === 'computing_features' || status.includes('feature')) {
+    ensureRoundBlock(round);
+    addRoundStep(round, 'Preparing customer features', 'active');
+  } else if (status === 'training' || status.includes('train')) {
+    addRoundStep(round, 'Training prediction models', 'active');
+  } else if (status === 'evaluating' || status.includes('evaluat')) {
+    addRoundStep(round, 'Evaluating results', 'active');
+  } else if (status === 'starting') {
+    ensureRoundBlock(round);
+    addRoundStep(round, 'Starting up...', 'active');
+  } else if (msg.detail) {
+    addRoundStep(round, msg.detail, 'active');
+  }
+
+  // Update round indicator
+  if (currentRound > 0) {
+    const sub = document.getElementById('buildingSubtitle');
+    if (sub) sub.textContent = 'Round ' + currentRound + ' of up to 5';
+  }
+}
+
+function handleIterationResult(msg) {
+  const round = msg.iteration || currentRound;
+  markAllStepsDone(round);
+
+  if (msg.evaluation) {
+    if (msg.evaluation.leakage_detected) {
+      addRoundStep(round, 'Some features dominated predictions. Removing them and adding new features for a more balanced model.', 'warning');
+    } else if (!msg.evaluation.quality_acceptable) {
+      addRoundStep(round, 'Adjusting features for better predictions.', 'warning');
+    } else {
+      addRoundStep(round, 'Model accepted', 'done');
+    }
+  }
+
+  // Store iteration in model details
+  if (msg.models) {
+    msg.models.forEach(m => {
+      addModelDetailRow(round, m.name, m.metrics);
+    });
+  }
+}
+
+function updateBuildingTimer() {
+  if (buildingTimerInterval) clearInterval(buildingTimerInterval);
+  buildingTimerInterval = setInterval(() => {
+    const elapsed = Math.floor((Date.now() - buildingStartTime) / 1000);
+    const m = Math.floor(elapsed / 60);
+    const s = elapsed % 60;
+    const el = document.getElementById('buildingTimer');
+    if (el) el.textContent = m + ':' + s.toString().padStart(2, '0');
+  }, 1000);
+}
+
+function startBuildingPoll() {
+  if (buildingPollInterval) clearInterval(buildingPollInterval);
+  buildingPollInterval = setInterval(async () => {
+    try {
+      const res = await authFetch(`${API}/sessions/${sessionId}/agent/status`);
+      if (!res.ok) return;
+      const state = await res.json();
+
+      // If agent finished but we missed champion_selected
+      if ((state.status === 'success' || state.status === 'completed') && state.champion) {
+        stopBuildingPoll();
+        handleChampionSelected({ champion: state.champion });
+        return;
+      }
+
+      // If rounds container is empty but agent has history, restore rounds
+      const container = document.getElementById('roundsContainer');
+      if (container && container.children.length === 0 && state.history && state.history.length > 0) {
+        restoreBuildingRounds(state);
+        currentRound = state.iteration;
+      }
+    } catch (_) {}
+  }, 5000);
+}
+
+function stopBuildingPoll() {
+  if (buildingPollInterval) {
+    clearInterval(buildingPollInterval);
+    buildingPollInterval = null;
+  }
+}
+
+function stopBuildingTimers() {
+  if (buildingTimerInterval) {
+    clearInterval(buildingTimerInterval);
+    buildingTimerInterval = null;
+  }
+  stopBuildingPoll();
+}
+
+function handleChampionSelected(msg) {
+  stopBuildingTimers();
+  championData = msg.champion;
+  const round = currentRound;
+  addRoundStep(round, 'Testing against your own history...', 'active');
+
+  // Run inference
+  runInference().then(() => {
+    markAllStepsDone(round);
+    document.getElementById('buildingHeader').innerHTML = '<h2 style="color:var(--success);">&#10003; Your call list is ready.</h2>';
+    loadSessionList();
+
+    setTimeout(() => goToScreen('results'), 1500);
+  });
+}
+
+// Round rendering helpers
+function ensureRoundBlock(round) {
+  const container = document.getElementById('roundsContainer');
+  if (container.querySelector(`[data-round="${round}"]`)) return;
+  const block = document.createElement('div');
+  block.className = 'round-block';
+  block.dataset.round = round;
+  block.innerHTML = `<div class="round-label">Round ${round}</div><div class="round-steps"></div>`;
+  container.appendChild(block);
+}
+
+function addRoundStep(round, text, cls) {
+  ensureRoundBlock(round);
+  const block = document.querySelector(`[data-round="${round}"]`);
+  const steps = block.querySelector('.round-steps');
+
+  // Mark previous active steps as done
+  steps.querySelectorAll('.round-step.active').forEach(s => {
+    s.classList.remove('active');
+    s.classList.add('done');
+  });
+
+  const step = document.createElement('div');
+  step.className = `round-step ${cls || ''}`;
+  if (cls === 'warning') {
+    step.innerHTML = `<div class="round-step-text">Evaluated results</div><div class="round-step-warning">${escapeHtml(text)}</div>`;
+  } else {
+    step.innerHTML = `<div class="round-step-text">${escapeHtml(text)}</div>`;
+  }
+  steps.appendChild(step);
+}
+
+function markAllStepsDone(round) {
+  const block = document.querySelector(`[data-round="${round}"]`);
+  if (!block) return;
+  block.querySelectorAll('.round-step.active').forEach(s => {
+    s.classList.remove('active');
+    s.classList.add('done');
+  });
+}
+
+function restoreBuildingRounds(state) {
+  const container = document.getElementById('roundsContainer');
+  container.innerHTML = '';
+  if (state.history) {
+    state.history.forEach(iter => {
+      ensureRoundBlock(iter.iteration);
+      addRoundStep(iter.iteration, 'Prepared customer features', 'done');
+      addRoundStep(iter.iteration, 'Trained prediction models', 'done');
+      if (iter.evaluation && iter.evaluation.leakage_detected) {
+        addRoundStep(iter.iteration, 'Some features dominated. Removing for balance.', 'warning');
+      } else {
+        addRoundStep(iter.iteration, 'Evaluated results', 'done');
+      }
+    });
+  }
+}
+
+const MODEL_NAMES = {
+  random_forest: 'Random Forest',
+  xgboost: 'XGBoost',
+  logistic_regression: 'Logistic Regression',
+  gradient_boosting: 'Gradient Boosting',
+  decision_tree: 'Decision Tree',
+};
+
+function fmtPct(v) {
+  if (v == null || v === '') return '—';
+  return (v * 100).toFixed(1) + '%';
+}
+
+function addModelDetailRow(round, modelName, metrics) {
+  const body = document.getElementById('modelDetailsBody');
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>${round}</td>
+    <td>${escapeHtml(MODEL_NAMES[modelName] || modelName)}</td>
+    <td>${fmtPct(metrics.auc)}</td>
+    <td>${fmtPct(metrics.f1)}</td>
+    <td>${fmtPct(metrics.precision)}</td>
+    <td>${fmtPct(metrics.recall)}</td>
+  `;
+  body.appendChild(tr);
+}
+
+// ============================================================
+// RESULTS SCREEN
+// ============================================================
+async function runInference() {
+  try {
+    const res = await authFetch(`${API}/sessions/${sessionId}/inference`, { method: 'POST' });
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    populateResults(data);
+  } catch (e) {
+    console.error('Inference failed:', e);
+  }
+}
+
+function populateResults(data) {
+  allPredictions = data.predictions || [];
+
+  // Hero numbers
+  const highCount = data.high_risk_count || 0;
+  const medCount = data.medium_risk_count || 0;
+  const lowCount = data.low_risk_count || 0;
+  const totalRisk = highCount + medCount + lowCount;
+  const totalUsers = data.total_users || 0;
+
+  document.getElementById('heroNumber').textContent = highCount;
+  document.getElementById('riskHigh').textContent = highCount;
+  document.getElementById('riskMed').textContent = medCount;
+  document.getElementById('riskLow').textContent = lowCount;
+  document.getElementById('resultsContext').textContent =
+    `${totalRisk} of your ${totalUsers.toLocaleString()} customers are showing risk signals.`;
+  document.getElementById('giveStep1Text').textContent =
+    `Start with the ${highCount} High risk names.`;
+  document.getElementById('roadmapThisWeek').textContent =
+    `Your team reaches out to the ${highCount} high-risk customers.`;
+
+  // Customer table
+  renderCustomerTable(allPredictions);
+
+  // Feature importance
+  if (championData && championData.feature_importance) {
+    renderFeatureImportance(championData.feature_importance);
+  }
+
+  // Model summary
+  if (championData) {
+    document.getElementById('modelSummaryText').textContent =
+      `Model: ${championData.name || 'Champion'} \u2014 AUC ${championData.metrics?.auc || '—'}, F1 ${championData.metrics?.f1 || '—'}`;
+  }
+}
+
+function renderCustomerTable(predictions) {
+  const body = document.getElementById('customerTableBody');
+  body.innerHTML = '';
+  const sorted = [...predictions].sort((a, b) => (b.churn_probability || 0) - (a.churn_probability || 0));
+  const limit = showAllCustomers ? sorted.length : Math.min(20, sorted.length);
+
+  for (let i = 0; i < limit; i++) {
+    const p = sorted[i];
+    const tier = (p.risk_tier || '').toLowerCase();
+    const tierCls = tier === 'high' ? 'high' : tier === 'medium' ? 'med' : 'low';
+    const tierLabel = tier === 'high' ? 'High' : tier === 'medium' ? 'Med' : 'Low';
+    const whatChanged = getWhatChanged(p);
+
+    const tr = document.createElement('tr');
+    tr.dataset.risk = tierCls;
+    tr.innerHTML = `
+      <td class="cust-name">${escapeHtml(String(p.customer_id))}</td>
+      <td><span class="risk-pill ${tierCls}">${tierLabel}</span></td>
+      <td class="last-order">${p.churn_probability ? (p.churn_probability * 100).toFixed(0) + '% risk' : '—'}</td>
+      <td class="what-changed">${escapeHtml(whatChanged)}</td>
+    `;
+    body.appendChild(tr);
+  }
+
+  // Show more
+  if (sorted.length > 20) {
+    document.getElementById('showMoreRow').style.display = 'block';
+    document.getElementById('showCount').textContent = limit;
+    document.getElementById('totalCount').textContent = sorted.length;
+  } else {
+    document.getElementById('showMoreRow').style.display = 'none';
+  }
+}
+
+function getWhatChanged(prediction) {
+  if (!prediction.top_features || !prediction.top_features.length) return '—';
+  const feat = prediction.top_features[0];
+  const name = feat.feature || feat.name || '';
+  return FEATURE_LABELS[name] || name;
+}
+
+function renderFeatureImportance(features) {
+  const container = document.getElementById('featureImportanceContainer');
+  container.innerHTML = '';
+  if (!features || !features.length) {
+    container.innerHTML = '<p style="color:var(--text-secondary)">Feature analysis will appear after model training.</p>';
+    return;
+  }
+  const maxImp = Math.max(...features.map(f => f.importance));
+
+  features.slice(0, 8).forEach((f, i) => {
+    const pct = maxImp > 0 ? (f.importance / maxImp * 100) : 0;
+    const label = FEATURE_LABELS[f.feature] || f.feature;
+    const div = document.createElement('div');
+    div.className = 'feature-bar';
+    div.innerHTML = `
+      <span class="feature-rank">${i + 1}.</span>
+      <span class="feature-name">${escapeHtml(label)}</span>
+      <div class="feature-track"><div class="feature-fill" style="width:${pct}%"></div></div>
+      <span class="feature-pct">${(f.importance * 100).toFixed(0)}%</span>
+    `;
+    container.appendChild(div);
+  });
+}
+
+async function showResultsFromAgent(state) {
+  // Populate model details from history
+  document.getElementById('modelDetailsBody').innerHTML = '';
+  if (state.history) {
+    state.history.forEach(iter => {
+      (iter.model_results || []).forEach(mr => {
+        addModelDetailRow(iter.iteration, mr.name, mr.metrics);
+      });
+    });
+  }
+
+  if (state.champion) {
+    championData = state.champion;
+    if (championData.feature_importance && championData.feature_importance.length) {
+      renderFeatureImportance(championData.feature_importance);
+    }
+    const champName = MODEL_NAMES[championData.name] || championData.name || 'Champion';
+    document.getElementById('modelSummaryText').textContent =
+      `Model: ${champName} — Accuracy ${fmtPct(championData.metrics?.auc)}, Balance ${fmtPct(championData.metrics?.f1)}`;
+  }
+
+  goToScreen('results');
+  await runInference();
+  connectWebSocket(); // For chat
+}
+
+// Download
+document.getElementById('downloadBtn').addEventListener('click', async () => {
+  if (!sessionId) return;
+  try {
+    const res = await authFetch(`${API}/sessions/${sessionId}/inference/download`);
+    if (!res.ok) throw new Error('Download failed');
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'call-list.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  } catch (e) {
+    alert('Download failed: ' + e.message);
+  }
+});
+
+// Show all customers toggle
+document.getElementById('showAllLink').addEventListener('click', (e) => {
+  e.preventDefault();
+  showAllCustomers = true;
+  renderCustomerTable(allPredictions);
+});
+
+// Filter tabs
+document.querySelectorAll('.filter-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentFilter = btn.dataset.filter;
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    filterCustomers();
+  });
+});
+
+function filterCustomers() {
+  const searchTerm = document.getElementById('customerSearch').value.toLowerCase();
+  const rows = document.querySelectorAll('#customerTable tbody tr');
+  rows.forEach(row => {
+    const name = row.querySelector('.cust-name')?.textContent.toLowerCase() || '';
+    const risk = row.dataset.risk;
+    const matchesSearch = name.includes(searchTerm);
+    const matchesFilter = currentFilter === 'all' || risk === currentFilter;
+    row.style.display = (matchesSearch && matchesFilter) ? '' : 'none';
+  });
+}
+
+// Model details toggle
+document.getElementById('detailsToggleBtn').addEventListener('click', function() {
+  this.classList.toggle('open');
+  document.getElementById('detailsContent').classList.toggle('open');
+});
+
+// ============================================================
+// CHAT
+// ============================================================
+document.getElementById('chatBarHeader').addEventListener('click', toggleChat);
+
+function toggleChat() {
+  const bar = document.getElementById('chatBar');
+  bar.classList.toggle('collapsed');
+  bar.classList.toggle('expanded');
+  if (bar.classList.contains('expanded')) {
+    document.getElementById('chatInput').focus();
+  }
+}
+
+document.getElementById('chatSendBtn').addEventListener('click', sendChat);
+document.getElementById('chatInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') sendChat();
+});
+
+function sendChat() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text || !ws || ws.readyState !== WebSocket.OPEN) return;
+  addChatMessage('user', text);
+  ws.send(JSON.stringify({ text }));
+  input.value = '';
+}
+
+function addChatMessage(type, text) {
+  const messages = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `chat-msg ${type}`;
+  div.innerHTML = `<div class="chat-bubble">${escapeHtml(text)}</div>`;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+// ============================================================
+// UTILITY
+// ============================================================
+function escapeHtml(str) {
+  if (!str) return '';
+  const d = document.createElement('div');
+  d.textContent = String(str);
+  return d.innerHTML;
+}
+
+// ============================================================
+// INIT
+// ============================================================
+initAuth();
+</script>
+</body>
+</html>

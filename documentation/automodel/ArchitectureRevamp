@@ -1,0 +1,476 @@
+Plan to implement                                                                                                                                                                   │
+│                                                                                                                                                                                     │
+│ Agentic Churn Prediction Pipeline                                                                                                                                                   │
+│                                                                                                                                                                                     │
+│ Context                                                                                                                                                                             │
+│                                                                                                                                                                                     │
+│ The current churn-tool pipeline is linear: upload → column map → hypothesis → features → labels → train → results → inference. It has three problems:                               │
+│                                                                                                                                                                                     │
+│ 1. Fixed feature catalog — The LLM selects from 22 predefined features (10 Tier 1 + 12 Tier 2). It cannot create new features based on data patterns.                               │
+│ 2. Single model, single pass — Only XGBoost is trained. No comparison. No iteration. If the model has data leakage or poor metrics, the pipeline does not self-correct.             │
+│ 3. No user interaction after upload — The user answers MCQs once, then waits for results. They cannot correct interpretations, request feature changes, or compare models mid-run.  │
+│                                                                                                                                                                                     │
+│ This plan converts the pipeline into an agentic loop that: generates features via a DSL, trains multiple models (XGBoost + RF), detects data leakage via LLM, iterates until        │
+│ success criteria are met, and exposes a chat interface for user interaction.                                                                                                        │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Architecture                                                                                                                                                                        │
+│                                                                                                                                                                                     │
+│                           ┌─────────────────────┐                                                                                                                                   │
+│                           │   Chat (WebSocket)   │                                                                                                                                  │
+│                           │   User can interrupt  │                                                                                                                                 │
+│                           └──────────┬──────────┘                                                                                                                                   │
+│                                      │                                                                                                                                              │
+│ ┌──────────┐  ┌──────────┐  ┌───────▼────────┐                                                                                                                                      │
+│ │ S1:Upload │─▶│S2:ColMap │─▶│ S3:Hypothesis  │                                                                                                                                     │
+│ └──────────┘  └──────────┘  └───────┬────────┘                                                                                                                                      │
+│                                      │                                                                                                                                              │
+│                               ┌──────▼──────┐                                                                                                                                       │
+│                               │ AGENT LOOP  │ (max 5 iterations)                                                                                                                    │
+│                               │             │                                                                                                                                       │
+│                               │  Features ──┤                                                                                                                                       │
+│                               │     │       │                                                                                                                                       │
+│                               │  Labels  ───┤                                                                                                                                       │
+│                               │     │       │                                                                                                                                       │
+│                               │  Train ─────┤ (XGBoost + RF)                                                                                                                        │
+│                               │     │       │                                                                                                                                       │
+│                               │  Evaluate ──┤ (LLM: leakage? quality?)                                                                                                              │
+│                               │     │       │                                                                                                                                       │
+│                               │  success? ──┼──yes──▶ Champion                                                                                                                      │
+│                               │     │       │                                                                                                                                       │
+│                               │    no       │                                                                                                                                       │
+│                               │     │       │                                                                                                                                       │
+│                               │  Adjust ────┤ (LLM: add/remove features)                                                                                                            │
+│                               │     │       │                                                                                                                                       │
+│                               │  loop ──────┘                                                                                                                                       │
+│                               └─────────────┘                                                                                                                                       │
+│                                      │                                                                                                                                              │
+│                               ┌──────▼──────┐                                                                                                                                       │
+│                               │ S7:Results  │ (LLM summary)                                                                                                                         │
+│                               │ S8:Inference│ (SHAP + predictions)                                                                                                                  │
+│                               └─────────────┘                                                                                                                                       │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Component 1: Feature DSL                                                                                                                                                            │
+│                                                                                                                                                                                     │
+│ Purpose: Let the LLM describe custom features in a structured JSON format. A DSL interpreter converts them to pandas operations.                                                    │
+│                                                                                                                                                                                     │
+│ File: app/agent/feature_dsl.py                                                                                                                                                      │
+│                                                                                                                                                                                     │
+│ DSL Operations                                                                                                                                                                      │
+│ Operation: aggregate                                                                                                                                                                │
+│ Description: Per-customer aggregation                                                                                                                                               │
+│ Example: {"op": "aggregate", "column": "amount", "func": "mean"} → avg spend per customer                                                                                           │
+│ ────────────────────────────────────────                                                                                                                                            │
+│ Operation: aggregate_window                                                                                                                                                         │
+│ Description: Aggregation within time window                                                                                                                                         │
+│ Example: {"op": "aggregate_window", "column": "amount", "func": "sum", "window_days": 30} → spend in last 30 days                                                                   │
+│ ────────────────────────────────────────                                                                                                                                            │
+│ Operation: ratio                                                                                                                                                                    │
+│ Description: Ratio of two aggregations                                                                                                                                              │
+│ Example: {"op": "ratio", "numerator": {"column": "amount", "func": "sum", "window_days": 30}, "denominator": {"column": "amount", "func": "sum"}} → recent spend ratio              │
+│ ────────────────────────────────────────                                                                                                                                            │
+│ Operation: trend                                                                                                                                                                    │
+│ Description: First-half vs second-half comparison                                                                                                                                   │
+│ Example: {"op": "trend", "column": "quantity", "func": "mean"} → increasing or decreasing order size                                                                                │
+│ ────────────────────────────────────────                                                                                                                                            │
+│ Operation: conditional_count                                                                                                                                                        │
+│ Description: Count rows matching condition                                                                                                                                          │
+│ Example: {"op": "conditional_count", "column": "amount", "condition": "> 50"} → high-value transaction count                                                                        │
+│ ────────────────────────────────────────                                                                                                                                            │
+│ Operation: nunique                                                                                                                                                                  │
+│ Description: Distinct count per customer                                                                                                                                            │
+│ Example: {"op": "nunique", "column": "product"} → product diversity                                                                                                                 │
+│ ────────────────────────────────────────                                                                                                                                            │
+│ Operation: gap_stat                                                                                                                                                                 │
+│ Description: Statistic on inter-purchase gaps                                                                                                                                       │
+│ Example: {"op": "gap_stat", "func": "max"} → longest gap between purchases                                                                                                          │
+│ DSL Schema (Pydantic)                                                                                                                                                               │
+│                                                                                                                                                                                     │
+│ class DSLFeature(BaseModel):                                                                                                                                                        │
+│     name: str                    # e.g. "recent_spend_ratio"                                                                                                                        │
+│     description: str             # human-readable explanation                                                                                                                       │
+│     operation: str               # one of the DSL operations above                                                                                                                  │
+│     params: dict                 # operation-specific parameters                                                                                                                    │
+│                                                                                                                                                                                     │
+│ LLM Feature Suggestion                                                                                                                                                              │
+│                                                                                                                                                                                     │
+│ The LLM receives:                                                                                                                                                                   │
+│ - Data profile (columns, dtypes, sample values)                                                                                                                                     │
+│ - Column mapping                                                                                                                                                                    │
+│ - Business hypothesis                                                                                                                                                               │
+│ - Features already computed (Tier 1 + Tier 2)                                                                                                                                       │
+│ - Current iteration metrics (if iteration > 0)                                                                                                                                      │
+│                                                                                                                                                                                     │
+│ The LLM outputs a list of DSLFeature objects. The interpreter executes each, appends the result to the feature matrix.                                                              │
+│                                                                                                                                                                                     │
+│ Pydantic schema: LLMFeatureSuggestionOutput                                                                                                                                         │
+│ class LLMFeatureSuggestionOutput(BaseModel):                                                                                                                                        │
+│     suggested_features: list[DSLFeature]                                                                                                                                            │
+│     reasoning: str                                                                                                                                                                  │
+│                                                                                                                                                                                     │
+│ Interpreter                                                                                                                                                                         │
+│                                                                                                                                                                                     │
+│ def execute_dsl_feature(                                                                                                                                                            │
+│     df: pd.DataFrame,                                                                                                                                                               │
+│     col_map: dict,                                                                                                                                                                  │
+│     feature_def: DSLFeature,                                                                                                                                                        │
+│ ) -> pd.Series:                                                                                                                                                                     │
+│                                                                                                                                                                                     │
+│ Returns a Series indexed by customer_id. If execution fails (bad column name, unsupported operation), the feature is skipped and logged.                                            │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Component 2: Multi-Model Training                                                                                                                                                   │
+│                                                                                                                                                                                     │
+│ File: app/agent/model_trainer.py                                                                                                                                                    │
+│                                                                                                                                                                                     │
+│ Models                                                                                                                                                                              │
+│ ┌───────────────┬─────────┬─────────────────────────────────────────────────────────────────────────┐                                                                               │
+│ │     Model     │ Library │                           Key Hyperparameters                           │                                                                               │
+│ ├───────────────┼─────────┼─────────────────────────────────────────────────────────────────────────┤                                                                               │
+│ │ XGBoost       │ xgboost │ n_estimators=100, max_depth=5, learning_rate=0.1, scale_pos_weight=auto │                                                                               │
+│ ├───────────────┼─────────┼─────────────────────────────────────────────────────────────────────────┤                                                                               │
+│ │ Random Forest │ sklearn │ n_estimators=100, max_depth=8, class_weight="balanced"                  │                                                                               │
+│ └───────────────┴─────────┴─────────────────────────────────────────────────────────────────────────┘                                                                               │
+│ Interface                                                                                                                                                                           │
+│                                                                                                                                                                                     │
+│ @dataclass                                                                                                                                                                          │
+│ class ModelResult:                                                                                                                                                                  │
+│     name: str                       # "xgboost" or "random_forest"                                                                                                                  │
+│     model: Any                      # trained model object                                                                                                                          │
+│     metrics: dict                   # {auc, precision, recall, f1}                                                                                                                  │
+│     confusion_matrix: dict          # {TP, FP, TN, FN}                                                                                                                              │
+│     feature_importance: list[dict]  # [{feature, importance}]                                                                                                                       │
+│     training_time: float                                                                                                                                                            │
+│                                                                                                                                                                                     │
+│ def train_all_models(                                                                                                                                                               │
+│     X_train, X_test, y_train, y_test, feature_names: list[str]                                                                                                                      │
+│ ) -> list[ModelResult]:                                                                                                                                                             │
+│                                                                                                                                                                                     │
+│ Trains both models on the same split. Returns a list of ModelResult sorted by AUC descending.                                                                                       │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Component 3: LLM Evaluator                                                                                                                                                          │
+│                                                                                                                                                                                     │
+│ File: app/agent/evaluator.py                                                                                                                                                        │
+│                                                                                                                                                                                     │
+│ Evaluation Prompt                                                                                                                                                                   │
+│                                                                                                                                                                                     │
+│ After training, the LLM receives:                                                                                                                                                   │
+│ - All model results (metrics + feature importance for each)                                                                                                                         │
+│ - Feature definitions (what each feature measures)                                                                                                                                  │
+│ - Churn label definition (window, cutoff)                                                                                                                                           │
+│ - Iteration history (previous iterations' metrics and adjustments)                                                                                                                  │
+│                                                                                                                                                                                     │
+│ Evaluation Output                                                                                                                                                                   │
+│                                                                                                                                                                                     │
+│ class LLMEvaluationOutput(BaseModel):                                                                                                                                               │
+│     leakage_detected: bool                                                                                                                                                          │
+│     suspect_features: list[str]         # features to remove                                                                                                                        │
+│     leakage_reasoning: str                                                                                                                                                          │
+│     quality_acceptable: bool                                                                                                                                                        │
+│     best_model: str                     # "xgboost" or "random_forest"                                                                                                              │
+│     suggested_adjustments: list[str]    # ["remove recency", "add feature: ..."]                                                                                                    │
+│     reasoning: str                                                                                                                                                                  │
+│                                                                                                                                                                                     │
+│ Leakage Detection Heuristics (given to LLM as context)                                                                                                                              │
+│                                                                                                                                                                                     │
+│ The LLM checks:                                                                                                                                                                     │
+│ 1. Single feature dominance: One feature > 80% importance                                                                                                                           │
+│ 2. Perfect metrics: AUC > 0.99 with any single feature > 50%                                                                                                                        │
+│ 3. Tautological features: Feature definition overlaps with label definition (e.g., recency measures "days since last purchase" and churn label means "no purchase in last N days")  │
+│                                                                                                                                                                                     │
+│ Success Criteria (default, stored in session)                                                                                                                                       │
+│                                                                                                                                                                                     │
+│ SUCCESS_CRITERIA = {                                                                                                                                                                │
+│     "min_auc": 0.7,                                                                                                                                                                 │
+│     "min_f1": 0.5,                                                                                                                                                                  │
+│     "max_top_feature_importance": 0.80,                                                                                                                                             │
+│     "min_features_above_5pct": 3,                                                                                                                                                   │
+│ }                                                                                                                                                                                   │
+│                                                                                                                                                                                     │
+│ The evaluation is a combination of:                                                                                                                                                 │
+│ - Rule-based checks against success criteria (hard gates)                                                                                                                           │
+│ - LLM judgment on leakage and quality (soft analysis)                                                                                                                               │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Component 4: Agent Loop                                                                                                                                                             │
+│                                                                                                                                                                                     │
+│ File: app/agent/loop.py                                                                                                                                                             │
+│                                                                                                                                                                                     │
+│ State                                                                                                                                                                               │
+│                                                                                                                                                                                     │
+│ @dataclass                                                                                                                                                                          │
+│ class AgentState:                                                                                                                                                                   │
+│     session_id: str                                                                                                                                                                 │
+│     iteration: int = 0                                                                                                                                                              │
+│     max_iterations: int = 5                                                                                                                                                         │
+│     status: str = "running"          # running | success | failed | interrupted                                                                                                     │
+│     history: list[IterationResult] = field(default_factory=list)                                                                                                                    │
+│     champion: ModelResult | None = None                                                                                                                                             │
+│     excluded_features: list[str] = field(default_factory=list)                                                                                                                      │
+│     dsl_features: list[DSLFeature] = field(default_factory=list)                                                                                                                    │
+│     user_overrides: dict = field(default_factory=dict)                                                                                                                              │
+│     success_criteria: dict = field(default_factory=lambda: SUCCESS_CRITERIA.copy())                                                                                                 │
+│                                                                                                                                                                                     │
+│ @dataclass                                                                                                                                                                          │
+│ class IterationResult:                                                                                                                                                              │
+│     iteration: int                                                                                                                                                                  │
+│     features_used: list[str]                                                                                                                                                        │
+│     features_removed: list[str]                                                                                                                                                     │
+│     features_added: list[str]                                                                                                                                                       │
+│     model_results: list[ModelResult]                                                                                                                                                │
+│     evaluation: LLMEvaluationOutput                                                                                                                                                 │
+│                                                                                                                                                                                     │
+│ Loop Logic                                                                                                                                                                          │
+│                                                                                                                                                                                     │
+│ async def run_agent(state: AgentState, session: dict) -> AgentState:                                                                                                                │
+│     while state.iteration < state.max_iterations:                                                                                                                                   │
+│         state.iteration += 1                                                                                                                                                        │
+│                                                                                                                                                                                     │
+│         # 1. Compute features (Tier 1 + Tier 2 + DSL, excluding banned features)                                                                                                    │
+│         feature_matrix = compute_features(session, state)                                                                                                                           │
+│                                                                                                                                                                                     │
+│         # 2. Compute labels                                                                                                                                                         │
+│         labels = compute_labels(session)                                                                                                                                            │
+│                                                                                                                                                                                     │
+│         # 3. Train all models                                                                                                                                                       │
+│         X_train, X_test, y_train, y_test = split(feature_matrix, labels)                                                                                                            │
+│         model_results = train_all_models(X_train, X_test, y_train, y_test)                                                                                                          │
+│                                                                                                                                                                                     │
+│         # 4. Evaluate (LLM + rules)                                                                                                                                                 │
+│         evaluation = await evaluate(model_results, state)                                                                                                                           │
+│                                                                                                                                                                                     │
+│         # 5. Record iteration                                                                                                                                                       │
+│         state.history.append(IterationResult(...))                                                                                                                                  │
+│                                                                                                                                                                                     │
+│         # 6. Stream progress to chat                                                                                                                                                │
+│         await broadcast_progress(state)                                                                                                                                             │
+│                                                                                                                                                                                     │
+│         # 7. Check success                                                                                                                                                          │
+│         if evaluation.quality_acceptable and not evaluation.leakage_detected:                                                                                                       │
+│             state.champion = select_champion(model_results, evaluation)                                                                                                             │
+│             state.status = "success"                                                                                                                                                │
+│             break                                                                                                                                                                   │
+│                                                                                                                                                                                     │
+│         # 8. Apply adjustments                                                                                                                                                      │
+│         for feat in evaluation.suspect_features:                                                                                                                                    │
+│             state.excluded_features.append(feat)                                                                                                                                    │
+│                                                                                                                                                                                     │
+│         # 9. Ask LLM for new features if needed                                                                                                                                     │
+│         if state.iteration < state.max_iterations:                                                                                                                                  │
+│             new_features = await suggest_dsl_features(session, state)                                                                                                               │
+│             state.dsl_features.extend(new_features)                                                                                                                                 │
+│                                                                                                                                                                                     │
+│     if state.status != "success":                                                                                                                                                   │
+│         # Pick best model from all iterations                                                                                                                                       │
+│         state.champion = pick_best_across_iterations(state.history)                                                                                                                 │
+│         state.status = "completed"                                                                                                                                                  │
+│                                                                                                                                                                                     │
+│     return state                                                                                                                                                                    │
+│                                                                                                                                                                                     │
+│ User Interruption                                                                                                                                                                   │
+│                                                                                                                                                                                     │
+│ The agent checks for user overrides between steps 6 and 7:                                                                                                                          │
+│ overrides = check_user_overrides(state.session_id)                                                                                                                                  │
+│ if overrides:                                                                                                                                                                       │
+│     apply_overrides(state, overrides)                                                                                                                                               │
+│     # overrides can: add/remove features, change success criteria,                                                                                                                  │
+│     # force a specific model, skip to completion                                                                                                                                    │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Component 5: Chat Interface                                                                                                                                                         │
+│                                                                                                                                                                                     │
+│ Backend                                                                                                                                                                             │
+│                                                                                                                                                                                     │
+│ File: app/chat/router.py                                                                                                                                                            │
+│                                                                                                                                                                                     │
+│ WebSocket endpoint: ws://host/sessions/{session_id}/chat                                                                                                                            │
+│                                                                                                                                                                                     │
+│ Message types:                                                                                                                                                                      │
+│ ┌─────────────────┬───────────────────┬───────────────────────────────────────────────────────────────────────────────┐                                                             │
+│ │    Direction    │       Type        │                                    Payload                                    │                                                             │
+│ ├─────────────────┼───────────────────┼───────────────────────────────────────────────────────────────────────────────┤                                                             │
+│ │ Client → Server │ user_message      │ {"text": "remove recency"}                                                    │                                                             │
+│ ├─────────────────┼───────────────────┼───────────────────────────────────────────────────────────────────────────────┤                                                             │
+│ │ Server → Client │ agent_progress    │ {"iteration": 2, "status": "training", "detail": "Training Random Forest..."} │                                                             │
+│ ├─────────────────┼───────────────────┼───────────────────────────────────────────────────────────────────────────────┤                                                             │
+│ │ Server → Client │ iteration_result  │ Full iteration result with metrics comparison                                 │                                                             │
+│ ├─────────────────┼───────────────────┼───────────────────────────────────────────────────────────────────────────────┤                                                             │
+│ │ Server → Client │ agent_response    │ {"text": "Removed recency. Retraining..."}                                    │                                                             │
+│ ├─────────────────┼───────────────────┼───────────────────────────────────────────────────────────────────────────────┤                                                             │
+│ │ Server → Client │ champion_selected │ Final model with comparison table                                             │                                                             │
+│ └─────────────────┴───────────────────┴───────────────────────────────────────────────────────────────────────────────┘                                                             │
+│ Chat Handler                                                                                                                                                                        │
+│                                                                                                                                                                                     │
+│ File: app/chat/handler.py                                                                                                                                                           │
+│                                                                                                                                                                                     │
+│ async def handle_message(session_id: str, text: str, agent_state: AgentState) -> str:                                                                                               │
+│                                                                                                                                                                                     │
+│ The handler sends the user message to the LLM with:                                                                                                                                 │
+│ - Conversation history                                                                                                                                                              │
+│ - Current agent state (iteration, features, metrics)                                                                                                                                │
+│ - Available commands                                                                                                                                                                │
+│                                                                                                                                                                                     │
+│ The LLM classifies the message as:                                                                                                                                                  │
+│ 1. Command: Modify agent state (remove feature, add feature, change model, change criteria)                                                                                         │
+│ 2. Question: Answer from pipeline context (what does this feature mean, why was this removed)                                                                                       │
+│ 3. Approval: User accepts current champion                                                                                                                                          │
+│                                                                                                                                                                                     │
+│ For commands, the handler modifies agent_state.user_overrides which the agent loop picks up.                                                                                        │
+│                                                                                                                                                                                     │
+│ Command Schema                                                                                                                                                                      │
+│                                                                                                                                                                                     │
+│ class LLMChatOutput(BaseModel):                                                                                                                                                     │
+│     intent: str              # "command" | "question" | "approval"                                                                                                                  │
+│     response_text: str       # text to show user                                                                                                                                    │
+│     command: str | None      # "remove_feature" | "add_feature" | "change_criteria" | ...                                                                                           │
+│     command_params: dict | None                                                                                                                                                     │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Component 6: Frontend                                                                                                                                                               │
+│                                                                                                                                                                                     │
+│ File: churn-tool/static/index.html                                                                                                                                                  │
+│                                                                                                                                                                                     │
+│ Single HTML page with:                                                                                                                                                              │
+│ - Upload area: Drag-and-drop CSV                                                                                                                                                    │
+│ - Chat panel: Input field + message history (WebSocket)                                                                                                                             │
+│ - Progress panel: Current iteration, status bar                                                                                                                                     │
+│ - Comparison table: All iterations' metrics (auto-updates via WebSocket)                                                                                                            │
+│ - Champion card: Final model summary                                                                                                                                                │
+│                                                                                                                                                                                     │
+│ No framework. Plain HTML + JS + minimal CSS. WebSocket for real-time updates.                                                                                                       │
+│                                                                                                                                                                                     │
+│ Sections:                                                                                                                                                                           │
+│ ┌──────────────────────────────────────┐                                                                                                                                            │
+│ │  [Upload CSV]                        │                                                                                                                                            │
+│ ├──────────────────┬───────────────────┤                                                                                                                                            │
+│ │                  │                   │                                                                                                                                            │
+│ │  Chat Panel      │  Results Panel    │                                                                                                                                            │
+│ │  - messages      │  - iteration #    │                                                                                                                                            │
+│ │  - input field   │  - comparison tbl │                                                                                                                                            │
+│ │                  │  - champion card  │                                                                                                                                            │
+│ │                  │  - feature import │                                                                                                                                            │
+│ │                  │                   │                                                                                                                                            │
+│ └──────────────────┴───────────────────┘                                                                                                                                            │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ File Structure                                                                                                                                                                      │
+│                                                                                                                                                                                     │
+│ churn-tool/                                                                                                                                                                         │
+│ ├── app/                                                                                                                                                                            │
+│ │   ├── agent/                                                                                                                                                                      │
+│ │   │   ├── __init__.py                                                                                                                                                             │
+│ │   │   ├── loop.py               # NEW: Agent loop orchestration                                                                                                                   │
+│ │   │   ├── evaluator.py          # NEW: LLM leakage detection + quality checks                                                                                                     │
+│ │   │   ├── model_trainer.py      # NEW: Multi-model training (XGBoost + RF)                                                                                                        │
+│ │   │   ├── feature_dsl.py        # NEW: DSL interpreter for custom features                                                                                                        │
+│ │   │   └── feature_engineer.py   # NEW: LLM feature suggestion via DSL                                                                                                             │
+│ │   ├── chat/                                                                                                                                                                       │
+│ │   │   ├── __init__.py                                                                                                                                                             │
+│ │   │   ├── router.py             # NEW: WebSocket endpoint                                                                                                                         │
+│ │   │   └── handler.py            # NEW: Chat message classification + dispatch                                                                                                     │
+│ │   ├── stages/                   # EXISTING (modifications noted below)                                                                                                            │
+│ │   │   ├── s4_features.py        # MODIFY: integrate DSL features + excluded list                                                                                                  │
+│ │   │   ├── s6_train.py           # MODIFY: extract training logic for reuse by model_trainer                                                                                       │
+│ │   │   └── (others unchanged)                                                                                                                                                      │
+│ │   ├── models/                                                                                                                                                                     │
+│ │   │   └── schemas.py            # MODIFY: add DSLFeature, LLMEvaluationOutput, etc.                                                                                               │
+│ │   ├── llm/                                                                                                                                                                        │
+│ │   │   └── client.py             # EXISTING (unchanged)                                                                                                                            │
+│ │   ├── session_store.py          # MODIFY: store agent_state per session                                                                                                           │
+│ │   └── main.py                   # MODIFY: add WebSocket route, agent endpoint, static files                                                                                       │
+│ ├── static/                                                                                                                                                                         │
+│ │   └── index.html                # NEW: Single-page chat UI                                                                                                                        │
+│ └── tests/                                                                                                                                                                          │
+│     ├── unit/                                                                                                                                                                       │
+│     │   ├── test_feature_dsl.py   # NEW: DSL interpreter tests                                                                                                                      │
+│     │   ├── test_evaluator.py     # NEW: Leakage detection tests                                                                                                                    │
+│     │   └── test_model_trainer.py # NEW: Multi-model training tests                                                                                                                 │
+│     └── integration/                                                                                                                                                                │
+│         └── test_agent_loop.py    # NEW: Full agent loop test                                                                                                                       │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Files to Modify                                                                                                                                                                     │
+│ ┌───────────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐                           │
+│ │           File            │                                                          Change                                                           │                           │
+│ ├───────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤                           │
+│ │ app/models/schemas.py     │ Add: DSLFeature, LLMEvaluationOutput, LLMFeatureSuggestionOutput, LLMChatOutput, ModelResult, IterationResult, AgentState │                           │
+│ ├───────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤                           │
+│ │ app/stages/s4_features.py │ Extract feature computation into reusable function that accepts excluded_features and dsl_features params                 │                           │
+│ ├───────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤                           │
+│ │ app/stages/s6_train.py    │ Extract core training logic into _train_single_model() for reuse by model_trainer.py                                      │                           │
+│ ├───────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤                           │
+│ │ app/session_store.py      │ Add agent_state field to session dict                                                                                     │                           │
+│ ├───────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤                           │
+│ │ app/main.py               │ Add: WebSocket route, POST /sessions/{id}/agent/start, GET /sessions/{id}/agent/status, static file mount                 │                           │
+│ └───────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘                           │
+│ ---                                                                                                                                                                                 │
+│ Implementation Order                                                                                                                                                                │
+│ ┌──────┬──────────────────────────────────────┬──────────────────────────────────────────┐                                                                                          │
+│ │ Step │                Files                 │               Description                │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 1    │ app/models/schemas.py                │ Add all new Pydantic models              │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 2    │ app/agent/feature_dsl.py             │ DSL interpreter (7 operations)           │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 3    │ tests/unit/test_feature_dsl.py       │ DSL unit tests                           │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 4    │ app/agent/model_trainer.py           │ Multi-model training function            │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 5    │ tests/unit/test_model_trainer.py     │ Training comparison tests                │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 6    │ app/agent/evaluator.py               │ LLM evaluation + leakage detection       │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 7    │ tests/unit/test_evaluator.py         │ Evaluator tests (mock LLM)               │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 8    │ app/agent/feature_engineer.py        │ LLM feature suggestion via DSL           │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 9    │ app/agent/loop.py                    │ Agent loop with iteration + broadcasting │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 10   │ app/stages/s4_features.py            │ Refactor to accept excluded/DSL features │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 11   │ app/stages/s6_train.py               │ Extract _train_single_model()            │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 12   │ app/chat/handler.py                  │ Chat message classification              │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 13   │ app/chat/router.py                   │ WebSocket endpoint                       │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 14   │ app/main.py                          │ Wire routes + static mount               │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 15   │ app/session_store.py                 │ Store agent state                        │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 16   │ static/index.html                    │ Chat UI                                  │                                                                                          │
+│ ├──────┼──────────────────────────────────────┼──────────────────────────────────────────┤                                                                                          │
+│ │ 17   │ tests/integration/test_agent_loop.py │ End-to-end agent test                    │                                                                                          │
+│ └──────┴──────────────────────────────────────┴──────────────────────────────────────────┘                                                                                          │
+│ ---                                                                                                                                                                                 │
+│ API Endpoints (New)                                                                                                                                                                 │
+│ ┌────────┬─────────────────────────────┬──────────────────────────────────────────────────────┐                                                                                     │
+│ │ Method │          Endpoint           │                     Description                      │                                                                                     │
+│ ├────────┼─────────────────────────────┼──────────────────────────────────────────────────────┤                                                                                     │
+│ │ POST   │ /sessions/{id}/agent/start  │ Start agent loop (non-blocking, runs in background)  │                                                                                     │
+│ ├────────┼─────────────────────────────┼──────────────────────────────────────────────────────┤                                                                                     │
+│ │ GET    │ /sessions/{id}/agent/status │ Get current agent state (iteration, status, history) │                                                                                     │
+│ ├────────┼─────────────────────────────┼──────────────────────────────────────────────────────┤                                                                                     │
+│ │ POST   │ /sessions/{id}/agent/stop   │ Interrupt agent loop                                 │                                                                                     │
+│ ├────────┼─────────────────────────────┼──────────────────────────────────────────────────────┤                                                                                     │
+│ │ WS     │ /sessions/{id}/chat         │ WebSocket for chat + progress streaming              │                                                                                     │
+│ └────────┴─────────────────────────────┴──────────────────────────────────────────────────────┘                                                                                     │
+│ Existing endpoints (S1-S3) remain unchanged. S4-S8 still work as standalone endpoints for backward compatibility. The agent loop calls them internally.                             │
+│                                                                                                                                                                                     │
+│ ---                                                                                                                                                                                 │
+│ Verification                                                                                                                                                                        │
+│                                                                                                                                                                                     │
+│ 1. DSL tests: pytest tests/unit/test_feature_dsl.py -v — all 7 operations produce correct Series                                                                                    │
+│ 2. Multi-model tests: pytest tests/unit/test_model_trainer.py -v — trains both models, returns sorted results                                                                       │
+│ 3. Evaluator tests: pytest tests/unit/test_evaluator.py -v — detects leakage when recency > 80%, accepts when criteria met                                                          │
+│ 4. Agent loop test: Run agent on improvedTransactions.csv:                                                                                                                          │
+│   - Iteration 1: trains both models, LLM evaluates                                                                                                                                  │
+│   - If leakage detected → removes suspect feature, suggests DSL features                                                                                                            │
+│   - Iteration 2+: retrains with adjusted features                                                                                                                                   │
+│   - Terminates when success criteria met or max iterations reached                                                                                                                  │
+│   - Champion model selected with comparison table                                                                                                                                   │
+│ 5. Chat test: Connect WebSocket, send "remove recency", verify agent picks it up                                                                                                    │
+│ 6. Frontend test: Open static/index.html, upload CSV, watch progress stream, send chat messages                                                                                     │
+│ 7. Backward compatibility: Existing S1-S8 endpoints still work independently      
