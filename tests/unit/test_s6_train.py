@@ -4,13 +4,14 @@ import numpy as np
 from fastapi import HTTPException
 
 from app.stages.s6_train import handle
-from app.session_store import store, SessionStore
+from app.session_store import store
+from tests.conftest import _create_test_session
 
 
 def _build_train_session(n_customers=100, churn_rate=0.3, n_features=5):
     """Build a session dict with labeled_features and labels for training.
     Uses the module-level store so handle() can update it."""
-    sid = store.create()
+    sid = _create_test_session(store)
 
     np.random.seed(42)
     n_churned = int(n_customers * churn_rate)
@@ -79,13 +80,11 @@ class TestTrainHandle:
     def test_scale_pos_weight_for_imbalance(self):
         session, sid, store = _build_train_session(n_customers=100, churn_rate=0.1)
         handle(sid, session)
-        # 10 churned, 90 active -> scale_pos_weight ~ 9
-        # We verify the model was trained (can't access scale_pos_weight directly)
         updated = store.get(sid)
         assert updated["model"] is not None
 
     def test_drops_constant_columns(self):
-        sid = store.create()
+        sid = _create_test_session(store)
         np.random.seed(42)
         n = 50
         labels = pd.Series(
@@ -102,7 +101,7 @@ class TestTrainHandle:
         assert "constant_feat" not in feat_names
 
     def test_raises_400_when_labels_missing(self):
-        sid = store.create()
+        sid = _create_test_session(store)
         features = pd.DataFrame({"f1": [1, 2, 3]}, index=["A", "B", "C"])
         store.update(sid, {"labeled_features": features, "labels": None})
         session = store.get(sid)
@@ -111,7 +110,7 @@ class TestTrainHandle:
         assert exc_info.value.status_code == 400
 
     def test_raises_400_when_all_zero_variance(self):
-        sid = store.create()
+        sid = _create_test_session(store)
         n = 50
         labels = pd.Series([1] * 15 + [0] * 35, index=[f"C{i}" for i in range(n)])
         features = pd.DataFrame(index=labels.index)

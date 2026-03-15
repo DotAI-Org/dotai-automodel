@@ -1,3 +1,4 @@
+"""SQLAlchemy ORM models for users, sessions, agent runs, and chat."""
 import uuid
 from datetime import datetime, timezone
 
@@ -10,14 +11,17 @@ from sqlalchemy.orm import DeclarativeBase, relationship
 
 
 class Base(DeclarativeBase):
+    """Base class for all ORM models."""
     pass
 
 
 def utcnow():
+    """Return the current UTC datetime."""
     return datetime.now(timezone.utc)
 
 
 class User(Base):
+    """Stores user account data from OAuth providers."""
     __tablename__ = "users"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
@@ -32,6 +36,7 @@ class User(Base):
 
 
 class Session(Base):
+    """Stores pipeline session state and data blobs."""
     __tablename__ = "sessions"
 
     id = Column(String(12), primary_key=True)
@@ -56,6 +61,19 @@ class Session(Base):
     user_dsl_features = Column(JSONB)
     churn_window_days = Column(Integer)
     cutoff_date = Column(String(20))
+
+    # Multi-data-type support
+    detected_data_types = Column(JSONB)  # [1, 3, 5]
+    field_analysis_signature = Column(JSONB)
+    churn_window_results = Column(JSONB)
+    findings = Column(JSONB)
+    findings_confirmed = Column(Integer, default=0)
+    feature_tier_map = Column(JSONB)  # {feature_name: tier_number}
+    model_comparison = Column(JSONB)  # {model_a: metrics, model_b: metrics, ...}
+    lift = Column(JSONB)  # {f1_baseline, f1_enriched, f1_lift}
+    tier_attribution = Column(JSONB)  # {tier_1: %, tier_2: %, ...}
+    pruning_report = Column(JSONB)
+    leakage_report = Column(JSONB)
 
     # Results
     metrics = Column(JSONB)
@@ -86,6 +104,7 @@ class Session(Base):
 
 
 class SessionFile(Base):
+    """Stores per-file data for multi-file uploads."""
     __tablename__ = "session_files"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -93,11 +112,15 @@ class SessionFile(Base):
     filename = Column(String(255))
     profile = Column(JSONB)
     dataframe_blob = Column(LargeBinary)
+    file_type = Column(String(20), default="transaction")
+    user_description = Column(Text)
+    connection_description = Column(Text)
 
     session = relationship("Session", back_populates="files")
 
 
 class AgentRun(Base):
+    """Stores agent loop run state and champion model."""
     __tablename__ = "agent_runs"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -118,6 +141,7 @@ class AgentRun(Base):
 
 
 class AgentIteration(Base):
+    """Stores per-iteration results within an agent run."""
     __tablename__ = "agent_iterations"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -133,6 +157,7 @@ class AgentIteration(Base):
 
 
 class ChatMessage(Base):
+    """Stores chat messages between user and agent."""
     __tablename__ = "chat_messages"
 
     id = Column(Integer, primary_key=True, autoincrement=True)

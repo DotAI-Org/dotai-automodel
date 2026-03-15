@@ -1,3 +1,4 @@
+"""Google Chat webhook notification sender."""
 import asyncio
 import logging
 import os
@@ -10,6 +11,7 @@ _WEBHOOK_URL = None
 
 
 def _get_webhook_url() -> str | None:
+    """Return the cached webhook URL from environment."""
     global _WEBHOOK_URL
     if _WEBHOOK_URL is None:
         _WEBHOOK_URL = os.environ.get("GOOGLE_CHAT_WEBHOOK_URL", "")

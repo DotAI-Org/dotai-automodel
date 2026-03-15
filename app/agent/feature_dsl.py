@@ -1,3 +1,4 @@
+"""DSL feature execution engine for per-customer aggregations."""
 import logging
 import pandas as pd
 import numpy as np
@@ -64,6 +65,7 @@ def _resolve_column(col_map: dict, col_ref: str) -> str:
 
 
 def _op_aggregate(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> pd.Series:
+    """Compute per-customer aggregation on a column."""
     column = _resolve_column(col_map, params["column"])
     func = params["func"]
     grouped = df.groupby(cust_col)[column]
@@ -71,12 +73,13 @@ def _op_aggregate(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) 
 
 
 def _op_aggregate_window(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> pd.Series:
+    """Compute per-customer aggregation within a time window."""
     column = _resolve_column(col_map, params["column"])
     func = params["func"]
     window_days = params["window_days"]
     date_col = col_map["transaction_date"]
 
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
     cutoff = max_date - pd.Timedelta(days=window_days)
     recent = df[dates >= cutoff]
@@ -91,6 +94,7 @@ def _op_aggregate_window(df: pd.DataFrame, col_map: dict, cust_col: str, params:
 
 
 def _op_ratio(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> pd.Series:
+    """Compute ratio of two per-customer aggregations."""
     num_params = params["numerator"]
     den_params = params["denominator"]
 
@@ -99,7 +103,7 @@ def _op_ratio(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> p
     num_func = num_params["func"]
     if "window_days" in num_params:
         date_col = col_map["transaction_date"]
-        dates = pd.to_datetime(df[date_col])
+        dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
         max_date = dates.max()
         cutoff = max_date - pd.Timedelta(days=num_params["window_days"])
         num_df = df[dates >= cutoff]
@@ -119,7 +123,7 @@ def _op_ratio(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> p
     den_func = den_params["func"]
     if "window_days" in den_params:
         date_col = col_map["transaction_date"]
-        dates = pd.to_datetime(df[date_col])
+        dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
         max_date = dates.max()
         cutoff = max_date - pd.Timedelta(days=den_params["window_days"])
         den_df = df[dates >= cutoff]
@@ -137,11 +141,12 @@ def _op_ratio(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> p
 
 
 def _op_trend(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> pd.Series:
+    """Compute first-half vs second-half difference for a column."""
     column = _resolve_column(col_map, params["column"])
     func = params["func"]
     date_col = col_map["transaction_date"]
 
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
     min_date = dates.min()
     mid_date = min_date + (max_date - min_date) / 2
@@ -167,6 +172,7 @@ def _op_trend(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> p
 
 
 def _op_conditional_count(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> pd.Series:
+    """Count rows per customer matching a condition."""
     column = _resolve_column(col_map, params["column"])
     condition = params["condition"]  # e.g. "> 50", "== 'online'"
 
@@ -208,16 +214,18 @@ def _op_conditional_count(df: pd.DataFrame, col_map: dict, cust_col: str, params
 
 
 def _op_nunique(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> pd.Series:
+    """Count distinct values per customer for a column."""
     column = _resolve_column(col_map, params["column"])
     return df.groupby(cust_col)[column].nunique()
 
 
 def _op_gap_stat(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -> pd.Series:
+    """Compute a statistic on inter-purchase gaps per customer."""
     func = params["func"]  # "max", "min", "mean", "std", "median"
     date_col = col_map["transaction_date"]
 
     def _compute_gap(g):
-        dates = pd.to_datetime(g[date_col]).sort_values()
+        dates = pd.to_datetime(g[date_col], format="mixed", dayfirst=True).sort_values()
         if len(dates) < 2:
             return np.nan
         diffs = dates.diff().dt.days.dropna()
@@ -238,6 +246,7 @@ def _op_gap_stat(df: pd.DataFrame, col_map: dict, cust_col: str, params: dict) -
 
 
 def _apply_agg_func(grouped, func: str) -> pd.Series:
+    """Apply a named aggregation function to a grouped object."""
     if func == "sum":
         return grouped.sum()
     elif func == "mean":

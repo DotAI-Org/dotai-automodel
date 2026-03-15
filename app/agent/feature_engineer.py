@@ -1,3 +1,4 @@
+"""LLM-based DSL feature suggestion for the agent loop."""
 import logging
 from typing import Any
 

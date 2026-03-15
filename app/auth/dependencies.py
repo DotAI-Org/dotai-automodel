@@ -1,3 +1,4 @@
+"""JWT creation, decoding, and request authentication."""
 from datetime import datetime, timedelta, timezone
 
 from fastapi import Header, HTTPException
@@ -7,6 +8,7 @@ from app.auth.config import JWT_SECRET, JWT_ALGORITHM, JWT_EXPIRY_DAYS
 
 
 def create_jwt(user_id: str, email: str, name: str) -> str:
+    """Create a signed JWT token for a user."""
     payload = {
         "sub": user_id,
         "email": email,
@@ -17,6 +19,7 @@ def create_jwt(user_id: str, email: str, name: str) -> str:
 
 
 def decode_jwt(token: str) -> dict:
+    """Decode a JWT token and return user info dict."""
     try:
         payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
         return {
@@ -29,6 +32,7 @@ def decode_jwt(token: str) -> dict:
 
 
 async def get_current_user(authorization: str = Header(default="")) -> dict:
+    """Extract and decode JWT from Authorization header."""
     if not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Missing Bearer token")
     token = authorization[7:]

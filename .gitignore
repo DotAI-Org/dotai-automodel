@@ -7,3 +7,6 @@ dist/
 build/
 .pytest_cache/
 tests/.DS_Store
+.DS_Store
+app/.DS_Store
+tests/test_data/scanner_data.csv

@@ -1146,6 +1146,232 @@ body {
   .step-line { width: 20px; margin: 0 6px; }
   .step-item span { display: none; }
 }
+
+/* ===== F1: FILE METADATA PANEL ===== */
+.file-metadata-panel {
+  margin-top: 20px;
+}
+.file-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.file-card h4 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 12px;
+}
+.file-card h4 .file-size {
+  font-weight: 400; color: var(--text-secondary); font-size: 13px;
+}
+.file-card label {
+  font-size: 13px; font-weight: 600;
+  display: block; margin-bottom: 6px; margin-top: 14px;
+}
+.file-card label:first-of-type { margin-top: 0; }
+.radio-group {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.radio-option {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  background: var(--surface);
+  transition: border-color 0.15s, background 0.15s;
+}
+.radio-option:hover { border-color: var(--accent); background: var(--accent-light); }
+.radio-option input[type="radio"] { margin: 0; }
+.radio-option input[type="radio"]:checked + span { font-weight: 600; }
+.file-description, .file-connection {
+  width: 100%; padding: 8px 12px;
+  border: 1px solid var(--border); border-radius: 6px;
+  font-family: var(--font); font-size: 13px;
+  resize: vertical; min-height: 40px;
+}
+
+/* ===== F2: FINDINGS SCREEN ===== */
+.findings-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.finding-section {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.finding-section:last-of-type { border-bottom: none; padding-bottom: 0; }
+.finding-section h4 {
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 8px;
+}
+.finding-section p {
+  font-size: 14px; color: var(--text-secondary);
+  line-height: 1.6;
+}
+.window-results {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 10px;
+}
+.window-chip {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--text-secondary);
+}
+.window-chip.selected {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.signal-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.signal-auc {
+  font-family: var(--mono);
+  font-size: 12px; font-weight: 600;
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+.signal-text { color: var(--text); }
+.findings-actions {
+  display: flex; align-items: center; gap: 16px;
+  margin-top: 24px;
+}
+.findings-actions p {
+  font-size: 14px; font-weight: 500;
+  margin: 0;
+}
+.free-text-section {
+  margin-top: 20px;
+}
+.free-text-section label {
+  font-size: 13px; font-weight: 600;
+  display: block; margin-bottom: 6px;
+}
+
+/* ===== F3: MODEL COMPARISON + TIER ATTRIBUTION ===== */
+.model-comparison {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.model-comparison h3 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 16px;
+}
+.comparison-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 14px;
+}
+.comparison-table th {
+  text-align: left;
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+}
+.comparison-table td {
+  padding: 10px 12px;
+  font-family: var(--mono); font-size: 13px;
+  border-bottom: 1px solid var(--border);
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table .champion-row {
+  background: var(--success-light);
+}
+.comparison-table .champion-row td:first-child {
+  font-weight: 700;
+}
+
+.lift-banner {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: var(--success-light);
+  border-left: 3px solid var(--success);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.tier-attribution {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.tier-attribution h3 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 16px;
+}
+.stacked-bar {
+  display: flex;
+  height: 28px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.bar-segment {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600; color: #fff;
+  min-width: 2px;
+}
+.bar-legend {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  font-size: 13px; color: var(--text-secondary);
+}
+.legend-item {
+  display: flex; align-items: center; gap: 6px;
+}
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ===== F4: FEATURE TAGS + ACTION COLUMN ===== */
+.feature-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 2px 3px 2px 0;
+  white-space: nowrap;
+}
+.feature-tag .source-label {
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-right: 3px;
+}
+.feature-tag.tier-1 { background: #dbeafe; color: #1e40af; }
+.feature-tag.tier-2 { background: #d1fae5; color: #065f46; }
+.feature-tag.tier-3 { background: #fef3c7; color: #92400e; }
+.feature-tag.tier-4 { background: #ede9fe; color: #5b21b6; }
+.action-cell {
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 200px;
+}
 </style>
 </head>
 <body>
@@ -1307,9 +1533,9 @@ body {
     <p class="screen-subtitle">Any export from your ERP, CRM, or billing system. We figure out the columns. No formatting needed.</p>
 
     <div class="drop-zone" id="dropZone">
-      <input type="file" id="fileInput" accept=".csv" style="display:none;">
+      <input type="file" id="fileInput" accept=".csv" multiple style="display:none;">
       <div class="drop-zone-icon">&#128195;</div>
-      <div class="drop-zone-text">Drop CSV or Excel files here, or click to browse</div>
+      <div class="drop-zone-text">Drop one or more CSV files here, or click to browse</div>
       <div class="drop-zone-compat">Works with Tally, SAP, Zoho, Salesforce exports, or any spreadsheet.</div>
       <div class="drop-zone-filename" id="dropFileName"></div>
     </div>
@@ -1319,6 +1545,9 @@ body {
       <textarea class="desc-field" id="descField" placeholder='e.g. "Distributor purchase orders, North region, last 12 months"'></textarea>
       <button class="btn btn-primary" id="uploadBtn">Upload & Analyze</button>
     </div>
+
+    <!-- F1: Per-file type metadata panel (shown after files are selected) -->
+    <div class="file-metadata-panel" id="fileMetadataPanel" style="display:none;"></div>
 
     <!-- Data Summary (hidden until "uploaded") -->
     <div class="data-summary" id="dataSummary" style="display:none;">
@@ -1398,6 +1627,41 @@ body {
     </div>
   </div>
 
+  <!-- ===== FINDINGS SCREEN (F2) ===== -->
+  <div class="screen" id="screenFindings">
+    <h1 class="screen-title">What we found in your data</h1>
+    <p class="screen-subtitle">We analyzed your data and computed signals. Confirm if this matches what you see.</p>
+
+    <div class="findings-form">
+      <div class="finding-section" id="purchasePattern"></div>
+      <div class="finding-section" id="churnThreshold"></div>
+      <div class="finding-section" id="signalsSection">
+        <h4>Signals we found in your data</h4>
+        <div id="signalList"></div>
+      </div>
+      <div class="finding-section" id="crossFileSection" style="display:none;"></div>
+    </div>
+
+    <div class="free-text-section">
+      <label>Anything else we should know?</label>
+      <textarea class="desc-field" id="additionalContext"
+        placeholder='e.g., "We had a price increase in March that caused some dealers to hold off ordering"'></textarea>
+    </div>
+
+    <div class="findings-actions">
+      <p>Does this match what you see?</p>
+      <button class="btn btn-primary" id="confirmFindingsBtn">Yes, continue</button>
+      <button class="btn btn-secondary" id="showCorrectionsBtn">Let me correct</button>
+    </div>
+
+    <div id="correctionsPanel" style="display:none; margin-top:16px;">
+      <div id="correctionsMcqContainer"></div>
+      <div style="margin-top:12px;">
+        <button class="btn btn-primary" id="submitCorrectionsBtn">Continue with corrections</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== BUILDING SCREEN ===== -->
   <div class="screen" id="screenBuilding">
     <div class="building-container">
@@ -1421,6 +1685,7 @@ body {
   <div class="screen" id="screenResults">
 
     <!-- Hero: The Number -->
+    <div id="heroSection">
     <div class="results-hero">
       <div class="results-hero-number" id="heroNumber">—</div>
       <div class="results-hero-caption">customers need a call this week.</div>
@@ -1442,9 +1707,28 @@ body {
     </div>
 
     <div class="results-context" id="resultsContext"></div>
+    </div><!-- /heroSection -->
+
+    <!-- F3: Model Comparison -->
+    <div class="model-comparison" id="modelComparison" style="display:none;">
+      <h3>Model Comparison</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Model</th><th>F1</th><th>AUC</th><th>Precision</th><th>Recall</th></tr>
+        </thead>
+        <tbody id="comparisonBody"></tbody>
+      </table>
+      <div class="lift-banner" id="liftBanner" style="display:none;"></div>
+    </div>
+
+    <!-- F3: Tier Attribution -->
+    <div class="tier-attribution" id="tierAttribution" style="display:none;">
+      <h3>Signal Sources</h3>
+      <div id="attributionBars"></div>
+    </div>
 
     <!-- Customer List -->
-    <div class="results-card">
+    <div class="results-card" id="customerSection">
       <div class="list-controls">
         <input class="list-search" type="text" placeholder="Search customers..." id="customerSearch" oninput="filterCustomers()">
         <div class="filter-tabs">
@@ -1457,7 +1741,7 @@ body {
 
       <table class="customer-table" id="customerTable">
         <thead>
-          <tr><th>Customer</th><th>Risk</th><th>Last Order</th><th>What Changed</th></tr>
+          <tr><th>Customer</th><th>Risk</th><th>Last Order</th><th>What Changed</th><th id="actionColHeader" style="display:none;">Action</th></tr>
         </thead>
         <tbody id="customerTableBody">
           <!-- Populated from inference API -->
@@ -1596,9 +1880,17 @@ let buildingStartTime = 0;
 let buildingTimerInterval = null;
 let buildingPollInterval = null;
 let showAllCustomers = false;
-const ROLES = ['customer_id','transaction_date','amount','product','quantity','category','channel','region','other'];
+let isMultiSource = false;
+let findingsData = null;
+const ROLES = ['customer_id','transaction_date','amount','product','quantity','category','channel','region',
+  'ticket_id','ticket_date','resolution_date','issue_type','csat_score','warranty_status','tat_days',
+  'points_earned','points_redeemed','loyalty_tier','enrollment_date','membership_type',
+  'return_date','return_reason','return_qty','credit_amount',
+  'visit_date','visit_duration','visit_objective','visit_outcome','order_placed',
+  'credit_limit','territory','dealer_status','other'];
 
 const FEATURE_LABELS = {
+  // Legacy feature names
   recency: 'No recent purchases',
   frequency_30d: 'Purchase frequency (30 days)',
   frequency_60d: 'Purchase frequency (60 days)',
@@ -1613,6 +1905,21 @@ const FEATURE_LABELS = {
   weekend_vs_weekday: 'Shifted to weekend orders',
 };
 
+// Pattern-based labels for exhaustive field analysis features
+const FEATURE_LABEL_PATTERNS = [
+  [/_trend$/, 'trend', (col) => { const base = col.replace(/_trend$/, '').replace(/_/g, ' '); return base + ' changing over time'; }],
+  [/_frequency_(\d+)d$/, 'freq', (col) => { const m = col.match(/_frequency_(\d+)d$/); return 'Purchase frequency (' + m[1] + ' days)'; }],
+  [/_gap_avg$/, 'gap', () => 'Average gap between purchases'],
+  [/_gap_max$/, 'gap', () => 'Longest gap between purchases'],
+  [/_gap_std$/, 'gap', () => 'Gap consistency between purchases'],
+  [/_gap_cv$/, 'gap', () => 'Purchase timing regularity'],
+  [/_recency$/, 'rec', () => 'Days since last purchase'],
+  [/_mean$/, 'mean', (col) => { const base = col.replace(/_mean$/, '').replace(/_/g, ' '); return 'Average ' + base; }],
+  [/_std$/, 'std', (col) => { const base = col.replace(/_std$/, '').replace(/_/g, ' '); return base + ' variability'; }],
+  [/_diversity$/, 'div', (col) => { const base = col.replace(/_diversity$/, '').replace(/_/g, ' '); return base + ' variety per customer'; }],
+  [/gap_vs_personal_median/, 'gap', () => 'Gap vs usual purchase pattern'],
+];
+
 const ROLE_LABELS = {
   customer_id: 'Customer ID',
   transaction_date: 'Order Date',
@@ -1622,6 +1929,40 @@ const ROLE_LABELS = {
   category: 'Category',
   channel: 'Channel',
   region: 'Region',
+  ticket_id: 'Ticket ID',
+  ticket_date: 'Ticket Date',
+  resolution_date: 'Resolution Date',
+  issue_type: 'Issue Type',
+  csat_score: 'CSAT Score',
+  warranty_status: 'Warranty Status',
+  tat_days: 'TAT (Days)',
+  points_earned: 'Points Earned',
+  points_redeemed: 'Points Redeemed',
+  loyalty_tier: 'Loyalty Tier',
+  enrollment_date: 'Enrollment Date',
+  membership_type: 'Membership Type',
+  return_date: 'Return Date',
+  return_reason: 'Return Reason',
+  return_qty: 'Return Quantity',
+  credit_amount: 'Credit Amount',
+  visit_date: 'Visit Date',
+  visit_duration: 'Visit Duration',
+  visit_objective: 'Visit Objective',
+  visit_outcome: 'Visit Outcome',
+  order_placed: 'Order Placed',
+  credit_limit: 'Credit Limit',
+  territory: 'Territory',
+  dealer_status: 'Dealer Status',
+  other: 'Other',
+};
+
+const FILE_TYPE_LABELS = {
+  transaction: 'Transaction / purchase orders / invoices',
+  service: 'Service / warranty / complaint records',
+  loyalty: 'Loyalty / points / membership data',
+  returns: 'Returns / damage / expiry records',
+  field: 'Field visits / call reports / engagement logs',
+  master: 'Customer / dealer master (profile data)',
   other: 'Other',
 };
 
@@ -1717,7 +2058,7 @@ function goToScreen(screen) {
   currentScreen = screen;
 
   const stepIndex = screen === 'building' || screen === 'results' ? 2 :
-                    screen === 'business' ? 1 : 0;
+                    screen === 'business' || screen === 'findings' ? 1 : 0;
 
   ['step1','step2','step3'].forEach((id, i) => {
     const el = document.getElementById(id);
@@ -1735,6 +2076,7 @@ function goToScreen(screen) {
   const screenMap = {
     upload: 'screenUpload',
     business: 'screenBusiness',
+    findings: 'screenFindings',
     building: 'screenBuilding',
     results: 'screenResults',
   };
@@ -1873,6 +2215,7 @@ async function loadSession(id) {
 const dropZone = document.getElementById('dropZone');
 const fileInput = document.getElementById('fileInput');
 let selectedFile = null;
+let selectedFiles = [];
 
 dropZone.addEventListener('click', () => fileInput.click());
 dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
@@ -1881,43 +2224,90 @@ dropZone.addEventListener('drop', e => {
   e.preventDefault();
   dropZone.classList.remove('dragover');
   const files = Array.from(e.dataTransfer.files).filter(f => f.name.endsWith('.csv'));
-  if (files.length) handleFileSelect(files[0]);
+  if (files.length) handleFilesSelect(files);
 });
 fileInput.addEventListener('change', () => {
-  if (fileInput.files.length) handleFileSelect(fileInput.files[0]);
+  if (fileInput.files.length) handleFilesSelect(Array.from(fileInput.files));
 });
 
-function handleFileSelect(file) {
-  selectedFile = file;
-  document.getElementById('dropFileName').textContent = file.name;
+function handleFilesSelect(files) {
+  // Accumulate files instead of replacing
+  files.forEach(f => {
+    if (!selectedFiles.some(sf => sf.name === f.name && sf.size === f.size)) {
+      selectedFiles.push(f);
+    }
+  });
+  selectedFile = selectedFiles[0];
+
+  // Update drop zone display
+  const nameEl = document.getElementById('dropFileName');
+  nameEl.textContent = selectedFiles.map(f => f.name).join(', ');
+
+  // Show description + upload button
   document.getElementById('descWrap').style.display = 'block';
   document.getElementById('uploadBtn').disabled = false;
+
+  // Show file metadata panel for type selection
+  renderFileMetadata(selectedFiles);
+}
+
+// Legacy single-file handler (kept for backward compat)
+function handleFileSelect(file) {
+  handleFilesSelect([file]);
 }
 
 document.getElementById('uploadBtn').addEventListener('click', doUpload);
 
 async function doUpload() {
-  if (!selectedFile) return;
+  if (!selectedFiles.length && !selectedFile) return;
   const btn = document.getElementById('uploadBtn');
   btn.disabled = true;
   btn.textContent = 'Uploading...';
 
   const overlay = document.getElementById('analyzingOverlay');
-  document.getElementById('analyzingText').textContent = 'Analyzing your file...';
+  document.getElementById('analyzingText').textContent = selectedFiles.length > 1 ? 'Analyzing your files...' : 'Analyzing your file...';
   overlay.classList.add('active');
 
   try {
-    const form = new FormData();
-    form.append('file', selectedFile);
-    const res = await authFetch(`${API}/sessions`, { method: 'POST', body: form });
-    if (!res.ok) throw new Error(await res.text());
-    const data = await res.json();
+    let data;
+
+    if (selectedFiles.length > 1) {
+      // Multi-file upload with metadata
+      data = await uploadFilesWithMetadata(selectedFiles);
+    } else {
+      // Single file upload (legacy path)
+      const form = new FormData();
+      form.append('file', selectedFiles[0] || selectedFile);
+
+      // Collect file type metadata if panel was shown
+      const fileTypeRadio = document.querySelector('input[name="filetype-0"]:checked');
+      if (fileTypeRadio && fileTypeRadio.value !== 'transaction') {
+        // Single file with non-default type: use multi endpoint
+        const metadata = [{
+          filename: (selectedFiles[0] || selectedFile).name,
+          file_type: fileTypeRadio.value,
+          user_description: document.querySelector('.file-description')?.value || '',
+          connection_description: '',
+        }];
+        const formMulti = new FormData();
+        formMulti.append('files', selectedFiles[0] || selectedFile);
+        formMulti.append('file_metadata', JSON.stringify(metadata));
+        const res = await authFetch(`${API}/sessions/multi`, { method: 'POST', body: formMulti });
+        if (!res.ok) throw new Error(await res.text());
+        data = await res.json();
+      } else {
+        const res = await authFetch(`${API}/sessions`, { method: 'POST', body: form });
+        if (!res.ok) throw new Error(await res.text());
+        data = await res.json();
+      }
+    }
+
     sessionId = data.session_id;
     localStorage.setItem('churn_current_session', sessionId);
     loadSessionList();
 
     // Store profile for display
-    const profile = data.profile;
+    const profile = data.profile || {};
 
     // Now run column mapping
     document.getElementById('analyzingText').textContent = 'Mapping columns...';
@@ -1931,9 +2321,10 @@ async function doUpload() {
     // Populate data summary
     populateDataSummary(profile, currentMappings);
 
-    // Show summary, hide drop zone
+    // Show summary, hide drop zone and metadata panel
     document.getElementById('dropZone').style.display = 'none';
     document.getElementById('descWrap').style.display = 'none';
+    document.getElementById('fileMetadataPanel').style.display = 'none';
     document.getElementById('dataSummary').style.display = 'block';
 
   } catch (e) {
@@ -1973,18 +2364,76 @@ function populateDataSummary(profile, mappings) {
   });
 }
 
+// F1: Render per-file type metadata panel
+function renderFileMetadata(files) {
+  const panel = document.getElementById('fileMetadataPanel');
+  panel.innerHTML = files.map((file, i) => `
+    <div class="file-card" data-index="${i}">
+      <h4>${escapeHtml(file.name)} <span class="file-size">(${file.size ? Math.round(file.size / 1024) + ' KB' : ''})</span></h4>
+
+      <label>What is this file?</label>
+      <div class="radio-group">
+        ${['transaction', 'service', 'loyalty', 'returns', 'field', 'master', 'other']
+          .map(type => `
+            <label class="radio-option">
+              <input type="radio" name="filetype-${i}" value="${type}"
+                     ${type === 'transaction' && i === 0 ? 'checked' : ''}>
+              <span>${FILE_TYPE_LABELS[type]}</span>
+            </label>
+          `).join('')}
+      </div>
+
+      <label>Optional: describe in your own words</label>
+      <textarea class="file-description" placeholder="e.g., North region sales data, last 18 months"></textarea>
+
+      ${files.length > 1 ? `
+        <label>How does this file connect to the others?</label>
+        <textarea class="file-connection"
+          placeholder='e.g., "dealer_code in this file matches distributor_code in the sales file"'></textarea>
+      ` : ''}
+    </div>
+  `).join('');
+  panel.style.display = 'block';
+}
+
+// F1: Upload files with metadata
+async function uploadFilesWithMetadata(files) {
+  const formData = new FormData();
+  const metadata = [];
+
+  files.forEach((file, i) => {
+    formData.append('files', file);
+    metadata.push({
+      filename: file.name,
+      file_type: document.querySelector(`input[name="filetype-${i}"]:checked`)?.value || 'other',
+      user_description: document.querySelectorAll('.file-description')[i]?.value || '',
+      connection_description: document.querySelectorAll('.file-connection')[i]?.value || '',
+    });
+  });
+
+  formData.append('file_metadata', JSON.stringify(metadata));
+
+  const res = await authFetch(`${API}/sessions/multi`, { method: 'POST', body: formData });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
 function resetUploadScreen() {
   selectedFile = null;
+  selectedFiles = [];
   document.getElementById('dropZone').style.display = 'block';
   document.getElementById('dropFileName').textContent = '';
   document.getElementById('descWrap').style.display = 'none';
   document.getElementById('descField').value = '';
   document.getElementById('dataSummary').style.display = 'none';
   document.getElementById('editMappingsPanel').style.display = 'none';
+  document.getElementById('fileMetadataPanel').style.display = 'none';
+  document.getElementById('fileMetadataPanel').innerHTML = '';
   document.getElementById('uploadBtn').disabled = false;
   document.getElementById('uploadBtn').textContent = 'Upload & Analyze';
   document.getElementById('roundsContainer').innerHTML = '';
   currentRound = 0;
+  fileInput.value = '';
 }
 
 // Edit mappings toggle
@@ -2108,14 +2557,27 @@ async function enterBusinessScreen() {
     if (!res.ok) throw new Error(await res.text());
     const data = await res.json();
     mcqData = data.questions;
-    renderMcqQuestions(data.questions);
+
+    // Show hypothesis before questions, then render MCQs
+    container.innerHTML = '';
+    if (data.hypothesis) {
+      const hypoDiv = document.createElement('div');
+      hypoDiv.style.cssText = 'background:var(--accent-light); border-left:3px solid var(--accent); padding:14px 18px; border-radius:6px; margin-bottom:24px; font-size:14px; line-height:1.6;';
+      hypoDiv.innerHTML = `<strong>We think this is:</strong> ${escapeHtml(data.hypothesis.type)}
+        ${data.hypothesis.reasoning ? `<br><span style="color:var(--text-secondary);">${escapeHtml(data.hypothesis.reasoning)}</span>` : ''}`;
+      container.appendChild(hypoDiv);
+    }
+    // Render MCQs into a sub-container so they don't wipe the hypothesis
+    const mcqSubContainer = document.createElement('div');
+    container.appendChild(mcqSubContainer);
+    renderMcqQuestions(data.questions, mcqSubContainer);
   } catch (e) {
     container.innerHTML = `<div style="color:var(--danger); padding:16px;">Failed to generate questions: ${escapeHtml(e.message)}</div>`;
   }
 }
 
-function renderMcqQuestions(questions) {
-  const container = document.getElementById('mcqContainer');
+function renderMcqQuestions(questions, targetContainer) {
+  const container = targetContainer || document.getElementById('mcqContainer');
   container.innerHTML = '';
   questions.forEach(q => {
     const group = document.createElement('div');
@@ -2171,6 +2633,106 @@ document.getElementById('buildListBtn').addEventListener('click', async () => {
     btn.disabled = false;
     btn.textContent = 'Build My List \u2192';
   }
+});
+
+// ============================================================
+// F2: FINDINGS SCREEN
+// ============================================================
+function renderFindings(findings) {
+  findingsData = findings;
+
+  // Purchase pattern
+  const pp = document.getElementById('purchasePattern');
+  if (findings.purchase_pattern) {
+    pp.innerHTML = `<h4>Purchase pattern</h4><p>${escapeHtml(findings.purchase_pattern.summary || findings.purchase_pattern)}</p>`;
+  } else {
+    pp.style.display = 'none';
+  }
+
+  // Churn threshold
+  const ct = document.getElementById('churnThreshold');
+  if (findings.churn_threshold) {
+    const threshold = findings.churn_threshold;
+    let html = `<h4>Churn threshold</h4>
+      <p>Customers who go ${threshold.selected_window} days without ordering are unlikely to return.
+      We tested ${(threshold.all_results || []).length} thresholds and ${threshold.selected_window} days
+      produced the best signal.</p>`;
+    if (threshold.all_results) {
+      html += `<div class="window-results">
+        ${threshold.all_results.filter(r => r.status === 'tested').map(r => `
+          <div class="window-chip ${r.window === threshold.selected_window ? 'selected' : ''}">
+            ${r.window}d: F1=${typeof r.f1 === 'number' ? r.f1.toFixed(2) : r.f1}
+          </div>
+        `).join('')}
+      </div>`;
+    }
+    ct.innerHTML = html;
+  } else {
+    ct.style.display = 'none';
+  }
+
+  // Signals
+  const signalList = document.getElementById('signalList');
+  if (findings.signals && findings.signals.length) {
+    signalList.innerHTML = findings.signals.map(s => `
+      <div class="signal-item">
+        <span class="signal-auc">AUC ${typeof s.auc === 'number' ? s.auc.toFixed(2) : s.auc}</span>
+        <span class="signal-text">${escapeHtml(s.plain_language || s.field || s.name)}</span>
+      </div>
+    `).join('');
+  } else {
+    document.getElementById('signalsSection').style.display = 'none';
+  }
+
+  // Cross-file findings
+  if (findings.cross_file) {
+    const cf = document.getElementById('crossFileSection');
+    cf.innerHTML = `<h4>Cross-file connections</h4><p>${escapeHtml(findings.cross_file)}</p>`;
+    cf.style.display = 'block';
+  }
+
+  goToScreen('findings');
+}
+
+document.getElementById('confirmFindingsBtn').addEventListener('click', async () => {
+  const additionalContext = document.getElementById('additionalContext').value.trim();
+  try {
+    await authFetch(`${API}/sessions/${sessionId}/findings/confirm`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ additional_context: additionalContext || null }),
+    });
+  } catch (_) {}
+  goToScreen('building');
+  startAgent();
+});
+
+document.getElementById('showCorrectionsBtn').addEventListener('click', () => {
+  const panel = document.getElementById('correctionsPanel');
+  panel.style.display = 'block';
+  // Show MCQ panel with defaults pre-filled
+  if (mcqData) {
+    renderMcqQuestions(mcqData, document.getElementById('correctionsMcqContainer'));
+  }
+});
+
+document.getElementById('submitCorrectionsBtn').addEventListener('click', async () => {
+  const answers = {};
+  if (mcqData) {
+    mcqData.forEach(q => {
+      const sel = document.querySelector(`#correctionsMcqContainer input[name="${q.id}"]:checked`);
+      if (sel) answers[q.id] = sel.value;
+    });
+  }
+  try {
+    await authFetch(`${API}/sessions/${sessionId}/features`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answers }),
+    });
+  } catch (_) {}
+  goToScreen('building');
+  startAgent();
 });
 
 // ============================================================
@@ -2239,6 +2801,31 @@ function handleWsMessage(msg) {
       break;
     case 'champion_selected':
       handleChampionSelected(msg);
+      break;
+    case 'early_results_ready':
+      handleEarlyResults(msg);
+      break;
+    case 'results_improved':
+      handleResultsImproved(msg);
+      break;
+    case 'field_analysis_progress':
+      addRoundStep(0, msg.detail || 'Analyzing fields...', 'active');
+      break;
+    case 'churn_window_result':
+      addRoundStep(0, msg.detail || 'Churn window selected', 'done');
+      break;
+    case 'findings_ready':
+      if (msg.findings) renderFindings(msg.findings);
+      break;
+    case 'pruning_complete':
+      addRoundStep(currentRound || 1, msg.detail || 'Feature pruning done', 'done');
+      break;
+    case 'leakage_detected':
+      addRoundStep(currentRound || 1, msg.detail || 'Leakage features removed', 'warning');
+      break;
+    case 'model_comparison_ready':
+      if (msg.comparison) renderModelComparison(msg.comparison, msg.lift);
+      if (msg.tier_attribution) renderTierAttribution(msg.tier_attribution);
       break;
   }
 }
@@ -2312,11 +2899,59 @@ function startBuildingPoll() {
       if (!res.ok) return;
       const state = await res.json();
 
-      // If agent finished but we missed champion_selected
+      // If agent finished (success/completed/failed) and has a champion
       if ((state.status === 'success' || state.status === 'completed') && state.champion) {
         stopBuildingPoll();
         handleChampionSelected({ champion: state.champion });
         return;
+      }
+
+      // If agent failed — try to salvage with whatever model exists
+      if (state.status === 'failed') {
+        stopBuildingPoll();
+        // Extract best model from history
+        let bestModel = state.champion;
+        if (!bestModel && state.history) {
+          for (const iter of state.history) {
+            if (iter.model_results) {
+              for (const mr of iter.model_results) {
+                if (!bestModel || (mr.metrics && mr.metrics.auc > (bestModel.metrics?.auc || 0))) {
+                  bestModel = mr;
+                }
+              }
+            }
+          }
+        }
+        if (bestModel) {
+          handleChampionSelected({ champion: bestModel });
+        } else {
+          // No model at all — show error on building screen
+          stopBuildingTimers();
+          document.getElementById('buildingHeader').innerHTML =
+            '<h2 style="color:var(--danger);">Model training failed. Try uploading a different dataset.</h2>';
+        }
+        return;
+      }
+
+      // If agent is still running but has history (Round 1 done), show early results
+      if (state.status === 'running' && state.history && state.history.length >= 1 && !document.getElementById('improvingBanner')) {
+        const currentScreen = document.querySelector('.screen.active');
+        if (currentScreen && currentScreen.id === 'screenBuilding') {
+          // Extract best model from history if champion not set
+          let earlyChamp = state.champion;
+          if (!earlyChamp && state.history.length > 0) {
+            const lastIter = state.history[state.history.length - 1];
+            if (lastIter.model_results && lastIter.model_results.length > 0) {
+              earlyChamp = lastIter.model_results[0];
+            }
+          }
+          if (earlyChamp) {
+            handleEarlyResults({
+              champion: earlyChamp,
+              max_iterations: state.max_iterations || 5,
+            });
+          }
+        }
       }
 
       // If rounds container is empty but agent has history, restore rounds
@@ -2348,16 +2983,103 @@ function handleChampionSelected(msg) {
   stopBuildingTimers();
   championData = msg.champion;
   const round = currentRound;
+
+  // Remove improving banner if present
+  const banner = document.getElementById('improvingBanner');
+  if (banner) banner.remove();
+
+  // If already on results screen (from early results), run inference and show full results
+  const currentScreen = document.querySelector('.screen.active');
+  if (currentScreen && currentScreen.id === 'screenResults') {
+    runInference().then(() => {
+      // Unhide hero and customer sections hidden during early results
+      const heroSection = document.getElementById('heroSection');
+      if (heroSection) heroSection.style.display = '';
+      const customerSection = document.getElementById('customerSection');
+      if (customerSection) customerSection.style.display = '';
+      if (championData) {
+        const champName = MODEL_NAMES[championData.name] || championData.name || 'Champion';
+        document.getElementById('modelSummaryText').textContent =
+          `Model: ${champName} — Accuracy ${fmtPct(championData.metrics?.auc)}, Balance ${fmtPct(championData.metrics?.f1)}`;
+        if (championData.feature_importance) renderFeatureImportance(championData.feature_importance);
+      }
+      loadSessionList();
+    });
+    return;
+  }
+
   addRoundStep(round, 'Testing against your own history...', 'active');
 
   // Run inference
   runInference().then(() => {
     markAllStepsDone(round);
+    // Ensure sections are visible for normal flow
+    const heroSection = document.getElementById('heroSection');
+    if (heroSection) heroSection.style.display = '';
+    const customerSection = document.getElementById('customerSection');
+    if (customerSection) customerSection.style.display = '';
     document.getElementById('buildingHeader').innerHTML = '<h2 style="color:var(--success);">&#10003; Your call list is ready.</h2>';
     loadSessionList();
 
     setTimeout(() => goToScreen('results'), 1500);
   });
+}
+
+function handleEarlyResults(msg) {
+  championData = msg.champion;
+  const round = currentRound;
+  addRoundStep(round, 'Initial model ready. Showing results while improving...', 'done');
+
+  // Hide the hero section and customer table — they need inference data
+  const heroSection = document.getElementById('heroSection');
+  if (heroSection) heroSection.style.display = 'none';
+  const customerSection = document.getElementById('customerSection');
+  if (customerSection) customerSection.style.display = 'none';
+
+  // Show model summary and feature importance
+  if (championData) {
+    const champName = MODEL_NAMES[championData.name] || championData.name || 'Champion';
+    document.getElementById('modelSummaryText').textContent =
+      `Model: ${champName} — Accuracy ${fmtPct(championData.metrics?.auc)}, Balance ${fmtPct(championData.metrics?.f1)}`;
+    if (championData.feature_importance) renderFeatureImportance(championData.feature_importance);
+  }
+
+  // Add improving banner at top of results screen
+  const resultsScreen = document.getElementById('screenResults');
+  if (resultsScreen && !document.getElementById('improvingBanner')) {
+    const banner = document.createElement('div');
+    banner.id = 'improvingBanner';
+    banner.style.cssText = 'background:#1a1a2e;border:1px solid var(--accent);border-radius:8px;padding:16px 24px;margin:0 0 20px;text-align:center;';
+    banner.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:8px;">
+        <div class="spinner" style="width:18px;height:18px;border-width:2px;"></div>
+        <span id="improvingText" style="color:var(--text-primary);font-weight:500;">Tuning model — rounds 2-${msg.max_iterations} in progress</span>
+      </div>
+      <div style="color:var(--text-secondary);font-size:0.85rem;">Your customer call list will appear when tuning finishes. Feature importance is shown below.</div>
+    `;
+    const firstChild = resultsScreen.querySelector('.results-container') || resultsScreen.firstChild;
+    resultsScreen.insertBefore(banner, firstChild);
+  }
+
+  goToScreen('results');
+  loadSessionList();
+}
+
+function handleResultsImproved(msg) {
+  championData = msg.champion;
+
+  // Update banner and model summary only — no inference call while agent runs
+  const bannerText = document.getElementById('improvingText');
+  if (bannerText) {
+    bannerText.textContent = `Improved in Round ${msg.iteration} (+${(msg.improvement * 100).toFixed(1)}% score). Still tuning...`;
+  }
+
+  if (championData) {
+    const champName = MODEL_NAMES[championData.name] || championData.name || 'Champion';
+    document.getElementById('modelSummaryText').textContent =
+      `Model: ${champName} — Accuracy ${fmtPct(championData.metrics?.auc)}, Balance ${fmtPct(championData.metrics?.f1)}`;
+    if (championData.feature_importance) renderFeatureImportance(championData.feature_importance);
+  }
 }
 
 // Round rendering helpers
@@ -2462,6 +3184,15 @@ async function runInference() {
 function populateResults(data) {
   allPredictions = data.predictions || [];
 
+  // Check if multi-source session
+  const hasActions = allPredictions.some(p => p.action);
+  const hasMultiTier = allPredictions.some(p => p.top_features && p.top_features.some(f => f.tier));
+  isMultiSource = hasActions || hasMultiTier;
+
+  // Show action column header if multi-source
+  const actionHeader = document.getElementById('actionColHeader');
+  if (actionHeader) actionHeader.style.display = isMultiSource ? '' : 'none';
+
   // Hero numbers
   const highCount = data.high_risk_count || 0;
   const medCount = data.medium_risk_count || 0;
@@ -2474,11 +3205,15 @@ function populateResults(data) {
   document.getElementById('riskMed').textContent = medCount;
   document.getElementById('riskLow').textContent = lowCount;
   document.getElementById('resultsContext').textContent =
-    `${totalRisk} of your ${totalUsers.toLocaleString()} customers are showing risk signals.`;
+    `${highCount} customers at risk of leaving out of ${totalUsers.toLocaleString()} total.`;
   document.getElementById('giveStep1Text').textContent =
     `Start with the ${highCount} High risk names.`;
   document.getElementById('roadmapThisWeek').textContent =
     `Your team reaches out to the ${highCount} high-risk customers.`;
+
+  // Model comparison and tier attribution (from inference response)
+  if (data.model_comparison) renderModelComparison(data.model_comparison, data.lift);
+  if (data.tier_attribution) renderTierAttribution(data.tier_attribution);
 
   // Customer table
   renderCustomerTable(allPredictions);
@@ -2501,12 +3236,33 @@ function renderCustomerTable(predictions) {
   const sorted = [...predictions].sort((a, b) => (b.churn_probability || 0) - (a.churn_probability || 0));
   const limit = showAllCustomers ? sorted.length : Math.min(20, sorted.length);
 
+  const sourceLabels = {
+    transaction: 'TXN',
+    'product/category': 'PROD',
+    secondary_data: 'SEC',
+    other_fields: 'OTHER',
+  };
+
   for (let i = 0; i < limit; i++) {
     const p = sorted[i];
     const tier = (p.risk_tier || '').toLowerCase();
     const tierCls = tier === 'high' ? 'high' : tier === 'medium' ? 'med' : 'low';
     const tierLabel = tier === 'high' ? 'High' : tier === 'medium' ? 'Med' : 'Low';
-    const whatChanged = getWhatChanged(p);
+
+    // Build what-changed content
+    let whatChangedHtml;
+    if (isMultiSource && p.top_features && p.top_features.length) {
+      whatChangedHtml = p.top_features.map(f => {
+        const tierNum = f.tier || 1;
+        const src = sourceLabels[f.source] || '';
+        const name = formatFeatureName(f.feature || f.name || '');
+        return `<span class="feature-tag tier-${tierNum}">${src ? `<span class="source-label">${src}</span>` : ''}${escapeHtml(name)}</span>`;
+      }).join(' ');
+    } else {
+      whatChangedHtml = escapeHtml(getWhatChanged(p));
+    }
+
+    const actionHtml = isMultiSource ? `<td class="action-cell">${escapeHtml(p.action || '')}</td>` : '';
 
     const tr = document.createElement('tr');
     tr.dataset.risk = tierCls;
@@ -2514,7 +3270,8 @@ function renderCustomerTable(predictions) {
       <td class="cust-name">${escapeHtml(String(p.customer_id))}</td>
       <td><span class="risk-pill ${tierCls}">${tierLabel}</span></td>
       <td class="last-order">${p.churn_probability ? (p.churn_probability * 100).toFixed(0) + '% risk' : '—'}</td>
-      <td class="what-changed">${escapeHtml(whatChanged)}</td>
+      <td class="what-changed">${whatChangedHtml}</td>
+      ${actionHtml}
     `;
     body.appendChild(tr);
   }
@@ -2676,6 +3433,89 @@ function addChatMessage(type, text) {
   div.innerHTML = `<div class="chat-bubble">${escapeHtml(text)}</div>`;
   messages.appendChild(div);
   messages.scrollTop = messages.scrollHeight;
+}
+
+// ============================================================
+// F3: MODEL COMPARISON + TIER ATTRIBUTION
+// ============================================================
+function renderModelComparison(comparison, lift) {
+  const tbody = document.getElementById('comparisonBody');
+  tbody.innerHTML = '';
+
+  Object.entries(comparison).forEach(([key, data]) => {
+    const metrics = data.metrics || data;
+    const name = data.name || key.replace('model_', 'Model ').toUpperCase();
+    const isChampion = data.is_champion || key === 'model_b';
+    const tr = document.createElement('tr');
+    if (isChampion) tr.className = 'champion-row';
+    tr.innerHTML = `
+      <td>${escapeHtml(name)}${isChampion ? ' &#9733;' : ''}</td>
+      <td>${fmtPct(metrics.f1)}</td>
+      <td>${fmtPct(metrics.auc)}</td>
+      <td>${fmtPct(metrics.precision)}</td>
+      <td>${fmtPct(metrics.recall)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  if (lift && (lift.f1_lift > 0 || lift.lift > 0)) {
+    const liftVal = lift.f1_lift || lift.lift || 0;
+    const baseline = lift.f1_baseline || lift.baseline || '—';
+    const enriched = lift.f1_enriched || lift.enriched || '—';
+    document.getElementById('liftBanner').innerHTML =
+      `Adding your secondary data improved F1 from ${baseline} to ${enriched} (+${typeof liftVal === 'number' ? liftVal.toFixed(3) : liftVal}).`;
+    document.getElementById('liftBanner').style.display = 'block';
+  }
+
+  document.getElementById('modelComparison').style.display = 'block';
+}
+
+function renderTierAttribution(attribution) {
+  const container = document.getElementById('attributionBars');
+  const labels = {
+    tier_1: 'Transaction signals',
+    tier_2: 'Product/category',
+    tier_3: 'Secondary data',
+    tier_4: 'Other fields',
+  };
+  const colors = {
+    tier_1: '#3b82f6',
+    tier_2: '#10b981',
+    tier_3: '#f59e0b',
+    tier_4: '#8b5cf6',
+  };
+
+  const entries = Object.entries(attribution).filter(([_, pct]) => pct > 0);
+
+  container.innerHTML = `
+    <div class="stacked-bar">
+      ${entries.map(([tier, pct]) => `
+        <div class="bar-segment" style="width:${pct}%;background:${colors[tier] || '#6b7280'}"
+             title="${labels[tier] || tier}: ${pct}%">
+          ${pct > 8 ? pct + '%' : ''}
+        </div>
+      `).join('')}
+    </div>
+    <div class="bar-legend">
+      ${entries.map(([tier, pct]) => `
+        <span class="legend-item">
+          <span class="legend-dot" style="background:${colors[tier] || '#6b7280'}"></span>
+          ${labels[tier] || tier} (${pct}%)
+        </span>
+      `).join('')}
+    </div>
+  `;
+
+  document.getElementById('tierAttribution').style.display = 'block';
+}
+
+// F4: Format feature name for display
+function formatFeatureName(name) {
+  if (FEATURE_LABELS[name]) return FEATURE_LABELS[name];
+  for (const [pattern, , formatter] of FEATURE_LABEL_PATTERNS) {
+    if (pattern.test(name)) return formatter(name);
+  }
+  return name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 }
 
 // ============================================================

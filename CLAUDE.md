@@ -1,5 +1,18 @@
 # DotAI AutoModel - Churn Prediction ML Tool
 
+## Objective
+A Sales VP at a 10,000 Cr company uploads their transaction CSV. Within 5 minutes, the tool produces a list of at-risk customers with names, risk levels, and what changed in their behavior — verified against the VP's own history. The VP recognizes customers they lost, trusts the model, and hands the list to their field team that week.
+
+The goal is not prediction accuracy. The goal is trust. The VP has been burned by data science projects that delivered PDFs with AUC scores. This tool delivers names they can check, reasons they can verify, and a file they can act on.
+
+Every design decision serves this: verify first, then trust, then act.
+
+## Target Users
+- Sales VPs / distribution heads at Indian companies selling physical products through dealer/distributor networks
+- 19 verticals: FMCG, dairy, paints, adhesives, cement, wires, tiles, steel, consumer durables, tyres, batteries, lubricants, auto OEM, auto aftermarket, pharma, agri, textiles, footwear, telecom
+- 5 data types: transaction-only, transaction+service, transaction+loyalty, transaction+returns, transaction+field interaction
+- Most companies overlap multiple data types (e.g., Pidilite = transaction + loyalty + field)
+
 ## Overview
 Churn prediction system with an 8-stage ML pipeline, LLM-based evaluation, agent loop, WebSocket chat, and Google OAuth. Built with FastAPI (backend) and vanilla JS (frontend).
 
@@ -66,6 +79,18 @@ Use `mcp__render__*` tools with service ID `srv-d6hbkpvgi27c73fnkp30`.
 - `GROQ_API_KEY` - Groq API key
 - `GOOGLE_CHAT_WEBHOOK_URL` - Google Chat webhook for notifications
 - `APP_BASE_URL` - Base URL of the app (e.g., https://churn-tool.onrender.com)
+
+---
+
+## Project Documentation (start here for context)
+
+Read these auto-generated indexes to understand the codebase:
+
+1. **[documentation/MASTER_INDEX.md](documentation/MASTER_INDEX.md)** — Project overview, backend/frontend structure, API contract (backend ↔ frontend mapping), config files
+2. **[documentation/backend/INDEX.md](documentation/backend/INDEX.md)** — All Python files, functions with docstrings, cross-file call graph, API routes
+3. **[documentation/frontend/INDEX.md](documentation/frontend/INDEX.md)** — All frontend files, JS functions, fetch calls, WebSocket connections
+
+These indexes are regenerated on every file write/edit via a PostToolUse hook (`scripts/generate_docs.py`). When adding or modifying Python code, write a one-line docstring for each function and class — the index extracts these.
 
 ---
 

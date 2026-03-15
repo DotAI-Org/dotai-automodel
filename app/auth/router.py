@@ -1,3 +1,4 @@
+"""Google OAuth login and callback routes."""
 import os
 
 from authlib.integrations.starlette_client import OAuth
@@ -24,12 +25,14 @@ oauth.register(
 
 @router.get("/google")
 async def login_google(request: Request):
+    """Redirect user to Google OAuth consent screen."""
     redirect_uri = str(request.url_for("auth_google_callback"))
     return await oauth.google.authorize_redirect(request, redirect_uri)
 
 
 @router.get("/google/callback", name="auth_google_callback")
 async def auth_google_callback(request: Request):
+    """Handle Google OAuth callback, create or update user, issue JWT."""
     token = await oauth.google.authorize_access_token(request)
     user_info = token.get("userinfo", {})
 
@@ -67,6 +70,7 @@ async def auth_google_callback(request: Request):
 
 @router.get("/me")
 async def me(user: dict = Depends(get_current_user)):
+    """Return the authenticated user's profile."""
     async with AsyncSessionLocal() as db:
         result = await db.execute(select(User).where(User.id == user["id"]))
         row = result.scalar_one_or_none()

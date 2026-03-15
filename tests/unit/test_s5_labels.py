@@ -6,6 +6,7 @@ from fastapi import HTTPException
 from app.stages.s5_labels import _get_churn_window, handle
 from app.session_store import store, SessionStore
 from app.stages.s4_features import TIER1_FEATURES
+from tests.conftest import _create_test_session
 
 
 def _make_df(rows):
@@ -81,7 +82,7 @@ class TestGetChurnWindow:
 class TestHandle:
     def _build_session(self, df, col_map, mcq_answers=None):
         """Use the module-level store so handle() can update it."""
-        sid = store.create()
+        sid = _create_test_session(store)
         feature_matrix = pd.DataFrame()
         for name, func in TIER1_FEATURES.items():
             try:
@@ -135,7 +136,7 @@ class TestHandle:
         assert result["churned_count"] + result["active_count"] > 0
 
     def test_raises_400_when_feature_matrix_missing(self):
-        sid = store.create()
+        sid = _create_test_session(store)
         store.update(sid, {
             "dataframe": _make_df([("A", "2024-01-01", 10)]),
             "col_map": COL_MAP,

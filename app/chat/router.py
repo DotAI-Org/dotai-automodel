@@ -1,3 +1,4 @@
+"""WebSocket chat endpoint for agent communication."""
 import json
 import logging
 
@@ -22,6 +23,7 @@ router = APIRouter()
 
 @router.websocket("/sessions/{session_id}/chat")
 async def chat_websocket(websocket: WebSocket, session_id: str, token: str = Query(default="")):
+    """Handle WebSocket connection for chat with the agent."""
     # Authenticate via JWT query param
     user = None
     if token:

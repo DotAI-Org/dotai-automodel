@@ -1,0 +1,7 @@
+{
+  "project_name": "DotAI AutoModel",
+  "backend_dirs": ["app"],
+  "frontend_dirs": ["static"],
+  "output_dir": "documentation",
+  "fetch_patterns": ["fetch", "authFetch", "apiFetch"]
+}

@@ -1,3 +1,4 @@
+"""LLM client with Groq and Gemini providers for structured output."""
 import os
 import json
 import asyncio
@@ -23,11 +24,13 @@ REASONING_MODELS = {
 
 
 def get_reasoning_model() -> str:
+    """Return the reasoning model name for the active provider."""
     provider = _get_provider()
     return REASONING_MODELS.get(provider, "gemini-2.5-pro")
 
 
 def _get_provider() -> str:
+    """Detect and cache the LLM provider from environment variables."""
     global _provider
     if _provider is None:
         explicit = os.environ.get("LLM_PROVIDER", "").lower()
@@ -43,6 +46,7 @@ def _get_provider() -> str:
 
 
 def _get_client():
+    """Initialize and cache the LLM client instance."""
     global _client
     if _client is not None:
         return _client
@@ -58,10 +62,12 @@ def _get_client():
 
 
 def _schema_to_json_instruction(schema: Type[BaseModel]) -> str:
+    """Convert a Pydantic schema to a JSON string for LLM instructions."""
     return json.dumps(schema.model_json_schema(), indent=2)
 
 
 def _is_rate_limit_error(e: Exception) -> bool:
+    """Check if an exception indicates a rate limit error."""
     err_str = str(e).lower()
     return "429" in err_str or "rate_limit" in err_str or "resource_exhausted" in err_str
 
@@ -72,6 +78,7 @@ async def generate_structured(
     model: str = None,
     temperature: float = 0.2,
 ) -> T:
+    """Send a prompt to the LLM and return a validated Pydantic object."""
     provider = _get_provider()
     client = _get_client()
 

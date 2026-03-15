@@ -1,3 +1,4 @@
+"""In-memory session store with database persistence."""
 import uuid
 import asyncio
 import logging
@@ -10,14 +11,17 @@ logger = logging.getLogger(__name__)
 
 
 class SessionStore:
+    """Manages in-memory session cache with database persistence."""
     def __init__(self):
         self._sessions: dict[str, dict[str, Any]] = {}
         self._engine = None
 
     def set_engine(self, engine):
+        """Set the SQLAlchemy engine for database operations."""
         self._engine = engine
 
     async def create(self, user_id: str) -> str:
+        """Create a new session in database and cache, return session ID."""
         from app.db.engine import AsyncSessionLocal
         from app.db.models import Session
 
@@ -39,6 +43,7 @@ class SessionStore:
         return session_id
 
     def get(self, session_id: str) -> dict[str, Any] | None:
+        """Return session data from cache or None."""
         return self._sessions.get(session_id)
 
     async def get_or_load(self, session_id: str) -> dict[str, Any] | None:
@@ -57,6 +62,7 @@ class SessionStore:
             return data
 
     def update(self, session_id: str, data: dict[str, Any]) -> bool:
+        """Update session data in cache and schedule database persistence."""
         session = self._sessions.get(session_id)
         if session is None:
             return False
@@ -66,6 +72,7 @@ class SessionStore:
         return True
 
     async def _persist(self, session_id: str):
+        """Write session data to database."""
         session = self._sessions.get(session_id)
         if session is None:
             return
@@ -79,6 +86,7 @@ class SessionStore:
             logger.error(f"Failed to persist session {session_id}: {e}")
 
     async def delete(self, session_id: str) -> bool:
+        """Remove session from cache and database."""
         self._sessions.pop(session_id, None)
 
         from app.db.engine import AsyncSessionLocal
@@ -90,6 +98,7 @@ class SessionStore:
         return True
 
     async def list_sessions(self, user_id: str) -> list[dict]:
+        """Return all sessions for a user from database."""
         from app.db.engine import AsyncSessionLocal
         from app.db.models import Session
 
@@ -124,6 +133,7 @@ class SessionStore:
             ]
 
     async def rename(self, session_id: str, name: str):
+        """Update session name in database and cache."""
         from app.db.engine import AsyncSessionLocal
         from app.db.models import Session
 

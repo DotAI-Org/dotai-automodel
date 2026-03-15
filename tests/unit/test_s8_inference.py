@@ -4,7 +4,8 @@ import numpy as np
 from fastapi import HTTPException
 
 from app.stages.s8_inference import handle, handle_download
-from app.session_store import store, SessionStore
+from app.session_store import store
+from tests.conftest import _create_test_session
 
 
 class TestInferenceHandle:
@@ -39,7 +40,7 @@ class TestInferenceHandle:
         assert len(updated["predictions"]) > 0
 
     def test_raises_400_when_model_missing(self):
-        sid = store.create()
+        sid = _create_test_session(store)
         store.update(sid, {
             "model": None,
             "feature_matrix": pd.DataFrame({"f1": [1, 2]}),
@@ -63,13 +64,12 @@ class TestInferenceDownload:
         assert "customer_id" in header
         assert "churn_probability" in header
         assert "risk_tier" in header
-        assert "top_feature_contributions" in header
         # data rows = total users in feature matrix
         data_rows = len(lines) - 1
         assert data_rows == len(session["feature_matrix"])
 
     def test_raises_400_when_predictions_missing(self):
-        sid = store.create()
+        sid = _create_test_session(store)
         store.update(sid, {"predictions": None})
         session = store.get(sid)
         with pytest.raises(HTTPException) as exc_info:

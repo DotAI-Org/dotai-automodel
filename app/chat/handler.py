@@ -1,3 +1,4 @@
+"""Chat message handler with LLM-based intent classification."""
 import logging
 from typing import Any
 
@@ -68,6 +69,7 @@ Return JSON with:
 
 
 def _build_state_summary(state: AgentState) -> str:
+    """Build a text summary of the agent state for the LLM prompt."""
     lines = [
         f"Status: {state.status}",
         f"Iteration: {state.iteration}/{state.max_iterations}",

@@ -1,3 +1,4 @@
+"""SQLAlchemy async engine and session factory setup."""
 import os
 
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
@@ -19,11 +20,13 @@ AsyncSessionLocal = async_sessionmaker(engine, class_=AsyncSession, expire_on_co
 
 
 async def get_db():
+    """Yield a database session for dependency injection."""
     async with AsyncSessionLocal() as session:
         yield session
 
 
 async def init_db():
+    """Create all database tables from SQLAlchemy models."""
     from app.db.models import Base
 
     async with engine.begin() as conn:

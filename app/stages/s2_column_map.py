@@ -1,3 +1,4 @@
+"""Stage 2: LLM-based column role detection and multi-file joining."""
 import logging
 from typing import Any
 
@@ -12,17 +13,35 @@ from app.models.schemas import (
     ColumnMappingFeedback,
     LLMColumnMappingOutput,
     LLMJoinStrategy,
+    get_roles_for_file_type,
 )
 from app.llm.client import generate_structured
 
+logger = logging.getLogger(__name__)
+
 
 async def handle(session_id: str, session: dict[str, Any]) -> ColumnMappingResponse:
+    """Run LLM column mapping on the session profile.
+
+    For multi-file sessions, maps each file with its file_type context.
+    """
+    dataframes = session.get("dataframes")
+
+    if dataframes and len(dataframes) > 1:
+        return await _handle_multi(session_id, session, dataframes)
+
+    # Single file path
     profile = session.get("profile")
     if not profile:
         raise HTTPException(status_code=400, detail="No profile found. Upload a CSV first.")
 
+    # Get file_type from first dataframe entry if available
+    file_type = "transaction"
+    if dataframes and len(dataframes) == 1:
+        file_type = dataframes[0].get("file_type", "transaction")
+
     file_description = session.get("file_description", "")
-    prompt = _build_prompt(profile, file_description=file_description)
+    prompt = _build_prompt(profile, file_description=file_description, file_type=file_type)
     llm_output = await generate_structured(prompt, LLMColumnMappingOutput)
 
     # Build column mapping with dtype from profile
@@ -44,9 +63,101 @@ async def handle(session_id: str, session: dict[str, Any]) -> ColumnMappingRespo
     return result
 
 
+async def _handle_multi(session_id: str, session: dict[str, Any], dataframes: list[dict]) -> ColumnMappingResponse:
+    """Map columns for each file with its file_type context, then produce cross-file summary."""
+    all_mappings = {}
+    primary_mapping = None
+
+    for d in dataframes:
+        profile = d["profile"]
+        file_type = d.get("file_type", "transaction")
+        user_desc = d.get("user_description", "")
+
+        prompt = _build_prompt(
+            profile,
+            file_description=user_desc,
+            file_type=file_type,
+        )
+        llm_output = await generate_structured(prompt, LLMColumnMappingOutput)
+
+        dtype_lookup = {c["name"]: c["dtype"] for c in profile["columns"]}
+        columns = []
+        for item in llm_output.columns:
+            columns.append(ColumnMapping(
+                name=item.name,
+                dtype=dtype_lookup.get(item.name, "text"),
+                llm_role=item.role,
+                confidence=item.confidence,
+            ))
+
+        mapping = ColumnMappingResponse(columns=columns)
+        all_mappings[d["filename"]] = mapping.model_dump()
+
+        if file_type == "transaction" and primary_mapping is None:
+            primary_mapping = mapping
+
+    # Use first file mapping as primary if no transaction file found
+    if primary_mapping is None:
+        first_key = list(all_mappings.keys())[0]
+        primary_mapping = ColumnMappingResponse(**all_mappings[first_key])
+
+    # Detect data types
+    detected_types = _detect_data_types_from_files(dataframes)
+
+    # Generate cross-file summary
+    cross_summary = _build_cross_file_summary(dataframes, all_mappings, detected_types)
+
+    store.update(session_id, {
+        "stage": 2,
+        "column_mapping": primary_mapping.model_dump(),
+        "column_mappings": all_mappings,
+        "detected_data_types": detected_types,
+        "cross_file_summary": cross_summary,
+    })
+
+    return ColumnMappingResponse(
+        columns=primary_mapping.columns,
+    )
+
+
+def _detect_data_types_from_files(dataframes: list[dict]) -> list[int]:
+    """Map file_type tags to Type 1-5."""
+    types = {1}
+    type_map = {"service": 2, "loyalty": 3, "returns": 4, "field": 5}
+    for d in dataframes:
+        ft = d.get("file_type", "transaction")
+        if ft in type_map:
+            types.add(type_map[ft])
+    return sorted(types)
+
+
+def _build_cross_file_summary(dataframes: list[dict], all_mappings: dict, detected_types: list[int]) -> str:
+    """Build a human-readable summary of detected types and file relationships."""
+    type_names = {1: "Transaction", 2: "Service/Warranty", 3: "Loyalty/Membership",
+                  4: "Returns/Delivery", 5: "Field Interaction"}
+    type_desc = ", ".join(type_names.get(t, f"Type {t}") for t in detected_types)
+
+    file_descs = []
+    for d in dataframes:
+        mapping = all_mappings.get(d["filename"], {})
+        cols = mapping.get("columns", [])
+        roles = [c.get("llm_role", "other") for c in cols if c.get("llm_role") != "other"]
+        file_descs.append(
+            f"- {d['filename']} ({d.get('file_type', 'transaction')}): "
+            f"{len(d.get('profile', {}).get('columns', []))} columns, "
+            f"roles: {', '.join(roles[:5])}"
+        )
+
+    return (
+        f"Detected data types: {type_desc}.\n"
+        f"Files:\n" + "\n".join(file_descs)
+    )
+
+
 def handle_override(
     session_id: str, session: dict[str, Any], body: ColumnMappingOverride
 ) -> ColumnMappingResponse:
+    """Replace column mappings with user-provided overrides."""
     result = ColumnMappingResponse(columns=body.columns)
     store.update(session_id, {
         "stage": 2,
@@ -58,6 +169,7 @@ def handle_override(
 async def handle_with_feedback(
     session_id: str, session: dict[str, Any], body: ColumnMappingFeedback
 ) -> ColumnMappingResponse:
+    """Re-run LLM column mapping with user feedback."""
     profile = session.get("profile")
     if not profile:
         raise HTTPException(status_code=400, detail="No profile found. Upload a CSV first.")
@@ -102,7 +214,8 @@ Please produce corrected column mappings that address the user's feedback."""
     return result
 
 
-def _build_prompt(profile: dict, file_description: str = "") -> str:
+def _build_prompt(profile: dict, file_description: str = "", file_type: str = "transaction") -> str:
+    """Build the LLM prompt for column role detection, type-aware."""
     col_descriptions = []
     for col in profile["columns"]:
         samples = ", ".join(col["sample_values"][:5])
@@ -113,22 +226,22 @@ def _build_prompt(profile: dict, file_description: str = "") -> str:
         )
     col_text = "\n".join(col_descriptions)
 
+    # Get applicable roles for this file type
+    roles = get_roles_for_file_type(file_type)
+    role_descriptions = _get_role_descriptions(roles)
+
     desc_section = ""
     if file_description:
         desc_section = f"\nUser's description of the data:\n{file_description}\n"
 
-    return f"""You are a data analyst. You are given column metadata from a transaction CSV file.
-{desc_section}
+    type_section = ""
+    if file_type and file_type != "transaction":
+        type_section = f"\nThe user described this file as: {file_type} data. Prioritize roles matching {file_type} data.\n"
+
+    return f"""You are a data analyst. You are given column metadata from a CSV file.
+{desc_section}{type_section}
 For each column, identify its semantic role. Choose from these roles:
-- customer_id: uniquely identifies a customer
-- transaction_date: date or timestamp of the transaction
-- amount: monetary value of the transaction
-- product: product name or ID
-- quantity: number of items purchased
-- category: product category
-- channel: sales channel (online, store, etc.)
-- region: geographic region or store location
-- other: does not fit any of the above
+{role_descriptions}
 
 Columns:
 {col_text}
@@ -143,7 +256,57 @@ Return a JSON object with a "columns" array. Each element has:
 Assign roles based on column names, data types, and sample values. If unsure, use "other" with low confidence."""
 
 
-logger = logging.getLogger(__name__)
+_ROLE_DESC = {
+    "customer_id": "uniquely identifies a customer/dealer/distributor",
+    "transaction_id": "uniquely identifies a transaction/order/invoice row",
+    "transaction_date": "date or timestamp of the transaction",
+    "amount": "monetary value of the transaction",
+    "product": "product name or ID",
+    "quantity": "number of items purchased",
+    "category": "product category",
+    "channel": "sales channel (online, store, etc.)",
+    "region": "geographic region or store location",
+    "ticket_id": "service/complaint ticket identifier",
+    "ticket_date": "date the service ticket was raised",
+    "resolution_date": "date the ticket was resolved",
+    "complaint_category": "type/category of complaint",
+    "warranty_status": "warranty status (active, expired, etc.)",
+    "csat_score": "customer satisfaction score",
+    "tat_days": "turnaround time in days",
+    "member_id": "loyalty/membership identifier",
+    "points_earned": "loyalty points earned",
+    "points_redeemed": "loyalty points redeemed",
+    "tier": "membership/dealer tier level",
+    "enrollment_date": "date of enrollment/registration",
+    "transaction_type": "type of loyalty transaction (earn, redeem, etc.)",
+    "return_id": "return/credit note identifier",
+    "return_date": "date of return",
+    "return_reason": "reason for return (damage, expiry, etc.)",
+    "return_quantity": "quantity returned",
+    "original_invoice": "original invoice/order reference",
+    "visit_id": "field visit identifier",
+    "visit_date": "date of field visit",
+    "entity_type": "type of entity visited (dealer, retailer, etc.)",
+    "visit_duration": "duration of visit in minutes",
+    "order_booked": "whether an order was booked during visit",
+    "objective": "purpose/objective of the visit",
+    "dealer_code": "dealer/distributor code",
+    "dealer_name": "dealer/distributor name",
+    "registration_date": "date of dealer registration",
+    "status": "active/inactive status",
+    "credit_limit": "credit limit assigned",
+    "territory": "territory or area assignment",
+    "other": "does not fit any of the above",
+}
+
+
+def _get_role_descriptions(roles: list[str]) -> str:
+    """Format role descriptions for the LLM prompt."""
+    lines = []
+    for role in roles:
+        desc = _ROLE_DESC.get(role, role)
+        lines.append(f"- {role}: {desc}")
+    return "\n".join(lines)
 
 
 async def join_files(session_id: str, session: dict[str, Any]) -> dict:

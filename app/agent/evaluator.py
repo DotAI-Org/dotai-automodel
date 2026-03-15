@@ -1,3 +1,4 @@
+"""LLM-based model evaluation with rule checks for leakage and quality."""
 import logging
 from typing import Any
 

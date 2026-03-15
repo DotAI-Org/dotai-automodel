@@ -1,3 +1,4 @@
+"""FastAPI application entry point and route definitions."""
 import asyncio
 import logging
 import os
@@ -32,6 +33,7 @@ from app.models.schemas import (
     AgentStatusResponse,
     SessionListItem,
     RenameRequest,
+    FindingsConfirmRequest,
 )
 from app.stages import (
     s1_upload,
@@ -69,6 +71,7 @@ app.add_middleware(SessionMiddleware, secret_key=JWT_SECRET)
 # Health check (before api_router so it's at /health)
 @app.get("/health")
 async def health():
+    """Return health check status."""
     return {"status": "ok"}
 
 # API router — all backend routes under /api
@@ -101,11 +104,13 @@ async def get_session_with_auth(session_id: str, user: dict):
 
 @api_router.get("/sessions", response_model=list[SessionListItem])
 async def list_sessions(user: dict = Depends(get_current_user)):
+    """Return all sessions for the authenticated user."""
     return await store.list_sessions(user["id"])
 
 
 @api_router.put("/sessions/{session_id}/name")
 async def rename_session(session_id: str, body: RenameRequest, user: dict = Depends(get_current_user)):
+    """Rename a session by ID."""
     await get_session_with_auth(session_id, user)
     await store.rename(session_id, body.name)
     return {"status": "ok"}
@@ -113,6 +118,7 @@ async def rename_session(session_id: str, body: RenameRequest, user: dict = Depe
 
 @api_router.delete("/sessions/{session_id}")
 async def delete_session(session_id: str, user: dict = Depends(get_current_user)):
+    """Delete a session by ID."""
     await get_session_with_auth(session_id, user)
     await store.delete(session_id)
     return {"status": "ok"}
@@ -122,34 +128,40 @@ async def delete_session(session_id: str, user: dict = Depends(get_current_user)
 
 @api_router.post("/sessions", response_model=UploadResponse)
 async def create_session(file: UploadFile = File(...), user: dict = Depends(get_current_user)):
+    """Upload a CSV file and create a new session."""
     return await s1_upload.handle(file, user_id=user["id"])
 
 
 @api_router.post("/sessions/multi", response_model=MultiUploadResponse)
 async def create_session_multi(
     files: list[UploadFile] = File(...),
-    description: str = Form(...),
+    description: str = Form(""),
+    file_metadata: str = Form("[]"),
     user: dict = Depends(get_current_user),
 ):
-    return await s1_upload.handle_multi(files, description, user_id=user["id"])
+    """Upload multiple CSV files with per-file type metadata."""
+    return await s1_upload.handle_multi(files, description, file_metadata_json=file_metadata, user_id=user["id"])
 
 
 # --- Stage 2: Column Mapping ---
 
 @api_router.post("/sessions/{session_id}/column-mapping", response_model=ColumnMappingResponse)
 async def column_mapping(session_id: str, user: dict = Depends(get_current_user)):
+    """Run LLM-based column role detection for a session."""
     session = await get_session_with_auth(session_id, user)
     return await s2_column_map.handle(session_id, session)
 
 
 @api_router.put("/sessions/{session_id}/column-mapping", response_model=ColumnMappingResponse)
 async def override_column_mapping(session_id: str, body: ColumnMappingOverride, user: dict = Depends(get_current_user)):
+    """Override column mappings with user-provided values."""
     session = await get_session_with_auth(session_id, user)
     return s2_column_map.handle_override(session_id, session, body)
 
 
 @api_router.post("/sessions/{session_id}/column-mapping/feedback", response_model=ColumnMappingResponse)
 async def column_mapping_feedback(session_id: str, body: ColumnMappingFeedback, user: dict = Depends(get_current_user)):
+    """Re-run column mapping with user feedback."""
     session = await get_session_with_auth(session_id, user)
     return await s2_column_map.handle_with_feedback(session_id, session, body)
 
@@ -158,15 +170,48 @@ async def column_mapping_feedback(session_id: str, body: ColumnMappingFeedback, 
 
 @api_router.post("/sessions/{session_id}/hypothesis", response_model=HypothesisResponse)
 async def hypothesis(session_id: str, body: HypothesisRequest = None, user: dict = Depends(get_current_user)):
+    """Generate business hypothesis and MCQ questions for a session."""
     session = await get_session_with_auth(session_id, user)
     free_text = body.free_text if body else None
     return await s3_hypothesis.handle(session_id, session, free_text=free_text)
+
+
+@api_router.post("/sessions/{session_id}/findings/confirm")
+async def confirm_findings(session_id: str, body: FindingsConfirmRequest = None, user: dict = Depends(get_current_user)):
+    """User confirms computed findings — proceed to training."""
+    session = await get_session_with_auth(session_id, user)
+    session["findings_confirmed"] = True
+    if body and body.additional_context:
+        session["additional_context"] = body.additional_context
+    store.update(session_id, session)
+    return {"status": "confirmed"}
+
+
+@api_router.post("/sessions/{session_id}/findings/correct")
+async def correct_findings(session_id: str, body: MCQAnswers, user: dict = Depends(get_current_user)):
+    """User overrides findings via MCQ answers."""
+    session = await get_session_with_auth(session_id, user)
+    session["mcq_answers"] = body.answers
+    session["findings_confirmed"] = True
+    store.update(session_id, session)
+    return {"status": "corrected"}
+
+
+@api_router.get("/sessions/{session_id}/cross-file-summary")
+async def cross_file_summary(session_id: str, user: dict = Depends(get_current_user)):
+    """Get detected data types and cross-file summary."""
+    session = await get_session_with_auth(session_id, user)
+    return {
+        "detected_types": session.get("detected_data_types", [1]),
+        "summary": session.get("cross_file_summary", ""),
+    }
 
 
 # --- Stage 4: Features ---
 
 @api_router.post("/sessions/{session_id}/features", response_model=FeaturesResponse)
 async def features(session_id: str, body: MCQAnswers, user: dict = Depends(get_current_user)):
+    """Compute feature matrix using MCQ answers."""
     session = await get_session_with_auth(session_id, user)
     return await s4_features.handle(session_id, session, body)
 
@@ -175,6 +220,7 @@ async def features(session_id: str, body: MCQAnswers, user: dict = Depends(get_c
 
 @api_router.post("/sessions/{session_id}/labels", response_model=LabelsResponse)
 async def labels(session_id: str, user: dict = Depends(get_current_user)):
+    """Assign churn labels based on cutoff date."""
     session = await get_session_with_auth(session_id, user)
     return s5_labels.handle(session_id, session)
 
@@ -183,6 +229,7 @@ async def labels(session_id: str, user: dict = Depends(get_current_user)):
 
 @api_router.post("/sessions/{session_id}/train", response_model=TrainResponse)
 async def train(session_id: str, user: dict = Depends(get_current_user)):
+    """Train an XGBoost model on labeled features."""
     session = await get_session_with_auth(session_id, user)
     return s6_train.handle(session_id, session)
 
@@ -191,6 +238,7 @@ async def train(session_id: str, user: dict = Depends(get_current_user)):
 
 @api_router.get("/sessions/{session_id}/results", response_model=ResultsResponse)
 async def results(session_id: str, user: dict = Depends(get_current_user)):
+    """Return model results with LLM-generated summary."""
     session = await get_session_with_auth(session_id, user)
     return await s7_results.handle(session_id, session)
 
@@ -199,12 +247,14 @@ async def results(session_id: str, user: dict = Depends(get_current_user)):
 
 @api_router.post("/sessions/{session_id}/inference", response_model=InferenceResponse)
 async def inference(session_id: str, user: dict = Depends(get_current_user)):
+    """Run churn predictions on all customers."""
     session = await get_session_with_auth(session_id, user)
     return s8_inference.handle(session_id, session)
 
 
 @api_router.get("/sessions/{session_id}/inference/download")
 async def inference_download(session_id: str, user: dict = Depends(get_current_user)):
+    """Download churn predictions as a CSV file."""
     session = await get_session_with_auth(session_id, user)
     csv_buffer = s8_inference.handle_download(session_id, session)
     return StreamingResponse(
@@ -218,6 +268,7 @@ async def inference_download(session_id: str, user: dict = Depends(get_current_u
 
 @api_router.post("/sessions/{session_id}/agent/start")
 async def start_agent(session_id: str, background_tasks: BackgroundTasks, user: dict = Depends(get_current_user)):
+    """Start the agent loop as a background task."""
     session = await get_session_with_auth(session_id, user)
 
     existing = get_agent_state(session_id)
@@ -246,6 +297,7 @@ async def start_agent(session_id: str, background_tasks: BackgroundTasks, user: 
 
 @api_router.get("/sessions/{session_id}/agent/status")
 async def agent_status(session_id: str, user: dict = Depends(get_current_user)):
+    """Return the agent loop status for a session."""
     session = await get_session_with_auth(session_id, user)
 
     # 1. Try in-memory
@@ -284,6 +336,7 @@ async def agent_status(session_id: str, user: dict = Depends(get_current_user)):
 
 @api_router.post("/sessions/{session_id}/agent/stop")
 async def stop_agent(session_id: str, user: dict = Depends(get_current_user)):
+    """Signal the agent loop to stop."""
     await get_session_with_auth(session_id, user)
     state = get_agent_state(session_id)
     if state is None:
@@ -300,6 +353,7 @@ app.include_router(api_router)
 # Startup
 @app.on_event("startup")
 async def startup():
+    """Initialize database and set engine on session store."""
     from app.db.engine import init_db, engine
     await init_db()
     store.set_engine(engine)

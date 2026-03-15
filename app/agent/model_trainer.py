@@ -1,3 +1,4 @@
+"""Multi-model training for XGBoost and Random Forest."""
 import time
 import logging
 from dataclasses import dataclass, field
@@ -21,6 +22,7 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class ModelResult:
+    """Holds a trained model with its metrics and feature importance."""
     name: str
     model: Any
     metrics: dict  # {auc, precision, recall, f1}
@@ -91,6 +93,7 @@ def _evaluate_model(model, X_test, y_test, feature_names: list[str]) -> tuple[di
 
 
 def _train_xgboost(X_train, y_train, X_test, y_test, feature_names: list[str]) -> ModelResult:
+    """Train an XGBoost classifier and return its ModelResult."""
     n_pos = y_train.sum()
     n_neg = len(y_train) - n_pos
     scale_pos_weight = n_neg / max(n_pos, 1)
@@ -122,6 +125,7 @@ def _train_xgboost(X_train, y_train, X_test, y_test, feature_names: list[str]) -
 
 
 def _train_random_forest(X_train, y_train, X_test, y_test, feature_names: list[str]) -> ModelResult:
+    """Train a Random Forest classifier and return its ModelResult."""
     model = RandomForestClassifier(
         n_estimators=100,
         max_depth=8,

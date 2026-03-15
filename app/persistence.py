@@ -1,3 +1,4 @@
+"""Session and pipeline state persistence to PostgreSQL."""
 import pickle
 import zlib
 import logging
@@ -42,10 +43,12 @@ TRANSIENT_KEYS = {
 
 
 def serialize_blob(obj: Any) -> bytes:
+    """Compress and pickle an object to bytes."""
     return zlib.compress(pickle.dumps(obj, protocol=5))
 
 
 def deserialize_blob(data: bytes) -> Any:
+    """Decompress and unpickle bytes to an object."""
     return pickle.loads(zlib.decompress(data))
 
 

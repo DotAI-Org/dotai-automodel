@@ -1,3 +1,4 @@
+"""Stage 4: Feature engineering with tier 1, tier 2, and DSL features."""
 from typing import Any
 import pandas as pd
 import numpy as np
@@ -52,31 +53,36 @@ FEATURE_DEFINITIONS = {
 # --- Tier 1: Universal features (always computed) ---
 
 def compute_recency(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute days since each customer's last purchase."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
     return df.groupby(cust_col).apply(
-        lambda g: (max_date - pd.to_datetime(g[date_col]).max()).days
+        lambda g: (max_date - pd.to_datetime(g[date_col], format="mixed", dayfirst=True).max()).days
     )
 
 
 def compute_frequency_30d(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute transaction count per customer in the last 30 days."""
     return _frequency_window(df, col_map, 30)
 
 
 def compute_frequency_60d(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute transaction count per customer in the last 60 days."""
     return _frequency_window(df, col_map, 60)
 
 
 def compute_frequency_90d(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute transaction count per customer in the last 90 days."""
     return _frequency_window(df, col_map, 90)
 
 
 def _frequency_window(df: pd.DataFrame, col_map: dict, days: int) -> pd.Series:
+    """Compute transaction count per customer within a day window."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
     cutoff = max_date - pd.Timedelta(days=days)
     recent = df[dates >= cutoff]
@@ -86,17 +92,20 @@ def _frequency_window(df: pd.DataFrame, col_map: dict, days: int) -> pd.Series:
 
 
 def compute_monetary_total(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute total transaction amount per customer."""
     return df.groupby(col_map["customer_id"])[col_map["amount"]].sum()
 
 
 def compute_monetary_avg(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute average transaction amount per customer."""
     return df.groupby(col_map["customer_id"])[col_map["amount"]].mean()
 
 
 def compute_frequency_trend(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute change in transaction count between first and second half."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
     mid_date = max_date - (max_date - dates.min()) / 2
 
@@ -112,10 +121,11 @@ def compute_frequency_trend(df: pd.DataFrame, col_map: dict) -> pd.Series:
 
 
 def compute_monetary_trend(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute change in average transaction amount between halves."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
     amount_col = col_map["amount"]
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
     mid_date = max_date - (max_date - dates.min()) / 2
 
@@ -130,11 +140,12 @@ def compute_monetary_trend(df: pd.DataFrame, col_map: dict) -> pd.Series:
 
 
 def compute_days_between_purchases_avg(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute average days between consecutive purchases per customer."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
 
     def _avg_gap(g):
-        dates = pd.to_datetime(g[date_col]).sort_values()
+        dates = pd.to_datetime(g[date_col], format="mixed", dayfirst=True).sort_values()
         if len(dates) < 2:
             return np.nan
         diffs = dates.diff().dt.days.dropna()
@@ -144,11 +155,12 @@ def compute_days_between_purchases_avg(df: pd.DataFrame, col_map: dict) -> pd.Se
 
 
 def compute_days_between_purchases_std(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute standard deviation of inter-purchase gaps per customer."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
 
     def _std_gap(g):
-        dates = pd.to_datetime(g[date_col]).sort_values()
+        dates = pd.to_datetime(g[date_col], format="mixed", dayfirst=True).sort_values()
         if len(dates) < 3:
             return np.nan
         diffs = dates.diff().dt.days.dropna()
@@ -160,12 +172,14 @@ def compute_days_between_purchases_std(df: pd.DataFrame, col_map: dict) -> pd.Se
 # --- Tier 2: Industry-specific features ---
 
 def compute_basket_diversity(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute number of distinct products per customer."""
     product_col = col_map.get("product") or col_map.get("category")
     cust_col = col_map["customer_id"]
     return df.groupby(cust_col)[product_col].nunique()
 
 
 def compute_category_concentration(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute proportion of purchases in the top category per customer."""
     cat_col = col_map["category"]
     cust_col = col_map["customer_id"]
 
@@ -177,21 +191,24 @@ def compute_category_concentration(df: pd.DataFrame, col_map: dict) -> pd.Series
 
 
 def compute_channel_diversity(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute number of distinct channels used per customer."""
     channel_col = col_map["channel"]
     cust_col = col_map["customer_id"]
     return df.groupby(cust_col)[channel_col].nunique()
 
 
 def compute_avg_basket_size(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute average quantity per transaction per customer."""
     qty_col = col_map["quantity"]
     cust_col = col_map["customer_id"]
     return df.groupby(cust_col)[qty_col].mean()
 
 
 def compute_peak_vs_offpeak_ratio(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute ratio of holiday-season to off-season purchases per customer."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
 
     df_copy = df.copy()
     df_copy["_month"] = dates.dt.month
@@ -207,10 +224,11 @@ def compute_peak_vs_offpeak_ratio(df: pd.DataFrame, col_map: dict) -> pd.Series:
 
 
 def compute_order_size_trend(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute change in average order size between halves."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
     amount_col = col_map.get("amount") or col_map.get("quantity")
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
     mid_date = max_date - (max_date - dates.min()) / 2
 
@@ -225,15 +243,16 @@ def compute_order_size_trend(df: pd.DataFrame, col_map: dict) -> pd.Series:
 
 
 def compute_product_mix_change(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute Jaccard distance of product sets between halves per customer."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
     product_col = col_map.get("product") or col_map.get("category")
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
     mid_date = max_date - (max_date - dates.min()) / 2
 
     def _mix_change(g):
-        g_dates = pd.to_datetime(g[date_col])
+        g_dates = pd.to_datetime(g[date_col], format="mixed", dayfirst=True)
         first = set(g[g_dates < mid_date][product_col].unique())
         second = set(g[g_dates >= mid_date][product_col].unique())
         if not first and not second:
@@ -248,6 +267,7 @@ def compute_product_mix_change(df: pd.DataFrame, col_map: dict) -> pd.Series:
 
 
 def compute_region_loyalty(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute proportion of purchases in the top region per customer."""
     region_col = col_map["region"]
     cust_col = col_map["customer_id"]
 
@@ -259,11 +279,12 @@ def compute_region_loyalty(df: pd.DataFrame, col_map: dict) -> pd.Series:
 
 
 def compute_weekend_vs_weekday(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute ratio of weekend to weekday purchases per customer."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
 
     df_copy = df.copy()
-    df_copy["_dow"] = pd.to_datetime(df_copy[date_col]).dt.dayofweek
+    df_copy["_dow"] = pd.to_datetime(df_copy[date_col], format="mixed", dayfirst=True).dt.dayofweek
     df_copy["_is_weekend"] = df_copy["_dow"] >= 5
 
     def _ratio(g):
@@ -275,6 +296,7 @@ def compute_weekend_vs_weekday(df: pd.DataFrame, col_map: dict) -> pd.Series:
 
 
 def compute_repeat_product_rate(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute proportion of products purchased more than once per customer."""
     product_col = col_map.get("product")
     cust_col = col_map["customer_id"]
 
@@ -288,11 +310,12 @@ def compute_repeat_product_rate(df: pd.DataFrame, col_map: dict) -> pd.Series:
 
 
 def compute_max_gap_between_purchases(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute the longest gap in days between purchases per customer."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
 
     def _max_gap(g):
-        dates = pd.to_datetime(g[date_col]).sort_values()
+        dates = pd.to_datetime(g[date_col], format="mixed", dayfirst=True).sort_values()
         if len(dates) < 2:
             return np.nan
         diffs = dates.diff().dt.days.dropna()
@@ -302,11 +325,12 @@ def compute_max_gap_between_purchases(df: pd.DataFrame, col_map: dict) -> pd.Ser
 
 
 def compute_purchase_regularity_score(df: pd.DataFrame, col_map: dict) -> pd.Series:
+    """Compute purchase regularity score (1 minus coefficient of variation)."""
     date_col = col_map["transaction_date"]
     cust_col = col_map["customer_id"]
 
     def _regularity(g):
-        dates = pd.to_datetime(g[date_col]).sort_values()
+        dates = pd.to_datetime(g[date_col], format="mixed", dayfirst=True).sort_values()
         if len(dates) < 3:
             return np.nan
         diffs = dates.diff().dt.days.dropna()
@@ -357,6 +381,83 @@ TIER1_REQUIRED_ROLES = ["customer_id", "transaction_date", "amount"]
 async def handle(
     session_id: str, session: dict[str, Any], body: MCQAnswers
 ) -> FeaturesResponse:
+    """Stage 4: receive pre-computed matrix from Stage 3, prune, detect leakage.
+
+    If exhaustive field analysis was run (Stage 3 new flow), uses that matrix.
+    Otherwise falls back to legacy Tier 1 + Tier 2 computation.
+    """
+    # Check if exhaustive analysis was already run in Stage 3
+    if session.get("feature_matrix") is not None and session.get("field_analysis_signature") is not None:
+        return await _handle_exhaustive(session_id, session, body)
+
+    # Legacy flow: compute Tier 1 + Tier 2 from scratch
+    return await _handle_legacy(session_id, session, body)
+
+
+async def _handle_exhaustive(
+    session_id: str, session: dict[str, Any], body: MCQAnswers
+) -> FeaturesResponse:
+    """Handle Stage 4 when exhaustive field analysis has been run."""
+    from app.stages.s4_pruning import statistical_pruning, leakage_detection
+    from app.stages.s4_cross_source import compute_interaction_features
+
+    feature_matrix = session["feature_matrix"]
+    labels = session.get("labels")
+    signature = session.get("field_analysis_signature", {})
+    col_map = session.get("col_map", {})
+    detected_types = session.get("detected_data_types", [1])
+
+    if labels is None:
+        raise HTTPException(status_code=400, detail="Labels not computed. Run hypothesis stage first.")
+
+    # 4a. Add interaction features between high-signal fields
+    interactions = compute_interaction_features(feature_matrix, signature)
+    if len(interactions.columns) > 0:
+        feature_matrix = feature_matrix.join(interactions)
+
+    # 4b. Statistical pruning
+    feature_matrix, pruning_report = statistical_pruning(feature_matrix, labels)
+
+    # 4c. Leakage detection
+    feature_matrix, leakage_report = leakage_detection(feature_matrix, labels, col_map)
+
+    # Build tier map
+    tier_map = _build_tier_map(feature_matrix.columns, col_map, detected_types)
+    tier_distribution = _tier_distribution(tier_map)
+
+    # Build stats
+    stats = _build_stats(feature_matrix)
+
+    # Build feature tiers from tier_map
+    feature_tiers = {}
+    for col, tier_num in tier_map.items():
+        tier_key = f"tier{tier_num}"
+        feature_tiers.setdefault(tier_key, []).append(col)
+
+    store.update(session_id, {
+        "stage": 4,
+        "mcq_answers": body.answers,
+        "feature_matrix": feature_matrix,
+        "feature_tier_map": tier_map,
+        "pruning_report": pruning_report,
+        "leakage_report": leakage_report,
+    })
+
+    return FeaturesResponse(
+        feature_count=len(feature_matrix.columns),
+        user_count=len(feature_matrix),
+        feature_tiers=feature_tiers,
+        stats=stats,
+        tier_distribution=tier_distribution,
+        pruning_report=pruning_report,
+        leakage_report=leakage_report,
+    )
+
+
+async def _handle_legacy(
+    session_id: str, session: dict[str, Any], body: MCQAnswers
+) -> FeaturesResponse:
+    """Legacy flow: compute Tier 1 + Tier 2 features from scratch."""
     column_mapping = session.get("column_mapping")
     hypothesis = session.get("hypothesis")
     df = session.get("dataframe")
@@ -367,10 +468,8 @@ async def handle(
             detail="Hypothesis stage must be completed first.",
         )
 
-    # Build role -> column name mapping
     col_map = _build_col_map(column_mapping)
 
-    # Validate required roles exist
     for role in TIER1_REQUIRED_ROLES:
         if role not in col_map:
             raise HTTPException(
@@ -378,16 +477,13 @@ async def handle(
                 detail=f"Required column role '{role}' not found in mapping.",
             )
 
-    # --- Time split: compute features from observation window only ---
     from app.stages.s5_labels import _get_churn_window
 
     date_col = col_map["transaction_date"]
-    dates = pd.to_datetime(df[date_col])
+    dates = pd.to_datetime(df[date_col], format="mixed", dayfirst=True)
     max_date = dates.max()
-
     churn_window_days = _get_churn_window(df, col_map, body.answers)
     cutoff_date = max_date - pd.Timedelta(days=churn_window_days)
-
     df_obs = df[dates <= cutoff_date].copy()
 
     if len(df_obs) == 0:
@@ -396,7 +492,6 @@ async def handle(
             detail="Not enough data before cutoff date. Try a shorter churn window.",
         )
 
-    # Compute Tier 1 features from observation window only
     feature_matrix = pd.DataFrame()
     tier1_names = []
     for name, func in TIER1_FEATURES.items():
@@ -408,10 +503,7 @@ async def handle(
         except Exception:
             continue
 
-    # Determine available Tier 2 features based on columns
     available_tier2 = _get_available_tier2(col_map)
-
-    # Ask LLM to select Tier 2 features
     tier2_names = []
     if available_tier2:
         selected = await _select_tier2_features(
@@ -426,7 +518,6 @@ async def handle(
                 except Exception:
                     continue
 
-    # User-derived DSL features from free text
     user_dsl_names = []
     user_dsl_features = []
     free_text = session.get("free_text")
@@ -445,16 +536,7 @@ async def handle(
         except Exception as e:
             logger.warning(f"User feature extraction failed: {e}")
 
-    # Build stats
-    stats = []
-    for col in feature_matrix.columns:
-        s = feature_matrix[col]
-        stats.append(FeatureStat(
-            name=col,
-            mean=round(float(s.mean()), 4) if not s.isna().all() else None,
-            median=round(float(s.median()), 4) if not s.isna().all() else None,
-            null_pct=round(float(s.isna().mean() * 100), 2),
-        ))
+    stats = _build_stats(feature_matrix)
 
     feature_tiers = {"tier1": tier1_names, "tier2": tier2_names}
     if user_dsl_names:
@@ -477,6 +559,61 @@ async def handle(
         feature_tiers=feature_tiers,
         stats=stats,
     )
+
+
+def _build_stats(feature_matrix: pd.DataFrame) -> list[FeatureStat]:
+    """Build feature statistics list."""
+    stats = []
+    for col in feature_matrix.columns:
+        s = feature_matrix[col]
+        stats.append(FeatureStat(
+            name=col,
+            mean=round(float(s.mean()), 4) if not s.isna().all() else None,
+            median=round(float(s.median()), 4) if not s.isna().all() else None,
+            null_pct=round(float(s.isna().mean() * 100), 2),
+        ))
+    return stats
+
+
+def _build_tier_map(columns, col_map: dict, detected_types: list[int]) -> dict:
+    """Map each feature to its tier based on the source column role."""
+    transaction_roles = {"customer_id", "transaction_date", "amount"}
+    tier2_roles = {"product", "category", "channel", "region", "quantity"}
+
+    tier_map = {}
+    for col in columns:
+        # Try to determine source field from feature name prefix
+        source_field = None
+        for field_name in col_map.keys():
+            if col.startswith(field_name):
+                source_field = field_name
+                break
+
+        if source_field:
+            role = col_map.get(source_field, "other")
+            if role in transaction_roles:
+                tier_map[col] = 1
+            elif role in tier2_roles:
+                tier_map[col] = 2
+            elif role == "other":
+                tier_map[col] = 4
+            else:
+                tier_map[col] = 3  # secondary file role
+        elif "gap_vs_personal_median" in col or "_x_" in col:
+            tier_map[col] = 3
+        else:
+            tier_map[col] = 4
+
+    return tier_map
+
+
+def _tier_distribution(tier_map: dict) -> dict:
+    """Compute percentage distribution across tiers."""
+    counts = {}
+    for tier in tier_map.values():
+        counts[f"tier_{tier}"] = counts.get(f"tier_{tier}", 0) + 1
+    total = sum(counts.values()) or 1
+    return {k: round(v / total * 100, 1) for k, v in counts.items()}
 
 
 async def _extract_user_features(
@@ -695,6 +832,7 @@ async def _select_tier2_features(
     hypothesis: dict,
     mcq_answers: dict,
 ) -> list[str]:
+    """Ask LLM to select which tier 2 features to compute."""
     feature_list = "\n".join(f"- {name}" for name in available)
     col_info = "\n".join(
         f"- {c['name']}: {c['llm_role']}" for c in column_mapping["columns"]

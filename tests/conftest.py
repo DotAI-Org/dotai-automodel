@@ -1,5 +1,6 @@
 import os
 import sys
+import uuid
 import pytest
 import pandas as pd
 import numpy as np
@@ -9,6 +10,35 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from app.session_store import store, SessionStore
 from app.stages import s4_features, s5_labels, s6_train
+
+
+# --------------- Test Store Helpers ---------------
+
+def _create_test_session(session_store: SessionStore, user_id: str = "test_user") -> str:
+    """Create a session in-memory without DB (for unit tests)."""
+    session_id = uuid.uuid4().hex[:12]
+    session_store._sessions[session_id] = {
+        "stage": 1,
+        "user_id": user_id,
+    }
+    return session_id
+
+
+# Monkey-patch the module-level store.update to skip async persist in tests
+_original_update = store.update.__func__ if hasattr(store.update, '__func__') else None
+
+
+def _sync_update(self, session_id: str, data: dict) -> bool:
+    """Sync update that skips asyncio.ensure_future DB persist."""
+    session = self._sessions.get(session_id)
+    if session is None:
+        return False
+    session.update(data)
+    return True
+
+
+# Apply the sync patch to the module-level store
+store.update = _sync_update.__get__(store, SessionStore)
 
 
 # --------------- Markers ---------------
@@ -80,8 +110,7 @@ def ecommerce_feature_matrix(sample_ecommerce_df, ecommerce_col_map):
 
 @pytest.fixture
 def ecommerce_labels(sample_ecommerce_df, ecommerce_col_map, ecommerce_feature_matrix):
-    """Uses the module-level store so handle() can update it."""
-    sid = store.create()
+    sid = _create_test_session(store)
     store.update(sid, {
         "dataframe": sample_ecommerce_df,
         "col_map": ecommerce_col_map,
@@ -96,8 +125,7 @@ def ecommerce_labels(sample_ecommerce_df, ecommerce_col_map, ecommerce_feature_m
 
 @pytest.fixture
 def trained_session(sample_ecommerce_df, ecommerce_col_map, ecommerce_feature_matrix):
-    """Uses the module-level store so handle() can update it."""
-    sid = store.create()
+    sid = _create_test_session(store)
     store.update(sid, {
         "dataframe": sample_ecommerce_df,
         "col_map": ecommerce_col_map,
