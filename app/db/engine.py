@@ -40,9 +40,8 @@ async def init_db():
             cols = {c["name"]: c for c in inspector.get_columns("users")}
             id_col = cols.get("id")
             if id_col and str(id_col["type"]) != "UUID":
-                sync_conn.execute(text(
-                    "DROP SCHEMA public CASCADE; CREATE SCHEMA public;"
-                ))
+                sync_conn.execute(text("DROP SCHEMA public CASCADE"))
+                sync_conn.execute(text("CREATE SCHEMA public"))
 
         await conn.run_sync(_drop_stale_tables)
         await conn.run_sync(Base.metadata.create_all)
