@@ -26,8 +26,25 @@ async def get_db():
 
 
 async def init_db():
-    """Create all database tables from SQLAlchemy models."""
+    """Create tables and add any missing columns from model definitions."""
     from app.db.models import Base
+    from sqlalchemy import inspect as sa_inspect, text
 
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+
+        # Add missing columns to existing tables
+        def _migrate_columns(sync_conn):
+            inspector = sa_inspect(sync_conn)
+            for table_name, table in Base.metadata.tables.items():
+                if not inspector.has_table(table_name):
+                    continue
+                existing = {c["name"] for c in inspector.get_columns(table_name)}
+                for col in table.columns:
+                    if col.name not in existing:
+                        col_type = col.type.compile(sync_conn.dialect)
+                        sync_conn.execute(
+                            text(f'ALTER TABLE "{table_name}" ADD COLUMN "{col.name}" {col_type}')
+                        )
+
+        await conn.run_sync(_migrate_columns)

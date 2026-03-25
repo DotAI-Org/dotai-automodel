@@ -129,7 +129,20 @@ async def delete_session(session_id: str, user: dict = Depends(get_current_user)
 @api_router.post("/sessions", response_model=UploadResponse)
 async def create_session(file: UploadFile = File(...), user: dict = Depends(get_current_user)):
     """Upload a CSV file and create a new session."""
-    return await s1_upload.handle(file, user_id=user["id"])
+    try:
+        return await s1_upload.handle(file, user_id=user["id"])
+    except HTTPException:
+        await notify_gchat(
+            "Upload failed",
+            f"user={user.get('email', 'unknown')}, file={file.filename}",
+        )
+        raise
+    except Exception as e:
+        await notify_gchat(
+            "Upload failed",
+            f"user={user.get('email', 'unknown')}, file={file.filename}, error={e}",
+        )
+        raise
 
 
 @api_router.post("/sessions/multi", response_model=MultiUploadResponse)
@@ -140,7 +153,21 @@ async def create_session_multi(
     user: dict = Depends(get_current_user),
 ):
     """Upload multiple CSV files with per-file type metadata."""
-    return await s1_upload.handle_multi(files, description, file_metadata_json=file_metadata, user_id=user["id"])
+    filenames = [f.filename for f in files]
+    try:
+        return await s1_upload.handle_multi(files, description, file_metadata_json=file_metadata, user_id=user["id"])
+    except HTTPException:
+        await notify_gchat(
+            "Multi-upload failed",
+            f"user={user.get('email', 'unknown')}, files={filenames}",
+        )
+        raise
+    except Exception as e:
+        await notify_gchat(
+            "Multi-upload failed",
+            f"user={user.get('email', 'unknown')}, files={filenames}, error={e}",
+        )
+        raise
 
 
 # --- Stage 2: Column Mapping ---

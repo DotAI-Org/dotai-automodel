@@ -10,6 +10,7 @@ from app.auth.config import GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
 from app.auth.dependencies import create_jwt, get_current_user
 from app.db.engine import AsyncSessionLocal
 from app.db.models import User
+from app.notifications import fire_and_forget as notify
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -41,11 +42,13 @@ async def auth_google_callback(request: Request):
     picture = user_info.get("picture", "")
     sub = user_info.get("sub", "")
 
+    is_new_user = False
     async with AsyncSessionLocal() as db:
         result = await db.execute(select(User).where(User.email == email))
         user = result.scalar_one_or_none()
 
         if user is None:
+            is_new_user = True
             user = User(
                 email=email,
                 name=name,
@@ -63,6 +66,11 @@ async def auth_google_callback(request: Request):
             await db.commit()
 
         jwt_token = create_jwt(str(user.id), user.email, user.name or "")
+
+    notify(
+        "User login",
+        f"{'New' if is_new_user else 'Returning'} user: {name} ({email})",
+    )
 
     base_url = os.environ.get("APP_BASE_URL", str(request.base_url).rstrip("/"))
     return RedirectResponse(url=f"{base_url}/?token={jwt_token}")
