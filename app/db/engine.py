@@ -31,6 +31,20 @@ async def init_db():
     from sqlalchemy import inspect as sa_inspect, text
 
     async with engine.begin() as conn:
+        # Drop stale tables from a previous app (e.g. JACPL) that conflict
+        # with our schema. Detected by checking if users.id is not UUID.
+        def _drop_stale_tables(sync_conn):
+            inspector = sa_inspect(sync_conn)
+            if not inspector.has_table("users"):
+                return
+            cols = {c["name"]: c for c in inspector.get_columns("users")}
+            id_col = cols.get("id")
+            if id_col and str(id_col["type"]) != "UUID":
+                sync_conn.execute(text(
+                    "DROP SCHEMA public CASCADE; CREATE SCHEMA public;"
+                ))
+
+        await conn.run_sync(_drop_stale_tables)
         await conn.run_sync(Base.metadata.create_all)
 
         # Add missing columns to existing tables

@@ -58,12 +58,12 @@ pytest tests/ --ignore=tests/test_pipeline.py -q
 ### Database
 | Setting | Value |
 |---------|-------|
-| Name | `churn-db` |
-| ID | `dpg-d6hbkm3uibrs739sjf10-a` |
-| Dashboard | https://dashboard.render.com/d/dpg-d6hbkm3uibrs739sjf10-a |
-| Plan | Free (expires 2026-03-30) |
-| DB Name | `churn_db_h4wr` |
-| User | `churn_db_h4wr_user` |
+| Name | `jacpl-production` (repurposed for churn-tool) |
+| ID | `dpg-d4ul80re5dus739uc35g-a` |
+| Dashboard | https://dashboard.render.com/d/dpg-d4ul80re5dus739uc35g-a |
+| Plan | Basic 256MB (paid) |
+| DB Name | `jacpl_production` |
+| User | `jacpl_production_user` |
 
 ### Render MCP Access
 Use `mcp__render__*` tools with service ID `srv-d6hbkpvgi27c73fnkp30`.
