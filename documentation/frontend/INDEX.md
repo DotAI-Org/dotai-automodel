@@ -7,53 +7,57 @@
 | Method | URL | File | Line |
 |--------|-----|------|------|
 | GET | `*/auth/me` | `static/index-old.html` | 42 |
-| GET | `*/auth/me` | `static/index.html` | 80 |
+| GET | `*/auth/me` | `static/index.html` | 137 |
 | GET | `*/auth/me` | `static/prototype-hope.html` | 77 |
 | GET | `*/sessions` | `static/index-old.html` | 102 |
 | POST | `*/sessions` | `static/index-old.html` | 348 |
-| GET | `*/sessions` | `static/index.html` | 184 |
-| GET | `*/sessions` | `static/index.html` | 265 |
-| POST | `*/sessions` | `static/index.html` | 333 |
+| GET | `*/sessions` | `static/index.html` | 242 |
+| GET | `*/sessions` | `static/index.html` | 323 |
+| POST | `*/sessions` | `static/index.html` | 436 |
 | GET | `*/sessions` | `static/prototype-hope.html` | 181 |
 | GET | `*/sessions` | `static/prototype-hope.html` | 254 |
 | POST | `*/sessions` | `static/prototype-hope.html` | 310 |
 | DELETE | `*/sessions/*` | `static/index-old.html` | 178 |
 | POST | `*/sessions/*/agent/start` | `static/index-old.html` | 566 |
-| POST | `*/sessions/*/agent/start` | `static/index.html` | 612 |
+| POST | `*/sessions/*/agent/start` | `static/index.html` | 890 |
 | POST | `*/sessions/*/agent/start` | `static/prototype-hope.html` | 585 |
 | GET | `*/sessions/*/agent/status` | `static/index-old.html` | 208 |
-| GET | `*/sessions/*/agent/status` | `static/index.html` | 237 |
-| GET | `*/sessions/*/agent/status` | `static/index.html` | 271 |
-| GET | `*/sessions/*/agent/status` | `static/index.html` | 732 |
+| GET | `*/sessions/*/agent/status` | `static/index.html` | 295 |
+| GET | `*/sessions/*/agent/status` | `static/index.html` | 329 |
+| GET | `*/sessions/*/agent/status` | `static/index.html` | 1035 |
 | GET | `*/sessions/*/agent/status` | `static/prototype-hope.html` | 234 |
 | POST | `*/sessions/*/column-mapping` | `static/index-old.html` | 393 |
 | PUT | `*/sessions/*/column-mapping` | `static/index-old.html` | 474 |
-| POST | `*/sessions/*/column-mapping` | `static/index.html` | 345 |
-| PUT | `*/sessions/*/column-mapping` | `static/index.html` | 483 |
-| PUT | `*/sessions/*/column-mapping` | `static/index.html` | 503 |
+| POST | `*/sessions/*/column-mapping` | `static/index.html` | 451 |
+| PUT | `*/sessions/*/column-mapping` | `static/index.html` | 648 |
+| PUT | `*/sessions/*/column-mapping` | `static/index.html` | 668 |
 | POST | `*/sessions/*/column-mapping` | `static/prototype-hope.html` | 322 |
 | PUT | `*/sessions/*/column-mapping` | `static/prototype-hope.html` | 460 |
 | PUT | `*/sessions/*/column-mapping` | `static/prototype-hope.html` | 480 |
 | POST | `*/sessions/*/column-mapping/feedback` | `static/index-old.html` | 446 |
-| POST | `*/sessions/*/column-mapping/feedback` | `static/index.html` | 455 |
+| POST | `*/sessions/*/column-mapping/feedback` | `static/index.html` | 620 |
 | POST | `*/sessions/*/column-mapping/feedback` | `static/prototype-hope.html` | 432 |
 | POST | `*/sessions/*/features` | `static/index-old.html` | 541 |
-| POST | `*/sessions/*/features` | `static/index.html` | 580 |
+| POST | `*/sessions/*/features` | `static/index.html` | 758 |
+| POST | `*/sessions/*/features` | `static/index.html` | 865 |
 | POST | `*/sessions/*/features` | `static/prototype-hope.html` | 557 |
+| POST | `*/sessions/*/findings/confirm` | `static/index.html` | 837 |
 | POST | `*/sessions/*/hypothesis` | `static/index-old.html` | 495 |
-| POST | `*/sessions/*/hypothesis` | `static/index.html` | 524 |
+| POST | `*/sessions/*/hypothesis` | `static/index.html` | 689 |
 | POST | `*/sessions/*/hypothesis` | `static/prototype-hope.html` | 501 |
-| POST | `*/sessions/*/inference` | `static/index.html` | 874 |
+| POST | `*/sessions/*/inference` | `static/index.html` | 1312 |
 | POST | `*/sessions/*/inference` | `static/prototype-hope.html` | 768 |
-| GET | `*/sessions/*/inference/download` | `static/index.html` | 1014 |
+| GET | `*/sessions/*/inference/download` | `static/index.html` | 1487 |
 | GET | `*/sessions/*/inference/download` | `static/prototype-hope.html` | 903 |
 | PUT | `*/sessions/*/name` | `static/index-old.html` | 162 |
 | POST | `*/sessions/multi` | `static/index-old.html` | 367 |
+| POST | `*/sessions/multi` | `static/index.html` | 432 |
+| POST | `*/sessions/multi` | `static/index.html` | 553 |
 
 ## WebSocket Connections
 
 - `*//*/api/sessions/*/chat*` (`static/index-old.html` line 588)
-- `*//*/api/sessions/*/chat*` (`static/index.html` line 630)
+- `*//*/api/sessions/*/chat*` (`static/index.html` line 908)
 - `*//*/api/sessions/*/chat*` (`static/prototype-hope.html` line 602)
 
 ## `static/index-old.html`
@@ -109,62 +113,71 @@ Type: html
 
 ### Functions
 
-- `getJwt()` (line 52)
-- `setJwt(token)` (line 53)
-- `clearJwt()` (line 54)
-- `authHeaders()` (line 56)
-- `authFetch(url, opts = {})` (line 61)
-- `checkUrlToken()` (line 67)
-- `initAuth()` (line 76)
-- `showLanding()` (line 105)
-- `showApp()` (line 114)
-- `onLoggedIn()` (line 120)
-- `goToScreen(screen)` (line 136)
-- `loadSessionList()` (line 182)
-- `getSessionBadge(session)` (line 193)
-- `renderSessionList(sessions)` (line 201)
-- `highlightActiveSession()` (line 224)
-- `loadSession(id)` (line 230)
-- `handleFileSelect(file)` (line 311)
-- `doUpload()` (line 320)
-- `populateDataSummary(profile, mappings)` (line 368)
-- `resetUploadScreen()` (line 397)
-- `showEditMappings()` (line 423)
-- `enterBusinessScreen()` (line 517)
-- `renderMcqQuestions(questions)` (line 538)
-- `selectOption(label)` (line 557)
-- `startAgent()` (line 600)
-- `connectWebSocket()` (line 624)
-- `handleWsMessage(msg)` (line 647)
-- `handleAgentProgress(msg)` (line 667)
-- `handleIterationResult(msg)` (line 695)
-- `updateBuildingTimer()` (line 717)
-- `startBuildingPoll()` (line 728)
-- `stopBuildingPoll()` (line 753)
-- `stopBuildingTimers()` (line 760)
-- `handleChampionSelected(msg)` (line 768)
-- `ensureRoundBlock(round)` (line 785)
-- `addRoundStep(round, text, cls)` (line 795)
-- `markAllStepsDone(round)` (line 816)
-- `restoreBuildingRounds(state)` (line 825)
-- `fmtPct(v)` (line 850)
-- `addModelDetailRow(round, modelName, metrics)` (line 855)
-- `runInference()` (line 872)
-- `populateResults(data)` (line 883)
-- `renderCustomerTable(predictions)` (line 919)
-- `getWhatChanged(prediction)` (line 953)
-- `renderFeatureImportance(features)` (line 960)
-- `showResultsFromAgent(state)` (line 984)
-- `filterCustomers()` (line 1047)
-- `toggleChat()` (line 1070)
-- `sendChat()` (line 1084)
-- `addChatMessage(type, text)` (line 1093)
-- `escapeHtml(str)` (line 1105)
+- `getJwt()` (line 109)
+- `setJwt(token)` (line 110)
+- `clearJwt()` (line 111)
+- `authHeaders()` (line 113)
+- `authFetch(url, opts = {})` (line 118)
+- `checkUrlToken()` (line 124)
+- `initAuth()` (line 133)
+- `showLanding()` (line 162)
+- `showApp()` (line 171)
+- `onLoggedIn()` (line 177)
+- `goToScreen(screen)` (line 193)
+- `loadSessionList()` (line 240)
+- `getSessionBadge(session)` (line 251)
+- `renderSessionList(sessions)` (line 259)
+- `highlightActiveSession()` (line 282)
+- `loadSession(id)` (line 288)
+- `handleFilesSelect(files)` (line 370)
+- `handleFileSelect(file)` (line 392)
+- `doUpload()` (line 398)
+- `populateDataSummary(profile, mappings)` (line 475)
+- `renderFileMetadata(files)` (line 505)
+- `uploadFilesWithMetadata(files)` (line 537)
+- `resetUploadScreen()` (line 558)
+- `showEditMappings()` (line 588)
+- `enterBusinessScreen()` (line 682)
+- `renderMcqQuestions(questions, targetContainer)` (line 716)
+- `selectOption(label)` (line 735)
+- `renderFindings(findings)` (line 778)
+- `startAgent()` (line 878)
+- `connectWebSocket()` (line 902)
+- `handleWsMessage(msg)` (line 925)
+- `handleAgentProgress(msg)` (line 970)
+- `handleIterationResult(msg)` (line 998)
+- `updateBuildingTimer()` (line 1020)
+- `startBuildingPoll()` (line 1031)
+- `stopBuildingPoll()` (line 1104)
+- `stopBuildingTimers()` (line 1111)
+- `handleChampionSelected(msg)` (line 1119)
+- `handleEarlyResults(msg)` (line 1165)
+- `handleResultsImproved(msg)` (line 1205)
+- `ensureRoundBlock(round)` (line 1223)
+- `addRoundStep(round, text, cls)` (line 1233)
+- `markAllStepsDone(round)` (line 1254)
+- `restoreBuildingRounds(state)` (line 1263)
+- `fmtPct(v)` (line 1288)
+- `addModelDetailRow(round, modelName, metrics)` (line 1293)
+- `runInference()` (line 1310)
+- `populateResults(data)` (line 1321)
+- `renderCustomerTable(predictions)` (line 1370)
+- `getWhatChanged(prediction)` (line 1426)
+- `renderFeatureImportance(features)` (line 1433)
+- `showResultsFromAgent(state)` (line 1457)
+- `filterCustomers()` (line 1520)
+- `toggleChat()` (line 1543)
+- `sendChat()` (line 1557)
+- `addChatMessage(type, text)` (line 1566)
+- `renderModelComparison(comparison, lift)` (line 1578)
+- `renderTierAttribution(attribution)` (line 1610)
+- `formatFeatureName(name)` (line 1650)
+- `escapeHtml(str)` (line 1661)
 
 ### Event Listeners
 
 - `change` (1 listener)
-- `click` (20 listeners)
+- `click` (23 listeners)
 - `dragleave` (1 listener)
 - `dragover` (1 listener)
 - `drop` (1 listener)

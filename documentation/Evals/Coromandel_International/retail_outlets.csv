@@ -1,0 +1,1152 @@
+store_id,store_name,brand,state,state_clean,district,city,pincode,opened_date,store_type,agronomist_mapped,data_quality_note
+CORSTR00001,Mana Gromor Rajahmundry 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,376924,25-Feb-24,satellite,N,old store code
+CORSTR00002,Mana Gromor Guntur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,373140,2008-03-30,company owned,Y,new store from FY26
+CORSTR00003,Namma Gromor Shivamogga 4,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,299780,2007-03-04,hub,Y,new store from FY26
+CORSTR00004,Mana Gromor Nizamabad 6,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,367465,2011-08-11,company owned,N,new store from FY26
+CORSTR00005,Namma Gromor Bengaluru 3,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,295100,2020-08-29,satellite,Y,brand spelling varies
+CORSTR00006,Mana Gromor Ongole 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,379180,01/30/2014,seasonal extension,Y,district split
+CORSTR00007,Namma Gromor Belagavi 3,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,296908,2023-10-11,company owned,shared,brand spelling varies
+CORSTR00008,Namma Gromor Kalaburagi 2,Namma Gromor,KARNATAKA,Karnataka,Kalaburagi,Kalaburagi,293535,2007-07-20,hub,Y,brand spelling varies
+CORSTR00009,Mana Gromor Ongole 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,379728,2022-05-04,company owned,shared,brand spelling varies
+CORSTR00010,Mana Gromor Khammam 2,Mana Gromor,Telangana,Telangana,Khammam,Khammam,361280,2009-03-12,seasonal extension,N,
+CORSTR00011,Mana Gromor Anantapur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,379758,01/06/2011,company owned,shared,brand spelling varies
+CORSTR00012,Mana Gromor Nellore 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,373558,2010-05-04,company owned,Y,brand spelling varies
+CORSTR00013,Namma Gromor Tumakuru 6,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,299299,2019-12-12,seasonal extension,shared,new store from FY26
+CORSTR00014,Nammadu Gromor Trichy 3,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tiruchirappalli,Trichy,334259,2019-08-18,hub,Y,brand spelling varies
+CORSTR00015,Mana Gromor Guntur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,374450,02/11/2023,hub,Y,district split
+CORSTR00016,Mana Gromor Ongole 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,378642,2013-05-25,satellite,N,old store code
+CORSTR00017,Mana Gromor Tirupati 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,376449,2021-05-21,satellite,shared,
+CORSTR00018,Mana Gromor Khammam 2,Mana Gromor,Telangana,Telangana,Khammam,Khammam,362366,2013-02-21,seasonal extension,Y,old store code
+CORSTR00019,Mana Gromor Guntur 2,Mana Gromor,AP,Andhra Pradesh,Guntur,Guntur,377482,2010-03-14,hub,shared,brand spelling varies
+CORSTR00020,Namma Gromor Tumakuru 9,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,291663,2012-03-03,hub,Y,old store code
+CORSTR00021,Namma Gromor Hubballi 1,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,295065,2018-10-23,hub,Y,district split
+CORSTR00022,Mana Gromor Adilabad 2,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,364569,2013-10-07,company owned,Y,brand spelling varies
+CORSTR00023,Namma Gromor Bengaluru 2,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,299146,2011-09-01,seasonal extension,N,
+CORSTR00024,Mana Gromor Vijayawada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,371945,2010-05-31,company owned,shared,new store from FY26
+CORSTR00025,Mana Gromor Warangal 8,Mana Gromor,Telangana,Telangana,Warangal,Warangal,365287,2019-02-15,hub,shared,district split
+CORSTR00026,Mana Gromor Warangal 9,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363470,05/10/2010,satellite,shared,new store from FY26
+CORSTR00027,Namma Gromor Shivamogga 3,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,297760,18/02/2017,seasonal extension,shared,old store code
+CORSTR00028,Namma Gromor Kalaburagi 3,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,297782,2017-02-24,hub,Y,old store code
+CORSTR00029,Mana Gromor Guntur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,375858,2008-04-09,company owned,N,old store code
+CORSTR00030,Mana Gromor Nellore 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,372102,09/05/2019,company owned,N,district split
+CORSTR00031,Mana Gromor Warangal 6,Mana Gromor,Telangana,Telangana,Warangal,Warangal,362235,2011-08-21,company owned,Y,district split
+CORSTR00032,Mana Gromor Khammam 1,Mana Gromor,Telangana,Telangana,Khammam,Khammam,363636,2008-08-14,satellite,shared,old store code
+CORSTR00033,Mana Gromor Nalgonda 2,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,364035,2024-02-10,hub,shared,
+CORSTR00034,Mana Gromor Kakinada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,375038,2009-07-31,seasonal extension,shared,old store code
+CORSTR00035,Mana Gromor Vijayawada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,371556,2010-12-04,hub,shared,
+CORSTR00036,Mana Gromor Khammam 3,Mana Gromor,Telangana,Telangana,Khammam,Khammam,366997,2007-07-07,satellite,N,
+CORSTR00037,Mana Gromor Vijayawada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,378617,2010-02-02,hub,N,district split
+CORSTR00038,Mana Gromor Kadapa 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,377138,20/05/2016,seasonal extension,shared,
+CORSTR00039,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,372320,04/07/2021,company owned,N,new store from FY26
+CORSTR00040,Mana Gromor Hyderabad 1,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,362029,2021-12-16,company owned,shared,district split
+CORSTR00041,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,378210,27/10/2010,satellite,Y,brand spelling varies
+CORSTR00042,Mana Gromor Siddipet 9,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,361752,2007-11-19,seasonal extension,Y,brand spelling varies
+CORSTR00043,Namma Gromor Mysuru 2,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,298267,11/29/2010,satellite,shared,old store code
+CORSTR00044,Mana Gromor Vijayawada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,377453,2020-07-29,company owned,Y,
+CORSTR00045,Mana Gromor Mahbubnagar 7,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,364735,05/06/2007,seasonal extension,N,
+CORSTR00046,Mana Gromor Khammam 4,Mana Gromor,Telangana,Telangana,Khammam,Khammam,369526,2019-05-30,seasonal extension,N,district split
+CORSTR00047,Mana Gromor Nellore 2,Mana Gromor,AP,Andhra Pradesh,Nellore,Nellore,376363,2018-12-02,seasonal extension,Y,old store code
+CORSTR00048,Mana Gromor Hyderabad 2,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,363676,16-Aug-25,satellite,shared,old store code
+CORSTR00049,Mana Gromor Suryapet 2,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,367756,2011-08-25,satellite,shared,new store from FY26
+CORSTR00050,Mana Gromor Khammam 1,Mana Gromor,Telangana,Telangana,Khammam,Khammam,362802,28/10/2010,seasonal extension,shared,old store code
+CORSTR00051,Mana Gromor Guntur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,378087,07-Jan-16,company owned,Y,brand spelling varies
+CORSTR00052,Mana Gromor Tirupati 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,377689,2024-06-07,satellite,shared,
+CORSTR00053,Namma Gromor Kalaburagi 3,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,293150,2020-04-17,company owned,Y,district split
+CORSTR00054,Nammadu Gromor Vellore 9,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Vellore,Vellore,333971,2024-05-01,satellite,shared,
+CORSTR00055,Mana Gromor Khammam 5,Mana Gromor,TG,Telangana,Khammam,Khammam,367994,2012-04-06,seasonal extension,shared,brand spelling varies
+CORSTR00056,Mana Gromor Kakinada 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,376884,2024-07-29,satellite,Y,old store code
+CORSTR00057,Mana Gromor Guntur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,374407,28-Jun-14,hub,Y,brand spelling varies
+CORSTR00058,Mana Gromor Kurnool 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,378874,02/05/2007,seasonal extension,Y,brand spelling varies
+CORSTR00059,Namma Gromor Bengaluru 9,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,298349,2025-07-27,satellite,N,district split
+CORSTR00060,Mana Gromor Tirupati 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,371077,2007-10-10,satellite,shared,district split
+CORSTR00061,Mana Gromor Nalgonda 9,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,362678,2016-02-27,hub,Y,
+CORSTR00062,Mana Gromor Tirupati 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,374746,03/18/2018,hub,Y,
+CORSTR00063,Mana Gromor Khammam 7,Mana Gromor,Telangana,Telangana,Khammam,Khammam,368896,2019-08-01,satellite,shared,new store from FY26
+CORSTR00064,Mana Gromor Vijayawada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,374188,01/05/2017,seasonal extension,N,old store code
+CORSTR00065,Mana Gromor Kakinada 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,378718,2013-10-31,company owned,Y,district split
+CORSTR00066,Mana Gromor Ongole 9,Mana Gromor,ANDHRA,Andhra Pradesh,Prakasam,Ongole,372791,01/08/2024,seasonal extension,N,district split
+CORSTR00067,Namma Gromor Belagavi 8,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,292631,2010-12-25,satellite,N,new store from FY26
+CORSTR00068,Namma Gromor Kalaburagi 9,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,294692,2026-01-09,satellite,shared,old store code
+CORSTR00069,Mana Gromor Warangal 5,Mana Gromor,Telangana,Telangana,Warangal,Warangal,365907,07/12/2015,satellite,shared,
+CORSTR00070,Mana Gromor Hyderabad 4,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,366999,03/12/2021,company owned,Y,district split
+CORSTR00071,Namma Gromor Hubballi 5,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,295784,2014-09-23,company owned,N,brand spelling varies
+CORSTR00072,Namma Gromor Mysuru 7,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,295527,2011-02-13,company owned,N,
+CORSTR00073,Namma Gromor Bengaluru 6,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,294222,04/02/2017,seasonal extension,Y,old store code
+CORSTR00074,Mana Gromor Visakhapatnam 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,374171,2015-07-27,company owned,Y,
+CORSTR00075,Mana Gromor Karimnagar 3,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,367864,28-Jul-12,hub,shared,old store code
+CORSTR00076,Mana Gromor Vijayawada 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,373326,2019-09-24,satellite,N,new store from FY26
+CORSTR00077,Mana Gromor Khammam 5,Mana Gromor,Telangana,Telangana,Khammam,Khammam,365151,2012-01-23,hub,Y,
+CORSTR00078,Namma Gromor Shivamogga 1,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,294532,2020-01-23,satellite,shared,brand spelling varies
+CORSTR00079,Namma Gromor Mangaluru 3,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,296408,2012-10-11,hub,shared,district split
+CORSTR00080,Namma Gromor Mangaluru 3,Namma Gromor,KARNATAKA,Karnataka,Dakshina Kannada,Mangaluru,297144,2020-05-14,hub,N,old store code
+CORSTR00081,Mana Gromor Anantapur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,374469,2022-01-13,hub,Y,new store from FY26
+CORSTR00082,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,378012,18/01/2008,hub,N,
+CORSTR00083,Namma Gromor Kalaburagi 2,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,294488,2017-07-02,hub,Y,district split
+CORSTR00084,Namma Gromor Hubballi 4,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,297724,2026-03-19,satellite,Y,brand spelling varies
+CORSTR00085,Namma Gromor Belagavi 7,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,295371,2009-03-28,company owned,N,district split
+CORSTR00086,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,379648,2020-02-22,seasonal extension,N,district split
+CORSTR00087,Mana Gromor Hyderabad 6,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,365231,2023-12-20,satellite,N,district split
+CORSTR00088,Mana Gromor Nellore 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,378305,2015-05-29,seasonal extension,Y,
+CORSTR00089,Mana Gromor Vijayawada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,377336,09/01/2014,company owned,N,brand spelling varies
+CORSTR00090,Mana Gromor Visakhapatnam 2,Mana Gromor,A.P.,Andhra Pradesh,Visakhapatnam,Visakhapatnam,372570,2011-02-01,satellite,shared,brand spelling varies
+CORSTR00091,Mana Gromor Mahbubnagar 8,Mana Gromor,TELANGANA,Telangana,Mahbubnagar,Mahbubnagar,362340,11/11/2016,hub,Y,district split
+CORSTR00092,Mana Gromor Nizamabad 8,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,366194,31-May-21,company owned,N,old store code
+CORSTR00093,Mana Gromor Warangal 1,Mana Gromor,Telangana,Telangana,Warangal,Warangal,365443,04/12/2023,satellite,Y,brand spelling varies
+CORSTR00094,Mana Gromor Nellore 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,377049,2007-05-14,company owned,shared,district split
+CORSTR00095,Mana Gromor Kurnool 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,373630,2020-11-06,company owned,N,old store code
+CORSTR00096,Mana Gromor Visakhapatnam 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,375522,2009-06-06,satellite,N,old store code
+CORSTR00097,Mana Gromor Hyderabad 6,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,366582,2018-01-09,satellite,shared,brand spelling varies
+CORSTR00098,Mana Gromor Visakhapatnam 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,374081,10/12/2018,company owned,Y,
+CORSTR00099,Namma Gromor Raichur 1,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,292479,2019-04-24,hub,N,district split
+CORSTR00100,Mana Gromor Karimnagar 3,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,365769,2023-06-16,seasonal extension,N,old store code
+CORSTR00101,Mana Gromor Karimnagar 1,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,369317,2017-03-26,company owned,shared,
+CORSTR00102,Mana Gromor Warangal 4,Mana Gromor,Telangana,Telangana,Warangal,Warangal,364624,2016-12-05,seasonal extension,N,district split
+CORSTR00103,Mana Gromor Siddipet 9,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,369648,2012-01-22,company owned,N,district split
+CORSTR00104,Namma Gromor Davanagere 3,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,293165,2013-04-23,hub,Y,district split
+CORSTR00105,Mana Gromor Adilabad 3,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,368414,2020-01-21,satellite,N,new store from FY26
+CORSTR00106,Mana Gromor Anantapur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371893,2007-12-26,hub,N,
+CORSTR00107,Mana Gromor Mahbubnagar 7,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,369441,12/30/2020,company owned,N,
+CORSTR00108,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,374037,2024-12-01,seasonal extension,shared,district split
+CORSTR00109,Mana Gromor Ongole 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,376772,26-Jul-07,company owned,shared,district split
+CORSTR00110,Mana Gromor Kadapa 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,371791,2016-08-11,satellite,N,old store code
+CORSTR00111,Mana Gromor Anantapur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,376842,2007-05-20,hub,shared,district split
+CORSTR00112,Mana Gromor Nizamabad 7,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,362201,2013-01-19,satellite,shared,
+CORSTR00113,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,378874,2016-12-20,seasonal extension,Y,
+CORSTR00114,Mana Gromor Guntur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,373559,2008-12-14,hub,N,district split
+CORSTR00115,Namma Gromor Udupi 4,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,298987,2013-03-07,company owned,N,district split
+CORSTR00116,Namma Gromor Mysuru 8,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,291798,04/27/2021,hub,N,
+CORSTR00117,Mana Gromor Kadapa 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,376452,2024-06-02,satellite,shared,old store code
+CORSTR00118,Mana Gromor Warangal 8,Mana Gromor,Telangana,Telangana,Warangal,Warangal,361763,11-Mar-15,satellite,N,old store code
+CORSTR00119,Mana Gromor Kurnool 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,374869,2019-09-02,company owned,N,brand spelling varies
+CORSTR00120,Mana Gromor Nalgonda 7,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,366373,2014-05-01,hub,shared,
+CORSTR00121,Namma Gromor Shivamogga 2,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,292449,2024-09-02,hub,Y,old store code
+CORSTR00122,Mana Gromor Kakinada 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,375713,2018-01-01,satellite,N,old store code
+CORSTR00123,Namma Gromor Hubballi 5,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,295267,2020-05-21,company owned,shared,new store from FY26
+CORSTR00124,Namma Gromor Bengaluru 4,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,293344,2019-08-19,seasonal extension,Y,district split
+CORSTR00125,Mana Gromor Khammam 8,Mana Gromor,Telangana,Telangana,Khammam,Khammam,364146,02/11/2019,company owned,N,district split
+CORSTR00126,Mana Gromor Kadapa 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,376764,2016-10-07,company owned,Y,old store code
+CORSTR00127,Namma Gromor Udupi 2,Namma Gromor,KARNATAKA,Karnataka,Udupi,Udupi,296911,2017-07-16,seasonal extension,Y,
+CORSTR00128,Mana Gromor Vijayawada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,375566,2022-02-25,hub,shared,district split
+CORSTR00129,Namma Gromor Belagavi 4,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,297167,2008-08-10,satellite,Y,old store code
+CORSTR00130,Mana Gromor Hyderabad 8,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,363599,2020-05-03,company owned,N,
+CORSTR00131,Mana Gromor Ongole 1,Mana Gromor,A.P.,Andhra Pradesh,Prakasam,Ongole,374701,2012-12-11,satellite,Y,old store code
+CORSTR00132,Mana Gromor Kadapa 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,371238,2019-01-14,seasonal extension,N,district split
+CORSTR00133,Nammadu Gromor Erode 4,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Erode,Erode,339651,01/01/2010,satellite,Y,district split
+CORSTR00134,Mana Gromor Kakinada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,378452,04-Aug-25,seasonal extension,Y,
+CORSTR00135,Namma Gromor Mangaluru 2,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,295834,2025-06-12,seasonal extension,N,brand spelling varies
+CORSTR00136,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,379244,2021-12-04,seasonal extension,shared,old store code
+CORSTR00137,Mana Gromor Kakinada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,377438,2022-05-15,seasonal extension,shared,old store code
+CORSTR00138,Mana Gromor Visakhapatnam 8,Mana Gromor,ANDHRA,Andhra Pradesh,Visakhapatnam,Visakhapatnam,377324,2008-07-31,hub,N,new store from FY26
+CORSTR00139,Mana Gromor Siddipet 9,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,367638,2015-06-04,seasonal extension,shared,brand spelling varies
+CORSTR00140,Nammadu Gromor Salem 5,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Salem,Salem,338897,2007-05-07,hub,N,
+CORSTR00141,Mana Gromor Karimnagar 2,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,367838,2025-12-24,seasonal extension,shared,new store from FY26
+CORSTR00142,Mana Gromor Nizamabad 2,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,369193,2008-02-05,satellite,Y,
+CORSTR00143,Mana Gromor Vijayawada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,371361,2019-08-30,hub,Y,district split
+CORSTR00144,Namma Gromor Bengaluru 7,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,299202,2015-12-11,satellite,Y,district split
+CORSTR00145,Namma Gromor Davanagere 1,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,298938,2023-08-18,company owned,shared,district split
+CORSTR00146,Mana Gromor Hyderabad 8,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,362943,2011-12-24,company owned,Y,new store from FY26
+CORSTR00147,Mana Gromor Tirupati 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,377736,2025-06-18,seasonal extension,shared,old store code
+CORSTR00148,Mana Gromor Tirupati 5,Mana Gromor,ANDHRA,Andhra Pradesh,Tirupati,Tirupati,376593,07/05/2017,company owned,N,district split
+CORSTR00149,Namma Gromor Bengaluru 7,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,299364,09/08/2020,seasonal extension,Y,new store from FY26
+CORSTR00150,Mana Gromor Nellore 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,379801,2007-11-25,hub,N,brand spelling varies
+CORSTR00151,Namma Gromor Davanagere 9,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,294239,2009-02-01,hub,shared,brand spelling varies
+CORSTR00152,Mana Gromor Ongole 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,372679,09/12/2022,company owned,N,brand spelling varies
+CORSTR00153,Namma Gromor Davanagere 7,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,295757,2019-11-19,seasonal extension,N,brand spelling varies
+CORSTR00154,Mana Gromor Kakinada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,376691,2011-06-01,hub,shared,old store code
+CORSTR00155,Mana Gromor Warangal 5,Mana Gromor,Telangana,Telangana,Warangal,Warangal,361374,2011-12-26,seasonal extension,shared,district split
+CORSTR00156,Mana Gromor Nizamabad 2,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,361653,2010-10-16,hub,N,new store from FY26
+CORSTR00157,Mana Gromor Anantapur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,373221,2020-06-05,company owned,N,
+CORSTR00158,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,378892,20/03/2018,company owned,N,
+CORSTR00159,Namma Gromor Raichur 2,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,299027,2014-02-28,company owned,Y,new store from FY26
+CORSTR00160,Mana Gromor Visakhapatnam 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,379511,2015-10-25,hub,shared,district split
+CORSTR00161,Mana Gromor Anantapur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,372376,2007-05-11,company owned,N,old store code
+CORSTR00162,Mana Gromor Adilabad 2,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,364215,2009-04-07,company owned,shared,district split
+CORSTR00163,Mana Gromor Anantapur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,377571,06/11/2024,company owned,Y,new store from FY26
+CORSTR00164,Mana Gromor Tirupati 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,377681,04/06/2019,seasonal extension,Y,district split
+CORSTR00165,Mana Gromor Hyderabad 6,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,361632,05/28/2025,company owned,N,new store from FY26
+CORSTR00166,Namma Gromor Tumakuru 9,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,292189,2008-09-06,company owned,N,old store code
+CORSTR00167,Mana Gromor Warangal 2,Mana Gromor,Telangana,Telangana,Warangal,Warangal,367630,2025-01-03,hub,N,old store code
+CORSTR00168,Mana Gromor Siddipet 1,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,368428,2016-10-08,hub,N,new store from FY26
+CORSTR00169,Mana Gromor Mahbubnagar 8,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,368519,27-May-16,company owned,N,new store from FY26
+CORSTR00170,Namma Gromor Mangaluru 1,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,297212,2010-03-13,hub,shared,district split
+CORSTR00171,Mana Gromor Kadapa 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,376452,2026-01-14,satellite,shared,old store code
+CORSTR00172,Mana Gromor Suryapet 4,Mana Gromor,TS,Telangana,Suryapet,Suryapet,363079,2011-10-15,company owned,shared,brand spelling varies
+CORSTR00173,Mana Gromor Ongole 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,375864,2022-11-24,company owned,Y,brand spelling varies
+CORSTR00174,Mana Gromor Mahbubnagar 2,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,369615,03/05/2024,satellite,shared,brand spelling varies
+CORSTR00175,Namma Gromor Mysuru 7,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,298828,2026-03-21,seasonal extension,N,new store from FY26
+CORSTR00176,Mana Gromor Mahbubnagar 7,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,369071,2011-11-19,company owned,shared,district split
+CORSTR00177,Mana Gromor Anantapur 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,378676,31-May-10,hub,Y,district split
+CORSTR00178,Namma Gromor Davanagere 9,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,299372,02/04/2024,company owned,Y,new store from FY26
+CORSTR00179,Mana Gromor Vijayawada 8,Mana Gromor,ANDHRA,Andhra Pradesh,Krishna,Vijayawada,379234,18-Nov-25,hub,Y,new store from FY26
+CORSTR00180,Mana Gromor Anantapur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,373369,10/01/2008,seasonal extension,N,
+CORSTR00181,Mana Gromor Nellore 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,378830,08/02/2009,satellite,N,
+CORSTR00182,Mana Gromor Kurnool 3,Mana Gromor,AP,Andhra Pradesh,Kurnool,Kurnool,376996,2019-02-06,satellite,Y,new store from FY26
+CORSTR00183,Mana Gromor Suryapet 6,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,369413,04/18/2013,hub,N,old store code
+CORSTR00184,Mana Gromor Visakhapatnam 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,374986,2018-06-01,seasonal extension,shared,
+CORSTR00185,Mana Gromor Rajahmundry 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,373329,2022-06-18,hub,shared,new store from FY26
+CORSTR00186,Mana Gromor Karimnagar 7,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,362672,2014-07-28,company owned,shared,brand spelling varies
+CORSTR00187,Mana Gromor Tirupati 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,374960,29-Mar-26,seasonal extension,N,district split
+CORSTR00188,Mana Gromor Vijayawada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,372788,2008-07-02,hub,N,
+CORSTR00189,Mana Gromor Rajahmundry 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,374281,2016-08-27,seasonal extension,N,
+CORSTR00190,Mana Gromor Warangal 6,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363417,07/27/2007,seasonal extension,shared,
+CORSTR00191,Mana Gromor Adilabad 7,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,368082,2017-11-02,seasonal extension,Y,district split
+CORSTR00192,Mana Gromor Vijayawada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,371075,2014-03-19,seasonal extension,N,
+CORSTR00193,Namma Gromor Mysuru 1,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,299295,2011-03-05,hub,Y,district split
+CORSTR00194,Namma Gromor Hubballi 1,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,296643,2009-06-11,company owned,N,
+CORSTR00195,Namma Gromor Mysuru 1,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,291052,09-Nov-17,seasonal extension,N,
+CORSTR00196,Mana Gromor Anantapur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,379340,2026-03-20,satellite,N,brand spelling varies
+CORSTR00197,Namma Gromor Tumakuru 4,Namma Gromor,KARNATAKA,Karnataka,Tumakuru,Tumakuru,291099,2022-11-01,hub,shared,brand spelling varies
+CORSTR00198,Namma Gromor Shivamogga 9,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,295078,22/01/2024,satellite,N,district split
+CORSTR00199,Namma Gromor Belagavi 6,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,297381,2014-11-23,company owned,N,
+CORSTR00200,Mana Gromor Mahbubnagar 7,Mana Gromor,TG,Telangana,Mahbubnagar,Mahbubnagar,362245,2022-10-12,seasonal extension,N,brand spelling varies
+CORSTR00201,Namma Gromor Hubballi 5,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,295159,2025-03-19,satellite,N,district split
+CORSTR00202,Mana Gromor Guntur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,378146,2025-08-27,hub,N,district split
+CORSTR00203,Namma Gromor Udupi 1,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,297096,2018-08-29,hub,shared,new store from FY26
+CORSTR00204,Mana Gromor Guntur 6,Mana Gromor,ANDHRA,Andhra Pradesh,Guntur,Guntur,379673,01/26/2012,company owned,Y,district split
+CORSTR00205,Mana Gromor Kurnool 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,372818,2011-07-02,satellite,Y,old store code
+CORSTR00206,Namma Gromor Hubballi 6,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,293801,05/10/2014,satellite,shared,new store from FY26
+CORSTR00207,Mana Gromor Tirupati 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,372245,12-Sep-19,satellite,N,brand spelling varies
+CORSTR00208,Mana Gromor Visakhapatnam 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,372830,2023-03-06,seasonal extension,shared,brand spelling varies
+CORSTR00209,Mana Gromor Kadapa 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,371018,2012-06-11,seasonal extension,N,brand spelling varies
+CORSTR00210,Nammadu Gromor Trichy 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tiruchirappalli,Trichy,338476,2023-05-14,satellite,N,new store from FY26
+CORSTR00211,Mana Gromor Visakhapatnam 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,378650,02/08/2009,company owned,N,
+CORSTR00212,Namma Gromor Hubballi 8,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,294506,2022-02-02,satellite,Y,old store code
+CORSTR00213,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,372798,2024-11-13,company owned,Y,district split
+CORSTR00214,Mana Gromor Kadapa 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,373026,2020-05-02,hub,shared,new store from FY26
+CORSTR00215,Mana Gromor Vijayawada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,371681,2017-02-17,satellite,N,
+CORSTR00216,Mana Gromor Nellore 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,375306,2008-10-21,hub,shared,brand spelling varies
+CORSTR00217,Mana Gromor Karimnagar 9,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,361766,2010-10-20,hub,Y,old store code
+CORSTR00218,Mana Gromor Anantapur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,378975,27/10/2022,hub,Y,brand spelling varies
+CORSTR00219,Mana Gromor Adilabad 7,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,367835,2011-07-02,company owned,Y,
+CORSTR00220,Mana Gromor Kakinada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,374117,01/04/2015,satellite,shared,brand spelling varies
+CORSTR00221,Mana Gromor Vijayawada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,372090,2019-06-20,hub,shared,brand spelling varies
+CORSTR00222,Mana Gromor Kurnool 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,377588,2024-06-30,seasonal extension,shared,new store from FY26
+CORSTR00223,Mana Gromor Hyderabad 4,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,362055,2022-10-08,company owned,Y,
+CORSTR00224,Mana Gromor Khammam 1,Mana Gromor,Telangana,Telangana,Khammam,Khammam,369343,2007-02-16,hub,N,old store code
+CORSTR00225,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,375314,2019-08-21,seasonal extension,Y,
+CORSTR00226,Mana Gromor Kakinada 2,Mana Gromor,ANDHRA,Andhra Pradesh,Kakinada,Kakinada,373075,2018-09-12,satellite,N,district split
+CORSTR00227,Namma Gromor Hubballi 6,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,296489,2022-03-08,hub,Y,
+CORSTR00228,Mana Gromor Guntur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,377928,2013-03-31,seasonal extension,N,new store from FY26
+CORSTR00229,Mana Gromor Visakhapatnam 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,372059,2020-06-11,seasonal extension,shared,
+CORSTR00230,Namma Gromor Hubballi 9,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,294661,2011-06-10,hub,N,
+CORSTR00231,Namma Gromor Shivamogga 8,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,294027,2012-09-17,satellite,N,brand spelling varies
+CORSTR00232,Mana Gromor Guntur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,378366,2024-07-30,satellite,Y,brand spelling varies
+CORSTR00233,Namma Gromor Mangaluru 8,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,298143,2013-01-07,company owned,shared,old store code
+CORSTR00234,Mana Gromor Khammam 3,Mana Gromor,TELANGANA,Telangana,Khammam,Khammam,367824,04-Dec-18,satellite,N,brand spelling varies
+CORSTR00235,Namma Gromor Ballari 8,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,296336,2013-10-06,company owned,shared,old store code
+CORSTR00236,Namma Gromor Mangaluru 6,Namma Gromor,KA,Karnataka,Dakshina Kannada,Mangaluru,295964,2012-12-26,seasonal extension,shared,
+CORSTR00237,Mana Gromor Nizamabad 4,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,364788,01/14/2024,satellite,N,brand spelling varies
+CORSTR00238,Mana Gromor Tirupati 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,376826,2019-08-27,hub,Y,old store code
+CORSTR00239,Namma Gromor Kalaburagi 3,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,295018,2020-07-18,hub,N,brand spelling varies
+CORSTR00240,Mana Gromor Kakinada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,375781,16/06/2015,seasonal extension,shared,new store from FY26
+CORSTR00241,Mana Gromor Nellore 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,377713,2020-09-15,satellite,N,district split
+CORSTR00242,Mana Gromor Visakhapatnam 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,377850,2011-07-16,company owned,Y,
+CORSTR00243,Nammadu Gromor Trichy 6,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tiruchirappalli,Trichy,339833,2007-11-21,seasonal extension,Y,
+CORSTR00244,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,379208,09-Oct-23,satellite,N,new store from FY26
+CORSTR00245,Mana Gromor Rajahmundry 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,376503,2017-08-15,hub,N,new store from FY26
+CORSTR00246,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,376644,2010-08-03,satellite,N,brand spelling varies
+CORSTR00247,Mana Gromor Kakinada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,377218,16/06/2012,seasonal extension,N,district split
+CORSTR00248,Mana Gromor Karimnagar 3,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,361137,2020-06-25,seasonal extension,shared,
+CORSTR00249,Namma Gromor Ballari 6,Namma Gromor,KA,Karnataka,Ballari,Ballari,299438,23/08/2020,hub,N,
+CORSTR00250,Mana Gromor Anantapur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,379996,2020-12-30,company owned,Y,
+CORSTR00251,Mana Gromor Nizamabad 5,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,366605,2018-04-13,hub,N,old store code
+CORSTR00252,Namma Gromor Kalaburagi 2,Namma Gromor,KARNATAKA,Karnataka,Kalaburagi,Kalaburagi,292284,2014-01-14,seasonal extension,Y,
+CORSTR00253,Mana Gromor Kurnool 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,371131,2009-03-20,company owned,shared,district split
+CORSTR00254,Namma Gromor Shivamogga 7,Namma Gromor,KA,Karnataka,Shivamogga,Shivamogga,295035,2016-10-21,seasonal extension,shared,
+CORSTR00255,Mana Gromor Mahbubnagar 9,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,366085,2009-04-01,seasonal extension,shared,district split
+CORSTR00256,Mana Gromor Vijayawada 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,374430,2016-03-29,satellite,shared,district split
+CORSTR00257,Mana Gromor Tirupati 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,379328,2017-03-19,hub,Y,brand spelling varies
+CORSTR00258,Namma Gromor Hubballi 8,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,299300,2009-02-09,seasonal extension,N,
+CORSTR00259,Mana Gromor Tirupati 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,379754,2021-10-19,satellite,shared,old store code
+CORSTR00260,Namma Gromor Hubballi 4,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,293082,2018-01-06,hub,Y,
+CORSTR00261,Mana Gromor Khammam 7,Mana Gromor,Telangana,Telangana,Khammam,Khammam,366563,2015-07-02,hub,Y,brand spelling varies
+CORSTR00262,Mana Gromor Kadapa 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,375869,2009-06-14,satellite,N,old store code
+CORSTR00263,Nammadu Gromor Erode 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Erode,Erode,337228,2025-10-18,company owned,Y,new store from FY26
+CORSTR00264,Mana Gromor Kakinada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,377471,2024-02-08,company owned,N,new store from FY26
+CORSTR00265,Mana Gromor Khammam 7,Mana Gromor,Telangana,Telangana,Khammam,Khammam,362994,2014-03-21,satellite,N,district split
+CORSTR00266,Mana Gromor Khammam 1,Mana Gromor,Telangana,Telangana,Khammam,Khammam,364448,2011-12-28,satellite,Y,brand spelling varies
+CORSTR00267,Namma Gromor Kalaburagi 2,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,299424,23/03/2018,company owned,N,brand spelling varies
+CORSTR00268,Namma Gromor Mysuru 7,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,297937,2021-12-14,satellite,N,old store code
+CORSTR00269,Nammadu Gromor Thanjavur 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Thanjavur,Thanjavur,336838,2013-03-23,satellite,Y,brand spelling varies
+CORSTR00270,Mana Gromor Rajahmundry 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,373225,2012-11-28,company owned,Y,brand spelling varies
+CORSTR00271,Mana Gromor Adilabad 5,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,369633,2009-02-16,hub,N,old store code
+CORSTR00272,Mana Gromor Suryapet 3,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,362764,2009-07-06,hub,Y,brand spelling varies
+CORSTR00273,Mana Gromor Kurnool 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,374201,2012-02-15,seasonal extension,N,brand spelling varies
+CORSTR00274,Namma Gromor Shivamogga 8,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,295818,2019-06-13,hub,N,old store code
+CORSTR00275,Mana Gromor Khammam 7,Mana Gromor,Telangana,Telangana,Khammam,Khammam,367737,2023-12-17,seasonal extension,Y,new store from FY26
+CORSTR00276,Mana Gromor Siddipet 6,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,365105,2015-03-05,hub,N,district split
+CORSTR00277,Mana Gromor Anantapur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,374025,2025-11-17,satellite,N,new store from FY26
+CORSTR00278,Namma Gromor Bengaluru 8,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,298402,09/14/2019,seasonal extension,N,old store code
+CORSTR00279,Mana Gromor Rajahmundry 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,372209,2018-09-22,satellite,N,new store from FY26
+CORSTR00280,Mana Gromor Khammam 5,Mana Gromor,Telangana,Telangana,Khammam,Khammam,366448,05/03/2014,company owned,N,
+CORSTR00281,Mana Gromor Adilabad 9,Mana Gromor,TELANGANA,Telangana,Adilabad,Adilabad,361177,08/25/2022,satellite,Y,district split
+CORSTR00282,Mana Gromor Kadapa 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,377479,2024-04-15,seasonal extension,N,
+CORSTR00283,Mana Gromor Rajahmundry 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,374231,2007-06-18,seasonal extension,N,
+CORSTR00284,Mana Gromor Rajahmundry 1,Mana Gromor,A.P.,Andhra Pradesh,East Godavari,Rajahmundry,376798,2019-12-01,seasonal extension,shared,old store code
+CORSTR00285,Mana Gromor Siddipet 2,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,369053,2013-11-18,seasonal extension,N,district split
+CORSTR00286,Mana Gromor Suryapet 6,Mana Gromor,TELANGANA,Telangana,Suryapet,Suryapet,361160,2017-09-15,hub,Y,brand spelling varies
+CORSTR00287,Mana Gromor Suryapet 3,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,367961,2019-01-25,satellite,Y,new store from FY26
+CORSTR00288,Mana Gromor Tirupati 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,379057,2013-11-07,hub,shared,new store from FY26
+CORSTR00289,Mana Gromor Hyderabad 5,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,361846,2011-05-23,hub,shared,
+CORSTR00290,Mana Gromor Kadapa 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,373357,2023-12-03,seasonal extension,shared,brand spelling varies
+CORSTR00291,Mana Gromor Warangal 7,Mana Gromor,Telangana,Telangana,Warangal,Warangal,362312,2011-05-25,satellite,N,new store from FY26
+CORSTR00292,Namma Gromor Mangaluru 4,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,292199,2009-11-27,seasonal extension,shared,brand spelling varies
+CORSTR00293,Namma Gromor Davanagere 8,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,296920,2025-12-02,seasonal extension,Y,new store from FY26
+CORSTR00294,Mana Gromor Kakinada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,378054,2016-01-24,satellite,N,old store code
+CORSTR00295,Mana Gromor Kadapa 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,377919,2018-09-09,satellite,shared,old store code
+CORSTR00296,Namma Gromor Mangaluru 2,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,295315,2009-08-24,satellite,Y,brand spelling varies
+CORSTR00297,Mana Gromor Ongole 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,373491,2023-03-08,satellite,Y,new store from FY26
+CORSTR00298,Mana Gromor Siddipet 1,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,366683,2018-10-13,hub,N,new store from FY26
+CORSTR00299,Mana Gromor Kadapa 3,Mana Gromor,ANDHRA,Andhra Pradesh,Kadapa,Kadapa,372974,2020-02-25,seasonal extension,N,brand spelling varies
+CORSTR00300,Mana Gromor Hyderabad 8,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,363896,06/02/2012,satellite,Y,district split
+CORSTR00301,Mana Gromor Guntur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,377314,2009-07-30,hub,shared,old store code
+CORSTR00302,Mana Gromor Khammam 2,Mana Gromor,Telangana,Telangana,Khammam,Khammam,362156,08/01/2019,seasonal extension,shared,brand spelling varies
+CORSTR00303,Mana Gromor Hyderabad 7,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,364216,2019-02-08,company owned,shared,new store from FY26
+CORSTR00304,Namma Gromor Belagavi 5,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,296092,2011-07-02,hub,Y,
+CORSTR00305,Mana Gromor Visakhapatnam 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,378170,2008-02-17,seasonal extension,N,district split
+CORSTR00306,Namma Gromor Mangaluru 3,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,292138,2023-12-05,hub,N,old store code
+CORSTR00307,Mana Gromor Kurnool 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,373411,2025-09-05,hub,shared,old store code
+CORSTR00308,Mana Gromor Kadapa 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,377606,31/03/2025,hub,N,
+CORSTR00309,Mana Gromor Warangal 7,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363069,2007-02-23,company owned,Y,
+CORSTR00310,Namma Gromor Bengaluru 6,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,296223,2021-08-13,seasonal extension,Y,new store from FY26
+CORSTR00311,Mana Gromor Anantapur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,376404,17-Sep-07,hub,shared,old store code
+CORSTR00312,Namma Gromor Bengaluru 9,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,292067,2010-01-02,hub,shared,old store code
+CORSTR00313,Mana Gromor Vijayawada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,375450,10/08/2019,seasonal extension,N,old store code
+CORSTR00314,Mana Gromor Hyderabad 8,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,364927,2014-01-03,company owned,shared,new store from FY26
+CORSTR00315,Namma Gromor Mysuru 2,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,292839,2015-06-12,hub,shared,old store code
+CORSTR00316,Mana Gromor Nellore 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,374065,2008-02-03,hub,Y,new store from FY26
+CORSTR00317,Mana Gromor Suryapet 5,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,367809,2013-09-26,company owned,N,old store code
+CORSTR00318,Mana Gromor Adilabad 8,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,364684,2012-03-13,company owned,Y,old store code
+CORSTR00319,Nammadu Gromor Kanchipuram 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Kanchipuram,Kanchipuram,331759,2016-12-27,seasonal extension,N,
+CORSTR00320,Mana Gromor Hyderabad 7,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,364918,2009-04-12,seasonal extension,Y,
+CORSTR00321,Mana Gromor Kadapa 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,378894,2010-10-10,satellite,Y,old store code
+CORSTR00322,Mana Gromor Rajahmundry 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,377450,2026-01-29,hub,Y,old store code
+CORSTR00323,Mana Gromor Kurnool 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,374379,2025-11-27,hub,shared,old store code
+CORSTR00324,Mana Gromor Rajahmundry 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,378201,2009-05-31,seasonal extension,shared,district split
+CORSTR00325,Mana Gromor Hyderabad 3,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,363800,2007-11-29,seasonal extension,N,district split
+CORSTR00326,Namma Gromor Mysuru 9,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,297297,2007-01-20,satellite,shared,district split
+CORSTR00327,Namma Gromor Tumakuru 3,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,296217,29-Jun-17,satellite,shared,old store code
+CORSTR00328,Mana Gromor Khammam 1,Mana Gromor,Telangana,Telangana,Khammam,Khammam,361508,03/04/2013,company owned,Y,new store from FY26
+CORSTR00329,Mana Gromor Vijayawada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,377346,2018-01-04,satellite,N,old store code
+CORSTR00330,Mana Gromor Ongole 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,371142,2016-11-10,satellite,shared,old store code
+CORSTR00331,Mana Gromor Tirupati 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,371177,2011-06-28,satellite,shared,
+CORSTR00332,Mana Gromor Nizamabad 3,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,369305,2007-07-09,satellite,shared,new store from FY26
+CORSTR00333,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,372517,24-Oct-17,company owned,shared,brand spelling varies
+CORSTR00334,Mana Gromor Kadapa 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,375334,2025-10-19,satellite,N,brand spelling varies
+CORSTR00335,Namma Gromor Mangaluru 8,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,296690,26/08/2019,company owned,Y,
+CORSTR00336,Namma Gromor Ballari 7,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,294165,2022-02-21,company owned,shared,new store from FY26
+CORSTR00337,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,379064,2008-08-17,satellite,Y,old store code
+CORSTR00338,Mana Gromor Warangal 4,Mana Gromor,Telangana,Telangana,Warangal,Warangal,361929,12/25/2008,seasonal extension,N,district split
+CORSTR00339,Mana Gromor Rajahmundry 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,375571,2021-12-02,company owned,Y,brand spelling varies
+CORSTR00340,Namma Gromor Kalaburagi 8,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,295825,2011-11-17,hub,Y,district split
+CORSTR00341,Nammadu Gromor Hosur 9,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Krishnagiri,Hosur,335608,2013-08-19,company owned,shared,district split
+CORSTR00342,Mana Gromor Nalgonda 1,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,365996,07/19/2008,hub,Y,district split
+CORSTR00343,Namma Gromor Bengaluru 3,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,297664,2022-10-19,seasonal extension,Y,old store code
+CORSTR00344,Namma Gromor Bengaluru 5,Namma Gromor,KARNATAKA,Karnataka,Bengaluru Urban,Bengaluru,299939,24-Aug-21,hub,shared,
+CORSTR00345,Namma Gromor Kalaburagi 1,Namma Gromor,KARNATAKA,Karnataka,Kalaburagi,Kalaburagi,292903,2022-07-27,company owned,N,brand spelling varies
+CORSTR00346,Mana Gromor Rajahmundry 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,372602,2022-08-15,satellite,N,new store from FY26
+CORSTR00347,Mana Gromor Tirupati 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,373749,2022-07-28,seasonal extension,Y,new store from FY26
+CORSTR00348,Mana Gromor Mahbubnagar 2,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,363887,2011-04-08,satellite,shared,new store from FY26
+CORSTR00349,Mana Gromor Visakhapatnam 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,376300,2009-02-10,hub,N,new store from FY26
+CORSTR00350,Mana Gromor Kurnool 3,Mana Gromor,ANDHRA,Andhra Pradesh,Kurnool,Kurnool,378090,09/02/2014,seasonal extension,Y,brand spelling varies
+CORSTR00351,Mana Gromor Karimnagar 7,Mana Gromor,TELANGANA,Telangana,Karimnagar,Karimnagar,369053,2009-06-16,hub,shared,brand spelling varies
+CORSTR00352,Namma Gromor Belagavi 2,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,296203,2011-10-08,seasonal extension,N,brand spelling varies
+CORSTR00353,Mana Gromor Ongole 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,377744,10-Jan-12,seasonal extension,Y,new store from FY26
+CORSTR00354,Mana Gromor Nizamabad 1,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,363124,2007-09-21,hub,N,new store from FY26
+CORSTR00355,Mana Gromor Guntur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,375641,2017-06-02,company owned,shared,brand spelling varies
+CORSTR00356,Mana Gromor Guntur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,374545,2026-04-21,company owned,N,brand spelling varies
+CORSTR00357,Mana Gromor Hyderabad 1,Mana Gromor,TELANGANA,Telangana,Hyderabad,Hyderabad,361018,2024-01-29,seasonal extension,Y,district split
+CORSTR00358,Mana Gromor Visakhapatnam 5,Mana Gromor,ANDHRA,Andhra Pradesh,Visakhapatnam,Visakhapatnam,379659,2010-03-29,seasonal extension,Y,
+CORSTR00359,Nammadu Gromor Tirunelveli 9,Nammadu Gromor,TN,Tamil Nadu,Tirunelveli,Tirunelveli,334757,2015-07-13,company owned,Y,old store code
+CORSTR00360,Mana Gromor Nellore 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,373439,2018-07-03,satellite,shared,
+CORSTR00361,Mana Gromor Kurnool 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,379183,2017-03-19,company owned,N,old store code
+CORSTR00362,Mana Gromor Tirupati 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,376765,2019-08-10,satellite,Y,old store code
+CORSTR00363,Namma Gromor Kalaburagi 4,Namma Gromor,KA,Karnataka,Kalaburagi,Kalaburagi,293470,2011-11-03,seasonal extension,shared,district split
+CORSTR00364,Mana Gromor Suryapet 2,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,367886,2015-08-22,seasonal extension,shared,old store code
+CORSTR00365,Mana Gromor Nizamabad 2,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,368676,2016-05-18,satellite,shared,new store from FY26
+CORSTR00366,Mana Gromor Visakhapatnam 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,375677,2013-09-01,hub,Y,old store code
+CORSTR00367,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,374096,2022-07-01,satellite,N,new store from FY26
+CORSTR00368,Nammadu Gromor Madurai 1,Nammadu Gromor,TN,Tamil Nadu,Madurai,Madurai,335547,10/07/2025,seasonal extension,Y,district split
+CORSTR00369,Namma Gromor Davanagere 1,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,298950,2008-03-27,hub,shared,new store from FY26
+CORSTR00370,Namma Gromor Hubballi 5,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,296905,2020-01-16,company owned,Y,new store from FY26
+CORSTR00371,Mana Gromor Vijayawada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,376536,2016-05-09,satellite,N,brand spelling varies
+CORSTR00372,Mana Gromor Kakinada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,376491,2020-01-26,seasonal extension,Y,brand spelling varies
+CORSTR00373,Namma Gromor Mysuru 7,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,292301,2007-10-10,satellite,N,
+CORSTR00374,Mana Gromor Rajahmundry 1,Mana Gromor,AP,Andhra Pradesh,East Godavari,Rajahmundry,371163,2007-01-02,company owned,shared,old store code
+CORSTR00375,Namma Gromor Belagavi 4,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,293776,29/07/2014,hub,N,district split
+CORSTR00376,Mana Gromor Kurnool 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,378910,2017-03-27,company owned,Y,new store from FY26
+CORSTR00377,Mana Gromor Suryapet 1,Mana Gromor,TS,Telangana,Suryapet,Suryapet,363749,2015-01-24,hub,shared,old store code
+CORSTR00378,Mana Gromor Anantapur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,373023,2009-02-01,company owned,shared,district split
+CORSTR00379,Mana Gromor Nizamabad 7,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,361701,2016-06-12,satellite,shared,new store from FY26
+CORSTR00380,Nammadu Gromor Trichy 4,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tiruchirappalli,Trichy,339096,2021-09-21,seasonal extension,shared,
+CORSTR00381,Mana Gromor Anantapur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371503,2016-12-23,hub,Y,old store code
+CORSTR00382,Mana Gromor Visakhapatnam 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,373195,2009-09-30,hub,shared,new store from FY26
+CORSTR00383,Mana Gromor Kadapa 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,371999,10/13/2015,hub,shared,brand spelling varies
+CORSTR00384,Mana Gromor Suryapet 4,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,369011,2025-09-17,hub,Y,district split
+CORSTR00385,Mana Gromor Mahbubnagar 1,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,361378,2007-02-04,company owned,N,new store from FY26
+CORSTR00386,Namma Gromor Bengaluru 8,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,294937,2016-04-11,seasonal extension,shared,
+CORSTR00387,Mana Gromor Suryapet 1,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,368097,2008-08-07,seasonal extension,Y,district split
+CORSTR00388,Mana Gromor Warangal 4,Mana Gromor,Telangana,Telangana,Warangal,Warangal,365799,2011-09-26,hub,N,brand spelling varies
+CORSTR00389,Mana Gromor Hyderabad 3,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,366744,11/07/2012,satellite,N,new store from FY26
+CORSTR00390,Mana Gromor Nizamabad 8,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,363831,2010-03-25,satellite,shared,old store code
+CORSTR00391,Mana Gromor Warangal 1,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363786,01/30/2025,seasonal extension,Y,new store from FY26
+CORSTR00392,Namma Gromor Mysuru 2,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,291881,2018-01-16,company owned,N,new store from FY26
+CORSTR00393,Mana Gromor Guntur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,372213,30-Sep-11,satellite,shared,
+CORSTR00394,Mana Gromor Karimnagar 7,Mana Gromor,TELANGANA,Telangana,Karimnagar,Karimnagar,364531,2021-01-08,hub,Y,district split
+CORSTR00395,Mana Gromor Hyderabad 2,Mana Gromor,TS,Telangana,Hyderabad,Hyderabad,369739,17-Jun-14,satellite,Y,new store from FY26
+CORSTR00396,Mana Gromor Suryapet 7,Mana Gromor,TG,Telangana,Suryapet,Suryapet,363872,2021-07-02,company owned,Y,brand spelling varies
+CORSTR00397,Nammadu Gromor Tirunelveli 7,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tirunelveli,Tirunelveli,332104,2024-07-29,company owned,shared,brand spelling varies
+CORSTR00398,Mana Gromor Ongole 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,373221,2013-03-21,satellite,shared,
+CORSTR00399,Mana Gromor Rajahmundry 9,Mana Gromor,A.P.,Andhra Pradesh,East Godavari,Rajahmundry,375788,2012-05-17,hub,N,new store from FY26
+CORSTR00400,Mana Gromor Rajahmundry 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,374749,2021-03-23,seasonal extension,Y,old store code
+CORSTR00401,Namma Gromor Shivamogga 7,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,298353,2012-02-10,satellite,shared,new store from FY26
+CORSTR00402,Mana Gromor Mahbubnagar 6,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,369375,2008-11-09,hub,shared,district split
+CORSTR00403,Nammadu Gromor Salem 9,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Salem,Salem,332178,2019-03-30,satellite,shared,
+CORSTR00404,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,377938,12/04/2021,hub,shared,new store from FY26
+CORSTR00405,Namma Gromor Hubballi 2,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,295223,2010-06-30,hub,N,old store code
+CORSTR00406,Mana Gromor Suryapet 4,Mana Gromor,TELANGANA,Telangana,Suryapet,Suryapet,368280,03/30/2019,seasonal extension,shared,old store code
+CORSTR00407,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,378766,2026-04-11,hub,Y,district split
+CORSTR00408,Mana Gromor Kurnool 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,373975,10/25/2010,hub,shared,district split
+CORSTR00409,Mana Gromor Guntur 5,Mana Gromor,AP,Andhra Pradesh,Guntur,Guntur,372202,2025-04-15,company owned,shared,old store code
+CORSTR00410,Mana Gromor Visakhapatnam 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,378338,03/03/2008,satellite,shared,
+CORSTR00411,Namma Gromor Shivamogga 8,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,293815,2026-04-03,hub,Y,
+CORSTR00412,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,374573,2023-12-31,hub,N,district split
+CORSTR00413,Mana Gromor Khammam 5,Mana Gromor,TS,Telangana,Khammam,Khammam,368718,02/28/2020,satellite,shared,old store code
+CORSTR00414,Mana Gromor Vijayawada 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,377069,2021-10-01,company owned,Y,new store from FY26
+CORSTR00415,Mana Gromor Karimnagar 9,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,367102,2024-04-17,company owned,shared,
+CORSTR00416,Mana Gromor Adilabad 5,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,362202,2019-04-16,hub,shared,brand spelling varies
+CORSTR00417,Mana Gromor Nalgonda 7,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,365477,2023-11-24,satellite,shared,new store from FY26
+CORSTR00418,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,378021,2019-04-29,hub,Y,brand spelling varies
+CORSTR00419,Namma Gromor Raichur 6,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,297803,08/02/2018,seasonal extension,Y,district split
+CORSTR00420,Mana Gromor Kurnool 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,379105,2021-04-08,satellite,shared,old store code
+CORSTR00421,Mana Gromor Karimnagar 4,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,369630,10/15/2009,satellite,N,old store code
+CORSTR00422,Mana Gromor Nalgonda 5,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,364729,2009-11-20,company owned,N,brand spelling varies
+CORSTR00423,Mana Gromor Suryapet 6,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,364186,13/11/2022,hub,Y,new store from FY26
+CORSTR00424,Mana Gromor Vijayawada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,377251,2025-11-26,company owned,N,district split
+CORSTR00425,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,372208,09/23/2024,satellite,N,district split
+CORSTR00426,Mana Gromor Anantapur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371234,2008-10-29,hub,N,old store code
+CORSTR00427,Mana Gromor Vijayawada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,371020,2023-09-25,satellite,shared,
+CORSTR00428,Mana Gromor Visakhapatnam 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,376424,12/27/2015,seasonal extension,Y,brand spelling varies
+CORSTR00429,Mana Gromor Adilabad 5,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,366462,11/07/2020,satellite,shared,district split
+CORSTR00430,Mana Gromor Kadapa 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,373729,29-Aug-22,seasonal extension,shared,
+CORSTR00431,Mana Gromor Siddipet 5,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,362718,18/09/2025,satellite,shared,new store from FY26
+CORSTR00432,Mana Gromor Adilabad 3,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,365305,2017-12-17,hub,shared,old store code
+CORSTR00433,Namma Gromor Mangaluru 7,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,291054,2010-06-07,seasonal extension,N,old store code
+CORSTR00434,Mana Gromor Kurnool 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,377674,2014-09-25,seasonal extension,Y,
+CORSTR00435,Mana Gromor Suryapet 3,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,361224,2019-11-10,hub,N,district split
+CORSTR00436,Mana Gromor Kakinada 2,Mana Gromor,ANDHRA,Andhra Pradesh,Kakinada,Kakinada,376314,27/06/2015,company owned,N,district split
+CORSTR00437,Namma Gromor Davanagere 5,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,293872,2010-06-02,company owned,Y,brand spelling varies
+CORSTR00438,Mana Gromor Khammam 6,Mana Gromor,Telangana,Telangana,Khammam,Khammam,364803,2023-03-22,satellite,N,
+CORSTR00439,Nammadu Gromor Madurai 6,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Madurai,Madurai,332543,2024-06-24,satellite,Y,new store from FY26
+CORSTR00440,Namma Gromor Tumakuru 1,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,295956,2018-09-23,satellite,Y,
+CORSTR00441,Mana Gromor Adilabad 9,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,364849,2021-12-06,company owned,Y,new store from FY26
+CORSTR00442,Mana Gromor Anantapur 8,Mana Gromor,ANDHRA,Andhra Pradesh,Anantapur,Anantapur,376874,2010-02-18,seasonal extension,N,brand spelling varies
+CORSTR00443,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,375224,2019-02-10,company owned,shared,district split
+CORSTR00444,Mana Gromor Kadapa 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,375041,2009-01-29,company owned,N,new store from FY26
+CORSTR00445,Mana Gromor Guntur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,374201,2013-04-24,satellite,shared,
+CORSTR00446,Mana Gromor Siddipet 7,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,361982,2024-06-22,satellite,Y,old store code
+CORSTR00447,Mana Gromor Ongole 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,375186,07/04/2020,hub,N,old store code
+CORSTR00448,Namma Gromor Raichur 6,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,293928,2018-10-27,company owned,N,new store from FY26
+CORSTR00449,Namma Gromor Bengaluru 1,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,291934,2010-09-17,company owned,shared,
+CORSTR00450,Namma Gromor Bengaluru 4,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,293396,2013-05-09,hub,Y,new store from FY26
+CORSTR00451,Mana Gromor Suryapet 6,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,361523,2025-09-25,satellite,Y,old store code
+CORSTR00452,Mana Gromor Vijayawada 7,Mana Gromor,AP,Andhra Pradesh,Krishna,Vijayawada,373868,2015-12-05,hub,shared,new store from FY26
+CORSTR00453,Namma Gromor Hubballi 7,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,298265,2018-06-13,hub,Y,district split
+CORSTR00454,Mana Gromor Kakinada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,373743,06/08/2011,hub,N,district split
+CORSTR00455,Mana Gromor Siddipet 1,Mana Gromor,TG,Telangana,Siddipet,Siddipet,361140,2012-09-04,company owned,Y,brand spelling varies
+CORSTR00456,Namma Gromor Hubballi 5,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,299938,2020-07-27,satellite,N,
+CORSTR00457,Mana Gromor Warangal 9,Mana Gromor,Telangana,Telangana,Warangal,Warangal,368978,12/05/2009,company owned,shared,brand spelling varies
+CORSTR00458,Mana Gromor Guntur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,376935,2016-07-01,seasonal extension,shared,old store code
+CORSTR00459,Mana Gromor Khammam 7,Mana Gromor,Telangana,Telangana,Khammam,Khammam,369235,30-Jul-14,seasonal extension,Y,new store from FY26
+CORSTR00460,Namma Gromor Bengaluru 2,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,293319,2023-05-08,satellite,shared,new store from FY26
+CORSTR00461,Mana Gromor Karimnagar 6,Mana Gromor,TS,Telangana,Karimnagar,Karimnagar,364914,03/27/2007,seasonal extension,shared,old store code
+CORSTR00462,Mana Gromor Ongole 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,374315,2024-04-05,company owned,shared,district split
+CORSTR00463,Mana Gromor Anantapur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371578,2007-02-15,satellite,shared,district split
+CORSTR00464,Mana Gromor Anantapur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,372723,2011-02-18,company owned,Y,old store code
+CORSTR00465,Mana Gromor Mahbubnagar 9,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,364767,2016-07-31,satellite,Y,brand spelling varies
+CORSTR00466,Namma Gromor Tumakuru 1,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,299182,2014-09-18,satellite,shared,new store from FY26
+CORSTR00467,Mana Gromor Anantapur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371226,2025-09-08,satellite,shared,district split
+CORSTR00468,Mana Gromor Kurnool 8,Mana Gromor,ANDHRA,Andhra Pradesh,Kurnool,Kurnool,379928,2008-06-25,satellite,N,brand spelling varies
+CORSTR00469,Mana Gromor Kurnool 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,376259,09-May-07,hub,Y,
+CORSTR00470,Mana Gromor Anantapur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,379566,2019-08-01,satellite,N,
+CORSTR00471,Namma Gromor Mysuru 6,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,297591,2023-08-20,company owned,shared,
+CORSTR00472,Mana Gromor Kurnool 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,371310,2011-07-09,satellite,N,district split
+CORSTR00473,Mana Gromor Visakhapatnam 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,377556,01/06/2024,hub,Y,new store from FY26
+CORSTR00474,Mana Gromor Kadapa 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,374079,28/12/2009,company owned,shared,new store from FY26
+CORSTR00475,Mana Gromor Warangal 8,Mana Gromor,Telangana,Telangana,Warangal,Warangal,361814,2009-10-02,seasonal extension,N,new store from FY26
+CORSTR00476,Namma Gromor Hubballi 4,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,296322,21-Apr-25,company owned,Y,old store code
+CORSTR00477,Mana Gromor Kakinada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,372676,2025-06-21,seasonal extension,Y,new store from FY26
+CORSTR00478,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,373951,2024-03-27,satellite,shared,district split
+CORSTR00479,Mana Gromor Kadapa 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,378570,2025-08-12,hub,shared,district split
+CORSTR00480,Mana Gromor Vijayawada 8,Mana Gromor,AP,Andhra Pradesh,Krishna,Vijayawada,371889,2016-12-01,company owned,Y,district split
+CORSTR00481,Mana Gromor Tirupati 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,374681,2014-10-02,satellite,Y,
+CORSTR00482,Mana Gromor Hyderabad 2,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,361093,2023-09-17,satellite,shared,old store code
+CORSTR00483,Mana Gromor Visakhapatnam 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,373667,2019-01-26,seasonal extension,N,
+CORSTR00484,Mana Gromor Anantapur 2,Mana Gromor,ANDHRA,Andhra Pradesh,Anantapur,Anantapur,377896,2007-04-18,seasonal extension,Y,new store from FY26
+CORSTR00485,Mana Gromor Suryapet 3,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,365960,11/01/2021,hub,Y,district split
+CORSTR00486,Nammadu Gromor Thanjavur 6,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Thanjavur,Thanjavur,335796,2010-06-02,seasonal extension,Y,new store from FY26
+CORSTR00487,Mana Gromor Nizamabad 3,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,363875,2024-01-17,seasonal extension,shared,new store from FY26
+CORSTR00488,Mana Gromor Nalgonda 8,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,362118,2022-07-20,seasonal extension,N,old store code
+CORSTR00489,Namma Gromor Mysuru 2,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,296929,08-Apr-21,hub,Y,district split
+CORSTR00490,Namma Gromor Tumakuru 7,Namma Gromor,KARNATAKA,Karnataka,Tumakuru,Tumakuru,291737,2025-03-25,company owned,Y,brand spelling varies
+CORSTR00491,Mana Gromor Suryapet 3,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,361148,2013-08-29,satellite,N,new store from FY26
+CORSTR00492,Mana Gromor Anantapur 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371758,2026-04-05,seasonal extension,Y,district split
+CORSTR00493,Mana Gromor Rajahmundry 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,373733,08/28/2025,hub,Y,
+CORSTR00494,Mana Gromor Kadapa 3,Mana Gromor,AP,Andhra Pradesh,Kadapa,Kadapa,371659,2018-12-01,hub,N,new store from FY26
+CORSTR00495,Namma Gromor Kalaburagi 9,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,296400,2022-10-08,seasonal extension,shared,district split
+CORSTR00496,Namma Gromor Hubballi 2,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,294484,2013-01-15,satellite,Y,new store from FY26
+CORSTR00497,Mana Gromor Tirupati 2,Mana Gromor,ANDHRA,Andhra Pradesh,Tirupati,Tirupati,378025,2009-10-13,seasonal extension,shared,old store code
+CORSTR00498,Mana Gromor Nellore 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,376745,2010-03-03,satellite,Y,
+CORSTR00499,Mana Gromor Guntur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,372339,2014-05-21,company owned,shared,district split
+CORSTR00500,Mana Gromor Nalgonda 8,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,364170,2008-06-08,seasonal extension,shared,district split
+CORSTR00501,Mana Gromor Ongole 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,376267,01-Apr-12,company owned,shared,brand spelling varies
+CORSTR00502,Namma Gromor Hubballi 2,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,294980,2021-03-17,satellite,shared,brand spelling varies
+CORSTR00503,Nammadu Gromor Cuddalore 5,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Cuddalore,Cuddalore,336271,2010-07-15,seasonal extension,Y,district split
+CORSTR00504,Nammadu Gromor Tirunelveli 4,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tirunelveli,Tirunelveli,331256,2010-11-21,hub,shared,new store from FY26
+CORSTR00505,Mana Gromor Nizamabad 8,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,368338,2015-08-26,seasonal extension,Y,new store from FY26
+CORSTR00506,Mana Gromor Visakhapatnam 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,377337,08/07/2015,company owned,N,brand spelling varies
+CORSTR00507,Mana Gromor Khammam 5,Mana Gromor,Telangana,Telangana,Khammam,Khammam,365024,2009-09-01,hub,N,new store from FY26
+CORSTR00508,Mana Gromor Mahbubnagar 8,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,364583,2023-12-26,company owned,Y,old store code
+CORSTR00509,Mana Gromor Kadapa 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,378522,2007-12-18,company owned,N,district split
+CORSTR00510,Nammadu Gromor Tirunelveli 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tirunelveli,Tirunelveli,332467,14-May-24,hub,N,
+CORSTR00511,Mana Gromor Nizamabad 6,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,366958,2019-05-06,hub,N,brand spelling varies
+CORSTR00512,Mana Gromor Kakinada 6,Mana Gromor,A.P.,Andhra Pradesh,Kakinada,Kakinada,378974,21-Jul-16,hub,Y,brand spelling varies
+CORSTR00513,Mana Gromor Visakhapatnam 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,371457,2012-02-08,seasonal extension,shared,old store code
+CORSTR00514,Mana Gromor Anantapur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,375250,11/13/2010,satellite,N,district split
+CORSTR00515,Mana Gromor Visakhapatnam 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,374503,2019-05-06,company owned,shared,brand spelling varies
+CORSTR00516,Mana Gromor Tirupati 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,371501,2009-06-25,company owned,N,
+CORSTR00517,Nammadu Gromor Tirunelveli 3,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tirunelveli,Tirunelveli,331056,02/12/2022,satellite,shared,old store code
+CORSTR00518,Mana Gromor Vijayawada 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,371055,2016-05-06,company owned,N,old store code
+CORSTR00519,Namma Gromor Udupi 5,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,293256,2017-08-26,hub,shared,brand spelling varies
+CORSTR00520,Mana Gromor Kadapa 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,379426,2010-04-20,seasonal extension,shared,district split
+CORSTR00521,Mana Gromor Nizamabad 9,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,369569,2025-12-05,company owned,shared,
+CORSTR00522,Mana Gromor Rajahmundry 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,375209,2020-12-27,seasonal extension,Y,brand spelling varies
+CORSTR00523,Mana Gromor Suryapet 1,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,366057,2009-02-20,hub,shared,new store from FY26
+CORSTR00524,Mana Gromor Suryapet 1,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,361368,2011-11-30,hub,N,
+CORSTR00525,Mana Gromor Warangal 9,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363166,2024-06-22,satellite,N,
+CORSTR00526,Namma Gromor Belagavi 9,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,293370,07/28/2016,company owned,N,old store code
+CORSTR00527,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,376881,2007-10-03,hub,Y,brand spelling varies
+CORSTR00528,Mana Gromor Vijayawada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,377431,2025-10-11,company owned,N,brand spelling varies
+CORSTR00529,Mana Gromor Visakhapatnam 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,374446,2013-11-01,hub,N,district split
+CORSTR00530,Namma Gromor Belagavi 5,Namma Gromor,KARNATAKA,Karnataka,Belagavi,Belagavi,298801,10/04/2022,hub,shared,
+CORSTR00531,Mana Gromor Khammam 9,Mana Gromor,Telangana,Telangana,Khammam,Khammam,363520,2023-01-18,company owned,shared,new store from FY26
+CORSTR00532,Mana Gromor Vijayawada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,377048,03/03/2010,satellite,shared,new store from FY26
+CORSTR00533,Namma Gromor Belagavi 2,Namma Gromor,KA,Karnataka,Belagavi,Belagavi,295073,27/09/2024,hub,Y,district split
+CORSTR00534,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,379193,09/04/2016,seasonal extension,Y,brand spelling varies
+CORSTR00535,Namma Gromor Raichur 6,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,297180,2010-02-06,company owned,N,
+CORSTR00536,Mana Gromor Khammam 7,Mana Gromor,Telangana,Telangana,Khammam,Khammam,364021,29/01/2019,seasonal extension,Y,old store code
+CORSTR00537,Namma Gromor Kalaburagi 5,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,293445,2010-10-31,seasonal extension,Y,district split
+CORSTR00538,Mana Gromor Visakhapatnam 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,379484,2019-01-16,seasonal extension,Y,old store code
+CORSTR00539,Mana Gromor Kurnool 7,Mana Gromor,AP,Andhra Pradesh,Kurnool,Kurnool,373014,2012-10-15,seasonal extension,shared,old store code
+CORSTR00540,Namma Gromor Raichur 6,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,298428,2023-04-15,company owned,Y,new store from FY26
+CORSTR00541,Mana Gromor Mahbubnagar 8,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,367619,2013-12-07,seasonal extension,N,district split
+CORSTR00542,Mana Gromor Kakinada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,372794,2009-03-28,company owned,Y,new store from FY26
+CORSTR00543,Mana Gromor Nizamabad 5,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,368025,2009-07-06,satellite,Y,
+CORSTR00544,Namma Gromor Hubballi 2,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,298305,2009-01-28,seasonal extension,Y,district split
+CORSTR00545,Mana Gromor Guntur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,379810,2022-03-20,seasonal extension,shared,old store code
+CORSTR00546,Mana Gromor Nizamabad 8,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,361547,2012-03-12,seasonal extension,N,
+CORSTR00547,Namma Gromor Bengaluru 9,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,294168,2026-03-23,company owned,shared,old store code
+CORSTR00548,Mana Gromor Anantapur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,372079,2018-04-16,satellite,shared,new store from FY26
+CORSTR00549,Namma Gromor Ballari 9,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,293268,2017-08-29,company owned,Y,old store code
+CORSTR00550,Mana Gromor Tirupati 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,377976,2010-10-10,company owned,Y,district split
+CORSTR00551,Mana Gromor Nizamabad 4,Mana Gromor,TS,Telangana,Nizamabad,Nizamabad,363103,2010-02-13,hub,shared,district split
+CORSTR00552,Namma Gromor Mysuru 8,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,291791,2018-03-27,company owned,Y,
+CORSTR00553,Mana Gromor Guntur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,376936,2025-09-02,satellite,shared,brand spelling varies
+CORSTR00554,Mana Gromor Nalgonda 9,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,369397,04/25/2021,seasonal extension,Y,district split
+CORSTR00555,Mana Gromor Guntur 3,Mana Gromor,ANDHRA,Andhra Pradesh,Guntur,Guntur,377213,2023-12-24,satellite,shared,
+CORSTR00556,Mana Gromor Kakinada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,376921,03/03/2009,satellite,Y,new store from FY26
+CORSTR00557,Mana Gromor Guntur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,375857,2013-03-28,hub,shared,
+CORSTR00558,Namma Gromor Davanagere 6,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,296446,10/23/2007,hub,Y,brand spelling varies
+CORSTR00559,Mana Gromor Kakinada 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,375077,2018-09-01,satellite,shared,brand spelling varies
+CORSTR00560,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,379055,2017-09-23,hub,shared,brand spelling varies
+CORSTR00561,Mana Gromor Guntur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,371446,2010-08-02,satellite,N,
+CORSTR00562,Mana Gromor Ongole 8,Mana Gromor,A.P.,Andhra Pradesh,Prakasam,Ongole,374316,2017-02-17,seasonal extension,Y,brand spelling varies
+CORSTR00563,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,373950,09-Nov-22,satellite,shared,
+CORSTR00564,Mana Gromor Hyderabad 6,Mana Gromor,TELANGANA,Telangana,Hyderabad,Hyderabad,363747,2019-09-07,company owned,Y,new store from FY26
+CORSTR00565,Mana Gromor Suryapet 4,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,362559,2019-10-31,satellite,shared,new store from FY26
+CORSTR00566,Mana Gromor Suryapet 8,Mana Gromor,TS,Telangana,Suryapet,Suryapet,369189,04/23/2017,company owned,shared,new store from FY26
+CORSTR00567,Namma Gromor Shivamogga 8,Namma Gromor,KA,Karnataka,Shivamogga,Shivamogga,299913,01/16/2008,seasonal extension,Y,brand spelling varies
+CORSTR00568,Nammadu Gromor Coimbatore 1,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Coimbatore,Coimbatore,333861,2010-11-15,hub,N,
+CORSTR00569,Mana Gromor Guntur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,374558,2011-04-01,satellite,Y,new store from FY26
+CORSTR00570,Mana Gromor Kurnool 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,376282,25/12/2024,hub,shared,old store code
+CORSTR00571,Mana Gromor Kurnool 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,373896,2015-12-02,seasonal extension,Y,
+CORSTR00572,Namma Gromor Kalaburagi 8,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,298193,2025-07-26,satellite,N,
+CORSTR00573,Mana Gromor Nalgonda 4,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,369706,2009-11-30,seasonal extension,N,old store code
+CORSTR00574,Mana Gromor Anantapur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,374476,2008-03-26,hub,Y,brand spelling varies
+CORSTR00575,Mana Gromor Ongole 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,379382,2013-12-11,satellite,shared,district split
+CORSTR00576,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,373667,2011-08-14,seasonal extension,N,
+CORSTR00577,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,378959,2013-08-11,satellite,Y,old store code
+CORSTR00578,Mana Gromor Adilabad 1,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,365430,2013-02-15,seasonal extension,Y,
+CORSTR00579,Mana Gromor Khammam 8,Mana Gromor,Telangana,Telangana,Khammam,Khammam,369270,2019-06-03,seasonal extension,shared,district split
+CORSTR00580,Mana Gromor Anantapur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,373577,2016-12-12,satellite,shared,new store from FY26
+CORSTR00581,Mana Gromor Kurnool 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,374011,2024-08-27,satellite,shared,old store code
+CORSTR00582,Mana Gromor Kurnool 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,375724,2013-07-30,satellite,N,district split
+CORSTR00583,Mana Gromor Tirupati 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,373644,2009-05-04,seasonal extension,shared,
+CORSTR00584,Mana Gromor Vijayawada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,379053,2021-01-07,company owned,shared,
+CORSTR00585,Mana Gromor Anantapur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,372013,2012-01-24,satellite,N,brand spelling varies
+CORSTR00586,Namma Gromor Belagavi 2,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,298299,2014-04-26,seasonal extension,Y,brand spelling varies
+CORSTR00587,Namma Gromor Raichur 7,Namma Gromor,KA,Karnataka,Raichur,Raichur,293695,2012-02-07,seasonal extension,shared,new store from FY26
+CORSTR00588,Mana Gromor Nellore 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,377077,2018-06-27,satellite,shared,new store from FY26
+CORSTR00589,Mana Gromor Guntur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,372108,2021-01-10,hub,Y,
+CORSTR00590,Namma Gromor Belagavi 4,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,298205,2025-07-07,satellite,N,new store from FY26
+CORSTR00591,Mana Gromor Anantapur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,374953,2007-12-15,seasonal extension,shared,district split
+CORSTR00592,Mana Gromor Kadapa 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,371374,2018-05-29,hub,shared,district split
+CORSTR00593,Mana Gromor Kadapa 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,376840,12/03/2023,seasonal extension,shared,brand spelling varies
+CORSTR00594,Mana Gromor Adilabad 7,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,361251,2015-01-18,satellite,shared,
+CORSTR00595,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,376398,2018-03-14,hub,N,old store code
+CORSTR00596,Mana Gromor Vijayawada 1,Mana Gromor,A.P.,Andhra Pradesh,Krishna,Vijayawada,371196,2007-02-01,hub,shared,old store code
+CORSTR00597,Mana Gromor Anantapur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,375792,13/08/2012,seasonal extension,shared,brand spelling varies
+CORSTR00598,Mana Gromor Hyderabad 2,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,365604,2012-12-05,satellite,shared,old store code
+CORSTR00599,Mana Gromor Guntur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,377056,2009-04-18,company owned,N,district split
+CORSTR00600,Namma Gromor Ballari 3,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,293236,05/05/2019,company owned,Y,
+CORSTR00601,Namma Gromor Belagavi 3,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,297756,2010-11-29,seasonal extension,shared,district split
+CORSTR00602,Mana Gromor Warangal 2,Mana Gromor,Telangana,Telangana,Warangal,Warangal,368765,2014-02-02,satellite,shared,new store from FY26
+CORSTR00603,Namma Gromor Mangaluru 4,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,292346,14/12/2016,hub,N,brand spelling varies
+CORSTR00604,Namma Gromor Bengaluru 1,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,299830,2023-04-08,hub,shared,new store from FY26
+CORSTR00605,Mana Gromor Nellore 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,379916,2014-04-12,seasonal extension,Y,brand spelling varies
+CORSTR00606,Mana Gromor Nellore 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,374971,2012-03-28,satellite,shared,district split
+CORSTR00607,Mana Gromor Nizamabad 2,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,361929,2009-10-06,hub,shared,old store code
+CORSTR00608,Mana Gromor Karimnagar 2,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,365039,19/10/2007,company owned,N,new store from FY26
+CORSTR00609,Namma Gromor Shivamogga 2,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,296127,2010-12-19,hub,shared,brand spelling varies
+CORSTR00610,Mana Gromor Hyderabad 3,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,364522,2015-10-19,hub,N,
+CORSTR00611,Mana Gromor Siddipet 9,Mana Gromor,TELANGANA,Telangana,Siddipet,Siddipet,365005,2012-10-16,hub,N,district split
+CORSTR00612,Mana Gromor Tirupati 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,373707,2024-11-12,seasonal extension,shared,district split
+CORSTR00613,Mana Gromor Karimnagar 7,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,365998,2021-10-21,hub,Y,
+CORSTR00614,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,378866,2012-10-14,seasonal extension,N,brand spelling varies
+CORSTR00615,Mana Gromor Ongole 4,Mana Gromor,ANDHRA,Andhra Pradesh,Prakasam,Ongole,379895,2010-02-28,satellite,shared,old store code
+CORSTR00616,Namma Gromor Bengaluru 1,Namma Gromor,KARNATAKA,Karnataka,Bengaluru Urban,Bengaluru,291539,2022-02-19,satellite,shared,old store code
+CORSTR00617,Mana Gromor Mahbubnagar 2,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,364537,2008-05-10,hub,N,new store from FY26
+CORSTR00618,Mana Gromor Anantapur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,372712,2014-04-13,hub,N,old store code
+CORSTR00619,Namma Gromor Kalaburagi 5,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,293449,2013-11-30,seasonal extension,Y,district split
+CORSTR00620,Mana Gromor Guntur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,377478,19/07/2013,seasonal extension,N,old store code
+CORSTR00621,Mana Gromor Karimnagar 5,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,366069,2018-06-16,company owned,shared,new store from FY26
+CORSTR00622,Mana Gromor Kakinada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,377932,2018-12-27,hub,Y,brand spelling varies
+CORSTR00623,Mana Gromor Karimnagar 3,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,365051,19/12/2008,satellite,shared,
+CORSTR00624,Nammadu Gromor Vellore 3,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Vellore,Vellore,332617,2008-02-26,satellite,N,brand spelling varies
+CORSTR00625,Mana Gromor Kadapa 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,374066,14/05/2016,satellite,shared,brand spelling varies
+CORSTR00626,Namma Gromor Shivamogga 8,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,296953,2015-12-08,satellite,Y,old store code
+CORSTR00627,Namma Gromor Ballari 4,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,299039,2023-05-16,satellite,Y,
+CORSTR00628,Namma Gromor Davanagere 8,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,294258,2025-04-17,seasonal extension,shared,new store from FY26
+CORSTR00629,Mana Gromor Kadapa 5,Mana Gromor,ANDHRA,Andhra Pradesh,Kadapa,Kadapa,377412,10/06/2017,hub,N,district split
+CORSTR00630,Mana Gromor Suryapet 3,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,362059,2008-08-25,seasonal extension,Y,old store code
+CORSTR00631,Mana Gromor Warangal 5,Mana Gromor,Telangana,Telangana,Warangal,Warangal,368212,2008-10-20,seasonal extension,Y,old store code
+CORSTR00632,Mana Gromor Khammam 5,Mana Gromor,Telangana,Telangana,Khammam,Khammam,365659,2018-04-16,hub,Y,
+CORSTR00633,Mana Gromor Warangal 8,Mana Gromor,Telangana,Telangana,Warangal,Warangal,361038,12-Mar-14,satellite,Y,
+CORSTR00634,Mana Gromor Nizamabad 7,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,361102,2017-05-16,hub,Y,new store from FY26
+CORSTR00635,Namma Gromor Belagavi 1,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,297574,2020-11-29,company owned,N,brand spelling varies
+CORSTR00636,Mana Gromor Tirupati 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,376994,2019-10-21,seasonal extension,shared,brand spelling varies
+CORSTR00637,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,378055,2025-01-31,company owned,N,brand spelling varies
+CORSTR00638,Namma Gromor Raichur 7,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,297487,2017-07-25,hub,N,district split
+CORSTR00639,Namma Gromor Bengaluru 8,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,291043,2014-12-10,seasonal extension,N,old store code
+CORSTR00640,Mana Gromor Anantapur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,372877,2024-07-23,hub,shared,
+CORSTR00641,Mana Gromor Kakinada 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,371604,09/03/2023,hub,shared,old store code
+CORSTR00642,Mana Gromor Tirupati 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,378674,2007-12-07,hub,shared,district split
+CORSTR00643,Mana Gromor Adilabad 7,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,366365,14/07/2011,seasonal extension,N,district split
+CORSTR00644,Mana Gromor Kurnool 3,Mana Gromor,A.P.,Andhra Pradesh,Kurnool,Kurnool,379634,2021-01-15,company owned,Y,
+CORSTR00645,Mana Gromor Hyderabad 3,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,364680,2022-09-05,hub,Y,old store code
+CORSTR00646,Nammadu Gromor Kanchipuram 1,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Kanchipuram,Kanchipuram,335131,2011-09-12,company owned,shared,old store code
+CORSTR00647,Mana Gromor Kakinada 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,371021,2021-03-11,hub,N,district split
+CORSTR00648,Mana Gromor Mahbubnagar 4,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,369006,2013-08-04,hub,shared,old store code
+CORSTR00649,Mana Gromor Tirupati 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,378136,2024-10-07,hub,Y,old store code
+CORSTR00650,Mana Gromor Kadapa 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,379362,2023-12-24,company owned,Y,
+CORSTR00651,Mana Gromor Adilabad 4,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,366507,2015-01-30,satellite,shared,brand spelling varies
+CORSTR00652,Namma Gromor Mysuru 8,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,295931,2010-07-20,satellite,Y,new store from FY26
+CORSTR00653,Namma Gromor Belagavi 8,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,292513,2017-07-29,seasonal extension,N,new store from FY26
+CORSTR00654,Mana Gromor Anantapur 5,Mana Gromor,A.P.,Andhra Pradesh,Anantapur,Anantapur,376507,2016-08-23,company owned,shared,old store code
+CORSTR00655,Nammadu Gromor Cuddalore 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Cuddalore,Cuddalore,331915,2016-05-29,seasonal extension,Y,
+CORSTR00656,Mana Gromor Ongole 3,Mana Gromor,AP,Andhra Pradesh,Prakasam,Ongole,373515,2021-01-21,seasonal extension,shared,new store from FY26
+CORSTR00657,Mana Gromor Kurnool 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,378158,18-Apr-26,satellite,N,old store code
+CORSTR00658,Mana Gromor Nizamabad 4,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,364030,2025-02-22,seasonal extension,shared,new store from FY26
+CORSTR00659,Mana Gromor Warangal 5,Mana Gromor,Telangana,Telangana,Warangal,Warangal,361570,2011-02-17,company owned,Y,
+CORSTR00660,Mana Gromor Khammam 6,Mana Gromor,Telangana,Telangana,Khammam,Khammam,368048,2020-04-03,satellite,N,old store code
+CORSTR00661,Mana Gromor Ongole 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,373726,2021-02-08,seasonal extension,Y,old store code
+CORSTR00662,Mana Gromor Ongole 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,376010,2018-02-05,seasonal extension,Y,
+CORSTR00663,Mana Gromor Adilabad 6,Mana Gromor,TS,Telangana,Adilabad,Adilabad,362120,2014-10-16,hub,N,old store code
+CORSTR00664,Mana Gromor Suryapet 8,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,362300,06-Sep-13,company owned,shared,
+CORSTR00665,Mana Gromor Nalgonda 5,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,368891,2025-08-06,seasonal extension,shared,district split
+CORSTR00666,Mana Gromor Tirupati 5,Mana Gromor,ANDHRA,Andhra Pradesh,Tirupati,Tirupati,379070,2023-02-26,seasonal extension,shared,brand spelling varies
+CORSTR00667,Mana Gromor Siddipet 8,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,364848,2015-02-22,seasonal extension,Y,new store from FY26
+CORSTR00668,Mana Gromor Ongole 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,371063,2008-05-28,company owned,N,new store from FY26
+CORSTR00669,Mana Gromor Kurnool 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,374957,2022-09-15,hub,Y,new store from FY26
+CORSTR00670,Mana Gromor Nizamabad 8,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,366242,11/07/2008,seasonal extension,N,old store code
+CORSTR00671,Mana Gromor Suryapet 8,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,366023,11/10/2019,company owned,Y,brand spelling varies
+CORSTR00672,Mana Gromor Tirupati 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,377503,2013-04-20,satellite,shared,new store from FY26
+CORSTR00673,Mana Gromor Kakinada 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,379535,2011-08-01,company owned,Y,
+CORSTR00674,Mana Gromor Visakhapatnam 5,Mana Gromor,ANDHRA,Andhra Pradesh,Visakhapatnam,Visakhapatnam,375921,15/03/2025,hub,Y,new store from FY26
+CORSTR00675,Mana Gromor Rajahmundry 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,377910,2024-02-16,seasonal extension,shared,brand spelling varies
+CORSTR00676,Mana Gromor Adilabad 9,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,367119,23/07/2017,seasonal extension,N,
+CORSTR00677,Mana Gromor Kurnool 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,371545,2018-02-02,company owned,shared,
+CORSTR00678,Mana Gromor Kakinada 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,372499,2011-09-05,hub,Y,district split
+CORSTR00679,Mana Gromor Siddipet 5,Mana Gromor,TS,Telangana,Siddipet,Siddipet,368565,2025-05-18,hub,Y,district split
+CORSTR00680,Namma Gromor Kalaburagi 3,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,298798,2013-04-08,company owned,Y,
+CORSTR00681,Mana Gromor Rajahmundry 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,376615,2019-02-03,company owned,Y,new store from FY26
+CORSTR00682,Namma Gromor Udupi 1,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,294967,2016-01-21,satellite,Y,district split
+CORSTR00683,Mana Gromor Karimnagar 3,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,365600,10/18/2012,seasonal extension,N,
+CORSTR00684,Mana Gromor Warangal 3,Mana Gromor,TS,Telangana,Warangal,Warangal,362756,2017-11-22,hub,N,
+CORSTR00685,Mana Gromor Nalgonda 6,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,368164,2017-06-14,seasonal extension,Y,old store code
+CORSTR00686,Mana Gromor Kurnool 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,373918,2007-10-08,seasonal extension,shared,brand spelling varies
+CORSTR00687,Mana Gromor Nellore 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,373275,25/10/2016,company owned,shared,new store from FY26
+CORSTR00688,Mana Gromor Tirupati 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,376035,01/16/2023,hub,N,district split
+CORSTR00689,Mana Gromor Warangal 1,Mana Gromor,Telangana,Telangana,Warangal,Warangal,362263,2024-11-29,satellite,N,district split
+CORSTR00690,Namma Gromor Tumakuru 8,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,298069,06/16/2010,seasonal extension,Y,
+CORSTR00691,Mana Gromor Vijayawada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,373126,2015-02-01,satellite,shared,district split
+CORSTR00692,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,372427,2015-01-13,company owned,N,old store code
+CORSTR00693,Mana Gromor Rajahmundry 7,Mana Gromor,AP,Andhra Pradesh,East Godavari,Rajahmundry,379025,16/05/2012,hub,N,district split
+CORSTR00694,Mana Gromor Ongole 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,373551,03/17/2013,hub,shared,district split
+CORSTR00695,Mana Gromor Vijayawada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,379965,2012-05-14,seasonal extension,Y,old store code
+CORSTR00696,Namma Gromor Belagavi 3,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,297297,2024-07-04,seasonal extension,N,district split
+CORSTR00697,Mana Gromor Anantapur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,376539,2011-02-25,hub,N,district split
+CORSTR00698,Mana Gromor Siddipet 1,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,368907,21-Jan-14,company owned,Y,
+CORSTR00699,Mana Gromor Khammam 9,Mana Gromor,TS,Telangana,Khammam,Khammam,367979,2022-04-25,company owned,shared,old store code
+CORSTR00700,Namma Gromor Mangaluru 9,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,297763,2007-02-28,seasonal extension,N,
+CORSTR00701,Namma Gromor Davanagere 7,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,291674,02/04/2016,satellite,shared,brand spelling varies
+CORSTR00702,Namma Gromor Mysuru 5,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,293162,2009-06-13,seasonal extension,N,
+CORSTR00703,Mana Gromor Hyderabad 8,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,364540,2018-05-15,seasonal extension,N,
+CORSTR00704,Mana Gromor Visakhapatnam 3,Mana Gromor,ANDHRA,Andhra Pradesh,Visakhapatnam,Visakhapatnam,373240,2021-09-13,satellite,shared,
+CORSTR00705,Mana Gromor Nalgonda 4,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,368093,2026-03-14,seasonal extension,N,district split
+CORSTR00706,Mana Gromor Guntur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,373026,21-Aug-25,company owned,N,old store code
+CORSTR00707,Mana Gromor Vijayawada 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,372643,2023-09-23,company owned,N,brand spelling varies
+CORSTR00708,Namma Gromor Bengaluru 1,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,295966,2013-09-11,company owned,Y,old store code
+CORSTR00709,Mana Gromor Khammam 9,Mana Gromor,Telangana,Telangana,Khammam,Khammam,361207,22-Jun-15,company owned,shared,district split
+CORSTR00710,Mana Gromor Vijayawada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,378307,08/06/2009,seasonal extension,N,old store code
+CORSTR00711,Mana Gromor Anantapur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,376093,2024-12-14,company owned,N,old store code
+CORSTR00712,Mana Gromor Visakhapatnam 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,376519,2009-12-03,hub,N,old store code
+CORSTR00713,Mana Gromor Visakhapatnam 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,376189,2019-02-09,hub,N,
+CORSTR00714,Mana Gromor Kadapa 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,379080,2018-03-29,company owned,Y,new store from FY26
+CORSTR00715,Mana Gromor Visakhapatnam 8,Mana Gromor,A.P.,Andhra Pradesh,Visakhapatnam,Visakhapatnam,373085,2007-04-06,company owned,Y,
+CORSTR00716,Namma Gromor Tumakuru 1,Namma Gromor,KA,Karnataka,Tumakuru,Tumakuru,297588,2014-03-24,satellite,shared,district split
+CORSTR00717,Namma Gromor Davanagere 5,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,299451,2010-03-31,company owned,shared,new store from FY26
+CORSTR00718,Namma Gromor Ballari 5,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,299828,2009-05-27,company owned,N,district split
+CORSTR00719,Namma Gromor Davanagere 9,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,299130,2014-01-16,satellite,N,old store code
+CORSTR00720,Mana Gromor Adilabad 8,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,363518,2016-12-17,hub,shared,brand spelling varies
+CORSTR00721,Mana Gromor Nellore 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,375408,05-Oct-22,satellite,Y,district split
+CORSTR00722,Mana Gromor Suryapet 7,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,365917,2013-10-11,satellite,shared,district split
+CORSTR00723,Mana Gromor Visakhapatnam 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,379811,17/06/2009,company owned,shared,old store code
+CORSTR00724,Mana Gromor Suryapet 8,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,362614,2007-08-27,company owned,N,brand spelling varies
+CORSTR00725,Mana Gromor Kurnool 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,377911,2012-12-16,satellite,shared,district split
+CORSTR00726,Mana Gromor Visakhapatnam 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,377772,2024-02-04,seasonal extension,shared,brand spelling varies
+CORSTR00727,Mana Gromor Mahbubnagar 6,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,367266,26/12/2010,company owned,Y,old store code
+CORSTR00728,Mana Gromor Warangal 7,Mana Gromor,Telangana,Telangana,Warangal,Warangal,366026,2010-04-25,seasonal extension,Y,district split
+CORSTR00729,Mana Gromor Suryapet 5,Mana Gromor,TG,Telangana,Suryapet,Suryapet,364255,2016-10-17,satellite,shared,old store code
+CORSTR00730,Mana Gromor Rajahmundry 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,372316,17/05/2011,hub,Y,
+CORSTR00731,Mana Gromor Tirupati 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,379009,2020-06-24,company owned,N,brand spelling varies
+CORSTR00732,Mana Gromor Rajahmundry 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,371252,2019-10-24,satellite,Y,brand spelling varies
+CORSTR00733,Mana Gromor Kurnool 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,374646,2009-11-21,company owned,N,brand spelling varies
+CORSTR00734,Mana Gromor Vijayawada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,378969,2017-05-13,company owned,N,
+CORSTR00735,Mana Gromor Warangal 2,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363094,2022-01-03,seasonal extension,N,old store code
+CORSTR00736,Mana Gromor Anantapur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,378021,2015-02-12,seasonal extension,N,
+CORSTR00737,Mana Gromor Mahbubnagar 2,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,365413,2023-01-04,company owned,shared,brand spelling varies
+CORSTR00738,Mana Gromor Tirupati 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,373363,2010-11-04,seasonal extension,shared,
+CORSTR00739,Mana Gromor Adilabad 9,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,368934,08/07/2012,satellite,Y,
+CORSTR00740,Namma Gromor Mysuru 2,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,296294,11/11/2024,company owned,N,
+CORSTR00741,Mana Gromor Khammam 4,Mana Gromor,Telangana,Telangana,Khammam,Khammam,361203,2023-09-12,company owned,shared,
+CORSTR00742,Mana Gromor Ongole 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,376086,2017-11-17,company owned,Y,
+CORSTR00743,Namma Gromor Udupi 6,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,297761,06/02/2014,company owned,shared,district split
+CORSTR00744,Mana Gromor Vijayawada 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,376274,2020-03-22,seasonal extension,Y,brand spelling varies
+CORSTR00745,Mana Gromor Nellore 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,377844,2024-08-21,hub,Y,
+CORSTR00746,Mana Gromor Tirupati 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,373392,01/22/2023,hub,Y,new store from FY26
+CORSTR00747,Mana Gromor Guntur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,379796,02/11/2020,company owned,Y,old store code
+CORSTR00748,Mana Gromor Kurnool 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,372413,2020-09-09,hub,N,district split
+CORSTR00749,Mana Gromor Siddipet 1,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,363923,2009-03-28,company owned,Y,
+CORSTR00750,Mana Gromor Anantapur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,379259,10/06/2018,satellite,N,brand spelling varies
+CORSTR00751,Mana Gromor Kakinada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,371949,2019-10-18,hub,Y,
+CORSTR00752,Mana Gromor Ongole 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,371179,12-Jul-24,seasonal extension,Y,district split
+CORSTR00753,Namma Gromor Mysuru 9,Namma Gromor,KA,Karnataka,Mysuru,Mysuru,295865,05-Apr-10,satellite,Y,old store code
+CORSTR00754,Mana Gromor Khammam 4,Mana Gromor,Telangana,Telangana,Khammam,Khammam,368248,2015-04-19,satellite,Y,district split
+CORSTR00755,Mana Gromor Karimnagar 1,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,368496,2011-09-15,seasonal extension,shared,brand spelling varies
+CORSTR00756,Mana Gromor Suryapet 2,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,363931,2009-03-17,satellite,N,old store code
+CORSTR00757,Mana Gromor Siddipet 8,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,361171,2017-02-11,seasonal extension,Y,brand spelling varies
+CORSTR00758,Namma Gromor Mangaluru 3,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,298289,04/01/2012,seasonal extension,N,brand spelling varies
+CORSTR00759,Mana Gromor Nizamabad 1,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,366834,2016-05-29,satellite,N,new store from FY26
+CORSTR00760,Mana Gromor Adilabad 5,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,368082,2014-03-10,satellite,Y,
+CORSTR00761,Mana Gromor Khammam 5,Mana Gromor,Telangana,Telangana,Khammam,Khammam,367760,27-Oct-24,seasonal extension,Y,district split
+CORSTR00762,Mana Gromor Kakinada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,377720,2012-11-19,company owned,shared,district split
+CORSTR00763,Mana Gromor Kadapa 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,378392,2015-05-24,hub,N,new store from FY26
+CORSTR00764,Mana Gromor Guntur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,375572,04/15/2017,hub,Y,old store code
+CORSTR00765,Mana Gromor Khammam 3,Mana Gromor,Telangana,Telangana,Khammam,Khammam,368712,2024-11-02,company owned,N,district split
+CORSTR00766,Mana Gromor Siddipet 4,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,361608,2007-10-24,company owned,shared,new store from FY26
+CORSTR00767,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,377958,2014-04-15,satellite,N,
+CORSTR00768,Mana Gromor Anantapur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,372179,2021-04-25,satellite,shared,
+CORSTR00769,Mana Gromor Guntur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,374496,2018-08-25,hub,shared,new store from FY26
+CORSTR00770,Mana Gromor Karimnagar 1,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,365902,2007-04-06,hub,N,district split
+CORSTR00771,Mana Gromor Siddipet 2,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,367897,2025-07-29,company owned,shared,
+CORSTR00772,Mana Gromor Mahbubnagar 5,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,364156,2017-01-11,satellite,N,
+CORSTR00773,Mana Gromor Kadapa 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,377686,2018-04-17,company owned,N,
+CORSTR00774,Namma Gromor Hubballi 4,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,296977,2023-11-10,seasonal extension,N,district split
+CORSTR00775,Mana Gromor Nizamabad 8,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,364176,2017-09-15,seasonal extension,N,brand spelling varies
+CORSTR00776,Mana Gromor Warangal 7,Mana Gromor,Telangana,Telangana,Warangal,Warangal,367327,2011-07-15,seasonal extension,shared,brand spelling varies
+CORSTR00777,Mana Gromor Mahbubnagar 7,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,369177,2008-08-25,hub,N,new store from FY26
+CORSTR00778,Namma Gromor Bengaluru 1,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,296270,20/08/2024,seasonal extension,shared,district split
+CORSTR00779,Mana Gromor Guntur 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,377055,19/01/2011,company owned,shared,
+CORSTR00780,Mana Gromor Ongole 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,378832,2025-01-29,satellite,shared,
+CORSTR00781,Mana Gromor Warangal 1,Mana Gromor,Telangana,Telangana,Warangal,Warangal,367820,2024-04-05,seasonal extension,shared,old store code
+CORSTR00782,Mana Gromor Anantapur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,377776,08/11/2015,hub,Y,
+CORSTR00783,Mana Gromor Anantapur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371921,25-Mar-19,seasonal extension,Y,old store code
+CORSTR00784,Namma Gromor Kalaburagi 2,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,294516,27/07/2012,company owned,Y,new store from FY26
+CORSTR00785,Mana Gromor Warangal 6,Mana Gromor,Telangana,Telangana,Warangal,Warangal,367205,2010-12-01,satellite,N,new store from FY26
+CORSTR00786,Namma Gromor Belagavi 5,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,296246,2016-11-11,seasonal extension,Y,district split
+CORSTR00787,Mana Gromor Siddipet 4,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,362186,10/28/2012,seasonal extension,Y,
+CORSTR00788,Namma Gromor Bengaluru 6,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,296968,02/22/2023,seasonal extension,N,district split
+CORSTR00789,Mana Gromor Kurnool 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,372899,2019-10-24,satellite,Y,
+CORSTR00790,Mana Gromor Kadapa 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,373839,2009-12-04,company owned,shared,new store from FY26
+CORSTR00791,Namma Gromor Udupi 4,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,292987,04/08/2019,seasonal extension,Y,district split
+CORSTR00792,Mana Gromor Kurnool 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,375574,2010-02-11,hub,shared,brand spelling varies
+CORSTR00793,Nammadu Gromor Trichy 8,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tiruchirappalli,Trichy,332092,2017-04-01,seasonal extension,N,brand spelling varies
+CORSTR00794,Mana Gromor Guntur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,371085,2024-03-29,seasonal extension,shared,brand spelling varies
+CORSTR00795,Mana Gromor Rajahmundry 7,Mana Gromor,AP,Andhra Pradesh,East Godavari,Rajahmundry,372334,2008-12-08,company owned,N,new store from FY26
+CORSTR00796,Namma Gromor Udupi 6,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,299779,17-Sep-20,hub,Y,brand spelling varies
+CORSTR00797,Mana Gromor Adilabad 9,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,363231,2012-07-12,hub,N,brand spelling varies
+CORSTR00798,Namma Gromor Mangaluru 4,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,294507,2013-01-10,satellite,N,old store code
+CORSTR00799,Mana Gromor Anantapur 3,Mana Gromor,ANDHRA,Andhra Pradesh,Anantapur,Anantapur,374244,2010-06-25,company owned,N,old store code
+CORSTR00800,Mana Gromor Visakhapatnam 5,Mana Gromor,A.P.,Andhra Pradesh,Visakhapatnam,Visakhapatnam,371217,10-Jan-13,company owned,N,new store from FY26
+CORSTR00801,Mana Gromor Siddipet 5,Mana Gromor,TG,Telangana,Siddipet,Siddipet,366296,2023-07-30,satellite,shared,district split
+CORSTR00802,Mana Gromor Hyderabad 8,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,365216,2007-04-13,company owned,shared,brand spelling varies
+CORSTR00803,Mana Gromor Suryapet 2,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,361533,2024-01-28,hub,Y,old store code
+CORSTR00804,Mana Gromor Suryapet 5,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,369143,2018-03-28,seasonal extension,Y,new store from FY26
+CORSTR00805,Namma Gromor Hubballi 5,Namma Gromor,KARNATAKA,Karnataka,Dharwad,Hubballi,298382,08/27/2021,seasonal extension,N,
+CORSTR00806,Mana Gromor Nellore 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,375680,2024-01-05,seasonal extension,shared,
+CORSTR00807,Mana Gromor Karimnagar 1,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,369843,27/02/2012,seasonal extension,Y,district split
+CORSTR00808,Namma Gromor Mysuru 5,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,292896,05/13/2009,satellite,shared,district split
+CORSTR00809,Mana Gromor Khammam 2,Mana Gromor,Telangana,Telangana,Khammam,Khammam,365875,2008-07-14,satellite,shared,brand spelling varies
+CORSTR00810,Mana Gromor Karimnagar 3,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,361097,2023-02-16,satellite,Y,district split
+CORSTR00811,Mana Gromor Siddipet 7,Mana Gromor,TG,Telangana,Siddipet,Siddipet,363340,2023-05-05,seasonal extension,N,brand spelling varies
+CORSTR00812,Mana Gromor Nizamabad 1,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,364988,13/12/2010,hub,N,
+CORSTR00813,Mana Gromor Guntur 2,Mana Gromor,AP,Andhra Pradesh,Guntur,Guntur,379783,2015-04-21,company owned,shared,
+CORSTR00814,Namma Gromor Raichur 1,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,297807,14-Apr-19,hub,Y,
+CORSTR00815,Mana Gromor Karimnagar 5,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,363191,27/08/2022,hub,Y,
+CORSTR00816,Mana Gromor Nellore 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,377245,13-Oct-13,seasonal extension,shared,
+CORSTR00817,Mana Gromor Guntur 9,Mana Gromor,ANDHRA,Andhra Pradesh,Guntur,Guntur,372913,09/05/2017,satellite,shared,new store from FY26
+CORSTR00818,Mana Gromor Kurnool 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,372080,2016-10-03,satellite,Y,district split
+CORSTR00819,Mana Gromor Rajahmundry 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,372603,2016-08-19,satellite,Y,
+CORSTR00820,Namma Gromor Mangaluru 1,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,296937,2008-04-18,satellite,Y,district split
+CORSTR00821,Mana Gromor Mahbubnagar 8,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,368597,2022-11-05,company owned,Y,old store code
+CORSTR00822,Mana Gromor Ongole 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,375225,01/09/2008,satellite,Y,
+CORSTR00823,Namma Gromor Kalaburagi 8,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,292207,05/09/2017,satellite,shared,old store code
+CORSTR00824,Namma Gromor Hubballi 2,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,294457,2018-01-17,hub,Y,
+CORSTR00825,Mana Gromor Nalgonda 2,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,365223,2008-05-28,satellite,Y,brand spelling varies
+CORSTR00826,Mana Gromor Kadapa 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,371835,2016-03-25,satellite,Y,old store code
+CORSTR00827,Mana Gromor Vijayawada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,373285,19/06/2013,satellite,Y,district split
+CORSTR00828,Mana Gromor Rajahmundry 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,375252,16/05/2011,satellite,Y,brand spelling varies
+CORSTR00829,Mana Gromor Khammam 4,Mana Gromor,Telangana,Telangana,Khammam,Khammam,362927,2021-02-16,seasonal extension,Y,district split
+CORSTR00830,Mana Gromor Khammam 7,Mana Gromor,Telangana,Telangana,Khammam,Khammam,368121,2018-10-20,seasonal extension,shared,district split
+CORSTR00831,Mana Gromor Siddipet 4,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,366232,22/12/2014,seasonal extension,Y,new store from FY26
+CORSTR00832,Mana Gromor Hyderabad 3,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,362674,2011-12-05,seasonal extension,Y,old store code
+CORSTR00833,Namma Gromor Shivamogga 3,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,295513,2010-03-17,hub,shared,district split
+CORSTR00834,Mana Gromor Tirupati 7,Mana Gromor,AP,Andhra Pradesh,Tirupati,Tirupati,373931,09/19/2013,hub,shared,district split
+CORSTR00835,Mana Gromor Nellore 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,374639,2015-05-17,company owned,Y,brand spelling varies
+CORSTR00836,Namma Gromor Bengaluru 4,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,297355,2007-03-16,satellite,N,district split
+CORSTR00837,Mana Gromor Ongole 9,Mana Gromor,A.P.,Andhra Pradesh,Prakasam,Ongole,376289,09/30/2025,seasonal extension,N,brand spelling varies
+CORSTR00838,Mana Gromor Adilabad 5,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,366704,2008-11-22,satellite,Y,new store from FY26
+CORSTR00839,Nammadu Gromor Thanjavur 5,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Thanjavur,Thanjavur,335922,2013-10-08,company owned,N,old store code
+CORSTR00840,Nammadu Gromor Kanchipuram 6,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Kanchipuram,Kanchipuram,339315,2007-09-13,satellite,shared,new store from FY26
+CORSTR00841,Mana Gromor Siddipet 4,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,364514,2013-05-09,satellite,Y,brand spelling varies
+CORSTR00842,Namma Gromor Hubballi 4,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,293927,2007-12-06,company owned,Y,brand spelling varies
+CORSTR00843,Mana Gromor Ongole 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,377902,2025-02-15,hub,Y,new store from FY26
+CORSTR00844,Mana Gromor Ongole 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,373964,2017-07-25,company owned,shared,brand spelling varies
+CORSTR00845,Mana Gromor Warangal 1,Mana Gromor,Telangana,Telangana,Warangal,Warangal,365555,2016-07-01,satellite,N,old store code
+CORSTR00846,Namma Gromor Belagavi 1,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,298228,2016-05-07,seasonal extension,shared,brand spelling varies
+CORSTR00847,Namma Gromor Hubballi 4,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,299853,2015-01-23,company owned,shared,new store from FY26
+CORSTR00848,Mana Gromor Kakinada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,377123,2023-07-18,hub,shared,brand spelling varies
+CORSTR00849,Namma Gromor Raichur 1,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,294479,11/01/2020,hub,N,brand spelling varies
+CORSTR00850,Namma Gromor Raichur 4,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,294368,2023-07-09,seasonal extension,N,brand spelling varies
+CORSTR00851,Mana Gromor Nizamabad 9,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,362191,2020-10-16,company owned,Y,old store code
+CORSTR00852,Mana Gromor Guntur 2,Mana Gromor,A.P.,Andhra Pradesh,Guntur,Guntur,376130,03/12/2019,company owned,N,old store code
+CORSTR00853,Mana Gromor Hyderabad 3,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,369589,2015-06-05,hub,shared,district split
+CORSTR00854,Mana Gromor Visakhapatnam 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,372437,2019-03-19,seasonal extension,N,brand spelling varies
+CORSTR00855,Namma Gromor Mangaluru 9,Namma Gromor,KA,Karnataka,Dakshina Kannada,Mangaluru,295223,2012-04-10,company owned,Y,new store from FY26
+CORSTR00856,Mana Gromor Karimnagar 4,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,362038,2025-02-20,company owned,N,district split
+CORSTR00857,Namma Gromor Belagavi 9,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,291823,2018-02-27,company owned,shared,new store from FY26
+CORSTR00858,Mana Gromor Visakhapatnam 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,377670,2013-05-28,company owned,shared,old store code
+CORSTR00859,Mana Gromor Kadapa 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,376200,27/08/2025,seasonal extension,shared,
+CORSTR00860,Mana Gromor Anantapur 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,378880,2024-01-23,satellite,shared,district split
+CORSTR00861,Namma Gromor Tumakuru 1,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,299810,2015-12-23,hub,shared,district split
+CORSTR00862,Mana Gromor Nalgonda 4,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,367406,2013-01-16,satellite,Y,old store code
+CORSTR00863,Mana Gromor Mahbubnagar 5,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,365564,11-Feb-16,satellite,N,old store code
+CORSTR00864,Mana Gromor Vijayawada 6,Mana Gromor,ANDHRA,Andhra Pradesh,Krishna,Vijayawada,374397,2022-04-04,satellite,N,
+CORSTR00865,Mana Gromor Vijayawada 4,Mana Gromor,AP,Andhra Pradesh,Krishna,Vijayawada,371624,2015-04-15,company owned,shared,
+CORSTR00866,Mana Gromor Warangal 7,Mana Gromor,Telangana,Telangana,Warangal,Warangal,369814,2013-08-25,hub,shared,district split
+CORSTR00867,Mana Gromor Nellore 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,379888,2017-12-05,seasonal extension,Y,brand spelling varies
+CORSTR00868,Mana Gromor Kakinada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,379158,05-Apr-15,company owned,Y,district split
+CORSTR00869,Namma Gromor Tumakuru 5,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,292714,2025-12-28,satellite,shared,
+CORSTR00870,Mana Gromor Suryapet 1,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,363894,09/04/2007,company owned,N,
+CORSTR00871,Mana Gromor Mahbubnagar 7,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,365666,2025-07-24,hub,shared,brand spelling varies
+CORSTR00872,Mana Gromor Nalgonda 9,Mana Gromor,TG,Telangana,Nalgonda,Nalgonda,364588,2007-04-02,hub,Y,brand spelling varies
+CORSTR00873,Mana Gromor Tirupati 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,376962,2024-10-06,satellite,Y,old store code
+CORSTR00874,Mana Gromor Ongole 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,375172,2011-12-08,seasonal extension,shared,new store from FY26
+CORSTR00875,Namma Gromor Hubballi 8,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,296326,2021-08-09,satellite,shared,brand spelling varies
+CORSTR00876,Mana Gromor Ongole 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,378911,2010-11-08,hub,shared,district split
+CORSTR00877,Mana Gromor Ongole 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,372925,08/24/2020,satellite,Y,brand spelling varies
+CORSTR00878,Mana Gromor Adilabad 4,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,363935,2023-01-22,hub,shared,district split
+CORSTR00879,Mana Gromor Hyderabad 7,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,364664,11/18/2016,seasonal extension,N,district split
+CORSTR00880,Mana Gromor Kakinada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,373781,2013-04-16,satellite,Y,old store code
+CORSTR00881,Mana Gromor Kakinada 2,Mana Gromor,A.P.,Andhra Pradesh,Kakinada,Kakinada,377981,2019-07-29,satellite,N,brand spelling varies
+CORSTR00882,Mana Gromor Rajahmundry 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,373514,2012-02-11,seasonal extension,shared,brand spelling varies
+CORSTR00883,Mana Gromor Anantapur 7,Mana Gromor,ANDHRA,Andhra Pradesh,Anantapur,Anantapur,375442,2012-08-23,company owned,shared,district split
+CORSTR00884,Mana Gromor Tirupati 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,373079,2010-10-05,hub,shared,old store code
+CORSTR00885,Namma Gromor Udupi 5,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,294282,2009-07-14,hub,Y,district split
+CORSTR00886,Mana Gromor Nellore 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,376126,2012-07-01,company owned,Y,old store code
+CORSTR00887,Namma Gromor Ballari 4,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,291660,2011-04-23,seasonal extension,shared,district split
+CORSTR00888,Namma Gromor Udupi 4,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,297657,2024-04-20,seasonal extension,N,new store from FY26
+CORSTR00889,Mana Gromor Hyderabad 6,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,363927,2020-12-30,hub,shared,
+CORSTR00890,Mana Gromor Vijayawada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,379273,2015-07-22,seasonal extension,N,
+CORSTR00891,Mana Gromor Rajahmundry 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,377191,2008-02-23,hub,N,old store code
+CORSTR00892,Mana Gromor Nizamabad 4,Mana Gromor,TS,Telangana,Nizamabad,Nizamabad,363051,06/06/2008,hub,shared,brand spelling varies
+CORSTR00893,Mana Gromor Hyderabad 8,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,364249,2025-05-21,company owned,N,new store from FY26
+CORSTR00894,Mana Gromor Tirupati 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,376446,2011-08-09,satellite,N,brand spelling varies
+CORSTR00895,Mana Gromor Vijayawada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,376432,2015-09-06,hub,shared,brand spelling varies
+CORSTR00896,Mana Gromor Visakhapatnam 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,372678,2025-03-13,company owned,N,district split
+CORSTR00897,Mana Gromor Warangal 6,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363391,2014-02-21,company owned,shared,
+CORSTR00898,Mana Gromor Kakinada 1,Mana Gromor,AP,Andhra Pradesh,Kakinada,Kakinada,372097,2008-06-07,seasonal extension,Y,new store from FY26
+CORSTR00899,Nammadu Gromor Trichy 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tiruchirappalli,Trichy,331442,2021-06-29,hub,shared,
+CORSTR00900,Mana Gromor Rajahmundry 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,378848,2011-07-18,company owned,Y,old store code
+CORSTR00901,Mana Gromor Anantapur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,377354,07/28/2020,satellite,Y,district split
+CORSTR00902,Mana Gromor Nalgonda 6,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,366742,07/17/2012,company owned,N,
+CORSTR00903,Mana Gromor Vijayawada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,379347,2016-06-18,seasonal extension,N,new store from FY26
+CORSTR00904,Mana Gromor Tirupati 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,371995,2015-01-09,seasonal extension,shared,old store code
+CORSTR00905,Mana Gromor Visakhapatnam 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,373081,22/07/2020,company owned,Y,new store from FY26
+CORSTR00906,Nammadu Gromor Thanjavur 7,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Thanjavur,Thanjavur,335611,12/02/2024,seasonal extension,Y,brand spelling varies
+CORSTR00907,Mana Gromor Kurnool 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,375641,2017-03-06,seasonal extension,Y,
+CORSTR00908,Mana Gromor Rajahmundry 7,Mana Gromor,ANDHRA,Andhra Pradesh,East Godavari,Rajahmundry,378430,17-Nov-07,seasonal extension,N,brand spelling varies
+CORSTR00909,Mana Gromor Rajahmundry 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,372608,05/23/2022,satellite,Y,district split
+CORSTR00910,Mana Gromor Visakhapatnam 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,376143,2022-11-09,seasonal extension,Y,old store code
+CORSTR00911,Mana Gromor Nizamabad 6,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,364224,2020-03-08,company owned,N,old store code
+CORSTR00912,Mana Gromor Siddipet 3,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,367994,19/07/2020,hub,Y,
+CORSTR00913,Namma Gromor Hubballi 7,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,295483,2025-12-24,seasonal extension,N,brand spelling varies
+CORSTR00914,Namma Gromor Raichur 8,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,296352,2013-06-02,satellite,N,
+CORSTR00915,Mana Gromor Kakinada 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,379737,03/01/2015,seasonal extension,N,old store code
+CORSTR00916,Mana Gromor Guntur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,374204,2007-02-10,company owned,Y,old store code
+CORSTR00917,Namma Gromor Shivamogga 2,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,292412,2019-04-27,company owned,shared,old store code
+CORSTR00918,Namma Gromor Shivamogga 7,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,299212,2021-02-26,seasonal extension,shared,district split
+CORSTR00919,Mana Gromor Anantapur 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,376917,2013-05-15,company owned,shared,
+CORSTR00920,Mana Gromor Adilabad 4,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,364306,2026-03-10,company owned,Y,brand spelling varies
+CORSTR00921,Mana Gromor Mahbubnagar 3,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,362023,2022-11-02,satellite,Y,new store from FY26
+CORSTR00922,Mana Gromor Nellore 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,371142,2025-07-27,satellite,Y,old store code
+CORSTR00923,Mana Gromor Rajahmundry 6,Mana Gromor,A.P.,Andhra Pradesh,East Godavari,Rajahmundry,378260,2015-07-01,satellite,N,
+CORSTR00924,Mana Gromor Nalgonda 8,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,365179,2014-11-15,satellite,Y,old store code
+CORSTR00925,Mana Gromor Adilabad 2,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,362045,11/03/2025,company owned,Y,old store code
+CORSTR00926,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,371120,2017-10-15,hub,Y,new store from FY26
+CORSTR00927,Mana Gromor Kakinada 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,376447,2019-01-25,company owned,N,district split
+CORSTR00928,Namma Gromor Belagavi 8,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,296193,2010-02-15,hub,N,district split
+CORSTR00929,Mana Gromor Rajahmundry 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,375638,2018-12-20,company owned,shared,new store from FY26
+CORSTR00930,Mana Gromor Suryapet 6,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,363428,2010-09-07,company owned,Y,brand spelling varies
+CORSTR00931,Namma Gromor Shivamogga 2,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,297449,12/26/2011,seasonal extension,shared,old store code
+CORSTR00932,Namma Gromor Udupi 5,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,296425,2017-08-26,seasonal extension,shared,
+CORSTR00933,Namma Gromor Hubballi 3,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,295518,2008-02-24,seasonal extension,shared,
+CORSTR00934,Mana Gromor Kadapa 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,375733,2019-10-22,company owned,shared,old store code
+CORSTR00935,Mana Gromor Kakinada 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,373255,2022-01-07,satellite,N,brand spelling varies
+CORSTR00936,Mana Gromor Kurnool 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,378028,10/28/2013,satellite,shared,
+CORSTR00937,Namma Gromor Udupi 9,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,296374,2022-07-04,satellite,shared,district split
+CORSTR00938,Mana Gromor Adilabad 1,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,367631,2025-12-24,company owned,shared,old store code
+CORSTR00939,Mana Gromor Ongole 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,374850,2020-05-21,satellite,N,brand spelling varies
+CORSTR00940,Mana Gromor Nalgonda 4,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,366372,01/05/2016,satellite,shared,old store code
+CORSTR00941,Mana Gromor Anantapur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,379526,2010-09-19,satellite,shared,district split
+CORSTR00942,Namma Gromor Raichur 3,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,292658,2008-07-02,satellite,N,
+CORSTR00943,Namma Gromor Raichur 2,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,298908,24/04/2009,satellite,shared,new store from FY26
+CORSTR00944,Mana Gromor Nalgonda 3,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,369364,2017-03-21,hub,Y,old store code
+CORSTR00945,Mana Gromor Anantapur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,372319,09/30/2009,satellite,Y,new store from FY26
+CORSTR00946,Mana Gromor Nizamabad 5,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,363610,2011-01-04,company owned,N,brand spelling varies
+CORSTR00947,Mana Gromor Karimnagar 3,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,362870,2016-12-07,seasonal extension,shared,brand spelling varies
+CORSTR00948,Mana Gromor Khammam 1,Mana Gromor,Telangana,Telangana,Khammam,Khammam,367405,2017-01-16,hub,Y,
+CORSTR00949,Mana Gromor Siddipet 1,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,369167,2014-05-20,seasonal extension,N,brand spelling varies
+CORSTR00950,Namma Gromor Ballari 6,Namma Gromor,KARNATAKA,Karnataka,Ballari,Ballari,292423,12/11/2021,satellite,N,brand spelling varies
+CORSTR00951,Namma Gromor Bengaluru 1,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,299313,2008-11-17,satellite,shared,brand spelling varies
+CORSTR00952,Mana Gromor Guntur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,376874,2020-10-09,satellite,N,new store from FY26
+CORSTR00953,Mana Gromor Kakinada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,379808,2021-08-29,hub,shared,old store code
+CORSTR00954,Mana Gromor Mahbubnagar 3,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,363603,2023-04-12,seasonal extension,N,brand spelling varies
+CORSTR00955,Namma Gromor Shivamogga 8,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,294245,06/11/2023,hub,shared,brand spelling varies
+CORSTR00956,Mana Gromor Tirupati 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,373120,2023-12-31,satellite,shared,new store from FY26
+CORSTR00957,Mana Gromor Ongole 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,376841,2010-07-16,satellite,Y,district split
+CORSTR00958,Mana Gromor Kakinada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,378830,2015-12-21,hub,N,
+CORSTR00959,Mana Gromor Kurnool 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,375988,07/12/2020,satellite,N,old store code
+CORSTR00960,Mana Gromor Rajahmundry 9,Mana Gromor,ANDHRA,Andhra Pradesh,East Godavari,Rajahmundry,375709,04/10/2025,satellite,shared,
+CORSTR00961,Mana Gromor Guntur 5,Mana Gromor,AP,Andhra Pradesh,Guntur,Guntur,379555,2010-03-15,company owned,shared,
+CORSTR00962,Mana Gromor Kakinada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,376504,2015-03-30,hub,shared,district split
+CORSTR00963,Mana Gromor Kadapa 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,371037,2022-11-08,seasonal extension,N,old store code
+CORSTR00964,Mana Gromor Guntur 6,Mana Gromor,AP,Andhra Pradesh,Guntur,Guntur,374744,2015-12-24,company owned,Y,brand spelling varies
+CORSTR00965,Namma Gromor Belagavi 2,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,293248,2014-04-01,hub,shared,
+CORSTR00966,Mana Gromor Nalgonda 1,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,361090,2023-06-15,satellite,N,new store from FY26
+CORSTR00967,Nammadu Gromor Vellore 9,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Vellore,Vellore,331682,2022-09-26,satellite,Y,old store code
+CORSTR00968,Nammadu Gromor Erode 8,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Erode,Erode,331733,2021-01-29,hub,N,new store from FY26
+CORSTR00969,Mana Gromor Siddipet 6,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,363480,2018-02-05,satellite,shared,old store code
+CORSTR00970,Namma Gromor Davanagere 7,Namma Gromor,KARNATAKA,Karnataka,Davanagere,Davanagere,299131,2012-07-15,seasonal extension,shared,new store from FY26
+CORSTR00971,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,377322,2011-07-22,seasonal extension,N,old store code
+CORSTR00972,Mana Gromor Karimnagar 4,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,366686,2013-07-22,satellite,N,brand spelling varies
+CORSTR00973,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,371719,2013-10-28,hub,N,brand spelling varies
+CORSTR00974,Namma Gromor Shivamogga 2,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,296001,07/06/2019,seasonal extension,N,district split
+CORSTR00975,Mana Gromor Guntur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,375918,2009-04-08,company owned,shared,
+CORSTR00976,Mana Gromor Siddipet 9,Mana Gromor,Telangana,Telangana,Siddipet,Siddipet,368392,2014-03-14,company owned,N,district split
+CORSTR00977,Mana Gromor Visakhapatnam 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,379588,2008-01-08,seasonal extension,Y,
+CORSTR00978,Mana Gromor Vijayawada 5,Mana Gromor,ANDHRA,Andhra Pradesh,Krishna,Vijayawada,373380,2021-10-07,company owned,Y,district split
+CORSTR00979,Mana Gromor Anantapur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,377169,2014-07-09,seasonal extension,Y,brand spelling varies
+CORSTR00980,Mana Gromor Nellore 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,378509,2023-12-24,hub,Y,
+CORSTR00981,Mana Gromor Vijayawada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,374400,06-Jun-17,seasonal extension,shared,
+CORSTR00982,Mana Gromor Kakinada 2,Mana Gromor,ANDHRA,Andhra Pradesh,Kakinada,Kakinada,371720,2024-08-03,company owned,N,old store code
+CORSTR00983,Mana Gromor Visakhapatnam 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,371780,2019-01-21,satellite,Y,brand spelling varies
+CORSTR00984,Mana Gromor Vijayawada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,375830,25/09/2015,satellite,Y,brand spelling varies
+CORSTR00985,Mana Gromor Kadapa 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,377546,2021-03-28,satellite,N,new store from FY26
+CORSTR00986,Mana Gromor Vijayawada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,374147,21/09/2013,satellite,N,brand spelling varies
+CORSTR00987,Mana Gromor Tirupati 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,371342,08-Aug-15,hub,Y,
+CORSTR00988,Mana Gromor Nalgonda 8,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,361349,2010-04-10,hub,N,district split
+CORSTR00989,Nammadu Gromor Salem 6,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Salem,Salem,331254,2017-08-24,company owned,Y,
+CORSTR00990,Namma Gromor Udupi 4,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,295910,15-Apr-22,satellite,shared,brand spelling varies
+CORSTR00991,Mana Gromor Kadapa 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,375856,2017-01-30,satellite,N,new store from FY26
+CORSTR00992,Mana Gromor Nellore 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,373889,2011-06-23,hub,N,new store from FY26
+CORSTR00993,Namma Gromor Mangaluru 7,Namma Gromor,KA,Karnataka,Dakshina Kannada,Mangaluru,299537,2021-07-25,hub,Y,old store code
+CORSTR00994,Mana Gromor Warangal 9,Mana Gromor,Telangana,Telangana,Warangal,Warangal,364957,2026-01-29,seasonal extension,shared,
+CORSTR00995,Mana Gromor Nellore 9,Mana Gromor,A.P.,Andhra Pradesh,Nellore,Nellore,376186,2016-01-31,satellite,shared,old store code
+CORSTR00996,Mana Gromor Kadapa 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,379490,12/04/2012,satellite,N,old store code
+CORSTR00997,Namma Gromor Ballari 9,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,294174,2022-04-25,company owned,shared,brand spelling varies
+CORSTR00998,Mana Gromor Nellore 3,Mana Gromor,ANDHRA,Andhra Pradesh,Nellore,Nellore,379749,2024-01-23,company owned,Y,old store code
+CORSTR00999,Mana Gromor Khammam 7,Mana Gromor,Telangana,Telangana,Khammam,Khammam,368977,29/09/2016,seasonal extension,N,
+CORSTR01000,Namma Gromor Davanagere 1,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,299646,2008-07-08,hub,N,new store from FY26
+CORSTR01001,Mana Gromor Nalgonda 1,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,366784,08/22/2022,company owned,N,brand spelling varies
+CORSTR01002,Mana Gromor Kakinada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,378329,2015-12-17,seasonal extension,N,old store code
+CORSTR01003,Mana Gromor Anantapur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,379085,2010-03-02,hub,N,new store from FY26
+CORSTR01004,Mana Gromor Anantapur 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371046,2021-08-23,hub,shared,brand spelling varies
+CORSTR01005,Mana Gromor Hyderabad 8,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,363751,2025-09-14,hub,shared,district split
+CORSTR01006,Mana Gromor Kakinada 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,373787,2010-10-06,seasonal extension,N,district split
+CORSTR01007,Mana Gromor Ongole 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,379704,2010-12-23,seasonal extension,Y,district split
+CORSTR01008,Mana Gromor Tirupati 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,375318,22/07/2009,seasonal extension,Y,
+CORSTR01009,Mana Gromor Kurnool 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,378843,2012-05-20,hub,N,district split
+CORSTR01010,Mana Gromor Kakinada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,378382,2018-01-27,satellite,N,district split
+CORSTR01011,Mana Gromor Kadapa 9,Mana Gromor,ANDHRA,Andhra Pradesh,Kadapa,Kadapa,377395,16/07/2016,hub,N,new store from FY26
+CORSTR01012,Mana Gromor Rajahmundry 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,371593,2023-09-24,company owned,Y,brand spelling varies
+CORSTR01013,Mana Gromor Visakhapatnam 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,376778,2016-10-10,satellite,N,
+CORSTR01014,Mana Gromor Rajahmundry 9,Mana Gromor,AP,Andhra Pradesh,East Godavari,Rajahmundry,374212,2022-09-08,hub,shared,
+CORSTR01015,Mana Gromor Nizamabad 3,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,365776,04/10/2008,seasonal extension,Y,old store code
+CORSTR01016,Mana Gromor Hyderabad 2,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,365196,07/24/2018,seasonal extension,Y,old store code
+CORSTR01017,Mana Gromor Rajahmundry 7,Mana Gromor,AP,Andhra Pradesh,East Godavari,Rajahmundry,379649,16/03/2013,satellite,N,new store from FY26
+CORSTR01018,Mana Gromor Hyderabad 4,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,367279,2009-06-09,satellite,Y,district split
+CORSTR01019,Mana Gromor Kakinada 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,378690,2016-03-23,seasonal extension,Y,old store code
+CORSTR01020,Mana Gromor Hyderabad 6,Mana Gromor,Telangana,Telangana,Hyderabad,Hyderabad,362305,2009-08-14,seasonal extension,N,brand spelling varies
+CORSTR01021,Mana Gromor Mahbubnagar 8,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,369684,2024-05-23,satellite,N,new store from FY26
+CORSTR01022,Mana Gromor Karimnagar 4,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,365384,2025-04-06,hub,N,old store code
+CORSTR01023,Mana Gromor Suryapet 2,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,361819,2011-09-28,satellite,shared,
+CORSTR01024,Nammadu Gromor Hosur 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Krishnagiri,Hosur,333228,03/12/2016,hub,shared,new store from FY26
+CORSTR01025,Mana Gromor Mahbubnagar 6,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,368743,10/09/2016,satellite,shared,brand spelling varies
+CORSTR01026,Mana Gromor Kurnool 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,376910,2019-07-23,seasonal extension,Y,new store from FY26
+CORSTR01027,Mana Gromor Anantapur 5,Mana Gromor,A.P.,Andhra Pradesh,Anantapur,Anantapur,373506,2026-03-15,company owned,N,old store code
+CORSTR01028,Mana Gromor Guntur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,372025,2020-06-15,company owned,N,brand spelling varies
+CORSTR01029,Nammadu Gromor Trichy 2,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Tiruchirappalli,Trichy,339489,2007-12-01,hub,N,district split
+CORSTR01030,Namma Gromor Kalaburagi 5,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,299936,2023-06-20,hub,N,brand spelling varies
+CORSTR01031,Mana Gromor Kakinada 8,Mana Gromor,A.P.,Andhra Pradesh,Kakinada,Kakinada,378279,18/02/2026,seasonal extension,shared,
+CORSTR01032,Mana Gromor Kurnool 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,377072,01/03/2014,hub,N,new store from FY26
+CORSTR01033,Mana Gromor Guntur 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,371734,2010-01-06,seasonal extension,shared,brand spelling varies
+CORSTR01034,Mana Gromor Warangal 4,Mana Gromor,TELANGANA,Telangana,Warangal,Warangal,367688,2018-05-24,satellite,Y,brand spelling varies
+CORSTR01035,Namma Gromor Davanagere 5,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,292039,2024-12-12,satellite,shared,old store code
+CORSTR01036,Mana Gromor Nizamabad 8,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,366947,28/10/2020,seasonal extension,N,district split
+CORSTR01037,Mana Gromor Visakhapatnam 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,375840,2023-11-10,satellite,Y,district split
+CORSTR01038,Mana Gromor Kadapa 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,378351,2007-09-12,seasonal extension,N,old store code
+CORSTR01039,Nammadu Gromor Madurai 7,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Madurai,Madurai,337662,2009-09-27,seasonal extension,N,district split
+CORSTR01040,Mana Gromor Guntur 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,372656,2022-11-17,seasonal extension,shared,district split
+CORSTR01041,Mana Gromor Warangal 9,Mana Gromor,Telangana,Telangana,Warangal,Warangal,362090,2020-07-10,satellite,N,new store from FY26
+CORSTR01042,Namma Gromor Raichur 3,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,295336,15-Feb-16,satellite,Y,brand spelling varies
+CORSTR01043,Mana Gromor Nizamabad 5,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,366053,18/06/2013,satellite,shared,brand spelling varies
+CORSTR01044,Mana Gromor Kadapa 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,375590,2020-10-11,company owned,Y,old store code
+CORSTR01045,Namma Gromor Hubballi 7,Namma Gromor,Karnataka,Karnataka,Dharwad,Hubballi,299327,2023-07-15,company owned,shared,brand spelling varies
+CORSTR01046,Mana Gromor Vijayawada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,376988,2020-04-01,company owned,shared,new store from FY26
+CORSTR01047,Mana Gromor Rajahmundry 8,Mana Gromor,AP,Andhra Pradesh,East Godavari,Rajahmundry,374480,2018-07-21,satellite,Y,brand spelling varies
+CORSTR01048,Mana Gromor Warangal 2,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363170,2009-08-23,seasonal extension,shared,district split
+CORSTR01049,Mana Gromor Rajahmundry 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,377521,2019-01-30,seasonal extension,shared,
+CORSTR01050,Namma Gromor Mangaluru 5,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,296359,07/17/2016,hub,shared,new store from FY26
+CORSTR01051,Mana Gromor Tirupati 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,377119,11/05/2025,seasonal extension,shared,district split
+CORSTR01052,Mana Gromor Ongole 6,Mana Gromor,AP,Andhra Pradesh,Prakasam,Ongole,375614,2014-09-19,company owned,N,
+CORSTR01053,Mana Gromor Kadapa 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kadapa,Kadapa,379635,2023-07-15,seasonal extension,Y,new store from FY26
+CORSTR01054,Namma Gromor Raichur 3,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,292112,2011-12-15,hub,shared,district split
+CORSTR01055,Nammadu Gromor Vellore 6,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Vellore,Vellore,336615,2023-12-08,seasonal extension,N,district split
+CORSTR01056,Namma Gromor Raichur 5,Namma Gromor,Karnataka,Karnataka,Raichur,Raichur,293121,03/18/2015,company owned,shared,new store from FY26
+CORSTR01057,Mana Gromor Guntur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,377485,2010-09-05,company owned,shared,new store from FY26
+CORSTR01058,Mana Gromor Ongole 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,375083,2019-03-04,company owned,N,new store from FY26
+CORSTR01059,Mana Gromor Kakinada 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,376803,21/12/2022,seasonal extension,Y,old store code
+CORSTR01060,Mana Gromor Nizamabad 3,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,361287,2019-09-09,hub,N,district split
+CORSTR01061,Mana Gromor Nellore 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,377829,30/10/2010,satellite,shared,new store from FY26
+CORSTR01062,Namma Gromor Davanagere 6,Namma Gromor,Karnataka,Karnataka,Davanagere,Davanagere,299267,2015-04-17,satellite,shared,brand spelling varies
+CORSTR01063,Mana Gromor Adilabad 9,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,367556,2019-06-15,seasonal extension,Y,district split
+CORSTR01064,Mana Gromor Vijayawada 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,376378,28-Apr-07,satellite,N,district split
+CORSTR01065,Mana Gromor Adilabad 2,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,368739,22/05/2015,hub,shared,
+CORSTR01066,Mana Gromor Mahbubnagar 7,Mana Gromor,TS,Telangana,Mahbubnagar,Mahbubnagar,366914,2009-07-20,company owned,shared,new store from FY26
+CORSTR01067,Mana Gromor Ongole 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,378666,2016-01-17,company owned,N,
+CORSTR01068,Mana Gromor Nellore 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,372805,2022-01-01,seasonal extension,Y,new store from FY26
+CORSTR01069,Mana Gromor Mahbubnagar 8,Mana Gromor,Telangana,Telangana,Mahbubnagar,Mahbubnagar,368631,2025-03-16,satellite,shared,district split
+CORSTR01070,Mana Gromor Vijayawada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,371259,2008-11-06,hub,Y,new store from FY26
+CORSTR01071,Mana Gromor Nalgonda 3,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,367505,2009-05-02,seasonal extension,Y,brand spelling varies
+CORSTR01072,Mana Gromor Warangal 8,Mana Gromor,Telangana,Telangana,Warangal,Warangal,363910,30-Oct-08,satellite,N,brand spelling varies
+CORSTR01073,Mana Gromor Visakhapatnam 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,378279,2019-12-21,seasonal extension,N,brand spelling varies
+CORSTR01074,Nammadu Gromor Thanjavur 4,Nammadu Gromor,Tamilnadu,Tamil Nadu,Thanjavur,Thanjavur,338103,29-Feb-20,hub,N,new store from FY26
+CORSTR01075,Mana Gromor Nizamabad 6,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,366817,2016-04-14,satellite,N,
+CORSTR01076,Mana Gromor Kurnool 2,Mana Gromor,ANDHRA,Andhra Pradesh,Kurnool,Kurnool,376169,2021-09-21,company owned,N,old store code
+CORSTR01077,Mana Gromor Guntur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,374331,08/21/2016,satellite,N,brand spelling varies
+CORSTR01078,Namma Gromor Udupi 7,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,298190,2022-12-16,satellite,Y,new store from FY26
+CORSTR01079,Namma Gromor Kalaburagi 4,Namma Gromor,KA,Karnataka,Kalaburagi,Kalaburagi,299032,23/04/2013,company owned,N,
+CORSTR01080,Mana Gromor Nizamabad 7,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,365402,02/05/2017,company owned,Y,brand spelling varies
+CORSTR01081,Namma Gromor Mysuru 5,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,297135,19/02/2018,seasonal extension,N,new store from FY26
+CORSTR01082,Namma Gromor Kalaburagi 6,Namma Gromor,KA,Karnataka,Kalaburagi,Kalaburagi,292380,2010-08-01,satellite,N,
+CORSTR01083,Namma Gromor Ballari 5,Namma Gromor,Karnataka,Karnataka,Ballari,Ballari,298272,2007-02-04,satellite,N,old store code
+CORSTR01084,Mana Gromor Ongole 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,376592,2020-02-15,satellite,shared,brand spelling varies
+CORSTR01085,Mana Gromor Nellore 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,374093,11/13/2022,satellite,N,district split
+CORSTR01086,Namma Gromor Raichur 7,Namma Gromor,KA,Karnataka,Raichur,Raichur,299763,2019-05-18,seasonal extension,shared,old store code
+CORSTR01087,Mana Gromor Visakhapatnam 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,371342,28/04/2018,company owned,shared,new store from FY26
+CORSTR01088,Mana Gromor Visakhapatnam 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,377035,2015-02-10,satellite,N,new store from FY26
+CORSTR01089,Namma Gromor Mangaluru 7,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,297105,2022-04-21,company owned,shared,district split
+CORSTR01090,Mana Gromor Warangal 8,Mana Gromor,Telangana,Telangana,Warangal,Warangal,368007,2020-05-21,satellite,Y,old store code
+CORSTR01091,Namma Gromor Shivamogga 2,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,294376,03/11/2020,company owned,N,brand spelling varies
+CORSTR01092,Mana Gromor Vijayawada 1,Mana Gromor,A.P.,Andhra Pradesh,Krishna,Vijayawada,374377,2020-10-16,company owned,Y,new store from FY26
+CORSTR01093,Mana Gromor Adilabad 6,Mana Gromor,Telangana,Telangana,Adilabad,Adilabad,367263,2024-01-09,satellite,shared,district split
+CORSTR01094,Mana Gromor Nalgonda 9,Mana Gromor,TG,Telangana,Nalgonda,Nalgonda,367643,2026-03-25,hub,shared,brand spelling varies
+CORSTR01095,Mana Gromor Nellore 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,372174,2009-02-06,satellite,shared,brand spelling varies
+CORSTR01096,Namma Gromor Belagavi 9,Namma Gromor,Karnataka,Karnataka,Belagavi,Belagavi,292752,2017-04-10,seasonal extension,N,brand spelling varies
+CORSTR01097,Mana Gromor Vijayawada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,376745,2011-03-02,satellite,Y,district split
+CORSTR01098,Namma Gromor Tumakuru 5,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,297113,2007-02-13,company owned,shared,old store code
+CORSTR01099,Mana Gromor Visakhapatnam 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,376643,2016-08-10,seasonal extension,N,brand spelling varies
+CORSTR01100,Mana Gromor Anantapur 3,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,376348,2023-09-12,satellite,N,old store code
+CORSTR01101,Namma Gromor Kalaburagi 1,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,298035,2009-10-19,company owned,Y,
+CORSTR01102,Namma Gromor Mysuru 4,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,299357,23-Mar-24,hub,shared,new store from FY26
+CORSTR01103,Namma Gromor Shivamogga 5,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,291866,02/12/2022,satellite,N,
+CORSTR01104,Mana Gromor Kurnool 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,378432,2007-02-28,seasonal extension,shared,new store from FY26
+CORSTR01105,Mana Gromor Visakhapatnam 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Visakhapatnam,Visakhapatnam,376565,27/02/2010,hub,shared,district split
+CORSTR01106,Mana Gromor Rajahmundry 2,Mana Gromor,ANDHRA,Andhra Pradesh,East Godavari,Rajahmundry,378054,2009-05-25,satellite,N,brand spelling varies
+CORSTR01107,Mana Gromor Guntur 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,371277,2025-05-28,satellite,N,old store code
+CORSTR01108,Namma Gromor Udupi 6,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,293788,2015-02-24,company owned,shared,new store from FY26
+CORSTR01109,Mana Gromor Guntur 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,378161,2020-04-03,satellite,Y,brand spelling varies
+CORSTR01110,Mana Gromor Kakinada 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,375482,2012-01-05,hub,shared,brand spelling varies
+CORSTR01111,Mana Gromor Anantapur 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,378819,2025-02-13,seasonal extension,N,new store from FY26
+CORSTR01112,Mana Gromor Vijayawada 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,373067,2015-08-05,hub,Y,district split
+CORSTR01113,Mana Gromor Nellore 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Nellore,Nellore,371881,2025-11-14,satellite,N,new store from FY26
+CORSTR01114,Mana Gromor Kurnool 3,Mana Gromor,A.P.,Andhra Pradesh,Kurnool,Kurnool,372147,2013-09-30,satellite,shared,old store code
+CORSTR01115,Nammadu Gromor Salem 1,Nammadu Gromor,Tamil Nadu,Tamil Nadu,Salem,Salem,335230,23/03/2013,company owned,N,new store from FY26
+CORSTR01116,Mana Gromor Suryapet 4,Mana Gromor,Telangana,Telangana,Suryapet,Suryapet,367885,2025-12-27,seasonal extension,shared,new store from FY26
+CORSTR01117,Mana Gromor Vijayawada 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,379023,28/05/2008,company owned,shared,district split
+CORSTR01118,Mana Gromor Guntur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,378847,2020-03-25,company owned,N,old store code
+CORSTR01119,Mana Gromor Khammam 2,Mana Gromor,Telangana,Telangana,Khammam,Khammam,364834,2018-04-10,satellite,Y,old store code
+CORSTR01120,Mana Gromor Vijayawada 2,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Krishna,Vijayawada,373186,2010-07-08,hub,N,new store from FY26
+CORSTR01121,Mana Gromor Nizamabad 4,Mana Gromor,Telangana,Telangana,Nizamabad,Nizamabad,364975,22/12/2017,company owned,shared,
+CORSTR01122,Mana Gromor Rajahmundry 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,373366,05/25/2017,company owned,Y,brand spelling varies
+CORSTR01123,Mana Gromor Kakinada 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kakinada,Kakinada,371101,2024-03-06,hub,shared,old store code
+CORSTR01124,Mana Gromor Rajahmundry 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,374482,2011-07-01,company owned,Y,brand spelling varies
+CORSTR01125,Namma Gromor Kalaburagi 8,Namma Gromor,KA,Karnataka,Kalaburagi,Kalaburagi,294584,2023-06-29,hub,Y,
+CORSTR01126,Mana Gromor Karimnagar 8,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,361009,2014-06-11,hub,shared,district split
+CORSTR01127,Namma Gromor Shivamogga 2,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,297790,2020-09-24,company owned,N,old store code
+CORSTR01128,Namma Gromor Mysuru 2,Namma Gromor,Karnataka,Karnataka,Mysuru,Mysuru,299304,2021-06-14,hub,shared,old store code
+CORSTR01129,Mana Gromor Nalgonda 2,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,361241,2015-12-04,hub,shared,
+CORSTR01130,Namma Gromor Ballari 8,Namma Gromor,KARNATAKA,Karnataka,Ballari,Ballari,292148,10/03/2014,company owned,Y,new store from FY26
+CORSTR01131,Namma Gromor Bengaluru 1,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,292168,2016-08-22,seasonal extension,shared,district split
+CORSTR01132,Namma Gromor Shivamogga 1,Namma Gromor,Karnataka,Karnataka,Shivamogga,Shivamogga,294269,01/03/2017,company owned,shared,district split
+CORSTR01133,Mana Gromor Guntur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Guntur,Guntur,373950,2021-07-21,satellite,shared,district split
+CORSTR01134,Namma Gromor Mangaluru 8,Namma Gromor,Karnataka,Karnataka,Dakshina Kannada,Mangaluru,295200,2008-05-12,company owned,N,brand spelling varies
+CORSTR01135,Namma Gromor Kalaburagi 2,Namma Gromor,Karnataka,Karnataka,Kalaburagi,Kalaburagi,292668,10/05/2012,seasonal extension,N,new store from FY26
+CORSTR01136,Mana Gromor Nalgonda 5,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,367219,2016-05-18,satellite,N,
+CORSTR01137,Mana Gromor Tirupati 8,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,376323,2022-08-09,company owned,N,district split
+CORSTR01138,Mana Gromor Nalgonda 9,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,362320,02/24/2007,seasonal extension,Y,
+CORSTR01139,Mana Gromor Tirupati 5,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Tirupati,Tirupati,378776,2014-05-13,seasonal extension,N,
+CORSTR01140,Mana Gromor Anantapur 6,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,376163,09/03/2007,company owned,Y,old store code
+CORSTR01141,Mana Gromor Rajahmundry 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,375025,2015-07-12,seasonal extension,shared,
+CORSTR01142,Namma Gromor Udupi 8,Namma Gromor,Karnataka,Karnataka,Udupi,Udupi,294228,2023-07-16,satellite,Y,brand spelling varies
+CORSTR01143,Namma Gromor Bengaluru 3,Namma Gromor,Karnataka,Karnataka,Bengaluru Urban,Bengaluru,294155,2025-05-03,company owned,Y,new store from FY26
+CORSTR01144,Namma Gromor Tumakuru 3,Namma Gromor,Karnataka,Karnataka,Tumakuru,Tumakuru,293046,2018-10-07,company owned,shared,old store code
+CORSTR01145,Mana Gromor Warangal 1,Mana Gromor,Telangana,Telangana,Warangal,Warangal,369042,2017-10-13,seasonal extension,Y,district split
+CORSTR01146,Mana Gromor Rajahmundry 1,Mana Gromor,Andhra Pradesh,Andhra Pradesh,East Godavari,Rajahmundry,377104,2026-04-18,hub,N,district split
+CORSTR01147,Mana Gromor Kurnool 4,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Kurnool,Kurnool,378790,2020-10-16,hub,shared,district split
+CORSTR01148,Mana Gromor Karimnagar 8,Mana Gromor,Telangana,Telangana,Karimnagar,Karimnagar,365785,2011-09-28,satellite,Y,new store from FY26
+CORSTR01149,Mana Gromor Anantapur 9,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Anantapur,Anantapur,371390,28/07/2007,company owned,N,district split
+CORSTR01150,Mana Gromor Nalgonda 2,Mana Gromor,Telangana,Telangana,Nalgonda,Nalgonda,363835,2021-10-10,hub,N,
+CORSTR01151,Mana Gromor Ongole 7,Mana Gromor,Andhra Pradesh,Andhra Pradesh,Prakasam,Ongole,378771,2015-03-01,hub,N,new store from FY26

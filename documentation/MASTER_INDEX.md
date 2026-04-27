@@ -8,6 +8,10 @@
 
 
 
+
+
+
+
 ## About
 Churn prediction system with an 8-stage ML pipeline, LLM-based evaluation,
 agent loop, WebSocket chat, and Google OAuth.
@@ -33,9 +37,9 @@ URL: https://churn-tool.onrender.com
 
 ## Project Structure
 
-- **Backend** (`app/`): 27 Python files → [backend/INDEX.md](backend/INDEX.md)
+- **Backend** (`app/`): 36 Python files → [backend/INDEX.md](backend/INDEX.md)
 - **Frontend** (`static/`): 4 files → [frontend/INDEX.md](frontend/INDEX.md)
-- **Config/Other**: 32 files
+- **Config/Other**: 55 files
 
 ### Backend Folders
 
@@ -44,9 +48,10 @@ URL: https://churn-tool.onrender.com
 - `app/auth/` — `config.py`, `dependencies.py`, `router.py`
 - `app/chat/` — `handler.py`, `router.py`
 - `app/db/` — `engine.py`, `models.py`
+- `app/features/` — `tier3_field.py`, `tier3_loyalty.py`, `tier3_master.py`, `tier3_returns.py`, `tier3_service.py`
 - `app/llm/` — `client.py`
 - `app/models/` — `schemas.py`
-- `app/stages/` — `s1_upload.py`, `s2_column_map.py`, `s3_hypothesis.py`, `s4_features.py`, `s5_labels.py`, `s6_train.py`, `s7_results.py`, `s8_inference.py`
+- `app/stages/` — `s1_upload.py`, `s2_column_map.py`, `s3_churn_window.py`, `s3_field_analysis.py`, `s3_hypothesis.py`, `s4_cross_source.py`, `s4_features.py`, `s4_pruning.py`, `s5_labels.py`, `s6_train.py`, `s7_results.py`, `s8_inference.py`
 
 ## API Contract (Backend ↔ Frontend)
 
@@ -56,49 +61,55 @@ URL: https://churn-tool.onrender.com
 | `GET /auth/google` | `login_google()` in `app/auth/router.py` | *no frontend call found* | - |
 | `GET /auth/google/callback` | `auth_google_callback()` in `app/auth/router.py` | *no frontend call found* | - |
 | `GET /auth/me` | `me()` in `app/auth/router.py` | `*/auth/me` | `static/index-old.html:42` |
-| `GET /auth/me` | `me()` in `app/auth/router.py` | `*/auth/me` | `static/index.html:80` |
+| `GET /auth/me` | `me()` in `app/auth/router.py` | `*/auth/me` | `static/index.html:137` |
 | `GET /auth/me` | `me()` in `app/auth/router.py` | `*/auth/me` | `static/prototype-hope.html:77` |
 | `GET /health` | `health()` in `app/main.py` | *no frontend call found* | - |
 | `GET /api/sessions` | `list_sessions()` in `app/main.py` | `*/sessions` | `static/index-old.html:102` |
-| `GET /api/sessions` | `list_sessions()` in `app/main.py` | `*/sessions` | `static/index.html:184` |
-| `GET /api/sessions` | `list_sessions()` in `app/main.py` | `*/sessions` | `static/index.html:265` |
+| `GET /api/sessions` | `list_sessions()` in `app/main.py` | `*/sessions` | `static/index.html:242` |
+| `GET /api/sessions` | `list_sessions()` in `app/main.py` | `*/sessions` | `static/index.html:323` |
 | `GET /api/sessions` | `list_sessions()` in `app/main.py` | `*/sessions` | `static/prototype-hope.html:181` |
 | `GET /api/sessions` | `list_sessions()` in `app/main.py` | `*/sessions` | `static/prototype-hope.html:254` |
 | `GET /api/sessions/{session_id}/agent/status` | `agent_status()` in `app/main.py` | `*/sessions/*/agent/status` | `static/index-old.html:208` |
-| `GET /api/sessions/{session_id}/agent/status` | `agent_status()` in `app/main.py` | `*/sessions/*/agent/status` | `static/index.html:237` |
-| `GET /api/sessions/{session_id}/agent/status` | `agent_status()` in `app/main.py` | `*/sessions/*/agent/status` | `static/index.html:271` |
-| `GET /api/sessions/{session_id}/agent/status` | `agent_status()` in `app/main.py` | `*/sessions/*/agent/status` | `static/index.html:732` |
+| `GET /api/sessions/{session_id}/agent/status` | `agent_status()` in `app/main.py` | `*/sessions/*/agent/status` | `static/index.html:295` |
+| `GET /api/sessions/{session_id}/agent/status` | `agent_status()` in `app/main.py` | `*/sessions/*/agent/status` | `static/index.html:329` |
+| `GET /api/sessions/{session_id}/agent/status` | `agent_status()` in `app/main.py` | `*/sessions/*/agent/status` | `static/index.html:1035` |
 | `GET /api/sessions/{session_id}/agent/status` | `agent_status()` in `app/main.py` | `*/sessions/*/agent/status` | `static/prototype-hope.html:234` |
-| `GET /api/sessions/{session_id}/inference/download` | `inference_download()` in `app/main.py` | `*/sessions/*/inference/download` | `static/index.html:1014` |
+| `GET /api/sessions/{session_id}/cross-file-summary` | `cross_file_summary()` in `app/main.py` | *no frontend call found* | - |
+| `GET /api/sessions/{session_id}/inference/download` | `inference_download()` in `app/main.py` | `*/sessions/*/inference/download` | `static/index.html:1487` |
 | `GET /api/sessions/{session_id}/inference/download` | `inference_download()` in `app/main.py` | `*/sessions/*/inference/download` | `static/prototype-hope.html:903` |
 | `GET /api/sessions/{session_id}/results` | `results()` in `app/main.py` | *no frontend call found* | - |
 | `POST /api/sessions` | `create_session()` in `app/main.py` | `*/sessions` | `static/index-old.html:348` |
-| `POST /api/sessions` | `create_session()` in `app/main.py` | `*/sessions` | `static/index.html:333` |
+| `POST /api/sessions` | `create_session()` in `app/main.py` | `*/sessions` | `static/index.html:436` |
 | `POST /api/sessions` | `create_session()` in `app/main.py` | `*/sessions` | `static/prototype-hope.html:310` |
 | `POST /api/sessions/{session_id}/agent/start` | `start_agent()` in `app/main.py` | `*/sessions/*/agent/start` | `static/index-old.html:566` |
-| `POST /api/sessions/{session_id}/agent/start` | `start_agent()` in `app/main.py` | `*/sessions/*/agent/start` | `static/index.html:612` |
+| `POST /api/sessions/{session_id}/agent/start` | `start_agent()` in `app/main.py` | `*/sessions/*/agent/start` | `static/index.html:890` |
 | `POST /api/sessions/{session_id}/agent/start` | `start_agent()` in `app/main.py` | `*/sessions/*/agent/start` | `static/prototype-hope.html:585` |
 | `POST /api/sessions/{session_id}/agent/stop` | `stop_agent()` in `app/main.py` | *no frontend call found* | - |
 | `POST /api/sessions/{session_id}/column-mapping` | `column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/index-old.html:393` |
-| `POST /api/sessions/{session_id}/column-mapping` | `column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/index.html:345` |
+| `POST /api/sessions/{session_id}/column-mapping` | `column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/index.html:451` |
 | `POST /api/sessions/{session_id}/column-mapping` | `column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/prototype-hope.html:322` |
 | `POST /api/sessions/{session_id}/column-mapping/feedback` | `column_mapping_feedback()` in `app/main.py` | `*/sessions/*/column-mapping/feedback` | `static/index-old.html:446` |
-| `POST /api/sessions/{session_id}/column-mapping/feedback` | `column_mapping_feedback()` in `app/main.py` | `*/sessions/*/column-mapping/feedback` | `static/index.html:455` |
+| `POST /api/sessions/{session_id}/column-mapping/feedback` | `column_mapping_feedback()` in `app/main.py` | `*/sessions/*/column-mapping/feedback` | `static/index.html:620` |
 | `POST /api/sessions/{session_id}/column-mapping/feedback` | `column_mapping_feedback()` in `app/main.py` | `*/sessions/*/column-mapping/feedback` | `static/prototype-hope.html:432` |
 | `POST /api/sessions/{session_id}/features` | `features()` in `app/main.py` | `*/sessions/*/features` | `static/index-old.html:541` |
-| `POST /api/sessions/{session_id}/features` | `features()` in `app/main.py` | `*/sessions/*/features` | `static/index.html:580` |
+| `POST /api/sessions/{session_id}/features` | `features()` in `app/main.py` | `*/sessions/*/features` | `static/index.html:758` |
+| `POST /api/sessions/{session_id}/features` | `features()` in `app/main.py` | `*/sessions/*/features` | `static/index.html:865` |
 | `POST /api/sessions/{session_id}/features` | `features()` in `app/main.py` | `*/sessions/*/features` | `static/prototype-hope.html:557` |
+| `POST /api/sessions/{session_id}/findings/confirm` | `confirm_findings()` in `app/main.py` | `*/sessions/*/findings/confirm` | `static/index.html:837` |
+| `POST /api/sessions/{session_id}/findings/correct` | `correct_findings()` in `app/main.py` | *no frontend call found* | - |
 | `POST /api/sessions/{session_id}/hypothesis` | `hypothesis()` in `app/main.py` | `*/sessions/*/hypothesis` | `static/index-old.html:495` |
-| `POST /api/sessions/{session_id}/hypothesis` | `hypothesis()` in `app/main.py` | `*/sessions/*/hypothesis` | `static/index.html:524` |
+| `POST /api/sessions/{session_id}/hypothesis` | `hypothesis()` in `app/main.py` | `*/sessions/*/hypothesis` | `static/index.html:689` |
 | `POST /api/sessions/{session_id}/hypothesis` | `hypothesis()` in `app/main.py` | `*/sessions/*/hypothesis` | `static/prototype-hope.html:501` |
-| `POST /api/sessions/{session_id}/inference` | `inference()` in `app/main.py` | `*/sessions/*/inference` | `static/index.html:874` |
+| `POST /api/sessions/{session_id}/inference` | `inference()` in `app/main.py` | `*/sessions/*/inference` | `static/index.html:1312` |
 | `POST /api/sessions/{session_id}/inference` | `inference()` in `app/main.py` | `*/sessions/*/inference` | `static/prototype-hope.html:768` |
 | `POST /api/sessions/{session_id}/labels` | `labels()` in `app/main.py` | *no frontend call found* | - |
 | `POST /api/sessions/{session_id}/train` | `train()` in `app/main.py` | *no frontend call found* | - |
 | `POST /api/sessions/multi` | `create_session_multi()` in `app/main.py` | `*/sessions/multi` | `static/index-old.html:367` |
+| `POST /api/sessions/multi` | `create_session_multi()` in `app/main.py` | `*/sessions/multi` | `static/index.html:432` |
+| `POST /api/sessions/multi` | `create_session_multi()` in `app/main.py` | `*/sessions/multi` | `static/index.html:553` |
 | `PUT /api/sessions/{session_id}/column-mapping` | `override_column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/index-old.html:474` |
-| `PUT /api/sessions/{session_id}/column-mapping` | `override_column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/index.html:483` |
-| `PUT /api/sessions/{session_id}/column-mapping` | `override_column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/index.html:503` |
+| `PUT /api/sessions/{session_id}/column-mapping` | `override_column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/index.html:648` |
+| `PUT /api/sessions/{session_id}/column-mapping` | `override_column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/index.html:668` |
 | `PUT /api/sessions/{session_id}/column-mapping` | `override_column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/prototype-hope.html:460` |
 | `PUT /api/sessions/{session_id}/column-mapping` | `override_column_mapping()` in `app/main.py` | `*/sessions/*/column-mapping` | `static/prototype-hope.html:480` |
 | `PUT /api/sessions/{session_id}/name` | `rename_session()` in `app/main.py` | `*/sessions/*/name` | `static/index-old.html:162` |
@@ -107,13 +118,20 @@ URL: https://churn-tool.onrender.com
 ## Configuration & Other Files
 
 ### `.env`
-Environment variables: `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `JWT_SECRET`, `GEMINI_API_KEY`, `GROQ_API_KEY`, `GOOGLE_CHAT_WEBHOOK_URL`, `APP_BASE_URL`
+Environment variables: `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `JWT_SECRET`, `GEMINI_API_KEY`, `GROQ_API_KEY`, `GOOGLE_CHAT_WEBHOOK_URL`, `APP_BASE_URL`, `RENDER_API_KEY`
 
 ### `.env.example`
 Environment variables: `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `JWT_SECRET`, `GEMINI_API_KEY`, `GROQ_API_KEY`, `GOOGLE_CHAT_WEBHOOK_URL`, `APP_BASE_URL`
 
 ### `.gitignore`
-Patterns: 9 entries
+Patterns: 12 entries
+
+### `AGENTS.md`
+- DotAI AutoModel - Churn Prediction ML Tool
+  - Objective
+  - Target Users
+  - Overview
+  - Communication Style
 
 ### `CLAUDE.md`
 - DotAI AutoModel - Churn Prediction ML Tool
@@ -129,12 +147,149 @@ Patterns: 9 entries
     - Three Parsers
     - Output: Tiered Index Files
 
+### `documentation/Evals/Asian_Paints/README.md`
+- Asian Paints Evaluation Dataset
+  - Role
+  - Public scale basis
+  - South operating assumption
+  - Data files
+
+### `documentation/Evals/Asian_Paints/Walktrough.md`
+- Asian Paints Walkthrough - Regional Sales Head Persona
+  - Persona Frame
+  - Source Data Reality
+  - Walkthrough Log
+  - Sales Head Questions
+
+### `documentation/Evals/Asian_Paints/data_dictionary.md`
+- Data Dictionary
+  - Files
+  - secondary_sales.csv
+  - tinting_machine_events.csv
+  - contractor_loyalty_ledger.csv
+
+### `documentation/Evals/Asian_Paints/generation_process.md`
+- Generation Process
+  - Step 1: Start from public scale
+  - Step 2: Define the manager data boundary
+  - Step 3: Choose files from first principles
+  - Step 4: Add churn-relevant behavior
+
+### `documentation/Evals/Asian_Paints/regional_manager_notes.md`
+- Regional Manager Notes
+  - What I have
+  - What I need from a churn system
+  - Data limitations
+
+### `documentation/Evals/CEAT/README.md`
+- CEAT Evaluation Dataset
+  - Role
+  - Public scale basis
+  - South operating assumption
+  - Data files
+
+### `documentation/Evals/CEAT/data_dictionary.md`
+- Data Dictionary
+  - Files
+  - sales_invoices.csv
+  - warranty_registrations.csv
+  - claims.csv
+
+### `documentation/Evals/CEAT/generation_process.md`
+- Generation Process
+  - Step 1: Start from public scale
+  - Step 2: Define the manager data boundary
+  - Step 3: Choose files from first principles
+  - Step 4: Add churn-relevant behavior
+
+### `documentation/Evals/CEAT/regional_manager_notes.md`
+- Regional Manager Notes
+  - What I have
+  - What I need from a churn system
+  - Data limitations
+
+### `documentation/Evals/Coromandel_International/README.md`
+- Coromandel International Evaluation Dataset
+  - Role
+  - Public scale basis
+  - South operating assumption
+  - Data files
+
+### `documentation/Evals/Coromandel_International/data_dictionary.md`
+- Data Dictionary
+  - Files
+  - transactions.csv
+  - soil_tests.csv
+  - drone_sprays.csv
+
+### `documentation/Evals/Coromandel_International/generation_process.md`
+- Generation Process
+  - Step 1: Start from public scale
+  - Step 2: Define the manager data boundary
+  - Step 3: Choose files from first principles
+  - Step 4: Add churn-relevant behavior
+
+### `documentation/Evals/Coromandel_International/regional_manager_notes.md`
+- Regional Manager Notes
+  - What I have
+  - What I need from a churn system
+  - Data limitations
+
+### `documentation/Evals/GuideToGenerateNewData.md`
+- Guide To Generate New Evaluation Data
+  - Output
+  - Step 1: Pick The Company
+  - Step 2: Source Public Scale
+  - Step 3: Roleplay The Regional Sales Head
+
+### `documentation/Evals/Pidilite_Industries/README.md`
+- Pidilite Industries Evaluation Dataset
+  - Role
+  - Public scale basis
+  - South operating assumption
+  - Data files
+
+### `documentation/Evals/Pidilite_Industries/data_dictionary.md`
+- Data Dictionary
+  - Files
+  - dealer_master.csv / outlet_master.csv
+  - primary_sales.csv
+  - credit_aging.csv
+
+### `documentation/Evals/Pidilite_Industries/generation_process.md`
+- Generation Process
+  - Step 1: Start from public scale
+  - Step 2: Define the manager data boundary
+  - Step 3: Choose files from first principles
+  - Step 4: Add churn-relevant behavior
+
+### `documentation/Evals/Pidilite_Industries/regional_manager_notes.md`
+- Regional Manager Notes
+  - What I have
+  - What I need from a churn system
+  - Data limitations
+
+### `documentation/Evals/README.md`
+- Evals
+  - Companies
+  - Design rule
+  - Generated files
+
 ### `documentation/MASTER_INDEX.md`
 - Project Index — DotAI AutoModel
   - About
   - How to Run
   - How to Test
   - How to Deploy
+
+### `documentation/Roadmap/SOTA.md`
+
+### `documentation/Roadmap/changesProposedbyCodex.md`
+- Changes Proposed by Codex
+  - Objective
+  - Feature-Level Change List
+    - 1. Add A Temporal Validation Harness
+    - 2. Redesign Churn Target Selection
 
 ### `documentation/TargetMarket/CompanyList.md`
 - Indian Companies Selling Physical Products — Revenue > 1,000 Cr
@@ -282,6 +437,13 @@ Patterns: 9 entries
   - `app/`
     - `main.py`
     - `notifications.py`
+
+### `documentation/claude-autodoc-launch-plan.md`
+- claude-autodoc Launch Plan
+  - Pre-launch: Repo improvements
+  - Week 1: Initial launch
+  - Week 2: Content
+  - Week 3: Video
 
 ### `documentation/frontend/INDEX.md`
 - Frontend Index

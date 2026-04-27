@@ -1,0 +1,34 @@
+sku_id,legacy_sku_code,category,sku_name,pack_size,uom,mrp,active_flag
+PID0001,PID-2935,Adhesives,Fevicol SH,large,BAG,8868.31,Y
+PID0002,PID-2560,Adhesives,Fevicol MR,bulk,EA,7818.71,N
+PID0003,PID-2141,Adhesives,Fevicol MR,small,SET,5016.02,N
+PID0004,PID-8644,Adhesives,Fevicol MR,large,KG,6251.91,Y
+PID0005,PID-4256,Adhesives,Fevicol Marine,bulk,BAG,2071.80,Y
+PID0006,PID-1495,Adhesives,Fevikwik,small,LTR,2796.55,Y
+PID0007,PID-8076,Adhesives,Fevistik,small,SET,1346.50,Y
+PID0008,PID-2982,Adhesives,Fevistik,large,LTR,979.92,N
+PID0009,PID-1815,Waterproofing,Dr Fixit LW Plus,small,BAG,8306.86,Y
+PID0010,PID-7447,Waterproofing,Dr Fixit Roofseal,medium,LTR,5363.41,Y
+PID0011,PID-7562,Waterproofing,Dr Fixit Roofseal,small,EA,5833.80,Y
+PID0012,PID-2511,Waterproofing,Dr Fixit Roofseal,bulk,EA,4727.55,N
+PID0013,,Waterproofing,Dr Fixit Pidifin,large,EA,4813.96,Y
+PID0014,PID-8286,Waterproofing,Dr Fixit Raincoat,small,SET,3525.05,N
+PID0015,PID-2024,Construction chemicals,Roff Tile Adhesive,medium,KG,3753.07,Y
+PID0016,PID-3476,Construction chemicals,Roff Tile Adhesive,small,EA,1275.62,Y
+PID0017,PID-1066,Construction chemicals,Roff Tile Adhesive,large,KG,7859.65,Y
+PID0018,PID-4981,Construction chemicals,Roff Grout,bulk,BOX,7423.46,Y
+PID0019,PID-7890,Construction chemicals,Roff Grout,large,BAG,4757.86,Y
+PID0020,PID-8023,Construction chemicals,Roff Grout,medium,KG,5318.89,Y
+PID0021,PID-4583,Construction chemicals,M-Seal,bulk,LTR,3494.29,Y
+PID0022,PID-2932,Construction chemicals,M-Seal,medium,LTR,8700.37,Y
+PID0023,PID-3379,Construction chemicals,M-Seal,small,LTR,5975.02,N
+PID0024,PID-4625,Construction chemicals,Fevimate,bulk,KG,2200.34,Y
+PID0025,PID-3057,Construction chemicals,Fevimate,medium,SET,850.16,Y
+PID0026,PID-6322,Art and craft,Fevicryl,medium,KG,338.74,Y
+PID0027,PID-9727,Art and craft,Fevicryl,bulk,BOX,4900.71,N
+PID0028,PID-3120,Art and craft,Hobby Ideas Kit,large,BOX,6510.34,Y
+PID0029,PID-2297,Art and craft,Hobby Ideas Kit,bulk,EA,8560.44,N
+PID0030,PID-7520,Art and craft,Hobby Ideas Kit,medium,BAG,6618.21,N
+PID0031,PID-9765,Art and craft,Rangeela,small,KG,8468.09,Y
+PID0032,PID-5209,Art and craft,Rangeela,bulk,KG,8599.48,Y
+PID0033,PID-5627,Art and craft,Rangeela,medium,BAG,5705.43,Y

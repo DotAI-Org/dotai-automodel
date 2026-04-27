@@ -1,0 +1,34 @@
+sku_id,legacy_sku_code,category,sku_name,pack_size,uom,mrp,active_flag
+COR0001,COR-4768,Fertiliser,Gromor 28-28-0,bulk,BAG,6008.97,Y
+COR0002,COR-4109,Fertiliser,Gromor 14-35-14,bulk,BOX,8648.44,Y
+COR0003,COR-1793,Fertiliser,DAP,large,EA,6205.09,Y
+COR0004,COR-6309,Fertiliser,Urea,large,KG,825.10,N
+COR0005,COR-8095,Fertiliser,Urea,bulk,EA,5656.20,Y
+COR0006,COR-6170,Fertiliser,Urea,small,SET,8867.21,Y
+COR0007,COR-6385,Fertiliser,Potash,bulk,SET,1952.54,Y
+COR0008,COR-9265,Fertiliser,Potash,medium,LTR,2783.15,Y
+COR0009,COR-1040,Specialty nutrients,Gromor Spray,medium,BAG,2985.92,Y
+COR0010,COR-1722,Specialty nutrients,Gromor Spray,small,EA,2436.60,Y
+COR0011,COR-7776,Specialty nutrients,Gromor Spray,bulk,BOX,4327.55,Y
+COR0012,COR-4388,Specialty nutrients,Zinc Sulphate,large,KG,4613.60,N
+COR0013,COR-1782,Specialty nutrients,Zinc Sulphate,small,BOX,937.06,Y
+COR0014,COR-4647,Specialty nutrients,Water soluble NPK,medium,SET,5730.74,Y
+COR0015,COR-6738,Specialty nutrients,Water soluble NPK,large,BOX,1209.28,Y
+COR0016,N/A,Specialty nutrients,Bentonite Sulphur,large,EA,3416.11,N
+COR0017,COR-9502,Specialty nutrients,Bentonite Sulphur,small,SET,5545.15,Y
+COR0018,COR-5846,Crop protection,Insecticide A,medium,BOX,4970.94,Y
+COR0019,COR-1191,Crop protection,Insecticide A,large,BOX,5780.14,N
+COR0020,N/A,Crop protection,Fungicide B,small,KG,6371.45,Y
+COR0021,COR-1956,Crop protection,Fungicide B,large,LTR,7179.00,Y
+COR0022,COR-5101,Crop protection,Fungicide B,bulk,SET,2419.38,Y
+COR0023,COR-3408,Crop protection,Herbicide C,bulk,LTR,7445.08,Y
+COR0024,COR-5851,Crop protection,Herbicide C,medium,LTR,6927.18,N
+COR0025,COR-8745,Crop protection,Seed treatment D,bulk,SET,2250.34,Y
+COR0026,COR-5804,Organic and bio,City Compost,medium,SET,1238.49,Y
+COR0027,COR-3718,Organic and bio,Neem Cake,medium,KG,7903.96,Y
+COR0028,,Organic and bio,Neem Cake,bulk,EA,3086.29,Y
+COR0029,COR-6410,Organic and bio,Bio stimulant,small,SET,2814.88,Y
+COR0030,COR-9868,Organic and bio,Bio stimulant,bulk,LTR,5171.06,Y
+COR0031,COR-1597,Organic and bio,Bio stimulant,large,BAG,1419.26,Y
+COR0032,COR-7788,Organic and bio,Mycorrhiza,medium,BAG,4122.06,Y
+COR0033,COR-4012,Organic and bio,Mycorrhiza,small,EA,8880.55,Y

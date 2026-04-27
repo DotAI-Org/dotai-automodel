@@ -1,0 +1,321 @@
+fleet_id,fleet_name,mapped_dealer_id,state,city,vehicle_count,segment,contract_status,last_review_date,note
+CEAFLEET00001,Murugan Venkatesh Fertilisers,CEADLR000587,Tamil Nadu,Kanchipuram,217,Bus,rate negotiation,2025-08-19,OEM fitment
+CEAFLEET00002,Mahalakshmi Farida Logistics,CEADLR000104,Telangana,Karimnagar,87,Bus,expired,2024-05-25,claims pending
+CEAFLEET00003,Metro Naveen Enterprises,CEADLR000287,Karnataka,Mysuru,334,Agri,rate negotiation,2025-08-12,price pressure
+CEAFLEET00004,Ganesh Arun Logistics,CEADLR000059,AP,Ongole,616,Mining,rate negotiation,09/12/2024,OEM fitment
+CEAFLEET00005,Shree Lokesh Agencies,CEADLR000412,Kerala,Kozhikode,359,LCV,rate negotiation,2024-07-02,
+CEAFLEET00006,Shree Hari Corporation,CEADLR000067,Tamil Nadu,Chennai,626,Agri,active,30/06/2024,claims pending
+CEAFLEET00007,SREE FARIDA DISTRIBUTORS,CEADLR000177,Andhra Pradesh,Visakhapatnam,183,Mining,trial,2024-09-09,OEM fitment
+CEAFLEET00008,Kaveri Anand Depot,CEADLR000327,Tamilnadu,Kanchipuram,411,Bus,trial,28/11/2025,competitor test running
+CEAFLEET00009,Modern Rafiq Traders,CEADLR000152,Kerala,Kochi,391,Mining,expired,2025-11-30,OEM fitment
+CEAFLEET00010,Modern Prakash Logistics,CEADLR000186,Tamil Nadu,Trichy,55,Mining,rate negotiation,2025-01-06,OEM fitment
+CEAFLEET00011,Modern Venkatesh Logistics,CEADLR000109,TAMILNADU,Kanchipuram,316,Mining,trial,2024-10-14,competitor test running
+CEAFLEET00012,Ganesh Geetha Paints,CEADLR000038,Telangana,Mahbubnagar,516,Agri,expired,2025-10-30,claims pending
+CEAFLEET00013,United Hari Logistics,CEADLR000206,A.P.,Rajahmundry,185,Mining,rate negotiation,2024-10-25,
+CEAFLEET00014,Kaveri Jagan Sales,CEADLR000254,Tamil Nadu,Madurai,448,LCV,trial,22/11/2024,OEM fitment
+CEAFLEET00015,Lucky Naveen Services,CEADLR000441,Telangana,Hyderabad,407,Truck,rate negotiation,2025-04-16,claims pending
+CEAFLEET00016,Vijaya Sanjay Corporation,CEADLR000288,Tamil Nadu,Thanjavur,539,Taxi,expired,05/04/2025,OEM fitment
+CEAFLEET00017,Kaveri Priya Distributors,CEADLR000114,Tamil Nadu,Trichy,352,Truck,expired,2025-07-16,competitor test running
+CEAFLEET00018,United Hari Distributors,CEADLR000541,Karnataka,Davanagere,559,Agri,trial,2025-05-29,OEM fitment
+CEAFLEET00019,Metro Farida Corporation,CEADLR000122,Karnataka,Mysuru,275,LCV,rate negotiation,2024-06-25,competitor test running
+CEAFLEET00020,Murugan Lakshmi Logistics,CEADLR000440,Telangana,Adilabad,58,Truck,expired,2024-12-03,price pressure
+CEAFLEET00021,Sri Yusuf Tyres,CEADLR000662,Kerala,Thiruvananthapuram,296,Mining,trial,2024-09-03,
+CEAFLEET00022,Metro Bala Logistics,CEADLR000639,Tamil Nadu,Tirunelveli,373,Mining,trial,2025-03-17,OEM fitment
+CEAFLEET00023,Modern Hari Corporation,CEADLR000702,Karnataka,Shivamogga,374,Bus,lost,2025-07-19,claims pending
+CEAFLEET00024,Kaveri Karthik Logistics,CEADLR000348,Andhra Pradesh,Rajahmundry,29,LCV,expired,2026-02-02,
+CEAFLEET00025,CITY SURESH TRADERS,CEADLR000446,KA,Tumakuru,203,LCV,expired,2024-07-26,OEM fitment
+CEAFLEET00026,National Suresh Logistics,CEADLR000700,Andhra Pradesh,Ongole,590,Truck,active,23/09/2025,price pressure
+CEAFLEET00027,United Suresh Distributors Pvt,CEADLR000572,Karnataka,Mysuru,58,LCV,lost,2025-01-27,competitor test running
+CEAFLEET00028,GANESH PRIYA HARDWARE,CEADLR000139,Tamil Nadu,Tirunelveli,128,Mining,trial,2024-12-15,OEM fitment
+CEAFLEET00029,Kaveri Anand Logistics,CEADLR000531,Kerala,Kannur,350,Bus,active,2025-11-09,price pressure
+CEAFLEET00030,Star Hari Traders,CEADLR000437,Karnataka,Hubballi,281,Mining,expired,2025-10-24,competitor test running
+CEAFLEET00031,National Bala Distributors,CEADLR000649,Andhra Pradesh,Ongole,13,LCV,lost,2025-08-15,price pressure
+CEAFLEET00032,Balaji Sowmya Tyres,CEADLR000708,Karnataka,Udupi,178,LCV,active,2024-04-23,competitor test running
+CEAFLEET00033,Sri Irfan Traders,CEADLR000737,Karnataka,Davanagere,631,Agri,rate negotiation,2024-11-23,competitor test running
+CEAFLEET00034,Kaveri Geetha Logistics,CEADLR000650,Andhra Pradesh,Ongole,366,LCV,active,01/07/2025,OEM fitment
+CEAFLEET00035,Kaveri Rafiq Logistics,CEADLR000280,Kerala,Kannur,233,Bus,rate negotiation,01/25/2026,competitor test running
+CEAFLEET00036,Metro Bala Logistics,CEADLR000452,Andhra Pradesh,Anantapur,648,Mining,expired,2025-10-26,competitor test running
+CEAFLEET00037,SREE JAGAN HARDWARE,CEADLR000589,Tamil Nadu,Tirunelveli,622,Truck,rate negotiation,08/05/2025,competitor test running
+CEAFLEET00038,Kaveri Lokesh Logistics,CEADLR000577,Telangana,Warangal,196,Truck,rate negotiation,2025-04-17,competitor test running
+CEAFLEET00039,Sree Geetha Logistics,CEADLR000074,Puducherry,Puducherry,587,Truck,active,2025-08-29,price pressure
+CEAFLEET00040,Vijaya Naveen Logistics,CEADLR000443,Andhra Pradesh,Nellore,99,Truck,active,06/28/2024,OEM fitment
+CEAFLEET00041,Shree Priya Stores,CEADLR000745,Karnataka,Raichur,35,Mining,expired,2025-09-21,OEM fitment
+CEAFLEET00042,Metro Yusuf Logistics Pvt,CEADLR000320,Andhra Pradesh,Kakinada,391,Agri,rate negotiation,2026-03-12,OEM fitment
+CEAFLEET00043,Sree Suresh Traders,CEADLR000541,Andhra Pradesh,Anantapur,257,Bus,active,2024-12-26,competitor test running
+CEAFLEET00044,National Priya Associates Ltd,CEADLR000664,Andhra Pradesh,Visakhapatnam,467,LCV,lost,2025-05-11,price pressure
+CEAFLEET00045,Lucky Bala Traders,CEADLR000648,Andhra Pradesh,Kurnool,582,LCV,trial,07-Sep-24,
+CEAFLEET00046,Vijaya Anand Tyres,CEADLR000018,TELANGANA,Siddipet,32,LCV,lost,2024-10-31,competitor test running
+CEAFLEET00047,Ganesh Farida Associates,CEADLR000524,Telangana,Warangal,493,Taxi,expired,22-Aug-25,OEM fitment
+CEAFLEET00048,Royal Suresh Tyres,CEADLR000630,Karnataka,Udupi,586,Taxi,active,2024-05-03,claims pending
+CEAFLEET00049,National Senthil Fertilisers,CEADLR000040,Karnataka,Shivamogga,124,Agri,trial,2024-05-24,
+CEAFLEET00050,Metro Lakshmi Hardware,CEADLR000140,Tamil Nadu,Madurai,615,Bus,lost,06/03/2025,OEM fitment
+CEAFLEET00051,United Prakash Logistics,CEADLR000001,KL,Kollam,24,Taxi,lost,2024-12-14,price pressure
+CEAFLEET00052,STAR KARTHIK FERTILISERS,CEADLR000577,Karnataka,Ballari,36,Truck,lost,2025-02-01,OEM fitment
+CEAFLEET00053,Metro Naveen Fertilisers,CEADLR000747,Karnataka,Mangaluru,507,Agri,lost,02/12/2025,OEM fitment
+CEAFLEET00054,Shree Deepak Distributors,CEADLR000580,Karnataka,Mangaluru,577,Taxi,active,2024-10-13,OEM fitment
+CEAFLEET00055,Kaveri Lokesh Hardware,CEADLR000621,Karnataka,Davanagere,484,Bus,lost,2025-12-21,OEM fitment
+CEAFLEET00056,Shree Rafiq Distributors,CEADLR000626,Telangana,Nizamabad,270,LCV,rate negotiation,10/03/2025,competitor test running
+CEAFLEET00057,Star Karthik Stores,CEADLR000059,KERALA,Kozhikode,548,Agri,trial,31/12/2024,
+CEAFLEET00058,CITY SENTHIL FERTILISERS,CEADLR000513,Andhra Pradesh,Rajahmundry,458,Mining,rate negotiation,2025-12-19,
+CEAFLEET00059,Modern Deepak Stores,CEADLR000676,Tamil Nadu,Trichy,92,Bus,trial,2024-04-21,price pressure
+CEAFLEET00060,Mahalakshmi Bala Distributors,CEADLR000035,Telangana,Mahbubnagar,90,Mining,lost,2024-09-28,competitor test running
+CEAFLEET00061,Ganesh Priya Stores,CEADLR000466,Karnataka,Tumakuru,642,Truck,expired,25/04/2024,claims pending
+CEAFLEET00062,Shree Naveen Depot,CEADLR000540,Telangana,Nizamabad,218,Bus,rate negotiation,2025-09-08,competitor test running
+CEAFLEET00063,Ganesh Sanjay Mart,CEADLR000663,Karnataka,Davanagere,399,LCV,trial,18/03/2025,price pressure
+CEAFLEET00064,National Farida Logistics,CEADLR000578,KL,Thiruvananthapuram,304,Truck,trial,06/18/2025,competitor test running
+CEAFLEET00065,Star Rafiq Services,CEADLR000361,Tamil Nadu,Vellore,601,Mining,lost,25/08/2025,
+CEAFLEET00066,Balaji Sowmya Agro,CEADLR000342,Tamil Nadu,Chennai,409,Truck,expired,2024-10-25,OEM fitment
+CEAFLEET00067,Ganesh Sowmya Hardware,CEADLR000379,Andhra Pradesh,Guntur,277,Truck,active,2026-03-18,OEM fitment
+CEAFLEET00068,United Deepak Chemicals,CEADLR000350,Kerala,Thrissur,558,LCV,expired,2024-08-13,competitor test running
+CEAFLEET00069,Mahalakshmi Naveen Corporation,CEADLR000633,Andhra Pradesh,Guntur,78,Truck,rate negotiation,2024-10-19,OEM fitment
+CEAFLEET00070,United Manoj Logistics,CEADLR000661,Telangana,Karimnagar,553,Agri,rate negotiation,11/17/2024,competitor test running
+CEAFLEET00071,Modern Manoj Agencies,CEADLR000602,Andhra Pradesh,Nellore,268,Bus,expired,2024-04-28,competitor test running
+CEAFLEET00072,Lucky Manoj Logistics,CEADLR000357,TG,Warangal,278,Truck,rate negotiation,12/11/2025,competitor test running
+CEAFLEET00073,Metro Farida Logistics,CEADLR000580,Andhra Pradesh,Tirupati,168,Truck,active,2024-09-18,claims pending
+CEAFLEET00074,Vijaya Deepak Paints,CEADLR000605,Karnataka,Bengaluru,169,Mining,expired,11/15/2025,price pressure
+CEAFLEET00075,City Hari Logistics,CEADLR000164,Karnataka,Kalaburagi,357,Truck,trial,21-Feb-25,competitor test running
+CEAFLEET00076,Prime Ganesh Tyres,CEADLR000154,TS,Nalgonda,285,Bus,rate negotiation,2026-02-01,price pressure
+CEAFLEET00077,Prime Irfan Logistics,CEADLR000221,Tamil Nadu,Thanjavur,433,Taxi,active,2025-06-08,OEM fitment
+CEAFLEET00078,Prime Anand Agro,CEADLR000737,KA,Ballari,509,Agri,rate negotiation,2025-03-01,
+CEAFLEET00079,Metro Deepak Chemicals,CEADLR000264,KA,Shivamogga,283,Agri,rate negotiation,2024-07-13,
+CEAFLEET00080,Vijaya Irfan Services,CEADLR000031,Kerala,Alappuzha,208,Taxi,rate negotiation,2024-08-09,claims pending
+CEAFLEET00081,Lucky Priya Hardware,CEADLR000134,Andhra Pradesh,Ongole,537,Taxi,active,2024-10-15,price pressure
+CEAFLEET00082,Modern Venkatesh Corporation,CEADLR000383,Tamil Nadu,Vellore,40,Bus,rate negotiation,2025-07-15,
+CEAFLEET00083,Lucky Suresh Logistics,CEADLR000138,Andhra Pradesh,Anantapur,324,Taxi,lost,2025-04-25,claims pending
+CEAFLEET00084,Vijaya Geetha Depot,CEADLR000383,Andhra Pradesh,Tirupati,499,Mining,expired,2025-08-21,competitor test running
+CEAFLEET00085,Ganesh Geetha Mart,CEADLR000593,Puducherry,Puducherry,313,Bus,trial,2024-06-09,claims pending
+CEAFLEET00086,Balaji Meena Corporation,CEADLR000511,Telangana,Hyderabad,615,Bus,active,06/28/2025,price pressure
+CEAFLEET00087,New Meena Corporation,CEADLR000454,Karnataka,Udupi,367,Mining,lost,2025-11-06,OEM fitment
+CEAFLEET00088,Sree Yusuf Tyres,CEADLR000730,Karnataka,Shivamogga,98,Agri,trial,2024-11-24,claims pending
+CEAFLEET00089,Lucky Rafiq Agencies,CEADLR000219,Tamil Nadu,Kanchipuram,543,LCV,trial,20-Jun-25,OEM fitment
+CEAFLEET00090,Star Arun Mart,CEADLR000600,Karnataka,Davanagere,279,LCV,expired,08/18/2025,price pressure
+CEAFLEET00091,Sri Lakshmi Logistics,CEADLR000052,Karnataka,Belagavi,438,Truck,rate negotiation,2025-04-24,claims pending
+CEAFLEET00092,Metro Arun Services,CEADLR000454,Karnataka,Tumakuru,383,Taxi,lost,28-May-25,price pressure
+CEAFLEET00093,Murugan Prakash Hardware,CEADLR000311,TAMILNADU,Thanjavur,606,Agri,trial,08/18/2024,price pressure
+CEAFLEET00094,National Kavya Sales,CEADLR000385,Kerala,Kannur,63,Bus,trial,2025-02-04,
+CEAFLEET00095,Modern Lakshmi Mart,CEADLR000187,Kerala,Kochi,17,Mining,active,2025-07-07,claims pending
+CEAFLEET00096,New Kavya Agencies,CEADLR000532,TG,Nizamabad,425,Taxi,trial,2025-11-13,competitor test running
+CEAFLEET00097,Balaji Anand Tyres,CEADLR000006,Karnataka,Kalaburagi,163,Agri,active,2024-11-29,claims pending
+CEAFLEET00098,Mahalakshmi Venkatesh Hardware,CEADLR000107,Andhra Pradesh,Anantapur,504,Mining,expired,04/11/2024,price pressure
+CEAFLEET00099,United Lakshmi Sales,CEADLR000369,Karnataka,Mangaluru,218,LCV,rate negotiation,2024-08-02,
+CEAFLEET00100,City Chandra Associates,CEADLR000151,Andhra Pradesh,Kakinada,48,LCV,active,08/08/2025,
+CEAFLEET00101,Murugan Ganesh Logistics,CEADLR000488,KERALA,Palakkad,444,LCV,active,2025-02-23,competitor test running
+CEAFLEET00102,NATIONAL KAVYA LOGISTICS,CEADLR000447,KL,Kannur,426,Agri,trial,2025-02-13,competitor test running
+CEAFLEET00103,UNITED RAFIQ TRADERS,CEADLR000622,Tamil Nadu,Hosur,622,LCV,active,2025-10-16,price pressure
+CEAFLEET00104,Mahalakshmi Karthik Mart,CEADLR000619,Andhra Pradesh,Visakhapatnam,312,Agri,trial,2024-12-30,OEM fitment
+CEAFLEET00105,Vijaya Yusuf Logistics,CEADLR000650,Andhra Pradesh,Ongole,561,Agri,rate negotiation,01/11/2025,competitor test running
+CEAFLEET00106,Balaji Irfan Depot,CEADLR000394,Telangana,Hyderabad,592,Taxi,trial,2025-05-29,competitor test running
+CEAFLEET00107,Sree Farida Agro,CEADLR000150,Karnataka,Davanagere,95,Bus,trial,16/03/2025,price pressure
+CEAFLEET00108,Sree Revathi Fertilisers,CEADLR000125,Kerala,Kottayam,150,Truck,trial,02/10/2026,OEM fitment
+CEAFLEET00109,Prime Rafiq Logistics,CEADLR000669,Karnataka,Raichur,153,Taxi,rate negotiation,2025-03-07,claims pending
+CEAFLEET00110,Vijaya Bala Distributors & Co,CEADLR000222,Karnataka,Bengaluru,288,LCV,trial,2025-01-25,competitor test running
+CEAFLEET00111,Prime Meena Enterprises,CEADLR000688,TS,Warangal,592,LCV,rate negotiation,05/01/2025,competitor test running
+CEAFLEET00112,Sri Revathi Enterprises,CEADLR000207,Tamil Nadu,Madurai,476,Bus,lost,11/30/2025,OEM fitment
+CEAFLEET00113,Lucky Sowmya Traders,CEADLR000122,Telangana,Siddipet,262,Truck,active,2025-08-26,OEM fitment
+CEAFLEET00114,Shree Anand Logistics,CEADLR000479,KA,Kalaburagi,644,Taxi,rate negotiation,2024-04-19,
+CEAFLEET00115,Metro Sanjay Logistics,CEADLR000328,Telangana,Nizamabad,176,Taxi,expired,2024-04-19,
+CEAFLEET00116,City Prakash Agencies,CEADLR000552,Tamil Nadu,Vellore,242,Bus,active,2024-11-28,competitor test running
+CEAFLEET00117,Lucky Prakash Hardware,CEADLR000457,Telangana,Nalgonda,480,Truck,expired,2024-04-01,competitor test running
+CEAFLEET00118,United Hari Logistics,CEADLR000040,Andhra Pradesh,Kakinada,55,Bus,lost,2025-08-24,competitor test running
+CEAFLEET00119,Kaveri Sanjay Sales Pvt,CEADLR000426,Karnataka,Belagavi,349,Agri,active,2025-09-19,
+CEAFLEET00120,Sri Revathi Tyres,CEADLR000639,TN,Erode,119,LCV,trial,2025-08-29,price pressure
+CEAFLEET00121,City Karthik Corporation,CEADLR000662,Tamil Nadu,Coimbatore,417,LCV,expired,25/04/2024,competitor test running
+CEAFLEET00122,Metro Sanjay Logistics,CEADLR000186,AP,Kakinada,607,Truck,trial,2024-08-09,competitor test running
+CEAFLEET00123,Balaji Deepak Mart,CEADLR000331,Karnataka,Kalaburagi,89,Taxi,trial,11/26/2025,
+CEAFLEET00124,Vijaya Prakash Mart,CEADLR000671,Tamil Nadu,Thanjavur,83,Mining,active,2025-11-12,competitor test running
+CEAFLEET00125,Royal Chandra Logistics,CEADLR000522,KA,Mangaluru,184,Agri,expired,07-Apr-25,
+CEAFLEET00126,National Yusuf Chemicals,CEADLR000473,Tamilnadu,Trichy,258,LCV,expired,2025-04-15,competitor test running
+CEAFLEET00127,Murugan Senthil Distributors,CEADLR000162,Telangana,Warangal,437,Taxi,trial,12/10/2024,
+CEAFLEET00128,Mahalakshmi Anand Agro,CEADLR000485,Tamil Nadu,Madurai,407,Bus,rate negotiation,2025-01-12,claims pending
+CEAFLEET00129,Prime Rafiq Corporation,CEADLR000749,Tamil Nadu,Cuddalore,609,Mining,rate negotiation,07/04/2024,claims pending
+CEAFLEET00130,Star Karthik Mart,CEADLR000278,Tamil Nadu,Madurai,171,Bus,lost,2024-12-06,competitor test running
+CEAFLEET00131,Balaji Senthil Logistics,CEADLR000177,Telangana,Hyderabad,378,LCV,lost,2024-07-24,competitor test running
+CEAFLEET00132,Shree Bala Distributors,CEADLR000030,Karnataka,Mysuru,43,Agri,lost,2026-02-12,price pressure
+CEAFLEET00133,Metro Karthik Enterprises,CEADLR000516,Kerala,Kochi,368,Bus,expired,2024-10-01,competitor test running
+CEAFLEET00134,Mahalakshmi Jagan Associates,CEADLR000451,Karnataka,Bengaluru,461,Truck,trial,2024-09-14,competitor test running
+CEAFLEET00135,SRI GEETHA ASSOCIATES,CEADLR000692,Kerala,Kottayam,237,Truck,expired,2025-05-17,
+CEAFLEET00136,National Geetha Services,CEADLR000297,Tamil Nadu,Chennai,420,Taxi,active,2025-08-06,claims pending
+CEAFLEET00137,KAVERI IRFAN CORPORATION,CEADLR000445,Tamil Nadu,Trichy,223,Agri,active,2024-05-01,claims pending
+CEAFLEET00138,MODERN SENTHIL ASSOCIATES,CEADLR000236,Andhra Pradesh,Nellore,173,LCV,trial,2025-07-05,OEM fitment
+CEAFLEET00139,Mahalakshmi Lakshmi Agro,CEADLR000408,Telangana,Nizamabad,191,Truck,active,13-Jun-25,competitor test running
+CEAFLEET00140,Balaji Bala Hardware,CEADLR000566,Andhra Pradesh,Rajahmundry,269,Agri,active,15/07/2025,competitor test running
+CEAFLEET00141,Kaveri Revathi Sales,CEADLR000484,Tamil Nadu,Cuddalore,158,Truck,rate negotiation,2025-07-31,competitor test running
+CEAFLEET00142,Star Anand Enterprises,CEADLR000286,Telangana,Nalgonda,186,LCV,trial,05-Sep-25,price pressure
+CEAFLEET00143,Vijaya Meena Chemicals,CEADLR000385,Andhra Pradesh,Kurnool,594,Taxi,rate negotiation,2024-07-11,claims pending
+CEAFLEET00144,Murugan Revathi Fertilisers,CEADLR000542,Tamil Nadu,Trichy,53,Truck,expired,2025-08-30,price pressure
+CEAFLEET00145,Mahalakshmi Priya Agencies,CEADLR000273,Tamil Nadu,Thanjavur,9,Bus,rate negotiation,2025-09-10,claims pending
+CEAFLEET00146,UNITED RAFIQ LOGISTICS,CEADLR000109,Kerala,Kochi,490,LCV,rate negotiation,2026-02-21,claims pending
+CEAFLEET00147,Sri Sowmya Distributors,CEADLR000288,Tamil Nadu,Thanjavur,419,Truck,active,2024-04-30,competitor test running
+CEAFLEET00148,Ganesh Meena Enterprises,CEADLR000042,Andhra Pradesh,Rajahmundry,433,LCV,lost,2025-03-09,competitor test running
+CEAFLEET00149,Sree Ganesh Associates,CEADLR000302,Tamil Nadu,Hosur,37,Agri,expired,2024-10-30,OEM fitment
+CEAFLEET00150,Lucky Priya Tyres,CEADLR000246,Kerala,Thiruvananthapuram,95,Bus,lost,20-Aug-24,
+CEAFLEET00151,Sri Revathi Traders,CEADLR000622,Tamil Nadu,Tirunelveli,516,Mining,trial,2025-04-05,OEM fitment
+CEAFLEET00152,Ganesh Prakash Sales,CEADLR000148,Telangana,Khammam,63,Taxi,expired,2025-08-20,competitor test running
+CEAFLEET00153,Royal Meena Logistics,CEADLR000312,Telangana,Nizamabad,175,Truck,trial,2025-12-06,competitor test running
+CEAFLEET00154,Modern Hari Hardware,CEADLR000010,Kerala,Alappuzha,417,LCV,trial,07/07/2024,competitor test running
+CEAFLEET00155,Prime Irfan Fertilisers,CEADLR000479,Andhra Pradesh,Visakhapatnam,319,Agri,lost,2025-12-10,
+CEAFLEET00156,United Naveen Mart,CEADLR000694,Karnataka,Udupi,551,Truck,active,2025-05-06,claims pending
+CEAFLEET00157,New Anand Logistics,CEADLR000573,Puducherry,Karaikal,605,LCV,trial,2025-04-25,claims pending
+CEAFLEET00158,Ganesh Senthil Depot,CEADLR000454,Karnataka,Raichur,229,Agri,lost,2025-01-17,
+CEAFLEET00159,Star Bala Logistics,CEADLR000150,Andhra Pradesh,Anantapur,478,LCV,trial,2024-09-27,
+CEAFLEET00160,Sri Hari Logistics,CEADLR000210,Karnataka,Tumakuru,151,Mining,expired,2024-08-01,price pressure
+CEAFLEET00161,Vijaya Bala Fertilisers,CEADLR000010,Kerala,Palakkad,630,Mining,active,2024-05-01,price pressure
+CEAFLEET00162,Sree Farida Associates Pvt,CEADLR000696,Tamil Nadu,Kanchipuram,349,Taxi,lost,2025-03-16,
+CEAFLEET00163,Modern Anand Enterprises,CEADLR000393,Andhra Pradesh,Nellore,647,Taxi,rate negotiation,2024-07-14,
+CEAFLEET00164,Vijaya Sanjay Hardware,CEADLR000712,Tamil Nadu,Tirunelveli,423,Taxi,expired,2025-10-06,competitor test running
+CEAFLEET00165,PRIME LAKSHMI ENTERPRISES,CEADLR000490,Andhra Pradesh,Tirupati,15,Agri,trial,2025-12-25,OEM fitment
+CEAFLEET00166,Murugan Revathi Logistics,CEADLR000552,Tamil Nadu,Tirunelveli,203,Agri,trial,2025-09-06,OEM fitment
+CEAFLEET00167,Balaji Priya Distributors,CEADLR000225,Karnataka,Belagavi,225,LCV,lost,2024-11-02,OEM fitment
+CEAFLEET00168,Metro Kavya Hardware,CEADLR000414,Tamil Nadu,Coimbatore,278,Mining,expired,2026-02-27,price pressure
+CEAFLEET00169,Sri Yusuf Logistics,CEADLR000529,Telangana,Warangal,241,LCV,expired,31/03/2025,OEM fitment
+CEAFLEET00170,Star Priya Corporation,CEADLR000103,Tamil Nadu,Hosur,309,Bus,expired,2025-04-23,OEM fitment
+CEAFLEET00171,Royal Kavya Associates,CEADLR000199,Tamil Nadu,Salem,570,LCV,expired,2025-02-20,OEM fitment
+CEAFLEET00172,Shree Deepak Logistics,CEADLR000419,Tamil Nadu,Cuddalore,196,Agri,expired,2026-03-25,competitor test running
+CEAFLEET00173,Balaji Lokesh Logistics,CEADLR000108,Karnataka,Belagavi,169,Mining,trial,2024-10-27,competitor test running
+CEAFLEET00174,City Manoj Sales,CEADLR000302,Karnataka,Kalaburagi,582,LCV,lost,10/29/2024,
+CEAFLEET00175,Murugan Bala Chemicals,CEADLR000041,Telangana,Khammam,61,Mining,lost,2025-09-03,OEM fitment
+CEAFLEET00176,National Farida Sales,CEADLR000548,Andhra Pradesh,Kakinada,130,Bus,trial,2025-04-12,OEM fitment
+CEAFLEET00177,Vijaya Meena Logistics,CEADLR000205,Karnataka,Ballari,58,Agri,rate negotiation,2026-02-14,claims pending
+CEAFLEET00178,Murugan Ganesh Corporation,CEADLR000735,Andhra Pradesh,Kadapa,340,Mining,active,14/01/2026,OEM fitment
+CEAFLEET00179,Kaveri Senthil Tyres,CEADLR000128,Karnataka,Tumakuru,595,LCV,lost,2026-03-08,OEM fitment
+CEAFLEET00180,Mahalakshmi Prakash Logistics,CEADLR000620,Karnataka,Mangaluru,422,Agri,trial,2024-12-18,
+CEAFLEET00181,LUCKY SENTHIL LOGISTICS,CEADLR000168,Telangana,Mahbubnagar,430,Mining,expired,2024-12-07,
+CEAFLEET00182,Lucky Anand Fertilisers,CEADLR000250,Telangana,Nalgonda,233,LCV,lost,2025-08-10,OEM fitment
+CEAFLEET00183,Balaji Irfan Logistics,CEADLR000504,Andhra Pradesh,Ongole,302,Agri,rate negotiation,2025-04-04,price pressure
+CEAFLEET00184,Sree Chandra Associates,CEADLR000015,Kerala,Kochi,174,Truck,rate negotiation,2024-07-30,
+CEAFLEET00185,United Hari Logistics,CEADLR000119,Karnataka,Kalaburagi,615,Agri,active,2026-03-27,
+CEAFLEET00186,Lucky Farida Logistics,CEADLR000413,Andhra Pradesh,Kadapa,142,Bus,lost,2024-05-27,claims pending
+CEAFLEET00187,City Farida Mart,CEADLR000230,Tamil Nadu,Kanchipuram,105,Agri,trial,2024-08-30,price pressure
+CEAFLEET00188,Sree Manoj Logistics Pvt,CEADLR000253,Karnataka,Kalaburagi,22,Mining,lost,2024-09-23,claims pending
+CEAFLEET00189,Star Bala Distributors,CEADLR000729,Tamil Nadu,Erode,278,Taxi,lost,2025-09-04,
+CEAFLEET00190,NEW SANJAY TYRES,CEADLR000355,Karnataka,Tumakuru,566,Truck,trial,03/29/2025,claims pending
+CEAFLEET00191,Royal Sowmya Enterprises,CEADLR000678,Andhra Pradesh,Nellore,324,Mining,active,14/06/2024,competitor test running
+CEAFLEET00192,Balaji Jagan Distributors & Co,CEADLR000011,Kerala,Thrissur,292,Mining,rate negotiation,2024-07-07,
+CEAFLEET00193,Star Geetha Agro & Co,CEADLR000087,Karnataka,Mysuru,94,LCV,trial,29/05/2025,
+CEAFLEET00194,Modern Meena Logistics,CEADLR000165,Telangana,Nalgonda,303,LCV,active,10/20/2025,competitor test running
+CEAFLEET00195,Kaveri Sowmya Logistics,CEADLR000324,Karnataka,Kalaburagi,609,Mining,lost,2025-06-17,
+CEAFLEET00196,Modern Lakshmi Logistics,CEADLR000646,Telangana,Karimnagar,306,Taxi,lost,2025-01-22,OEM fitment
+CEAFLEET00197,Murugan Naveen Corporation,CEADLR000392,TG,Siddipet,272,LCV,active,2025-11-14,competitor test running
+CEAFLEET00198,Royal Lakshmi Services,CEADLR000698,Karnataka,Mysuru,220,Truck,expired,23/09/2025,competitor test running
+CEAFLEET00199,National Farida Logistics,CEADLR000336,Kerala,Thiruvananthapuram,458,Mining,lost,2025-04-03,
+CEAFLEET00200,Royal Arun Logistics,CEADLR000667,Telangana,Mahbubnagar,400,Truck,rate negotiation,2025-01-18,price pressure
+CEAFLEET00201,United Deepak Hardware,CEADLR000372,Telangana,Nizamabad,410,Truck,rate negotiation,28/11/2024,competitor test running
+CEAFLEET00202,United Yusuf Enterprises,CEADLR000578,KARNATAKA,Davanagere,439,Taxi,lost,11/17/2024,OEM fitment
+CEAFLEET00203,Balaji Suresh Logistics,CEADLR000265,Andhra Pradesh,Nellore,94,Truck,trial,19-Dec-24,competitor test running
+CEAFLEET00204,Murugan Sanjay Stores,CEADLR000717,Puducherry,Puducherry,565,LCV,expired,28/07/2025,claims pending
+CEAFLEET00205,New Hari Logistics,CEADLR000055,Andhra Pradesh,Kakinada,110,Bus,rate negotiation,2025-04-30,price pressure
+CEAFLEET00206,Metro Priya Enterprises Main,CEADLR000678,Karnataka,Shivamogga,436,Taxi,rate negotiation,2024-09-13,competitor test running
+CEAFLEET00207,United Deepak Logistics,CEADLR000664,Puducherry,Puducherry,224,Bus,rate negotiation,2025-07-25,competitor test running
+CEAFLEET00208,City Priya Sales,CEADLR000689,Andhra Pradesh,Tirupati,177,Mining,expired,2024-09-12,competitor test running
+CEAFLEET00209,United Chandra Logistics,CEADLR000492,Tamil Nadu,Tirunelveli,380,Taxi,trial,2026-02-12,
+CEAFLEET00210,Balaji Sowmya Sales,CEADLR000613,Puducherry,Karaikal,30,LCV,lost,2025-06-02,
+CEAFLEET00211,Mahalakshmi Deepak Agencies,CEADLR000622,AP,Guntur,344,Mining,trial,2025-10-25,price pressure
+CEAFLEET00212,Modern Prakash Logistics,CEADLR000642,Andhra Pradesh,Vijayawada,284,Agri,expired,2024-11-04,price pressure
+CEAFLEET00213,City Suresh Associates,CEADLR000629,Telangana,Warangal,450,LCV,trial,2025-05-10,
+CEAFLEET00214,Shree Irfan Logistics,CEADLR000030,TG,Nalgonda,323,LCV,rate negotiation,2024-10-24,claims pending
+CEAFLEET00215,Murugan Senthil Logistics,CEADLR000079,Telangana,Siddipet,26,Taxi,rate negotiation,2024-10-11,competitor test running
+CEAFLEET00216,Sree Sanjay Sales,CEADLR000266,Karnataka,Hubballi,60,Mining,active,2024-08-20,price pressure
+CEAFLEET00217,United Farida Paints,CEADLR000263,Telangana,Hyderabad,393,Truck,rate negotiation,2025-09-03,competitor test running
+CEAFLEET00218,Mahalakshmi Naveen Mart,CEADLR000202,Karnataka,Davanagere,553,Taxi,active,2024-04-24,claims pending
+CEAFLEET00219,Royal Chandra Stores Main,CEADLR000010,Kerala,Thiruvananthapuram,103,Taxi,rate negotiation,2025-06-16,claims pending
+CEAFLEET00220,Vijaya Revathi Logistics,CEADLR000516,Tamil Nadu,Coimbatore,595,Taxi,active,17/02/2025,OEM fitment
+CEAFLEET00221,Royal Prakash Chemicals,CEADLR000722,Karnataka,Udupi,572,Mining,rate negotiation,2026-02-21,price pressure
+CEAFLEET00222,Balaji Sanjay Logistics,CEADLR000594,Tamil Nadu,Trichy,253,Agri,expired,28/06/2024,OEM fitment
+CEAFLEET00223,Murugan Meena Logistics,CEADLR000071,Andhra Pradesh,Guntur,596,Mining,active,2024-05-18,claims pending
+CEAFLEET00224,Royal Hari Paints,CEADLR000059,Kerala,Palakkad,324,Truck,lost,2024-07-26,OEM fitment
+CEAFLEET00225,National Karthik Stores,CEADLR000705,Andhra Pradesh,Rajahmundry,607,Mining,lost,2024-10-25,competitor test running
+CEAFLEET00226,Royal Jagan Corporation,CEADLR000332,TS,Nalgonda,31,LCV,expired,2026-01-08,
+CEAFLEET00227,New Priya Agencies,CEADLR000189,Andhra Pradesh,Kakinada,648,Agri,expired,29/01/2025,
+CEAFLEET00228,Royal Geetha Traders,CEADLR000278,AP,Visakhapatnam,248,Mining,rate negotiation,2025-08-13,competitor test running
+CEAFLEET00229,Star Anand Logistics,CEADLR000539,Telangana,Khammam,468,LCV,active,10/09/2025,OEM fitment
+CEAFLEET00230,United Prakash Logistics & Co,CEADLR000681,Kerala,Kollam,263,Truck,lost,2025-02-05,claims pending
+CEAFLEET00231,Sree Chandra Paints,CEADLR000078,Telangana,Siddipet,316,Taxi,expired,08/11/2024,competitor test running
+CEAFLEET00232,National Jagan Tyres,CEADLR000591,Telangana,Mahbubnagar,21,Agri,trial,2025-09-04,competitor test running
+CEAFLEET00233,New Deepak Services,CEADLR000697,Kerala,Kollam,334,Truck,lost,2025-11-19,
+CEAFLEET00234,Shree Jagan Logistics,CEADLR000308,Tamil Nadu,Madurai,90,LCV,rate negotiation,2025-03-02,
+CEAFLEET00235,Lucky Ganesh Associates,CEADLR000352,Tamil Nadu,Trichy,197,Truck,expired,2025-10-18,OEM fitment
+CEAFLEET00236,City Kavya Stores Pvt,CEADLR000220,Andhra Pradesh,Kadapa,308,Taxi,lost,2026-03-21,price pressure
+CEAFLEET00237,Sree Lakshmi Distributors,CEADLR000642,Karnataka,Belagavi,30,Mining,rate negotiation,2024-10-22,competitor test running
+CEAFLEET00238,Vijaya Jagan Mart,CEADLR000734,Tamil Nadu,Hosur,31,Mining,rate negotiation,06/22/2025,price pressure
+CEAFLEET00239,SRI Arun Chemicals,CEADLR000617,Telangana,Mahbubnagar,561,Bus,expired,2025-08-24,OEM fitment
+CEAFLEET00240,Shree Priya Chemicals,CEADLR000053,Andhra Pradesh,Nellore,541,Agri,rate negotiation,23-Jun-25,
+CEAFLEET00241,Modern Jagan Logistics,CEADLR000143,Karnataka,Davanagere,445,Taxi,lost,2026-03-01,OEM fitment
+CEAFLEET00242,Murugan Revathi Logistics,CEADLR000603,Telangana,Khammam,562,Mining,lost,10/02/2024,OEM fitment
+CEAFLEET00243,Murugan Geetha Corporation,CEADLR000085,Karnataka,Tumakuru,209,Mining,rate negotiation,25-Oct-24,OEM fitment
+CEAFLEET00244,Prime Arun Agencies,CEADLR000153,Andhra Pradesh,Guntur,156,LCV,rate negotiation,2026-03-03,claims pending
+CEAFLEET00245,Royal Lakshmi Logistics,CEADLR000094,AP,Kakinada,274,Bus,active,14/09/2025,claims pending
+CEAFLEET00246,Shree Kavya Logistics,CEADLR000377,Kerala,Kollam,649,Mining,expired,2024-08-22,price pressure
+CEAFLEET00247,Royal Yusuf Logistics,CEADLR000223,Telangana,Nalgonda,177,Agri,trial,2025-08-06,
+CEAFLEET00248,Prime Deepak Logistics,CEADLR000123,TELANGANA,Suryapet,410,Taxi,active,2024-08-13,competitor test running
+CEAFLEET00249,Vijaya Bala Tyres,CEADLR000307,Telangana,Mahbubnagar,592,LCV,active,2026-01-07,price pressure
+CEAFLEET00250,Kaveri Rafiq Logistics,CEADLR000007,Andhra Pradesh,Kadapa,589,LCV,expired,05/11/2025,competitor test running
+CEAFLEET00251,Vijaya Venkatesh Associates,CEADLR000614,Andhra Pradesh,Ongole,550,Mining,rate negotiation,2024-04-21,
+CEAFLEET00252,Lucky Geetha Traders,CEADLR000056,Tamil Nadu,Coimbatore,334,Bus,rate negotiation,2026-03-07,
+CEAFLEET00253,National Jagan Tyres,CEADLR000357,TS,Khammam,348,LCV,active,31/08/2025,price pressure
+CEAFLEET00254,United Kavya Chemicals,CEADLR000311,Tamil Nadu,Tirunelveli,410,Taxi,trial,28/11/2025,claims pending
+CEAFLEET00255,Royal Anand Logistics,CEADLR000684,Telangana,Adilabad,430,Taxi,expired,2025-04-07,
+CEAFLEET00256,Lucky Kavya Logistics,CEADLR000630,Puducherry,Puducherry,512,Taxi,trial,2026-02-01,competitor test running
+CEAFLEET00257,Prime Farida Distributors,CEADLR000717,Tamil Nadu,Madurai,141,Bus,lost,2026-03-11,
+CEAFLEET00258,Shree Anand Logistics,CEADLR000654,Tamil Nadu,Chennai,645,Mining,expired,2026-03-31,claims pending
+CEAFLEET00259,Lucky Hari Paints,CEADLR000592,Kerala,Alappuzha,222,Truck,active,2025-02-26,OEM fitment
+CEAFLEET00260,Lucky Senthil Distributors,CEADLR000402,Kerala,Palakkad,318,Agri,active,2025-07-08,price pressure
+CEAFLEET00261,Shree Priya Traders,CEADLR000731,Puducherry,Karaikal,587,Taxi,rate negotiation,2025-09-27,OEM fitment
+CEAFLEET00262,Prime Prakash Logistics,CEADLR000049,Tamil Nadu,Hosur,479,Truck,rate negotiation,2025-05-13,competitor test running
+CEAFLEET00263,Star Naveen Sales,CEADLR000079,Karnataka,Hubballi,423,Truck,expired,2024-07-25,
+CEAFLEET00264,Vijaya Manoj Traders,CEADLR000491,Kerala,Kochi,501,Truck,trial,2025-09-12,competitor test running
+CEAFLEET00265,City Revathi Logistics,CEADLR000103,Tamil Nadu,Erode,555,Taxi,expired,03/17/2025,competitor test running
+CEAFLEET00266,Lucky Suresh Hardware,CEADLR000111,Andhra Pradesh,Vijayawada,605,LCV,rate negotiation,2024-04-15,claims pending
+CEAFLEET00267,City Meena Tyres,CEADLR000508,Kerala,Kollam,465,Bus,rate negotiation,2024-12-08,competitor test running
+CEAFLEET00268,Murugan Lokesh Enterprises,CEADLR000427,Tamil Nadu,Hosur,243,Truck,expired,2024-11-07,OEM fitment
+CEAFLEET00269,METRO VENKATESH ENTERPRISES,CEADLR000434,Tamil Nadu,Hosur,529,Taxi,rate negotiation,03/27/2026,OEM fitment
+CEAFLEET00270,Sri Sanjay Hardware,CEADLR000236,Andhra Pradesh,Nellore,198,Taxi,trial,03/20/2026,claims pending
+CEAFLEET00271,Royal Anand Associates,CEADLR000593,Andhra Pradesh,Guntur,75,Bus,lost,2025-02-10,competitor test running
+CEAFLEET00272,National Manoj Mart,CEADLR000600,Andhra Pradesh,Nellore,49,LCV,expired,2024-12-25,competitor test running
+CEAFLEET00273,New Sanjay Enterprises,CEADLR000578,Tamil Nadu,Chennai,628,LCV,lost,2024-10-01,
+CEAFLEET00274,Murugan Sanjay Logistics,CEADLR000701,Tamil Nadu,Erode,88,Agri,expired,2026-03-02,competitor test running
+CEAFLEET00275,City Geetha Distributors,CEADLR000093,TN,Kanchipuram,491,Bus,trial,2024-04-27,claims pending
+CEAFLEET00276,Shree Sowmya Agencies Main,CEADLR000554,Karnataka,Tumakuru,298,Truck,trial,2024-11-25,
+CEAFLEET00277,United Suresh Logistics,CEADLR000525,Tamil Nadu,Trichy,409,Truck,trial,2024-06-09,claims pending
+CEAFLEET00278,Lucky Deepak Services,CEADLR000549,Andhra Pradesh,Visakhapatnam,400,Agri,active,12/29/2024,competitor test running
+CEAFLEET00279,Royal Sowmya Traders,CEADLR000570,Telangana,Karimnagar,628,Taxi,rate negotiation,2024-10-20,OEM fitment
+CEAFLEET00280,New Prakash Logistics,CEADLR000239,TELANGANA,Mahbubnagar,505,Taxi,expired,2025-05-27,OEM fitment
+CEAFLEET00281,New Anand Stores,CEADLR000065,Karnataka,Udupi,498,Mining,trial,10/06/2025,OEM fitment
+CEAFLEET00282,NEW YUSUF DISTRIBUTORS,CEADLR000194,Telangana,Nalgonda,11,LCV,active,06-Mar-26,OEM fitment
+CEAFLEET00283,Prime Kavya Mart,CEADLR000028,Puducherry,Karaikal,263,LCV,expired,2024-10-09,competitor test running
+CEAFLEET00284,Star Ganesh Associates,CEADLR000179,Karnataka,Shivamogga,579,Mining,active,2026-02-22,claims pending
+CEAFLEET00285,United Sowmya Distributors,CEADLR000226,Karnataka,Kalaburagi,573,Bus,expired,2025-10-11,price pressure
+CEAFLEET00286,Shree Hari Logistics,CEADLR000098,Karnataka,Shivamogga,563,Taxi,active,19-Nov-24,OEM fitment
+CEAFLEET00287,Mahalakshmi Priya Fertilisers,CEADLR000377,Karnataka,Davanagere,489,Agri,rate negotiation,2024-08-18,claims pending
+CEAFLEET00288,Prime Rafiq Depot,CEADLR000209,Telangana,Karimnagar,154,LCV,active,02/03/2026,OEM fitment
+CEAFLEET00289,Star Sanjay Agro,CEADLR000251,Telangana,Khammam,242,LCV,active,19/07/2024,claims pending
+CEAFLEET00290,Metro Chandra Tyres,CEADLR000345,Kerala,Kochi,370,Bus,lost,24/03/2025,competitor test running
+CEAFLEET00291,Lucky Venkatesh Sales,CEADLR000111,Andhra Pradesh,Ongole,531,Taxi,expired,2025-09-08,OEM fitment
+CEAFLEET00292,National Priya Sales,CEADLR000037,Tamil Nadu,Vellore,12,Truck,lost,2024-10-22,OEM fitment
+CEAFLEET00293,Sree Yusuf Hardware,CEADLR000656,Karnataka,Hubballi,573,Agri,lost,2025-02-28,price pressure
+CEAFLEET00294,Sree Senthil Sales,CEADLR000531,Telangana,Nalgonda,149,Agri,lost,2026-01-28,competitor test running
+CEAFLEET00295,Star Ganesh Logistics,CEADLR000189,ANDHRA,Anantapur,171,Truck,expired,29/01/2025,claims pending
+CEAFLEET00296,Metro Chandra Traders,CEADLR000174,Tamil Nadu,Trichy,298,LCV,active,09/11/2024,
+CEAFLEET00297,Ganesh Senthil Depot,CEADLR000469,Karnataka,Tumakuru,470,Agri,rate negotiation,11/20/2025,OEM fitment
+CEAFLEET00298,Sri Kavya Logistics,CEADLR000044,Tamil Nadu,Erode,354,Bus,rate negotiation,2025-06-11,claims pending
+CEAFLEET00299,Metro Venkatesh Paints,CEADLR000136,Karnataka,Hubballi,254,Truck,lost,2025-08-30,price pressure
+CEAFLEET00300,Shree Senthil Logistics,CEADLR000643,Karnataka,Mangaluru,248,Taxi,rate negotiation,2024-08-19,claims pending
+CEAFLEET00301,Royal Venkatesh Depot,CEADLR000624,Tamil Nadu,Cuddalore,326,Mining,rate negotiation,2026-03-30,
+CEAFLEET00302,Prime Rafiq Services,CEADLR000731,Karnataka,Hubballi,290,LCV,lost,2024-12-06,price pressure
+CEAFLEET00303,United Karthik Logistics,CEADLR000064,Karnataka,Belagavi,183,LCV,rate negotiation,2025-05-29,
+CEAFLEET00304,Vijaya Chandra Fertilisers,CEADLR000723,Andhra Pradesh,Vijayawada,384,Bus,active,2025-07-10,claims pending
+CEAFLEET00305,Metro Kavya Enterprises,CEADLR000431,Kerala,Thrissur,451,Truck,lost,2024-12-17,competitor test running
+CEAFLEET00306,Mahalakshmi Sowmya Logistics,CEADLR000619,Karnataka,Udupi,154,Mining,trial,2024-07-31,competitor test running
+CEAFLEET00307,United Priya Logistics,CEADLR000436,Karnataka,Davanagere,610,LCV,lost,2024-09-06,competitor test running
+CEAFLEET00308,Vijaya Prakash Logistics,CEADLR000254,Andhra Pradesh,Anantapur,120,Mining,trial,2024-08-01,OEM fitment
+CEAFLEET00309,United Sanjay Logistics,CEADLR000174,Andhra Pradesh,Rajahmundry,622,Truck,expired,2024-09-21,
+CEAFLEET00310,NATIONAL SURESH ASSOCIATES,CEADLR000022,Karnataka,Tumakuru,561,LCV,trial,2024-08-07,claims pending
+CEAFLEET00311,Balaji Senthil Logistics,CEADLR000605,Karnataka,Udupi,605,Bus,rate negotiation,26/11/2024,claims pending
+CEAFLEET00312,Ganesh Naveen Agro,CEADLR000722,AP,Nellore,600,Taxi,trial,03/02/2026,OEM fitment
+CEAFLEET00313,Metro Irfan Sales Main,CEADLR000181,Karnataka,Davanagere,14,Mining,active,2024-05-01,claims pending
+CEAFLEET00314,Balaji Manoj Mart,CEADLR000399,Karnataka,Mysuru,308,Agri,trial,2025-06-10,competitor test running
+CEAFLEET00315,Metro Jagan Fertilisers,CEADLR000461,Karnataka,Belagavi,427,LCV,rate negotiation,2026-03-04,
+CEAFLEET00316,United Bala Stores,CEADLR000478,Telangana,Adilabad,606,LCV,trial,2025-12-07,OEM fitment
+CEAFLEET00317,National Meena Agro,CEADLR000554,Andhra Pradesh,Guntur,218,Mining,expired,2024-07-16,price pressure
+CEAFLEET00318,Balaji Revathi Logistics,CEADLR000326,KL,Kottayam,58,Bus,trial,2025-07-30,
+CEAFLEET00319,Balaji Farida Associates & Co,CEADLR000451,Andhra Pradesh,Kadapa,336,Taxi,expired,10/09/2025,competitor test running
+CEAFLEET00320,Metro Yusuf Logistics,CEADLR000579,TN,Cuddalore,357,Agri,active,2025-06-04,price pressure

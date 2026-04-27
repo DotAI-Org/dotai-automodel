@@ -1,0 +1,39 @@
+sku_id,legacy_sku_code,category,sku_name,pack_size,uom,mrp,active_flag
+CEA0001,CEA-4766,Two wheeler,Zoom,bulk,KG,7699.59,Y
+CEA0002,CEA-6430,Two wheeler,Zoom,large,KG,2242.70,Y
+CEA0003,CEA-2263,Two wheeler,Zoom,small,LTR,4360.37,Y
+CEA0004,CEA-6328,Two wheeler,Milaze,large,LTR,7784.02,Y
+CEA0005,CEA-8560,Two wheeler,Milaze,small,LTR,8459.38,Y
+CEA0006,NA,Two wheeler,Milaze,medium,LTR,3157.49,Y
+CEA0007,CEA-3313,Two wheeler,Gripp,large,BAG,5290.93,Y
+CEA0008,CEA-2517,Two wheeler,Gripp,bulk,EA,3675.19,N
+CEA0009,CEA-4112,Two wheeler,Gripp,small,BOX,7726.51,N
+CEA0010,CEA-7041,Two wheeler,Secura,medium,SET,5606.03,Y
+CEA0011,CEA-7156,Passenger car,SecuraDrive,bulk,EA,1134.20,N
+CEA0012,CEA-6311,Passenger car,SecuraDrive,large,BOX,8469.35,Y
+CEA0013,CEA-6061,Passenger car,SecuraDrive,small,BAG,8747.73,Y
+CEA0014,CEA-9988,Passenger car,Milaze X3,medium,BOX,2326.47,Y
+CEA0015,CEA-8990,Passenger car,SportDrive,large,KG,6390.53,Y
+CEA0016,CEA-9746,Passenger car,SportDrive,medium,BAG,1909.22,Y
+CEA0017,CEA-4501,Passenger car,SportDrive,small,BOX,857.43,Y
+CEA0018,CEA-2068,Passenger car,Czar,bulk,KG,2435.99,N
+CEA0019,-,Passenger car,Czar,large,BAG,2565.64,N
+CEA0020,CEA-7480,Truck bus,WinLoad,large,EA,498.85,Y
+CEA0021,CEA-9358,Truck bus,Buland,bulk,BAG,8031.96,Y
+CEA0022,CEA-5585,Truck bus,Rock XL,large,KG,5630.22,Y
+CEA0023,CEA-2462,Truck bus,Rock XL,medium,EA,8767.22,Y
+CEA0024,CEA-3850,Truck bus,Rock XL,bulk,SET,4185.89,Y
+CEA0025,CEA-4548,Truck bus,Mile XL,large,BAG,4214.01,Y
+CEA0026,CEA-6155,Farm,Aayushmaan,small,BAG,6121.81,Y
+CEA0027,CEA-5290,Farm,Aayushmaan,bulk,BAG,1713.86,Y
+CEA0028,,Farm,Aayushmaan,medium,LTR,7722.19,N
+CEA0029,CEA-6983,Farm,Samraat,small,BAG,8900.29,Y
+CEA0030,CEA-2116,Farm,Samraat,bulk,BAG,7709.20,Y
+CEA0031,CEA-4867,Farm,Vardhan,large,BAG,1873.63,N
+CEA0032,CEA-1452,Farm,Farmax,large,BOX,4992.89,Y
+CEA0033,CEA-7148,LCV,Mile XL Pro,medium,SET,5790.89,Y
+CEA0034,CEA-2481,LCV,LoadPro,medium,LTR,6572.16,Y
+CEA0035,CEA-8571,LCV,LoadPro,large,LTR,6923.26,Y
+CEA0036,CEA-1966,LCV,LoadPro,small,LTR,7153.67,Y
+CEA0037,N/A,LCV,Buland LCV,small,BAG,8793.22,Y
+CEA0038,CEA-7978,LCV,Buland LCV,large,LTR,482.32,Y

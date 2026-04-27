@@ -1,0 +1,657 @@
+watch_id,customer_id,customer_name,added_by,added_date,watch_reason,last_known_action,manager_confidence
+CEAWL00001,CEASUB000548,City Yusuf Associates,ASM,12/02/2026,competitor offer,field visit planned,unknown
+CEAWL00002,CEASUB003410,United Yusuf Tyres,Zonal office,2025-07-27,closed counter,scheme support requested,unknown
+CEAWL00003,CEASUB004046,Lucky Naveen Tyres,Service,17-Nov-25,closed counter,lost to competitor,high
+CEAWL00004,CEASUB001663,Modern Lakshmi Enterprises,RSM,2025-06-13,closed counter,scheme support requested,medium
+CEAWL00005,CEASUB003204,Kaveri Bala Mart,Credit,2025-10-09,owner dispute,waiting for payment,high
+CEAWL00006,CEASUB004188,Kaveri Hari Hardware,ASM,2025-11-05,scheme claim pending,lost to competitor,low
+CEAWL00007,CEADLR000173,Modern Suresh Tyres,Credit,2025-08-30,owner dispute,new owner to verify,unknown
+CEAWL00008,CEASUB002533,MAHALAKSHMI HARI TYRES,Service,2025-08-27,owner dispute,scheme support requested,medium
+CEAWL00009,CEASUB000792,CITY VENKATESH TYRES,Zonal office,2025-06-19,orders down,credit call done,unknown
+CEAWL00010,CEADLR000203,United Bala Tyres,ASM,2026-02-04,closed counter,field visit planned,high
+CEAWL00011,CEASUB002275,Vijaya Arun Services,Service,2025-09-03,orders down,waiting for payment,unknown
+CEAWL00012,CEASUB001943,Modern Sowmya Corporation,Zonal office,2025-12-13,orders down,scheme support requested,medium
+CEAWL00013,CEASUB001574,National Hari Tyres,Zonal office,2026-02-02,owner dispute,lost to competitor,medium
+CEAWL00014,CEADLR000317,Murugan Bala Tyres,Credit,29/03/2026,owner dispute,field visit planned,medium
+CEAWL00015,CEASUB003574,CITY ANAND PAINTS,Credit,2025-11-16,scheme claim pending,scheme support requested,medium
+CEAWL00016,CEASUB002537,Balaji Irfan Tyres,ASM,2026-03-23,service complaint,credit call done,high
+CEAWL00017,CEASUB001475,Royal Naveen Fertilisers,Distributor,2025-11-21,competitor offer,new owner to verify,unknown
+CEAWL00018,CEASUB001849,METRO LOKESH HARDWARE,Credit,2026-02-16,service complaint,credit call done,high
+CEAWL00019,CEASUB003655,Metro Revathi Tyres,RSM,2025-07-16,payment delay,field visit planned,medium
+CEAWL00020,CEASUB000266,National Anand Sales Main,ASM,2025-12-16,payment delay,field visit planned,high
+CEAWL00021,CEADLR000551,Prime Bala Tyres,Service,2025-12-27,orders down,waiting for payment,low
+CEAWL00022,CEASUB000784,Modern Geetha Tyres,ASM,2025-11-21,seasonal crop miss,new owner to verify,unknown
+CEAWL00023,CEASUB003828,Vijaya Revathi Services,Zonal office,2026-02-18,scheme claim pending,credit call done,unknown
+CEAWL00024,CEASUB000071,Prime Karthik Enterprises,Distributor,18-Feb-26,owner dispute,field visit planned,unknown
+CEAWL00025,CEASUB001089,Prime Arun Mart,Service,2026-01-19,orders down,credit call done,unknown
+CEAWL00026,CEASUB000464,Mahalakshmi Arun Sales,Service,23/12/2025,seasonal crop miss,credit call done,high
+CEAWL00027,CEASUB001077,Star Farida Depot,ASM,2025-11-10,owner dispute,field visit planned,medium
+CEAWL00028,CEASUB000944,Prime Sanjay Distributors,Credit,16/11/2025,owner dispute,scheme support requested,medium
+CEAWL00029,CEASUB003331,City Senthil Tyres,Service,2025-07-18,closed counter,credit call done,low
+CEAWL00030,CEASUB000455,GANESH KARTHIK TYRES,RSM,30/08/2025,closed counter,lost to competitor,medium
+CEAWL00031,CEASUB004152,National Suresh Distributors,RSM,24/10/2025,owner dispute,lost to competitor,low
+CEAWL00032,CEASUB002258,Murugan Yusuf Mart,Zonal office,04-Jun-25,competitor offer,scheme support requested,medium
+CEAWL00033,CEASUB000532,Balaji Lokesh Tyres,ASM,2026-01-09,competitor offer,credit call done,high
+CEAWL00034,CEASUB000208,SRI DEEPAK DISTRIBUTORS,ASM,2025-09-25,competitor offer,new owner to verify,low
+CEAWL00035,CEASUB002797,City Lokesh Distributors,ASM,05/11/2025,payment delay,credit call done,medium
+CEAWL00036,CEASUB001509,Sri Bala Paints,Credit,2025-12-27,competitor offer,field visit planned,unknown
+CEAWL00037,CEASUB002908,Modern Irfan Distributors,Distributor,10/07/2025,service complaint,waiting for payment,unknown
+CEAWL00038,CEASUB003922,Metro Ganesh Traders,Zonal office,2026-01-05,service complaint,credit call done,high
+CEAWL00039,CEASUB001492,New Prakash Traders,Zonal office,2025-12-24,competitor offer,scheme support requested,low
+CEAWL00040,CEASUB003330,Murugan Venkatesh Mart,ASM,2026-01-23,owner dispute,field visit planned,high
+CEAWL00041,CEASUB003405,United Chandra Stores,Credit,2025-12-29,closed counter,field visit planned,medium
+CEAWL00042,CEASUB002146,Royal Yusuf Depot,ASM,2025-06-17,closed counter,new owner to verify,medium
+CEAWL00043,CEASUB000848,Star Ganesh Depot,ASM,2025-06-30,orders down,waiting for payment,low
+CEAWL00044,CEADLR000556,City Prakash Distributors,Credit,07/06/2025,payment delay,waiting for payment,medium
+CEAWL00045,CEASUB002745,CITY KARTHIK MART,Zonal office,19-Nov-25,payment delay,lost to competitor,unknown
+CEAWL00046,CEASUB003293,Star Bala Tyres,Service,2026-03-08,scheme claim pending,waiting for payment,high
+CEAWL00047,CEASUB004166,National Priya Sales,ASM,2026-02-23,service complaint,lost to competitor,medium
+CEAWL00048,CEASUB002573,Vijaya Manoj Depot,ASM,31/10/2025,orders down,credit call done,low
+CEAWL00049,CEASUB000300,Balaji Prakash Sales,ASM,24/07/2025,orders down,waiting for payment,high
+CEAWL00050,CEASUB002171,United Naveen Tyres,Credit,2025-09-18,closed counter,new owner to verify,low
+CEAWL00051,CEADLR000206,Royal Prakash Services,Credit,2025-11-28,scheme claim pending,field visit planned,low
+CEAWL00052,CEASUB001154,Lucky Priya Depot,Credit,2026-03-01,owner dispute,scheme support requested,low
+CEAWL00053,CEASUB003593,New Bala Corporation,ASM,2025-10-19,payment delay,field visit planned,unknown
+CEAWL00054,CEASUB001484,Murugan Revathi Depot,Credit,2025-08-18,service complaint,lost to competitor,high
+CEAWL00055,CEASUB004119,Prime Sowmya Fertilisers,ASM,2026-03-25,closed counter,new owner to verify,high
+CEAWL00056,CEASUB001635,Sree Kavya Mart,Distributor,2026-01-23,service complaint,waiting for payment,unknown
+CEAWL00057,CEADLR000394,Metro Deepak Paints,RSM,28/07/2025,competitor offer,scheme support requested,low
+CEAWL00058,CEASUB004440,Sree Sanjay Sales,Credit,2026-02-04,owner dispute,lost to competitor,medium
+CEAWL00059,CEASUB003226,Kaveri Jagan Associates,Credit,2025-09-01,scheme claim pending,scheme support requested,high
+CEAWL00060,CEASUB001942,Modern Revathi Mart,ASM,2025-12-17,orders down,scheme support requested,medium
+CEAWL00061,CEASUB001102,Sri Sowmya Corporation,Zonal office,2026-03-06,competitor offer,lost to competitor,high
+CEAWL00062,CEASUB003742,Lucky Chandra Enterprises,Distributor,25/07/2025,orders down,scheme support requested,low
+CEAWL00063,CEADLR000381,Kaveri Arun Tyres,Distributor,2026-01-13,owner dispute,field visit planned,high
+CEAWL00064,CEASUB000176,Royal Irfan Corporation,ASM,2025-07-03,seasonal crop miss,credit call done,low
+CEAWL00065,CEASUB004192,City Venkatesh Fertilisers,Distributor,03/12/2025,payment delay,field visit planned,low
+CEAWL00066,CEADLR000241,Balaji Venkatesh Tyres,Distributor,06/01/2026,competitor offer,credit call done,medium
+CEAWL00067,CEASUB004215,Royal Yusuf Tyres,Service,2026-03-04,service complaint,scheme support requested,unknown
+CEAWL00068,CEASUB002456,Sree Revathi Tyres,Credit,2025-09-04,closed counter,scheme support requested,low
+CEAWL00069,CEASUB002315,United Prakash Tyres,RSM,11/09/2025,closed counter,waiting for payment,medium
+CEAWL00070,CEADLR000365,LUCKY VENKATESH TYRES,Credit,2025-10-26,closed counter,field visit planned,unknown
+CEAWL00071,CEASUB002200,Sri Geetha Tyres,RSM,11/01/2025,seasonal crop miss,field visit planned,unknown
+CEAWL00072,CEASUB001555,Balaji Meena Tyres,ASM,2026-01-14,competitor offer,waiting for payment,medium
+CEAWL00073,CEASUB000162,Kaveri Arun Hardware,Distributor,2026-03-22,owner dispute,lost to competitor,low
+CEAWL00074,CEASUB001803,Sri Naveen Associates,RSM,2025-11-30,seasonal crop miss,lost to competitor,high
+CEAWL00075,CEASUB002625,Mahalakshmi Sanjay Agro,Service,2025-11-29,payment delay,lost to competitor,high
+CEAWL00076,CEASUB000437,New Jagan Fertilisers,Service,2025-09-29,closed counter,lost to competitor,unknown
+CEAWL00077,CEASUB000588,Mahalakshmi Geetha Tyres,RSM,16/02/2026,payment delay,scheme support requested,unknown
+CEAWL00078,CEASUB003557,Kaveri Manoj Tyres,Distributor,2025-07-10,service complaint,lost to competitor,low
+CEAWL00079,CEASUB000847,Murugan Senthil Tyres,Credit,2025-12-08,owner dispute,scheme support requested,medium
+CEAWL00080,CEADLR000607,Sree Lakshmi Distributors,Service,2025-11-22,seasonal crop miss,lost to competitor,high
+CEAWL00081,CEASUB000619,National Hari Tyres,ASM,2026-02-24,service complaint,waiting for payment,low
+CEAWL00082,CEADLR000166,Ganesh Arun Tyres,Zonal office,16/06/2025,seasonal crop miss,scheme support requested,unknown
+CEAWL00083,CEASUB003717,Sree Geetha Tyres,Credit,07/08/2025,competitor offer,field visit planned,high
+CEAWL00084,CEASUB001301,Kaveri Lokesh Tyres,Distributor,2025-08-09,service complaint,lost to competitor,unknown
+CEAWL00085,CEADLR000603,Vijaya Revathi Tyres,Zonal office,2025-12-18,closed counter,lost to competitor,medium
+CEAWL00086,CEASUB001894,Star Jagan Agencies,Distributor,2025-06-28,payment delay,credit call done,high
+CEAWL00087,CEADLR000398,Mahalakshmi Manoj Hardware,Zonal office,09/28/2025,scheme claim pending,new owner to verify,low
+CEAWL00088,CEASUB003290,Kaveri Hari Tyres,ASM,26/10/2025,scheme claim pending,lost to competitor,unknown
+CEAWL00089,CEASUB002905,Kaveri Meena Fertilisers,ASM,2025-07-30,scheme claim pending,new owner to verify,high
+CEAWL00090,CEASUB001966,Lucky Senthil Stores Main,Service,2025-07-10,seasonal crop miss,lost to competitor,high
+CEAWL00091,CEASUB000499,LUCKY ANAND SERVICES,ASM,09/28/2025,closed counter,credit call done,medium
+CEAWL00092,CEASUB001861,Modern Venkatesh Chemicals,Service,2025-10-02,competitor offer,lost to competitor,low
+CEAWL00093,CEASUB003745,Murugan Prakash Associates,RSM,16/11/2025,competitor offer,new owner to verify,low
+CEAWL00094,CEASUB003626,Lucky Senthil Distributors,Distributor,2025-07-21,orders down,scheme support requested,low
+CEAWL00095,CEASUB001682,Murugan Sanjay Mart Ltd,Distributor,2025-12-30,closed counter,scheme support requested,unknown
+CEAWL00096,CEASUB001406,National Arun Agencies,Service,2026-02-05,payment delay,lost to competitor,high
+CEAWL00097,CEASUB002317,Royal Sanjay Tyres,Service,2026-02-16,seasonal crop miss,scheme support requested,low
+CEAWL00098,CEASUB004487,United Deepak Traders,Zonal office,2025-10-29,seasonal crop miss,lost to competitor,high
+CEAWL00099,CEADLR000156,Royal Anand Tyres,Credit,2025-12-04,service complaint,lost to competitor,high
+CEAWL00100,CEASUB000307,National Sanjay Corporation,Service,2025-12-11,competitor offer,new owner to verify,high
+CEAWL00101,CEADLR000638,BALAJI BALA TRADERS,ASM,06/28/2025,service complaint,waiting for payment,low
+CEAWL00102,CEASUB003087,Vijaya Geetha Traders,Zonal office,2026-03-27,seasonal crop miss,lost to competitor,low
+CEAWL00103,CEADLR000649,Shree Sowmya Corporation,Service,2025-08-21,payment delay,scheme support requested,medium
+CEAWL00104,CEADLR000491,Metro Bala Tyres,RSM,2026-01-16,seasonal crop miss,scheme support requested,unknown
+CEAWL00105,CEASUB001814,Royal Priya Fertilisers,RSM,2025-07-13,competitor offer,field visit planned,low
+CEAWL00106,CEASUB000303,City Rafiq Tyres,RSM,2025-08-27,competitor offer,scheme support requested,unknown
+CEAWL00107,CEASUB001575,Ganesh Prakash Tyres,ASM,2025-07-21,closed counter,lost to competitor,unknown
+CEAWL00108,CEASUB000293,Star Arun Services,Service,06/01/2025,competitor offer,lost to competitor,medium
+CEAWL00109,CEASUB002435,Sri Yusuf Agencies,Distributor,2025-10-21,scheme claim pending,lost to competitor,medium
+CEAWL00110,CEASUB000955,Lucky Meena Sales,ASM,2025-12-08,service complaint,new owner to verify,low
+CEAWL00111,CEADLR000316,Shree Meena Sales,Credit,2026-02-17,payment delay,credit call done,medium
+CEAWL00112,CEASUB001728,Sri Geetha Tyres,Zonal office,2025-12-08,owner dispute,credit call done,unknown
+CEAWL00113,CEASUB000724,Shree Meena Associates,Service,2025-07-28,orders down,new owner to verify,medium
+CEAWL00114,CEASUB000267,Murugan Revathi Paints,Zonal office,23/02/2026,closed counter,lost to competitor,unknown
+CEAWL00115,CEASUB002730,New Rafiq Tyres Pvt,RSM,27/10/2025,scheme claim pending,lost to competitor,unknown
+CEAWL00116,CEASUB002671,National Karthik Paints,Credit,2025-10-11,closed counter,waiting for payment,low
+CEAWL00117,CEASUB002257,City Prakash Services,Service,2025-11-07,competitor offer,lost to competitor,unknown
+CEAWL00118,CEASUB003221,Ganesh Sanjay Sales,Credit,2025-12-12,orders down,new owner to verify,high
+CEAWL00119,CEASUB004165,Kaveri Ganesh Tyres,Zonal office,2025-11-15,service complaint,credit call done,low
+CEAWL00120,CEASUB002487,National Jagan Tyres,Service,2025-08-18,service complaint,new owner to verify,low
+CEAWL00121,CEASUB002161,Star Prakash Tyres,RSM,2025-09-23,payment delay,field visit planned,unknown
+CEAWL00122,CEASUB003908,Shree Prakash Depot,RSM,2025-06-16,competitor offer,lost to competitor,unknown
+CEAWL00123,CEASUB001233,Vijaya Venkatesh Tyres,Zonal office,12-Feb-26,payment delay,lost to competitor,medium
+CEAWL00124,CEASUB001316,National Suresh Agro,Service,2025-10-30,owner dispute,credit call done,low
+CEAWL00125,CEASUB002942,Metro Lokesh Tyres,Distributor,18-Jan-26,orders down,field visit planned,low
+CEAWL00126,CEASUB001687,Sree Priya Tyres,Credit,25/06/2025,orders down,field visit planned,unknown
+CEAWL00127,CEASUB000893,New Jagan Agro,Credit,28-Jun-25,closed counter,field visit planned,unknown
+CEAWL00128,CEASUB000725,Sri Arun Hardware,Distributor,2025-10-29,scheme claim pending,credit call done,medium
+CEAWL00129,CEASUB002687,City Lakshmi Corporation,Zonal office,2025-10-11,competitor offer,field visit planned,unknown
+CEAWL00130,CEASUB001820,Ganesh Meena Traders,RSM,2026-03-18,competitor offer,lost to competitor,high
+CEAWL00131,CEASUB000864,United Sowmya Sales,RSM,2025-10-25,owner dispute,scheme support requested,high
+CEAWL00132,CEASUB001529,Ganesh Chandra Fertilisers,RSM,2026-01-17,scheme claim pending,field visit planned,medium
+CEAWL00133,CEASUB003076,Vijaya Rafiq Fertilisers,Service,2025-09-25,seasonal crop miss,waiting for payment,medium
+CEAWL00134,CEADLR000479,Murugan Venkatesh Chemicals,ASM,2026-03-31,owner dispute,lost to competitor,unknown
+CEAWL00135,CEADLR000662,Star Revathi Agencies,Zonal office,2025-12-30,payment delay,credit call done,unknown
+CEAWL00136,CEASUB002102,Mahalakshmi Ganesh Tyres,RSM,11/07/2025,seasonal crop miss,scheme support requested,low
+CEAWL00137,CEASUB002054,Balaji Deepak Mart,Service,2026-03-26,seasonal crop miss,new owner to verify,low
+CEAWL00138,CEADLR000196,Modern Lakshmi Hardware,Service,2025-08-10,scheme claim pending,scheme support requested,high
+CEAWL00139,CEASUB000505,New Kavya Agro,Zonal office,23-Mar-26,service complaint,waiting for payment,unknown
+CEAWL00140,CEASUB001510,Kaveri Sanjay Tyres,RSM,2026-01-01,seasonal crop miss,waiting for payment,high
+CEAWL00141,CEADLR000097,Royal Chandra Tyres & Co,RSM,14-Feb-26,seasonal crop miss,field visit planned,low
+CEAWL00142,CEASUB000859,Star Prakash Tyres,Credit,2026-01-13,orders down,credit call done,unknown
+CEAWL00143,CEASUB002660,Sree Sowmya Sales,Credit,2025-06-18,payment delay,new owner to verify,medium
+CEAWL00144,CEASUB002182,United Revathi Tyres,Zonal office,2026-03-15,service complaint,scheme support requested,low
+CEAWL00145,CEASUB002705,Metro Venkatesh Tyres,Service,2026-03-10,scheme claim pending,lost to competitor,high
+CEAWL00146,CEASUB001181,NEW YUSUF TYRES,RSM,2025-07-03,seasonal crop miss,field visit planned,low
+CEAWL00147,CEASUB000249,Kaveri Ganesh Distributors,Credit,2025-06-07,scheme claim pending,scheme support requested,unknown
+CEAWL00148,CEASUB000415,BALAJI REVATHI TYRES,Zonal office,01/08/2026,scheme claim pending,scheme support requested,low
+CEAWL00149,CEADLR000269,MODERN NAVEEN CHEMICALS,ASM,2025-11-30,competitor offer,waiting for payment,high
+CEAWL00150,CEASUB001034,Ganesh Manoj Tyres,Distributor,2025-06-05,seasonal crop miss,field visit planned,unknown
+CEAWL00151,CEASUB002701,Modern Arun Stores,RSM,2025-06-10,scheme claim pending,credit call done,low
+CEAWL00152,CEADLR000295,Prime Priya Tyres,Zonal office,2026-03-12,owner dispute,scheme support requested,unknown
+CEAWL00153,CEASUB001033,National Priya Hardware,Distributor,25/07/2025,owner dispute,new owner to verify,medium
+CEAWL00154,CEASUB004230,Sri Deepak Distributors,RSM,2026-02-05,closed counter,lost to competitor,low
+CEAWL00155,CEASUB001283,Ganesh Revathi Fertilisers,RSM,2026-03-17,orders down,scheme support requested,low
+CEAWL00156,CEASUB003988,Kaveri Ganesh Tyres,Service,2025-12-31,closed counter,credit call done,high
+CEAWL00157,CEASUB001631,Mahalakshmi Naveen Enterprises,Distributor,2026-02-14,payment delay,credit call done,low
+CEAWL00158,CEASUB000974,National Venkatesh Tyres,Zonal office,2026-03-31,owner dispute,credit call done,low
+CEAWL00159,CEASUB001099,New Sanjay Agro,Credit,19/08/2025,service complaint,credit call done,high
+CEAWL00160,CEASUB003441,STAR SOWMYA CORPORATION,Credit,2025-06-28,owner dispute,scheme support requested,low
+CEAWL00161,CEASUB000970,United Geetha Distributors Ltd,Zonal office,22/09/2025,orders down,field visit planned,low
+CEAWL00162,CEASUB002249,Balaji Bala Traders,Zonal office,2026-03-02,orders down,credit call done,low
+CEAWL00163,CEASUB003074,Ganesh Ganesh Tyres,ASM,01/10/2025,closed counter,field visit planned,high
+CEAWL00164,CEASUB004338,Lucky Kavya Tyres,RSM,2025-06-05,seasonal crop miss,field visit planned,high
+CEAWL00165,CEASUB001457,Vijaya Geetha Corporation,Distributor,2025-10-03,owner dispute,lost to competitor,unknown
+CEAWL00166,CEASUB000885,Royal Naveen Depot,Zonal office,24/06/2025,service complaint,field visit planned,medium
+CEAWL00167,CEASUB002923,Metro Priya Agro,Service,2025-06-02,seasonal crop miss,lost to competitor,high
+CEAWL00168,CEASUB000392,Prime Ganesh Depot,RSM,2025-07-07,service complaint,new owner to verify,high
+CEAWL00169,CEASUB001860,Star Lakshmi Tyres,Service,2025-07-08,owner dispute,credit call done,medium
+CEAWL00170,CEADLR000600,Prime Anand Tyres,Service,04/02/2026,orders down,new owner to verify,high
+CEAWL00171,CEASUB004176,ROYAL IRFAN PAINTS,ASM,2025-12-30,scheme claim pending,lost to competitor,low
+CEAWL00172,CEASUB003165,Star Venkatesh Tyres,ASM,2026-01-31,service complaint,scheme support requested,low
+CEAWL00173,CEASUB002186,Balaji Naveen Enterprises,Credit,2026-02-13,orders down,field visit planned,low
+CEAWL00174,CEASUB003138,Metro Lakshmi Hardware,Distributor,07/21/2025,orders down,credit call done,high
+CEAWL00175,CEASUB000172,Royal Manoj Agencies,Distributor,09/08/2025,orders down,credit call done,medium
+CEAWL00176,CEASUB004077,City Lokesh Associates,Zonal office,01/30/2026,orders down,waiting for payment,low
+CEAWL00177,CEASUB002639,CITY CHANDRA AGENCIES,ASM,2026-01-31,orders down,credit call done,medium
+CEAWL00178,CEASUB000073,Modern Ganesh Paints,Service,12/24/2025,service complaint,scheme support requested,unknown
+CEAWL00179,CEASUB001674,Mahalakshmi Anand Tyres,Zonal office,22-Feb-26,closed counter,lost to competitor,medium
+CEAWL00180,CEASUB001694,MURUGAN LAKSHMI SALES,RSM,2026-01-22,payment delay,waiting for payment,medium
+CEAWL00181,CEASUB004335,Prime Sowmya Depot,Credit,13-Jul-25,seasonal crop miss,credit call done,low
+CEAWL00182,CEASUB002902,Metro Rafiq Paints,Service,2026-01-17,competitor offer,new owner to verify,high
+CEAWL00183,CEASUB001676,City Lakshmi Agencies,Service,2025-07-31,scheme claim pending,waiting for payment,low
+CEAWL00184,CEASUB000048,GANESH IRFAN TYRES,RSM,2026-01-03,service complaint,new owner to verify,low
+CEAWL00185,CEADLR000282,United Venkatesh Mart,RSM,2025-10-05,competitor offer,lost to competitor,medium
+CEAWL00186,CEASUB004173,Lucky Naveen Enterprises,Zonal office,06/02/2026,seasonal crop miss,scheme support requested,medium
+CEAWL00187,CEASUB004196,Sree Lokesh Tyres Ltd,Credit,2026-02-11,orders down,field visit planned,low
+CEAWL00188,CEASUB001939,Star Bala Tyres,Zonal office,2026-03-11,payment delay,field visit planned,medium
+CEAWL00189,CEASUB001911,Royal Hari Tyres,RSM,2025-07-08,payment delay,waiting for payment,low
+CEAWL00190,CEASUB002850,LUCKY SENTHIL AGENCIES,Distributor,04/06/2025,competitor offer,credit call done,medium
+CEAWL00191,CEADLR000501,Sree Naveen Tyres,Service,10-Feb-26,scheme claim pending,scheme support requested,high
+CEAWL00192,CEASUB003108,Kaveri Sowmya Hardware Pvt,ASM,2025-12-14,seasonal crop miss,field visit planned,low
+CEAWL00193,CEASUB002894,Ganesh Naveen Tyres,Distributor,2025-07-25,service complaint,waiting for payment,low
+CEAWL00194,CEASUB001880,Ganesh Bala Tyres,Distributor,2025-09-26,scheme claim pending,scheme support requested,high
+CEAWL00195,CEASUB002866,Prime Naveen Tyres,Service,2025-12-11,closed counter,scheme support requested,high
+CEAWL00196,CEASUB003719,Lucky Geetha Depot,Credit,01-Oct-25,seasonal crop miss,lost to competitor,low
+CEAWL00197,CEASUB003387,Shree Chandra Tyres,RSM,2026-02-19,owner dispute,field visit planned,medium
+CEAWL00198,CEASUB003715,Mahalakshmi Bala Corporation,Service,2025-07-04,payment delay,waiting for payment,unknown
+CEAWL00199,CEASUB001365,Kaveri Sanjay Enterprises,ASM,2025-06-02,competitor offer,scheme support requested,medium
+CEAWL00200,CEADLR000706,Sree Senthil Corporation,Zonal office,2026-03-16,service complaint,credit call done,medium
+CEAWL00201,CEASUB002978,UNITED LOKESH ASSOCIATES,Distributor,24/11/2025,scheme claim pending,waiting for payment,high
+CEAWL00202,CEASUB004388,Modern Sanjay Tyres,ASM,2025-10-15,seasonal crop miss,waiting for payment,low
+CEAWL00203,CEASUB003765,Sree Kavya Tyres,Credit,2026-01-26,scheme claim pending,credit call done,high
+CEAWL00204,CEASUB004337,Royal Sanjay Distributors,Credit,2025-12-15,owner dispute,lost to competitor,high
+CEAWL00205,CEASUB003403,New Venkatesh Tyres,Service,15/12/2025,competitor offer,scheme support requested,medium
+CEAWL00206,CEASUB004396,Sri Rafiq Depot,Credit,03-Sep-25,competitor offer,credit call done,medium
+CEAWL00207,CEASUB004473,Sree Ganesh Distributors,Distributor,2025-09-10,payment delay,field visit planned,unknown
+CEAWL00208,CEASUB004236,Shree Meena Chemicals,RSM,2025-07-16,service complaint,new owner to verify,medium
+CEAWL00209,CEASUB003355,Metro Senthil Tyres,ASM,2026-01-09,competitor offer,lost to competitor,high
+CEAWL00210,CEASUB000010,Murugan Anand Associates,Zonal office,2025-11-15,payment delay,scheme support requested,high
+CEAWL00211,CEASUB001645,Murugan Meena Traders,ASM,2025-12-20,service complaint,new owner to verify,medium
+CEAWL00212,CEASUB002769,Metro Jagan Stores,Service,02/04/2026,payment delay,lost to competitor,medium
+CEAWL00213,CEASUB001630,Balaji Farida Tyres,Credit,2025-12-13,owner dispute,lost to competitor,high
+CEAWL00214,CEASUB000687,Vijaya Venkatesh Chemicals,Distributor,2025-07-05,closed counter,lost to competitor,unknown
+CEAWL00215,CEADLR000158,Sree Chandra Tyres,ASM,2025-11-25,owner dispute,waiting for payment,low
+CEAWL00216,CEASUB000753,Lucky Jagan Tyres,Distributor,13/08/2025,seasonal crop miss,credit call done,unknown
+CEAWL00217,CEADLR000353,Murugan Venkatesh Depot,Credit,2025-12-14,seasonal crop miss,lost to competitor,medium
+CEAWL00218,CEASUB004264,CITY YUSUF HARDWARE,Service,30-Jan-26,payment delay,credit call done,low
+CEAWL00219,CEASUB001353,Lucky Arun Tyres,Distributor,29/08/2025,service complaint,new owner to verify,medium
+CEAWL00220,CEADLR000067,Mahalakshmi Hari Chemicals,Service,2026-03-05,closed counter,field visit planned,high
+CEAWL00221,CEADLR000235,National Prakash Tyres,Credit,2025-11-02,competitor offer,lost to competitor,low
+CEAWL00222,CEADLR000709,City Arun Tyres,ASM,2026-01-04,orders down,scheme support requested,unknown
+CEAWL00223,CEASUB003747,STAR BALA ASSOCIATES,RSM,2025-10-18,orders down,field visit planned,unknown
+CEAWL00224,CEADLR000246,Ganesh Manoj Traders & Co,Service,03/06/2026,closed counter,waiting for payment,medium
+CEAWL00225,CEASUB000846,SRI SOWMYA FERTILISERS,Service,2025-08-16,service complaint,field visit planned,medium
+CEAWL00226,CEASUB000287,GANESH JAGAN HARDWARE,Zonal office,2026-01-15,closed counter,scheme support requested,high
+CEAWL00227,CEASUB002025,Modern Venkatesh Distributors,Zonal office,2025-06-30,seasonal crop miss,waiting for payment,medium
+CEAWL00228,CEASUB001274,Metro Meena Tyres,Zonal office,08/11/2025,competitor offer,waiting for payment,medium
+CEAWL00229,CEASUB003880,Vijaya Bala Agro,Distributor,2025-12-25,competitor offer,field visit planned,medium
+CEAWL00230,CEADLR000575,Metro Senthil Mart,ASM,16/01/2026,owner dispute,new owner to verify,high
+CEAWL00231,CEASUB000894,Mahalakshmi Arun Tyres,Service,2026-02-02,payment delay,waiting for payment,unknown
+CEAWL00232,CEASUB003852,Royal Arun Tyres,ASM,2026-03-10,owner dispute,new owner to verify,low
+CEAWL00233,CEASUB001590,Ganesh Karthik Corporation,Service,2025-08-31,owner dispute,scheme support requested,high
+CEAWL00234,CEASUB002260,United Hari Mart,Zonal office,2025-06-17,competitor offer,field visit planned,high
+CEAWL00235,CEASUB000614,Mahalakshmi Sanjay Tyres,Zonal office,2025-06-09,closed counter,waiting for payment,low
+CEAWL00236,CEASUB001254,New Rafiq Tyres,RSM,2025-06-12,seasonal crop miss,new owner to verify,low
+CEAWL00237,CEASUB000856,Royal Manoj Mart,Zonal office,2026-03-09,scheme claim pending,credit call done,medium
+CEAWL00238,CEASUB003774,Shree Venkatesh Tyres,Service,2025-11-09,closed counter,waiting for payment,low
+CEAWL00239,CEASUB002340,New Sanjay Enterprises,Zonal office,2026-01-24,orders down,scheme support requested,unknown
+CEAWL00240,CEASUB004317,United Venkatesh Agro,ASM,2025-11-06,payment delay,field visit planned,unknown
+CEAWL00241,CEADLR000489,United Farida Tyres,ASM,2025-09-20,competitor offer,scheme support requested,medium
+CEAWL00242,CEASUB003270,Mahalakshmi Anand Services,Credit,2026-03-05,payment delay,field visit planned,low
+CEAWL00243,CEASUB000011,Sri Sowmya Sales,Service,2026-01-19,owner dispute,field visit planned,high
+CEAWL00244,CEASUB003763,National Bala Tyres,RSM,2025-12-02,scheme claim pending,waiting for payment,medium
+CEAWL00245,CEASUB000406,Sri Lokesh Mart,Credit,10/06/2025,owner dispute,scheme support requested,unknown
+CEAWL00246,CEASUB004498,Star Priya Hardware,Credit,2026-02-12,closed counter,scheme support requested,low
+CEAWL00247,CEASUB001958,Balaji Rafiq Hardware,Credit,2025-09-15,competitor offer,lost to competitor,unknown
+CEAWL00248,CEASUB000102,Prime Prakash Enterprises,Credit,2025-08-01,payment delay,waiting for payment,high
+CEAWL00249,CEASUB003058,Star Suresh Enterprises,Zonal office,2025-06-28,orders down,credit call done,high
+CEAWL00250,CEASUB003045,National Lokesh Services,ASM,2025-08-09,owner dispute,credit call done,low
+CEAWL00251,CEASUB001170,Royal Yusuf Hardware,Service,18/12/2025,service complaint,field visit planned,medium
+CEAWL00252,CEASUB003362,Murugan Sowmya Distributors,Service,14-Mar-26,closed counter,new owner to verify,unknown
+CEAWL00253,CEASUB000212,Vijaya Arun Sales,RSM,2025-11-09,seasonal crop miss,waiting for payment,unknown
+CEAWL00254,CEASUB003618,New Sanjay Services,RSM,2026-01-05,owner dispute,waiting for payment,high
+CEAWL00255,CEASUB003041,New Naveen Paints,RSM,2026-02-10,payment delay,credit call done,medium
+CEAWL00256,CEASUB001229,Mahalakshmi Manoj Paints,Service,2026-02-20,service complaint,credit call done,unknown
+CEAWL00257,CEASUB002640,Kaveri Prakash Distributors,Service,2025-12-25,competitor offer,credit call done,low
+CEAWL00258,CEASUB000251,National Deepak Sales,Credit,26/08/2025,closed counter,field visit planned,medium
+CEAWL00259,CEASUB003581,Sri Karthik Chemicals,Zonal office,2025-09-18,service complaint,new owner to verify,high
+CEAWL00260,CEASUB003283,Sree Venkatesh Sales,Service,2025-07-12,orders down,field visit planned,unknown
+CEAWL00261,CEASUB002205,Sree Priya Tyres,Zonal office,2026-02-14,service complaint,waiting for payment,unknown
+CEAWL00262,CEASUB003194,Metro Venkatesh Tyres,Zonal office,2025-07-16,competitor offer,credit call done,high
+CEAWL00263,CEASUB002501,Lucky Prakash Sales,Service,2026-02-13,payment delay,new owner to verify,low
+CEAWL00264,CEASUB000678,City Lakshmi Enterprises,RSM,2026-03-01,service complaint,field visit planned,high
+CEAWL00265,CEASUB000474,Modern Sowmya Tyres,RSM,2025-10-31,service complaint,scheme support requested,unknown
+CEAWL00266,CEASUB001152,METRO RAFIQ MART,ASM,2026-02-08,closed counter,waiting for payment,high
+CEAWL00267,CEADLR000040,Shree Bala Agro,Zonal office,03/02/2026,payment delay,new owner to verify,high
+CEAWL00268,CEASUB001370,Sree Venkatesh Tyres,Service,10/31/2025,payment delay,field visit planned,medium
+CEAWL00269,CEASUB002897,Prime Yusuf Associates,ASM,2025-10-27,closed counter,new owner to verify,high
+CEAWL00270,CEASUB000870,Kaveri Revathi Tyres,Distributor,2026-02-28,orders down,field visit planned,low
+CEAWL00271,CEADLR000287,Metro Karthik Mart,Zonal office,2026-03-12,payment delay,lost to competitor,low
+CEAWL00272,CEADLR000140,Prime Chandra Tyres,Distributor,2025-06-07,competitor offer,waiting for payment,low
+CEAWL00273,CEASUB001534,Murugan Irfan Stores,Distributor,2025-07-05,closed counter,waiting for payment,medium
+CEAWL00274,CEADLR000385,Metro Geetha Depot,ASM,2025-09-23,payment delay,new owner to verify,low
+CEAWL00275,CEASUB001032,Sri Chandra Tyres,RSM,2025-10-12,service complaint,lost to competitor,unknown
+CEAWL00276,CEASUB003905,United Geetha Tyres,Zonal office,2026-01-27,scheme claim pending,field visit planned,high
+CEAWL00277,CEASUB000963,Murugan Kavya Tyres,ASM,2025-07-16,competitor offer,new owner to verify,unknown
+CEAWL00278,CEASUB002986,United Jagan Tyres,Distributor,2026-03-14,scheme claim pending,field visit planned,medium
+CEAWL00279,CEASUB003970,Ganesh Revathi Tyres,RSM,2025-09-24,orders down,waiting for payment,high
+CEAWL00280,CEASUB002650,Metro Sanjay Fertilisers,Service,2025-11-05,closed counter,scheme support requested,unknown
+CEAWL00281,CEASUB003296,National Meena Sales,Zonal office,2026-03-23,seasonal crop miss,lost to competitor,high
+CEAWL00282,CEASUB000222,Royal Lokesh Paints,Distributor,2025-12-09,competitor offer,credit call done,high
+CEAWL00283,CEASUB002602,Kaveri Venkatesh Tyres,RSM,30-Dec-25,service complaint,lost to competitor,low
+CEAWL00284,CEADLR000466,National Revathi Tyres,Credit,2025-09-25,orders down,waiting for payment,medium
+CEAWL00285,CEASUB000061,SRI GEETHA TYRES,ASM,01/15/2026,owner dispute,field visit planned,unknown
+CEAWL00286,CEASUB002119,National Senthil Tyres,Distributor,2025-12-05,orders down,waiting for payment,unknown
+CEAWL00287,CEASUB001054,United Sanjay Depot,Service,2025-10-23,service complaint,waiting for payment,low
+CEAWL00288,CEASUB002759,Murugan Venkatesh Tyres,Service,2025-08-29,payment delay,waiting for payment,medium
+CEAWL00289,CEASUB002308,Mahalakshmi Deepak Tyres,Service,2025-09-22,seasonal crop miss,scheme support requested,low
+CEAWL00290,CEASUB003714,Balaji Anand Tyres,Credit,2025-06-17,orders down,field visit planned,low
+CEAWL00291,CEASUB001091,City Priya Agencies,Zonal office,2025-09-23,payment delay,lost to competitor,unknown
+CEAWL00292,CEADLR000423,Lucky Farida Tyres,Credit,2025-11-24,service complaint,field visit planned,low
+CEAWL00293,CEASUB002399,Vijaya Meena Tyres,ASM,06-Feb-26,orders down,scheme support requested,unknown
+CEAWL00294,CEASUB003918,United Meena Tyres,Service,01/24/2026,payment delay,lost to competitor,unknown
+CEAWL00295,CEASUB000907,Modern Rafiq Hardware,RSM,28/12/2025,competitor offer,waiting for payment,high
+CEAWL00296,CEASUB002096,Kaveri Manoj Agencies,Distributor,07/01/2026,seasonal crop miss,scheme support requested,high
+CEAWL00297,CEASUB000682,Kaveri Kavya Corporation Main,Credit,01/20/2026,seasonal crop miss,credit call done,low
+CEAWL00298,CEASUB003473,Star Hari Hardware,Zonal office,2025-10-23,seasonal crop miss,waiting for payment,unknown
+CEAWL00299,CEASUB002496,City Anand Tyres,Zonal office,2025-11-29,competitor offer,lost to competitor,high
+CEAWL00300,CEASUB004421,New Meena Paints,Credit,11/07/2025,payment delay,new owner to verify,medium
+CEAWL00301,CEASUB003459,Metro Manoj Tyres & Co,Service,2025-10-07,seasonal crop miss,waiting for payment,unknown
+CEAWL00302,CEASUB002988,City Naveen Chemicals,Credit,01-Jan-26,payment delay,field visit planned,unknown
+CEAWL00303,CEASUB000625,City Lakshmi Distributors,ASM,2026-03-25,scheme claim pending,scheme support requested,high
+CEAWL00304,CEASUB003132,Ganesh Jagan Associates,Credit,04/03/2026,scheme claim pending,new owner to verify,high
+CEAWL00305,CEASUB001257,New Jagan Tyres,RSM,2025-09-09,scheme claim pending,waiting for payment,low
+CEAWL00306,CEASUB001147,National Prakash Associates,Zonal office,2025-08-31,payment delay,credit call done,low
+CEAWL00307,CEASUB002502,Shree Meena Tyres,RSM,04-Sep-25,competitor offer,credit call done,unknown
+CEAWL00308,CEASUB001780,Prime Arun Enterprises,Distributor,2025-07-21,service complaint,lost to competitor,high
+CEAWL00309,CEASUB002971,Sree Lakshmi Tyres,Zonal office,2025-07-07,service complaint,lost to competitor,low
+CEAWL00310,CEASUB003316,Kaveri Sanjay Tyres,Service,07/03/2026,payment delay,field visit planned,low
+CEAWL00311,CEASUB003274,Mahalakshmi Lokesh Chemicals,Service,2026-02-28,seasonal crop miss,lost to competitor,low
+CEAWL00312,CEASUB003039,United Lakshmi Tyres,ASM,2026-01-17,payment delay,field visit planned,low
+CEAWL00313,CEASUB002587,Royal Lokesh Tyres,Credit,2025-08-23,closed counter,field visit planned,medium
+CEAWL00314,CEASUB000574,Balaji Lakshmi Tyres,ASM,24/06/2025,payment delay,scheme support requested,low
+CEAWL00315,CEASUB001330,City Arun Tyres,Zonal office,01-Jan-26,scheme claim pending,credit call done,low
+CEAWL00316,CEASUB003739,Lucky Lokesh Depot,RSM,2025-07-06,scheme claim pending,waiting for payment,high
+CEAWL00317,CEASUB002786,City Hari Tyres,RSM,27-Sep-25,closed counter,waiting for payment,low
+CEAWL00318,CEASUB002097,Murugan Hari Agro,Zonal office,2026-03-15,payment delay,field visit planned,high
+CEAWL00319,CEASUB000454,United Sowmya Depot,Zonal office,2025-06-18,scheme claim pending,lost to competitor,unknown
+CEAWL00320,CEASUB003501,Royal Karthik Mart,RSM,2026-01-06,service complaint,credit call done,high
+CEAWL00321,CEASUB002711,City Naveen Agencies,RSM,15/12/2025,payment delay,lost to competitor,low
+CEAWL00322,CEASUB003099,Kaveri Karthik Fertilisers,RSM,2025-10-18,closed counter,scheme support requested,high
+CEAWL00323,CEASUB003150,GANESH MANOJ CORPORATION,Distributor,2025-07-27,seasonal crop miss,new owner to verify,medium
+CEAWL00324,CEASUB004018,Sri Sowmya Stores,RSM,2025-08-08,orders down,scheme support requested,low
+CEAWL00325,CEASUB000541,New Lakshmi Fertilisers,Credit,2026-03-28,closed counter,scheme support requested,medium
+CEAWL00326,CEASUB000394,New Geetha Depot,Service,2025-12-22,payment delay,scheme support requested,low
+CEAWL00327,CEASUB003163,Star Kavya Tyres,Distributor,2025-11-24,seasonal crop miss,new owner to verify,medium
+CEAWL00328,CEASUB004467,Royal Sowmya Hardware,Credit,2025-11-09,owner dispute,credit call done,medium
+CEAWL00329,CEASUB000540,National Chandra Tyres,Distributor,2025-06-07,service complaint,credit call done,medium
+CEAWL00330,CEASUB001764,Royal Suresh Tyres,Distributor,2025-10-05,orders down,field visit planned,high
+CEAWL00331,CEASUB000483,Mahalakshmi Farida Chemicals,Zonal office,2025-07-05,service complaint,credit call done,medium
+CEAWL00332,CEASUB000195,Mahalakshmi Farida Stores Main,Service,22/12/2025,seasonal crop miss,lost to competitor,unknown
+CEAWL00333,CEASUB001975,Murugan Venkatesh Enterprises,Service,02/13/2026,seasonal crop miss,lost to competitor,low
+CEAWL00334,CEASUB003729,Prime Ganesh Services,Distributor,2025-07-20,seasonal crop miss,waiting for payment,unknown
+CEAWL00335,CEASUB001904,Kaveri Arun Paints,Credit,2025-09-04,service complaint,field visit planned,low
+CEAWL00336,CEASUB000606,Shri Meena Enterprises,Zonal office,2025-11-21,closed counter,new owner to verify,medium
+CEAWL00337,CEASUB003033,Murugan Naveen Tyres,ASM,2025-10-04,closed counter,field visit planned,unknown
+CEAWL00338,CEASUB003378,Ganesh Lokesh Enterprises,Distributor,2025-11-25,service complaint,scheme support requested,unknown
+CEAWL00339,CEADLR000061,Kaveri Farida Tyres,ASM,2025-08-28,scheme claim pending,waiting for payment,high
+CEAWL00340,CEASUB000099,Sree Revathi Tyres,RSM,2025-12-24,owner dispute,new owner to verify,low
+CEAWL00341,CEASUB000643,Modern Sowmya Sales,Zonal office,2025-08-18,scheme claim pending,waiting for payment,low
+CEAWL00342,CEASUB002466,Metro Bala Tyres,ASM,10/18/2025,competitor offer,scheme support requested,high
+CEAWL00343,CEASUB003323,Kaveri Rafiq Distributors,ASM,2026-01-23,owner dispute,waiting for payment,high
+CEAWL00344,CEASUB004290,Prime Rafiq Tyres,Credit,2025-08-14,competitor offer,credit call done,low
+CEAWL00345,CEASUB000831,United Sanjay Chemicals,ASM,2025-12-09,owner dispute,scheme support requested,high
+CEAWL00346,CEASUB001483,Murugan Chandra Tyres,Distributor,2025-06-02,seasonal crop miss,field visit planned,unknown
+CEAWL00347,CEASUB002738,Mahalakshmi Anand Distributors,Zonal office,2025-06-05,seasonal crop miss,field visit planned,low
+CEAWL00348,CEASUB000686,New Sowmya Tyres,Distributor,2026-01-09,orders down,credit call done,unknown
+CEAWL00349,CEADLR000320,Murugan Sowmya Hardware,Zonal office,08/06/2025,payment delay,scheme support requested,unknown
+CEAWL00350,CEASUB000083,Modern Venkatesh Sales,Zonal office,2025-09-14,seasonal crop miss,field visit planned,low
+CEAWL00351,CEADLR000146,Star Ganesh Chemicals,ASM,2025-07-26,payment delay,field visit planned,low
+CEAWL00352,CEASUB002346,United Manoj Tyres,Service,2026-01-25,payment delay,scheme support requested,unknown
+CEAWL00353,CEASUB002237,Kaveri Manoj Tyres,Service,2025-09-13,service complaint,waiting for payment,high
+CEAWL00354,CEASUB001718,Sri Prakash Fertilisers,Zonal office,03/28/2026,competitor offer,credit call done,low
+CEAWL00355,CEASUB000915,Lucky Suresh Fertilisers,ASM,2025-10-13,competitor offer,new owner to verify,medium
+CEAWL00356,CEASUB001352,Balaji Naveen Distributors,Zonal office,2026-02-24,service complaint,new owner to verify,low
+CEAWL00357,CEASUB001093,Star Meena Tyres,Credit,2025-11-06,orders down,new owner to verify,medium
+CEAWL00358,CEADLR000570,Prime Meena Tyres,Credit,2025-12-26,service complaint,lost to competitor,unknown
+CEAWL00359,CEASUB000770,Sri Ganesh Enterprises,Service,07/12/2025,owner dispute,lost to competitor,low
+CEAWL00360,CEASUB000346,Modern Revathi Paints,Zonal office,2025-09-17,service complaint,scheme support requested,unknown
+CEAWL00361,CEASUB003072,Vijaya Hari Tyres,Zonal office,2025-10-03,payment delay,credit call done,medium
+CEAWL00362,CEASUB003810,Mahalakshmi Arun Paints,Distributor,2026-03-06,payment delay,scheme support requested,medium
+CEAWL00363,CEASUB000425,Vijaya Irfan Traders,Distributor,2026-02-18,closed counter,waiting for payment,high
+CEAWL00364,CEASUB003243,Royal Ganesh Stores,Distributor,2026-03-22,owner dispute,lost to competitor,medium
+CEAWL00365,CEASUB002872,Star Deepak Fertilisers,Service,2025-12-11,orders down,scheme support requested,low
+CEAWL00366,CEADLR000450,Kaveri Ganesh Tyres,ASM,2025-11-16,seasonal crop miss,field visit planned,unknown
+CEAWL00367,CEASUB000068,United Farida Tyres,Service,2025-09-28,competitor offer,credit call done,unknown
+CEAWL00368,CEASUB004044,Star Suresh Tyres,Zonal office,2025-11-08,seasonal crop miss,lost to competitor,unknown
+CEAWL00369,CEASUB000028,United Deepak Distributors,Distributor,2026-03-02,scheme claim pending,credit call done,high
+CEAWL00370,CEASUB002672,Kaveri Senthil Hardware,RSM,2025-08-13,orders down,scheme support requested,high
+CEAWL00371,CEADLR000377,Balaji Sowmya Corporation,Credit,18-Oct-25,seasonal crop miss,new owner to verify,unknown
+CEAWL00372,CEADLR000362,Metro Priya Tyres,Distributor,2026-02-20,orders down,new owner to verify,unknown
+CEAWL00373,CEADLR000332,Murugan Irfan Tyres,Credit,2026-01-16,seasonal crop miss,scheme support requested,low
+CEAWL00374,CEASUB001606,Modern Priya Mart,Service,2026-01-24,orders down,field visit planned,high
+CEAWL00375,CEASUB002250,National Anand Tyres & Co,Distributor,2025-09-19,closed counter,new owner to verify,low
+CEAWL00376,CEASUB003031,Sree Rafiq Tyres,Zonal office,2025-06-22,scheme claim pending,credit call done,unknown
+CEAWL00377,CEASUB003527,SRI Sanjay Tyres,Zonal office,08/21/2025,competitor offer,scheme support requested,unknown
+CEAWL00378,CEASUB003789,Shree Deepak Tyres,ASM,2025-11-23,orders down,field visit planned,high
+CEAWL00379,CEASUB004199,Mahalakshmi Prakash Tyres,RSM,2025-12-22,scheme claim pending,waiting for payment,low
+CEAWL00380,CEASUB004045,New Venkatesh Hardware,ASM,10-Aug-25,closed counter,new owner to verify,high
+CEAWL00381,CEASUB004362,ROYAL SURESH FERTILISERS,ASM,15-Aug-25,orders down,credit call done,medium
+CEAWL00382,CEASUB002619,Prime Naveen Tyres,Zonal office,2025-11-08,orders down,scheme support requested,unknown
+CEAWL00383,CEASUB001604,Mahalakshmi Kavya Stores,Distributor,2025-08-31,payment delay,waiting for payment,low
+CEAWL00384,CEASUB004295,Mahalakshmi Lakshmi Tyres,Credit,2025-11-21,seasonal crop miss,waiting for payment,unknown
+CEAWL00385,CEADLR000747,Sri Farida Tyres,Zonal office,17/03/2026,seasonal crop miss,scheme support requested,medium
+CEAWL00386,CEASUB004145,Prime Irfan Corporation,Distributor,2025-07-24,competitor offer,new owner to verify,high
+CEAWL00387,CEASUB002279,Star Ganesh Services,RSM,2025-07-19,scheme claim pending,field visit planned,high
+CEAWL00388,CEASUB002059,National Rafiq Agro,Distributor,02/12/2026,payment delay,field visit planned,unknown
+CEAWL00389,CEASUB000818,National Prakash Enterprises,RSM,2025-11-27,scheme claim pending,scheme support requested,medium
+CEAWL00390,CEASUB004181,Shree Rafiq Sales,Distributor,2025-11-27,competitor offer,field visit planned,high
+CEAWL00391,CEASUB003629,City Hari Depot,Distributor,2025-08-06,orders down,credit call done,unknown
+CEAWL00392,CEADLR000137,Vijaya Arun Tyres,Credit,03/24/2026,competitor offer,new owner to verify,unknown
+CEAWL00393,CEASUB000549,Sri Senthil Associates,Distributor,2025-12-01,owner dispute,scheme support requested,medium
+CEAWL00394,CEASUB004078,Metro Arun Traders,Distributor,11/01/2025,orders down,lost to competitor,unknown
+CEAWL00395,CEASUB003811,Kaveri Suresh Corporation,ASM,2025-07-17,seasonal crop miss,waiting for payment,high
+CEAWL00396,CEASUB001108,Mahalakshmi Lakshmi Tyres,Distributor,28/09/2025,orders down,field visit planned,medium
+CEAWL00397,CEASUB003432,Mahalakshmi Senthil Services,ASM,23/07/2025,seasonal crop miss,waiting for payment,unknown
+CEAWL00398,CEASUB004407,Kaveri Suresh Chemicals,ASM,2025-09-12,payment delay,new owner to verify,high
+CEAWL00399,CEASUB001326,Royal Farida Tyres,ASM,2026-03-15,orders down,waiting for payment,unknown
+CEAWL00400,CEASUB003999,Murugan Revathi Tyres,RSM,2025-11-15,competitor offer,lost to competitor,medium
+CEAWL00401,CEASUB002656,Prime Arun Paints,ASM,2025-10-21,owner dispute,waiting for payment,high
+CEAWL00402,CEASUB001169,Murugan Karthik Tyres,Zonal office,2025-10-26,scheme claim pending,lost to competitor,high
+CEAWL00403,CEASUB002263,United Ganesh Tyres,Zonal office,2025-10-25,owner dispute,waiting for payment,unknown
+CEAWL00404,CEASUB004054,Prime Irfan Agencies,RSM,05/09/2025,competitor offer,field visit planned,unknown
+CEAWL00405,CEASUB000924,GANESH ANAND TYRES,Credit,2026-02-10,orders down,lost to competitor,unknown
+CEAWL00406,CEASUB001320,Metro Manoj Agro,ASM,2025-08-06,payment delay,lost to competitor,unknown
+CEAWL00407,CEADLR000051,Mahalakshmi Jagan Agencies,Credit,19-Nov-25,owner dispute,lost to competitor,unknown
+CEAWL00408,CEASUB003643,Kaveri Geetha Tyres,Credit,2025-11-27,scheme claim pending,scheme support requested,high
+CEAWL00409,CEASUB001489,Prime Hari Corporation,Credit,2025-09-22,seasonal crop miss,waiting for payment,unknown
+CEAWL00410,CEADLR000669,Modern Farida Associates,RSM,02/09/2025,seasonal crop miss,credit call done,high
+CEAWL00411,CEASUB003790,Balaji Hari Tyres,Zonal office,26/11/2025,payment delay,credit call done,low
+CEAWL00412,CEASUB000564,New Bala Agro,Distributor,2026-03-14,competitor offer,field visit planned,medium
+CEAWL00413,CEASUB003406,Balaji Hari Agro,Service,2026-03-15,orders down,new owner to verify,high
+CEAWL00414,CEASUB000774,Royal Venkatesh Agro,RSM,2025-08-27,orders down,new owner to verify,high
+CEAWL00415,CEASUB004218,Mahalakshmi Suresh Tyres,RSM,2026-03-24,closed counter,lost to competitor,medium
+CEAWL00416,CEASUB003487,Star Anand Chemicals,Credit,2025-07-16,service complaint,scheme support requested,low
+CEAWL00417,CEASUB003537,Shree Suresh Tyres,Distributor,2026-02-20,competitor offer,waiting for payment,high
+CEAWL00418,CEASUB002058,United Bala Agro Main,RSM,2025-08-17,orders down,credit call done,high
+CEAWL00419,CEASUB000801,Vijaya Senthil Agencies Pvt,Distributor,2026-01-18,payment delay,scheme support requested,unknown
+CEAWL00420,CEADLR000718,Sri Manoj Chemicals,ASM,2025-12-15,closed counter,new owner to verify,high
+CEAWL00421,CEASUB002451,CITY CHANDRA SALES,Zonal office,07/15/2025,payment delay,field visit planned,unknown
+CEAWL00422,CEASUB002449,New Priya Associates,Service,2025-11-05,competitor offer,credit call done,high
+CEAWL00423,CEASUB002197,Balaji Jagan Depot,Zonal office,04/12/2025,scheme claim pending,credit call done,unknown
+CEAWL00424,CEASUB001928,New Karthik Agro,Service,2025-12-29,seasonal crop miss,field visit planned,high
+CEAWL00425,CEADLR000442,Vijaya Sanjay Agencies Main,ASM,2026-03-05,owner dispute,lost to competitor,high
+CEAWL00426,CEASUB003615,Modern Geetha Tyres,Credit,07/08/2025,scheme claim pending,scheme support requested,low
+CEAWL00427,CEASUB000881,Metro Karthik Tyres,Distributor,2025-07-28,owner dispute,waiting for payment,low
+CEAWL00428,CEASUB000130,Mahalakshmi Sanjay Stores,Distributor,06-Aug-25,orders down,waiting for payment,medium
+CEAWL00429,CEASUB001474,Royal Meena Tyres,Credit,2026-01-20,owner dispute,field visit planned,unknown
+CEAWL00430,CEASUB002113,Lucky Manoj Mart,RSM,2025-08-24,payment delay,field visit planned,high
+CEAWL00431,CEASUB004414,National Karthik Tyres,Distributor,2026-02-28,scheme claim pending,lost to competitor,high
+CEAWL00432,CEADLR000383,New Deepak Depot,Distributor,12/09/2025,owner dispute,scheme support requested,low
+CEAWL00433,CEASUB003299,Royal Kavya Services,Credit,2026-02-28,service complaint,waiting for payment,low
+CEAWL00434,CEASUB000343,Metro Kavya Stores,ASM,2025-06-19,competitor offer,lost to competitor,unknown
+CEAWL00435,CEASUB003681,Vijaya Venkatesh Depot,ASM,2025-07-31,service complaint,field visit planned,medium
+CEAWL00436,CEASUB001930,Metro Geetha Agro,Credit,15-Oct-25,closed counter,waiting for payment,medium
+CEAWL00437,CEASUB004448,Shree Sanjay Sales,Credit,2025-06-29,orders down,scheme support requested,medium
+CEAWL00438,CEASUB004024,VIJAYA JAGAN AGRO,Credit,2025-12-11,orders down,scheme support requested,low
+CEAWL00439,CEASUB000229,Sree Irfan Enterprises,Distributor,2025-06-14,payment delay,credit call done,high
+CEAWL00440,CEASUB002302,Star Naveen Mart,Zonal office,2025-07-01,closed counter,lost to competitor,high
+CEAWL00441,CEASUB001995,Royal Meena Tyres,Service,2025-08-31,closed counter,new owner to verify,high
+CEAWL00442,CEASUB001412,Sree Venkatesh Agencies,Zonal office,2025-11-29,closed counter,field visit planned,high
+CEAWL00443,CEASUB002911,Sri Venkatesh Mart,Credit,2025-10-28,scheme claim pending,waiting for payment,low
+CEAWL00444,CEASUB004301,Sree Naveen Hardware,Distributor,2026-02-26,closed counter,lost to competitor,low
+CEAWL00445,CEASUB001044,Modern Naveen Chemicals,Distributor,26/01/2026,orders down,scheme support requested,unknown
+CEAWL00446,CEASUB000812,Modern Chandra Mart,ASM,2026-03-14,seasonal crop miss,lost to competitor,low
+CEAWL00447,CEASUB003799,Royal Meena Sales,Service,2025-08-11,payment delay,new owner to verify,low
+CEAWL00448,CEASUB000090,Sri Irfan Tyres,ASM,2025-06-22,orders down,waiting for payment,medium
+CEAWL00449,CEASUB000053,New Priya Tyres,RSM,2025-12-18,orders down,new owner to verify,medium
+CEAWL00450,CEASUB002516,Kaveri Kavya Associates,Service,2026-01-29,seasonal crop miss,new owner to verify,medium
+CEAWL00451,CEASUB001303,Lucky Deepak Tyres,Zonal office,01-Feb-26,owner dispute,credit call done,medium
+CEAWL00452,CEASUB003125,Murugan Sanjay Tyres,Zonal office,2025-09-26,service complaint,credit call done,medium
+CEAWL00453,CEASUB003620,MODERN RAFIQ CHEMICALS,Zonal office,2025-10-23,closed counter,waiting for payment,medium
+CEAWL00454,CEASUB003032,Balaji Arun Tyres,Service,14/02/2026,orders down,waiting for payment,medium
+CEAWL00455,CEASUB002246,Balaji Naveen Stores,Service,2025-07-31,payment delay,field visit planned,low
+CEAWL00456,CEADLR000215,Sree Farida Associates,Service,2025-09-02,competitor offer,credit call done,low
+CEAWL00457,CEASUB001738,Balaji Deepak Chemicals,Service,2025-09-28,orders down,new owner to verify,medium
+CEAWL00458,CEASUB001589,Vijaya Senthil Paints,Zonal office,2025-10-29,competitor offer,credit call done,low
+CEAWL00459,CEADLR000587,Balaji Karthik Tyres,Distributor,2025-10-21,closed counter,new owner to verify,low
+CEAWL00460,CEASUB002696,City Suresh Tyres,ASM,2025-12-31,service complaint,credit call done,high
+CEAWL00461,CEASUB004060,Metro Irfan Services,Service,23/03/2026,orders down,scheme support requested,high
+CEAWL00462,CEASUB002758,Metro Suresh Associates,RSM,2026-02-28,closed counter,new owner to verify,low
+CEAWL00463,CEASUB002932,Modern Naveen Tyres,RSM,2026-01-07,seasonal crop miss,field visit planned,low
+CEAWL00464,CEASUB000019,Balaji Arun Agencies,Credit,2026-02-20,service complaint,field visit planned,high
+CEAWL00465,CEASUB003656,Sree Senthil Enterprises,Zonal office,2025-10-18,service complaint,lost to competitor,low
+CEAWL00466,CEASUB002122,Royal Sanjay Depot,RSM,2025-10-11,closed counter,credit call done,unknown
+CEAWL00467,CEASUB000666,Murugan Arun Fertilisers,Credit,06/07/2025,seasonal crop miss,credit call done,high
+CEAWL00468,CEASUB001583,Vijaya Lakshmi Agencies,RSM,2025-12-24,competitor offer,field visit planned,high
+CEAWL00469,CEASUB000110,United Venkatesh Corporation,Credit,2025-11-21,competitor offer,field visit planned,low
+CEAWL00470,CEASUB000777,Ganesh Revathi Services,RSM,2025-06-13,seasonal crop miss,credit call done,low
+CEAWL00471,CEASUB000758,Prime Arun Tyres,Distributor,2026-01-06,scheme claim pending,new owner to verify,medium
+CEAWL00472,CEASUB002658,Star Sanjay Sales,Service,2026-01-07,seasonal crop miss,field visit planned,unknown
+CEAWL00473,CEASUB001024,Metro Karthik Chemicals,Zonal office,2026-03-20,owner dispute,lost to competitor,unknown
+CEAWL00474,CEASUB004055,Mahalakshmi Suresh Chemicals Main,ASM,2026-01-29,service complaint,waiting for payment,unknown
+CEAWL00475,CEASUB003864,New Hari Tyres,RSM,2025-06-04,owner dispute,waiting for payment,medium
+CEAWL00476,CEASUB003158,Prime Bala Sales,ASM,2025-06-29,closed counter,field visit planned,high
+CEAWL00477,CEASUB000566,Royal Ganesh Tyres,Service,2025-06-23,orders down,lost to competitor,medium
+CEAWL00478,CEASUB000763,Modern Yusuf Tyres,ASM,27-Nov-25,payment delay,scheme support requested,high
+CEAWL00479,CEASUB004137,Modern Farida Agencies,Service,2025-08-26,closed counter,waiting for payment,medium
+CEAWL00480,CEASUB002376,Prime Naveen Enterprises,Distributor,2025-11-02,scheme claim pending,waiting for payment,low
+CEAWL00481,CEASUB003796,MAHALAKSHMI SURESH SALES,Zonal office,24/11/2025,scheme claim pending,new owner to verify,unknown
+CEAWL00482,CEASUB003671,Sri Deepak Stores,ASM,26/11/2025,seasonal crop miss,waiting for payment,unknown
+CEAWL00483,CEASUB002856,Balaji Meena Tyres,Distributor,2025-09-03,seasonal crop miss,credit call done,medium
+CEAWL00484,CEASUB002621,Prime Jagan Hardware,Zonal office,2025-07-14,seasonal crop miss,new owner to verify,high
+CEAWL00485,CEASUB000472,City Arun Tyres,Credit,2026-02-19,closed counter,scheme support requested,low
+CEAWL00486,CEASUB003443,Mahalakshmi Chandra Associates,ASM,2025-11-26,payment delay,new owner to verify,low
+CEAWL00487,CEASUB004347,PRIME GEETHA SERVICES,Service,2025-08-28,seasonal crop miss,field visit planned,low
+CEAWL00488,CEASUB001983,New Manoj Distributors,Credit,2026-02-28,service complaint,new owner to verify,low
+CEAWL00489,CEASUB000428,Balaji Revathi Stores,Zonal office,2025-06-30,owner dispute,field visit planned,medium
+CEAWL00490,CEADLR000719,Sree Priya Sales,RSM,2025-11-15,orders down,waiting for payment,low
+CEAWL00491,CEASUB001650,Lucky Venkatesh Traders,Zonal office,2025-11-26,scheme claim pending,scheme support requested,medium
+CEAWL00492,CEASUB004478,Shree Ganesh Agencies,RSM,2025-07-29,scheme claim pending,field visit planned,unknown
+CEAWL00493,CEASUB000602,Royal Deepak Enterprises,Zonal office,2025-06-02,closed counter,lost to competitor,low
+CEAWL00494,CEASUB004283,Ganesh Arun Agro,Distributor,02/04/2026,owner dispute,lost to competitor,high
+CEAWL00495,CEASUB002608,National Lokesh Chemicals,ASM,2025-06-14,owner dispute,field visit planned,low
+CEAWL00496,CEASUB003803,Lucky Arun Sales,Zonal office,01/29/2026,scheme claim pending,waiting for payment,low
+CEAWL00497,CEASUB000183,Modern Kavya Mart,Zonal office,2025-12-25,seasonal crop miss,field visit planned,unknown
+CEAWL00498,CEASUB003370,City Ganesh Corporation,Credit,2026-01-08,owner dispute,field visit planned,low
+CEAWL00499,CEASUB004363,National Venkatesh Services,Distributor,2025-11-06,service complaint,new owner to verify,unknown
+CEAWL00500,CEADLR000050,Star Arun Stores,RSM,2025-07-18,orders down,lost to competitor,low
+CEAWL00501,CEASUB004427,CITY PRIYA SALES,Zonal office,2026-02-04,closed counter,lost to competitor,medium
+CEAWL00502,CEASUB003229,Murugan Priya Depot,RSM,02/10/2026,closed counter,field visit planned,low
+CEAWL00503,CEASUB002624,Star Venkatesh Tyres,Distributor,2026-03-28,owner dispute,scheme support requested,unknown
+CEAWL00504,CEASUB001066,Balaji Ganesh Agencies,Credit,2025-10-23,scheme claim pending,waiting for payment,low
+CEAWL00505,CEADLR000179,Balaji Senthil Tyres,RSM,2025-08-25,orders down,waiting for payment,unknown
+CEAWL00506,CEASUB000869,Royal Geetha Tyres,ASM,01/21/2026,seasonal crop miss,new owner to verify,high
+CEAWL00507,CEADLR000120,United Senthil Tyres,Credit,2025-08-31,orders down,credit call done,unknown
+CEAWL00508,CEASUB001922,Vijaya Arun Agencies,Zonal office,11/20/2025,scheme claim pending,lost to competitor,unknown
+CEAWL00509,CEASUB002180,Modern Lakshmi Tyres,Service,2025-09-05,competitor offer,scheme support requested,medium
+CEAWL00510,CEASUB003321,Metro Hari Services,Distributor,08/04/2025,service complaint,scheme support requested,high
+CEAWL00511,CEASUB003129,Ganesh Senthil Hardware,Service,2025-09-22,competitor offer,scheme support requested,medium
+CEAWL00512,CEASUB000383,United Suresh Fertilisers,Distributor,2025-06-02,orders down,scheme support requested,unknown
+CEAWL00513,CEASUB001745,Lucky Sowmya Hardware,Distributor,2025-11-01,closed counter,waiting for payment,low
+CEAWL00514,CEASUB002244,New Jagan Tyres,RSM,2025-12-05,owner dispute,new owner to verify,high
+CEAWL00515,CEASUB001333,Murugan Senthil Agencies,RSM,2025-08-25,payment delay,waiting for payment,low
+CEAWL00516,CEASUB004446,Mahalakshmi Meena Agencies,Service,06/20/2025,payment delay,lost to competitor,high
+CEAWL00517,CEASUB003009,Mahalakshmi Farida Enterprises,Zonal office,2025-07-25,scheme claim pending,field visit planned,medium
+CEAWL00518,CEASUB000573,Sree Prakash Sales,Credit,2025-06-02,competitor offer,credit call done,high
+CEAWL00519,CEASUB000191,Royal Sowmya Tyres Main,Service,08/24/2025,seasonal crop miss,scheme support requested,medium
+CEAWL00520,CEASUB001020,Murugan Karthik Associates,Zonal office,2026-01-29,owner dispute,waiting for payment,unknown
+CEAWL00521,CEASUB002635,Modern Irfan Mart,Distributor,2025-09-10,service complaint,credit call done,high
+CEAWL00522,CEADLR000490,Mahalakshmi Farida Agencies,ASM,12/12/2025,orders down,scheme support requested,low
+CEAWL00523,CEASUB000056,Kaveri Jagan Tyres,Credit,2026-02-04,owner dispute,lost to competitor,high
+CEAWL00524,CEADLR000592,Prime Meena Tyres,ASM,2025-07-15,seasonal crop miss,new owner to verify,medium
+CEAWL00525,CEASUB003783,United Yusuf Agencies,Zonal office,2025-08-16,scheme claim pending,scheme support requested,unknown
+CEAWL00526,CEASUB003288,MODERN MANOJ TYRES,ASM,09/14/2025,payment delay,credit call done,high
+CEAWL00527,CEASUB003017,New Karthik Tyres,Credit,2026-01-15,payment delay,new owner to verify,unknown
+CEAWL00528,CEASUB003607,Star Yusuf Tyres,Service,07-Nov-25,competitor offer,field visit planned,unknown
+CEAWL00529,CEASUB001573,BALAJI SURESH TYRES,Zonal office,2026-01-16,competitor offer,field visit planned,low
+CEAWL00530,CEASUB000257,Murugan Anand Corporation,RSM,2025-11-25,seasonal crop miss,lost to competitor,medium
+CEAWL00531,CEASUB001712,Balaji Chandra Agro,ASM,2025-08-07,orders down,credit call done,low
+CEAWL00532,CEASUB003686,Lucky Deepak Traders Pvt,ASM,2025-11-11,service complaint,field visit planned,medium
+CEAWL00533,CEASUB004075,Star Suresh Sales,ASM,2026-02-08,owner dispute,waiting for payment,medium
+CEAWL00534,CEASUB000546,Sri Revathi Enterprises,ASM,2025-12-19,service complaint,scheme support requested,unknown
+CEAWL00535,CEASUB001984,Star Manoj Sales,Service,2025-06-01,closed counter,waiting for payment,low
+CEAWL00536,CEASUB000193,Shree Prakash Agencies,Service,10/29/2025,competitor offer,scheme support requested,unknown
+CEAWL00537,CEASUB003977,Kaveri Revathi Tyres Ltd,Credit,2025-12-19,owner dispute,credit call done,low
+CEAWL00538,CEADLR000127,Kaveri Deepak Tyres,Zonal office,2026-03-05,payment delay,new owner to verify,high
+CEAWL00539,CEASUB000216,New Kavya Associates,ASM,2025-07-05,scheme claim pending,credit call done,high
+CEAWL00540,CEASUB002589,New Sanjay Depot,ASM,2025-09-01,service complaint,waiting for payment,unknown
+CEAWL00541,CEASUB002298,United Revathi Stores,ASM,2026-01-22,owner dispute,lost to competitor,low
+CEAWL00542,CEASUB001253,Mahalakshmi Farida Enterprises,ASM,2026-02-08,closed counter,field visit planned,high
+CEAWL00543,CEASUB000598,National Lokesh Tyres,Zonal office,01-Mar-26,scheme claim pending,waiting for payment,unknown
+CEAWL00544,CEASUB001312,Mahalakshmi Anand Fertilisers,RSM,2025-10-09,scheme claim pending,field visit planned,medium
+CEAWL00545,CEASUB003232,Sree Deepak Agro,RSM,2025-12-14,seasonal crop miss,credit call done,high
+CEAWL00546,CEASUB001384,Lucky Meena Tyres,Service,2025-09-13,payment delay,lost to competitor,medium
+CEAWL00547,CEASUB003592,Ganesh Bala Chemicals,ASM,2025-06-23,closed counter,new owner to verify,low
+CEAWL00548,CEADLR000022,United Yusuf Tyres,Zonal office,2026-03-10,service complaint,new owner to verify,low
+CEAWL00549,CEASUB000198,UNITED MANOJ TYRES,ASM,2026-01-29,scheme claim pending,scheme support requested,medium
+CEAWL00550,CEASUB003937,National Kavya Chemicals,RSM,18/02/2026,competitor offer,waiting for payment,low
+CEAWL00551,CEADLR000004,Mahalakshmi Meena Associates,Zonal office,2025-10-16,scheme claim pending,new owner to verify,high
+CEAWL00552,CEASUB002352,Mahalakshmi Yusuf Tyres,Service,2025-08-07,competitor offer,new owner to verify,unknown
+CEAWL00553,CEASUB000874,PRIME JAGAN AGRO,Service,16/06/2025,service complaint,field visit planned,medium
+CEAWL00554,CEASUB003949,Lucky Lokesh Hardware,Zonal office,2025-11-11,orders down,waiting for payment,medium
+CEAWL00555,CEASUB000842,SRI Yusuf Agro,Distributor,2026-01-18,scheme claim pending,credit call done,medium
+CEAWL00556,CEASUB003250,Lucky Revathi Tyres,ASM,2025-10-25,service complaint,scheme support requested,high
+CEAWL00557,CEASUB003173,Modern Kavya Associates,ASM,12-Aug-25,seasonal crop miss,scheme support requested,unknown
+CEAWL00558,CEASUB000057,Sri Suresh Tyres,Service,2025-09-03,seasonal crop miss,waiting for payment,low
+CEAWL00559,CEASUB000020,Modern Karthik Associates,Zonal office,2026-02-13,closed counter,credit call done,low
+CEAWL00560,CEASUB000452,Shree Irfan Agro,RSM,03/09/2026,closed counter,field visit planned,unknown
+CEAWL00561,CEASUB001165,City Irfan Paints,Distributor,2025-11-04,closed counter,credit call done,medium
+CEAWL00562,CEASUB003850,New Irfan Enterprises,Distributor,2025-09-02,orders down,waiting for payment,unknown
+CEAWL00563,CEASUB002875,Shree Yusuf Tyres,ASM,2025-09-21,service complaint,field visit planned,medium
+CEAWL00564,CEADLR000191,Shree Venkatesh Tyres,Zonal office,2025-09-20,closed counter,scheme support requested,low
+CEAWL00565,CEADLR000652,Metro Sowmya Mart Ltd,ASM,2025-12-20,closed counter,lost to competitor,low
+CEAWL00566,CEASUB000621,Royal Kavya Tyres,Distributor,2025-10-03,scheme claim pending,credit call done,high
+CEAWL00567,CEADLR000299,Vijaya Senthil Tyres Pvt,Zonal office,09/07/2025,orders down,lost to competitor,unknown
+CEAWL00568,CEASUB001607,Sri Ganesh Tyres,Credit,2026-03-26,seasonal crop miss,scheme support requested,high
+CEAWL00569,CEASUB003460,BALAJI KAVYA TYRES,RSM,30/12/2025,service complaint,field visit planned,unknown
+CEAWL00570,CEASUB000241,Royal Deepak Tyres,RSM,21/01/2026,payment delay,lost to competitor,unknown
+CEAWL00571,CEASUB003284,Modern Naveen Paints,Credit,23-Jan-26,seasonal crop miss,waiting for payment,medium
+CEAWL00572,CEASUB003873,Sree Sowmya Mart,Distributor,11/12/2025,service complaint,scheme support requested,medium
+CEAWL00573,CEASUB004497,Balaji Lakshmi Depot,RSM,2025-09-26,closed counter,lost to competitor,high
+CEAWL00574,CEASUB002112,Murugan Arun Sales,Distributor,2026-02-28,service complaint,scheme support requested,medium
+CEAWL00575,CEASUB000424,New Arun Services,Credit,06/04/2025,payment delay,scheme support requested,unknown
+CEAWL00576,CEASUB000761,Modern Karthik Agro,RSM,2025-08-23,competitor offer,field visit planned,medium
+CEAWL00577,CEADLR000618,Sri Hari Tyres,Credit,2026-03-20,closed counter,new owner to verify,low
+CEAWL00578,CEASUB000123,New Yusuf Corporation,Distributor,2026-02-27,seasonal crop miss,scheme support requested,medium
+CEAWL00579,CEADLR000271,Metro Senthil Tyres,RSM,22-Feb-26,service complaint,lost to competitor,high
+CEAWL00580,CEASUB003638,Shree Yusuf Tyres,Service,12/08/2025,payment delay,lost to competitor,medium
+CEAWL00581,CEASUB003207,Sri Hari Tyres,ASM,20-Jan-26,orders down,credit call done,high
+CEAWL00582,CEASUB000719,United Bala Chemicals,Zonal office,11/08/2025,payment delay,credit call done,high
+CEAWL00583,CEASUB000865,Modern Deepak Tyres,Zonal office,2025-09-20,payment delay,new owner to verify,low
+CEAWL00584,CEASUB004134,Mahalakshmi Bala Fertilisers,Distributor,2025-12-25,owner dispute,new owner to verify,high
+CEAWL00585,CEASUB004284,Murugan Jagan Agencies,ASM,17/01/2026,payment delay,scheme support requested,low
+CEAWL00586,CEASUB003957,Sri Chandra Sales,Distributor,2025-08-28,orders down,field visit planned,low
+CEAWL00587,CEASUB001460,Modern Lokesh Services,Credit,2026-02-03,seasonal crop miss,field visit planned,high
+CEAWL00588,CEASUB000432,Sri Geetha Tyres,Distributor,2026-03-21,scheme claim pending,waiting for payment,high
+CEAWL00589,CEASUB001306,Kaveri Geetha Agro,Zonal office,2025-11-01,competitor offer,lost to competitor,medium
+CEAWL00590,CEASUB000165,New Naveen Tyres,Service,2025-06-05,service complaint,lost to competitor,medium
+CEAWL00591,CEASUB000834,Murugan Prakash Chemicals,Distributor,2026-02-22,service complaint,credit call done,unknown
+CEAWL00592,CEADLR000583,Modern Farida Traders,ASM,07/20/2025,payment delay,credit call done,low
+CEAWL00593,CEADLR000504,Lucky Lokesh Tyres,Service,2026-03-29,scheme claim pending,credit call done,medium
+CEAWL00594,CEASUB001315,Star Arun Hardware,Service,19-Sep-25,owner dispute,credit call done,medium
+CEAWL00595,CEASUB001884,National Ganesh Tyres,ASM,2025-09-07,service complaint,waiting for payment,unknown
+CEAWL00596,CEADLR000129,New Karthik Chemicals & Co,Service,2026-03-01,closed counter,field visit planned,low
+CEAWL00597,CEASUB002702,United Naveen Tyres,ASM,2025-07-24,service complaint,lost to competitor,medium
+CEAWL00598,CEASUB003680,City Meena Mart,Service,2026-01-28,closed counter,field visit planned,low
+CEAWL00599,CEASUB002647,Ganesh Manoj Associates,Distributor,20/02/2026,owner dispute,scheme support requested,low
+CEAWL00600,CEASUB000283,Ganesh Lokesh Mart,Service,2026-03-06,service complaint,field visit planned,low
+CEAWL00601,CEASUB002929,New Sowmya Mart,ASM,2026-02-22,payment delay,field visit planned,high
+CEAWL00602,CEASUB003727,New Irfan Tyres,Service,25-Jul-25,seasonal crop miss,waiting for payment,medium
+CEAWL00603,CEASUB003563,Sree Sanjay Tyres,Zonal office,08/28/2025,competitor offer,new owner to verify,high
+CEAWL00604,CEASUB000197,Ganesh Deepak Depot,Distributor,2025-06-16,owner dispute,field visit planned,unknown
+CEAWL00605,CEADLR000403,SRI Revathi Traders,Service,2025-07-22,seasonal crop miss,waiting for payment,low
+CEAWL00606,CEASUB003128,Royal Priya Tyres,Service,2025-07-05,scheme claim pending,new owner to verify,high
+CEAWL00607,CEADLR000506,Mahalakshmi Irfan Paints,RSM,2025-10-27,closed counter,lost to competitor,medium
+CEAWL00608,CEASUB001643,Prime Bala Tyres,Zonal office,2025-08-14,competitor offer,waiting for payment,low
+CEAWL00609,CEASUB002233,Sri Arun Stores,Service,2025-06-24,seasonal crop miss,field visit planned,unknown
+CEAWL00610,CEASUB002683,Prime Yusuf Tyres,Distributor,01/07/2026,scheme claim pending,new owner to verify,unknown
+CEAWL00611,CEASUB000315,Vijaya Kavya Tyres,Service,2025-12-18,closed counter,credit call done,medium
+CEAWL00612,CEASUB003055,Mahalakshmi Farida Corporation,Service,01/24/2026,scheme claim pending,lost to competitor,medium
+CEAWL00613,CEASUB000248,Ganesh Bala Tyres,RSM,2025-07-18,seasonal crop miss,waiting for payment,medium
+CEAWL00614,CEASUB003127,Lucky Bala Distributors,ASM,2025-06-06,closed counter,waiting for payment,unknown
+CEAWL00615,CEASUB000234,Star Kavya Agro,ASM,06/06/2025,seasonal crop miss,lost to competitor,low
+CEAWL00616,CEASUB000563,Metro Bala Agencies,Distributor,2026-02-23,owner dispute,new owner to verify,unknown
+CEAWL00617,CEASUB000906,Kaveri Ganesh Agro,Service,2026-02-18,payment delay,field visit planned,low
+CEAWL00618,CEASUB004083,Prime Jagan Tyres,ASM,2025-12-30,scheme claim pending,credit call done,low
+CEAWL00619,CEADLR000026,Prime Suresh Tyres,Service,2025-09-13,seasonal crop miss,scheme support requested,unknown
+CEAWL00620,CEASUB001106,ROYAL KARTHIK AGRO,ASM,2025-10-02,owner dispute,credit call done,low
+CEAWL00621,CEASUB002217,Shree Yusuf Agro,ASM,2025-10-05,scheme claim pending,waiting for payment,high
+CEAWL00622,CEASUB001558,National Deepak Tyres,Credit,03/23/2026,scheme claim pending,field visit planned,high
+CEAWL00623,CEASUB000910,Murugan Lokesh Sales,RSM,2025-08-25,owner dispute,scheme support requested,medium
+CEAWL00624,CEASUB003428,UNITED HARI TYRES,Service,17/01/2026,closed counter,lost to competitor,high
+CEAWL00625,CEASUB000925,Ganesh Bala Corporation,Credit,2026-03-13,closed counter,waiting for payment,high
+CEAWL00626,CEADLR000715,Mahalakshmi Meena Associates,Credit,2025-06-21,service complaint,credit call done,low
+CEAWL00627,CEASUB002778,Ganesh Bala Agencies,ASM,2026-03-13,closed counter,credit call done,low
+CEAWL00628,CEASUB002861,Shree Lokesh Hardware,Credit,2026-02-04,scheme claim pending,lost to competitor,unknown
+CEAWL00629,CEASUB002665,Royal Farida Sales,ASM,2026-01-05,payment delay,new owner to verify,unknown
+CEAWL00630,CEASUB002806,Shree Lokesh Agro,Credit,2026-03-14,competitor offer,field visit planned,low
+CEAWL00631,CEASUB002956,Modern Sowmya Agro,Service,2025-06-25,competitor offer,scheme support requested,unknown
+CEAWL00632,CEASUB002100,United Anand Fertilisers,Distributor,2025-10-14,seasonal crop miss,new owner to verify,medium
+CEAWL00633,CEASUB003833,Mahalakshmi Meena Tyres,ASM,2025-06-29,competitor offer,field visit planned,unknown
+CEAWL00634,CEASUB002816,National Bala Tyres,Service,2025-08-01,scheme claim pending,scheme support requested,low
+CEAWL00635,CEASUB002247,New Irfan Sales,RSM,2025-12-06,seasonal crop miss,credit call done,medium
+CEAWL00636,CEASUB003358,Murugan Rafiq Tyres,Distributor,2025-06-30,closed counter,scheme support requested,high
+CEAWL00637,CEASUB003130,Balaji Manoj Tyres,Service,2025-10-02,service complaint,credit call done,unknown
+CEAWL00638,CEASUB003249,Royal Sanjay Tyres,Distributor,2026-01-31,closed counter,lost to competitor,low
+CEAWL00639,CEASUB004206,ROYAL SURESH TYRES,Credit,2025-07-20,orders down,credit call done,unknown
+CEAWL00640,CEASUB003200,Shree Lakshmi Traders,Service,2025-11-22,competitor offer,new owner to verify,medium
+CEAWL00641,CEADLR000445,Star Sowmya Fertilisers,RSM,2025-08-14,orders down,waiting for payment,high
+CEAWL00642,CEASUB000217,Star Prakash Stores,Zonal office,2025-07-20,competitor offer,credit call done,medium
+CEAWL00643,CEASUB003418,Modern Deepak Tyres,RSM,2025-11-28,closed counter,new owner to verify,low
+CEAWL00644,CEASUB003341,Metro Ganesh Corporation,Service,16/06/2025,competitor offer,waiting for payment,unknown
+CEAWL00645,CEASUB004194,Metro Venkatesh Agro,RSM,2025-08-06,closed counter,waiting for payment,medium
+CEAWL00646,CEADLR000062,Metro Deepak Tyres,Service,2025-06-08,owner dispute,scheme support requested,unknown
+CEAWL00647,CEASUB001387,National Manoj Tyres,Zonal office,2025-12-17,competitor offer,credit call done,medium
+CEAWL00648,CEASUB000899,Royal Hari Tyres & Co,Credit,2025-07-18,service complaint,credit call done,unknown
+CEAWL00649,CEASUB001035,Balaji Meena Agro,Service,2025-06-03,scheme claim pending,scheme support requested,unknown
+CEAWL00650,CEASUB001914,SRI Sanjay Paints,ASM,2025-07-26,orders down,lost to competitor,low
+CEAWL00651,CEASUB002536,Metro Karthik Tyres,Distributor,09-Oct-25,scheme claim pending,credit call done,low
+CEAWL00652,CEADLR000704,Royal Lokesh Stores,Credit,2025-06-15,service complaint,credit call done,medium
+CEAWL00653,CEASUB001605,United Farida Tyres,RSM,2026-03-14,closed counter,lost to competitor,medium
+CEAWL00654,CEASUB004348,CITY JAGAN TYRES,RSM,2026-03-31,payment delay,field visit planned,low
+CEAWL00655,CEADLR000202,Lucky Chandra Tyres,ASM,01/18/2026,service complaint,lost to competitor,medium
+CEAWL00656,CEASUB001295,New Jagan Chemicals,Distributor,2025-10-04,orders down,scheme support requested,high

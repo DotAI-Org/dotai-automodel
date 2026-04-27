@@ -16,7 +16,10 @@
 | POST | `/api/sessions/{session_id}/column-mapping` | `column_mapping()` | `app/main.py` |
 | PUT | `/api/sessions/{session_id}/column-mapping` | `override_column_mapping()` | `app/main.py` |
 | POST | `/api/sessions/{session_id}/column-mapping/feedback` | `column_mapping_feedback()` | `app/main.py` |
+| GET | `/api/sessions/{session_id}/cross-file-summary` | `cross_file_summary()` | `app/main.py` |
 | POST | `/api/sessions/{session_id}/features` | `features()` | `app/main.py` |
+| POST | `/api/sessions/{session_id}/findings/confirm` | `confirm_findings()` | `app/main.py` |
+| POST | `/api/sessions/{session_id}/findings/correct` | `correct_findings()` | `app/main.py` |
 | POST | `/api/sessions/{session_id}/hypothesis` | `hypothesis()` | `app/main.py` |
 | POST | `/api/sessions/{session_id}/inference` | `inference()` | `app/main.py` |
 | GET | `/api/sessions/{session_id}/inference/download` | `inference_download()` | `app/main.py` |
@@ -35,47 +38,53 @@
 ### `main.py`
 > FastAPI application entry point and route definitions.
 
-- `async health()` `@app.get('/health')` (line 72)
+- `async health()` `@app.get('/health')` (line 73)
   > Return health check status.
-- `async get_session_with_auth(session_id, user)` (line 88)
+- `async get_session_with_auth(session_id, user)` (line 89)
   > Load session, verify ownership.
-- `async list_sessions(user)` `@api_router.get('/sessions')` (line 105)
+- `async list_sessions(user)` `@api_router.get('/sessions')` (line 106)
   > Return all sessions for the authenticated user.
-- `async rename_session(session_id, body, user)` `@api_router.put('/sessions/{session_id}/name')` (line 111)
+- `async rename_session(session_id, body, user)` `@api_router.put('/sessions/{session_id}/name')` (line 112)
   > Rename a session by ID.
-- `async delete_session(session_id, user)` `@api_router.delete('/sessions/{session_id}')` (line 119)
+- `async delete_session(session_id, user)` `@api_router.delete('/sessions/{session_id}')` (line 120)
   > Delete a session by ID.
-- `async create_session(file, user)` `@api_router.post('/sessions')` (line 129)
+- `async create_session(file, user)` `@api_router.post('/sessions')` (line 130)
   > Upload a CSV file and create a new session.
-- `async create_session_multi(files, description, user)` `@api_router.post('/sessions/multi')` (line 135)
-  > Upload multiple CSV files and create a new session.
-- `async column_mapping(session_id, user)` `@api_router.post('/sessions/{session_id}/column-mapping')` (line 147)
+- `async create_session_multi(files, description, file_metadata, user)` `@api_router.post('/sessions/multi')` (line 149)
+  > Upload multiple CSV files with per-file type metadata.
+- `async column_mapping(session_id, user)` `@api_router.post('/sessions/{session_id}/column-mapping')` (line 176)
   > Run LLM-based column role detection for a session.
-- `async override_column_mapping(session_id, body, user)` `@api_router.put('/sessions/{session_id}/column-mapping')` (line 154)
+- `async override_column_mapping(session_id, body, user)` `@api_router.put('/sessions/{session_id}/column-mapping')` (line 183)
   > Override column mappings with user-provided values.
-- `async column_mapping_feedback(session_id, body, user)` `@api_router.post('/sessions/{session_id}/column-mapping/feedback')` (line 161)
+- `async column_mapping_feedback(session_id, body, user)` `@api_router.post('/sessions/{session_id}/column-mapping/feedback')` (line 190)
   > Re-run column mapping with user feedback.
-- `async hypothesis(session_id, body, user)` `@api_router.post('/sessions/{session_id}/hypothesis')` (line 170)
+- `async hypothesis(session_id, body, user)` `@api_router.post('/sessions/{session_id}/hypothesis')` (line 199)
   > Generate business hypothesis and MCQ questions for a session.
-- `async features(session_id, body, user)` `@api_router.post('/sessions/{session_id}/features')` (line 180)
+- `async confirm_findings(session_id, body, user)` `@api_router.post('/sessions/{session_id}/findings/confirm')` (line 207)
+  > User confirms computed findings — proceed to training.
+- `async correct_findings(session_id, body, user)` `@api_router.post('/sessions/{session_id}/findings/correct')` (line 218)
+  > User overrides findings via MCQ answers.
+- `async cross_file_summary(session_id, user)` `@api_router.get('/sessions/{session_id}/cross-file-summary')` (line 228)
+  > Get detected data types and cross-file summary.
+- `async features(session_id, body, user)` `@api_router.post('/sessions/{session_id}/features')` (line 240)
   > Compute feature matrix using MCQ answers.
-- `async labels(session_id, user)` `@api_router.post('/sessions/{session_id}/labels')` (line 189)
+- `async labels(session_id, user)` `@api_router.post('/sessions/{session_id}/labels')` (line 249)
   > Assign churn labels based on cutoff date.
-- `async train(session_id, user)` `@api_router.post('/sessions/{session_id}/train')` (line 198)
+- `async train(session_id, user)` `@api_router.post('/sessions/{session_id}/train')` (line 258)
   > Train an XGBoost model on labeled features.
-- `async results(session_id, user)` `@api_router.get('/sessions/{session_id}/results')` (line 207)
+- `async results(session_id, user)` `@api_router.get('/sessions/{session_id}/results')` (line 267)
   > Return model results with LLM-generated summary.
-- `async inference(session_id, user)` `@api_router.post('/sessions/{session_id}/inference')` (line 216)
+- `async inference(session_id, user)` `@api_router.post('/sessions/{session_id}/inference')` (line 276)
   > Run churn predictions on all customers.
-- `async inference_download(session_id, user)` `@api_router.get('/sessions/{session_id}/inference/download')` (line 223)
+- `async inference_download(session_id, user)` `@api_router.get('/sessions/{session_id}/inference/download')` (line 283)
   > Download churn predictions as a CSV file.
-- `async start_agent(session_id, background_tasks, user)` `@api_router.post('/sessions/{session_id}/agent/start')` (line 237)
+- `async start_agent(session_id, background_tasks, user)` `@api_router.post('/sessions/{session_id}/agent/start')` (line 297)
   > Start the agent loop as a background task.
-- `async agent_status(session_id, user)` `@api_router.get('/sessions/{session_id}/agent/status')` (line 266)
+- `async agent_status(session_id, user)` `@api_router.get('/sessions/{session_id}/agent/status')` (line 326)
   > Return the agent loop status for a session.
-- `async stop_agent(session_id, user)` `@api_router.post('/sessions/{session_id}/agent/stop')` (line 305)
+- `async stop_agent(session_id, user)` `@api_router.post('/sessions/{session_id}/agent/stop')` (line 365)
   > Signal the agent loop to stop.
-- `async startup()` `@app.on_event('startup')` (line 322)
+- `async startup()` `@app.on_event('startup')` (line 382)
   > Initialize database and set engine on session store.
 
   **Calls to other modules:**
@@ -91,10 +100,12 @@
   - `delete_session` → `app.session_store.store.delete`
   - `create_session` → `fastapi.Depends`
   - `create_session` → `fastapi.File`
+  - `create_session` → `app.notifications.notify_gchat`
   - `create_session` → `app.stages.s1_upload.handle`
   - `create_session_multi` → `fastapi.Depends`
   - `create_session_multi` → `fastapi.File`
   - `create_session_multi` → `fastapi.Form`
+  - `create_session_multi` → `app.notifications.notify_gchat`
   - `create_session_multi` → `app.stages.s1_upload.handle_multi`
   - `column_mapping` → `fastapi.Depends`
   - `column_mapping` → `app.stages.s2_column_map.handle`
@@ -104,6 +115,11 @@
   - `column_mapping_feedback` → `app.stages.s2_column_map.handle_with_feedback`
   - `hypothesis` → `fastapi.Depends`
   - `hypothesis` → `app.stages.s3_hypothesis.handle`
+  - `confirm_findings` → `fastapi.Depends`
+  - `confirm_findings` → `app.session_store.store.update`
+  - `correct_findings` → `fastapi.Depends`
+  - `correct_findings` → `app.session_store.store.update`
+  - `cross_file_summary` → `fastapi.Depends`
   - `features` → `fastapi.Depends`
   - `features` → `app.stages.s4_features.handle`
   - `labels` → `fastapi.Depends`
@@ -294,7 +310,7 @@
   - `_op_trend` → `pandas.pd.Series`
   - `_op_trend` → `pandas.pd.to_datetime`
   - `_op_gap_stat` → `pandas.pd.to_datetime`
-  - `_op_gap_stat` → `pandas.pd.to_datetime(g[date_col]).sort_values`
+  - `_op_gap_stat` → `pandas.pd.to_datetime(g[date_col], format='mixed', dayfirst=True).sort_values`
 
 ### `feature_engineer.py`
 > LLM-based DSL feature suggestion for the agent loop.
@@ -308,29 +324,29 @@
 ### `loop.py`
 > Agent loop that iterates over feature engineering, training, and evaluation.
 
-- **class `IterationResult`** (line 24)
+- **class `IterationResult`** (line 26)
   > Stores results from a single agent iteration.
-- **class `AgentState`** (line 35)
+- **class `AgentState`** (line 37)
   > Tracks agent loop state across iterations.
   - `to_dict(self)`
     > Serialize agent state for API responses.
-- `get_agent_state(session_id)` (line 96)
+- `get_agent_state(session_id)` (line 98)
   > Return the agent state for a session or None.
-- `set_agent_state(session_id, state)` (line 101)
+- `set_agent_state(session_id, state)` (line 103)
   > Store the agent state for a session.
-- `register_broadcast_callback(session_id, callback)` (line 106)
+- `register_broadcast_callback(session_id, callback)` (line 108)
   > Register a callback for broadcasting progress to WebSocket clients.
-- `unregister_broadcast_callback(session_id, callback)` (line 113)
+- `unregister_broadcast_callback(session_id, callback)` (line 115)
   > Remove a broadcast callback for a session.
-- `async broadcast_progress(session_id, msg_type, data)` (line 121)
+- `async broadcast_progress(session_id, msg_type, data)` (line 123)
   > Broadcast a progress message to all connected WebSocket clients.
-- `check_user_overrides(state)` (line 131)
+- `check_user_overrides(state)` (line 133)
   > Check and consume user overrides.
-- `apply_overrides(state, overrides)` (line 140)
+- `apply_overrides(state, overrides)` (line 142)
   > Apply user overrides to agent state.
-- `pick_best_across_iterations(history)` (line 165)
+- `pick_best_across_iterations(history)` (line 167)
   > Pick the model with the highest composite score across all iterations.
-- `async run_agent(session_id, session)` (line 178)
+- `async run_agent(session_id, session)` (line 180)
   > Run the agent loop. Expects session to have completed stages 1-3.
 
   **Calls to other modules:**
@@ -342,15 +358,20 @@
   - `run_agent` → `app.stages.s5_labels._assign_labels`
   - `run_agent` → `app.stages.s4_features._build_col_map`
   - `run_agent` → `app.stages.s5_labels._get_churn_window`
+  - `run_agent` → `app.session_store._store.get`
+  - `run_agent` → `app.stages.s3_field_analysis.analyze_all_fields`
   - `run_agent` → `asyncio.asyncio.sleep`
   - `run_agent` → `app.agent.scoring.composite_score`
   - `run_agent` → `app.stages.s4_features.compute_feature_matrix_async`
   - `run_agent` → `app.agent.evaluator.evaluate`
+  - `run_agent` → `app.agent.feature_dsl.execute_dsl_features`
+  - `run_agent` → `app.stages.s4_pruning.leakage_detection`
   - `run_agent` → `pandas.pd.Timedelta`
   - `run_agent` → `pandas.pd.to_datetime`
   - `run_agent` → `app.agent.model_trainer.prepare_data`
   - `run_agent` → `app.persistence.save_agent_iteration`
   - `run_agent` → `app.persistence.save_agent_run`
+  - `run_agent` → `app.stages.s4_pruning.statistical_pruning`
   - `run_agent` → `app.session_store.store.update`
   - `run_agent` → `app.agent.feature_engineer.suggest_dsl_features`
   - `run_agent` → `app.agent.model_trainer.train_all_models`
@@ -399,13 +420,13 @@
 ### `dependencies.py`
 > JWT creation, decoding, and request authentication.
 
-- `create_jwt(user_id, email, name)` (line 10)
+- `create_jwt(user_id, email, name)` (line 11)
   > Create a signed JWT token for a user.
-- `decode_jwt(token)` (line 21)
+- `decode_jwt(token)` (line 22)
   > Decode a JWT token and return user info dict.
-- `async get_current_user(authorization)` (line 34)
-  > Extract and decode JWT from Authorization header.
-- `get_ws_user(token)` (line 42)
+- `async get_current_user(authorization)` (line 35)
+  > Extract and decode JWT, verify user exists in DB.
+- `get_ws_user(token)` (line 53)
   > Decode JWT from WebSocket query param.
 
   **Calls to other modules:**
@@ -414,17 +435,19 @@
   - `create_jwt` → `datetime.timedelta`
   - `decode_jwt` → `fastapi.HTTPException`
   - `decode_jwt` → `jose.jwt.decode`
+  - `get_current_user` → `app.db.engine.AsyncSessionLocal`
   - `get_current_user` → `fastapi.HTTPException`
   - `get_current_user` → `fastapi.Header`
+  - `get_current_user` → `sqlalchemy.select`
 
 ### `router.py`
 > Google OAuth login and callback routes.
 
-- `async login_google(request)` `@router.get('/google')` (line 27)
+- `async login_google(request)` `@router.get('/google')` (line 28)
   > Redirect user to Google OAuth consent screen.
-- `async auth_google_callback(request)` `@router.get('/google/callback')` (line 34)
+- `async auth_google_callback(request)` `@router.get('/google/callback')` (line 35)
   > Handle Google OAuth callback, create or update user, issue JWT.
-- `async me(user)` `@router.get('/me')` (line 72)
+- `async me(user)` `@router.get('/me')` (line 80)
   > Return the authenticated user's profile.
 
   **Calls to other modules:**
@@ -432,6 +455,7 @@
   - `auth_google_callback` → `fastapi.responses.RedirectResponse`
   - `auth_google_callback` → `app.db.models.User`
   - `auth_google_callback` → `app.auth.dependencies.create_jwt`
+  - `auth_google_callback` → `app.notifications.notify`
   - `auth_google_callback` → `os.os.environ.get`
   - `auth_google_callback` → `sqlalchemy.select`
   - `me` → `app.db.engine.AsyncSessionLocal`
@@ -483,7 +507,12 @@
 - `async get_db()` (line 22)
   > Yield a database session for dependency injection.
 - `async init_db()` (line 28)
-  > Create all database tables from SQLAlchemy models.
+  > Create tables and add any missing columns from model definitions.
+
+  **Calls to other modules:**
+  - `init_db` → `app.db.models.Base.metadata.tables.items`
+  - `init_db` → `sqlalchemy.sa_inspect`
+  - `init_db` → `sqlalchemy.text`
 
 ### `models.py`
 > SQLAlchemy ORM models for users, sessions, agent runs, and chat.
@@ -494,19 +523,135 @@
   > Stores user account data from OAuth providers.
 - **class `Session(Base)`** (line 38)
   > Stores pipeline session state and data blobs.
-- **class `SessionFile(Base)`** (line 93)
+- **class `SessionFile(Base)`** (line 106)
   > Stores per-file data for multi-file uploads.
-- **class `AgentRun(Base)`** (line 106)
+- **class `AgentRun(Base)`** (line 122)
   > Stores agent loop run state and champion model.
-- **class `AgentIteration(Base)`** (line 127)
+- **class `AgentIteration(Base)`** (line 143)
   > Stores per-iteration results within an agent run.
-- **class `ChatMessage(Base)`** (line 143)
+- **class `ChatMessage(Base)`** (line 159)
   > Stores chat messages between user and agent.
 - `utcnow()` (line 18)
   > Return the current UTC datetime.
 
   **Calls to other modules:**
   - `utcnow` → `datetime.datetime.now`
+
+## `app/features/`
+
+### `tier3_field.py`
+> Tier 3 field interaction features.
+
+Computes per-customer field visit features: visit frequency, duration,
+order conversion, coverage.
+
+- `compute_field_features(df, col_map, customer_id_col)` (line 10)
+  > Compute field interaction features grouped by customer.
+
+Expected roles in col_map: visit_id, visit_date, entity_type,
+visit_duration, order_booked, objective.
+- `_find_col(col_map, role)` (line 105)
+- `_compute_gap_mean(group, date_col)` (line 112)
+- `_compute_gap_std(group, date_col)` (line 122)
+- `_compute_trend(series)` (line 132)
+
+  **Calls to other modules:**
+  - `compute_field_features` → `pandas.pd.DataFrame`
+  - `compute_field_features` → `pandas.pd.Timedelta`
+  - `compute_field_features` → `pandas.pd.to_datetime`
+  - `compute_field_features` → `pandas.pd.to_numeric`
+  - `compute_field_features` → `pandas.pd.to_numeric(df[order_col], errors='coerce').fillna`
+  - `_compute_gap_mean` → `pandas.pd.to_datetime`
+  - `_compute_gap_mean` → `pandas.pd.to_datetime(group[date_col]).sort_values`
+  - `_compute_gap_std` → `pandas.pd.to_datetime`
+  - `_compute_gap_std` → `pandas.pd.to_datetime(group[date_col]).sort_values`
+  - `_compute_trend` → `numpy.np.arange`
+  - `_compute_trend` → `numpy.np.polyfit`
+
+### `tier3_loyalty.py`
+> Tier 3 loyalty/membership features.
+
+Computes per-customer loyalty features from loyalty program data:
+points activity, tier status, engagement patterns.
+
+- `compute_loyalty_features(df, col_map, customer_id_col)` (line 10)
+  > Compute loyalty features grouped by customer.
+
+Expected roles in col_map: points_earned, points_redeemed, tier,
+enrollment_date, transaction_type, member_id.
+- `_find_col(col_map, role)` (line 82)
+  > Find column name for a given role.
+- `_compute_trend(series)` (line 90)
+  > Compute linear trend slope, normalized.
+
+  **Calls to other modules:**
+  - `compute_loyalty_features` → `pandas.pd.DataFrame`
+  - `compute_loyalty_features` → `pandas.pd.to_datetime`
+  - `_compute_trend` → `numpy.np.arange`
+  - `_compute_trend` → `numpy.np.polyfit`
+
+### `tier3_master.py`
+> Tier 3 master data features.
+
+Computes static features from dealer/customer master data:
+tenure, credit, territory, status.
+
+- `compute_master_features(df, col_map, customer_id_col)` (line 10)
+  > Compute master data features.
+
+Master data is typically one row per customer.
+Expected roles: dealer_code, dealer_name, registration_date,
+status, credit_limit, territory.
+- `_find_col(col_map, role)` (line 65)
+
+  **Calls to other modules:**
+  - `compute_master_features` → `pandas.pd.DataFrame`
+  - `compute_master_features` → `pandas.pd.to_datetime`
+  - `compute_master_features` → `pandas.pd.to_numeric`
+
+### `tier3_returns.py`
+> Tier 3 returns/delivery features.
+
+Computes per-customer returns features: return frequency, reasons, patterns.
+
+- `compute_returns_features(df, col_map, customer_id_col)` (line 9)
+  > Compute returns features grouped by customer.
+
+Expected roles in col_map: return_id, return_date, return_reason,
+return_quantity, original_invoice.
+- `_find_col(col_map, role)` (line 77)
+- `_compute_gap_mean(group, date_col)` (line 84)
+- `_compute_trend(series)` (line 95)
+
+  **Calls to other modules:**
+  - `compute_returns_features` → `pandas.pd.DataFrame`
+  - `compute_returns_features` → `pandas.pd.to_datetime`
+  - `_compute_gap_mean` → `pandas.pd.to_datetime`
+  - `_compute_gap_mean` → `pandas.pd.to_datetime(group[date_col]).sort_values`
+  - `_compute_trend` → `numpy.np.arange`
+  - `_compute_trend` → `numpy.np.polyfit`
+
+### `tier3_service.py`
+> Tier 3 service/warranty features.
+
+Computes per-customer service features from service/complaint data:
+ticket frequency, resolution time, satisfaction scores.
+
+- `compute_service_features(df, col_map, customer_id_col)` (line 10)
+  > Compute service features grouped by customer.
+
+Expected roles in col_map: ticket_id, ticket_date, resolution_date,
+complaint_category, warranty_status, csat_score, tat_days.
+- `_find_col(col_map, role)` (line 99)
+  > Find column name for a given role.
+- `_compute_trend(series)` (line 107)
+  > Compute linear trend slope, normalized.
+
+  **Calls to other modules:**
+  - `compute_service_features` → `pandas.pd.DataFrame`
+  - `compute_service_features` → `pandas.pd.to_datetime`
+  - `_compute_trend` → `numpy.np.arange`
+  - `_compute_trend` → `numpy.np.polyfit`
 
 ## `app/llm/`
 
@@ -543,102 +688,114 @@
 ### `schemas.py`
 > Pydantic schemas for API requests, responses, and LLM outputs.
 
-- **class `ColumnRole(str, Enum)`** (line 9)
+- **class `FileType(str, Enum)`** (line 9)
+  > User-declared file type for multi-file upload.
+- **class `ColumnRole(str, Enum)`** (line 20)
   > Column semantic roles for mapping.
-- **class `RiskTier(str, Enum)`** (line 22)
+- **class `RiskTier(str, Enum)`** (line 117)
   > Churn risk classification tiers.
-- **class `ColumnProfile(BaseModel)`** (line 31)
+- **class `ColumnProfile(BaseModel)`** (line 126)
   > Profile statistics for a single column.
-- **class `DataProfile(BaseModel)`** (line 40)
+- **class `DataProfile(BaseModel)`** (line 135)
   > Profile statistics for an uploaded dataset.
-- **class `UploadResponse(BaseModel)`** (line 48)
+- **class `UploadResponse(BaseModel)`** (line 143)
   > Response for single file upload.
-- **class `FileProfile(BaseModel)`** (line 54)
+- **class `FileProfile(BaseModel)`** (line 149)
   > Profile for a single file in a multi-file upload.
-- **class `MultiUploadResponse(BaseModel)`** (line 60)
+- **class `FileMetadata(BaseModel)`** (line 157)
+  > Per-file metadata from the upload form.
+- **class `MultiUploadResponse(BaseModel)`** (line 165)
   > Response for multi-file upload.
-- **class `ColumnMapping(BaseModel)`** (line 68)
+- **class `ColumnMapping(BaseModel)`** (line 173)
   > Maps a column name to its detected role.
-- **class `ColumnMappingResponse(BaseModel)`** (line 76)
+- **class `ColumnMappingResponse(BaseModel)`** (line 181)
   > Response containing column-to-role mappings.
-- **class `ColumnMappingOverride(BaseModel)`** (line 81)
+- **class `ColumnMappingOverride(BaseModel)`** (line 186)
   > Request to override column mappings.
-- **class `ColumnMappingFeedback(BaseModel)`** (line 86)
+- **class `ColumnMappingFeedback(BaseModel)`** (line 191)
   > Request to re-map columns with user feedback.
-- **class `JoinStep(BaseModel)`** (line 92)
+- **class `JoinStep(BaseModel)`** (line 197)
   > Describes a single join operation between two files.
-- **class `LLMJoinStrategy(BaseModel)`** (line 101)
+- **class `LLMJoinStrategy(BaseModel)`** (line 206)
   > LLM output for multi-file join strategy.
-- **class `MCQOption(BaseModel)`** (line 109)
+- **class `MCQOption(BaseModel)`** (line 214)
   > A single option in a multiple choice question.
-- **class `MCQuestion(BaseModel)`** (line 115)
+- **class `MCQuestion(BaseModel)`** (line 220)
   > A multiple choice question for business context.
-- **class `BusinessHypothesis(BaseModel)`** (line 123)
+- **class `BusinessHypothesis(BaseModel)`** (line 228)
   > LLM-generated business type hypothesis.
-- **class `HypothesisRequest(BaseModel)`** (line 130)
+- **class `HypothesisRequest(BaseModel)`** (line 235)
   > Request body for hypothesis generation.
-- **class `HypothesisResponse(BaseModel)`** (line 135)
+- **class `HypothesisResponse(BaseModel)`** (line 240)
   > Response containing hypothesis and MCQ questions.
-- **class `MCQAnswers(BaseModel)`** (line 143)
+- **class `Finding(BaseModel)`** (line 250)
+  > A single data finding with churn signal strength.
+- **class `FindingsResponse(BaseModel)`** (line 258)
+  > Computed findings shown to user for confirmation.
+- **class `FindingsConfirmRequest(BaseModel)`** (line 268)
+  > User confirms or provides context to findings.
+- **class `MCQAnswers(BaseModel)`** (line 276)
   > User answers to MCQ questions.
-- **class `FeatureStat(BaseModel)`** (line 148)
+- **class `FeatureStat(BaseModel)`** (line 281)
   > Statistics for a single computed feature.
-- **class `FeaturesResponse(BaseModel)`** (line 156)
+- **class `FeaturesResponse(BaseModel)`** (line 289)
   > Response containing computed features and statistics.
-- **class `LabelsResponse(BaseModel)`** (line 166)
+- **class `LabelsResponse(BaseModel)`** (line 302)
   > Response containing churn label statistics.
-- **class `ConfusionMatrix(BaseModel)`** (line 177)
+- **class `ConfusionMatrix(BaseModel)`** (line 313)
   > Confusion matrix counts.
-- **class `FeatureImportance(BaseModel)`** (line 185)
+- **class `FeatureImportance(BaseModel)`** (line 321)
   > Feature name with its importance score.
-- **class `TrainResponse(BaseModel)`** (line 191)
+- **class `TrainResponse(BaseModel)`** (line 327)
   > Response containing training metrics and feature importance.
-- **class `SamplePrediction(BaseModel)`** (line 201)
+- **class `SamplePrediction(BaseModel)`** (line 341)
   > A single customer prediction with risk tier.
-- **class `ResultsResponse(BaseModel)`** (line 209)
+- **class `ResultsResponse(BaseModel)`** (line 349)
   > Response containing model results summary and predictions.
-- **class `FeatureContribution(BaseModel)`** (line 219)
+- **class `FeatureContribution(BaseModel)`** (line 363)
   > SHAP-based feature contribution for a prediction.
-- **class `InferencePrediction(BaseModel)`** (line 225)
+- **class `InferencePrediction(BaseModel)`** (line 371)
   > A single customer inference prediction with feature contributions.
-- **class `InferenceResponse(BaseModel)`** (line 233)
+- **class `InferenceResponse(BaseModel)`** (line 380)
   > Response containing inference predictions for all customers.
-- **class `LLMColumnMappingItem(BaseModel)`** (line 244)
+- **class `LLMColumnMappingItem(BaseModel)`** (line 391)
   > LLM output for a single column mapping.
-- **class `LLMColumnMappingOutput(BaseModel)`** (line 251)
+- **class `LLMColumnMappingOutput(BaseModel)`** (line 398)
   > LLM output for column mapping.
-- **class `LLMMCQOption(BaseModel)`** (line 256)
+- **class `LLMMCQOption(BaseModel)`** (line 403)
   > LLM output for a MCQ option.
-- **class `LLMMCQ(BaseModel)`** (line 262)
+- **class `LLMMCQ(BaseModel)`** (line 409)
   > LLM output for a MCQ question.
-- **class `LLMHypothesisOutput(BaseModel)`** (line 270)
+- **class `LLMHypothesisOutput(BaseModel)`** (line 417)
   > LLM output for business hypothesis generation.
-- **class `LLMFeatureSelectionOutput(BaseModel)`** (line 278)
+- **class `LLMFeatureSelectionOutput(BaseModel)`** (line 425)
   > LLM output for tier 2 feature selection.
-- **class `LLMResultsSummaryOutput(BaseModel)`** (line 284)
+- **class `LLMResultsSummaryOutput(BaseModel)`** (line 431)
   > LLM output for results summary text.
-- **class `DSLFeature(BaseModel)`** (line 291)
+- **class `DSLFeature(BaseModel)`** (line 438)
   > Definition of a DSL-based feature with operation and parameters.
   - `params(self)` `@property`
     > Parse params_json string into a dict.
-- **class `LLMFeatureSuggestionOutput(BaseModel)`** (line 305)
+- **class `LLMFeatureSuggestionOutput(BaseModel)`** (line 452)
   > LLM output for DSL feature suggestions.
-- **class `LLMEvaluationOutput(BaseModel)`** (line 311)
+- **class `LLMEvaluationOutput(BaseModel)`** (line 458)
   > LLM output for model evaluation with leakage detection.
-- **class `LLMChatOutput(BaseModel)`** (line 322)
+- **class `LLMChatOutput(BaseModel)`** (line 469)
   > LLM output for chat message classification.
-- **class `ModelResultSchema(BaseModel)`** (line 330)
+- **class `ModelResultSchema(BaseModel)`** (line 477)
   > Schema for serialized model results in API responses.
-- **class `IterationResultSchema(BaseModel)`** (line 339)
+- **class `IterationResultSchema(BaseModel)`** (line 486)
   > Schema for a single agent iteration result.
-- **class `AgentStatusResponse(BaseModel)`** (line 351)
+- **class `AgentStatusResponse(BaseModel)`** (line 498)
   > Response for agent loop status.
-- **class `SessionListItem(BaseModel)`** (line 363)
+- **class `SessionListItem(BaseModel)`** (line 510)
   > Schema for a session in the session list.
-- **class `RenameRequest(BaseModel)`** (line 375)
+- **class `RenameRequest(BaseModel)`** (line 522)
   > Request body for renaming a session.
-- **class `UserInfo(BaseModel)`** (line 380)
+- **class `UserInfo(BaseModel)`** (line 527)
   > Schema for user profile information.
+- `get_roles_for_file_type(file_type)` (line 106)
+  > Return applicable column roles for a given file type.
 
   **Calls to other modules:**
   - `DSLFeature.params` → `json.json.loads`
@@ -648,13 +805,17 @@
 ### `s1_upload.py`
 > Stage 1: CSV file upload, parsing, and profiling.
 
-- `async handle_multi(files, description, user_id)` (line 20)
-  > Parse and profile multiple uploaded CSV files.
-- `async handle(file, user_id)` (line 78)
+- `async handle_multi(files, description, file_metadata_json, user_id)` (line 22)
+  > Parse and profile multiple uploaded CSV files with per-file type metadata.
+- `_validate_file_type(df, profile, file_type)` (line 124)
+  > Return warnings if declared file_type does not match data.
+- `_detect_data_types(file_types)` (line 158)
+  > Map file_type tags to data type numbers (1-5).
+- `async handle(file, user_id)` (line 168)
   > Parse and profile a single uploaded CSV file.
-- `_build_profile(df)` (line 110)
+- `_build_profile(df)` (line 200)
   > Build a DataProfile from a DataFrame.
-- `_infer_dtype(series)` (line 155)
+- `_infer_dtype(series)` (line 245)
   > Infer the semantic data type of a pandas Series.
 
   **Calls to other modules:**
@@ -662,6 +823,7 @@
   - `handle_multi` → `fastapi.HTTPException`
   - `handle_multi` → `app.models.schemas.MultiUploadResponse`
   - `handle_multi` → `io.io.BytesIO`
+  - `handle_multi` → `json.json.loads`
   - `handle_multi` → `pandas.pd.read_csv`
   - `handle_multi` → `app.session_store.store.create`
   - `handle_multi` → `app.session_store.store.update`
@@ -681,15 +843,25 @@
 ### `s2_column_map.py`
 > Stage 2: LLM-based column role detection and multi-file joining.
 
-- `async handle(session_id, session)` (line 20)
+- `async handle(session_id, session)` (line 23)
   > Run LLM column mapping on the session profile.
-- `handle_override(session_id, session, body)` (line 49)
+
+For multi-file sessions, maps each file with its file_type context.
+- `async _handle_multi(session_id, session, dataframes)` (line 66)
+  > Map columns for each file with its file_type context, then produce cross-file summary.
+- `_detect_data_types_from_files(dataframes)` (line 123)
+  > Map file_type tags to Type 1-5.
+- `_build_cross_file_summary(dataframes, all_mappings, detected_types)` (line 134)
+  > Build a human-readable summary of detected types and file relationships.
+- `handle_override(session_id, session, body)` (line 157)
   > Replace column mappings with user-provided overrides.
-- `async handle_with_feedback(session_id, session, body)` (line 61)
+- `async handle_with_feedback(session_id, session, body)` (line 169)
   > Re-run LLM column mapping with user feedback.
-- `_build_prompt(profile, file_description)` (line 109)
-  > Build the LLM prompt for column role detection.
-- `async join_files(session_id, session)` (line 154)
+- `_build_prompt(profile, file_description, file_type)` (line 217)
+  > Build the LLM prompt for column role detection, type-aware.
+- `_get_role_descriptions(roles)` (line 303)
+  > Format role descriptions for the LLM prompt.
+- `async join_files(session_id, session)` (line 312)
   > Join multiple uploaded files into a single DataFrame using LLM-determined strategy.
 
 Returns a dict with 'dataframe', 'join_summary' keys.
@@ -701,6 +873,10 @@ If session has a single file or already has a dataframe, returns it directly.
   - `handle` → `fastapi.HTTPException`
   - `handle` → `app.llm.client.generate_structured`
   - `handle` → `app.session_store.store.update`
+  - `_handle_multi` → `app.models.schemas.ColumnMapping`
+  - `_handle_multi` → `app.models.schemas.ColumnMappingResponse`
+  - `_handle_multi` → `app.llm.client.generate_structured`
+  - `_handle_multi` → `app.session_store.store.update`
   - `handle_override` → `app.models.schemas.ColumnMappingResponse`
   - `handle_override` → `app.session_store.store.update`
   - `handle_with_feedback` → `app.models.schemas.ColumnMapping`
@@ -708,18 +884,158 @@ If session has a single file or already has a dataframe, returns it directly.
   - `handle_with_feedback` → `fastapi.HTTPException`
   - `handle_with_feedback` → `app.llm.client.generate_structured`
   - `handle_with_feedback` → `app.session_store.store.update`
+  - `_build_prompt` → `app.models.schemas.get_roles_for_file_type`
   - `join_files` → `fastapi.HTTPException`
   - `join_files` → `app.llm.client.generate_structured`
   - `join_files` → `pandas.pd.merge`
   - `join_files` → `app.session_store.store.update`
 
-### `s3_hypothesis.py`
-> Stage 3: Business hypothesis generation and MCQ question creation.
+### `s3_churn_window.py`
+> Auto churn window selection.
 
-- `async handle(session_id, session, free_text)` (line 16)
-  > Generate business hypothesis and MCQ questions using LLM.
-- `_build_prompt(profile, column_mapping, free_text)` (line 56)
-  > Build the LLM prompt for hypothesis and question generation.
+Tests 6 candidate windows (30, 60, 90, 120, 180, 365 days),
+trains a fast XGBoost for each, picks the one with best F1.
+
+- `auto_select_churn_window(df, feature_matrix, customer_id_col, date_col)` (line 16)
+  > Test 6 churn windows, return the one with best F1.
+
+Args:
+    df: raw DataFrame
+    feature_matrix: pre-computed per-customer features from field analysis
+    customer_id_col: name of customer ID column
+    date_col: name of transaction date column
+
+Returns:
+    {
+        "selected_window": int,
+        "all_results": list of per-window results,
+        "adaptive_gap": pd.Series (gap_vs_personal_median per customer),
+    }
+- `generate_labels(df, customer_id_col, date_col, window)` (line 105)
+  > Generate binary churn labels for a given window.
+
+Returns:
+    pd.Series indexed by customer_id, values 0 (active) or 1 (churned).
+- `_train_fast_xgb(X, y)` (line 123)
+  > Train a fast XGBoost and return F1 score.
+- `_compute_adaptive_gap(df, customer_id_col, date_col, max_date)` (line 156)
+  > Compute gap_vs_personal_median per customer.
+
+Value of 2.5 means the customer has been silent for 2.5x their normal interval.
+
+  **Calls to other modules:**
+  - `auto_select_churn_window` → `pandas.pd.Timedelta`
+  - `auto_select_churn_window` → `pandas.pd.to_datetime`
+  - `generate_labels` → `pandas.pd.Timedelta`
+  - `generate_labels` → `pandas.pd.to_datetime`
+  - `_train_fast_xgb` → `sklearn.metrics.f1_score`
+  - `_train_fast_xgb` → `sklearn.model_selection.train_test_split`
+  - `_train_fast_xgb` → `xgboost.xgb.XGBClassifier`
+  - `_compute_adaptive_gap` → `pandas.pd.to_datetime`
+
+### `s3_field_analysis.py`
+> Exhaustive field analysis engine.
+
+Runs 4 analyses per field based on dtype (numeric, categorical, datetime).
+One pass produces both the data signature report (for LLM hypothesis)
+and the per-customer feature matrix (for training).
+
+- `analyze_all_fields(df, col_map, customer_id_col, date_col, labels)` (line 15)
+  > Run 4 analyses per field based on dtype.
+
+Args:
+    df: raw DataFrame
+    col_map: {column_name: role} mapping from Stage 2
+    customer_id_col: name of the customer ID column
+    date_col: name of the primary date column (for trend computation)
+    labels: optional churn labels (for univariate signal analysis)
+
+Returns:
+    signature: dict of per-field statistics
+    feature_matrix: DataFrame indexed by customer_id
+- `analyze_numeric(df, col_name, customer_id_col, date_col, labels)` (line 86)
+  > 4 analyses for a numeric field.
+
+1. Distribution (signature only)
+2. Per-customer profile (signature + features)
+3. Univariate churn signal (signature only)
+4. Temporal trend (feature)
+- `analyze_categorical(df, col_name, customer_id_col, date_col, labels)` (line 146)
+  > 4 analyses for a categorical field.
+
+1. Concentration (signature only)
+2. Per-customer diversity (feature)
+3. Churn rate by value (feature)
+4. Temporal shift (feature)
+- `analyze_datetime(df, col_name, customer_id_col)` (line 205)
+  > 4 analyses for a datetime field.
+
+1. Recency (feature)
+2. Frequency (feature)
+3. Gap profile (feature)
+4. Seasonality (signature only)
+- `analyze_cross_file(df_primary, df_secondary, primary_customer_col, secondary_customer_col, secondary_file_type)` (line 276)
+  > Compute cross-file overlap statistics.
+- `_is_auto_increment(series)` (line 303)
+  > Detect auto-incrementing integer columns (row IDs, transaction IDs, etc.).
+
+Handles both per-row unique IDs and transaction-level IDs that repeat
+across line items. Checks deduplicated values for: numeric, integer-valued,
+and mostly monotonically increasing (>90% of consecutive diffs are positive).
+- `_infer_analysis_dtype(series)` (line 330)
+  > Determine dtype for analysis purposes.
+- `_safe_float(val)` (line 348)
+  > Convert to float, return 0.0 on failure.
+- `_compute_univariate_auc(feature_series, labels)` (line 359)
+  > Compute univariate AUC of a feature against binary labels.
+- `_compute_trend(df, col_name, customer_id_col, date_col, numeric_col)` (line 376)
+  > Compute 2nd half mean minus 1st half mean per customer.
+- `_compute_categorical_shift(df, col_name, customer_id_col, date_col)` (line 407)
+  > Compute Jaccard distance of value sets between 1st and 2nd half per customer.
+- `_compute_gap_profile(df_valid, col_name, customer_id_col)` (line 439)
+  > Compute inter-event gap statistics per customer.
+
+  **Calls to other modules:**
+  - `analyze_all_fields` → `pandas.pd.DataFrame`
+  - `analyze_numeric` → `numpy.np.abs`
+  - `analyze_numeric` → `pandas.pd.to_numeric`
+  - `analyze_datetime` → `pandas.pd.Series`
+  - `analyze_datetime` → `pandas.pd.Timedelta`
+  - `analyze_datetime` → `pandas.pd.to_datetime`
+  - `_is_auto_increment` → `numpy.np.allclose`
+  - `_is_auto_increment` → `pandas.pd.api.types.is_numeric_dtype`
+  - `_infer_analysis_dtype` → `pandas.pd.api.types.is_datetime64_any_dtype`
+  - `_infer_analysis_dtype` → `pandas.pd.api.types.is_numeric_dtype`
+  - `_infer_analysis_dtype` → `pandas.pd.to_datetime`
+  - `_safe_float` → `numpy.np.isinf`
+  - `_safe_float` → `numpy.np.isnan`
+  - `_compute_univariate_auc` → `numpy.np.unique`
+  - `_compute_univariate_auc` → `sklearn.metrics.roc_auc_score`
+  - `_compute_trend` → `pandas.pd.to_datetime`
+  - `_compute_trend` → `pandas.pd.to_numeric`
+  - `_compute_categorical_shift` → `pandas.pd.to_datetime`
+  - `_compute_gap_profile` → `pandas.pd.Series`
+
+### `s3_hypothesis.py`
+> Stage 3: Exhaustive field analysis, auto churn window, grounded hypothesis.
+
+Revised flow:
+  3a. Exhaustive field analysis (4 analyses per dtype on every field)
+  3b. Auto-select churn window (test 6 candidates)
+  3c. LLM hypothesis grounded in computed facts
+  3d. Generate findings for user confirmation
+  3e. MCQs with defaults (shown only on "Let me correct")
+
+- `async handle(session_id, session, free_text)` (line 32)
+  > Run exhaustive field analysis, auto churn window, grounded hypothesis.
+- `_get_col(col_map, role)` (line 158)
+  > Find the column name assigned to a given role.
+- `_recompute_univariate_aucs(signature, feature_matrix, labels)` (line 166)
+  > Recompute univariate AUCs with the auto-selected churn window labels.
+- `_generate_findings(signature, churn_window_result)` (line 193)
+  > Build the findings object shown to the user.
+- `_build_grounded_prompt(signature, churn_window_result, profile, free_text)` (line 251)
+  > Build LLM prompt grounded in computed facts from field analysis.
 
   **Calls to other modules:**
   - `handle` → `app.models.schemas.BusinessHypothesis`
@@ -727,9 +1043,32 @@ If session has a single file or already has a dataframe, returns it directly.
   - `handle` → `app.models.schemas.HypothesisResponse`
   - `handle` → `app.models.schemas.MCQOption`
   - `handle` → `app.models.schemas.MCQuestion`
+  - `handle` → `app.stages.s3_field_analysis.analyze_all_fields`
+  - `handle` → `app.stages.s3_churn_window.auto_select_churn_window`
+  - `handle` → `app.stages.s3_churn_window.generate_labels`
   - `handle` → `app.llm.client.generate_structured`
   - `handle` → `app.llm.client.get_reasoning_model`
   - `handle` → `app.session_store.store.update`
+  - `_recompute_univariate_aucs` → `app.stages.s3_field_analysis._compute_univariate_auc`
+
+### `s4_cross_source.py`
+> Cross-source feature computation.
+
+Computes interaction features between primary and secondary data,
+and between high-signal fields within the same dataset.
+
+- `compute_cross_source_features(primary_features, secondary_features, secondary_type)` (line 14)
+  > Compute interaction features between primary and secondary data.
+
+Join on index (customer_id). Left join: primary customers as base.
+- `compute_interaction_features(feature_matrix, signature)` (line 69)
+  > For pairs of features with AUC > 0.60, compute ratio and product.
+
+Limits to top 5 high-signal features to avoid combinatorial explosion.
+
+  **Calls to other modules:**
+  - `compute_cross_source_features` → `pandas.pd.DataFrame`
+  - `compute_interaction_features` → `pandas.pd.DataFrame`
 
 ### `s4_features.py`
 > Stage 4: Feature engineering with tier 1, tier 2, and DSL features.
@@ -781,51 +1120,70 @@ If session has a single file or already has a dataframe, returns it directly.
 - `compute_purchase_regularity_score(df, col_map)` (line 327)
   > Compute purchase regularity score (1 minus coefficient of variation).
 - `async handle(session_id, session, body)` (line 381)
-  > Compute feature matrix from data using MCQ answers for configuration.
-- `async _extract_user_features(free_text, col_map, existing_features)` (line 507)
+  > Stage 4: receive pre-computed matrix from Stage 3, prune, detect leakage.
+
+If exhaustive field analysis was run (Stage 3 new flow), uses that matrix.
+Otherwise falls back to legacy Tier 1 + Tier 2 computation.
+- `async _handle_exhaustive(session_id, session, body)` (line 397)
+  > Handle Stage 4 when exhaustive field analysis has been run.
+- `async _handle_legacy(session_id, session, body)` (line 457)
+  > Legacy flow: compute Tier 1 + Tier 2 features from scratch.
+- `_build_stats(feature_matrix)` (line 564)
+  > Build feature statistics list.
+- `_build_tier_map(columns, col_map, detected_types)` (line 578)
+  > Map each feature to its tier based on the source column role.
+- `_tier_distribution(tier_map)` (line 610)
+  > Compute percentage distribution across tiers.
+- `async _extract_user_features(free_text, col_map, existing_features)` (line 619)
   > Translate user free text into DSL feature definitions via LLM.
-- `_build_col_map(column_mapping)` (line 554)
+- `_build_col_map(column_mapping)` (line 666)
   > Map role -> column name from the column mapping.
-- `_get_available_tier2(col_map)` (line 564)
+- `_get_available_tier2(col_map)` (line 676)
   > Return Tier 2 feature names whose required columns exist.
-- `compute_feature_matrix(df_obs, col_map, column_mapping, hypothesis, mcq_answers, excluded_features, dsl_features)` (line 573)
+- `compute_feature_matrix(df_obs, col_map, column_mapping, hypothesis, mcq_answers, excluded_features, dsl_features)` (line 685)
   > Compute features from observation window data.
 
 Returns (feature_matrix, tier1_names, tier2_names, dsl_names).
 This function is used by both the stage handler and the agent loop.
-- `async compute_feature_matrix_async(df_obs, col_map, column_mapping, hypothesis, mcq_answers, excluded_features, dsl_features)` (line 658)
+- `async compute_feature_matrix_async(df_obs, col_map, column_mapping, hypothesis, mcq_answers, excluded_features, dsl_features)` (line 770)
   > Async version of compute_feature_matrix. Used by agent loop.
-- `async _select_tier2_features(available, column_mapping, hypothesis, mcq_answers)` (line 717)
+- `async _select_tier2_features(available, column_mapping, hypothesis, mcq_answers)` (line 829)
   > Ask LLM to select which tier 2 features to compute.
 
   **Calls to other modules:**
   - `compute_recency` → `pandas.pd.to_datetime`
-  - `compute_recency` → `pandas.pd.to_datetime(g[date_col]).max`
+  - `compute_recency` → `pandas.pd.to_datetime(g[date_col], format='mixed', dayfirst=True).max`
   - `_frequency_window` → `pandas.pd.Timedelta`
   - `_frequency_window` → `pandas.pd.to_datetime`
   - `compute_frequency_trend` → `pandas.pd.to_datetime`
   - `compute_monetary_trend` → `pandas.pd.to_datetime`
   - `compute_days_between_purchases_avg` → `pandas.pd.to_datetime`
-  - `compute_days_between_purchases_avg` → `pandas.pd.to_datetime(g[date_col]).sort_values`
+  - `compute_days_between_purchases_avg` → `pandas.pd.to_datetime(g[date_col], format='mixed', dayfirst=True).sort_values`
   - `compute_days_between_purchases_std` → `pandas.pd.to_datetime`
-  - `compute_days_between_purchases_std` → `pandas.pd.to_datetime(g[date_col]).sort_values`
+  - `compute_days_between_purchases_std` → `pandas.pd.to_datetime(g[date_col], format='mixed', dayfirst=True).sort_values`
   - `compute_peak_vs_offpeak_ratio` → `pandas.pd.to_datetime`
   - `compute_order_size_trend` → `pandas.pd.to_datetime`
   - `compute_product_mix_change` → `pandas.pd.to_datetime`
   - `compute_weekend_vs_weekday` → `pandas.pd.to_datetime`
   - `compute_max_gap_between_purchases` → `pandas.pd.to_datetime`
-  - `compute_max_gap_between_purchases` → `pandas.pd.to_datetime(g[date_col]).sort_values`
+  - `compute_max_gap_between_purchases` → `pandas.pd.to_datetime(g[date_col], format='mixed', dayfirst=True).sort_values`
   - `compute_purchase_regularity_score` → `pandas.pd.to_datetime`
-  - `compute_purchase_regularity_score` → `pandas.pd.to_datetime(g[date_col]).sort_values`
-  - `handle` → `app.models.schemas.FeatureStat`
-  - `handle` → `app.models.schemas.FeaturesResponse`
-  - `handle` → `fastapi.HTTPException`
-  - `handle` → `app.stages.s5_labels._get_churn_window`
-  - `handle` → `app.agent.feature_dsl.execute_dsl_features`
-  - `handle` → `pandas.pd.DataFrame`
-  - `handle` → `pandas.pd.Timedelta`
-  - `handle` → `pandas.pd.to_datetime`
-  - `handle` → `app.session_store.store.update`
+  - `compute_purchase_regularity_score` → `pandas.pd.to_datetime(g[date_col], format='mixed', dayfirst=True).sort_values`
+  - `_handle_exhaustive` → `app.models.schemas.FeaturesResponse`
+  - `_handle_exhaustive` → `fastapi.HTTPException`
+  - `_handle_exhaustive` → `app.stages.s4_cross_source.compute_interaction_features`
+  - `_handle_exhaustive` → `app.stages.s4_pruning.leakage_detection`
+  - `_handle_exhaustive` → `app.stages.s4_pruning.statistical_pruning`
+  - `_handle_exhaustive` → `app.session_store.store.update`
+  - `_handle_legacy` → `app.models.schemas.FeaturesResponse`
+  - `_handle_legacy` → `fastapi.HTTPException`
+  - `_handle_legacy` → `app.stages.s5_labels._get_churn_window`
+  - `_handle_legacy` → `app.agent.feature_dsl.execute_dsl_features`
+  - `_handle_legacy` → `pandas.pd.DataFrame`
+  - `_handle_legacy` → `pandas.pd.Timedelta`
+  - `_handle_legacy` → `pandas.pd.to_datetime`
+  - `_handle_legacy` → `app.session_store.store.update`
+  - `_build_stats` → `app.models.schemas.FeatureStat`
   - `_extract_user_features` → `app.llm.client.generate_structured`
   - `compute_feature_matrix` → `asyncio.asyncio.get_running_loop`
   - `compute_feature_matrix` → `asyncio.asyncio.run`
@@ -835,14 +1193,59 @@ This function is used by both the stage handler and the agent loop.
   - `compute_feature_matrix_async` → `pandas.pd.DataFrame`
   - `_select_tier2_features` → `app.llm.client.generate_structured`
 
+### `s4_pruning.py`
+> Statistical pruning and three-layer leakage detection.
+
+Pruning: removes zero-variance, high-null, and correlated features.
+Leakage detection: statistical (AUC >0.90), temporal ordering, ablation test.
+
+- `statistical_pruning(feature_matrix, labels)` (line 14)
+  > Remove noise features.
+
+Steps:
+1. Drop zero-variance features
+2. Drop features with >90% null
+3. Drop correlated features (|r| > 0.95, keep higher AUC)
+
+Returns:
+    Pruned feature matrix, pruning report.
+- `leakage_detection(feature_matrix, labels, col_map)` (line 86)
+  > Three-layer leakage detection.
+
+Layer 1: Statistical — flag features with univariate AUC > 0.90
+Layer 2: Temporal ordering — check if recency/frequency features
+Layer 3: Ablation test — train with/without suspect feature
+
+Returns:
+    Cleaned feature matrix, leakage report.
+- `_safe_auc(feature, labels)` (line 190)
+  > Compute univariate AUC, return 0.5 on failure.
+- `_ablation_test(X, labels, feature_name)` (line 205)
+  > Train model with and without a feature, measure AUC drop.
+
+  **Calls to other modules:**
+  - `statistical_pruning` → `numpy.np.ones`
+  - `statistical_pruning` → `numpy.np.triu`
+  - `statistical_pruning` → `numpy.np.triu(np.ones(corr.shape), k=1).astype`
+  - `_safe_auc` → `numpy.np.unique`
+  - `_safe_auc` → `sklearn.metrics.roc_auc_score`
+  - `_ablation_test` → `sklearn.metrics.roc_auc_score`
+  - `_ablation_test` → `sklearn.model_selection.train_test_split`
+  - `_ablation_test` → `xgboost.xgb.XGBClassifier`
+
 ### `s5_labels.py`
 > Stage 5: Churn label assignment based on cutoff date.
 
 - `handle(session_id, session)` (line 10)
   > Assign churn labels and return label statistics.
-- `_assign_labels(df, col_map, cutoff_date)` (line 85)
+
+If labels were auto-selected in Stage 3b, validates and uses those.
+Otherwise computes from scratch (legacy flow).
+- `_extract_window_override(mcq_answers)` (line 102)
+  > Extract churn window override from MCQ answers.
+- `_assign_labels(df, col_map, cutoff_date)` (line 115)
   > Assign churn labels: 1 if no purchase after cutoff, 0 otherwise.
-- `_get_churn_window(df, col_map, mcq_answers)` (line 105)
+- `_get_churn_window(df, col_map, mcq_answers)` (line 135)
   > Determine churn window in days from MCQ answers or auto-derive from data.
 
   **Calls to other modules:**
@@ -854,64 +1257,99 @@ This function is used by both the stage handler and the agent loop.
   - `_assign_labels` → `pandas.pd.Series`
   - `_assign_labels` → `pandas.pd.to_datetime`
   - `_get_churn_window` → `pandas.pd.to_datetime`
-  - `_get_churn_window` → `pandas.pd.to_datetime(g[date_col]).sort_values`
+  - `_get_churn_window` → `pandas.pd.to_datetime(g[date_col], format='mixed', dayfirst=True).sort_values`
 
 ### `s6_train.py`
-> Stage 6: XGBoost model training with stratified split.
+> Stage 6: Multi-model training with tier-based feature grouping.
 
-- `handle(session_id, session)` (line 25)
-  > Train an XGBoost model and return metrics.
+- `handle(session_id, session)` (line 29)
+  > Train Model A (baseline) + Model B (enriched) + applicable C/D/E.
+- `_handle_legacy(session_id, session, features, labels)` (line 182)
+  > Legacy single-model training path.
+- `_train_single(X, y, name)` (line 275)
+  > Train a single XGBoost model with the given features and labels.
+- `_compute_tier_attribution(champion, tier_map)` (line 363)
+  > Group feature importance by tier.
 
   **Calls to other modules:**
   - `handle` → `app.models.schemas.ConfusionMatrix`
   - `handle` → `app.models.schemas.FeatureImportance`
   - `handle` → `fastapi.HTTPException`
   - `handle` → `app.models.schemas.TrainResponse`
-  - `handle` → `sklearn.metrics.confusion_matrix`
-  - `handle` → `sklearn.metrics.f1_score`
-  - `handle` → `sklearn.metrics.precision_score`
-  - `handle` → `sklearn.metrics.recall_score`
-  - `handle` → `sklearn.metrics.roc_auc_score`
   - `handle` → `app.session_store.store.update`
   - `handle` → `time.time.time`
-  - `handle` → `sklearn.model_selection.train_test_split`
-  - `handle` → `xgboost.xgb.XGBClassifier`
+  - `_handle_legacy` → `app.models.schemas.ConfusionMatrix`
+  - `_handle_legacy` → `app.models.schemas.FeatureImportance`
+  - `_handle_legacy` → `fastapi.HTTPException`
+  - `_handle_legacy` → `app.models.schemas.TrainResponse`
+  - `_handle_legacy` → `sklearn.metrics.confusion_matrix`
+  - `_handle_legacy` → `sklearn.metrics.f1_score`
+  - `_handle_legacy` → `sklearn.metrics.precision_score`
+  - `_handle_legacy` → `sklearn.metrics.recall_score`
+  - `_handle_legacy` → `sklearn.metrics.roc_auc_score`
+  - `_handle_legacy` → `app.session_store.store.update`
+  - `_handle_legacy` → `time.time.time`
+  - `_handle_legacy` → `sklearn.model_selection.train_test_split`
+  - `_handle_legacy` → `xgboost.xgb.XGBClassifier`
+  - `_train_single` → `sklearn.metrics.confusion_matrix`
+  - `_train_single` → `sklearn.metrics.f1_score`
+  - `_train_single` → `sklearn.metrics.precision_score`
+  - `_train_single` → `sklearn.metrics.recall_score`
+  - `_train_single` → `sklearn.metrics.roc_auc_score`
+  - `_train_single` → `sklearn.model_selection.train_test_split`
+  - `_train_single` → `xgboost.xgb.XGBClassifier`
 
 ### `s7_results.py`
 > Stage 7: Model results summary with LLM-generated text.
 
-- `async handle(session_id, session)` (line 15)
+- `async handle(session_id, session)` (line 22)
   > Build results response with sample predictions and LLM summary.
-- `_get_risk_tier(probability)` (line 60)
+- `_build_legacy_predictions(model, X_test, y_test)` (line 108)
+  > Build sample predictions for legacy single-model path.
+- `_build_sample_predictions(model, X_test, y_test, tier_map)` (line 126)
+  > Build sample predictions with SHAP-based multi-source context.
+- `async _generate_enriched_summary(metrics, feature_importance, lift, tier_attribution, leakage_report, detected_types, findings, hypothesis)` (line 156)
+  > Generate summary enriched with multi-source context.
+- `_get_risk_tier(probability)` (line 232)
   > Map a churn probability to a risk tier.
-- `async _generate_summary(metrics, feature_importance, business_type)` (line 69)
+- `async _generate_summary(metrics, feature_importance, business_type)` (line 241)
   > Generate a text summary of model results using LLM.
 
   **Calls to other modules:**
   - `handle` → `app.models.schemas.FeatureImportance`
   - `handle` → `fastapi.HTTPException`
   - `handle` → `app.models.schemas.ResultsResponse`
-  - `handle` → `app.models.schemas.SamplePrediction`
+  - `handle` → `app.session_store.store.update`
+  - `_build_legacy_predictions` → `app.models.schemas.SamplePrediction`
+  - `_build_sample_predictions` → `app.models.schemas.SamplePrediction`
+  - `_build_sample_predictions` → `shap.shap.TreeExplainer`
+  - `_generate_enriched_summary` → `app.llm.client.generate_structured`
   - `_generate_summary` → `app.llm.client.generate_structured`
 
 ### `s8_inference.py`
 > Stage 8: Churn inference with SHAP-based feature contributions.
 
-- `handle(session_id, session)` (line 18)
+- `handle(session_id, session)` (line 22)
   > Run churn predictions on all customers with SHAP explanations.
-- `handle_download(session_id, session)` (line 107)
+- `handle_download(session_id, session)` (line 134)
   > Generate a CSV download buffer from stored predictions.
-- `_get_risk_tier(probability)` (line 157)
+- `_get_risk_tier(probability)` (line 197)
   > Map a churn probability to a risk tier.
+- `_tier_to_source(tier)` (line 206)
+  > Map feature tier to data source label.
+- `_generate_action(top_features, detected_types)` (line 216)
+  > Generate action recommendation based on top contributing features.
 
   **Calls to other modules:**
   - `handle` → `app.models.schemas.FeatureContribution`
   - `handle` → `fastapi.HTTPException`
   - `handle` → `app.models.schemas.InferencePrediction`
   - `handle` → `app.models.schemas.InferenceResponse`
+  - `handle` → `app.agent.loop.get_agent_state`
   - `handle` → `numpy.np.abs`
   - `handle` → `numpy.np.argsort`
   - `handle` → `shap.shap.TreeExplainer`
+  - `handle` → `app.session_store.store.get`
   - `handle` → `app.session_store.store.update`
   - `handle_download` → `fastapi.HTTPException`
   - `handle_download` → `io.io.StringIO`

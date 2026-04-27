@@ -1,0 +1,1263 @@
+watch_id,customer_id,customer_name,added_by,added_date,watch_reason,last_known_action,manager_confidence
+PIDWL00001,PIDOUT000880,Lucky Sanjay Hardware,RSM,2025-09-20,orders down,lost to competitor,low
+PIDWL00002,PIDOUT007459,Shree Rafiq Hardware,Distributor,2025-09-03,competitor offer,field visit planned,unknown
+PIDWL00003,PIDOUT003987,Metro Karthik Mart,RSM,2026-01-17,closed counter,lost to competitor,high
+PIDWL00004,PIDOUT001108,Sri Irfan Sales,Zonal office,2026-02-07,payment delay,waiting for payment,unknown
+PIDWL00005,PIDOUT007749,New Revathi Hardware,Distributor,2025-09-15,payment delay,field visit planned,medium
+PIDWL00006,PIDOUT008557,City Deepak Distributors,RSM,2025-11-28,closed counter,credit call done,medium
+PIDWL00007,PIDOUT003329,Mahalakshmi Sowmya Hardware,Zonal office,2026-03-11,competitor offer,lost to competitor,low
+PIDWL00008,PIDOUT001984,Star Naveen Hardware,Credit,2026-03-22,competitor offer,field visit planned,low
+PIDWL00009,PIDOUT005096,Sree Chandra Services,Distributor,2026-01-27,closed counter,waiting for payment,low
+PIDWL00010,PIDOUT003626,Star Meena Mart,Zonal office,2025-07-09,orders down,new owner to verify,unknown
+PIDWL00011,PIDOUT003977,Murugan Irfan Mart,Service,2025-06-20,owner dispute,field visit planned,medium
+PIDWL00012,PIDOUT008224,Vijaya Lokesh Depot,Credit,2026-03-24,seasonal crop miss,credit call done,high
+PIDWL00013,PIDDLR000841,Mahalakshmi Farida Enterprises,ASM,2025-12-27,scheme claim pending,new owner to verify,high
+PIDWL00014,PIDOUT007653,Shree Kavya Hardware,Service,2026-03-17,service complaint,lost to competitor,medium
+PIDWL00015,PIDOUT002669,Ganesh Venkatesh Mart,Zonal office,14-Mar-26,competitor offer,scheme support requested,low
+PIDWL00016,PIDOUT004831,Modern Prakash Distributors,Service,2026-01-21,owner dispute,scheme support requested,unknown
+PIDWL00017,PIDOUT002480,City Jagan Distributors,Service,2025-10-19,scheme claim pending,field visit planned,medium
+PIDWL00018,PIDOUT001905,Mahalakshmi Meena Hardware,Distributor,2026-02-07,competitor offer,new owner to verify,high
+PIDWL00019,PIDDLR000179,Prime Farida Stores,ASM,2025-11-27,seasonal crop miss,lost to competitor,medium
+PIDWL00020,PIDOUT001052,Shree Rafiq Hardware,Zonal office,2025-11-27,seasonal crop miss,lost to competitor,unknown
+PIDWL00021,PIDOUT000199,Prime Lokesh Stores,RSM,2025-06-26,closed counter,lost to competitor,high
+PIDWL00022,PIDOUT001423,Modern Manoj Paints,RSM,2025-12-09,competitor offer,credit call done,high
+PIDWL00023,PIDOUT005267,Ganesh Revathi Services Ltd,Zonal office,2025-12-02,competitor offer,credit call done,low
+PIDWL00024,PIDOUT003354,National Lokesh Agencies,Service,2025-06-04,scheme claim pending,scheme support requested,unknown
+PIDWL00025,PIDOUT006951,Mahalakshmi Farida Hardware,Service,2025-08-23,owner dispute,credit call done,low
+PIDWL00026,PIDOUT007275,National Rafiq Stores,Zonal office,2025-07-19,competitor offer,waiting for payment,low
+PIDWL00027,PIDDLR000794,Prime Jagan Distributors,Distributor,2025-12-08,scheme claim pending,credit call done,low
+PIDWL00028,PIDOUT005434,GANESH PRIYA AGENCIES,Distributor,2025-11-02,scheme claim pending,new owner to verify,unknown
+PIDWL00029,PIDOUT007258,Sri Naveen Hardware,RSM,2026-01-13,seasonal crop miss,credit call done,unknown
+PIDWL00030,PIDOUT001146,Prime Lokesh Chemicals,Distributor,2025-09-07,payment delay,new owner to verify,unknown
+PIDWL00031,PIDOUT001011,Prime Chandra Tyres,ASM,2025-12-06,orders down,credit call done,low
+PIDWL00032,PIDOUT005872,Lucky Kavya Paints,Zonal office,2026-01-13,closed counter,new owner to verify,unknown
+PIDWL00033,PIDOUT006857,Sree Bala Mart,Credit,2025-07-29,closed counter,waiting for payment,high
+PIDWL00034,PIDOUT008555,City Senthil Stores,ASM,2025-07-29,scheme claim pending,credit call done,medium
+PIDWL00035,PIDDLR000277,Balaji Irfan Distributors,Credit,25/08/2025,orders down,new owner to verify,unknown
+PIDWL00036,PIDOUT006502,City Priya Fertilisers,ASM,2025-11-01,service complaint,scheme support requested,high
+PIDWL00037,PIDDLR000567,Sree Venkatesh Traders,Zonal office,2025-10-20,payment delay,lost to competitor,low
+PIDWL00038,PIDOUT004274,Metro Naveen Agencies,RSM,2026-03-27,competitor offer,field visit planned,unknown
+PIDWL00039,PIDOUT008064,Shree Arun Sales,Zonal office,2026-02-12,service complaint,waiting for payment,medium
+PIDWL00040,PIDOUT004540,Modern Arun Paints,RSM,23/12/2025,orders down,credit call done,unknown
+PIDWL00041,PIDOUT005315,MODERN VENKATESH ASSOCIATES,Zonal office,2025-12-08,owner dispute,waiting for payment,low
+PIDWL00042,PIDOUT007718,Royal Anand Hardware,ASM,2026-01-19,closed counter,waiting for payment,medium
+PIDWL00043,PIDOUT007951,UNITED KAVYA MART,Distributor,2025-12-17,orders down,credit call done,unknown
+PIDWL00044,PIDOUT001145,Sree Chandra Associates,Service,05/01/2026,scheme claim pending,field visit planned,unknown
+PIDWL00045,PIDOUT001410,Vijaya Farida Tyres Main,ASM,2025-11-21,orders down,credit call done,low
+PIDWL00046,PIDOUT000196,Metro Manoj Chemicals,RSM,2026-03-14,seasonal crop miss,lost to competitor,unknown
+PIDWL00047,PIDOUT000309,Murugan Karthik Hardware,ASM,2025-12-30,orders down,lost to competitor,medium
+PIDWL00048,PIDOUT006874,Mahalakshmi Rafiq Stores,Zonal office,2025-12-15,competitor offer,waiting for payment,high
+PIDWL00049,PIDOUT004077,Vijaya Karthik Hardware,Distributor,2025-06-09,payment delay,new owner to verify,low
+PIDWL00050,PIDDLR000069,Sree Geetha Distributors,Zonal office,2025-06-10,service complaint,waiting for payment,unknown
+PIDWL00051,PIDOUT000770,Star Bala Fertilisers & Co,Distributor,2025-12-22,scheme claim pending,scheme support requested,medium
+PIDWL00052,PIDDLR000355,Balaji Chandra Distributors,Zonal office,2025-07-19,payment delay,scheme support requested,high
+PIDWL00053,PIDOUT002521,Star Jagan Distributors,Zonal office,2025-09-26,owner dispute,lost to competitor,unknown
+PIDWL00054,PIDOUT000043,Modern Irfan Services,Service,11-Jul-25,seasonal crop miss,field visit planned,high
+PIDWL00055,PIDOUT006688,National Ganesh Enterprises,RSM,2025-10-22,seasonal crop miss,new owner to verify,unknown
+PIDWL00056,PIDDLR000530,Royal Revathi Distributors,Credit,2026-03-30,closed counter,waiting for payment,unknown
+PIDWL00057,PIDOUT004773,Mahalakshmi Revathi Hardware,Distributor,2025-11-05,seasonal crop miss,field visit planned,low
+PIDWL00058,PIDOUT000137,Murugan Rafiq Chemicals,ASM,2025-10-03,closed counter,credit call done,low
+PIDWL00059,PIDOUT005057,Metro Sanjay Hardware,Zonal office,2026-02-27,scheme claim pending,new owner to verify,low
+PIDWL00060,PIDOUT004627,City Arun Agro,RSM,2025-09-12,competitor offer,credit call done,unknown
+PIDWL00061,PIDOUT004009,Vijaya Manoj Fertilisers,Zonal office,20/01/2026,orders down,new owner to verify,low
+PIDWL00062,PIDOUT000850,New Arun Sales,Zonal office,2025-12-24,payment delay,lost to competitor,unknown
+PIDWL00063,PIDOUT007082,Metro Farida Associates,Service,13/01/2026,seasonal crop miss,field visit planned,high
+PIDWL00064,PIDOUT008745,Murugan Meena Chemicals,Zonal office,2026-03-26,closed counter,credit call done,unknown
+PIDWL00065,PIDOUT008672,Mahalakshmi Deepak Agro,Zonal office,2025-12-28,service complaint,new owner to verify,low
+PIDWL00066,PIDOUT000340,LUCKY BALA HARDWARE,Zonal office,2026-01-07,competitor offer,field visit planned,high
+PIDWL00067,PIDDLR000741,United Ganesh Distributors,RSM,06/17/2025,closed counter,credit call done,low
+PIDWL00068,PIDOUT007642,SRI GANESH HARDWARE,Zonal office,2025-12-06,payment delay,lost to competitor,medium
+PIDWL00069,PIDOUT002903,Metro Geetha Hardware,ASM,2026-01-17,closed counter,credit call done,low
+PIDWL00070,PIDOUT000547,Kaveri Yusuf Hardware Ltd,Distributor,2026-01-26,seasonal crop miss,waiting for payment,medium
+PIDWL00071,PIDOUT007856,Prime Rafiq Hardware,Credit,03/19/2026,seasonal crop miss,new owner to verify,high
+PIDWL00072,PIDDLR000875,Star Bala Agro,Zonal office,22-Aug-25,closed counter,credit call done,medium
+PIDWL00073,PIDOUT007614,Modern Bala Hardware,Credit,11/28/2025,payment delay,credit call done,low
+PIDWL00074,PIDOUT002878,Sri Anand Services,Credit,2025-08-19,scheme claim pending,scheme support requested,medium
+PIDWL00075,PIDOUT000534,BALAJI KARTHIK CORPORATION,Credit,17/01/2026,payment delay,field visit planned,unknown
+PIDWL00076,PIDOUT001177,City Jagan Hardware,Zonal office,31/03/2026,competitor offer,credit call done,unknown
+PIDWL00077,PIDDLR000285,Mahalakshmi Sanjay Services,Service,2025-11-24,service complaint,lost to competitor,low
+PIDWL00078,PIDDLR000346,Sri Irfan Chemicals,RSM,2026-01-13,service complaint,new owner to verify,low
+PIDWL00079,PIDOUT008558,Balaji Bala Stores,RSM,2025-07-13,seasonal crop miss,lost to competitor,medium
+PIDWL00080,PIDOUT003076,National Senthil Hardware,Service,31-Aug-25,seasonal crop miss,credit call done,high
+PIDWL00081,PIDOUT004784,Murugan Chandra Hardware,Zonal office,10/01/2025,closed counter,credit call done,low
+PIDWL00082,PIDOUT003477,Mahalakshmi Yusuf Services Ltd,Credit,09/12/2025,competitor offer,credit call done,unknown
+PIDWL00083,PIDOUT006482,New Suresh Corporation,Credit,2025-07-25,competitor offer,waiting for payment,high
+PIDWL00084,PIDOUT008664,METRO ARUN AGRO,Distributor,01/07/2025,scheme claim pending,waiting for payment,medium
+PIDWL00085,PIDOUT004925,NEW NAVEEN HARDWARE,Distributor,2026-03-16,payment delay,field visit planned,medium
+PIDWL00086,PIDOUT007238,United Deepak Hardware,Zonal office,14-Dec-25,owner dispute,credit call done,high
+PIDWL00087,PIDDLR000863,Prime Deepak Agencies,Service,2025-12-01,orders down,scheme support requested,low
+PIDWL00088,PIDOUT007470,City Geetha Hardware,ASM,2025-09-02,seasonal crop miss,waiting for payment,high
+PIDWL00089,PIDOUT006059,Ganesh Naveen Chemicals,RSM,2026-02-27,closed counter,waiting for payment,unknown
+PIDWL00090,PIDOUT003226,Sree Irfan Paints,Zonal office,2026-03-18,competitor offer,new owner to verify,unknown
+PIDWL00091,PIDOUT004769,New Sowmya Hardware,ASM,02/01/2026,closed counter,lost to competitor,medium
+PIDWL00092,PIDOUT005310,CITY BALA CORPORATION,Zonal office,2025-07-10,orders down,credit call done,medium
+PIDWL00093,PIDDLR000300,Star Geetha Distributors,ASM,25/11/2025,scheme claim pending,waiting for payment,unknown
+PIDWL00094,PIDOUT006253,Mahalakshmi Prakash Sales,ASM,2025-09-10,payment delay,credit call done,high
+PIDWL00095,PIDOUT007383,Sri Kavya Agencies,Zonal office,2026-01-18,service complaint,credit call done,medium
+PIDWL00096,PIDOUT003054,New Rafiq Fertilisers,ASM,2026-03-18,payment delay,new owner to verify,high
+PIDWL00097,PIDOUT000185,City Anand Hardware,ASM,2025-06-29,competitor offer,scheme support requested,unknown
+PIDWL00098,PIDOUT000320,Vijaya Suresh Stores,RSM,2025-12-29,scheme claim pending,field visit planned,medium
+PIDWL00099,PIDOUT002953,United Prakash Hardware,Service,2025-08-26,scheme claim pending,waiting for payment,low
+PIDWL00100,PIDOUT000554,Metro Naveen Paints,Credit,2026-02-12,orders down,credit call done,medium
+PIDWL00101,PIDOUT003922,City Manoj Paints,RSM,2026-01-22,payment delay,lost to competitor,high
+PIDWL00102,PIDOUT005201,Vijaya Jagan Agro,Distributor,09-Mar-26,competitor offer,new owner to verify,medium
+PIDWL00103,PIDOUT004703,Kaveri Lakshmi Hardware,Credit,2025-10-27,owner dispute,field visit planned,unknown
+PIDWL00104,PIDOUT002958,Lucky Lakshmi Depot,Credit,2025-12-12,closed counter,lost to competitor,unknown
+PIDWL00105,PIDOUT007210,Royal Priya Hardware,Credit,2026-01-15,competitor offer,credit call done,medium
+PIDWL00106,PIDOUT006171,NEW PRIYA HARDWARE,ASM,2025-07-07,payment delay,field visit planned,low
+PIDWL00107,PIDOUT002007,New Prakash Stores,Distributor,2026-02-08,orders down,lost to competitor,unknown
+PIDWL00108,PIDOUT002715,Vijaya Anand Fertilisers,Distributor,2025-12-29,payment delay,scheme support requested,unknown
+PIDWL00109,PIDOUT008679,Murugan Prakash Services,Zonal office,2025-09-16,seasonal crop miss,waiting for payment,high
+PIDWL00110,PIDOUT004710,Kaveri Chandra Associates,ASM,2025-12-19,closed counter,field visit planned,unknown
+PIDWL00111,PIDOUT005272,New Prakash Hardware,RSM,2025-10-30,scheme claim pending,scheme support requested,medium
+PIDWL00112,PIDOUT003430,Star Hari Tyres,Credit,2025-12-05,orders down,new owner to verify,low
+PIDWL00113,PIDOUT004210,Murugan Revathi Hardware,Service,2025-06-10,payment delay,lost to competitor,high
+PIDWL00114,PIDOUT003631,Mahalakshmi Ganesh Mart,ASM,2025-10-26,owner dispute,waiting for payment,unknown
+PIDWL00115,PIDOUT000178,Lucky Suresh Hardware,ASM,03/08/2026,payment delay,lost to competitor,low
+PIDWL00116,PIDOUT003583,United Suresh Sales,Credit,2025-10-22,service complaint,waiting for payment,low
+PIDWL00117,PIDOUT006445,Prime Lakshmi Hardware,ASM,2025-10-18,seasonal crop miss,credit call done,medium
+PIDWL00118,PIDOUT007113,Kaveri Rafiq Corporation,RSM,2025-09-08,scheme claim pending,scheme support requested,medium
+PIDWL00119,PIDOUT002077,Mahalakshmi Naveen Stores,RSM,2026-03-15,competitor offer,lost to competitor,low
+PIDWL00120,PIDDLR000016,Royal Yusuf Agro,Service,2026-03-17,orders down,lost to competitor,unknown
+PIDWL00121,PIDOUT000094,Sri Senthil Paints Ltd,Service,2025-11-16,competitor offer,new owner to verify,unknown
+PIDWL00122,PIDOUT006185,National Arun Mart,Credit,2025-11-14,closed counter,lost to competitor,high
+PIDWL00123,PIDOUT002212,New Prakash Hardware,RSM,2026-03-07,closed counter,lost to competitor,high
+PIDWL00124,PIDOUT002672,LUCKY IRFAN AGRO,RSM,2025-12-14,competitor offer,scheme support requested,medium
+PIDWL00125,PIDOUT008149,Shree Karthik Agencies,Credit,2025-10-03,owner dispute,waiting for payment,low
+PIDWL00126,PIDDLR000691,Star Farida Enterprises,Distributor,2025-11-10,owner dispute,waiting for payment,unknown
+PIDWL00127,PIDOUT007110,Murugan Suresh Hardware,Service,30/01/2026,service complaint,field visit planned,medium
+PIDWL00128,PIDOUT000933,United Lokesh Distributors,Service,2025-11-08,owner dispute,credit call done,unknown
+PIDWL00129,PIDDLR000156,National Deepak Services,Zonal office,2026-01-27,orders down,lost to competitor,high
+PIDWL00130,PIDOUT003382,New Yusuf Hardware & Co,Service,2026-02-17,orders down,scheme support requested,unknown
+PIDWL00131,PIDOUT007513,Sree Senthil Mart,Credit,2025-07-15,competitor offer,scheme support requested,high
+PIDWL00132,PIDOUT001184,ROYAL FARIDA FERTILISERS,Zonal office,2025-09-26,seasonal crop miss,waiting for payment,high
+PIDWL00133,PIDOUT000211,Kaveri Priya Agencies Pvt,Distributor,2025-12-02,scheme claim pending,field visit planned,high
+PIDWL00134,PIDOUT006638,Lucky Rafiq Traders,ASM,2026-02-27,orders down,lost to competitor,high
+PIDWL00135,PIDOUT000031,Modern Sowmya Hardware,Service,2025-06-26,closed counter,new owner to verify,low
+PIDWL00136,PIDOUT004897,Prime Karthik Fertilisers,Zonal office,2025-10-05,closed counter,waiting for payment,high
+PIDWL00137,PIDOUT008252,Lucky Prakash Mart,Service,2025-10-14,scheme claim pending,credit call done,unknown
+PIDWL00138,PIDOUT007784,Mahalakshmi Kavya Hardware,Zonal office,2025-09-19,payment delay,waiting for payment,unknown
+PIDWL00139,PIDOUT006492,National Naveen Agro,Service,08/20/2025,payment delay,lost to competitor,unknown
+PIDWL00140,PIDOUT008399,National Venkatesh Tyres,Credit,2025-09-30,service complaint,field visit planned,high
+PIDWL00141,PIDOUT007344,Kaveri Bala Enterprises,ASM,2026-01-01,seasonal crop miss,new owner to verify,unknown
+PIDWL00142,PIDOUT000746,City Priya Hardware,Service,2025-11-08,service complaint,lost to competitor,low
+PIDWL00143,PIDOUT006254,Metro Sanjay Distributors,Distributor,30-Dec-25,competitor offer,waiting for payment,high
+PIDWL00144,PIDOUT003972,Balaji Bala Mart,RSM,08/28/2025,service complaint,credit call done,medium
+PIDWL00145,PIDOUT003100,City Lokesh Hardware,RSM,2025-07-16,competitor offer,lost to competitor,low
+PIDWL00146,PIDOUT008779,Shree Hari Fertilisers,Distributor,15/07/2025,payment delay,scheme support requested,medium
+PIDWL00147,PIDOUT006315,Prime Revathi Hardware,Service,2026-02-28,service complaint,lost to competitor,high
+PIDWL00148,PIDOUT002407,Modern Lokesh Sales,ASM,2025-08-23,service complaint,waiting for payment,low
+PIDWL00149,PIDOUT008886,United Anand Hardware,RSM,16/09/2025,seasonal crop miss,credit call done,unknown
+PIDWL00150,PIDDLR000633,Vijaya Priya Agencies,RSM,2025-09-08,competitor offer,new owner to verify,low
+PIDWL00151,PIDOUT006807,Ganesh Deepak Hardware,Distributor,2025-12-13,competitor offer,scheme support requested,unknown
+PIDWL00152,PIDOUT007240,National Lokesh Hardware,Credit,2026-02-24,competitor offer,field visit planned,medium
+PIDWL00153,PIDOUT004851,Kaveri Farida Hardware,Credit,2025-09-16,orders down,credit call done,high
+PIDWL00154,PIDOUT000360,Sri Revathi Hardware,Zonal office,2026-02-17,owner dispute,field visit planned,unknown
+PIDWL00155,PIDOUT002366,Ganesh Prakash Hardware,ASM,2025-07-19,service complaint,waiting for payment,high
+PIDWL00156,PIDOUT001415,Balaji Yusuf Hardware,RSM,2025-12-14,service complaint,waiting for payment,unknown
+PIDWL00157,PIDOUT004118,Balaji Venkatesh Paints,RSM,2026-02-03,closed counter,waiting for payment,unknown
+PIDWL00158,PIDOUT005699,Balaji Priya Fertilisers,Distributor,07/18/2025,service complaint,waiting for payment,medium
+PIDWL00159,PIDOUT001818,Prime Hari Hardware,Distributor,2025-10-03,service complaint,scheme support requested,high
+PIDWL00160,PIDOUT008343,Royal Deepak Hardware,Credit,2025-11-11,service complaint,lost to competitor,medium
+PIDWL00161,PIDOUT003238,Metro Venkatesh Stores,Distributor,2026-03-13,owner dispute,lost to competitor,medium
+PIDWL00162,PIDOUT002605,United Priya Hardware,Zonal office,25-Jul-25,service complaint,lost to competitor,high
+PIDWL00163,PIDOUT000027,Lucky Lakshmi Hardware,Service,2026-01-05,seasonal crop miss,waiting for payment,high
+PIDWL00164,PIDDLR000858,City Sanjay Distributors,Credit,2025-12-27,scheme claim pending,new owner to verify,low
+PIDWL00165,PIDOUT001651,City Venkatesh Hardware,Zonal office,2026-01-20,scheme claim pending,lost to competitor,unknown
+PIDWL00166,PIDOUT007773,Metro Rafiq Corporation,Service,2025-10-22,payment delay,waiting for payment,unknown
+PIDWL00167,PIDOUT005786,Sri Arun Agro,RSM,2025-10-29,owner dispute,waiting for payment,medium
+PIDWL00168,PIDOUT000002,Shri Anand Hardware,ASM,2026-02-05,service complaint,new owner to verify,unknown
+PIDWL00169,PIDOUT007162,United Irfan Associates,Credit,2026-01-30,scheme claim pending,field visit planned,high
+PIDWL00170,PIDDLR000414,ROYAL DEEPAK DISTRIBUTORS,Credit,2026-02-15,service complaint,scheme support requested,high
+PIDWL00171,PIDOUT004953,United Manoj Hardware,Service,2025-07-11,seasonal crop miss,new owner to verify,low
+PIDWL00172,PIDOUT006942,City Naveen Hardware,Distributor,2025-09-15,orders down,lost to competitor,unknown
+PIDWL00173,PIDDLR000857,Star Chandra Chemicals,Credit,2025-11-24,service complaint,field visit planned,high
+PIDWL00174,PIDOUT007025,Kaveri Irfan Agro,Service,06/12/2025,owner dispute,lost to competitor,high
+PIDWL00175,PIDOUT001887,City Farida Fertilisers,Zonal office,2026-03-17,owner dispute,field visit planned,unknown
+PIDWL00176,PIDOUT005644,Mahalakshmi Irfan Agro,Distributor,2025-07-14,competitor offer,lost to competitor,low
+PIDWL00177,PIDOUT007917,Mahalakshmi Venkatesh Stores,Service,2025-10-26,closed counter,lost to competitor,low
+PIDWL00178,PIDOUT007146,Shree Karthik Traders,Service,2025-08-16,competitor offer,field visit planned,low
+PIDWL00179,PIDOUT002738,Kaveri Arun Stores,Distributor,2025-12-23,owner dispute,lost to competitor,high
+PIDWL00180,PIDOUT003061,National Rafiq Tyres,Credit,2026-02-18,competitor offer,lost to competitor,medium
+PIDWL00181,PIDDLR000599,Shree Naveen Enterprises,Distributor,2025-11-22,competitor offer,scheme support requested,unknown
+PIDWL00182,PIDDLR000621,Sree Karthik Paints,ASM,2026-02-18,closed counter,credit call done,high
+PIDWL00183,PIDDLR000334,National Ganesh Traders,RSM,2026-02-27,owner dispute,lost to competitor,medium
+PIDWL00184,PIDOUT001335,New Bala Paints,ASM,2025-11-02,owner dispute,lost to competitor,high
+PIDWL00185,PIDOUT004037,SREE MEENA HARDWARE,Service,12/08/2025,service complaint,lost to competitor,high
+PIDWL00186,PIDOUT005971,Mahalakshmi Sowmya Hardware,ASM,2026-01-08,orders down,scheme support requested,unknown
+PIDWL00187,PIDOUT008713,Modern Geetha Hardware,Zonal office,17/02/2026,seasonal crop miss,waiting for payment,medium
+PIDWL00188,PIDOUT001997,Ganesh Deepak Corporation,ASM,2025-07-04,closed counter,credit call done,high
+PIDWL00189,PIDOUT003008,PRIME KARTHIK SALES,Distributor,2025-10-11,seasonal crop miss,scheme support requested,low
+PIDWL00190,PIDDLR000177,Metro Manoj Traders,Credit,04/07/2025,seasonal crop miss,lost to competitor,high
+PIDWL00191,PIDOUT000725,Star Ganesh Hardware,Credit,12/22/2025,competitor offer,scheme support requested,unknown
+PIDWL00192,PIDOUT002980,Balaji Venkatesh Fertilisers,Distributor,2026-02-08,closed counter,lost to competitor,low
+PIDWL00193,PIDOUT006556,PRIME LAKSHMI TRADERS,RSM,2025-11-20,seasonal crop miss,field visit planned,high
+PIDWL00194,PIDOUT004599,National Ganesh Hardware,Service,11/07/2025,service complaint,waiting for payment,unknown
+PIDWL00195,PIDOUT003946,Prime Ganesh Hardware,ASM,2025-08-20,closed counter,field visit planned,medium
+PIDWL00196,PIDOUT006804,Balaji Suresh Hardware,RSM,2025-10-31,owner dispute,field visit planned,low
+PIDWL00197,PIDOUT008509,Balaji Hari Hardware,Distributor,2026-01-07,closed counter,new owner to verify,unknown
+PIDWL00198,PIDOUT002011,MODERN PRIYA PAINTS,Zonal office,2026-01-08,owner dispute,credit call done,high
+PIDWL00199,PIDOUT006094,KAVERI IRFAN DEPOT,Distributor,10/02/2025,owner dispute,scheme support requested,unknown
+PIDWL00200,PIDOUT007101,Lucky Arun Corporation,Zonal office,08/07/2025,service complaint,waiting for payment,high
+PIDWL00201,PIDOUT003968,NEW LAKSHMI HARDWARE,Zonal office,26/06/2025,service complaint,lost to competitor,high
+PIDWL00202,PIDOUT005003,VIJAYA MANOJ TYRES,ASM,2026-03-05,orders down,credit call done,low
+PIDWL00203,PIDOUT006799,City Bala Agro,Distributor,2025-06-12,payment delay,waiting for payment,high
+PIDWL00204,PIDOUT006805,Royal Ganesh Corporation,Service,2025-06-06,closed counter,field visit planned,low
+PIDWL00205,PIDOUT005397,New Yusuf Hardware,Credit,2026-01-18,service complaint,waiting for payment,medium
+PIDWL00206,PIDOUT001093,Shree Anand Hardware,RSM,2025-11-13,orders down,lost to competitor,high
+PIDWL00207,PIDDLR000654,City Meena Fertilisers,Zonal office,2025-06-08,payment delay,field visit planned,high
+PIDWL00208,PIDOUT003237,Vijaya Manoj Associates,Zonal office,2026-03-26,closed counter,new owner to verify,unknown
+PIDWL00209,PIDOUT007174,United Venkatesh Hardware,Service,2026-03-10,owner dispute,credit call done,high
+PIDWL00210,PIDOUT000153,City Jagan Corporation,RSM,2025-07-04,seasonal crop miss,new owner to verify,low
+PIDWL00211,PIDOUT000061,Balaji Kavya Hardware,RSM,2026-01-21,seasonal crop miss,lost to competitor,high
+PIDWL00212,PIDOUT004344,Balaji Suresh Agencies,ASM,2025-12-31,scheme claim pending,new owner to verify,unknown
+PIDWL00213,PIDOUT007633,Metro Priya Hardware,Distributor,2026-01-07,closed counter,new owner to verify,low
+PIDWL00214,PIDOUT000918,Ganesh Revathi Corporation,Service,2025-06-04,payment delay,new owner to verify,low
+PIDWL00215,PIDOUT001923,Lucky Venkatesh Services,RSM,2026-01-03,payment delay,scheme support requested,low
+PIDWL00216,PIDOUT002072,Murugan Jagan Hardware,ASM,2025-11-07,competitor offer,new owner to verify,low
+PIDWL00217,PIDOUT005036,Balaji Priya Hardware,Zonal office,2025-07-13,orders down,credit call done,high
+PIDWL00218,PIDOUT005675,Modern Lakshmi Paints,Credit,2025-08-02,closed counter,new owner to verify,medium
+PIDWL00219,PIDOUT004292,Balaji Senthil Hardware,Zonal office,2025-09-23,closed counter,credit call done,high
+PIDWL00220,PIDOUT002546,STAR PRAKASH STORES,Distributor,2025-07-06,scheme claim pending,credit call done,high
+PIDWL00221,PIDOUT005211,City Kavya Stores,Credit,2025-10-17,scheme claim pending,lost to competitor,unknown
+PIDWL00222,PIDDLR000083,National Senthil Services,ASM,2025-09-21,scheme claim pending,new owner to verify,medium
+PIDWL00223,PIDOUT008504,KAVERI BALA SALES,RSM,18/10/2025,service complaint,field visit planned,low
+PIDWL00224,PIDOUT000685,Shree Farida Paints,Service,2025-06-26,seasonal crop miss,scheme support requested,high
+PIDWL00225,PIDOUT007460,Metro Lakshmi Hardware,Credit,23/06/2025,payment delay,scheme support requested,low
+PIDWL00226,PIDOUT006420,Lucky Naveen Traders,Credit,15/11/2025,competitor offer,field visit planned,high
+PIDWL00227,PIDOUT007180,Mahalakshmi Bala Hardware,RSM,10/26/2025,competitor offer,credit call done,unknown
+PIDWL00228,PIDDLR000238,Mahalakshmi Rafiq Distributors,Zonal office,2025-06-05,service complaint,waiting for payment,low
+PIDWL00229,PIDOUT006122,Sri Sowmya Traders,Service,2025-11-15,orders down,new owner to verify,medium
+PIDWL00230,PIDOUT000991,Sree Priya Stores,Service,2025-12-30,service complaint,credit call done,unknown
+PIDWL00231,PIDOUT004433,Shree Suresh Sales,Zonal office,2025-07-11,owner dispute,lost to competitor,low
+PIDWL00232,PIDOUT007386,Royal Farida Paints,Distributor,2025-09-26,payment delay,field visit planned,medium
+PIDWL00233,PIDOUT005941,Lucky Sanjay Hardware,RSM,2026-01-05,closed counter,scheme support requested,unknown
+PIDWL00234,PIDOUT007966,Modern Yusuf Hardware,Distributor,19/07/2025,orders down,lost to competitor,medium
+PIDWL00235,PIDOUT002540,Vijaya Hari Sales,RSM,2025-07-30,competitor offer,scheme support requested,medium
+PIDWL00236,PIDOUT005947,United Meena Services,Credit,03-Jun-25,seasonal crop miss,new owner to verify,high
+PIDWL00237,PIDOUT008373,Vijaya Deepak Hardware,ASM,2025-06-21,owner dispute,credit call done,medium
+PIDWL00238,PIDOUT005874,City Arun Sales,Credit,2026-02-05,seasonal crop miss,lost to competitor,high
+PIDWL00239,PIDOUT000285,STAR MANOJ HARDWARE,Service,2026-03-03,scheme claim pending,lost to competitor,medium
+PIDWL00240,PIDOUT003072,City Irfan Hardware,Zonal office,2025-08-04,scheme claim pending,credit call done,low
+PIDWL00241,PIDOUT000986,Ganesh Jagan Chemicals,Distributor,25/03/2026,closed counter,credit call done,high
+PIDWL00242,PIDOUT006672,Balaji Venkatesh Distributors Ltd,Credit,2025-11-06,payment delay,scheme support requested,medium
+PIDWL00243,PIDOUT003823,Metro Arun Depot,Credit,2025-12-11,service complaint,waiting for payment,medium
+PIDWL00244,PIDOUT003401,PRIME LAKSHMI HARDWARE,RSM,2025-12-19,service complaint,new owner to verify,high
+PIDWL00245,PIDOUT004079,Murugan Suresh Hardware,Service,29/08/2025,payment delay,waiting for payment,medium
+PIDWL00246,PIDDLR000284,Prime Chandra Enterprises,ASM,2025-09-18,orders down,new owner to verify,high
+PIDWL00247,PIDOUT007437,Ganesh Jagan Services,Service,2025-08-27,competitor offer,scheme support requested,high
+PIDWL00248,PIDDLR000125,United Jagan Distributors,Service,2025-08-20,seasonal crop miss,credit call done,high
+PIDWL00249,PIDOUT005783,Ganesh Anand Hardware,Credit,2025-10-04,payment delay,scheme support requested,medium
+PIDWL00250,PIDOUT002307,Murugan Rafiq Distributors,Zonal office,2025-10-27,scheme claim pending,credit call done,medium
+PIDWL00251,PIDOUT002442,Royal Geetha Depot,Zonal office,2025-10-29,service complaint,lost to competitor,high
+PIDWL00252,PIDOUT001006,City Anand Distributors,ASM,23/10/2025,payment delay,new owner to verify,unknown
+PIDWL00253,PIDOUT005755,Balaji Revathi Stores,Credit,2026-02-16,owner dispute,new owner to verify,low
+PIDWL00254,PIDOUT008865,Metro Lakshmi Fertilisers,Distributor,2025-08-25,service complaint,waiting for payment,high
+PIDWL00255,PIDOUT006077,United Sowmya Hardware,ASM,2025-11-18,owner dispute,scheme support requested,low
+PIDWL00256,PIDOUT005228,Sri Venkatesh Corporation,RSM,11/02/2025,closed counter,field visit planned,high
+PIDWL00257,PIDOUT008251,Sri Farida Services,Zonal office,08/14/2025,competitor offer,lost to competitor,medium
+PIDWL00258,PIDOUT002136,SRI Lokesh Enterprises,Zonal office,2025-06-22,payment delay,field visit planned,medium
+PIDWL00259,PIDDLR000620,Prime Irfan Distributors,Service,2025-06-11,seasonal crop miss,waiting for payment,high
+PIDWL00260,PIDOUT003059,Murugan Sanjay Sales,Credit,2025-12-02,owner dispute,credit call done,unknown
+PIDWL00261,PIDDLR000650,New Manoj Distributors,Service,09/11/2025,service complaint,field visit planned,high
+PIDWL00262,PIDOUT002693,Royal Farida Distributors,ASM,2025-07-31,scheme claim pending,new owner to verify,medium
+PIDWL00263,PIDOUT000977,Star Geetha Hardware,Service,2025-08-06,competitor offer,lost to competitor,low
+PIDWL00264,PIDOUT008955,Royal Sowmya Tyres,Service,2025-10-11,closed counter,field visit planned,unknown
+PIDWL00265,PIDOUT006643,PRIME FARIDA HARDWARE,Service,2026-02-19,closed counter,scheme support requested,medium
+PIDWL00266,PIDOUT001437,Prime Jagan Hardware,Credit,11/09/2025,owner dispute,scheme support requested,medium
+PIDWL00267,PIDOUT005169,Mahalakshmi Hari Associates,Zonal office,2025-10-21,orders down,waiting for payment,unknown
+PIDWL00268,PIDOUT008720,Sri Yusuf Mart,Distributor,2026-03-29,service complaint,credit call done,unknown
+PIDWL00269,PIDOUT008212,Star Revathi Enterprises,ASM,2025-07-07,owner dispute,field visit planned,medium
+PIDWL00270,PIDOUT006088,Prime Ganesh Hardware,Zonal office,27-Nov-25,seasonal crop miss,lost to competitor,low
+PIDWL00271,PIDOUT000073,Kaveri Geetha Hardware & Co,Zonal office,2025-11-04,orders down,field visit planned,unknown
+PIDWL00272,PIDOUT008630,Sri Irfan Hardware,Service,2026-03-25,competitor offer,waiting for payment,low
+PIDWL00273,PIDOUT006882,Lucky Karthik Agro,Zonal office,08/22/2025,payment delay,credit call done,unknown
+PIDWL00274,PIDOUT007896,New Kavya Associates,Distributor,24-Mar-26,seasonal crop miss,scheme support requested,medium
+PIDWL00275,PIDOUT008381,Vijaya Farida Hardware,Credit,2026-03-23,competitor offer,scheme support requested,medium
+PIDWL00276,PIDOUT005512,New Chandra Hardware,Distributor,2025-11-16,owner dispute,scheme support requested,low
+PIDWL00277,PIDOUT005491,Murugan Arun Depot,RSM,23-Mar-26,closed counter,lost to competitor,high
+PIDWL00278,PIDOUT003506,Star Ganesh Hardware,Credit,2025-06-27,orders down,new owner to verify,medium
+PIDWL00279,PIDOUT007960,Sri Lokesh Corporation,Distributor,25/09/2025,seasonal crop miss,lost to competitor,high
+PIDWL00280,PIDOUT004764,New Sowmya Services,Zonal office,11/01/2026,service complaint,new owner to verify,high
+PIDWL00281,PIDOUT005989,Murugan Farida Stores,Service,2025-08-18,owner dispute,new owner to verify,unknown
+PIDWL00282,PIDDLR000483,New Chandra Fertilisers,Credit,2025-12-29,service complaint,field visit planned,low
+PIDWL00283,PIDOUT006394,Prime Senthil Hardware,RSM,2026-03-23,service complaint,field visit planned,high
+PIDWL00284,PIDDLR000394,Sri Senthil Chemicals & Co,Distributor,03/04/2026,payment delay,new owner to verify,high
+PIDWL00285,PIDOUT007304,Sri Geetha Hardware,Distributor,2026-03-22,service complaint,new owner to verify,medium
+PIDWL00286,PIDOUT007368,Sree Jagan Depot,Service,2026-01-18,closed counter,credit call done,medium
+PIDWL00287,PIDOUT002382,New Irfan Stores Ltd,Zonal office,2025-10-12,orders down,scheme support requested,low
+PIDWL00288,PIDOUT002280,City Hari Mart,Distributor,12/07/2025,seasonal crop miss,scheme support requested,low
+PIDWL00289,PIDOUT001957,SRI PRIYA HARDWARE,RSM,2026-02-27,seasonal crop miss,scheme support requested,unknown
+PIDWL00290,PIDOUT008232,City Ganesh Distributors,ASM,23/10/2025,scheme claim pending,field visit planned,medium
+PIDWL00291,PIDOUT007306,Sri Yusuf Enterprises,Zonal office,01/19/2026,service complaint,waiting for payment,unknown
+PIDWL00292,PIDOUT004908,SRI Irfan Hardware,Zonal office,2025-08-12,orders down,scheme support requested,low
+PIDWL00293,PIDOUT003813,Shree Venkatesh Mart,RSM,2025-09-29,orders down,scheme support requested,medium
+PIDWL00294,PIDOUT008334,Ganesh Irfan Hardware,Credit,2026-01-13,competitor offer,waiting for payment,unknown
+PIDWL00295,PIDDLR000759,Metro Arun Fertilisers Pvt,Service,2025-06-05,scheme claim pending,credit call done,low
+PIDWL00296,PIDOUT004121,Lucky Hari Hardware,ASM,2025-06-22,owner dispute,credit call done,high
+PIDWL00297,PIDOUT001203,National Jagan Tyres,Credit,2025-08-01,competitor offer,field visit planned,high
+PIDWL00298,PIDOUT004281,Murugan Sowmya Agencies,ASM,2025-12-03,scheme claim pending,scheme support requested,low
+PIDWL00299,PIDOUT005527,Mahalakshmi Lakshmi Hardware,Distributor,2025-11-05,closed counter,new owner to verify,low
+PIDWL00300,PIDDLR000866,Star Rafiq Distributors,Credit,12-Jun-25,scheme claim pending,new owner to verify,high
+PIDWL00301,PIDOUT004938,Ganesh Meena Chemicals,Distributor,2025-09-02,competitor offer,waiting for payment,unknown
+PIDWL00302,PIDDLR000909,Murugan Naveen Corporation,Service,2025-10-06,payment delay,waiting for payment,unknown
+PIDWL00303,PIDDLR000731,Star Karthik Distributors,Zonal office,09/07/2025,scheme claim pending,scheme support requested,high
+PIDWL00304,PIDOUT004359,Prime Kavya Hardware,RSM,2025-10-10,competitor offer,scheme support requested,medium
+PIDWL00305,PIDDLR000382,Ganesh Suresh Hardware,ASM,2025-06-24,scheme claim pending,credit call done,unknown
+PIDWL00306,PIDOUT000907,Mahalakshmi Hari Hardware,Distributor,01/07/2026,orders down,lost to competitor,high
+PIDWL00307,PIDOUT001401,NEW IRFAN HARDWARE,Credit,2025-07-22,payment delay,scheme support requested,low
+PIDWL00308,PIDOUT006456,Prime Hari Hardware,RSM,28/07/2025,owner dispute,credit call done,high
+PIDWL00309,PIDOUT002874,Lucky Naveen Hardware,RSM,13-Feb-26,payment delay,lost to competitor,medium
+PIDWL00310,PIDOUT001834,Murugan Meena Paints & Co,Credit,2025-10-09,competitor offer,lost to competitor,low
+PIDWL00311,PIDOUT002824,Modern Chandra Depot,Credit,2025-10-04,orders down,lost to competitor,unknown
+PIDWL00312,PIDOUT007002,Murugan Deepak Agro,ASM,25/01/2026,closed counter,waiting for payment,high
+PIDWL00313,PIDOUT001267,Prime Senthil Hardware,ASM,2026-03-17,owner dispute,waiting for payment,medium
+PIDWL00314,PIDOUT008057,New Prakash Stores,RSM,2025-12-03,seasonal crop miss,waiting for payment,unknown
+PIDWL00315,PIDDLR000319,BALAJI RAFIQ DISTRIBUTORS,Zonal office,27-Nov-25,service complaint,scheme support requested,low
+PIDWL00316,PIDOUT005737,Shree Sowmya Hardware,Zonal office,2025-06-06,payment delay,new owner to verify,unknown
+PIDWL00317,PIDOUT002492,Mahalakshmi Naveen Mart,Service,2025-12-29,competitor offer,field visit planned,unknown
+PIDWL00318,PIDOUT005223,STAR LOKESH HARDWARE,Credit,2025-09-16,closed counter,lost to competitor,medium
+PIDWL00319,PIDOUT003638,Sree Hari Agro,RSM,2026-01-03,competitor offer,lost to competitor,medium
+PIDWL00320,PIDOUT003763,Modern Yusuf Chemicals,Distributor,2025-09-21,scheme claim pending,lost to competitor,medium
+PIDWL00321,PIDOUT000181,Royal Suresh Depot,Distributor,02/12/2025,orders down,scheme support requested,medium
+PIDWL00322,PIDDLR000916,National Yusuf Traders,Zonal office,2025-08-02,closed counter,new owner to verify,medium
+PIDWL00323,PIDOUT005383,United Geetha Hardware,ASM,2025-07-18,orders down,new owner to verify,medium
+PIDWL00324,PIDOUT006987,Mahalakshmi Naveen Associates,Zonal office,2025-07-10,competitor offer,waiting for payment,low
+PIDWL00325,PIDOUT002999,Royal Venkatesh Hardware,RSM,2026-03-27,payment delay,waiting for payment,low
+PIDWL00326,PIDOUT008275,Prime Prakash Associates,Credit,2026-02-25,payment delay,lost to competitor,medium
+PIDWL00327,PIDOUT008099,Royal Farida Sales,RSM,2026-02-17,service complaint,new owner to verify,medium
+PIDWL00328,PIDOUT004541,United Sowmya Hardware,RSM,01/09/2026,closed counter,credit call done,unknown
+PIDWL00329,PIDOUT003224,City Meena Agro,Zonal office,2025-12-02,scheme claim pending,field visit planned,unknown
+PIDWL00330,PIDOUT006025,Lucky Farida Hardware,Zonal office,2025-08-12,orders down,waiting for payment,high
+PIDWL00331,PIDOUT005870,Prime Sanjay Hardware,Distributor,2025-10-08,closed counter,scheme support requested,high
+PIDWL00332,PIDOUT002577,National Karthik Hardware,Credit,2025-08-07,service complaint,waiting for payment,low
+PIDWL00333,PIDOUT000703,Shree Bala Hardware,Credit,2026-01-07,payment delay,waiting for payment,low
+PIDWL00334,PIDOUT002264,Kaveri Revathi Hardware,ASM,08-Jun-25,scheme claim pending,credit call done,medium
+PIDWL00335,PIDOUT001385,Star Sanjay Services,Zonal office,2025-08-20,seasonal crop miss,scheme support requested,low
+PIDWL00336,PIDOUT001928,Balaji Hari Stores,Credit,13/11/2025,orders down,new owner to verify,unknown
+PIDWL00337,PIDOUT006407,Prime Farida Sales,ASM,2025-07-23,orders down,waiting for payment,low
+PIDWL00338,PIDOUT008831,Shree Prakash Hardware,ASM,2025-07-21,competitor offer,field visit planned,low
+PIDWL00339,PIDOUT004098,Metro Lokesh Tyres,RSM,25-Feb-26,competitor offer,scheme support requested,medium
+PIDWL00340,PIDOUT004628,Prime Arun Hardware,ASM,2026-01-27,payment delay,credit call done,low
+PIDWL00341,PIDOUT003534,Prime Senthil Corporation,Distributor,2026-03-04,competitor offer,new owner to verify,unknown
+PIDWL00342,PIDOUT004749,Vijaya Bala Hardware,Credit,2026-02-23,scheme claim pending,credit call done,unknown
+PIDWL00343,PIDOUT008768,CITY GEETHA CHEMICALS,Distributor,2025-08-23,closed counter,new owner to verify,unknown
+PIDWL00344,PIDOUT003916,Murugan Irfan Sales,Service,2025-11-08,payment delay,credit call done,unknown
+PIDWL00345,PIDDLR000780,Modern Arun Services,Distributor,08-Dec-25,orders down,field visit planned,low
+PIDWL00346,PIDOUT003970,Metro Revathi Associates,Credit,2025-06-17,seasonal crop miss,new owner to verify,unknown
+PIDWL00347,PIDOUT005250,City Naveen Stores,RSM,2025-10-20,competitor offer,scheme support requested,medium
+PIDWL00348,PIDOUT001653,Vijaya Revathi Fertilisers,Distributor,11/09/2025,closed counter,waiting for payment,unknown
+PIDWL00349,PIDOUT001951,Prime Priya Hardware,RSM,2026-02-19,scheme claim pending,field visit planned,low
+PIDWL00350,PIDOUT005921,Star Anand Fertilisers,Zonal office,12-Feb-26,scheme claim pending,waiting for payment,unknown
+PIDWL00351,PIDOUT003199,Sri Geetha Hardware,Distributor,2025-11-05,owner dispute,credit call done,medium
+PIDWL00352,PIDOUT008384,United Lokesh Chemicals & Co,RSM,2026-01-28,competitor offer,lost to competitor,unknown
+PIDWL00353,PIDDLR000477,Shri Kavya Paints,RSM,2026-02-16,orders down,new owner to verify,medium
+PIDWL00354,PIDOUT000145,City Prakash Stores,Zonal office,27-Aug-25,seasonal crop miss,lost to competitor,medium
+PIDWL00355,PIDDLR000605,Balaji Anand Sales,Credit,2025-07-18,closed counter,waiting for payment,unknown
+PIDWL00356,PIDOUT006415,Kaveri Irfan Mart,ASM,2025-11-20,closed counter,scheme support requested,unknown
+PIDWL00357,PIDOUT001010,Modern Anand Traders,Credit,2025-11-29,closed counter,new owner to verify,medium
+PIDWL00358,PIDOUT008901,ROYAL MANOJ HARDWARE,Credit,2026-03-22,orders down,waiting for payment,low
+PIDWL00359,PIDOUT008902,Modern Lakshmi Tyres,ASM,2026-03-30,payment delay,lost to competitor,low
+PIDWL00360,PIDDLR000143,Shree Sanjay Fertilisers Ltd,ASM,10-Jan-26,owner dispute,scheme support requested,low
+PIDWL00361,PIDOUT005494,National Hari Hardware,ASM,2026-02-26,seasonal crop miss,lost to competitor,low
+PIDWL00362,PIDOUT000403,Shree Irfan Hardware,ASM,2025-11-01,service complaint,field visit planned,low
+PIDWL00363,PIDOUT006545,Lucky Anand Chemicals,ASM,2025-12-11,seasonal crop miss,new owner to verify,medium
+PIDWL00364,PIDOUT002654,New Farida Stores,Zonal office,2025-06-10,closed counter,scheme support requested,low
+PIDWL00365,PIDOUT002967,Mahalakshmi Sowmya Corporation,Service,2025-07-16,service complaint,field visit planned,high
+PIDWL00366,PIDOUT006371,National Manoj Hardware,Credit,2026-03-25,seasonal crop miss,waiting for payment,medium
+PIDWL00367,PIDOUT004594,STAR SOWMYA HARDWARE,Distributor,2025-07-29,orders down,lost to competitor,unknown
+PIDWL00368,PIDOUT000617,Modern Ganesh Hardware,ASM,2025-11-21,payment delay,credit call done,medium
+PIDWL00369,PIDOUT007546,KAVERI REVATHI DISTRIBUTORS,Distributor,12/18/2025,scheme claim pending,new owner to verify,unknown
+PIDWL00370,PIDOUT001515,Modern Meena Corporation,Service,2025-12-02,service complaint,waiting for payment,medium
+PIDWL00371,PIDOUT002877,STAR PRAKASH ENTERPRISES,Credit,2025-10-24,competitor offer,waiting for payment,unknown
+PIDWL00372,PIDOUT001820,Lucky Priya Traders,RSM,2025-06-19,scheme claim pending,new owner to verify,medium
+PIDWL00373,PIDOUT004750,Vijaya Hari Depot,RSM,2026-01-05,seasonal crop miss,lost to competitor,unknown
+PIDWL00374,PIDOUT004086,Royal Deepak Hardware,Service,01/07/2025,closed counter,lost to competitor,low
+PIDWL00375,PIDOUT002326,Vijaya Hari Hardware,Credit,26-Oct-25,payment delay,waiting for payment,medium
+PIDWL00376,PIDOUT002520,City Manoj Sales,Zonal office,2025-09-02,scheme claim pending,credit call done,low
+PIDWL00377,PIDOUT006197,Star Ganesh Hardware & Co,Credit,21/09/2025,seasonal crop miss,lost to competitor,unknown
+PIDWL00378,PIDOUT006442,Vijaya Meena Hardware,Zonal office,2025-08-25,competitor offer,new owner to verify,low
+PIDWL00379,PIDOUT000657,New Karthik Hardware,Service,2025-11-24,payment delay,waiting for payment,low
+PIDWL00380,PIDDLR000220,Mahalakshmi Sanjay Distributors,Zonal office,23/11/2025,owner dispute,waiting for payment,low
+PIDWL00381,PIDOUT004391,Sri Meena Hardware,ASM,10/02/2025,scheme claim pending,new owner to verify,low
+PIDWL00382,PIDOUT008120,Murugan Ganesh Depot,Service,2026-03-29,scheme claim pending,waiting for payment,low
+PIDWL00383,PIDOUT003171,Star Anand Hardware,RSM,02/25/2026,closed counter,scheme support requested,medium
+PIDWL00384,PIDOUT003493,Prime Suresh Hardware,Zonal office,2026-02-16,competitor offer,new owner to verify,low
+PIDWL00385,PIDOUT001784,Shree Deepak Paints,Zonal office,2025-09-28,payment delay,waiting for payment,high
+PIDWL00386,PIDOUT000525,Sree Venkatesh Chemicals,Distributor,2025-08-17,competitor offer,new owner to verify,unknown
+PIDWL00387,PIDDLR000938,Royal Prakash Distributors,Service,2025-08-25,owner dispute,field visit planned,low
+PIDWL00388,PIDOUT000773,National Sanjay Corporation,Credit,07/21/2025,service complaint,waiting for payment,high
+PIDWL00389,PIDOUT000565,Sri Jagan Enterprises,ASM,2025-07-07,seasonal crop miss,scheme support requested,unknown
+PIDWL00390,PIDOUT000417,Kaveri Geetha Agencies,RSM,2025-12-07,closed counter,lost to competitor,low
+PIDWL00391,PIDDLR000766,Ganesh Senthil Mart,Credit,10/01/2025,seasonal crop miss,lost to competitor,low
+PIDWL00392,PIDOUT003569,United Hari Enterprises,Zonal office,07/11/2025,service complaint,field visit planned,medium
+PIDWL00393,PIDOUT001255,Sree Chandra Stores,Distributor,01/23/2026,scheme claim pending,credit call done,medium
+PIDWL00394,PIDOUT007818,Balaji Karthik Agencies,ASM,2025-12-30,orders down,credit call done,unknown
+PIDWL00395,PIDOUT007473,Balaji Ganesh Paints Ltd,Service,2025-07-08,payment delay,new owner to verify,medium
+PIDWL00396,PIDOUT003877,STAR NAVEEN CORPORATION,Service,2026-03-04,payment delay,waiting for payment,medium
+PIDWL00397,PIDOUT008076,Prime Ganesh Depot,Credit,2025-12-05,orders down,scheme support requested,low
+PIDWL00398,PIDOUT002360,Ganesh Anand Distributors,ASM,2026-02-12,seasonal crop miss,new owner to verify,medium
+PIDWL00399,PIDOUT001568,Ganesh Lokesh Corporation,Zonal office,2025-11-21,payment delay,field visit planned,unknown
+PIDWL00400,PIDOUT002323,Sri Priya Hardware,RSM,2025-08-05,owner dispute,credit call done,unknown
+PIDWL00401,PIDOUT005424,Prime Sanjay Hardware,Service,2025-12-25,service complaint,credit call done,medium
+PIDWL00402,PIDOUT000626,Lucky Revathi Distributors,Service,2025-06-19,service complaint,new owner to verify,high
+PIDWL00403,PIDOUT005035,Vijaya Yusuf Agencies,Credit,2025-06-11,scheme claim pending,lost to competitor,high
+PIDWL00404,PIDOUT002732,Prime Geetha Sales,Zonal office,2025-09-06,service complaint,scheme support requested,medium
+PIDWL00405,PIDOUT006143,Prime Deepak Hardware,Distributor,09/11/2025,closed counter,scheme support requested,low
+PIDWL00406,PIDDLR000927,BALAJI NAVEEN MART,ASM,2026-01-03,seasonal crop miss,field visit planned,medium
+PIDWL00407,PIDDLR000096,Sri Naveen Distributors,Zonal office,2026-03-19,scheme claim pending,scheme support requested,medium
+PIDWL00408,PIDOUT005997,Lucky Ganesh Depot,RSM,2026-01-12,closed counter,new owner to verify,unknown
+PIDWL00409,PIDOUT008023,Sri Deepak Agencies,Service,2025-10-15,orders down,field visit planned,medium
+PIDWL00410,PIDOUT008638,Star Anand Agro,RSM,2025-07-01,service complaint,scheme support requested,high
+PIDWL00411,PIDOUT006277,Prime Jagan Hardware,Service,20/09/2025,orders down,credit call done,low
+PIDWL00412,PIDOUT006347,New Venkatesh Traders,RSM,2025-12-30,seasonal crop miss,lost to competitor,medium
+PIDWL00413,PIDOUT007279,Ganesh Farida Hardware,ASM,2025-10-01,competitor offer,waiting for payment,low
+PIDWL00414,PIDOUT003899,Balaji Prakash Tyres,ASM,2025-11-18,payment delay,credit call done,low
+PIDWL00415,PIDOUT004209,Kaveri Irfan Paints,Credit,2026-01-09,owner dispute,waiting for payment,medium
+PIDWL00416,PIDOUT008585,Vijaya Arun Hardware,Service,2026-03-06,seasonal crop miss,field visit planned,unknown
+PIDWL00417,PIDOUT004482,New Venkatesh Stores,ASM,2025-06-20,service complaint,credit call done,medium
+PIDWL00418,PIDDLR000685,Balaji Jagan Associates,RSM,2025-10-25,closed counter,new owner to verify,medium
+PIDWL00419,PIDOUT001193,METRO PRAKASH SALES,Zonal office,2025-09-23,competitor offer,waiting for payment,unknown
+PIDWL00420,PIDOUT003259,Modern Yusuf Stores,Zonal office,2025-11-20,scheme claim pending,scheme support requested,medium
+PIDWL00421,PIDOUT007673,Metro Suresh Agencies,RSM,2025-07-06,owner dispute,lost to competitor,low
+PIDWL00422,PIDOUT005654,New Bala Stores,Distributor,2025-07-30,scheme claim pending,field visit planned,unknown
+PIDWL00423,PIDOUT000694,Vijaya Manoj Agencies,Zonal office,2025-10-25,seasonal crop miss,credit call done,unknown
+PIDWL00424,PIDOUT001678,Lucky Hari Fertilisers,Distributor,2025-08-02,service complaint,waiting for payment,unknown
+PIDWL00425,PIDOUT003316,Shree Arun Distributors,Credit,2025-07-06,orders down,scheme support requested,high
+PIDWL00426,PIDOUT001750,Prime Revathi Hardware,RSM,13/07/2025,owner dispute,lost to competitor,medium
+PIDWL00427,PIDDLR000953,Royal Farida Depot,Distributor,2025-08-23,scheme claim pending,lost to competitor,medium
+PIDWL00428,PIDOUT004843,Sri Manoj Hardware,Credit,2025-10-17,seasonal crop miss,new owner to verify,medium
+PIDWL00429,PIDOUT001892,Ganesh Sanjay Fertilisers Pvt,Distributor,2025-09-25,scheme claim pending,waiting for payment,high
+PIDWL00430,PIDOUT001837,Sree Senthil Agencies,RSM,2025-11-21,closed counter,waiting for payment,medium
+PIDWL00431,PIDOUT002043,Metro Kavya Hardware,Credit,2025-08-09,closed counter,scheme support requested,unknown
+PIDWL00432,PIDOUT003416,Kaveri Bala Stores,RSM,2025-12-12,closed counter,new owner to verify,low
+PIDWL00433,PIDOUT004771,Kaveri Deepak Stores,Service,2025-09-18,owner dispute,waiting for payment,high
+PIDWL00434,PIDOUT001290,Vijaya Bala Traders,ASM,2025-08-04,closed counter,scheme support requested,unknown
+PIDWL00435,PIDOUT003677,United Bala Hardware,Zonal office,10/01/2026,seasonal crop miss,lost to competitor,high
+PIDWL00436,PIDOUT007561,New Suresh Distributors,Credit,2025-08-31,competitor offer,new owner to verify,medium
+PIDWL00437,PIDOUT005472,Star Meena Enterprises,ASM,2025-07-12,orders down,waiting for payment,medium
+PIDWL00438,PIDOUT007095,Star Irfan Corporation,Credit,2026-02-25,payment delay,lost to competitor,high
+PIDWL00439,PIDOUT006135,Kaveri Yusuf Hardware,RSM,18/06/2025,seasonal crop miss,lost to competitor,low
+PIDWL00440,PIDDLR000643,Mahalakshmi Hari Stores Ltd,Credit,2025-07-24,payment delay,field visit planned,medium
+PIDWL00441,PIDOUT007179,National Arun Agencies,Credit,2026-01-01,orders down,lost to competitor,high
+PIDWL00442,PIDOUT003363,Prime Naveen Agro,Zonal office,2025-07-05,seasonal crop miss,lost to competitor,medium
+PIDWL00443,PIDOUT000644,Star Meena Stores,ASM,2026-02-05,scheme claim pending,waiting for payment,medium
+PIDWL00444,PIDOUT003741,New Suresh Associates,Service,2025-11-08,closed counter,field visit planned,medium
+PIDWL00445,PIDDLR000358,Kaveri Rafiq Distributors,ASM,2025-10-25,scheme claim pending,lost to competitor,unknown
+PIDWL00446,PIDOUT001913,Star Lokesh Hardware,RSM,2026-03-28,service complaint,field visit planned,medium
+PIDWL00447,PIDOUT005109,Prime Senthil Stores,Credit,15/07/2025,service complaint,lost to competitor,medium
+PIDWL00448,PIDOUT008414,Vijaya Rafiq Hardware,ASM,2026-03-30,closed counter,waiting for payment,high
+PIDWL00449,PIDOUT007375,City Lakshmi Hardware,Zonal office,2025-08-03,seasonal crop miss,credit call done,low
+PIDWL00450,PIDOUT007723,PRIME VENKATESH HARDWARE,Service,2025-07-12,closed counter,lost to competitor,high
+PIDWL00451,PIDOUT005370,Royal Lakshmi Hardware,ASM,2025-12-22,scheme claim pending,new owner to verify,high
+PIDWL00452,PIDOUT007669,Mahalakshmi Anand Hardware,RSM,2026-01-19,competitor offer,lost to competitor,low
+PIDWL00453,PIDOUT005167,Murugan Farida Agro,ASM,2025-11-24,orders down,scheme support requested,unknown
+PIDWL00454,PIDOUT005821,Sri Karthik Enterprises,Zonal office,2025-07-21,service complaint,new owner to verify,high
+PIDWL00455,PIDOUT007636,Shree Kavya Distributors,Zonal office,2026-03-06,owner dispute,field visit planned,unknown
+PIDWL00456,PIDOUT008572,Balaji Naveen Sales,Distributor,2025-08-26,competitor offer,new owner to verify,unknown
+PIDWL00457,PIDOUT000652,Star Deepak Hardware,Credit,2026-01-04,competitor offer,new owner to verify,low
+PIDWL00458,PIDOUT006673,Kaveri Manoj Hardware,Service,2025-09-20,payment delay,scheme support requested,medium
+PIDWL00459,PIDOUT008216,Modern Prakash Depot,RSM,30-Dec-25,payment delay,scheme support requested,high
+PIDWL00460,PIDOUT006488,Ganesh Chandra Hardware,ASM,2025-07-18,orders down,scheme support requested,unknown
+PIDWL00461,PIDOUT001819,Sri Priya Hardware,ASM,2025-11-10,payment delay,lost to competitor,unknown
+PIDWL00462,PIDOUT001023,Sri Prakash Services,Service,2025-08-31,owner dispute,credit call done,unknown
+PIDWL00463,PIDOUT008258,Shree Irfan Hardware,Distributor,2025-11-13,seasonal crop miss,lost to competitor,low
+PIDWL00464,PIDOUT003770,ROYAL YUSUF HARDWARE,Distributor,2025-10-15,scheme claim pending,new owner to verify,high
+PIDWL00465,PIDOUT006787,City Rafiq Hardware,Credit,2025-12-22,closed counter,field visit planned,high
+PIDWL00466,PIDOUT003905,Lucky Revathi Corporation,Credit,07-Sep-25,seasonal crop miss,waiting for payment,medium
+PIDWL00467,PIDOUT004708,Prime Karthik Associates,ASM,2025-11-03,scheme claim pending,credit call done,unknown
+PIDWL00468,PIDOUT005819,City Bala Services,ASM,2025-11-27,scheme claim pending,scheme support requested,high
+PIDWL00469,PIDOUT001489,Vijaya Rafiq Depot Ltd,Credit,08/30/2025,competitor offer,waiting for payment,unknown
+PIDWL00470,PIDOUT007767,Prime Suresh Distributors,Credit,2026-03-29,competitor offer,waiting for payment,low
+PIDWL00471,PIDOUT005474,MODERN HARI PAINTS,ASM,2025-12-04,service complaint,field visit planned,low
+PIDWL00472,PIDOUT002806,Sree Lakshmi Hardware Ltd,ASM,2025-12-01,orders down,waiting for payment,high
+PIDWL00473,PIDOUT007323,CITY SURESH AGRO,ASM,2025-12-12,owner dispute,waiting for payment,high
+PIDWL00474,PIDOUT008067,Ganesh Anand Hardware,Distributor,2025-06-21,competitor offer,scheme support requested,medium
+PIDWL00475,PIDOUT006676,Shree Arun Agencies,Distributor,2025-09-18,orders down,lost to competitor,medium
+PIDWL00476,PIDOUT002892,Kaveri Irfan Hardware,Zonal office,2025-11-01,owner dispute,scheme support requested,unknown
+PIDWL00477,PIDOUT004984,Modern Meena Tyres,ASM,2025-06-25,payment delay,lost to competitor,low
+PIDWL00478,PIDOUT008459,Sri Suresh Corporation,Service,12/11/2025,owner dispute,lost to competitor,low
+PIDWL00479,PIDOUT005570,Murugan Sowmya Hardware,Distributor,24-Oct-25,service complaint,credit call done,low
+PIDWL00480,PIDOUT006393,United Jagan Associates,ASM,2025-06-03,service complaint,field visit planned,unknown
+PIDWL00481,PIDOUT003844,Balaji Bala Hardware,Distributor,2026-03-07,owner dispute,field visit planned,low
+PIDWL00482,PIDOUT003148,Murugan Suresh Paints,Service,11/13/2025,scheme claim pending,field visit planned,high
+PIDWL00483,PIDOUT008587,Modern Kavya Agencies,Zonal office,01/31/2026,scheme claim pending,field visit planned,high
+PIDWL00484,PIDOUT003518,Sree Sanjay Hardware,Credit,2026-01-24,payment delay,credit call done,low
+PIDWL00485,PIDOUT008658,New Rafiq Mart,Zonal office,2026-02-26,owner dispute,lost to competitor,medium
+PIDWL00486,PIDOUT000599,Vijaya Kavya Hardware,ASM,25/06/2025,closed counter,scheme support requested,unknown
+PIDWL00487,PIDOUT007990,National Kavya Hardware,RSM,2026-02-14,seasonal crop miss,credit call done,high
+PIDWL00488,PIDDLR000462,Modern Revathi Chemicals Pvt,RSM,2025-09-25,scheme claim pending,scheme support requested,high
+PIDWL00489,PIDOUT004903,NEW KAVYA CORPORATION,Credit,2025-11-22,competitor offer,field visit planned,unknown
+PIDWL00490,PIDOUT002203,City Suresh Hardware,Zonal office,2025-09-28,competitor offer,credit call done,medium
+PIDWL00491,PIDDLR000368,Sree Deepak Hardware,RSM,07-Dec-25,competitor offer,field visit planned,low
+PIDWL00492,PIDDLR000171,Prime Suresh Distributors,Credit,2025-06-12,scheme claim pending,credit call done,medium
+PIDWL00493,PIDOUT004731,CITY GEETHA STORES,Service,2026-02-20,owner dispute,waiting for payment,high
+PIDWL00494,PIDDLR000001,Metro Irfan Distributors & Co,Service,2025-09-20,owner dispute,scheme support requested,high
+PIDWL00495,PIDOUT000721,Murugan Jagan Distributors,RSM,2025-12-06,service complaint,new owner to verify,high
+PIDWL00496,PIDOUT007670,Ganesh Chandra Hardware,ASM,2025-07-25,service complaint,waiting for payment,unknown
+PIDWL00497,PIDOUT004571,Modern Priya Tyres,Distributor,12/08/2025,scheme claim pending,scheme support requested,low
+PIDWL00498,PIDOUT005774,VIJAYA NAVEEN DEPOT,Credit,2025-11-21,payment delay,waiting for payment,unknown
+PIDWL00499,PIDOUT004124,Balaji Priya Depot,Service,2025-10-27,seasonal crop miss,lost to competitor,medium
+PIDWL00500,PIDOUT007845,Lucky Geetha Hardware,ASM,12/04/2025,owner dispute,lost to competitor,low
+PIDWL00501,PIDDLR001085,Ganesh Manoj Distributors,Service,08-Mar-26,service complaint,lost to competitor,medium
+PIDWL00502,PIDOUT003264,Lucky Naveen Paints,ASM,2025-10-31,closed counter,scheme support requested,high
+PIDWL00503,PIDOUT008395,Murugan Priya Hardware,ASM,2025-07-23,service complaint,new owner to verify,low
+PIDWL00504,PIDOUT001722,Kaveri Karthik Hardware,RSM,2025-11-28,orders down,waiting for payment,low
+PIDWL00505,PIDDLR001023,Murugan Lokesh Associates,Zonal office,2025-07-16,seasonal crop miss,waiting for payment,unknown
+PIDWL00506,PIDOUT005388,Mahalakshmi Hari Hardware,ASM,2025-12-06,scheme claim pending,new owner to verify,unknown
+PIDWL00507,PIDDLR000864,Star Priya Agencies,Distributor,2025-10-15,owner dispute,lost to competitor,low
+PIDWL00508,PIDDLR000221,Prime Karthik Distributors,Distributor,12-Jan-26,seasonal crop miss,waiting for payment,low
+PIDWL00509,PIDOUT005295,United Ganesh Enterprises,Distributor,2026-01-17,orders down,new owner to verify,medium
+PIDWL00510,PIDOUT006570,Balaji Lokesh Services,ASM,06/07/2025,competitor offer,credit call done,low
+PIDWL00511,PIDOUT000704,Murugan Bala Hardware Ltd,Zonal office,2025-10-30,closed counter,credit call done,high
+PIDWL00512,PIDOUT007121,New Prakash Hardware,ASM,28/01/2026,competitor offer,new owner to verify,unknown
+PIDWL00513,PIDOUT007139,Shree Rafiq Corporation,Distributor,12/26/2025,scheme claim pending,scheme support requested,unknown
+PIDWL00514,PIDOUT003421,New Farida Hardware,Service,2026-03-26,owner dispute,credit call done,low
+PIDWL00515,PIDOUT004675,Royal Rafiq Services,ASM,2026-02-18,closed counter,new owner to verify,high
+PIDWL00516,PIDOUT003478,Balaji Kavya Tyres,ASM,2025-11-12,scheme claim pending,new owner to verify,high
+PIDWL00517,PIDOUT006098,Kaveri Manoj Depot,ASM,2025-10-10,closed counter,credit call done,high
+PIDWL00518,PIDOUT008661,Murugan Manoj Traders,Distributor,2025-06-16,seasonal crop miss,field visit planned,low
+PIDWL00519,PIDDLR000029,National Senthil Tyres,Credit,19-Dec-25,owner dispute,waiting for payment,high
+PIDWL00520,PIDOUT000711,Modern Hari Distributors,Service,02/10/2026,payment delay,waiting for payment,unknown
+PIDWL00521,PIDOUT000636,Royal Kavya Associates,Credit,2025-08-29,payment delay,field visit planned,unknown
+PIDWL00522,PIDOUT005571,Sree Hari Hardware,Zonal office,29/07/2025,scheme claim pending,waiting for payment,low
+PIDWL00523,PIDOUT002829,City Lokesh Hardware,Distributor,2025-10-16,closed counter,scheme support requested,unknown
+PIDWL00524,PIDOUT006424,Ganesh Sanjay Hardware,Service,2025-06-01,service complaint,waiting for payment,low
+PIDWL00525,PIDOUT005920,Ganesh Farida Sales,Distributor,13-Jun-25,orders down,field visit planned,low
+PIDWL00526,PIDOUT006856,National Suresh Fertilisers,ASM,31-Jan-26,service complaint,new owner to verify,medium
+PIDWL00527,PIDOUT001720,Prime Ganesh Hardware,Zonal office,16-Nov-25,owner dispute,field visit planned,high
+PIDWL00528,PIDOUT001173,National Senthil Hardware,Service,2026-03-12,competitor offer,field visit planned,low
+PIDWL00529,PIDOUT002415,City Suresh Hardware Ltd,Service,2025-08-11,service complaint,credit call done,medium
+PIDWL00530,PIDOUT008315,Balaji Prakash Traders,RSM,2026-01-17,seasonal crop miss,credit call done,high
+PIDWL00531,PIDOUT004033,Royal Yusuf Hardware,Zonal office,2025-11-06,service complaint,waiting for payment,high
+PIDWL00532,PIDOUT003613,Sree Sanjay Chemicals,Zonal office,18-Aug-25,payment delay,waiting for payment,low
+PIDWL00533,PIDOUT001906,Prime Lokesh Enterprises,Distributor,2026-03-06,owner dispute,field visit planned,medium
+PIDWL00534,PIDOUT003385,Mahalakshmi Prakash Traders,Service,2026-03-26,closed counter,waiting for payment,unknown
+PIDWL00535,PIDOUT003830,Prime Prakash Services,Service,2025-08-08,service complaint,credit call done,unknown
+PIDWL00536,PIDOUT006468,Lucky Priya Hardware,Credit,2025-12-07,owner dispute,scheme support requested,unknown
+PIDWL00537,PIDOUT005807,Balaji Ganesh Depot,Zonal office,2026-02-06,payment delay,new owner to verify,high
+PIDWL00538,PIDOUT003013,United Lakshmi Associates,Distributor,2026-02-14,competitor offer,scheme support requested,medium
+PIDWL00539,PIDOUT008689,GANESH GEETHA TYRES,ASM,04/01/2026,service complaint,new owner to verify,unknown
+PIDWL00540,PIDOUT001049,Mahalakshmi Arun Stores,Service,21-Mar-26,scheme claim pending,new owner to verify,low
+PIDWL00541,PIDOUT008701,Shree Farida Stores,Zonal office,2025-11-18,orders down,lost to competitor,low
+PIDWL00542,PIDDLR000553,Ganesh Deepak Enterprises,Credit,2026-02-28,competitor offer,lost to competitor,low
+PIDWL00543,PIDOUT002542,Ganesh Senthil Tyres,ASM,11/18/2025,competitor offer,new owner to verify,unknown
+PIDWL00544,PIDOUT001155,Sri Senthil Hardware,ASM,2025-07-10,service complaint,waiting for payment,high
+PIDWL00545,PIDOUT002112,Metro Prakash Depot,ASM,2026-01-09,orders down,lost to competitor,high
+PIDWL00546,PIDOUT000606,Metro Jagan Tyres,ASM,2025-08-10,service complaint,credit call done,low
+PIDWL00547,PIDOUT006553,Vijaya Naveen Hardware,ASM,2025-06-12,service complaint,credit call done,low
+PIDWL00548,PIDDLR000619,Prime Chandra Distributors,Distributor,2025-11-08,closed counter,field visit planned,medium
+PIDWL00549,PIDOUT003559,METRO DEEPAK HARDWARE,Credit,2025-12-31,orders down,credit call done,low
+PIDWL00550,PIDOUT001281,Prime Sowmya Mart,RSM,2026-02-28,orders down,new owner to verify,low
+PIDWL00551,PIDOUT000024,Royal Sanjay Services,Zonal office,2026-01-12,orders down,credit call done,medium
+PIDWL00552,PIDOUT004284,New Revathi Traders,Service,03/02/2026,payment delay,lost to competitor,unknown
+PIDWL00553,PIDOUT008771,Lucky Kavya Hardware,Credit,2025-11-09,seasonal crop miss,lost to competitor,medium
+PIDWL00554,PIDOUT001117,Sree Lokesh Hardware,RSM,2026-02-12,scheme claim pending,field visit planned,low
+PIDWL00555,PIDOUT001398,Murugan Jagan Corporation,Distributor,2025-08-09,payment delay,scheme support requested,low
+PIDWL00556,PIDOUT002979,Modern Meena Paints,Zonal office,2025-12-28,service complaint,lost to competitor,high
+PIDWL00557,PIDOUT002274,Royal Lokesh Paints Main,Distributor,2026-03-29,competitor offer,scheme support requested,high
+PIDWL00558,PIDOUT007205,Modern Geetha Hardware,Distributor,2026-01-26,competitor offer,new owner to verify,unknown
+PIDWL00559,PIDOUT000978,Star Bala Services,Distributor,2025-11-23,payment delay,waiting for payment,medium
+PIDWL00560,PIDOUT003166,New Naveen Hardware,Distributor,2025-06-09,payment delay,credit call done,high
+PIDWL00561,PIDDLR000481,Balaji Lokesh Distributors,Distributor,2025-06-22,competitor offer,scheme support requested,unknown
+PIDWL00562,PIDOUT008673,Sri Hari Services,Credit,2025-10-21,orders down,scheme support requested,unknown
+PIDWL00563,PIDDLR001057,Metro Sanjay Chemicals,ASM,06/23/2025,seasonal crop miss,new owner to verify,unknown
+PIDWL00564,PIDOUT006310,United Bala Hardware,Service,2025-11-26,owner dispute,new owner to verify,low
+PIDWL00565,PIDOUT008988,Star Rafiq Hardware,RSM,10/12/2025,competitor offer,field visit planned,low
+PIDWL00566,PIDDLR000552,Sree Hari Associates,ASM,2025-07-10,competitor offer,waiting for payment,high
+PIDWL00567,PIDOUT004891,Balaji Revathi Services,Service,2025-06-26,competitor offer,scheme support requested,high
+PIDWL00568,PIDOUT004409,Metro Revathi Hardware,Credit,2026-01-26,orders down,field visit planned,high
+PIDWL00569,PIDOUT002066,Royal Prakash Paints,Credit,2026-03-22,competitor offer,waiting for payment,low
+PIDWL00570,PIDOUT002052,Sree Hari Distributors,Distributor,2025-10-25,scheme claim pending,lost to competitor,unknown
+PIDWL00571,PIDOUT003037,Metro Bala Hardware,Zonal office,15-Jul-25,owner dispute,new owner to verify,low
+PIDWL00572,PIDOUT007211,Modern Prakash Hardware,RSM,2026-03-27,owner dispute,field visit planned,unknown
+PIDWL00573,PIDOUT000058,Vijaya Lokesh Hardware,Credit,2025-06-19,scheme claim pending,scheme support requested,medium
+PIDWL00574,PIDOUT007047,Shree Arun Services,Distributor,2026-03-19,owner dispute,waiting for payment,unknown
+PIDWL00575,PIDOUT002436,Modern Lakshmi Hardware,Service,2025-07-14,payment delay,waiting for payment,unknown
+PIDWL00576,PIDOUT001338,United Geetha Hardware,Service,2026-03-16,seasonal crop miss,lost to competitor,unknown
+PIDWL00577,PIDDLR000154,Modern Manoj Agro,Distributor,2025-06-06,seasonal crop miss,scheme support requested,unknown
+PIDWL00578,PIDOUT007980,National Jagan Hardware,Distributor,25-Sep-25,seasonal crop miss,field visit planned,unknown
+PIDWL00579,PIDOUT001744,New Karthik Hardware,ASM,10/02/2026,owner dispute,waiting for payment,low
+PIDWL00580,PIDOUT007662,Vijaya Priya Corporation,Distributor,2026-02-15,scheme claim pending,waiting for payment,medium
+PIDWL00581,PIDOUT003870,Sri Senthil Hardware,Distributor,2026-01-26,closed counter,field visit planned,unknown
+PIDWL00582,PIDOUT005415,City Sanjay Distributors & Co,Distributor,2025-07-06,scheme claim pending,credit call done,low
+PIDWL00583,PIDOUT003933,New Jagan Distributors,Zonal office,25/07/2025,scheme claim pending,credit call done,unknown
+PIDWL00584,PIDOUT005765,Metro Jagan Corporation,RSM,2025-06-14,owner dispute,waiting for payment,medium
+PIDWL00585,PIDDLR000180,Star Rafiq Agro,Distributor,2025-12-22,owner dispute,waiting for payment,medium
+PIDWL00586,PIDOUT004149,Modern Suresh Depot,Service,26/02/2026,owner dispute,new owner to verify,low
+PIDWL00587,PIDOUT000070,Ganesh Senthil Hardware,ASM,06-Oct-25,payment delay,field visit planned,unknown
+PIDWL00588,PIDOUT008897,Sree Revathi Associates,ASM,2026-01-19,owner dispute,lost to competitor,unknown
+PIDWL00589,PIDOUT003494,United Arun Paints,Zonal office,2025-06-12,service complaint,lost to competitor,high
+PIDWL00590,PIDDLR000077,Star Anand Distributors,Service,24/10/2025,closed counter,field visit planned,unknown
+PIDWL00591,PIDOUT003944,Royal Chandra Traders,Service,2025-10-01,seasonal crop miss,field visit planned,medium
+PIDWL00592,PIDOUT008968,MODERN NAVEEN TYRES,Credit,2025-12-24,payment delay,new owner to verify,unknown
+PIDWL00593,PIDOUT001298,Murugan Kavya Agencies,ASM,2025-12-20,payment delay,field visit planned,medium
+PIDWL00594,PIDOUT008575,Modern Kavya Hardware,Service,2025-11-29,orders down,field visit planned,low
+PIDWL00595,PIDOUT000111,City Naveen Traders,Credit,2025-08-23,orders down,lost to competitor,low
+PIDWL00596,PIDDLR000816,Metro Sowmya Distributors,Zonal office,2025-07-31,owner dispute,field visit planned,medium
+PIDWL00597,PIDDLR000738,Ganesh Jagan Agencies,RSM,2025-09-30,seasonal crop miss,new owner to verify,low
+PIDWL00598,PIDOUT002785,Balaji Deepak Hardware,Zonal office,2026-01-22,payment delay,field visit planned,medium
+PIDWL00599,PIDOUT005799,PRIME SURESH HARDWARE,Service,23/10/2025,owner dispute,lost to competitor,low
+PIDWL00600,PIDOUT005881,Metro Kavya Hardware,Credit,2025-07-08,orders down,lost to competitor,medium
+PIDWL00601,PIDOUT006374,New Suresh Hardware,Distributor,2025-08-31,owner dispute,field visit planned,medium
+PIDWL00602,PIDOUT002823,Vijaya Irfan Hardware,ASM,2025-08-09,payment delay,lost to competitor,medium
+PIDWL00603,PIDOUT001339,Kaveri Farida Enterprises,Distributor,21/07/2025,seasonal crop miss,waiting for payment,medium
+PIDWL00604,PIDOUT002016,Sri Ganesh Depot,ASM,11/18/2025,competitor offer,credit call done,unknown
+PIDWL00605,PIDOUT004298,Shree Venkatesh Depot,RSM,2025-07-12,seasonal crop miss,new owner to verify,high
+PIDWL00606,PIDOUT005166,Star Sanjay Sales,Credit,2025-12-30,seasonal crop miss,scheme support requested,unknown
+PIDWL00607,PIDOUT007013,Vijaya Kavya Hardware,Zonal office,09/11/2025,scheme claim pending,lost to competitor,medium
+PIDWL00608,PIDOUT004889,United Arun Associates,RSM,2025-11-27,payment delay,new owner to verify,medium
+PIDWL00609,PIDDLR000291,New Bala Distributors Pvt,Zonal office,2025-06-07,owner dispute,credit call done,low
+PIDWL00610,PIDOUT003505,Star Rafiq Chemicals,Service,06/10/2025,closed counter,scheme support requested,high
+PIDWL00611,PIDOUT000587,National Meena Corporation,RSM,2025-10-25,competitor offer,waiting for payment,high
+PIDWL00612,PIDOUT008180,Royal Meena Hardware,Zonal office,2025-07-18,owner dispute,field visit planned,low
+PIDWL00613,PIDOUT006358,Balaji Senthil Distributors,Distributor,2025-06-01,service complaint,new owner to verify,low
+PIDWL00614,PIDOUT004126,NEW BALA HARDWARE,Zonal office,15/03/2026,payment delay,waiting for payment,unknown
+PIDWL00615,PIDOUT002779,Royal Suresh Associates,Distributor,22/11/2025,competitor offer,field visit planned,unknown
+PIDWL00616,PIDOUT001001,National Prakash Hardware,Service,2025-06-14,scheme claim pending,scheme support requested,unknown
+PIDWL00617,PIDOUT001017,Mahalakshmi Meena Mart,Distributor,2025-11-07,competitor offer,field visit planned,medium
+PIDWL00618,PIDOUT002927,City Manoj Distributors,Service,2025-08-18,payment delay,field visit planned,low
+PIDWL00619,PIDOUT005205,New Sanjay Distributors,Zonal office,2025-07-06,closed counter,field visit planned,low
+PIDWL00620,PIDOUT008300,Kaveri Naveen Hardware,RSM,2025-11-09,closed counter,new owner to verify,unknown
+PIDWL00621,PIDOUT004895,Royal Lakshmi Hardware,Zonal office,2025-12-04,orders down,credit call done,high
+PIDWL00622,PIDOUT007137,Balaji Ganesh Fertilisers,ASM,2026-02-03,closed counter,credit call done,medium
+PIDWL00623,PIDOUT008642,Metro Farida Services,ASM,2025-06-21,scheme claim pending,waiting for payment,unknown
+PIDWL00624,PIDOUT007567,Modern Karthik Corporation,Distributor,15-Sep-25,seasonal crop miss,waiting for payment,medium
+PIDWL00625,PIDOUT006291,Murugan Irfan Hardware,ASM,07/24/2025,competitor offer,waiting for payment,medium
+PIDWL00626,PIDDLR000951,SRI Revathi Tyres,ASM,2025-09-21,scheme claim pending,lost to competitor,high
+PIDWL00627,PIDOUT007880,Modern Karthik Paints,Zonal office,2025-07-17,seasonal crop miss,credit call done,medium
+PIDWL00628,PIDOUT006278,City Karthik Services Main,Service,2025-08-19,owner dispute,lost to competitor,medium
+PIDWL00629,PIDOUT006771,Lucky Geetha Hardware,RSM,12-Nov-25,payment delay,lost to competitor,medium
+PIDWL00630,PIDOUT003318,PRIME GEETHA ENTERPRISES,Zonal office,2026-02-15,owner dispute,lost to competitor,unknown
+PIDWL00631,PIDOUT004225,Kaveri Deepak Traders,Service,2026-03-28,owner dispute,field visit planned,high
+PIDWL00632,PIDOUT005284,Royal Deepak Hardware,Credit,2025-12-22,scheme claim pending,waiting for payment,unknown
+PIDWL00633,PIDDLR000379,Vijaya Venkatesh Traders,Distributor,07/23/2025,orders down,new owner to verify,high
+PIDWL00634,PIDOUT003879,City Rafiq Mart,RSM,2025-09-14,orders down,waiting for payment,high
+PIDWL00635,PIDOUT004138,City Anand Hardware,ASM,2025-06-07,closed counter,credit call done,high
+PIDWL00636,PIDOUT008283,Royal Venkatesh Agro,RSM,2025-09-12,payment delay,new owner to verify,low
+PIDWL00637,PIDDLR000228,Sree Irfan Services,Distributor,2026-03-21,service complaint,credit call done,low
+PIDWL00638,PIDOUT003509,Mahalakshmi Sanjay Hardware,Distributor,2025-10-02,orders down,scheme support requested,low
+PIDWL00639,PIDOUT001486,Royal Revathi Hardware,Service,2025-09-27,competitor offer,new owner to verify,medium
+PIDWL00640,PIDOUT005336,National Suresh Hardware,Service,2025-11-22,seasonal crop miss,waiting for payment,low
+PIDWL00641,PIDOUT007263,Sree Sanjay Hardware,Credit,04/06/2025,seasonal crop miss,new owner to verify,low
+PIDWL00642,PIDOUT001160,Lucky Deepak Fertilisers,Distributor,2025-06-09,scheme claim pending,field visit planned,medium
+PIDWL00643,PIDOUT003107,City Chandra Sales,Credit,17/02/2026,payment delay,scheme support requested,high
+PIDWL00644,PIDDLR000270,New Bala Associates,Credit,2025-10-29,competitor offer,waiting for payment,medium
+PIDWL00645,PIDOUT004321,Lucky Kavya Hardware,RSM,05/07/2025,payment delay,credit call done,medium
+PIDWL00646,PIDOUT001832,Shree Hari Tyres,ASM,2026-01-30,competitor offer,field visit planned,low
+PIDWL00647,PIDOUT003308,Prime Manoj Hardware,Credit,2026-03-06,service complaint,scheme support requested,high
+PIDWL00648,PIDOUT002090,New Arun Hardware,ASM,2025-08-09,scheme claim pending,new owner to verify,medium
+PIDWL00649,PIDOUT000470,New Irfan Sales,RSM,2025-10-27,scheme claim pending,new owner to verify,unknown
+PIDWL00650,PIDOUT008508,Sri Bala Hardware,RSM,07/06/2025,orders down,field visit planned,medium
+PIDWL00651,PIDOUT000233,Shree Manoj Hardware Main,ASM,2026-03-22,orders down,new owner to verify,unknown
+PIDWL00652,PIDOUT004660,Sri Sowmya Depot,Distributor,09/08/2025,scheme claim pending,field visit planned,low
+PIDWL00653,PIDOUT007971,Sree Venkatesh Mart,RSM,2026-01-21,competitor offer,lost to competitor,high
+PIDWL00654,PIDOUT007627,Balaji Chandra Tyres,Distributor,2025-07-22,service complaint,waiting for payment,low
+PIDWL00655,PIDDLR000377,Balaji Farida Sales,RSM,2025-07-06,owner dispute,waiting for payment,medium
+PIDWL00656,PIDOUT007405,Murugan Deepak Stores,Zonal office,2025-10-06,orders down,lost to competitor,unknown
+PIDWL00657,PIDOUT002585,Modern Sowmya Associates,Service,18-Aug-25,payment delay,lost to competitor,high
+PIDWL00658,PIDOUT004159,VIJAYA REVATHI DISTRIBUTORS,Distributor,2025-09-07,scheme claim pending,scheme support requested,low
+PIDWL00659,PIDOUT008822,Mahalakshmi Bala Hardware,ASM,2025-06-09,scheme claim pending,scheme support requested,high
+PIDWL00660,PIDOUT000330,Ganesh Ganesh Services,RSM,07/24/2025,service complaint,scheme support requested,unknown
+PIDWL00661,PIDOUT007381,SHREE FARIDA ASSOCIATES,Credit,18/02/2026,seasonal crop miss,new owner to verify,low
+PIDWL00662,PIDOUT004279,Balaji Lakshmi Traders,Service,2025-06-06,payment delay,waiting for payment,unknown
+PIDWL00663,PIDDLR000288,United Deepak Distributors,RSM,2025-09-29,scheme claim pending,field visit planned,unknown
+PIDWL00664,PIDOUT004716,Kaveri Chandra Hardware,ASM,21-Mar-26,orders down,waiting for payment,low
+PIDWL00665,PIDOUT005277,Shree Senthil Agro,Credit,2025-06-01,orders down,waiting for payment,unknown
+PIDWL00666,PIDOUT002514,Sri Sowmya Hardware,RSM,19/11/2025,service complaint,scheme support requested,high
+PIDWL00667,PIDOUT000101,METRO SANJAY CORPORATION,ASM,2026-01-15,payment delay,credit call done,unknown
+PIDWL00668,PIDOUT005259,Sree Revathi Paints,Service,2026-03-20,owner dispute,scheme support requested,high
+PIDWL00669,PIDOUT005305,Modern Bala Enterprises,Zonal office,14-Nov-25,orders down,scheme support requested,unknown
+PIDWL00670,PIDOUT007836,City Bala Agro,Zonal office,2026-02-25,scheme claim pending,field visit planned,unknown
+PIDWL00671,PIDOUT003895,Vijaya Rafiq Traders,ASM,11/06/2025,payment delay,field visit planned,low
+PIDWL00672,PIDOUT001901,Ganesh Naveen Associates,Service,15/03/2026,competitor offer,lost to competitor,low
+PIDWL00673,PIDOUT001796,Shree Chandra Hardware,Credit,2026-02-20,seasonal crop miss,waiting for payment,unknown
+PIDWL00674,PIDOUT001781,New Lakshmi Services,RSM,2025-06-04,scheme claim pending,waiting for payment,high
+PIDWL00675,PIDOUT001352,Lucky Farida Agro,Service,2025-06-05,competitor offer,scheme support requested,medium
+PIDWL00676,PIDOUT000189,Modern Karthik Hardware,Credit,2025-09-13,owner dispute,scheme support requested,unknown
+PIDWL00677,PIDOUT000441,Sree Deepak Associates,Distributor,2025-12-28,owner dispute,new owner to verify,unknown
+PIDWL00678,PIDOUT001655,National Venkatesh Services,Distributor,2025-09-02,payment delay,scheme support requested,high
+PIDWL00679,PIDDLR000697,National Manoj Distributors,Zonal office,2026-01-03,service complaint,new owner to verify,low
+PIDWL00680,PIDOUT001922,Metro Arun Chemicals,RSM,2025-09-10,orders down,field visit planned,unknown
+PIDWL00681,PIDOUT007850,Shree Manoj Hardware,ASM,2025-11-12,scheme claim pending,credit call done,low
+PIDWL00682,PIDOUT008949,National Meena Hardware,ASM,2025-07-30,service complaint,lost to competitor,medium
+PIDWL00683,PIDOUT007068,Lucky Lakshmi Hardware,RSM,2026-03-10,competitor offer,lost to competitor,medium
+PIDWL00684,PIDOUT006144,New Yusuf Enterprises,Credit,2026-02-16,payment delay,lost to competitor,low
+PIDWL00685,PIDOUT004687,Balaji Priya Hardware,RSM,09/18/2025,payment delay,waiting for payment,low
+PIDWL00686,PIDOUT004386,Vijaya Jagan Stores,Distributor,2026-01-17,owner dispute,scheme support requested,medium
+PIDWL00687,PIDOUT002039,United Karthik Tyres,ASM,2026-02-06,competitor offer,new owner to verify,low
+PIDWL00688,PIDOUT006864,Balaji Suresh Agencies,ASM,03/27/2026,payment delay,new owner to verify,low
+PIDWL00689,PIDOUT000428,Mahalakshmi Venkatesh Hardware,ASM,02/02/2026,seasonal crop miss,new owner to verify,unknown
+PIDWL00690,PIDOUT005519,SRI Lakshmi Chemicals,Distributor,2026-01-21,scheme claim pending,field visit planned,low
+PIDWL00691,PIDOUT000292,Shree Farida Paints,RSM,2025-12-31,scheme claim pending,field visit planned,high
+PIDWL00692,PIDOUT002444,Sree Jagan Hardware,Credit,2026-03-19,scheme claim pending,waiting for payment,unknown
+PIDWL00693,PIDOUT007366,Murugan Sowmya Sales,Distributor,2025-11-04,payment delay,new owner to verify,medium
+PIDWL00694,PIDOUT007270,Mahalakshmi Rafiq Hardware,RSM,2026-03-25,competitor offer,scheme support requested,low
+PIDWL00695,PIDDLR000997,Lucky Ganesh Distributors,Distributor,2025-12-27,seasonal crop miss,scheme support requested,low
+PIDWL00696,PIDOUT002483,New Prakash Hardware,ASM,06/23/2025,owner dispute,new owner to verify,high
+PIDWL00697,PIDOUT004624,Shree Kavya Hardware,Distributor,07/15/2025,competitor offer,lost to competitor,low
+PIDWL00698,PIDOUT001894,New Anand Hardware,RSM,15/06/2025,seasonal crop miss,scheme support requested,high
+PIDWL00699,PIDOUT002798,Modern Deepak Traders,Zonal office,2025-12-07,closed counter,scheme support requested,unknown
+PIDWL00700,PIDOUT007181,National Priya Agencies,Distributor,02/01/2026,seasonal crop miss,lost to competitor,medium
+PIDWL00701,PIDOUT005633,Kaveri Priya Hardware,RSM,08/08/2025,orders down,scheme support requested,unknown
+PIDWL00702,PIDOUT004772,Mahalakshmi Venkatesh Agro,RSM,2026-01-24,payment delay,field visit planned,high
+PIDWL00703,PIDOUT007274,Kaveri Hari Hardware,Zonal office,2025-10-14,competitor offer,new owner to verify,high
+PIDWL00704,PIDOUT007479,Sri Yusuf Agro,Credit,2025-10-20,scheme claim pending,credit call done,low
+PIDWL00705,PIDOUT006886,Prime Venkatesh Tyres,ASM,2026-03-09,closed counter,field visit planned,medium
+PIDWL00706,PIDOUT000961,United Venkatesh Hardware,ASM,2025-12-25,service complaint,waiting for payment,medium
+PIDWL00707,PIDOUT006855,Prime Hari Distributors,Credit,06-Feb-26,seasonal crop miss,scheme support requested,low
+PIDWL00708,PIDOUT005447,Murugan Meena Services,Credit,2025-07-07,competitor offer,field visit planned,high
+PIDWL00709,PIDOUT002921,SRI SURESH HARDWARE,Distributor,01/30/2026,seasonal crop miss,scheme support requested,unknown
+PIDWL00710,PIDOUT007069,METRO HARI HARDWARE,Service,2026-03-24,scheme claim pending,credit call done,low
+PIDWL00711,PIDOUT005911,SREE YUSUF DISTRIBUTORS,Credit,2025-10-11,owner dispute,waiting for payment,high
+PIDWL00712,PIDDLR000019,United Farida Associates,RSM,2025-09-27,owner dispute,lost to competitor,low
+PIDWL00713,PIDOUT007429,United Deepak Hardware,RSM,10/08/2025,competitor offer,field visit planned,medium
+PIDWL00714,PIDOUT002695,Murugan Chandra Hardware,Service,2025-08-17,orders down,new owner to verify,low
+PIDWL00715,PIDOUT002165,Murugan Sanjay Mart,RSM,2025-07-26,seasonal crop miss,scheme support requested,high
+PIDWL00716,PIDOUT002484,Sri Ganesh Hardware,Zonal office,2025-08-13,scheme claim pending,waiting for payment,unknown
+PIDWL00717,PIDOUT002246,Sri Yusuf Hardware,Zonal office,2025-12-05,service complaint,scheme support requested,unknown
+PIDWL00718,PIDOUT003786,MAHALAKSHMI HARI DISTRIBUTORS,Service,2025-07-13,closed counter,new owner to verify,high
+PIDWL00719,PIDOUT005191,Kaveri Geetha Hardware,Service,2025-08-25,service complaint,credit call done,high
+PIDWL00720,PIDOUT006760,Sri Irfan Sales,Credit,2025-08-01,scheme claim pending,lost to competitor,unknown
+PIDWL00721,PIDOUT000683,Murugan Jagan Agencies,Distributor,2025-06-19,payment delay,waiting for payment,medium
+PIDWL00722,PIDOUT005742,Murugan Anand Hardware,Distributor,2026-03-17,seasonal crop miss,lost to competitor,high
+PIDWL00723,PIDOUT008603,MAHALAKSHMI VENKATESH CHEMICALS,Zonal office,09/28/2025,scheme claim pending,scheme support requested,low
+PIDWL00724,PIDOUT005455,Kaveri Arun Stores,Service,2025-07-09,seasonal crop miss,field visit planned,medium
+PIDWL00725,PIDOUT001729,Metro Senthil Hardware,ASM,22-Dec-25,owner dispute,lost to competitor,high
+PIDWL00726,PIDOUT004616,VIJAYA KARTHIK ASSOCIATES,ASM,2026-01-22,competitor offer,lost to competitor,low
+PIDWL00727,PIDOUT003550,Metro Senthil Corporation,Zonal office,2025-09-23,scheme claim pending,field visit planned,low
+PIDWL00728,PIDOUT007325,Sri Priya Traders,ASM,2026-02-27,service complaint,scheme support requested,high
+PIDWL00729,PIDDLR001010,Lucky Karthik Chemicals,RSM,2025-08-31,scheme claim pending,field visit planned,low
+PIDWL00730,PIDOUT000774,Star Arun Hardware,Distributor,02/07/2026,orders down,waiting for payment,unknown
+PIDWL00731,PIDOUT002266,Metro Venkatesh Hardware,Zonal office,2026-02-24,closed counter,credit call done,unknown
+PIDWL00732,PIDOUT005090,Sree Prakash Enterprises,Credit,2025-06-13,orders down,new owner to verify,medium
+PIDWL00733,PIDDLR000035,Ganesh Chandra Associates,Zonal office,27/10/2025,payment delay,waiting for payment,low
+PIDWL00734,PIDOUT005173,CITY ANAND AGENCIES,ASM,2025-08-20,payment delay,waiting for payment,medium
+PIDWL00735,PIDOUT005553,City Naveen Depot,Distributor,2026-02-08,closed counter,credit call done,low
+PIDWL00736,PIDOUT004398,United Kavya Depot,ASM,2025-12-02,competitor offer,credit call done,low
+PIDWL00737,PIDDLR000486,Murugan Farida Sales,ASM,2026-03-15,closed counter,field visit planned,medium
+PIDWL00738,PIDOUT003129,Sree Sowmya Stores,ASM,2026-02-26,owner dispute,scheme support requested,medium
+PIDWL00739,PIDOUT005482,Modern Chandra Associates,Distributor,2025-09-04,orders down,lost to competitor,low
+PIDWL00740,PIDOUT008963,Sri Geetha Chemicals,ASM,2026-01-21,seasonal crop miss,credit call done,unknown
+PIDWL00741,PIDOUT007756,Lucky Prakash Hardware,Service,2026-03-02,competitor offer,new owner to verify,medium
+PIDWL00742,PIDOUT004861,Sri Jagan Traders,RSM,2025-11-25,scheme claim pending,scheme support requested,medium
+PIDWL00743,PIDOUT005620,City Sanjay Hardware,ASM,2025-10-20,competitor offer,scheme support requested,medium
+PIDWL00744,PIDDLR000925,Vijaya Lakshmi Chemicals,ASM,2025-06-19,competitor offer,waiting for payment,medium
+PIDWL00745,PIDOUT007169,Prime Revathi Associates,ASM,18/08/2025,competitor offer,credit call done,medium
+PIDWL00746,PIDOUT001246,Murugan Deepak Agencies,Credit,2026-03-24,scheme claim pending,credit call done,high
+PIDWL00747,PIDOUT002368,Murugan Jagan Depot,Zonal office,19/08/2025,owner dispute,field visit planned,high
+PIDWL00748,PIDDLR000005,Vijaya Rafiq Chemicals,ASM,2025-10-08,orders down,waiting for payment,high
+PIDWL00749,PIDOUT008530,Ganesh Prakash Fertilisers,ASM,2026-02-13,closed counter,waiting for payment,unknown
+PIDWL00750,PIDOUT006432,New Deepak Hardware,RSM,2025-12-23,service complaint,credit call done,low
+PIDWL00751,PIDOUT003004,Prime Venkatesh Paints,Service,2025-07-03,payment delay,waiting for payment,medium
+PIDWL00752,PIDOUT006323,City Lakshmi Agencies,Service,2025-12-13,service complaint,new owner to verify,medium
+PIDWL00753,PIDOUT002531,Star Senthil Hardware,ASM,17/06/2025,closed counter,waiting for payment,low
+PIDWL00754,PIDOUT003479,New Deepak Paints,ASM,2026-03-21,seasonal crop miss,lost to competitor,unknown
+PIDWL00755,PIDOUT006694,Ganesh Meena Distributors,ASM,2025-11-19,scheme claim pending,waiting for payment,low
+PIDWL00756,PIDDLR000710,Balaji Meena Distributors,Credit,2025-06-23,service complaint,field visit planned,medium
+PIDWL00757,PIDDLR000119,Sree Irfan Paints,Zonal office,2026-02-20,orders down,credit call done,medium
+PIDWL00758,PIDOUT004061,Murugan Yusuf Hardware,Distributor,2025-09-17,closed counter,scheme support requested,medium
+PIDWL00759,PIDOUT000396,Ganesh Prakash Hardware,Credit,2025-06-26,service complaint,scheme support requested,medium
+PIDWL00760,PIDOUT005596,Lucky Farida Hardware,RSM,2026-01-29,service complaint,scheme support requested,high
+PIDWL00761,PIDDLR000943,United Suresh Distributors,Credit,2025-11-30,seasonal crop miss,new owner to verify,medium
+PIDWL00762,PIDOUT000681,Kaveri Hari Distributors,Zonal office,2025-12-10,payment delay,lost to competitor,low
+PIDWL00763,PIDOUT005247,Sri Venkatesh Traders,Distributor,18-Nov-25,seasonal crop miss,scheme support requested,medium
+PIDWL00764,PIDOUT007038,Vijaya Chandra Associates,Credit,2026-03-04,competitor offer,field visit planned,medium
+PIDWL00765,PIDOUT001773,City Arun Mart,Service,2026-02-07,seasonal crop miss,field visit planned,low
+PIDWL00766,PIDOUT003797,Vijaya Meena Enterprises,Service,15/12/2025,service complaint,credit call done,high
+PIDWL00767,PIDOUT008043,Metro Hari Hardware,Distributor,30/06/2025,orders down,field visit planned,medium
+PIDWL00768,PIDOUT001585,Kaveri Lokesh Tyres,Credit,2025-12-01,orders down,scheme support requested,medium
+PIDWL00769,PIDOUT006357,Royal Yusuf Hardware,Zonal office,2025-12-20,seasonal crop miss,credit call done,medium
+PIDWL00770,PIDDLR000955,National Lokesh Distributors,RSM,16/11/2025,scheme claim pending,waiting for payment,high
+PIDWL00771,PIDOUT000367,Star Deepak Associates,Distributor,2025-09-16,service complaint,new owner to verify,low
+PIDWL00772,PIDOUT006881,Kaveri Meena Hardware,RSM,2026-02-16,service complaint,lost to competitor,low
+PIDWL00773,PIDOUT008075,Star Deepak Chemicals,Service,2025-10-25,scheme claim pending,lost to competitor,high
+PIDWL00774,PIDOUT004893,Ganesh Arun Agencies,RSM,2025-09-26,owner dispute,credit call done,high
+PIDWL00775,PIDOUT003618,New Bala Stores,Distributor,2025-09-19,seasonal crop miss,lost to competitor,low
+PIDWL00776,PIDOUT003436,United Sanjay Distributors & Co,Distributor,18/02/2026,seasonal crop miss,waiting for payment,unknown
+PIDWL00777,PIDOUT007243,Prime Manoj Stores,RSM,2025-12-18,competitor offer,waiting for payment,unknown
+PIDWL00778,PIDOUT002102,National Anand Associates,RSM,2025-08-11,closed counter,new owner to verify,low
+PIDWL00779,PIDDLR000240,Mahalakshmi Prakash Chemicals,ASM,2025-12-26,owner dispute,new owner to verify,high
+PIDWL00780,PIDOUT004046,Star Karthik Hardware,ASM,07/15/2025,seasonal crop miss,field visit planned,low
+PIDWL00781,PIDOUT004885,National Irfan Hardware,ASM,2025-10-06,payment delay,waiting for payment,medium
+PIDWL00782,PIDOUT000516,United Prakash Hardware,Distributor,2025-10-29,orders down,field visit planned,high
+PIDWL00783,PIDOUT004060,Royal Bala Hardware,Credit,2025-06-18,payment delay,field visit planned,high
+PIDWL00784,PIDOUT003530,Royal Meena Distributors,Service,2025-08-20,scheme claim pending,new owner to verify,low
+PIDWL00785,PIDOUT007073,United Lokesh Stores,Credit,2025-12-31,payment delay,credit call done,low
+PIDWL00786,PIDOUT006624,Prime Senthil Associates,ASM,2025-09-17,service complaint,lost to competitor,high
+PIDWL00787,PIDOUT008680,National Manoj Enterprises,Zonal office,2026-02-01,competitor offer,new owner to verify,high
+PIDWL00788,PIDOUT005676,City Meena Agro,Service,2026-03-22,payment delay,field visit planned,unknown
+PIDWL00789,PIDDLR000825,SREE MANOJ DEPOT,Service,05/12/2025,owner dispute,scheme support requested,low
+PIDWL00790,PIDOUT005578,New Lokesh Enterprises,RSM,2026-01-21,orders down,credit call done,high
+PIDWL00791,PIDOUT008546,Vijaya Jagan Hardware,Zonal office,2025-11-09,service complaint,credit call done,low
+PIDWL00792,PIDDLR000363,Modern Jagan Hardware,RSM,2025-10-01,closed counter,field visit planned,low
+PIDWL00793,PIDOUT001897,National Kavya Sales,Service,2025-11-11,orders down,new owner to verify,low
+PIDWL00794,PIDOUT001656,United Naveen Depot Ltd,ASM,2025-11-16,competitor offer,lost to competitor,high
+PIDWL00795,PIDOUT005463,Modern Karthik Agro,Zonal office,2025-07-06,scheme claim pending,scheme support requested,high
+PIDWL00796,PIDOUT006345,Sree Hari Services Ltd,Distributor,2025-10-10,competitor offer,lost to competitor,low
+PIDWL00797,PIDOUT007889,Lucky Priya Paints,Zonal office,2025-07-22,owner dispute,credit call done,unknown
+PIDWL00798,PIDOUT008103,Murugan Chandra Mart,ASM,2025-08-12,closed counter,field visit planned,medium
+PIDWL00799,PIDOUT006602,Lucky Arun Mart,Distributor,2025-12-07,scheme claim pending,lost to competitor,unknown
+PIDWL00800,PIDOUT006332,Prime Deepak Agro,Service,2025-06-28,scheme claim pending,field visit planned,unknown
+PIDWL00801,PIDOUT005653,Balaji Lokesh Hardware,Distributor,2026-02-21,payment delay,waiting for payment,unknown
+PIDWL00802,PIDOUT000372,Lucky Manoj Hardware,RSM,2026-01-10,service complaint,new owner to verify,medium
+PIDWL00803,PIDDLR000020,City Bala Fertilisers,Zonal office,2025-10-27,service complaint,field visit planned,low
+PIDWL00804,PIDOUT006071,City Lakshmi Distributors,Service,2025-08-29,closed counter,field visit planned,high
+PIDWL00805,PIDOUT006157,Modern Farida Fertilisers,Service,2026-03-04,seasonal crop miss,field visit planned,low
+PIDWL00806,PIDOUT002018,Kaveri Anand Distributors,Service,13-Jan-26,scheme claim pending,credit call done,high
+PIDWL00807,PIDOUT007031,United Irfan Hardware,Distributor,2025-06-14,service complaint,credit call done,medium
+PIDWL00808,PIDOUT007489,Prime Geetha Hardware,Credit,2025-10-10,seasonal crop miss,field visit planned,medium
+PIDWL00809,PIDOUT000085,Kaveri Anand Depot,RSM,13/07/2025,closed counter,field visit planned,low
+PIDWL00810,PIDOUT004456,National Irfan Hardware,Zonal office,2025-09-29,orders down,lost to competitor,unknown
+PIDWL00811,PIDOUT000344,New Yusuf Paints,Service,2025-08-11,orders down,field visit planned,low
+PIDWL00812,PIDDLR000130,Ganesh Priya Associates,RSM,2025-10-06,competitor offer,scheme support requested,medium
+PIDWL00813,PIDOUT002906,Kaveri Suresh Distributors,Zonal office,2026-01-12,owner dispute,new owner to verify,low
+PIDWL00814,PIDOUT005107,SHREE MANOJ DISTRIBUTORS,Service,2025-08-21,owner dispute,credit call done,high
+PIDWL00815,PIDOUT004289,Modern Sowmya Associates,RSM,2026-01-18,closed counter,credit call done,medium
+PIDWL00816,PIDDLR000758,Vijaya Lakshmi Associates,ASM,2026-01-07,scheme claim pending,credit call done,high
+PIDWL00817,PIDOUT007657,SREE NAVEEN CORPORATION,ASM,2026-01-09,scheme claim pending,waiting for payment,high
+PIDWL00818,PIDOUT003040,City Rafiq Hardware,Service,2025-08-18,payment delay,lost to competitor,medium
+PIDWL00819,PIDOUT002595,Murugan Suresh Sales,ASM,10/04/2025,payment delay,new owner to verify,high
+PIDWL00820,PIDOUT005511,Mahalakshmi Kavya Corporation Pvt,Distributor,28/03/2026,competitor offer,waiting for payment,medium
+PIDWL00821,PIDOUT006923,United Yusuf Distributors,Service,2025-10-19,seasonal crop miss,field visit planned,unknown
+PIDWL00822,PIDDLR000907,LUCKY GANESH STORES,ASM,2026-01-28,closed counter,lost to competitor,high
+PIDWL00823,PIDOUT008046,Ganesh Venkatesh Hardware,ASM,11/02/2026,owner dispute,credit call done,low
+PIDWL00824,PIDOUT001745,National Ganesh Distributors,Distributor,2025-12-20,closed counter,field visit planned,unknown
+PIDWL00825,PIDOUT001322,Balaji Senthil Hardware,ASM,2026-03-04,seasonal crop miss,credit call done,unknown
+PIDWL00826,PIDDLR000367,New Lokesh Agencies,Credit,2025-12-01,closed counter,new owner to verify,medium
+PIDWL00827,PIDOUT002064,New Anand Hardware Main,Distributor,2026-02-04,seasonal crop miss,scheme support requested,medium
+PIDWL00828,PIDOUT008765,STAR NAVEEN CORPORATION,Distributor,2025-11-05,closed counter,lost to competitor,unknown
+PIDWL00829,PIDOUT004036,Ganesh Ganesh Distributors,RSM,2026-03-26,orders down,new owner to verify,medium
+PIDWL00830,PIDOUT005788,Lucky Chandra Hardware,RSM,27/08/2025,orders down,waiting for payment,high
+PIDWL00831,PIDOUT007087,Prime Rafiq Distributors,RSM,2026-02-15,orders down,waiting for payment,low
+PIDWL00832,PIDOUT008602,New Anand Agencies,ASM,2025-08-09,scheme claim pending,field visit planned,unknown
+PIDWL00833,PIDOUT008898,Prime Senthil Corporation,Distributor,2025-10-01,payment delay,scheme support requested,high
+PIDWL00834,PIDOUT008882,Balaji Irfan Chemicals,Credit,2026-03-18,seasonal crop miss,lost to competitor,medium
+PIDWL00835,PIDOUT007985,Mahalakshmi Manoj Corporation,Distributor,2025-06-28,competitor offer,credit call done,high
+PIDWL00836,PIDOUT004871,Mahalakshmi Prakash Fertilisers,Credit,2025-12-22,competitor offer,scheme support requested,unknown
+PIDWL00837,PIDOUT003808,City Geetha Hardware,Distributor,01/20/2026,orders down,field visit planned,medium
+PIDWL00838,PIDOUT002801,Star Sowmya Associates,Service,14/10/2025,seasonal crop miss,waiting for payment,low
+PIDWL00839,PIDOUT005362,Mahalakshmi Karthik Agencies,Service,10/30/2025,competitor offer,scheme support requested,high
+PIDWL00840,PIDOUT005126,City Yusuf Agencies,Credit,2025-07-04,service complaint,credit call done,unknown
+PIDWL00841,PIDOUT000861,Modern Revathi Enterprises,Credit,2025-08-12,service complaint,field visit planned,medium
+PIDWL00842,PIDOUT005071,Lucky Sowmya Hardware,Credit,2025-08-30,scheme claim pending,credit call done,low
+PIDWL00843,PIDDLR000140,Modern Geetha Distributors,RSM,2026-01-16,owner dispute,credit call done,low
+PIDWL00844,PIDOUT005891,PRIME IRFAN HARDWARE,ASM,2026-02-17,scheme claim pending,lost to competitor,unknown
+PIDWL00845,PIDOUT008124,Murugan Deepak Hardware,Service,12/07/2025,competitor offer,lost to competitor,medium
+PIDWL00846,PIDOUT000811,Kaveri Sowmya Tyres,ASM,12/04/2025,scheme claim pending,credit call done,high
+PIDWL00847,PIDOUT006847,Mahalakshmi Deepak Associates,Service,2026-02-19,payment delay,waiting for payment,unknown
+PIDWL00848,PIDOUT003991,United Geetha Paints,RSM,2026-01-16,closed counter,credit call done,low
+PIDWL00849,PIDOUT000483,Star Manoj Agro,ASM,02-Sep-25,orders down,lost to competitor,unknown
+PIDWL00850,PIDOUT003328,Metro Senthil Hardware,ASM,2025-08-04,scheme claim pending,new owner to verify,low
+PIDWL00851,PIDDLR000058,Ganesh Bala Distributors,RSM,2025-08-03,seasonal crop miss,credit call done,high
+PIDWL00852,PIDOUT000343,MAHALAKSHMI ANAND HARDWARE,Distributor,2025-12-25,closed counter,field visit planned,low
+PIDWL00853,PIDOUT008850,Ganesh Lakshmi Depot,RSM,2025-12-09,scheme claim pending,waiting for payment,unknown
+PIDWL00854,PIDOUT004610,Lucky Kavya Hardware,Zonal office,2026-03-16,seasonal crop miss,field visit planned,high
+PIDWL00855,PIDOUT000125,Sree Meena Traders,Service,06/10/2025,competitor offer,field visit planned,unknown
+PIDWL00856,PIDOUT001665,United Farida Hardware,Distributor,2025-09-24,scheme claim pending,credit call done,low
+PIDWL00857,PIDDLR000662,Royal Rafiq Distributors,Credit,25-Jun-25,competitor offer,credit call done,medium
+PIDWL00858,PIDDLR000933,GANESH NAVEEN SALES,Credit,09/26/2025,payment delay,lost to competitor,high
+PIDWL00859,PIDDLR000049,City Arun Paints,RSM,2025-07-31,orders down,field visit planned,low
+PIDWL00860,PIDOUT000760,Mahalakshmi Lokesh Hardware,RSM,2025-12-10,owner dispute,scheme support requested,medium
+PIDWL00861,PIDOUT008423,Mahalakshmi Bala Chemicals,ASM,2026-03-20,owner dispute,scheme support requested,medium
+PIDWL00862,PIDDLR000512,New Chandra Distributors,Distributor,2026-01-18,owner dispute,new owner to verify,low
+PIDWL00863,PIDOUT004991,Kaveri Senthil Paints,Distributor,2025-06-02,scheme claim pending,scheme support requested,high
+PIDWL00864,PIDOUT007244,Modern Anand Fertilisers,Service,2026-01-18,competitor offer,waiting for payment,medium
+PIDWL00865,PIDOUT000827,New Lakshmi Hardware,ASM,27/12/2025,closed counter,lost to competitor,high
+PIDWL00866,PIDOUT001476,Kaveri Farida Chemicals,Zonal office,04/03/2026,orders down,new owner to verify,medium
+PIDWL00867,PIDOUT000807,Modern Kavya Agro,Service,2025-12-17,seasonal crop miss,waiting for payment,medium
+PIDWL00868,PIDOUT002313,SREE SOWMYA ENTERPRISES,Distributor,06/30/2025,scheme claim pending,lost to competitor,high
+PIDWL00869,PIDOUT008541,Kaveri Lakshmi Hardware,Credit,2025-12-10,scheme claim pending,waiting for payment,low
+PIDWL00870,PIDOUT004918,Balaji Meena Hardware,RSM,11-Jan-26,seasonal crop miss,new owner to verify,high
+PIDWL00871,PIDOUT005185,Royal Geetha Distributors,ASM,2026-03-09,owner dispute,new owner to verify,unknown
+PIDWL00872,PIDOUT001231,BALAJI PRIYA SERVICES,Credit,2025-06-24,seasonal crop miss,waiting for payment,medium
+PIDWL00873,PIDOUT002642,Sri Bala Hardware Main,ASM,2025-08-03,competitor offer,scheme support requested,medium
+PIDWL00874,PIDOUT002147,Prime Prakash Corporation,RSM,01-Oct-25,competitor offer,scheme support requested,low
+PIDWL00875,PIDOUT004357,Sree Sowmya Sales,Zonal office,2026-03-24,payment delay,scheme support requested,medium
+PIDWL00876,PIDOUT001942,National Deepak Agencies,Zonal office,2025-12-15,competitor offer,field visit planned,low
+PIDWL00877,PIDOUT007432,Sree Geetha Services,RSM,2026-03-28,competitor offer,new owner to verify,high
+PIDWL00878,PIDOUT001783,METRO GANESH SERVICES,ASM,27/11/2025,payment delay,scheme support requested,high
+PIDWL00879,PIDDLR000531,Mahalakshmi Lokesh Distributors,RSM,2025-11-22,closed counter,new owner to verify,medium
+PIDWL00880,PIDOUT004759,Sri Venkatesh Hardware,Service,21-Aug-25,scheme claim pending,field visit planned,high
+PIDWL00881,PIDOUT006072,Shri Hari Mart,ASM,2025-06-27,payment delay,field visit planned,low
+PIDWL00882,PIDOUT006971,BALAJI SANJAY HARDWARE,Zonal office,2026-01-26,seasonal crop miss,new owner to verify,unknown
+PIDWL00883,PIDOUT007071,Star Karthik Paints,Service,2026-01-24,scheme claim pending,field visit planned,low
+PIDWL00884,PIDDLR000711,Star Prakash Distributors,Service,30/01/2026,scheme claim pending,credit call done,unknown
+PIDWL00885,PIDDLR000959,Sri Venkatesh Distributors,Service,2025-11-12,scheme claim pending,scheme support requested,unknown
+PIDWL00886,PIDOUT005614,Star Rafiq Enterprises,Zonal office,01/13/2026,scheme claim pending,field visit planned,unknown
+PIDWL00887,PIDOUT005443,National Bala Hardware,ASM,14-Jul-25,owner dispute,scheme support requested,unknown
+PIDWL00888,PIDOUT004380,Balaji Jagan Hardware,Service,02/02/2026,orders down,lost to competitor,unknown
+PIDWL00889,PIDOUT002450,Star Yusuf Traders,Distributor,2026-03-09,scheme claim pending,new owner to verify,unknown
+PIDWL00890,PIDOUT003163,Prime Lokesh Hardware,Credit,2026-01-06,owner dispute,lost to competitor,high
+PIDWL00891,PIDOUT008174,United Suresh Hardware,RSM,2026-03-15,seasonal crop miss,lost to competitor,medium
+PIDWL00892,PIDOUT004651,Prime Yusuf Hardware,RSM,2026-01-22,orders down,waiting for payment,medium
+PIDWL00893,PIDOUT000523,Murugan Naveen Chemicals,Service,2025-09-04,service complaint,field visit planned,unknown
+PIDWL00894,PIDOUT003684,City Bala Hardware,Distributor,02/09/2026,scheme claim pending,credit call done,unknown
+PIDWL00895,PIDOUT000207,Ganesh Deepak Chemicals,Credit,2025-09-09,payment delay,lost to competitor,low
+PIDWL00896,PIDOUT002373,Metro Meena Hardware,Zonal office,2025-07-25,competitor offer,field visit planned,unknown
+PIDWL00897,PIDOUT006748,Metro Venkatesh Tyres,Zonal office,01/26/2026,scheme claim pending,waiting for payment,medium
+PIDWL00898,PIDOUT001115,CITY FARIDA AGENCIES,Credit,20/09/2025,competitor offer,credit call done,high
+PIDWL00899,PIDOUT008276,Prime Manoj Agencies,RSM,09/11/2025,seasonal crop miss,scheme support requested,unknown
+PIDWL00900,PIDOUT004983,Star Ganesh Enterprises,Service,2025-10-25,payment delay,scheme support requested,medium
+PIDWL00901,PIDOUT006912,Sri Irfan Agencies,Distributor,2025-07-11,owner dispute,field visit planned,low
+PIDWL00902,PIDOUT008058,Sree Sanjay Hardware,Distributor,2025-09-16,service complaint,field visit planned,low
+PIDWL00903,PIDOUT005497,Sree Lokesh Hardware,Distributor,2025-12-08,seasonal crop miss,lost to competitor,low
+PIDWL00904,PIDOUT006080,Ganesh Lakshmi Hardware,Credit,20/08/2025,service complaint,new owner to verify,high
+PIDWL00905,PIDDLR000791,Mahalakshmi Yusuf Distributors,Zonal office,2025-08-25,competitor offer,field visit planned,high
+PIDWL00906,PIDOUT005569,Kaveri Naveen Services,Service,2025-10-16,scheme claim pending,scheme support requested,unknown
+PIDWL00907,PIDOUT008747,Modern Arun Paints,Credit,2026-01-08,seasonal crop miss,credit call done,medium
+PIDWL00908,PIDOUT003676,Murugan Lakshmi Mart,ASM,2025-12-31,owner dispute,new owner to verify,high
+PIDWL00909,PIDOUT006165,United Irfan Agencies,Service,2026-02-16,payment delay,new owner to verify,high
+PIDWL00910,PIDOUT006184,Modern Suresh Chemicals,Credit,2026-01-05,seasonal crop miss,credit call done,medium
+PIDWL00911,PIDOUT002845,Lucky Jagan Hardware,Service,2026-02-21,orders down,credit call done,low
+PIDWL00912,PIDOUT007147,UNITED ANAND PAINTS,RSM,2025-07-07,closed counter,waiting for payment,high
+PIDWL00913,PIDOUT002342,Murugan Farida Fertilisers,Service,10-Jan-26,service complaint,waiting for payment,unknown
+PIDWL00914,PIDOUT004341,Kaveri Farida Fertilisers,RSM,2026-03-02,owner dispute,scheme support requested,medium
+PIDWL00915,PIDOUT005736,City Sowmya Mart,RSM,2025-08-28,closed counter,field visit planned,high
+PIDWL00916,PIDOUT005843,Vijaya Meena Corporation,Zonal office,2026-02-04,seasonal crop miss,new owner to verify,high
+PIDWL00917,PIDOUT005900,Mahalakshmi Prakash Associates,ASM,2025-08-04,orders down,waiting for payment,high
+PIDWL00918,PIDOUT002461,Modern Hari Hardware,Credit,2025-09-23,owner dispute,scheme support requested,medium
+PIDWL00919,PIDOUT004711,Star Arun Distributors,Distributor,2025-07-24,closed counter,waiting for payment,unknown
+PIDWL00920,PIDOUT006536,Balaji Hari Agencies,Service,2026-02-07,owner dispute,field visit planned,high
+PIDWL00921,PIDOUT003880,Balaji Naveen Hardware Main,RSM,2025-06-18,seasonal crop miss,lost to competitor,high
+PIDWL00922,PIDOUT006114,Ganesh Revathi Hardware,Credit,18/03/2026,closed counter,credit call done,medium
+PIDWL00923,PIDOUT005580,Star Naveen Tyres,Distributor,2025-10-12,service complaint,new owner to verify,low
+PIDWL00924,PIDDLR000391,Kaveri Prakash Mart,RSM,2026-01-22,payment delay,new owner to verify,medium
+PIDWL00925,PIDOUT002010,Lucky Prakash Hardware & Co,Distributor,2025-08-18,scheme claim pending,new owner to verify,unknown
+PIDWL00926,PIDOUT007064,United Deepak Corporation,Zonal office,2025-10-23,seasonal crop miss,field visit planned,low
+PIDWL00927,PIDOUT004792,Lucky Lakshmi Hardware,Credit,2025-11-24,payment delay,lost to competitor,high
+PIDWL00928,PIDOUT003819,Vijaya Naveen Hardware,Service,2025-09-27,closed counter,scheme support requested,unknown
+PIDWL00929,PIDOUT003551,Balaji Lokesh Hardware,ASM,2026-02-23,seasonal crop miss,new owner to verify,high
+PIDWL00930,PIDOUT001823,Star Farida Stores Ltd,RSM,14-Jul-25,scheme claim pending,new owner to verify,unknown
+PIDWL00931,PIDDLR000881,LUCKY ARUN TRADERS,Credit,2026-02-20,service complaint,field visit planned,high
+PIDWL00932,PIDOUT002223,CITY MEENA HARDWARE,Distributor,13/12/2025,seasonal crop miss,waiting for payment,medium
+PIDWL00933,PIDOUT007254,City Priya Services,Credit,10/15/2025,closed counter,field visit planned,medium
+PIDWL00934,PIDOUT005643,Balaji Senthil Hardware,RSM,2025-06-05,payment delay,field visit planned,low
+PIDWL00935,PIDOUT005825,Star Yusuf Chemicals,Zonal office,2025-08-11,payment delay,new owner to verify,low
+PIDWL00936,PIDOUT002421,Royal Lokesh Fertilisers,Credit,2025-07-28,orders down,credit call done,low
+PIDWL00937,PIDOUT003015,Balaji Arun Distributors,Credit,14/06/2025,seasonal crop miss,field visit planned,low
+PIDWL00938,PIDDLR000424,Mahalakshmi Jagan Distributors,ASM,2025-10-25,seasonal crop miss,waiting for payment,high
+PIDWL00939,PIDOUT004043,Shree Naveen Fertilisers,Distributor,07/01/2026,scheme claim pending,lost to competitor,medium
+PIDWL00940,PIDOUT006298,Mahalakshmi Geetha Paints,RSM,2025-12-23,owner dispute,waiting for payment,high
+PIDWL00941,PIDOUT005114,Star Revathi Hardware,ASM,2025-07-30,orders down,scheme support requested,medium
+PIDWL00942,PIDOUT002338,New Naveen Tyres,Service,27-Mar-26,orders down,new owner to verify,low
+PIDWL00943,PIDOUT001853,Prime Yusuf Hardware,ASM,03/10/2026,seasonal crop miss,new owner to verify,medium
+PIDWL00944,PIDOUT008316,Star Hari Agro,Distributor,02-Sep-25,closed counter,lost to competitor,low
+PIDWL00945,PIDDLR000262,City Farida Distributors,Zonal office,28-Oct-25,closed counter,scheme support requested,unknown
+PIDWL00946,PIDDLR000618,City Karthik Corporation,RSM,18/09/2025,orders down,lost to competitor,low
+PIDWL00947,PIDOUT006911,City Yusuf Chemicals,Credit,29-Mar-26,payment delay,waiting for payment,unknown
+PIDWL00948,PIDOUT003304,United Jagan Hardware & Co,Zonal office,02/07/2025,scheme claim pending,waiting for payment,unknown
+PIDWL00949,PIDOUT006040,Royal Ganesh Depot,RSM,2026-03-08,owner dispute,new owner to verify,unknown
+PIDWL00950,PIDOUT006903,City Lakshmi Distributors,Zonal office,2025-07-30,orders down,credit call done,unknown
+PIDWL00951,PIDOUT006490,Mahalakshmi Sowmya Hardware,Service,2026-02-25,orders down,credit call done,high
+PIDWL00952,PIDOUT005828,Royal Senthil Hardware,RSM,2025-10-24,closed counter,credit call done,unknown
+PIDWL00953,PIDOUT001999,Shree Revathi Hardware,Distributor,2025-09-24,competitor offer,scheme support requested,unknown
+PIDWL00954,PIDOUT000276,Prime Irfan Associates,Zonal office,2026-01-26,orders down,scheme support requested,medium
+PIDWL00955,PIDOUT003111,Murugan Naveen Hardware,Service,06/12/2025,scheme claim pending,field visit planned,low
+PIDWL00956,PIDOUT008694,City Sowmya Fertilisers,ASM,11/02/2025,service complaint,credit call done,unknown
+PIDWL00957,PIDOUT008525,Metro Naveen Hardware,Distributor,2025-11-20,competitor offer,credit call done,low
+PIDWL00958,PIDOUT007798,Metro Anand Corporation,Credit,2025-09-11,scheme claim pending,new owner to verify,low
+PIDWL00959,PIDOUT005726,Sree Priya Stores,Service,2026-01-05,closed counter,credit call done,medium
+PIDWL00960,PIDOUT001958,Ganesh Sowmya Tyres Ltd,Zonal office,2026-01-01,competitor offer,scheme support requested,unknown
+PIDWL00961,PIDOUT003499,National Lakshmi Depot,Credit,26/03/2026,orders down,waiting for payment,high
+PIDWL00962,PIDOUT006668,New Kavya Hardware,Distributor,2026-01-14,orders down,waiting for payment,low
+PIDWL00963,PIDOUT007648,Balaji Irfan Agro,Service,2026-01-07,scheme claim pending,field visit planned,unknown
+PIDWL00964,PIDOUT008505,New Naveen Hardware,Credit,2025-06-29,scheme claim pending,waiting for payment,unknown
+PIDWL00965,PIDOUT001356,Star Meena Associates,Service,2025-12-30,payment delay,scheme support requested,high
+PIDWL00966,PIDOUT008418,Murugan Lokesh Hardware,Zonal office,2025-07-02,owner dispute,field visit planned,high
+PIDWL00967,PIDOUT002883,Kaveri Priya Hardware,Zonal office,28/02/2026,seasonal crop miss,new owner to verify,low
+PIDWL00968,PIDOUT005396,City Hari Stores,ASM,2025-09-23,scheme claim pending,scheme support requested,medium
+PIDWL00969,PIDOUT000091,National Irfan Hardware,Service,12/11/2025,payment delay,waiting for payment,unknown
+PIDWL00970,PIDOUT007359,Modern Sowmya Depot,RSM,02/01/2026,owner dispute,waiting for payment,unknown
+PIDWL00971,PIDOUT008751,City Priya Stores,RSM,2025-11-30,closed counter,lost to competitor,low
+PIDWL00972,PIDOUT001713,Balaji Bala Hardware,ASM,02/26/2026,payment delay,lost to competitor,low
+PIDWL00973,PIDOUT005436,Murugan Irfan Depot,RSM,2026-01-08,scheme claim pending,new owner to verify,unknown
+PIDWL00974,PIDOUT000013,United Sanjay Corporation,Distributor,2026-01-10,competitor offer,scheme support requested,medium
+PIDWL00975,PIDOUT007825,SHREE ARUN HARDWARE,Service,2025-09-10,service complaint,lost to competitor,low
+PIDWL00976,PIDOUT004045,LUCKY NAVEEN HARDWARE,ASM,2026-01-13,scheme claim pending,credit call done,high
+PIDWL00977,PIDOUT001756,Mahalakshmi Farida Associates,Service,2026-02-28,scheme claim pending,scheme support requested,unknown
+PIDWL00978,PIDOUT002619,United Rafiq Mart,RSM,2025-06-20,seasonal crop miss,waiting for payment,unknown
+PIDWL00979,PIDOUT001399,Vijaya Lokesh Agencies,Service,2025-07-19,closed counter,field visit planned,low
+PIDWL00980,PIDOUT000638,METRO ARUN MART,Credit,2025-10-17,scheme claim pending,lost to competitor,medium
+PIDWL00981,PIDDLR000720,Lucky Ganesh Hardware Pvt,Service,18-Sep-25,competitor offer,waiting for payment,low
+PIDWL00982,PIDOUT005875,Kaveri Yusuf Traders,Service,2025-09-22,orders down,new owner to verify,medium
+PIDWL00983,PIDOUT005931,Balaji Meena Hardware,Zonal office,19-Dec-25,seasonal crop miss,credit call done,unknown
+PIDWL00984,PIDOUT001148,Shree Kavya Fertilisers,ASM,2026-03-11,service complaint,lost to competitor,medium
+PIDWL00985,PIDOUT000246,Murugan Prakash Hardware,RSM,2025-07-09,payment delay,new owner to verify,high
+PIDWL00986,PIDOUT004600,BALAJI PRIYA HARDWARE,RSM,15/07/2025,orders down,waiting for payment,high
+PIDWL00987,PIDOUT003939,CITY KARTHIK HARDWARE,Service,2025-10-29,scheme claim pending,waiting for payment,low
+PIDWL00988,PIDOUT004539,Star Venkatesh Hardware,RSM,08/03/2026,competitor offer,field visit planned,low
+PIDWL00989,PIDOUT007144,Modern Naveen Hardware,ASM,2025-06-21,service complaint,field visit planned,medium
+PIDWL00990,PIDOUT003175,Mahalakshmi Irfan Services,Credit,2026-01-04,closed counter,scheme support requested,high
+PIDWL00991,PIDOUT006641,Modern Rafiq Stores,Credit,2026-03-10,orders down,new owner to verify,medium
+PIDWL00992,PIDOUT007043,Murugan Chandra Paints,Distributor,09/06/2025,orders down,scheme support requested,high
+PIDWL00993,PIDOUT001801,National Kavya Hardware,Zonal office,2025-08-05,payment delay,waiting for payment,high
+PIDWL00994,PIDOUT003966,Metro Rafiq Agencies,ASM,2026-02-25,orders down,new owner to verify,unknown
+PIDWL00995,PIDOUT005552,Star Venkatesh Hardware,Zonal office,2025-09-14,owner dispute,waiting for payment,high
+PIDWL00996,PIDOUT005401,Mahalakshmi Lakshmi Hardware,Distributor,2025-12-10,owner dispute,scheme support requested,low
+PIDWL00997,PIDOUT007426,Murugan Karthik Paints,Distributor,2025-07-29,payment delay,new owner to verify,medium
+PIDWL00998,PIDOUT006530,National Deepak Hardware,RSM,07/08/2025,competitor offer,field visit planned,unknown
+PIDWL00999,PIDOUT000893,Lucky Deepak Associates,Service,2026-01-09,scheme claim pending,scheme support requested,high
+PIDWL01000,PIDOUT007833,New Priya Stores,ASM,2025-11-25,scheme claim pending,field visit planned,high
+PIDWL01001,PIDOUT005412,Modern Prakash Tyres,ASM,02/27/2026,closed counter,scheme support requested,high
+PIDWL01002,PIDOUT000446,Metro Revathi Chemicals,Credit,2025-09-14,scheme claim pending,waiting for payment,low
+PIDWL01003,PIDOUT004265,Metro Geetha Hardware,ASM,2025-07-19,closed counter,scheme support requested,low
+PIDWL01004,PIDDLR000834,Balaji Sanjay Agro,Service,2025-12-18,competitor offer,new owner to verify,unknown
+PIDWL01005,PIDOUT002875,Vijaya Lakshmi Hardware,Service,2026-02-06,competitor offer,new owner to verify,unknown
+PIDWL01006,PIDOUT000993,Royal Naveen Hardware,Distributor,2025-11-29,orders down,new owner to verify,medium
+PIDWL01007,PIDOUT003360,Prime Naveen Mart,ASM,2025-09-30,closed counter,lost to competitor,high
+PIDWL01008,PIDOUT002339,Ganesh Ganesh Distributors,Service,16-Oct-25,competitor offer,credit call done,high
+PIDWL01009,PIDOUT007079,Sree Farida Sales,Service,2025-08-14,orders down,scheme support requested,unknown
+PIDWL01010,PIDOUT003614,United Jagan Services,ASM,2026-02-13,seasonal crop miss,scheme support requested,medium
+PIDWL01011,PIDOUT003839,NATIONAL REVATHI HARDWARE,Distributor,2026-03-26,owner dispute,new owner to verify,high
+PIDWL01012,PIDOUT003552,Murugan Farida Chemicals,RSM,2026-01-06,service complaint,new owner to verify,high
+PIDWL01013,PIDOUT005029,Shree Farida Hardware,Credit,2025-09-05,orders down,waiting for payment,low
+PIDWL01014,PIDDLR000434,Shree Manoj Agencies,Distributor,2025-07-28,orders down,new owner to verify,medium
+PIDWL01015,PIDOUT002667,City Farida Mart,Service,2025-07-28,orders down,field visit planned,medium
+PIDWL01016,PIDOUT007965,New Lakshmi Hardware,RSM,2025-10-18,payment delay,lost to competitor,high
+PIDWL01017,PIDOUT008818,Ganesh Prakash Hardware,Distributor,2026-02-01,payment delay,field visit planned,medium
+PIDWL01018,PIDOUT008998,City Rafiq Tyres,Zonal office,2025-09-13,orders down,field visit planned,high
+PIDWL01019,PIDOUT008077,Balaji Irfan Hardware,Zonal office,2025-06-17,scheme claim pending,scheme support requested,unknown
+PIDWL01020,PIDDLR001012,Sree Irfan Distributors,Zonal office,2025-10-13,service complaint,scheme support requested,unknown
+PIDWL01021,PIDOUT004864,SHREE PRAKASH TYRES,ASM,29/07/2025,owner dispute,lost to competitor,unknown
+PIDWL01022,PIDOUT008307,Balaji Chandra Depot,Credit,24/09/2025,payment delay,new owner to verify,medium
+PIDWL01023,PIDOUT002364,Prime Deepak Traders,Service,2025-11-27,orders down,new owner to verify,medium
+PIDWL01024,PIDOUT005998,Prime Geetha Hardware,Zonal office,01/03/2026,seasonal crop miss,waiting for payment,unknown
+PIDWL01025,PIDOUT003598,National Sowmya Hardware,ASM,2025-07-19,competitor offer,lost to competitor,low
+PIDWL01026,PIDOUT002159,Ganesh Irfan Hardware,Zonal office,03/15/2026,payment delay,lost to competitor,low
+PIDWL01027,PIDDLR000566,Lucky Geetha Distributors,RSM,2025-12-17,closed counter,new owner to verify,unknown
+PIDWL01028,PIDOUT004110,City Karthik Hardware,Zonal office,2025-09-23,closed counter,credit call done,unknown
+PIDWL01029,PIDOUT001677,Shree Rafiq Stores,ASM,19-Jan-26,scheme claim pending,field visit planned,high
+PIDWL01030,PIDOUT005318,BALAJI JAGAN AGENCIES,ASM,2025-09-17,service complaint,new owner to verify,unknown
+PIDWL01031,PIDOUT006998,Balaji Senthil Mart,Service,2025-06-10,seasonal crop miss,scheme support requested,low
+PIDWL01032,PIDOUT007480,Sree Rafiq Associates,Service,2025-10-10,payment delay,lost to competitor,unknown
+PIDWL01033,PIDOUT007914,Shree Irfan Hardware,Zonal office,2025-07-29,competitor offer,waiting for payment,high
+PIDWL01034,PIDOUT003375,Ganesh Priya Sales,Credit,10/30/2025,service complaint,new owner to verify,high
+PIDWL01035,PIDDLR000550,LUCKY CHANDRA DISTRIBUTORS,Credit,2025-08-01,service complaint,field visit planned,medium
+PIDWL01036,PIDOUT006321,Lucky Yusuf Hardware,Service,2025-12-27,orders down,lost to competitor,high
+PIDWL01037,PIDOUT004955,Kaveri Rafiq Hardware,RSM,2025-06-19,scheme claim pending,waiting for payment,low
+PIDWL01038,PIDOUT003293,United Suresh Corporation,Service,2025-08-30,orders down,lost to competitor,unknown
+PIDWL01039,PIDOUT003010,BALAJI DEEPAK HARDWARE,Credit,2025-09-17,service complaint,lost to competitor,low
+PIDWL01040,PIDOUT003651,New Lokesh Distributors,Service,2026-02-07,seasonal crop miss,credit call done,high
+PIDWL01041,PIDOUT007302,Murugan Jagan Distributors,Distributor,2025-12-07,seasonal crop miss,waiting for payment,high
+PIDWL01042,PIDOUT008144,National Geetha Hardware,ASM,2025-09-26,competitor offer,field visit planned,unknown
+PIDWL01043,PIDOUT006436,Kaveri Deepak Sales,Credit,24-Mar-26,service complaint,field visit planned,medium
+PIDWL01044,PIDOUT005314,Modern Yusuf Hardware,ASM,2025-11-01,closed counter,waiting for payment,high
+PIDWL01045,PIDOUT003714,Balaji Manoj Hardware,Service,2025-10-10,owner dispute,new owner to verify,unknown
+PIDWL01046,PIDDLR000998,Vijaya Sanjay Distributors & Co,RSM,2025-10-04,seasonal crop miss,new owner to verify,high
+PIDWL01047,PIDOUT008082,Mahalakshmi Sowmya Hardware,ASM,2025-09-26,payment delay,scheme support requested,low
+PIDWL01048,PIDOUT003886,Sri Lokesh Hardware,Service,2026-03-05,payment delay,scheme support requested,low
+PIDWL01049,PIDOUT003185,Balaji Suresh Distributors,Service,22-Jan-26,payment delay,waiting for payment,high
+PIDWL01050,PIDOUT006763,Ganesh Kavya Tyres,RSM,2025-07-09,service complaint,credit call done,high
+PIDWL01051,PIDOUT008380,Murugan Sowmya Hardware,RSM,2025-09-25,closed counter,scheme support requested,medium
+PIDWL01052,PIDOUT001106,National Lakshmi Stores,Service,2025-11-29,closed counter,new owner to verify,unknown
+PIDWL01053,PIDOUT003695,Balaji Farida Services,Zonal office,2025-11-10,owner dispute,new owner to verify,medium
+PIDWL01054,PIDOUT004821,Balaji Rafiq Corporation,RSM,2025-11-03,owner dispute,waiting for payment,high
+PIDWL01055,PIDOUT003257,Ganesh Revathi Distributors,ASM,2026-03-28,service complaint,scheme support requested,high
+PIDWL01056,PIDOUT008640,Star Ganesh Hardware,RSM,2025-12-13,seasonal crop miss,credit call done,low
+PIDWL01057,PIDOUT000956,Prime Lakshmi Depot,RSM,2025-07-04,owner dispute,lost to competitor,low
+PIDWL01058,PIDOUT008662,New Irfan Tyres,Credit,2025-12-09,seasonal crop miss,field visit planned,low
+PIDWL01059,PIDDLR000347,KAVERI YUSUF MART,Zonal office,2026-03-17,service complaint,lost to competitor,high
+PIDWL01060,PIDOUT003390,Kaveri Irfan Hardware,Distributor,25/09/2025,competitor offer,lost to competitor,unknown
+PIDWL01061,PIDOUT000950,Prime Rafiq Hardware,RSM,2025-06-26,closed counter,scheme support requested,low
+PIDWL01062,PIDOUT005358,Murugan Bala Hardware,Credit,2025-06-02,closed counter,waiting for payment,medium
+PIDWL01063,PIDOUT005800,Sri Geetha Hardware Main,Credit,2025-06-22,seasonal crop miss,waiting for payment,low
+PIDWL01064,PIDOUT001485,Kaveri Priya Agro,Zonal office,03/23/2026,closed counter,credit call done,high
+PIDWL01065,PIDDLR000153,Vijaya Prakash Distributors,Credit,2025-09-20,owner dispute,lost to competitor,low
+PIDWL01066,PIDOUT003909,Royal Anand Corporation,Credit,02/28/2026,orders down,waiting for payment,low
+PIDWL01067,PIDOUT007393,Sri Jagan Services,Distributor,12/28/2025,orders down,credit call done,low
+PIDWL01068,PIDDLR000120,Prime Lokesh Enterprises,ASM,2025-09-07,competitor offer,field visit planned,unknown
+PIDWL01069,PIDOUT007107,Lucky Anand Fertilisers,Distributor,23/09/2025,service complaint,lost to competitor,high
+PIDWL01070,PIDOUT005970,Murugan Naveen Hardware,RSM,2025-12-14,service complaint,waiting for payment,unknown
+PIDWL01071,PIDOUT001762,Balaji Prakash Traders,Credit,2026-03-20,payment delay,scheme support requested,medium
+PIDWL01072,PIDOUT007159,Vijaya Chandra Tyres,ASM,2025-09-25,orders down,lost to competitor,high
+PIDWL01073,PIDOUT008327,City Prakash Agencies,Service,2026-03-01,scheme claim pending,field visit planned,low
+PIDWL01074,PIDDLR000063,Modern Manoj Distributors,ASM,2025-08-10,scheme claim pending,scheme support requested,low
+PIDWL01075,PIDOUT003739,Balaji Meena Tyres,Distributor,21-Oct-25,orders down,lost to competitor,medium
+PIDWL01076,PIDOUT002446,Vijaya Sanjay Hardware,ASM,2025-07-31,owner dispute,waiting for payment,unknown
+PIDWL01077,PIDOUT004481,New Suresh Hardware,ASM,2025-09-15,closed counter,scheme support requested,medium
+PIDWL01078,PIDOUT000445,Metro Senthil Enterprises Main,ASM,2025-09-06,service complaint,lost to competitor,medium
+PIDWL01079,PIDOUT007493,Lucky Yusuf Hardware,Distributor,2025-12-13,service complaint,lost to competitor,low
+PIDWL01080,PIDOUT003434,Star Irfan Agencies,Credit,07-Sep-25,payment delay,field visit planned,high
+PIDWL01081,PIDOUT003356,National Yusuf Chemicals,Distributor,2025-06-04,orders down,field visit planned,unknown
+PIDWL01082,PIDOUT002720,Balaji Geetha Hardware,Service,2025-06-13,owner dispute,lost to competitor,high
+PIDWL01083,PIDOUT006714,City Jagan Stores,ASM,25/07/2025,service complaint,lost to competitor,medium
+PIDWL01084,PIDOUT002341,United Geetha Corporation,Service,2025-07-20,service complaint,new owner to verify,low
+PIDWL01085,PIDOUT008625,Mahalakshmi Naveen Associates,ASM,2025-07-17,scheme claim pending,lost to competitor,high
+PIDWL01086,PIDOUT001606,Prime Manoj Hardware,Zonal office,2026-03-09,orders down,scheme support requested,high
+PIDWL01087,PIDOUT000384,Shri Jagan Hardware,Credit,2025-09-04,orders down,lost to competitor,medium
+PIDWL01088,PIDOUT006440,Royal Kavya Hardware,Zonal office,06-Feb-26,orders down,field visit planned,low
+PIDWL01089,PIDOUT005983,Mahalakshmi Deepak Chemicals,Zonal office,2026-02-19,orders down,lost to competitor,unknown
+PIDWL01090,PIDOUT005131,Vijaya Lokesh Depot,ASM,01/07/2025,seasonal crop miss,scheme support requested,medium
+PIDWL01091,PIDOUT008109,Lucky Manoj Mart,Credit,2025-06-07,payment delay,waiting for payment,high
+PIDWL01092,PIDDLR000572,Prime Ganesh Distributors,Credit,2025-08-16,orders down,lost to competitor,medium
+PIDWL01093,PIDOUT000443,Murugan Deepak Hardware,Zonal office,2026-01-13,payment delay,new owner to verify,unknown
+PIDWL01094,PIDOUT006404,Shree Jagan Hardware,RSM,2025-10-17,orders down,scheme support requested,low
+PIDWL01095,PIDOUT000131,National Sowmya Agencies,Zonal office,29/03/2026,service complaint,waiting for payment,low
+PIDWL01096,PIDOUT007945,Vijaya Arun Hardware,Distributor,2026-02-03,competitor offer,lost to competitor,low
+PIDWL01097,PIDDLR001063,Vijaya Venkatesh Depot,Distributor,2025-09-30,service complaint,new owner to verify,unknown
+PIDWL01098,PIDOUT005409,Mahalakshmi Naveen Services,Distributor,2025-07-14,orders down,new owner to verify,low
+PIDWL01099,PIDOUT006635,Kaveri Kavya Depot,Distributor,2026-01-19,closed counter,waiting for payment,unknown
+PIDWL01100,PIDDLR000644,Prime Revathi Enterprises,Distributor,2025-12-08,owner dispute,field visit planned,medium
+PIDWL01101,PIDOUT003861,City Prakash Services,Zonal office,2025-12-04,seasonal crop miss,new owner to verify,low
+PIDWL01102,PIDOUT000161,United Prakash Associates,Credit,2025-12-03,payment delay,new owner to verify,low
+PIDWL01103,PIDOUT007541,Murugan Hari Traders,Credit,2025-11-25,closed counter,field visit planned,high
+PIDWL01104,PIDOUT002792,Star Jagan Hardware,Distributor,2025-08-15,closed counter,scheme support requested,medium
+PIDWL01105,PIDOUT006348,Balaji Karthik Chemicals,Distributor,2026-02-13,seasonal crop miss,field visit planned,medium
+PIDWL01106,PIDOUT000127,National Ganesh Agencies,RSM,2026-01-30,competitor offer,new owner to verify,high
+PIDWL01107,PIDOUT003333,Balaji Meena Traders,Zonal office,2026-01-14,closed counter,credit call done,low
+PIDWL01108,PIDOUT004816,Metro Lakshmi Fertilisers,Credit,2026-02-22,owner dispute,credit call done,low
+PIDWL01109,PIDOUT004797,Prime Kavya Hardware,Zonal office,2025-11-19,scheme claim pending,waiting for payment,unknown
+PIDWL01110,PIDOUT004558,SREE ARUN HARDWARE,Service,2025-06-26,owner dispute,field visit planned,unknown
+PIDWL01111,PIDOUT003717,Murugan Irfan Services,Service,2025-07-31,service complaint,lost to competitor,unknown
+PIDWL01112,PIDDLR000615,NEW YUSUF DISTRIBUTORS,ASM,04/06/2025,owner dispute,lost to competitor,low
+PIDWL01113,PIDOUT001319,Royal Naveen Enterprises,RSM,2025-11-27,seasonal crop miss,field visit planned,low
+PIDWL01114,PIDOUT004377,Metro Suresh Hardware,RSM,2025-08-03,seasonal crop miss,new owner to verify,medium
+PIDWL01115,PIDOUT004952,Prime Geetha Depot,Distributor,2026-01-07,seasonal crop miss,lost to competitor,low
+PIDWL01116,PIDOUT008007,Metro Naveen Agro,Distributor,09/22/2025,closed counter,new owner to verify,low
+PIDWL01117,PIDOUT003256,Star Lokesh Hardware,Zonal office,2026-01-08,seasonal crop miss,lost to competitor,medium
+PIDWL01118,PIDOUT001575,BALAJI HARI SERVICES,Distributor,2026-03-28,competitor offer,lost to competitor,medium
+PIDWL01119,PIDDLR000604,Metro Revathi Chemicals,ASM,2025-07-26,service complaint,scheme support requested,medium
+PIDWL01120,PIDOUT001459,Murugan Venkatesh Distributors,RSM,2026-01-09,closed counter,lost to competitor,high
+PIDWL01121,PIDOUT000497,New Bala Tyres,Credit,2026-02-11,closed counter,waiting for payment,high
+PIDWL01122,PIDDLR000994,Sree Irfan Stores,Service,2025-12-13,service complaint,new owner to verify,low
+PIDWL01123,PIDOUT006780,Lucky Farida Hardware,RSM,25/07/2025,scheme claim pending,field visit planned,medium
+PIDWL01124,PIDOUT005816,Mahalakshmi Karthik Hardware,Zonal office,2025-10-31,orders down,scheme support requested,high
+PIDWL01125,PIDOUT006969,Vijaya Venkatesh Hardware,Credit,2025-06-06,service complaint,field visit planned,low
+PIDWL01126,PIDOUT000765,Mahalakshmi Manoj Hardware,Distributor,17-Feb-26,payment delay,waiting for payment,low
+PIDWL01127,PIDOUT005299,Vijaya Suresh Hardware,Credit,2025-12-07,service complaint,new owner to verify,unknown
+PIDWL01128,PIDOUT000317,Royal Lokesh Associates,Distributor,2026-01-25,orders down,waiting for payment,medium
+PIDWL01129,PIDOUT000420,Lucky Yusuf Hardware,Credit,2026-02-23,competitor offer,scheme support requested,medium
+PIDWL01130,PIDOUT001594,Shree Jagan Hardware Ltd,RSM,2025-06-11,payment delay,new owner to verify,high
+PIDWL01131,PIDOUT004697,Lucky Suresh Paints,Credit,2026-01-14,closed counter,field visit planned,medium
+PIDWL01132,PIDOUT008364,Lucky Arun Paints,Service,2026-02-09,seasonal crop miss,lost to competitor,high
+PIDWL01133,PIDOUT003599,Lucky Deepak Traders Ltd,RSM,27-Nov-25,owner dispute,lost to competitor,unknown
+PIDWL01134,PIDOUT003958,ROYAL PRAKASH FERTILISERS,Zonal office,2025-07-11,seasonal crop miss,field visit planned,unknown
+PIDWL01135,PIDOUT005690,New Venkatesh Associates,Zonal office,2025-11-01,competitor offer,lost to competitor,low
+PIDWL01136,PIDOUT001977,Mahalakshmi Lokesh Hardware,Distributor,2026-01-22,seasonal crop miss,lost to competitor,medium
+PIDWL01137,PIDOUT004224,Kaveri Ganesh Hardware,Distributor,2025-11-01,payment delay,new owner to verify,low
+PIDWL01138,PIDOUT003321,City Farida Sales & Co,Credit,2025-11-03,scheme claim pending,field visit planned,medium
+PIDWL01139,PIDOUT006316,City Lokesh Hardware,Credit,2025-11-01,orders down,waiting for payment,low
+PIDWL01140,PIDOUT008009,Sri Lokesh Paints,Distributor,2025-06-28,seasonal crop miss,scheme support requested,low
+PIDWL01141,PIDDLR000260,Lucky Senthil Chemicals,Distributor,2025-10-30,scheme claim pending,waiting for payment,low
+PIDWL01142,PIDOUT003760,City Prakash Hardware,Service,2025-11-07,closed counter,scheme support requested,unknown
+PIDWL01143,PIDOUT000274,Balaji Priya Hardware,Credit,2025-08-29,scheme claim pending,field visit planned,unknown
+PIDWL01144,PIDOUT000514,Murugan Rafiq Corporation,ASM,2026-01-01,owner dispute,lost to competitor,medium
+PIDWL01145,PIDOUT000887,Star Naveen Enterprises,Credit,2026-01-28,seasonal crop miss,waiting for payment,unknown
+PIDWL01146,PIDOUT008378,United Yusuf Distributors,RSM,12/14/2025,closed counter,waiting for payment,low
+PIDWL01147,PIDOUT008829,Shree Deepak Fertilisers,Credit,2025-07-12,closed counter,lost to competitor,low
+PIDWL01148,PIDOUT008591,Lucky Irfan Enterprises,Zonal office,2025-07-09,owner dispute,waiting for payment,unknown
+PIDWL01149,PIDOUT003979,Murugan Karthik Distributors,Credit,2025-07-13,seasonal crop miss,lost to competitor,medium
+PIDWL01150,PIDOUT008095,Modern Rafiq Paints,Distributor,2026-02-16,closed counter,new owner to verify,high
+PIDWL01151,PIDOUT003326,United Priya Hardware,Distributor,2025-08-15,orders down,scheme support requested,high
+PIDWL01152,PIDOUT006312,METRO KAVYA HARDWARE,Credit,2026-01-15,payment delay,waiting for payment,low
+PIDWL01153,PIDOUT006920,MURUGAN SENTHIL PAINTS,Zonal office,2025-10-09,owner dispute,lost to competitor,high
+PIDWL01154,PIDOUT003155,Murugan Chandra Traders,RSM,2025-11-09,scheme claim pending,credit call done,high
+PIDWL01155,PIDOUT006937,Ganesh Karthik Hardware,Zonal office,2025-09-17,orders down,waiting for payment,unknown
+PIDWL01156,PIDOUT008119,Vijaya Priya Agencies,Credit,2026-01-15,competitor offer,scheme support requested,low
+PIDWL01157,PIDOUT004443,Kaveri Hari Hardware,ASM,2025-12-11,payment delay,lost to competitor,low
+PIDWL01158,PIDOUT001721,New Deepak Hardware,Service,2025-12-16,orders down,credit call done,high
+PIDWL01159,PIDOUT003728,Sree Jagan Stores,Credit,2026-02-10,seasonal crop miss,new owner to verify,unknown
+PIDWL01160,PIDOUT005996,Ganesh Chandra Tyres,ASM,2025-07-12,scheme claim pending,field visit planned,high
+PIDWL01161,PIDOUT002970,Modern Chandra Hardware,Credit,2025-09-15,scheme claim pending,scheme support requested,high
+PIDWL01162,PIDOUT006032,Mahalakshmi Naveen Hardware Main,Distributor,2025-12-20,competitor offer,lost to competitor,low
+PIDWL01163,PIDOUT003348,Vijaya Anand Associates,Zonal office,10/15/2025,competitor offer,field visit planned,unknown
+PIDWL01164,PIDOUT006649,Metro Anand Hardware,Credit,09-Jan-26,closed counter,waiting for payment,low
+PIDWL01165,PIDOUT005976,Sree Geetha Hardware,Distributor,2026-02-12,owner dispute,new owner to verify,high
+PIDWL01166,PIDOUT004936,ROYAL SANJAY STORES,ASM,2025-09-09,owner dispute,waiting for payment,high
+PIDWL01167,PIDOUT008649,SRI DEEPAK HARDWARE,ASM,2026-01-28,scheme claim pending,field visit planned,high
+PIDWL01168,PIDOUT005855,Star Deepak Mart,RSM,2026-02-13,service complaint,lost to competitor,medium
+PIDWL01169,PIDOUT003615,Mahalakshmi Rafiq Hardware,Distributor,2025-06-17,scheme claim pending,lost to competitor,high
+PIDWL01170,PIDDLR000954,PRIME SURESH HARDWARE,Service,2025-08-17,orders down,scheme support requested,unknown
+PIDWL01171,PIDOUT006063,Metro Hari Hardware,Zonal office,2026-01-16,closed counter,credit call done,low
+PIDWL01172,PIDOUT002496,Metro Jagan Fertilisers,Distributor,2026-03-25,payment delay,scheme support requested,unknown
+PIDWL01173,PIDOUT003807,Balaji Priya Fertilisers,Distributor,2025-08-13,competitor offer,credit call done,medium
+PIDWL01174,PIDOUT002012,Balaji Chandra Hardware,Distributor,2025-08-15,closed counter,field visit planned,low
+PIDWL01175,PIDDLR000147,Murugan Manoj Paints,ASM,2026-01-19,owner dispute,waiting for payment,medium
+PIDWL01176,PIDOUT002367,ROYAL JAGAN HARDWARE,ASM,11-Aug-25,orders down,field visit planned,unknown
+PIDWL01177,PIDOUT004065,City Hari Agencies,Distributor,2025-06-27,service complaint,lost to competitor,medium
+PIDWL01178,PIDOUT001670,National Deepak Agencies,Distributor,2025-12-07,owner dispute,waiting for payment,high
+PIDWL01179,PIDDLR000213,Royal Farida Traders,RSM,2025-11-25,seasonal crop miss,waiting for payment,high
+PIDWL01180,PIDOUT003208,Sree Deepak Distributors,RSM,21-Mar-26,seasonal crop miss,waiting for payment,low
+PIDWL01181,PIDOUT008619,Star Farida Hardware,Service,2025-10-25,competitor offer,credit call done,unknown
+PIDWL01182,PIDOUT000198,Murugan Rafiq Hardware,Service,2025-11-07,scheme claim pending,credit call done,high
+PIDWL01183,PIDOUT001574,Ganesh Rafiq Stores,ASM,2026-03-19,service complaint,field visit planned,low
+PIDWL01184,PIDOUT000179,Murugan Revathi Services,ASM,2025-08-16,competitor offer,lost to competitor,high
+PIDWL01185,PIDOUT006544,Metro Rafiq Hardware,Zonal office,2026-01-25,orders down,lost to competitor,medium
+PIDWL01186,PIDOUT003950,United Chandra Tyres,Service,2025-11-02,scheme claim pending,credit call done,medium
+PIDWL01187,PIDOUT006515,Royal Senthil Sales,RSM,01/15/2026,closed counter,waiting for payment,low
+PIDWL01188,PIDOUT004378,Murugan Revathi Services,Credit,2025-08-13,service complaint,scheme support requested,unknown
+PIDWL01189,PIDOUT006448,Star Kavya Depot,Service,12-Jan-26,orders down,waiting for payment,low
+PIDWL01190,PIDOUT007487,Metro Arun Sales,Zonal office,2025-08-27,payment delay,credit call done,unknown
+PIDWL01191,PIDOUT007631,Metro Suresh Stores,Distributor,11/10/2025,closed counter,credit call done,medium
+PIDWL01192,PIDOUT008947,Vijaya Farida Associates,Zonal office,01/07/2025,closed counter,field visit planned,unknown
+PIDWL01193,PIDOUT003130,LUCKY KAVYA HARDWARE,Zonal office,02/12/2026,competitor offer,scheme support requested,medium
+PIDWL01194,PIDOUT008545,New Yusuf Hardware,ASM,2025-08-20,closed counter,credit call done,unknown
+PIDWL01195,PIDOUT008726,Murugan Deepak Traders,Service,2025-07-10,owner dispute,field visit planned,medium
+PIDWL01196,PIDDLR000918,United Deepak Distributors,RSM,2025-11-07,seasonal crop miss,scheme support requested,unknown
+PIDWL01197,PIDOUT000710,Modern Ganesh Traders,Zonal office,2025-06-27,orders down,field visit planned,high
+PIDWL01198,PIDOUT005319,Royal Prakash Hardware,RSM,2025-11-10,payment delay,new owner to verify,low
+PIDWL01199,PIDDLR000960,Sree Naveen Paints,Zonal office,10/10/2025,closed counter,waiting for payment,low
+PIDWL01200,PIDDLR000722,Prime Lokesh Chemicals,Distributor,2025-07-11,payment delay,credit call done,high
+PIDWL01201,PIDOUT005068,KAVERI MANOJ HARDWARE,ASM,11/10/2025,competitor offer,lost to competitor,medium
+PIDWL01202,PIDOUT007989,Kaveri Chandra Tyres,Zonal office,17-Aug-25,competitor offer,new owner to verify,unknown
+PIDWL01203,PIDOUT003660,Metro Rafiq Mart Ltd,Service,2025-07-16,scheme claim pending,lost to competitor,unknown
+PIDWL01204,PIDOUT008978,Modern Prakash Traders,Zonal office,2025-07-21,competitor offer,credit call done,unknown
+PIDWL01205,PIDDLR000151,City Bala Hardware,Service,2025-10-07,seasonal crop miss,waiting for payment,high
+PIDWL01206,PIDOUT001669,Metro Karthik Hardware,RSM,2025-07-22,orders down,field visit planned,unknown
+PIDWL01207,PIDOUT005361,New Lokesh Hardware,Service,2026-02-15,scheme claim pending,credit call done,unknown
+PIDWL01208,PIDOUT004956,City Irfan Paints,Distributor,2025-08-28,service complaint,scheme support requested,unknown
+PIDWL01209,PIDOUT005619,Vijaya Karthik Hardware,Zonal office,2025-10-26,orders down,lost to competitor,low
+PIDWL01210,PIDOUT002803,Kaveri Jagan Hardware,ASM,2026-01-07,scheme claim pending,scheme support requested,medium
+PIDWL01211,PIDOUT000499,Kaveri Irfan Paints,RSM,2025-08-18,payment delay,scheme support requested,unknown
+PIDWL01212,PIDOUT004877,Lucky Ganesh Hardware,ASM,27/11/2025,closed counter,field visit planned,unknown
+PIDWL01213,PIDOUT007105,Modern Revathi Stores,Zonal office,2025-08-26,scheme claim pending,scheme support requested,high
+PIDWL01214,PIDOUT002740,Modern Irfan Services,Zonal office,2025-08-28,service complaint,waiting for payment,medium
+PIDWL01215,PIDDLR000851,United Rafiq Distributors,Service,17/02/2026,orders down,scheme support requested,medium
+PIDWL01216,PIDOUT004524,National Lokesh Hardware,Zonal office,2025-06-05,competitor offer,scheme support requested,high
+PIDWL01217,PIDOUT002236,Murugan Lokesh Fertilisers,ASM,2025-07-07,competitor offer,scheme support requested,unknown
+PIDWL01218,PIDOUT008085,Mahalakshmi Geetha Sales,RSM,2026-01-25,closed counter,scheme support requested,medium
+PIDWL01219,PIDOUT006441,Prime Chandra Hardware,Zonal office,10/18/2025,seasonal crop miss,waiting for payment,medium
+PIDWL01220,PIDOUT008717,Ganesh Anand Hardware,Credit,2025-08-21,scheme claim pending,credit call done,unknown
+PIDWL01221,PIDOUT004351,Vijaya Suresh Fertilisers,Zonal office,2025-12-12,closed counter,lost to competitor,unknown
+PIDWL01222,PIDOUT001988,Metro Prakash Hardware,Distributor,2025-10-11,scheme claim pending,scheme support requested,medium
+PIDWL01223,PIDOUT002343,New Meena Agro,ASM,10/17/2025,payment delay,field visit planned,low
+PIDWL01224,PIDOUT001806,Mahalakshmi Sanjay Mart,Zonal office,2025-10-17,closed counter,scheme support requested,unknown
+PIDWL01225,PIDOUT000237,Royal Lokesh Associates,Zonal office,29-Jun-25,closed counter,scheme support requested,medium
+PIDWL01226,PIDDLR000343,Mahalakshmi Bala Traders,Credit,09/08/2025,scheme claim pending,new owner to verify,medium
+PIDWL01227,PIDDLR000339,New Meena Services,RSM,2026-01-24,seasonal crop miss,scheme support requested,high
+PIDWL01228,PIDOUT003310,Murugan Karthik Hardware,Distributor,2025-11-04,competitor offer,field visit planned,high
+PIDWL01229,PIDDLR000871,MURUGAN GANESH CHEMICALS,Credit,2025-12-15,service complaint,new owner to verify,unknown
+PIDWL01230,PIDOUT003371,Murugan Revathi Enterprises,Zonal office,2025-08-09,seasonal crop miss,waiting for payment,medium
+PIDWL01231,PIDOUT002825,Lucky Sanjay Fertilisers,ASM,2025-06-15,scheme claim pending,credit call done,medium
+PIDWL01232,PIDOUT008303,Prime Ganesh Paints,Distributor,2025-10-06,service complaint,lost to competitor,unknown
+PIDWL01233,PIDOUT007116,Shree Revathi Agro,Service,26/01/2026,scheme claim pending,lost to competitor,unknown
+PIDWL01234,PIDOUT006579,STAR HARI HARDWARE,Distributor,2026-01-02,competitor offer,field visit planned,low
+PIDWL01235,PIDOUT007606,Modern Ganesh Paints,RSM,2025-06-24,scheme claim pending,new owner to verify,high
+PIDWL01236,PIDOUT004441,VIJAYA BALA SERVICES,RSM,2025-08-22,seasonal crop miss,credit call done,high
+PIDWL01237,PIDOUT003999,Mahalakshmi Revathi Hardware,ASM,2025-12-11,payment delay,new owner to verify,low
+PIDWL01238,PIDOUT006775,National Meena Agencies,Distributor,11/12/2025,closed counter,waiting for payment,unknown
+PIDWL01239,PIDOUT000354,Lucky Suresh Hardware,Credit,2025-09-29,scheme claim pending,new owner to verify,high
+PIDWL01240,PIDDLR000540,NATIONAL GANESH AGENCIES,Credit,2025-09-03,service complaint,field visit planned,medium
+PIDWL01241,PIDOUT003125,Shree Chandra Hardware & Co,Zonal office,2025-11-15,closed counter,field visit planned,medium
+PIDWL01242,PIDOUT007154,Prime Lokesh Agencies,RSM,2025-11-14,closed counter,new owner to verify,low
+PIDWL01243,PIDOUT004347,Balaji Bala Fertilisers & Co,Credit,2025-09-14,closed counter,credit call done,low
+PIDWL01244,PIDDLR000641,Modern Geetha Distributors,Zonal office,2025-08-11,closed counter,lost to competitor,high
+PIDWL01245,PIDOUT004440,Prime Priya Hardware,RSM,2025-07-12,scheme claim pending,new owner to verify,high
+PIDWL01246,PIDOUT001416,Mahalakshmi Bala Tyres,Service,2025-08-30,owner dispute,lost to competitor,unknown
+PIDWL01247,PIDOUT002816,Prime Senthil Chemicals,Service,2025-09-18,owner dispute,scheme support requested,unknown
+PIDWL01248,PIDOUT007680,Kaveri Suresh Sales,ASM,23-Aug-25,payment delay,field visit planned,unknown
+PIDWL01249,PIDOUT001636,Metro Bala Hardware,Zonal office,2025-08-28,scheme claim pending,scheme support requested,low
+PIDWL01250,PIDOUT006770,New Karthik Chemicals,Distributor,2025-07-29,orders down,field visit planned,high
+PIDWL01251,PIDOUT000643,Prime Venkatesh Tyres,Zonal office,14/12/2025,scheme claim pending,lost to competitor,medium
+PIDWL01252,PIDOUT006939,Lucky Chandra Fertilisers,Zonal office,10-Nov-25,owner dispute,waiting for payment,unknown
+PIDWL01253,PIDDLR000322,NATIONAL RAFIQ HARDWARE,Zonal office,2025-06-21,owner dispute,waiting for payment,medium
+PIDWL01254,PIDOUT000074,Prime Anand Hardware,ASM,2025-06-29,scheme claim pending,lost to competitor,medium
+PIDWL01255,PIDOUT001042,United Irfan Chemicals,Zonal office,2026-01-31,closed counter,credit call done,high
+PIDWL01256,PIDOUT001442,Vijaya Senthil Services,RSM,2025-12-30,service complaint,scheme support requested,low
+PIDWL01257,PIDOUT004029,Vijaya Ganesh Hardware,ASM,2025-12-19,owner dispute,field visit planned,medium
+PIDWL01258,PIDOUT005480,Ganesh Lakshmi Corporation,ASM,2025-11-13,payment delay,credit call done,low
+PIDWL01259,PIDOUT001462,MURUGAN HARI HARDWARE,Credit,2025-11-01,orders down,credit call done,unknown
+PIDWL01260,PIDOUT004153,Vijaya Hari Tyres,ASM,2026-01-22,seasonal crop miss,credit call done,low
+PIDWL01261,PIDDLR000795,National Geetha Corporation,Zonal office,2025-09-08,competitor offer,waiting for payment,unknown
+PIDWL01262,PIDOUT008014,Metro Ganesh Hardware,ASM,2026-02-24,scheme claim pending,field visit planned,unknown

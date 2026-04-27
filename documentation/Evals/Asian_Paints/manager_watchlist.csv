@@ -1,0 +1,126 @@
+watch_id,customer_id,customer_name,added_by,added_date,watch_reason,last_known_action,manager_confidence
+ASPWL00001,ASPDLR000430,Mahalakshmi Naveen Paints,Zonal office,2025-12-23,scheme claim pending,field visit planned,unknown
+ASPWL00002,ASPDLR000959,Modern Prakash Services,ASM,2025-09-07,payment delay,field visit planned,high
+ASPWL00003,ASPDLR000808,National Bala Paints,Distributor,2025-11-01,owner dispute,field visit planned,high
+ASPWL00004,ASPDLR000059,Murugan Sowmya Chemicals,Zonal office,12/02/2026,competitor offer,lost to competitor,low
+ASPWL00005,ASPDLR000029,Modern Prakash Corporation,Distributor,2025-06-12,competitor offer,new owner to verify,medium
+ASPWL00006,ASPDLR000405,Shree Priya Mart,RSM,2026-01-15,competitor offer,waiting for payment,high
+ASPWL00007,ASPDLR000369,National Irfan Tyres,Distributor,19-Sep-25,orders down,waiting for payment,high
+ASPWL00008,ASPDLR000005,MURUGAN MANOJ PAINTS,ASM,2026-02-15,scheme claim pending,lost to competitor,medium
+ASPWL00009,ASPDLR000228,Lucky Bala Fertilisers,Service,2025-08-05,scheme claim pending,new owner to verify,low
+ASPWL00010,ASPDLR000186,METRO GANESH PAINTS,Zonal office,2025-06-25,scheme claim pending,scheme support requested,low
+ASPWL00011,ASPDLR000719,Mahalakshmi Arun Paints,Distributor,2025-07-22,scheme claim pending,lost to competitor,high
+ASPWL00012,ASPDLR000536,New Senthil Fertilisers,RSM,2025-10-30,competitor offer,new owner to verify,medium
+ASPWL00013,ASPDLR000524,NEW LOKESH AGRO,RSM,2025-09-29,competitor offer,credit call done,medium
+ASPWL00014,ASPDLR000408,Star Lokesh Paints,Zonal office,2025-07-07,payment delay,lost to competitor,unknown
+ASPWL00015,ASPDLR000950,GANESH GANESH MART,Distributor,2026-01-29,payment delay,credit call done,unknown
+ASPWL00016,ASPDLR000559,National Yusuf Paints,Zonal office,2025-06-27,seasonal crop miss,lost to competitor,unknown
+ASPWL00017,ASPDLR000864,Sree Kavya Tyres,Zonal office,2025-12-10,owner dispute,lost to competitor,low
+ASPWL00018,ASPDLR000263,New Jagan Agencies,Credit,2025-11-11,orders down,lost to competitor,medium
+ASPWL00019,ASPDLR000567,Mahalakshmi Deepak Paints,ASM,2025-06-27,competitor offer,waiting for payment,unknown
+ASPWL00020,ASPDLR000050,Sri Farida Stores,RSM,21/07/2025,payment delay,lost to competitor,medium
+ASPWL00021,ASPDLR000238,Sree Geetha Paints,Credit,2025-06-12,orders down,field visit planned,low
+ASPWL00022,ASPDLR000399,City Chandra Paints,RSM,04/02/2026,closed counter,waiting for payment,unknown
+ASPWL00023,ASPDLR000134,Lucky Arun Paints,ASM,2025-08-31,service complaint,lost to competitor,unknown
+ASPWL00024,ASPDLR000315,Vijaya Sanjay Paints,Service,2026-03-06,closed counter,lost to competitor,medium
+ASPWL00025,ASPDLR000799,Balaji Meena Paints,Zonal office,2026-02-09,service complaint,waiting for payment,low
+ASPWL00026,ASPDLR000625,Star Bala Stores,RSM,2025-11-22,closed counter,scheme support requested,high
+ASPWL00027,ASPDLR000017,National Naveen Paints,Zonal office,01/21/2026,seasonal crop miss,lost to competitor,unknown
+ASPWL00028,ASPDLR000613,Murugan Meena Paints,Credit,2025-11-02,closed counter,new owner to verify,medium
+ASPWL00029,ASPDLR000197,Sree Hari Hardware,Service,02/26/2026,seasonal crop miss,new owner to verify,unknown
+ASPWL00030,ASPDLR000587,Sree Geetha Mart,Zonal office,2025-07-19,scheme claim pending,waiting for payment,unknown
+ASPWL00031,ASPDLR000833,Balaji Anand Hardware,Service,2025-10-20,closed counter,waiting for payment,high
+ASPWL00032,ASPDLR000610,Metro Meena Paints,Service,2026-03-23,scheme claim pending,scheme support requested,medium
+ASPWL00033,ASPDLR000170,Murugan Chandra Corporation,Distributor,2026-03-09,owner dispute,lost to competitor,low
+ASPWL00034,ASPDLR000412,United Irfan Hardware,RSM,2026-03-26,competitor offer,credit call done,medium
+ASPWL00035,ASPDLR000938,Prime Lakshmi Paints,Zonal office,2026-02-14,seasonal crop miss,field visit planned,medium
+ASPWL00036,ASPDLR000810,Balaji Meena Paints,Zonal office,2026-02-05,orders down,lost to competitor,low
+ASPWL00037,ASPDLR000616,Ganesh Chandra Sales,ASM,2025-07-12,payment delay,scheme support requested,high
+ASPWL00038,ASPDLR000734,Mahalakshmi Jagan Paints,Zonal office,2026-01-16,payment delay,waiting for payment,unknown
+ASPWL00039,ASPDLR000642,United Yusuf Paints,Zonal office,30/12/2025,competitor offer,new owner to verify,medium
+ASPWL00040,ASPDLR000709,Balaji Irfan Paints,Credit,2026-02-27,competitor offer,credit call done,low
+ASPWL00041,ASPDLR000174,Shree Rafiq Corporation,Distributor,2026-02-09,seasonal crop miss,new owner to verify,unknown
+ASPWL00042,ASPDLR000154,Sri Irfan Associates,Zonal office,2026-03-15,scheme claim pending,scheme support requested,medium
+ASPWL00043,ASPDLR000970,Mahalakshmi Farida Paints,ASM,2026-01-05,competitor offer,credit call done,low
+ASPWL00044,ASPDLR000428,New Anand Paints,Distributor,2025-11-28,seasonal crop miss,field visit planned,medium
+ASPWL00045,ASPDLR000666,City Manoj Paints,Distributor,2026-03-20,scheme claim pending,waiting for payment,low
+ASPWL00046,ASPDLR000832,Royal Anand Paints,Credit,17-Nov-25,payment delay,scheme support requested,unknown
+ASPWL00047,ASPDLR000729,Star Jagan Enterprises,Credit,2025-08-19,seasonal crop miss,lost to competitor,high
+ASPWL00048,ASPDLR000325,Ganesh Ganesh Depot,RSM,2025-09-26,closed counter,scheme support requested,low
+ASPWL00049,ASPDLR000035,New Karthik Fertilisers,ASM,2025-10-04,closed counter,scheme support requested,medium
+ASPWL00050,ASPDLR000036,Balaji Rafiq Mart,Distributor,2025-08-26,competitor offer,new owner to verify,medium
+ASPWL00051,ASPDLR000588,Modern Lakshmi Corporation,Service,12/08/2025,service complaint,credit call done,unknown
+ASPWL00052,ASPDLR000479,Royal Deepak Traders,Distributor,2026-01-10,orders down,new owner to verify,low
+ASPWL00053,ASPDLR000190,Prime Deepak Paints,Credit,10/06/2025,orders down,field visit planned,medium
+ASPWL00054,ASPDLR000309,Ganesh Lakshmi Paints,Zonal office,08-Nov-25,owner dispute,lost to competitor,low
+ASPWL00055,ASPDLR000755,Vijaya Lakshmi Paints,Service,2026-02-26,seasonal crop miss,field visit planned,high
+ASPWL00056,ASPDLR000751,Sri Sowmya Corporation,Service,23-Oct-25,competitor offer,new owner to verify,unknown
+ASPWL00057,ASPDLR000001,Sree Revathi Services,Credit,2025-09-02,owner dispute,scheme support requested,high
+ASPWL00058,ASPDLR000735,United Ganesh Distributors,ASM,12/07/2025,scheme claim pending,scheme support requested,low
+ASPWL00059,ASPDLR000517,City Ganesh Agro,Distributor,26/01/2026,seasonal crop miss,credit call done,unknown
+ASPWL00060,ASPDLR000371,Vijaya Chandra Paints,Distributor,2025-10-18,payment delay,lost to competitor,medium
+ASPWL00061,ASPDLR000084,Ganesh Sowmya Paints,Credit,23/02/2026,closed counter,credit call done,low
+ASPWL00062,ASPDLR000451,Star Anand Associates,Service,18/11/2025,owner dispute,waiting for payment,high
+ASPWL00063,ASPDLR000192,Ganesh Deepak Agro,Zonal office,15-Feb-26,owner dispute,field visit planned,low
+ASPWL00064,ASPDLR000289,Royal Venkatesh Fertilisers,ASM,2025-07-24,owner dispute,credit call done,unknown
+ASPWL00065,ASPDLR000485,Lucky Sanjay Traders Pvt,ASM,2025-12-08,owner dispute,waiting for payment,medium
+ASPWL00066,ASPDLR000910,Ganesh Chandra Paints,Service,2025-12-09,seasonal crop miss,lost to competitor,unknown
+ASPWL00067,ASPDLR000223,Vijaya Priya Fertilisers,Distributor,2025-06-07,scheme claim pending,waiting for payment,high
+ASPWL00068,ASPDLR000150,New Geetha Associates,RSM,08/21/2025,closed counter,lost to competitor,unknown
+ASPWL00069,ASPDLR000367,Sri Suresh Paints,Zonal office,2026-03-27,scheme claim pending,waiting for payment,medium
+ASPWL00070,ASPDLR000803,Sree Chandra Hardware,RSM,2026-02-23,competitor offer,waiting for payment,high
+ASPWL00071,ASPDLR000936,Sree Meena Associates,Credit,04/03/2026,orders down,field visit planned,high
+ASPWL00072,ASPDLR000854,Royal Senthil Paints,Service,2025-09-21,payment delay,scheme support requested,unknown
+ASPWL00073,ASPDLR000973,Vijaya Senthil Paints,Service,2026-02-09,service complaint,field visit planned,high
+ASPWL00074,ASPDLR000215,Star Karthik Fertilisers,RSM,2025-10-17,owner dispute,new owner to verify,high
+ASPWL00075,ASPDLR000530,Star Senthil Paints,Credit,2026-02-10,closed counter,scheme support requested,unknown
+ASPWL00076,ASPDLR000509,Balaji Arun Fertilisers,Zonal office,2026-01-23,service complaint,new owner to verify,unknown
+ASPWL00077,ASPDLR000040,City Geetha Tyres,Zonal office,2025-10-11,closed counter,new owner to verify,medium
+ASPWL00078,ASPDLR000476,Prime Jagan Hardware,Zonal office,2025-10-11,scheme claim pending,lost to competitor,low
+ASPWL00079,ASPDLR000164,City Suresh Traders,Service,30/08/2025,seasonal crop miss,scheme support requested,high
+ASPWL00080,ASPDLR000426,City Meena Paints,Service,2025-09-16,owner dispute,scheme support requested,high
+ASPWL00081,ASPDLR000654,Ganesh Geetha Associates,ASM,2025-07-12,service complaint,new owner to verify,low
+ASPWL00082,ASPDLR000279,Murugan Lokesh Stores,ASM,2025-09-14,orders down,new owner to verify,high
+ASPWL00083,ASPDLR000852,Balaji Priya Sales,Distributor,2026-01-09,competitor offer,lost to competitor,high
+ASPWL00084,ASPDLR000456,Prime Deepak Stores,RSM,09/09/2025,closed counter,lost to competitor,medium
+ASPWL00085,ASPDLR000847,LUCKY JAGAN TRADERS,Distributor,01/25/2026,payment delay,scheme support requested,low
+ASPWL00086,ASPDLR000599,Metro Karthik Paints,Zonal office,2025-09-26,closed counter,scheme support requested,low
+ASPWL00087,ASPDLR000980,Sri Hari Traders,Distributor,2025-11-24,closed counter,scheme support requested,medium
+ASPWL00088,ASPDLR000382,NEW SANJAY PAINTS,RSM,12-Nov-25,competitor offer,field visit planned,low
+ASPWL00089,ASPDLR000494,Sri Deepak Paints,Credit,2025-11-04,closed counter,credit call done,low
+ASPWL00090,ASPDLR000336,Ganesh Deepak Agro,Distributor,14-Oct-25,payment delay,waiting for payment,unknown
+ASPWL00091,ASPDLR000572,Lucky Hari Paints,ASM,28/06/2025,competitor offer,field visit planned,high
+ASPWL00092,ASPDLR000899,UNITED REVATHI ENTERPRISES,Distributor,2026-02-17,seasonal crop miss,new owner to verify,unknown
+ASPWL00093,ASPDLR000815,Modern Senthil Chemicals,Credit,2025-08-31,closed counter,scheme support requested,high
+ASPWL00094,ASPDLR000285,Ganesh Naveen Paints,Credit,2025-09-06,owner dispute,field visit planned,medium
+ASPWL00095,ASPDLR000425,United Yusuf Traders,ASM,2025-09-21,closed counter,new owner to verify,low
+ASPWL00096,ASPDLR000962,Balaji Venkatesh Paints,Zonal office,2025-10-17,seasonal crop miss,new owner to verify,unknown
+ASPWL00097,ASPDLR000176,National Prakash Services,ASM,2025-07-20,scheme claim pending,lost to competitor,medium
+ASPWL00098,ASPDLR000007,Ganesh Kavya Chemicals,Service,2026-01-17,owner dispute,lost to competitor,high
+ASPWL00099,ASPDLR000072,Lucky Jagan Distributors,Zonal office,2025-11-17,scheme claim pending,new owner to verify,high
+ASPWL00100,ASPDLR000754,Ganesh Yusuf Paints Ltd,Distributor,28-Jan-26,owner dispute,credit call done,medium
+ASPWL00101,ASPDLR000534,SRI Suresh Agro,Zonal office,2025-07-26,seasonal crop miss,new owner to verify,high
+ASPWL00102,ASPDLR000486,Modern Karthik Paints,Credit,2025-06-04,orders down,scheme support requested,medium
+ASPWL00103,ASPDLR000364,Sri Sowmya Mart,ASM,2025-09-29,competitor offer,lost to competitor,medium
+ASPWL00104,ASPDLR000892,Metro Rafiq Paints,Service,2025-06-27,owner dispute,credit call done,high
+ASPWL00105,ASPDLR000826,Kaveri Bala Paints,Service,2026-01-25,service complaint,waiting for payment,low
+ASPWL00106,ASPDLR000120,Lucky Suresh Agro,ASM,2025-08-06,competitor offer,lost to competitor,low
+ASPWL00107,ASPDLR000891,LUCKY PRIYA TRADERS,Zonal office,2026-03-15,orders down,new owner to verify,medium
+ASPWL00108,ASPDLR000233,Star Farida Depot,RSM,2025-07-02,scheme claim pending,field visit planned,low
+ASPWL00109,ASPDLR000665,Sri Arun Paints,Distributor,05/07/2025,competitor offer,scheme support requested,high
+ASPWL00110,ASPDLR000921,Shree Sanjay Paints,Distributor,2026-01-09,owner dispute,new owner to verify,high
+ASPWL00111,ASPDLR000127,Modern Deepak Paints,Distributor,2025-11-24,closed counter,new owner to verify,low
+ASPWL00112,ASPDLR000672,Lucky Priya Paints,RSM,2026-02-28,seasonal crop miss,lost to competitor,medium
+ASPWL00113,ASPDLR000874,Royal Karthik Paints,ASM,2025-09-24,competitor offer,scheme support requested,high
+ASPWL00114,ASPDLR000258,Mahalakshmi Revathi Agencies,Zonal office,2026-01-25,owner dispute,waiting for payment,high
+ASPWL00115,ASPDLR000276,United Rafiq Depot,ASM,2025-09-15,orders down,waiting for payment,unknown
+ASPWL00116,ASPDLR000328,BALAJI FARIDA MART,Distributor,2026-02-15,seasonal crop miss,scheme support requested,low
+ASPWL00117,ASPDLR000206,UNITED VENKATESH PAINTS,Credit,06/24/2025,orders down,lost to competitor,high
+ASPWL00118,ASPDLR000358,National Lokesh Tyres,Distributor,2026-02-11,orders down,credit call done,high
+ASPWL00119,ASPDLR000693,Shree Yusuf Agro,Credit,2025-10-10,payment delay,waiting for payment,medium
+ASPWL00120,ASPDLR000778,BALAJI DEEPAK MART,Zonal office,2025-07-14,owner dispute,scheme support requested,unknown
+ASPWL00121,ASPDLR000725,Shree Sowmya Paints,Credit,2025-07-24,scheme claim pending,credit call done,high
+ASPWL00122,ASPDLR000603,Star Suresh Paints Main,Zonal office,2025-07-13,owner dispute,waiting for payment,unknown
+ASPWL00123,ASPDLR000438,Lucky Ganesh Paints,ASM,2025-06-11,competitor offer,scheme support requested,high
+ASPWL00124,ASPDLR000651,Sri Priya Corporation,Distributor,2025-09-18,service complaint,scheme support requested,unknown
+ASPWL00125,ASPDLR000054,United Yusuf Mart,Credit,2025-09-24,service complaint,new owner to verify,high

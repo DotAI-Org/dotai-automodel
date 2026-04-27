@@ -1,0 +1,27 @@
+sku_id,legacy_sku_code,category,sku_name,pack_size,uom,mrp,active_flag
+ASP0001,ASP-6246,Decorative paints,Royale Luxury,medium,BAG,2229.60,Y
+ASP0002,ASP-7111,Decorative paints,Royale Luxury,bulk,BOX,3331.93,Y
+ASP0003,ASP-9561,Decorative paints,Royale Luxury,large,KG,989.00,Y
+ASP0004,ASP-6915,Decorative paints,Apcolite Premium,large,BAG,1108.95,Y
+ASP0005,ASP-5904,Decorative paints,Tractor Emulsion,bulk,BAG,8420.82,Y
+ASP0006,ASP-5924,Decorative paints,Ace Exterior,large,BAG,3244.26,N
+ASP0007,ASP-4391,Decorative paints,Ace Exterior,bulk,LTR,8746.46,Y
+ASP0008,ASP-2148,Decorative paints,Ace Exterior,small,BOX,8572.80,N
+ASP0009,ASP-6846,Decorative paints,Apex Ultima,bulk,EA,2286.47,Y
+ASP0010,ASP-6868,Decorative paints,Apex Ultima,large,BAG,3679.93,Y
+ASP0011,ASP-2880,Decorative paints,Apex Ultima,medium,SET,5733.27,Y
+ASP0012,ASP-2432,Waterproofing,SmartCare Damp Proof,medium,KG,1452.54,Y
+ASP0013,ASP-6286,Waterproofing,SmartCare Hydroloc,bulk,BOX,8334.69,Y
+ASP0014,ASP-8118,Waterproofing,SmartCare Hydroloc,medium,BOX,2185.41,Y
+ASP0015,ASP-4772,Waterproofing,SmartCare Hydroloc,small,BAG,5287.99,Y
+ASP0016,ASP-5032,Waterproofing,SmartCare Crack Seal,medium,LTR,5526.22,Y
+ASP0017,ASP-8973,Waterproofing,SmartCare Crack Seal,large,BOX,7911.42,Y
+ASP0018,ASP-5461,Wood finishes,Touchwood,medium,BOX,1158.67,Y
+ASP0019,ASP-2653,Wood finishes,Melamyne,large,EA,6279.84,Y
+ASP0020,ASP-6303,Wood finishes,Melamyne,medium,KG,804.64,Y
+ASP0021,ASP-2855,Wood finishes,Woodtech,bulk,LTR,5065.31,Y
+ASP0022,ASP-6757,Wood finishes,Woodtech,large,KG,4188.55,Y
+ASP0023,ASP-6384,Wood finishes,Woodtech,medium,LTR,3562.69,Y
+ASP0024,-,Services,Beautiful Homes Painting,large,BOX,156.68,Y
+ASP0025,ASP-9936,Services,Colour Consultancy,large,KG,4268.19,Y
+ASP0026,ASP-8542,Services,Project Supply,bulk,BOX,3289.08,Y

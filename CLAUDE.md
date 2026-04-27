@@ -90,7 +90,9 @@ Read these auto-generated indexes to understand the codebase:
 2. **[documentation/backend/INDEX.md](documentation/backend/INDEX.md)** — All Python files, functions with docstrings, cross-file call graph, API routes
 3. **[documentation/frontend/INDEX.md](documentation/frontend/INDEX.md)** — All frontend files, JS functions, fetch calls, WebSocket connections
 
-These indexes are regenerated on every file write/edit via a PostToolUse hook (`scripts/generate_docs.py`). When adding or modifying Python code, write a one-line docstring for each function and class — the index extracts these.
+These indexes are regenerated on every file write/edit via a PostToolUse hook (`scripts/generate_docs.py`).
+Hook command: `cd "$PWD" && python scripts/generate_docs.py 2>/dev/null; exit 0`
+When adding or modifying Python code, write a one-line docstring for each function and class — the index extracts these.
 
 ---
 

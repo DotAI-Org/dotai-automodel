@@ -1,0 +1,376 @@
+watch_id,customer_id,customer_name,added_by,added_date,watch_reason,last_known_action,manager_confidence
+CORWL00001,CORDLR001157,Balaji Jagan Mart,Service,2025-09-19,competitor offer,scheme support requested,medium
+CORWL00002,CORDLR000295,MODERN FARIDA ENTERPRISES,Service,17-Dec-25,payment delay,credit call done,medium
+CORWL00003,CORDLR001070,Vijaya Sanjay Tyres,RSM,09/14/2025,closed counter,new owner to verify,low
+CORWL00004,CORDLR000851,New Bala Agro,Credit,25-Feb-26,closed counter,lost to competitor,low
+CORWL00005,CORDLR000279,United Hari Agro,Credit,2026-01-19,scheme claim pending,field visit planned,unknown
+CORWL00006,CORDLR002382,Royal Rafiq Chemicals,Service,22-Feb-26,payment delay,new owner to verify,medium
+CORWL00007,CORDLR001162,MAHALAKSHMI IRFAN PAINTS,Service,2025-06-22,competitor offer,scheme support requested,medium
+CORWL00008,CORDLR002295,Prime Hari Agro,RSM,2025-07-09,orders down,field visit planned,low
+CORWL00009,CORDLR002324,Balaji Arun Agencies,Credit,2025-10-02,scheme claim pending,new owner to verify,medium
+CORWL00010,CORDLR002868,Shree Venkatesh Services,Service,2025-07-06,service complaint,lost to competitor,unknown
+CORWL00011,CORDLR000503,Royal Karthik Traders & Co,Service,19-Jan-26,scheme claim pending,field visit planned,high
+CORWL00012,CORDLR002854,United Sanjay Traders,Credit,2026-03-19,competitor offer,waiting for payment,medium
+CORWL00013,CORDLR002194,Modern Jagan Associates,RSM,2025-08-28,service complaint,waiting for payment,low
+CORWL00014,CORDLR000485,City Sanjay Paints,Service,2026-01-17,closed counter,new owner to verify,unknown
+CORWL00015,CORDLR000328,Star Geetha Agro,Zonal office,2025-07-08,orders down,scheme support requested,low
+CORWL00016,CORDLR002262,Royal Sowmya Agro,RSM,2026-03-07,payment delay,waiting for payment,medium
+CORWL00017,CORDLR001058,Ganesh Meena Sales,ASM,11/17/2025,closed counter,scheme support requested,medium
+CORWL00018,CORDLR001288,Prime Bala Agro,Credit,2026-01-11,closed counter,new owner to verify,unknown
+CORWL00019,CORDLR000412,Vijaya Farida Distributors,RSM,2025-09-30,competitor offer,field visit planned,medium
+CORWL00020,CORDLR002615,Modern Manoj Services,ASM,2025-08-27,owner dispute,scheme support requested,medium
+CORWL00021,CORDLR001385,Modern Suresh Associates,Credit,2025-10-10,seasonal crop miss,credit call done,medium
+CORWL00022,CORDLR002328,Sree Ganesh Stores,Distributor,14/08/2025,owner dispute,lost to competitor,unknown
+CORWL00023,CORDLR001091,Ganesh Sowmya Agro,RSM,2025-09-28,competitor offer,credit call done,unknown
+CORWL00024,CORDLR002550,Mahalakshmi Arun Agro,RSM,2025-07-27,scheme claim pending,new owner to verify,low
+CORWL00025,CORDLR002353,Prime Kavya Enterprises Main,ASM,2026-01-15,payment delay,lost to competitor,high
+CORWL00026,CORDLR000920,Vijaya Sowmya Agro,Credit,2025-10-03,closed counter,field visit planned,medium
+CORWL00027,CORDLR000580,New Farida Corporation,Distributor,2025-11-26,orders down,credit call done,unknown
+CORWL00028,CORDLR000460,United Lokesh Agro Main,Distributor,15/07/2025,service complaint,waiting for payment,medium
+CORWL00029,CORDLR001930,National Venkatesh Stores,Credit,2025-09-07,competitor offer,new owner to verify,unknown
+CORWL00030,CORDLR001433,Vijaya Venkatesh Traders,ASM,2025-08-09,scheme claim pending,field visit planned,high
+CORWL00031,CORDLR000514,UNITED IRFAN PAINTS,Distributor,2026-03-13,scheme claim pending,new owner to verify,low
+CORWL00032,CORDLR002438,BALAJI MEENA FERTILISERS,Zonal office,2026-03-09,service complaint,new owner to verify,low
+CORWL00033,CORDLR000843,Lucky Lakshmi Agro,Credit,2025-10-17,scheme claim pending,lost to competitor,medium
+CORWL00034,CORDLR001588,Vijaya Anand Agro,Credit,2025-09-13,competitor offer,scheme support requested,unknown
+CORWL00035,CORDLR000131,Sree Arun Hardware,ASM,2025-06-11,owner dispute,waiting for payment,medium
+CORWL00036,CORDLR000320,Royal Ganesh Hardware,Credit,2025-07-15,service complaint,new owner to verify,unknown
+CORWL00037,CORDLR002989,Murugan Suresh Chemicals,RSM,2026-02-17,orders down,credit call done,medium
+CORWL00038,CORDLR001376,Modern Irfan Traders,ASM,2025-08-26,seasonal crop miss,lost to competitor,unknown
+CORWL00039,CORDLR001800,Lucky Geetha Associates,ASM,13/03/2026,seasonal crop miss,waiting for payment,high
+CORWL00040,CORDLR001928,Balaji Yusuf Enterprises,RSM,2025-11-01,seasonal crop miss,scheme support requested,low
+CORWL00041,CORDLR002222,Kaveri Irfan Traders,RSM,2025-07-13,service complaint,lost to competitor,high
+CORWL00042,CORDLR000970,Lucky Venkatesh Agro,Service,2025-06-09,service complaint,waiting for payment,medium
+CORWL00043,CORDLR000267,Star Irfan Hardware,Distributor,2026-02-12,closed counter,lost to competitor,medium
+CORWL00044,CORDLR001554,Star Meena Agro,RSM,2025-11-08,owner dispute,waiting for payment,unknown
+CORWL00045,CORDLR000569,Kaveri Lokesh Services,Service,2025-12-05,orders down,lost to competitor,low
+CORWL00046,CORDLR001678,Lucky Arun Sales Ltd,ASM,2025-09-25,closed counter,field visit planned,unknown
+CORWL00047,CORDLR000613,Royal Lakshmi Enterprises & Co,Distributor,2026-03-03,closed counter,waiting for payment,low
+CORWL00048,CORDLR001434,Sri Meena Corporation,Credit,2025-07-06,closed counter,field visit planned,medium
+CORWL00049,CORDLR001717,MODERN FARIDA AGRO,Service,2025-07-21,scheme claim pending,lost to competitor,medium
+CORWL00050,CORDLR001605,Balaji Ganesh Agro,ASM,2025-11-22,scheme claim pending,new owner to verify,medium
+CORWL00051,CORDLR000797,City Arun Agro,Credit,2025-07-30,scheme claim pending,field visit planned,unknown
+CORWL00052,CORDLR001147,United Geetha Tyres,ASM,02/17/2026,service complaint,scheme support requested,medium
+CORWL00053,CORDLR000062,Shree Hari Agro,Service,2025-10-03,service complaint,scheme support requested,medium
+CORWL00054,CORDLR001107,Shri Hari Fertilisers,ASM,2025-12-18,owner dispute,credit call done,unknown
+CORWL00055,CORDLR002624,Murugan Jagan Agro,ASM,2025-10-20,service complaint,field visit planned,high
+CORWL00056,CORDLR002181,Sree Irfan Agro,RSM,2025-10-30,seasonal crop miss,new owner to verify,medium
+CORWL00057,CORDLR000345,New Geetha Agro,Distributor,2025-10-04,owner dispute,credit call done,medium
+CORWL00058,CORDLR001167,National Arun Paints,ASM,2025-12-12,competitor offer,scheme support requested,high
+CORWL00059,CORDLR000286,Modern Lakshmi Agro,ASM,2025-11-28,service complaint,lost to competitor,low
+CORWL00060,CORDLR002286,Royal Senthil Corporation,ASM,23/12/2025,closed counter,field visit planned,medium
+CORWL00061,CORDLR001732,City Farida Sales,Service,2025-06-20,service complaint,scheme support requested,high
+CORWL00062,CORDLR000206,Shree Meena Stores,Zonal office,2025-10-24,scheme claim pending,lost to competitor,high
+CORWL00063,CORDLR001285,Shri Irfan Corporation,RSM,2026-02-13,scheme claim pending,waiting for payment,high
+CORWL00064,CORDLR001027,Modern Manoj Paints,Service,09/04/2025,owner dispute,credit call done,high
+CORWL00065,CORDLR000476,Murugan Sowmya Agro & Co,ASM,02/01/2026,seasonal crop miss,credit call done,low
+CORWL00066,CORDLR000181,Royal Chandra Agencies,Distributor,2025-06-30,payment delay,waiting for payment,low
+CORWL00067,CORDLR001362,New Chandra Chemicals,RSM,06/03/2025,owner dispute,scheme support requested,high
+CORWL00068,CORDLR002570,Metro Anand Agro,RSM,2026-01-19,seasonal crop miss,lost to competitor,medium
+CORWL00069,CORDLR002647,Sree Lokesh Corporation,ASM,2025-10-20,service complaint,waiting for payment,medium
+CORWL00070,CORDLR000058,Star Jagan Traders,ASM,08/01/2025,owner dispute,waiting for payment,unknown
+CORWL00071,CORDLR001501,New Irfan Fertilisers,Distributor,2025-07-25,service complaint,credit call done,high
+CORWL00072,CORDLR002931,Prime Hari Agro,Credit,2026-03-07,orders down,new owner to verify,medium
+CORWL00073,CORDLR002850,Kaveri Chandra Traders,Service,2026-02-08,competitor offer,credit call done,unknown
+CORWL00074,CORDLR001648,Mahalakshmi Venkatesh Agro,RSM,2025-12-10,closed counter,credit call done,low
+CORWL00075,CORDLR002274,Ganesh Revathi Stores & Co,RSM,2025-07-15,service complaint,waiting for payment,medium
+CORWL00076,CORDLR000326,Prime Naveen Paints,ASM,13/03/2026,payment delay,credit call done,high
+CORWL00077,CORDLR000983,New Revathi Distributors,Distributor,30-Sep-25,seasonal crop miss,field visit planned,low
+CORWL00078,CORDLR002071,LUCKY GEETHA ENTERPRISES,RSM,2026-02-07,closed counter,scheme support requested,unknown
+CORWL00079,CORDLR001320,Murugan Prakash Hardware,Credit,2025-12-09,seasonal crop miss,lost to competitor,low
+CORWL00080,CORDLR000331,Modern Jagan Agro,Credit,2025-12-22,scheme claim pending,lost to competitor,unknown
+CORWL00081,CORDLR002912,Modern Priya Tyres,Credit,2025-10-06,orders down,field visit planned,unknown
+CORWL00082,CORDLR001975,Lucky Venkatesh Agro,Distributor,2025-08-04,scheme claim pending,waiting for payment,unknown
+CORWL00083,CORDLR000348,Balaji Senthil Stores,Distributor,26/11/2025,scheme claim pending,lost to competitor,high
+CORWL00084,CORDLR001394,Modern Rafiq Mart,Service,2026-02-21,orders down,waiting for payment,high
+CORWL00085,CORDLR002804,KAVERI HARI AGRO,Zonal office,2025-07-28,closed counter,field visit planned,unknown
+CORWL00086,CORDLR000253,Prime Sanjay Agencies,Zonal office,2025-11-08,closed counter,scheme support requested,unknown
+CORWL00087,CORDLR002503,Lucky Bala Distributors,ASM,2025-10-30,payment delay,new owner to verify,low
+CORWL00088,CORDLR000985,Kaveri Hari Agro,ASM,03/11/2026,closed counter,scheme support requested,low
+CORWL00089,CORDLR001290,Balaji Venkatesh Depot,ASM,2025-11-21,seasonal crop miss,new owner to verify,low
+CORWL00090,CORDLR001559,Modern Suresh Agro,RSM,2025-06-01,payment delay,scheme support requested,high
+CORWL00091,CORDLR002905,Shree Anand Enterprises,Zonal office,15/07/2025,service complaint,waiting for payment,medium
+CORWL00092,CORDLR002206,Modern Rafiq Services,Zonal office,2025-10-04,owner dispute,credit call done,low
+CORWL00093,CORDLR001149,Ganesh Rafiq Agro,RSM,04-Nov-25,orders down,new owner to verify,unknown
+CORWL00094,CORDLR000360,Metro Hari Agro,Zonal office,2025-11-24,scheme claim pending,waiting for payment,medium
+CORWL00095,CORDLR001833,United Kavya Agro,Distributor,2025-07-29,competitor offer,waiting for payment,medium
+CORWL00096,CORDLR000676,Modern Farida Agencies,ASM,2025-06-14,orders down,field visit planned,high
+CORWL00097,CORDLR001094,CITY IRFAN SERVICES,Distributor,2026-01-23,scheme claim pending,waiting for payment,high
+CORWL00098,CORDLR000038,Metro Prakash Distributors,Credit,10/21/2025,service complaint,lost to competitor,unknown
+CORWL00099,CORDLR001463,New Anand Agro,Service,2025-06-12,service complaint,credit call done,medium
+CORWL00100,CORDLR002828,Murugan Irfan Agro,Distributor,2025-10-11,seasonal crop miss,lost to competitor,medium
+CORWL00101,CORDLR000505,Ganesh Deepak Corporation,Distributor,03/29/2026,seasonal crop miss,waiting for payment,unknown
+CORWL00102,CORDLR002653,Lucky Farida Agro,Zonal office,19/02/2026,closed counter,field visit planned,high
+CORWL00103,CORDLR001601,Metro Karthik Distributors,Distributor,2025-11-27,payment delay,credit call done,low
+CORWL00104,CORDLR002597,United Meena Sales,Zonal office,2026-02-07,scheme claim pending,waiting for payment,medium
+CORWL00105,CORDLR000275,Shree Manoj Traders,Zonal office,2025-11-02,seasonal crop miss,scheme support requested,high
+CORWL00106,CORDLR002356,Lucky Farida Sales,RSM,2026-03-16,seasonal crop miss,new owner to verify,unknown
+CORWL00107,CORDLR001477,Mahalakshmi Arun Agencies Pvt,Service,2026-01-27,payment delay,new owner to verify,unknown
+CORWL00108,CORDLR000019,Modern Deepak Agro,Zonal office,2025-12-05,closed counter,credit call done,low
+CORWL00109,CORDLR002859,Star Farida Agro,RSM,2026-02-23,service complaint,new owner to verify,high
+CORWL00110,CORDLR002611,Sri Sowmya Chemicals,Service,2025-07-16,payment delay,field visit planned,low
+CORWL00111,CORDLR002304,Murugan Lakshmi Associates,Distributor,2025-07-29,service complaint,lost to competitor,low
+CORWL00112,CORDLR001309,MODERN MANOJ MART,RSM,2025-07-07,scheme claim pending,lost to competitor,medium
+CORWL00113,CORDLR000400,Lucky Deepak Corporation,ASM,2025-11-16,seasonal crop miss,credit call done,unknown
+CORWL00114,CORDLR000309,Lucky Suresh Stores,Distributor,26/07/2025,closed counter,credit call done,medium
+CORWL00115,CORDLR000898,Star Rafiq Stores,Credit,02/12/2026,competitor offer,field visit planned,medium
+CORWL00116,CORDLR000428,Kaveri Sowmya Agro,RSM,2026-01-05,scheme claim pending,field visit planned,unknown
+CORWL00117,CORDLR001741,Metro Karthik Agro,Zonal office,2025-07-18,scheme claim pending,scheme support requested,high
+CORWL00118,CORDLR000388,Kaveri Chandra Corporation,Credit,2025-10-22,closed counter,scheme support requested,medium
+CORWL00119,CORDLR000544,Royal Prakash Associates,RSM,11/06/2025,owner dispute,scheme support requested,medium
+CORWL00120,CORDLR001538,Ganesh Yusuf Agro,Distributor,2026-03-02,orders down,new owner to verify,low
+CORWL00121,CORDLR002192,Prime Deepak Fertilisers,RSM,21-Aug-25,service complaint,new owner to verify,medium
+CORWL00122,CORDLR001397,New Geetha Agro,Distributor,2026-01-05,competitor offer,new owner to verify,medium
+CORWL00123,CORDLR001542,Vijaya Ganesh Tyres,Zonal office,2025-07-11,closed counter,new owner to verify,low
+CORWL00124,CORDLR000461,National Lokesh Distributors Main,Credit,2025-06-21,service complaint,lost to competitor,high
+CORWL00125,CORDLR001336,Modern Lokesh Chemicals,Zonal office,22/08/2025,scheme claim pending,scheme support requested,high
+CORWL00126,CORDLR000078,Ganesh Yusuf Agro,ASM,2026-01-14,service complaint,scheme support requested,low
+CORWL00127,CORDLR001696,Modern Kavya Stores,Credit,2025-06-06,seasonal crop miss,waiting for payment,low
+CORWL00128,CORDLR000414,Sri Bala Agro,Credit,2025-10-03,service complaint,waiting for payment,low
+CORWL00129,CORDLR000821,Star Yusuf Agencies,ASM,19-Dec-25,scheme claim pending,scheme support requested,medium
+CORWL00130,CORDLR002218,Murugan Prakash Sales,Zonal office,2026-01-19,closed counter,credit call done,unknown
+CORWL00131,CORDLR000755,Mahalakshmi Venkatesh Agro,RSM,28/07/2025,orders down,new owner to verify,high
+CORWL00132,CORDLR000049,Sree Bala Agro,ASM,2025-10-17,scheme claim pending,waiting for payment,high
+CORWL00133,CORDLR000850,Sree Hari Agro,RSM,2025-12-01,competitor offer,waiting for payment,high
+CORWL00134,CORDLR002844,SHREE RAFIQ SALES,Distributor,2025-08-11,closed counter,field visit planned,medium
+CORWL00135,CORDLR001199,Kaveri Venkatesh Depot,Distributor,06-Mar-26,competitor offer,lost to competitor,unknown
+CORWL00136,CORDLR001585,City Manoj Depot,Distributor,2025-10-25,orders down,scheme support requested,unknown
+CORWL00137,CORDLR002622,Murugan Kavya Services,Service,09/02/2025,owner dispute,waiting for payment,unknown
+CORWL00138,CORDLR001665,Murugan Sanjay Sales,RSM,2025-11-01,orders down,credit call done,high
+CORWL00139,CORDLR002596,Lucky Suresh Agro,Credit,08/13/2025,payment delay,scheme support requested,low
+CORWL00140,CORDLR000548,Star Ganesh Agro,RSM,2025-08-16,payment delay,field visit planned,medium
+CORWL00141,CORDLR002305,Shree Karthik Agro,Zonal office,2026-03-30,scheme claim pending,credit call done,low
+CORWL00142,CORDLR000236,Modern Ganesh Tyres,Service,2025-10-18,seasonal crop miss,credit call done,unknown
+CORWL00143,CORDLR002159,Prime Jagan Agro,Credit,2025-09-21,seasonal crop miss,waiting for payment,high
+CORWL00144,CORDLR002781,Shree Venkatesh Fertilisers,Distributor,2026-03-19,orders down,scheme support requested,low
+CORWL00145,CORDLR000769,Shree Prakash Mart,RSM,11/23/2025,orders down,field visit planned,low
+CORWL00146,CORDLR002612,Balaji Manoj Chemicals,ASM,13-Aug-25,service complaint,lost to competitor,high
+CORWL00147,CORDLR000474,Mahalakshmi Farida Agro,RSM,18-Jan-26,payment delay,lost to competitor,unknown
+CORWL00148,CORDLR001191,Ganesh Hari Hardware,Service,20/09/2025,scheme claim pending,scheme support requested,high
+CORWL00149,CORDLR000023,Mahalakshmi Senthil Enterprises,Distributor,2025-11-25,closed counter,field visit planned,medium
+CORWL00150,CORDLR000330,Sree Farida Tyres,Zonal office,2026-03-30,payment delay,scheme support requested,low
+CORWL00151,CORDLR002053,Lucky Revathi Agro,Service,2025-09-13,scheme claim pending,lost to competitor,low
+CORWL00152,CORDLR001461,Prime Hari Tyres,Zonal office,30/01/2026,competitor offer,waiting for payment,medium
+CORWL00153,CORDLR002730,ROYAL MEENA AGRO,RSM,2025-10-28,service complaint,scheme support requested,medium
+CORWL00154,CORDLR002118,Balaji Anand Chemicals,Service,2025-11-09,owner dispute,field visit planned,unknown
+CORWL00155,CORDLR001351,Ganesh Jagan Agro,Service,2026-01-14,competitor offer,field visit planned,low
+CORWL00156,CORDLR000378,Sri Suresh Paints,Distributor,2025-09-07,competitor offer,lost to competitor,low
+CORWL00157,CORDLR002681,National Hari Chemicals,Service,2025-07-08,competitor offer,lost to competitor,high
+CORWL00158,CORDLR002405,Modern Lakshmi Sales,RSM,2025-08-24,orders down,credit call done,low
+CORWL00159,CORDLR000483,Sree Senthil Agro,Zonal office,2025-11-09,orders down,new owner to verify,unknown
+CORWL00160,CORDLR000894,Balaji Meena Agro,Service,13-Jul-25,scheme claim pending,field visit planned,low
+CORWL00161,CORDLR000426,Balaji Bala Services,Distributor,17/06/2025,competitor offer,new owner to verify,unknown
+CORWL00162,CORDLR002511,NEW GANESH ENTERPRISES,ASM,2026-03-03,owner dispute,scheme support requested,medium
+CORWL00163,CORDLR002591,SRI Anand Agro,ASM,2025-07-05,closed counter,scheme support requested,medium
+CORWL00164,CORDLR000430,New Manoj Paints,ASM,2026-02-23,competitor offer,credit call done,low
+CORWL00165,CORDLR001119,Murugan Venkatesh Paints,Service,25/09/2025,service complaint,waiting for payment,low
+CORWL00166,CORDLR000418,Modern Priya Agro,Zonal office,2025-11-28,service complaint,credit call done,medium
+CORWL00167,CORDLR001805,City Manoj Paints,RSM,2026-01-23,scheme claim pending,credit call done,low
+CORWL00168,CORDLR002598,Sree Lakshmi Mart,ASM,2026-03-26,payment delay,new owner to verify,low
+CORWL00169,CORDLR001219,National Sanjay Agro,RSM,22-Jun-25,competitor offer,lost to competitor,high
+CORWL00170,CORDLR001144,Modern Hari Agro,Service,2026-01-31,competitor offer,waiting for payment,high
+CORWL00171,CORDLR001913,Prime Suresh Tyres,Zonal office,2025-07-20,service complaint,waiting for payment,medium
+CORWL00172,CORDLR000321,City Farida Paints,Service,23/12/2025,orders down,field visit planned,medium
+CORWL00173,CORDLR000466,Metro Rafiq Corporation,Credit,09-Jul-25,owner dispute,lost to competitor,unknown
+CORWL00174,CORDLR001760,City Deepak Agencies,Distributor,29-Jul-25,seasonal crop miss,new owner to verify,unknown
+CORWL00175,CORDLR001980,Metro Hari Traders,Service,2025-06-25,payment delay,lost to competitor,unknown
+CORWL00176,CORDLR001937,Vijaya Farida Mart,Distributor,12/14/2025,competitor offer,field visit planned,medium
+CORWL00177,CORDLR001246,Metro Geetha Agro,ASM,19/02/2026,service complaint,scheme support requested,medium
+CORWL00178,CORDLR001652,Lucky Ganesh Hardware,Service,2025-06-03,scheme claim pending,field visit planned,high
+CORWL00179,CORDLR001145,Sree Rafiq Agro,RSM,08/26/2025,seasonal crop miss,new owner to verify,low
+CORWL00180,CORDLR002791,Shree Deepak Sales,Zonal office,02/23/2026,orders down,field visit planned,medium
+CORWL00181,CORDLR000702,Vijaya Meena Paints,Credit,24/03/2026,seasonal crop miss,waiting for payment,high
+CORWL00182,CORDLR002640,National Lokesh Agro,Service,2025-06-21,scheme claim pending,credit call done,medium
+CORWL00183,CORDLR002613,Lucky Deepak Stores,RSM,12/09/2025,service complaint,waiting for payment,medium
+CORWL00184,CORDLR000119,Sree Bala Agro Ltd,Service,2025-11-02,service complaint,new owner to verify,medium
+CORWL00185,CORDLR001997,New Hari Associates,Zonal office,2025-10-13,orders down,lost to competitor,unknown
+CORWL00186,CORDLR002235,Star Geetha Agencies,ASM,11/14/2025,seasonal crop miss,waiting for payment,medium
+CORWL00187,CORDLR002800,Sri Farida Mart,RSM,2026-02-09,service complaint,new owner to verify,unknown
+CORWL00188,CORDLR000496,Royal Ganesh Enterprises,Zonal office,30/06/2025,competitor offer,waiting for payment,high
+CORWL00189,CORDLR001746,Kaveri Lakshmi Corporation,Service,18-Sep-25,service complaint,scheme support requested,medium
+CORWL00190,CORDLR002689,Kaveri Yusuf Paints,Service,2025-07-10,scheme claim pending,lost to competitor,low
+CORWL00191,CORDLR002898,New Anand Agro,RSM,2025-09-25,competitor offer,waiting for payment,unknown
+CORWL00192,CORDLR000013,Star Prakash Sales,Service,2025-12-12,service complaint,scheme support requested,high
+CORWL00193,CORDLR000921,Metro Hari Hardware,ASM,2025-09-25,service complaint,lost to competitor,low
+CORWL00194,CORDLR001680,PRIME JAGAN AGENCIES,RSM,2025-12-22,closed counter,credit call done,low
+CORWL00195,CORDLR002224,Metro Yusuf Agro,ASM,2025-09-03,service complaint,lost to competitor,medium
+CORWL00196,CORDLR000711,Royal Kavya Agro,Service,2025-06-29,competitor offer,lost to competitor,high
+CORWL00197,CORDLR002184,New Suresh Hardware,Distributor,2025-09-25,owner dispute,credit call done,unknown
+CORWL00198,CORDLR000130,Royal Farida Distributors,Credit,29-Jan-26,orders down,credit call done,medium
+CORWL00199,CORDLR001087,Mahalakshmi Senthil Depot,Service,15-Dec-25,seasonal crop miss,lost to competitor,low
+CORWL00200,CORDLR001785,Royal Suresh Mart,ASM,29-Jan-26,scheme claim pending,lost to competitor,low
+CORWL00201,CORDLR002373,Sree Bala Corporation,ASM,15-Jun-25,scheme claim pending,new owner to verify,medium
+CORWL00202,CORDLR002249,Vijaya Anand Agro,Credit,2026-01-04,seasonal crop miss,scheme support requested,low
+CORWL00203,CORDLR001877,Lucky Arun Associates,Zonal office,2026-01-07,owner dispute,field visit planned,medium
+CORWL00204,CORDLR002288,Sri Arun Corporation,Service,2026-02-21,scheme claim pending,new owner to verify,high
+CORWL00205,CORDLR002619,Murugan Priya Paints,Credit,01/05/2026,owner dispute,field visit planned,medium
+CORWL00206,CORDLR001116,Prime Hari Mart,Zonal office,2026-03-08,seasonal crop miss,credit call done,low
+CORWL00207,CORDLR002588,Shree Karthik Agro,Distributor,2025-09-13,closed counter,field visit planned,high
+CORWL00208,CORDLR001034,Modern Kavya Depot,Distributor,2026-03-11,seasonal crop miss,lost to competitor,unknown
+CORWL00209,CORDLR000791,Murugan Senthil Stores & Co,RSM,2025-06-18,closed counter,field visit planned,medium
+CORWL00210,CORDLR000617,Vijaya Chandra Paints,Credit,2025-12-18,owner dispute,waiting for payment,low
+CORWL00211,CORDLR001018,Modern Yusuf Fertilisers,Service,2026-02-27,scheme claim pending,waiting for payment,high
+CORWL00212,CORDLR000646,Ganesh Sanjay Sales,Credit,2026-03-01,seasonal crop miss,lost to competitor,medium
+CORWL00213,CORDLR002934,United Rafiq Stores,Service,2025-12-16,scheme claim pending,lost to competitor,low
+CORWL00214,CORDLR002448,Prime Chandra Agro,ASM,01/10/2025,payment delay,lost to competitor,high
+CORWL00215,CORDLR002418,Sree Deepak Sales,Credit,2025-06-18,owner dispute,lost to competitor,medium
+CORWL00216,CORDLR002946,New Ganesh Agro,Credit,2025-10-01,orders down,lost to competitor,unknown
+CORWL00217,CORDLR002046,New Meena Corporation,Service,2025-09-30,seasonal crop miss,scheme support requested,unknown
+CORWL00218,CORDLR000847,Kaveri Lakshmi Agro,RSM,2026-03-14,payment delay,field visit planned,high
+CORWL00219,CORDLR001284,Vijaya Arun Tyres,Zonal office,2026-01-12,seasonal crop miss,credit call done,high
+CORWL00220,CORDLR001860,Vijaya Karthik Enterprises,Service,2025-09-04,owner dispute,scheme support requested,low
+CORWL00221,CORDLR001865,Prime Yusuf Agro,Service,23-Jul-25,orders down,scheme support requested,low
+CORWL00222,CORDLR000366,Sree Ganesh Agro,Zonal office,2025-12-28,scheme claim pending,scheme support requested,medium
+CORWL00223,CORDLR002660,Star Senthil Agro,Zonal office,2025-06-07,service complaint,new owner to verify,medium
+CORWL00224,CORDLR000371,Prime Farida Chemicals,ASM,2025-06-16,closed counter,new owner to verify,low
+CORWL00225,CORDLR002738,Prime Jagan Agro,Zonal office,14/01/2026,competitor offer,field visit planned,medium
+CORWL00226,CORDLR000742,Sri Suresh Traders Ltd,Distributor,2026-03-11,scheme claim pending,waiting for payment,unknown
+CORWL00227,CORDLR000437,Murugan Revathi Agro,ASM,2026-02-04,orders down,lost to competitor,high
+CORWL00228,CORDLR000730,Shree Jagan Hardware,Zonal office,16/03/2026,owner dispute,field visit planned,low
+CORWL00229,CORDLR000570,Star Priya Associates,Credit,2026-02-16,competitor offer,waiting for payment,medium
+CORWL00230,CORDLR002964,New Prakash Agro,Zonal office,02/07/2026,competitor offer,lost to competitor,high
+CORWL00231,CORDLR000578,Mahalakshmi Meena Agro,ASM,2025-06-05,service complaint,credit call done,high
+CORWL00232,CORDLR000423,Kaveri Ganesh Agro,Zonal office,2025-08-19,payment delay,lost to competitor,high
+CORWL00233,CORDLR001784,MODERN VENKATESH PAINTS,Distributor,27-Nov-25,orders down,field visit planned,medium
+CORWL00234,CORDLR001263,Sree Hari Enterprises,ASM,2025-08-31,payment delay,scheme support requested,low
+CORWL00235,CORDLR000667,Mahalakshmi Jagan Agro,RSM,2025-09-14,closed counter,field visit planned,high
+CORWL00236,CORDLR000880,United Meena Tyres,ASM,02/26/2026,seasonal crop miss,credit call done,low
+CORWL00237,CORDLR002650,Ganesh Geetha Agro,Distributor,2025-09-10,orders down,credit call done,unknown
+CORWL00238,CORDLR002796,New Farida Paints,Credit,02/10/2026,orders down,waiting for payment,high
+CORWL00239,CORDLR000042,Vijaya Sowmya Agro,Distributor,02/11/2025,orders down,waiting for payment,high
+CORWL00240,CORDLR001384,Star Priya Agencies,RSM,2025-11-30,scheme claim pending,credit call done,unknown
+CORWL00241,CORDLR000632,Royal Lakshmi Agro,Credit,2025-08-16,orders down,scheme support requested,low
+CORWL00242,CORDLR002845,Shree Meena Stores,ASM,2025-10-11,scheme claim pending,field visit planned,medium
+CORWL00243,CORDLR002657,Vijaya Ganesh Stores Main,Service,2025-09-04,orders down,credit call done,medium
+CORWL00244,CORDLR002530,Shree Deepak Hardware,RSM,2025-09-10,seasonal crop miss,new owner to verify,unknown
+CORWL00245,CORDLR002297,Royal Prakash Distributors,RSM,2025-09-20,seasonal crop miss,new owner to verify,unknown
+CORWL00246,CORDLR000488,Shree Karthik Stores,Zonal office,2025-12-28,scheme claim pending,credit call done,high
+CORWL00247,CORDLR002110,Metro Lakshmi Agro,RSM,2025-07-08,payment delay,credit call done,medium
+CORWL00248,CORDLR002583,STAR LAKSHMI ASSOCIATES,Distributor,2025-06-27,service complaint,field visit planned,high
+CORWL00249,CORDLR002534,Lucky Farida Agro,Credit,2025-06-12,payment delay,credit call done,unknown
+CORWL00250,CORDLR002941,Shree Sowmya Fertilisers,Service,2025-08-02,seasonal crop miss,waiting for payment,medium
+CORWL00251,CORDLR000822,Sree Irfan Traders & Co,Service,2025-11-19,competitor offer,credit call done,high
+CORWL00252,CORDLR002893,Sree Irfan Agro,RSM,2025-07-24,scheme claim pending,new owner to verify,unknown
+CORWL00253,CORDLR001890,Sree Ganesh Agro,RSM,2025-06-23,owner dispute,field visit planned,high
+CORWL00254,CORDLR001464,New Sanjay Sales,ASM,2025-12-03,orders down,new owner to verify,low
+CORWL00255,CORDLR000612,United Lokesh Services,Distributor,07/03/2026,payment delay,waiting for payment,high
+CORWL00256,CORDLR002963,Shree Sanjay Hardware,Zonal office,2025-10-31,competitor offer,lost to competitor,unknown
+CORWL00257,CORDLR001808,City Jagan Distributors,Service,2025-08-18,orders down,credit call done,medium
+CORWL00258,CORDLR002917,Modern Arun Services,Service,2025-08-11,payment delay,scheme support requested,unknown
+CORWL00259,CORDLR001733,SREE REVATHI AGRO,Zonal office,11/16/2025,service complaint,scheme support requested,medium
+CORWL00260,CORDLR002493,United Anand Enterprises,Service,2026-01-28,scheme claim pending,field visit planned,high
+CORWL00261,CORDLR002142,New Farida Traders,Service,2026-03-25,seasonal crop miss,credit call done,medium
+CORWL00262,CORDLR002122,Shree Lokesh Agro,Distributor,04-Jan-26,service complaint,waiting for payment,high
+CORWL00263,CORDLR000655,Sree Yusuf Distributors,Zonal office,2025-10-08,service complaint,lost to competitor,unknown
+CORWL00264,CORDLR001192,Modern Bala Traders,Service,2025-07-19,competitor offer,field visit planned,high
+CORWL00265,CORDLR000776,Star Lokesh Chemicals,Service,2025-09-01,seasonal crop miss,field visit planned,medium
+CORWL00266,CORDLR001815,New Venkatesh Stores,ASM,2025-12-28,orders down,credit call done,medium
+CORWL00267,CORDLR001014,National Manoj Paints,ASM,2025-12-01,competitor offer,credit call done,unknown
+CORWL00268,CORDLR002082,Vijaya Farida Fertilisers,Credit,2025-06-13,closed counter,field visit planned,low
+CORWL00269,CORDLR000534,Mahalakshmi Naveen Corporation,RSM,2025-12-15,closed counter,credit call done,high
+CORWL00270,CORDLR001506,Sri Meena Mart,ASM,2025-08-26,service complaint,lost to competitor,high
+CORWL00271,CORDLR000896,Murugan Arun Agro,RSM,2025-09-20,orders down,scheme support requested,high
+CORWL00272,CORDLR001126,NATIONAL PRIYA TRADERS,Service,2026-02-10,owner dispute,scheme support requested,high
+CORWL00273,CORDLR001740,Modern Bala Agro,ASM,2025-07-04,orders down,credit call done,unknown
+CORWL00274,CORDLR000124,CITY IRFAN AGRO,Service,2025-10-08,owner dispute,lost to competitor,medium
+CORWL00275,CORDLR000752,Modern Meena Agro,Distributor,2025-08-14,scheme claim pending,new owner to verify,medium
+CORWL00276,CORDLR001292,Vijaya Karthik Mart,RSM,2025-11-20,service complaint,field visit planned,medium
+CORWL00277,CORDLR000103,Vijaya Kavya Agro,ASM,2026-02-21,scheme claim pending,new owner to verify,unknown
+CORWL00278,CORDLR002362,Murugan Sanjay Chemicals,Zonal office,2025-10-26,seasonal crop miss,scheme support requested,medium
+CORWL00279,CORDLR001244,Vijaya Jagan Agro,ASM,15-Feb-26,closed counter,waiting for payment,medium
+CORWL00280,CORDLR001651,Murugan Naveen Agro,Service,2026-01-15,competitor offer,waiting for payment,medium
+CORWL00281,CORDLR001259,Shree Deepak Tyres,Service,10/24/2025,seasonal crop miss,field visit planned,medium
+CORWL00282,CORDLR000276,Vijaya Bala Agro Ltd,ASM,2025-08-30,payment delay,lost to competitor,high
+CORWL00283,CORDLR002977,Balaji Anand Stores,Credit,2025-08-04,seasonal crop miss,field visit planned,low
+CORWL00284,CORDLR002929,SRI RAFIQ TYRES,ASM,01/09/2025,competitor offer,scheme support requested,low
+CORWL00285,CORDLR001039,National Anand Sales,Service,2025-08-10,seasonal crop miss,scheme support requested,high
+CORWL00286,CORDLR001306,National Ganesh Fertilisers,Zonal office,2025-06-30,seasonal crop miss,new owner to verify,medium
+CORWL00287,CORDLR001197,Modern Anand Agro Main,Service,2025-06-20,scheme claim pending,field visit planned,low
+CORWL00288,CORDLR001798,GANESH SOWMYA CHEMICALS,Service,2026-03-11,payment delay,field visit planned,high
+CORWL00289,CORDLR001782,Ganesh Jagan Agro,ASM,2025-07-16,orders down,new owner to verify,unknown
+CORWL00290,CORDLR001854,United Priya Agro,ASM,2025-11-17,competitor offer,credit call done,high
+CORWL00291,CORDLR001347,Lucky Kavya Tyres,Credit,2025-10-19,owner dispute,scheme support requested,unknown
+CORWL00292,CORDLR001880,Star Lokesh Agro,Service,2025-08-30,owner dispute,scheme support requested,medium
+CORWL00293,CORDLR001812,United Irfan Mart,RSM,03/09/2025,scheme claim pending,lost to competitor,unknown
+CORWL00294,CORDLR000007,Ganesh Anand Agro,Zonal office,2025-09-05,scheme claim pending,field visit planned,low
+CORWL00295,CORDLR000817,Lucky Karthik Stores,Distributor,2025-06-10,seasonal crop miss,credit call done,medium
+CORWL00296,CORDLR000870,Prime Deepak Corporation,Credit,2025-12-18,seasonal crop miss,credit call done,medium
+CORWL00297,CORDLR001210,United Sowmya Agro,ASM,2026-03-04,service complaint,lost to competitor,unknown
+CORWL00298,CORDLR001546,Murugan Ganesh Agencies,Credit,2025-07-31,seasonal crop miss,scheme support requested,medium
+CORWL00299,CORDLR001181,Sree Prakash Services,RSM,2026-02-15,orders down,scheme support requested,low
+CORWL00300,CORDLR000071,PRIME LOKESH AGRO,ASM,2025-07-15,orders down,scheme support requested,high
+CORWL00301,CORDLR001274,Shree Naveen Services,Distributor,16/09/2025,service complaint,credit call done,low
+CORWL00302,CORDLR000178,Balaji Senthil Tyres,Zonal office,13-Aug-25,seasonal crop miss,new owner to verify,low
+CORWL00303,CORDLR000179,NATIONAL REVATHI ENTERPRISES,Zonal office,2026-02-03,owner dispute,scheme support requested,high
+CORWL00304,CORDLR002292,National Venkatesh Traders,Credit,2025-09-07,payment delay,field visit planned,high
+CORWL00305,CORDLR001435,City Chandra Corporation,ASM,2025-08-13,orders down,credit call done,high
+CORWL00306,CORDLR001177,NEW YUSUF FERTILISERS,RSM,08/09/2025,orders down,waiting for payment,unknown
+CORWL00307,CORDLR001668,Mahalakshmi Hari Agencies,Credit,03/06/2025,service complaint,scheme support requested,low
+CORWL00308,CORDLR001500,Sri Naveen Agro,Credit,01/02/2026,payment delay,field visit planned,medium
+CORWL00309,CORDLR002634,Mahalakshmi Ganesh Services,Service,2025-11-04,seasonal crop miss,credit call done,unknown
+CORWL00310,CORDLR001153,New Revathi Agro,RSM,2025-09-23,orders down,scheme support requested,low
+CORWL00311,CORDLR001959,Sri Deepak Hardware,RSM,2025-10-16,payment delay,field visit planned,unknown
+CORWL00312,CORDLR002745,United Sanjay Associates,ASM,11/01/2025,owner dispute,new owner to verify,low
+CORWL00313,CORDLR001085,Balaji Suresh Agro,Distributor,2025-10-16,seasonal crop miss,scheme support requested,medium
+CORWL00314,CORDLR002577,Modern Farida Paints,Credit,2025-12-25,seasonal crop miss,credit call done,high
+CORWL00315,CORDLR000964,Modern Geetha Agro,Distributor,2025-06-30,seasonal crop miss,waiting for payment,unknown
+CORWL00316,CORDLR000273,Sri Suresh Stores,Credit,2025-11-02,scheme claim pending,lost to competitor,unknown
+CORWL00317,CORDLR000312,Sri Yusuf Traders,Distributor,2025-06-04,seasonal crop miss,lost to competitor,high
+CORWL00318,CORDLR000015,National Senthil Agro,Zonal office,2026-03-15,competitor offer,new owner to verify,low
+CORWL00319,CORDLR002979,Modern Lokesh Corporation,Zonal office,2025-09-01,closed counter,scheme support requested,unknown
+CORWL00320,CORDLR000885,New Arun Corporation,Credit,2025-08-28,seasonal crop miss,scheme support requested,medium
+CORWL00321,CORDLR001250,National Kavya Tyres,ASM,2026-03-09,seasonal crop miss,waiting for payment,high
+CORWL00322,CORDLR000660,Vijaya Lokesh Services,Service,2025-06-12,competitor offer,waiting for payment,medium
+CORWL00323,CORDLR000051,Balaji Lokesh Agro,Service,2025-08-23,closed counter,field visit planned,unknown
+CORWL00324,CORDLR000698,SREE GANESH SERVICES,Credit,2025-11-02,seasonal crop miss,lost to competitor,low
+CORWL00325,CORDLR002200,Lucky Hari Stores,RSM,2025-08-17,competitor offer,credit call done,low
+CORWL00326,CORDLR001101,Star Naveen Agro,RSM,2025-11-10,scheme claim pending,field visit planned,unknown
+CORWL00327,CORDLR000487,Prime Arun Stores,ASM,2025-06-14,closed counter,new owner to verify,high
+CORWL00328,CORDLR001293,Sri Yusuf Sales,Distributor,2025-11-04,seasonal crop miss,lost to competitor,high
+CORWL00329,CORDLR001310,SREE SOWMYA AGRO,Zonal office,2025-07-25,service complaint,waiting for payment,high
+CORWL00330,CORDLR002083,Shree Manoj Mart,Zonal office,06/07/2025,orders down,field visit planned,medium
+CORWL00331,CORDLR000129,Vijaya Arun Mart,Credit,28/08/2025,orders down,scheme support requested,high
+CORWL00332,CORDLR000094,Lucky Anand Agro,Service,2025-10-10,scheme claim pending,scheme support requested,high
+CORWL00333,CORDLR000749,Sri Hari Agro,Credit,2025-08-13,scheme claim pending,waiting for payment,low
+CORWL00334,CORDLR000936,Royal Revathi Agro,Distributor,04/02/2026,owner dispute,new owner to verify,low
+CORWL00335,CORDLR001620,CITY GANESH DEPOT,Credit,2025-06-29,payment delay,waiting for payment,low
+CORWL00336,CORDLR002124,Royal Farida Chemicals,Zonal office,2025-09-13,payment delay,scheme support requested,low
+CORWL00337,CORDLR002096,United Ganesh Agro,ASM,2025-10-13,scheme claim pending,lost to competitor,unknown
+CORWL00338,CORDLR002216,Sree Ganesh Distributors,Distributor,2025-11-23,orders down,waiting for payment,medium
+CORWL00339,CORDLR002467,Sri Hari Agro,Zonal office,2025-12-12,competitor offer,field visit planned,high
+CORWL00340,CORDLR001757,Mahalakshmi Bala Distributors,RSM,2026-02-17,payment delay,waiting for payment,low
+CORWL00341,CORDLR002892,Prime Bala Associates,Credit,2025-06-12,owner dispute,waiting for payment,medium
+CORWL00342,CORDLR001918,Metro Revathi Chemicals,RSM,2025-08-16,seasonal crop miss,lost to competitor,unknown
+CORWL00343,CORDLR000942,Vijaya Farida Agro,Service,2025-06-23,payment delay,credit call done,unknown
+CORWL00344,CORDLR001922,Metro Farida Chemicals,Distributor,2025-12-05,orders down,waiting for payment,high
+CORWL00345,CORDLR001720,Prime Ganesh Agro,Distributor,2025-11-19,owner dispute,credit call done,high
+CORWL00346,CORDLR000535,Shree Senthil Chemicals,Distributor,18-Aug-25,scheme claim pending,waiting for payment,low
+CORWL00347,CORDLR001297,Shree Naveen Agro,Service,30/03/2026,closed counter,lost to competitor,low
+CORWL00348,CORDLR001243,Ganesh Lakshmi Mart,ASM,09/11/2025,competitor offer,waiting for payment,unknown
+CORWL00349,CORDLR001839,Balaji Suresh Agro,ASM,2026-02-15,seasonal crop miss,credit call done,low
+CORWL00350,CORDLR002721,Prime Deepak Enterprises,RSM,2025-06-03,competitor offer,field visit planned,unknown
+CORWL00351,CORDLR002115,Lucky Sowmya Agro,Credit,2025-11-27,seasonal crop miss,lost to competitor,low
+CORWL00352,CORDLR000291,Modern Suresh Depot,RSM,2025-07-02,owner dispute,credit call done,unknown
+CORWL00353,CORDLR001076,National Meena Agro,ASM,2026-01-13,seasonal crop miss,scheme support requested,medium
+CORWL00354,CORDLR001099,Mahalakshmi Sowmya Sales,Credit,2026-03-16,owner dispute,lost to competitor,high
+CORWL00355,CORDLR002658,Star Jagan Tyres,ASM,2025-10-27,closed counter,new owner to verify,unknown
+CORWL00356,CORDLR000445,Sree Suresh Agro,Distributor,2025-07-09,seasonal crop miss,credit call done,unknown
+CORWL00357,CORDLR002504,Sri Priya Associates,Service,30/06/2025,service complaint,lost to competitor,low
+CORWL00358,CORDLR001986,Balaji Venkatesh Tyres,Distributor,2026-03-25,service complaint,waiting for payment,medium
+CORWL00359,CORDLR000858,Prime Geetha Chemicals,RSM,2025-12-16,scheme claim pending,waiting for payment,low
+CORWL00360,CORDLR000468,Murugan Hari Agro,ASM,2025-09-29,scheme claim pending,waiting for payment,unknown
+CORWL00361,CORDLR001431,Modern Lokesh Fertilisers,Credit,2026-02-21,owner dispute,waiting for payment,medium
+CORWL00362,CORDLR000536,Lucky Geetha Traders,Distributor,2026-02-10,service complaint,scheme support requested,low
+CORWL00363,CORDLR002220,Star Senthil Mart,Credit,08-Aug-25,scheme claim pending,scheme support requested,unknown
+CORWL00364,CORDLR002822,New Hari Hardware,Credit,2025-11-11,closed counter,lost to competitor,unknown
+CORWL00365,CORDLR002593,Lucky Kavya Sales,Credit,2025-07-29,scheme claim pending,lost to competitor,unknown
+CORWL00366,CORDLR002191,National Senthil Mart,RSM,12/17/2025,service complaint,credit call done,high
+CORWL00367,CORDLR001205,Balaji Venkatesh Agro,ASM,2026-02-18,closed counter,waiting for payment,high
+CORWL00368,CORDLR001360,Star Yusuf Agro,ASM,15/02/2026,seasonal crop miss,field visit planned,high
+CORWL00369,CORDLR001580,Lucky Farida Agro,RSM,2025-08-18,competitor offer,new owner to verify,medium
+CORWL00370,CORDLR002242,United Priya Agro,Credit,2026-03-30,competitor offer,lost to competitor,medium
+CORWL00371,CORDLR000902,Murugan Senthil Agro,Distributor,2026-01-10,closed counter,credit call done,high
+CORWL00372,CORDLR002265,United Priya Fertilisers,Credit,2025-06-05,owner dispute,new owner to verify,medium
+CORWL00373,CORDLR001253,Shree Hari Agro,Zonal office,18/06/2025,payment delay,field visit planned,medium
+CORWL00374,CORDLR001933,Kaveri Prakash Enterprises,ASM,2025-09-17,closed counter,lost to competitor,high
+CORWL00375,CORDLR002884,Balaji Karthik Depot,RSM,2025-12-23,closed counter,new owner to verify,high
