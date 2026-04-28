@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DotAI Churn Model — Upload</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Surfaces */
+            --bg:        #F4F5F7;
+            --white:     #FFFFFF;
+            --s1:        #EEF0F4;
+            --s2:        #E5E8EE;
+
+            /* Borders */
+            --bd:        #D4D8E1;
+            --bd-focus:  #2563EB;
+
+            /* Brand — navy */
+            --navy:      #1C3461;
+            --navy-mid:  #254D9A;
+            --navy-dim:  #EBF0F8;
+
+            /* Action — blue */
+            --blue:      #2563EB;
+            --blue-hi:   #1D4ED8;
+            --blue-dim:  #EFF6FF;
+
+            /* Text */
+            --t1:        #0F172A;
+            --t2:        #475569;
+            --t3:        #94A3B8;
+
+            /* Status */
+            --ok:        #047857;
+            --ok-bg:     #ECFDF5;
+            --ok-bd:     #A7F3D0;
+            --warn:      #B45309;
+            --warn-bg:   #FFFBEB;
+            --warn-bd:   #FDE68A;
+            --err:       #B91C1C;
+            --err-bg:    #FEF2F2;
+            --err-bd:    #FCA5A5;
+
+            /* Fonts */
+            --fd:  'Montserrat', sans-serif;
+            --fb:  'Nunito Sans', sans-serif;
+            --fm:  'JetBrains Mono', monospace;
+
+            /* Spacing & shape */
+            --r:   6px;
+            --r2:  10px;
+            --sh:  0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.05);
+            --sh2: 0 2px 8px rgba(0,0,0,.08), 0 1px 3px rgba(0,0,0,.05);
+            --tr:  .15s ease;
+        }
+
+        html { font-size: 15px; scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--fb);
+            background: var(--bg);
+            color: var(--t1);
+            min-height: 100vh;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--bd); border-radius: 3px; }
+
+        /* ─── HEADER ─────────────────────────────────────── */
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--bd);
+            height: 56px;
+            display: flex; align-items: center;
+            position: sticky; top: 0; z-index: 100;
+            box-shadow: 0 1px 4px rgba(0,0,0,.06);
+        }
+        .header-inner {
+            max-width: 1280px; margin: 0 auto; padding: 0 28px;
+            display: flex; align-items: center; justify-content: space-between;
+            width: 100%;
+        }
+        .brand {
+            font-family: var(--fd); font-size: .9375rem; font-weight: 700;
+            color: var(--navy); letter-spacing: .01em;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .brand-mark {
+            width: 28px; height: 28px; background: var(--navy);
+            border-radius: 6px; display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .brand-mark svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+        .user-zone { display: flex; align-items: center; gap: 14px; }
+        .user-avatar {
+            width: 30px; height: 30px; background: var(--navy-dim);
+            border: 1.5px solid var(--bd); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--fd); font-size: .65rem; font-weight: 700;
+            color: var(--navy-mid); flex-shrink: 0;
+        }
+        .user-name { font-size: .875rem; color: var(--t2); font-weight: 500; }
+        .btn-logout {
+            background: none; border: 1px solid var(--bd);
+            color: var(--t2); font-family: var(--fb); font-size: .8rem; font-weight: 500;
+            padding: 5px 14px; border-radius: var(--r);
+            cursor: pointer; transition: var(--tr);
+        }
+        .btn-logout:hover { border-color: var(--t2); color: var(--t1); }
+
+        /* ─── PAGE ───────────────────────────────────────── */
+        .page {
+            max-width: 1280px; margin: 0 auto;
+            padding: 36px 28px 80px;
+        }
+
+        /* ─── INTRO ──────────────────────────────────────── */
+        .intro { margin-bottom: 36px; }
+        .intro-eyebrow {
+            font-family: var(--fd); font-size: .7rem; font-weight: 600;
+            color: var(--blue); letter-spacing: .12em; text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .intro-title {
+            font-family: var(--fd); font-size: 1.75rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 10px;
+            letter-spacing: -.02em; line-height: 1.2;
+        }
+        .intro-body {
+            font-size: .9375rem; color: var(--t2); max-width: 580px; line-height: 1.7;
+        }
+
+        /* ─── MAIN GRID ──────────────────────────────────── */
+        .main-grid {
+            display: grid; grid-template-columns: 1fr 372px;
+            gap: 24px; align-items: start;
+        }
+        .col-upload { display: flex; flex-direction: column; gap: 20px; }
+
+        /* ─── UPLOAD ZONE ────────────────────────────────── */
+        .upload-zone {
+            background: var(--white); border: 2px dashed var(--bd);
+            border-radius: var(--r2); padding: 52px 36px;
+            text-align: center; cursor: pointer;
+            transition: border-color .2s ease, background .2s ease;
+            box-shadow: var(--sh);
+        }
+        .upload-zone:hover,
+        .upload-zone.drag-over {
+            border-color: var(--blue); background: var(--blue-dim);
+        }
+        .upload-zone.drag-over { border-style: solid; }
+
+        .upload-icon-wrap {
+            width: 52px; height: 52px; margin: 0 auto 18px;
+            background: var(--s1); border: 1px solid var(--bd);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            transition: background .2s, border-color .2s;
+        }
+        .upload-zone:hover .upload-icon-wrap,
+        .upload-zone.drag-over .upload-icon-wrap {
+            background: var(--blue-dim); border-color: #BFDBFE;
+        }
+        .upload-icon-wrap svg {
+            width: 22px; height: 22px; stroke: var(--t3);
+            transition: stroke .2s;
+        }
+        .upload-zone:hover .upload-icon-wrap svg,
+        .upload-zone.drag-over .upload-icon-wrap svg { stroke: var(--blue); }
+
+        .upload-cta {
+            font-family: var(--fd); font-size: .9375rem; font-weight: 600;
+            color: var(--t1); margin-bottom: 6px;
+        }
+        .upload-link {
+            color: var(--blue); cursor: pointer; background: none; border: none;
+            font-family: inherit; font-size: inherit; font-weight: inherit;
+            padding: 0; text-decoration: underline; text-underline-offset: 3px;
+            transition: color var(--tr);
+        }
+        .upload-link:hover { color: var(--blue-hi); }
+        .upload-types {
+            font-family: var(--fm); font-size: .72rem; color: var(--t3);
+            letter-spacing: .04em; margin-bottom: 6px;
+        }
+        .upload-hint { font-size: .8125rem; color: var(--t3); }
+        #fileInput { display: none; }
+
+        /* ─── PANEL CONTAINER ────────────────────────────── */
+        .panel {
+            background: var(--white); border: 1px solid var(--bd);
+            border-radius: var(--r2); box-shadow: var(--sh);
+        }
+        .panel-head {
+            padding: 13px 18px; border-bottom: 1px solid var(--bd);
+            display: flex; align-items: center; justify-content: space-between;
+            background: var(--s1); border-radius: var(--r2) var(--r2) 0 0;
+        }
+        .panel-title {
+            font-family: var(--fd); font-size: .75rem; font-weight: 700;
+            color: var(--t2); letter-spacing: .08em; text-transform: uppercase;
+        }
+
+        /* ─── CHIPS ──────────────────────────────────────── */
+        .chips-section { display: flex; flex-direction: column; gap: 10px; }
+        .chips-label {
+            font-family: var(--fd); font-size: .68rem; font-weight: 600;
+            color: var(--t3); letter-spacing: .1em; text-transform: uppercase;
+        }
+        .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+        .chip {
+            background: var(--white); border: 1px solid var(--bd);
+            color: var(--t2); font-family: var(--fb); font-size: .8125rem; font-weight: 500;
+            padding: 5px 14px; border-radius: 100px; cursor: pointer;
+            transition: all var(--tr); white-space: nowrap; box-shadow: var(--sh);
+        }
+        .chip:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-dim); }
+
+        /* ─── FILES LIST ─────────────────────────────────── */
+        .files-section { display: flex; flex-direction: column; gap: 10px; }
+        .section-hdr {
+            display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px;
+        }
+        .section-lbl {
+            font-family: var(--fd); font-size: .68rem; font-weight: 600;
+            color: var(--t3); letter-spacing: .1em; text-transform: uppercase;
+        }
+        .count-badge {
+            font-family: var(--fd); font-size: .65rem; font-weight: 600;
+            color: var(--blue); background: var(--blue-dim);
+            padding: 2px 10px; border-radius: 100px; border: 1px solid #BFDBFE;
+        }
+        .no-files {
+            padding: 22px; background: var(--white); border: 1px dashed var(--bd);
+            border-radius: var(--r); text-align: center;
+            color: var(--t3); font-size: .875rem;
+        }
+        .file-list { display: flex; flex-direction: column; gap: 8px; }
+
+        /* ─── FILE CARD ──────────────────────────────────── */
+        .file-card {
+            background: var(--white); border: 1px solid var(--bd);
+            border-left: 4px solid var(--bd);
+            border-radius: var(--r); padding: 14px 16px;
+            display: grid; grid-template-columns: 1fr auto; gap: 12px;
+            box-shadow: var(--sh);
+            animation: slideIn .25s ease-out;
+            transition: border-left-color .5s ease;
+        }
+        @keyframes slideIn { from { opacity:0; transform:translateX(-8px); } to { opacity:1; transform:translateX(0); } }
+        .file-card.s-understood    { border-left-color: var(--ok); }
+        .file-card.s-reading       { border-left-color: #60A5FA; }
+        .file-card.s-received      { border-left-color: var(--bd); }
+        .file-card.s-needs-clarify { border-left-color: var(--warn); }
+
+        .file-main { display: flex; flex-direction: column; gap: 5px; }
+        .file-name { font-family: var(--fm); font-size: .8375rem; font-weight: 500; color: var(--t1); }
+        .file-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .file-size  { font-family: var(--fm); font-size: .72rem; color: var(--t3); }
+        .file-meaning {
+            font-size: .8rem; color: var(--navy-mid); font-weight: 600;
+            display: flex; align-items: center; gap: 5px;
+        }
+        .file-meaning::before { content:'→'; opacity:.5; font-weight: 400; }
+        .file-conf { font-family: var(--fm); font-size: .72rem; color: var(--t3); }
+        .file-acts { display: flex; align-items: center; gap: 14px; margin-top: 5px; }
+        .file-act {
+            background: none; border: none; color: var(--t3);
+            font-family: var(--fb); font-size: .78rem; font-weight: 500;
+            cursor: pointer; padding: 0;
+            text-decoration: underline; text-underline-offset: 2px;
+            transition: color var(--tr);
+        }
+        .file-act:hover     { color: var(--blue); }
+        .file-act.rm        { color: #FCA5A5; }
+        .file-act.rm:hover  { color: var(--err); }
+
+        .status-badge {
+            display: flex; align-items: center; gap: 6px;
+            font-family: var(--fd); font-size: .68rem; font-weight: 600;
+            padding: 4px 10px; border-radius: var(--r);
+            white-space: nowrap; align-self: flex-start; flex-shrink: 0;
+            border: 1px solid transparent;
+        }
+        .status-badge .dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+        .badge-understood { background:var(--ok-bg); color:var(--ok); border-color:var(--ok-bd); }
+        .badge-understood .dot { background:var(--ok); }
+        .badge-reading    { background:var(--blue-dim); color:var(--blue); border-color:#BFDBFE; }
+        .badge-reading .dot { background:var(--blue); animation:blink 1s ease-in-out infinite; }
+        .badge-received   { background:var(--s1); color:var(--t3); border-color:var(--bd); }
+        .badge-received .dot { background:var(--t3); }
+        .badge-needs-clarify { background:var(--warn-bg); color:var(--warn); border-color:var(--warn-bd); }
+        .badge-needs-clarify .dot { background:var(--warn); }
+        @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.2;} }
+
+        /* ─── ADD MORE ───────────────────────────────────── */
+        .add-more {
+            background: var(--white); border: 1px solid var(--bd);
+            border-radius: var(--r); padding: 15px 18px;
+            display: flex; align-items: center; justify-content: space-between; gap: 16px;
+            box-shadow: var(--sh);
+        }
+        .add-more-txt { font-size: .875rem; font-weight: 600; color: var(--t1); }
+        .add-more-hint { font-size: .8rem; color: var(--t3); margin-top: 2px; }
+
+        /* ─── FIRST READ ─────────────────────────────────── */
+        .first-read {
+            background: var(--navy); border-radius: var(--r2);
+            padding: 22px; display: flex; flex-direction: column; gap: 12px;
+            box-shadow: 0 2px 12px rgba(28,52,97,.2);
+            animation: fadeUp .35s ease-out;
+        }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+        .first-read-lbl {
+            font-family: var(--fd); font-size: .68rem; font-weight: 700;
+            color: rgba(255,255,255,.55); letter-spacing: .12em; text-transform: uppercase;
+        }
+        .first-read-status { font-family: var(--fd); font-size: .9375rem; font-weight: 600; color: #fff; }
+        .first-read-missing {
+            font-size: .8125rem; color: rgba(255,255,255,.6);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .first-read-missing::before { content:'○'; opacity:.7; }
+        .btn-primary {
+            background: var(--white); color: var(--navy);
+            border: none; font-family: var(--fd); font-size: .875rem; font-weight: 700;
+            padding: 11px 22px; border-radius: var(--r);
+            cursor: pointer; transition: all var(--tr);
+            align-self: flex-start;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-primary:hover { background: #EFF6FF; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+        .btn-primary:active { transform: translateY(0); }
+        .btn-primary:disabled { opacity:.65; cursor:not-allowed; transform:none; box-shadow:none; }
+        .btn-sec {
+            background: none; border: 1px solid var(--bd);
+            color: var(--t2); font-family: var(--fb); font-size: .8125rem; font-weight: 600;
+            padding: 7px 16px; border-radius: var(--r);
+            cursor: pointer; transition: all var(--tr); white-space: nowrap; flex-shrink: 0;
+        }
+        .btn-sec:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-dim); }
+
+        /* ─── CONTEXT ASSISTANT ──────────────────────────── */
+        .col-assistant { position: sticky; top: 72px; align-self: start; }
+        .assistant {
+            background: var(--white); border: 1px solid var(--bd);
+            border-radius: var(--r2); box-shadow: var(--sh2);
+            overflow: hidden;
+        }
+        .asst-head {
+            background: var(--navy); padding: 14px 18px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .asst-role {
+            font-family: var(--fd); font-size: .75rem; font-weight: 700;
+            color: rgba(255,255,255,.9); letter-spacing: .08em; text-transform: uppercase;
+        }
+        .asst-state {
+            display: flex; align-items: center; gap: 7px;
+            font-family: var(--fd); font-size: .68rem; font-weight: 600;
+            color: rgba(255,255,255,.45); letter-spacing: .06em; text-transform: uppercase;
+        }
+        .asst-state .dot { width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,.35); transition: background .4s; }
+        .asst-state.active .dot { background:#34D399; animation:blink 2.5s ease-in-out infinite; }
+        .asst-body { padding: 18px; }
+
+        /* Empty state */
+        .asst-intro { font-size: .9375rem; color: var(--t1); font-weight: 500; margin-bottom: 14px; line-height: 1.5; }
+
+        .asst-block {
+            background: var(--s1); border: 1px solid var(--bd);
+            border-radius: var(--r); padding: 12px 14px; margin-bottom: 12px;
+        }
+        .asst-block-lbl {
+            font-family: var(--fd); font-size: .63rem; font-weight: 700;
+            color: var(--t3); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 5px;
+        }
+        .asst-block-text { font-size: .875rem; color: var(--t2); line-height: 1.45; }
+        .asst-note { font-size: .8125rem; color: var(--t3); line-height: 1.5; margin-bottom: 14px; }
+
+        .btn-ghost {
+            background: none; border: 1px solid var(--bd); color: var(--t2);
+            font-family: var(--fb); font-size: .8125rem; font-weight: 600;
+            padding: 8px 16px; border-radius: var(--r);
+            cursor: pointer; transition: all var(--tr); width: 100%; text-align: center;
+        }
+        .btn-ghost:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-dim); }
+
+        /* Context textarea */
+        .ctx-textarea {
+            width: 100%; background: var(--s1); border: 1px solid var(--bd);
+            color: var(--t1); font-family: var(--fb); font-size: .875rem;
+            padding: 10px 12px; border-radius: var(--r);
+            resize: vertical; min-height: 84px; outline: none; line-height: 1.5;
+            transition: border-color var(--tr);
+        }
+        .ctx-textarea:focus { border-color: var(--bd-focus); box-shadow: 0 0 0 3px rgba(37,99,235,.1); }
+        .ctx-textarea::placeholder { color: var(--t3); }
+        .ctx-row { display: flex; gap: 8px; margin-top: 8px; }
+
+        /* Active state */
+        .asst-ready {
+            font-family: var(--fd); font-size: .875rem; font-weight: 700;
+            color: var(--ok); margin-bottom: 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .asst-ready svg { flex-shrink: 0; }
+
+        .assumptions-box {
+            background: var(--s1); border: 1px solid var(--bd);
+            border-radius: var(--r); margin-bottom: 16px; overflow: hidden;
+        }
+        .assumptions-lbl {
+            font-family: var(--fd); font-size: .63rem; font-weight: 700;
+            color: var(--t3); letter-spacing: .1em; text-transform: uppercase;
+            padding: 10px 14px 8px; border-bottom: 1px solid var(--bd);
+        }
+        .assumption-row {
+            display: flex; align-items: center; gap: 10px;
+            padding: 8px 14px; border-bottom: 1px solid var(--bd);
+        }
+        .assumption-row:last-child { border-bottom: none; }
+        .akey { font-family: var(--fd); font-size: .68rem; font-weight: 600; color: var(--t3); min-width: 68px; flex-shrink: 0; text-transform: uppercase; letter-spacing: .06em; }
+        .aval { font-size: .8125rem; color: var(--t1); font-weight: 500; flex: 1; }
+        .aval.missing { color: var(--t3); font-weight: 400; }
+        .acorrect {
+            background: none; border: none; color: var(--t3); cursor: pointer;
+            font-family: var(--fb); font-size: .72rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 100px; transition: all var(--tr);
+            border: 1px solid transparent;
+        }
+        .acorrect:hover { color: var(--blue); background: var(--blue-dim); border-color: #BFDBFE; }
+        .acorrect.add { color: var(--blue); }
+        .acorrect.add:hover { background: var(--blue-dim); border-color: #BFDBFE; }
+
+        /* Fork */
+        .fork-head {
+            background: var(--warn-bg); border: 1px solid var(--warn-bd);
+            border-radius: var(--r); padding: 10px 14px; margin-bottom: 14px;
+        }
+        .fork-lbl {
+            font-family: var(--fd); font-size: .63rem; font-weight: 700;
+            color: var(--warn); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px;
+        }
+        .fork-note { font-size: .8125rem; color: var(--t2); line-height: 1.5; }
+
+        .question-box {
+            background: var(--s1); border: 1px solid var(--bd);
+            border-radius: var(--r); padding: 14px; margin-bottom: 12px;
+        }
+        .question-text { font-size: .875rem; color: var(--t1); font-weight: 500; line-height: 1.5; margin-bottom: 14px; }
+        .radio-opts { display: flex; flex-direction: column; gap: 6px; }
+        .radio-opt {
+            display: flex; align-items: flex-start; gap: 10px; cursor: pointer;
+            padding: 8px 10px; border-radius: var(--r);
+            border: 1px solid transparent; transition: all var(--tr);
+        }
+        .radio-opt:hover { background: var(--white); border-color: var(--bd); }
+        .radio-opt:has(input:checked) { background: var(--blue-dim); border-color: #BFDBFE; }
+        .radio-opt input[type="radio"] {
+            appearance: none; -webkit-appearance: none;
+            width: 15px; height: 15px; border: 1.5px solid var(--bd);
+            border-radius: 50%; flex-shrink: 0; cursor: pointer;
+            transition: all var(--tr); margin-top: 1px;
+        }
+        .radio-opt input[type="radio"]:checked { border-color: var(--blue); background: var(--blue); box-shadow: inset 0 0 0 3px var(--blue-dim); }
+        .radio-opt label { font-size: .8125rem; color: var(--t2); cursor: pointer; line-height: 1.4; font-weight: 500; }
+        .radio-opt:has(input:checked) label { color: var(--blue-hi); }
+
+        .asst-acts { display: flex; flex-direction: column; gap: 8px; }
+        .btn-skip {
+            background: none; border: 1px solid var(--bd); color: var(--t2);
+            font-family: var(--fb); font-size: .8125rem; font-weight: 600;
+            padding: 9px 16px; border-radius: var(--r);
+            cursor: pointer; transition: all var(--tr); text-align: center;
+        }
+        .btn-skip:hover { background: var(--s1); color: var(--t1); }
+        .btn-answer {
+            background: var(--navy); color: #fff;
+            border: none; font-family: var(--fd); font-size: .875rem; font-weight: 700;
+            padding: 10px 16px; border-radius: var(--r);
+            cursor: pointer; transition: all var(--tr); text-align: center;
+        }
+        .btn-answer:hover { background: var(--navy-mid); }
+
+        /* Recorded */
+        .recorded {
+            background: var(--ok-bg); border: 1px solid var(--ok-bd);
+            border-radius: var(--r); padding: 12px 14px;
+            animation: fadeIn .3s ease;
+        }
+        @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+        .recorded-lbl {
+            font-family: var(--fd); font-size: .63rem; font-weight: 700;
+            color: var(--ok); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px;
+        }
+        .recorded-text { font-size: .8125rem; color: var(--t1); font-weight: 500; }
+        .recorded-note { font-size: .75rem; color: var(--t3); margin-top: 3px; }
+
+        /* ─── WHAT NEXT ──────────────────────────────────── */
+        .what-next {
+            margin-top: 52px; padding-top: 40px;
+            border-top: 1px solid var(--bd);
+        }
+        .what-next-lbl {
+            font-family: var(--fd); font-size: .68rem; font-weight: 700;
+            color: var(--t3); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px;
+        }
+        .what-next-title {
+            font-family: var(--fd); font-size: 1.125rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 22px; letter-spacing: -.01em;
+        }
+        .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+        .step {
+            background: var(--white); border: 1px solid var(--bd);
+            border-radius: var(--r2); padding: 20px 18px;
+            box-shadow: var(--sh);
+            display: flex; flex-direction: column; gap: 10px;
+            transition: box-shadow var(--tr), border-color var(--tr);
+        }
+        .step:hover { box-shadow: var(--sh2); border-color: #BFDBFE; }
+        .step-num {
+            font-family: var(--fd); font-size: 1.5rem; font-weight: 700;
+            color: var(--navy); line-height: 1; opacity: .18;
+        }
+        .step-text { font-size: .8375rem; color: var(--t2); line-height: 1.5; font-weight: 500; }
+
+        /* ─── UTILITY ────────────────────────────────────── */
+        .hidden { display: none !important; }
+
+        /* ─── RESPONSIVE ─────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .main-grid { grid-template-columns: 1fr 340px; }
+        }
+        @media (max-width: 840px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .col-assistant { position: static; }
+            .steps { grid-template-columns: repeat(2,1fr); }
+        }
+        @media (max-width: 540px) {
+            .page { padding: 24px 16px 60px; }
+            .header-inner { padding: 0 16px; }
+            .intro-title { font-size: 1.5rem; }
+            .user-name { display: none; }
+            .steps { grid-template-columns: 1fr; }
+            .upload-zone { padding: 36px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <div class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 16 16">
+                    <path d="M3 8h10M8 3v10" stroke-width="2"/>
+                    <circle cx="8" cy="8" r="2.5" stroke-width="1.5"/>
+                </svg>
+            </div>
+            DotAI Churn Model
+        </div>
+        <div class="user-zone">
+            <div class="user-avatar" aria-hidden="true">SD</div>
+            <span class="user-name">Srinath D.</span>
+            <button class="btn-logout" onclick="window.location.href='/logout'">Logout</button>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main class="page">
+
+    <!-- INTRO -->
+    <section class="intro">
+        <div class="intro-eyebrow">Upload &amp; Intake</div>
+        <h1 class="intro-title">Start with whatever you have</h1>
+        <p class="intro-body">Upload sales data, MIS files, review decks, dealer lists, target sheets, watchlists, or notes. I will ask only when something changes the analysis.</p>
+    </section>
+
+    <!-- MAIN GRID -->
+    <div class="main-grid">
+
+        <!-- LEFT: UPLOAD -->
+        <div class="col-upload">
+
+            <!-- UPLOAD ZONE -->
+            <div class="upload-zone" id="uploadZone" role="button" tabindex="0"
+                 aria-label="Upload files — click to browse or drag and drop here">
+                <div class="upload-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 15V7M11 7L7.5 10.5M11 7L14.5 10.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 16v1a1 1 0 001 1h12a1 1 0 001-1v-1" stroke-width="1.75" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p class="upload-cta">Drop files here or <button class="upload-link" id="browseBtn" type="button">browse</button></p>
+                <p class="upload-types">CSV · XLSX · PDF · PPTX · DOCX</p>
+                <p class="upload-hint">Sales data, dealer masters, review decks, scheme files, watchlists</p>
+                <input type="file" id="fileInput" multiple accept=".csv,.xlsx,.xls,.pdf,.pptx,.ppt,.docx,.doc,.txt" aria-label="File input">
+            </div>
+
+            <!-- CHIPS -->
+            <div class="chips-section">
+                <div class="chips-label">Common uploads</div>
+                <div class="chips" role="list">
+                    <button class="chip" role="listitem" onclick="sim('secondary_sales_Oct.csv')">Secondary sales</button>
+                    <button class="chip" role="listitem" onclick="sim('dealer_master_south.xlsx')">Dealer master</button>
+                    <button class="chip" role="listitem" onclick="sim('Q3_review_deck.pptx')">Review deck</button>
+                    <button class="chip" role="listitem" onclick="sim('target_sheet_FY26.xlsx')">Target sheet</button>
+                    <button class="chip" role="listitem" onclick="sim('beat_plan_zone3.csv')">Beat plan</button>
+                    <button class="chip" role="listitem" onclick="sim('watchlist_Q3.xlsx')">Watchlist</button>
+                    <button class="chip" role="listitem" onclick="sim('scheme_circular_Diwali.pdf')">Scheme file</button>
+                    <button class="chip" role="listitem" onclick="sim('credit_aging_sept.csv')">Credit aging</button>
+                    <button class="chip" role="listitem" onclick="sim('returns_Oct.csv')">Returns file</button>
+                    <button class="chip" role="listitem" onclick="sim('loyalty_points_Q2.xlsx')">Loyalty points</button>
+                </div>
+            </div>
+
+            <!-- UPLOADED FILES -->
+            <div class="files-section">
+                <div class="section-hdr">
+                    <div class="section-lbl">Uploaded so far</div>
+                    <span class="count-badge hidden" id="countBadge" aria-live="polite"></span>
+                </div>
+                <div id="noFiles" class="no-files" aria-live="polite">No files yet</div>
+                <div class="file-list" id="fileList" role="list" aria-label="Uploaded files"></div>
+            </div>
+
+            <!-- ADD MORE (post-upload) -->
+            <div class="add-more hidden" id="addMore">
+                <div>
+                    <div class="add-more-txt">Add more context files</div>
+                    <div class="add-more-hint">Dealer master, owner map, review deck, watchlist, scheme file</div>
+                </div>
+                <button class="btn-sec" id="addMoreBtn">Upload more</button>
+            </div>
+
+            <!-- FIRST READ (post-upload) -->
+            <div class="first-read hidden" id="firstRead" aria-live="polite">
+                <div class="first-read-lbl">First read</div>
+                <div class="first-read-status">Ready to analyze with current files.</div>
+                <div class="first-read-missing">Missing but not blocking: owner mapping.</div>
+                <button class="btn-primary" id="analyzeBtn" onclick="startAnalysis()">
+                    Start first analysis
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                        <path d="M2.5 7h9M8.5 3.5L12 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: CONTEXT ASSISTANT -->
+        <div class="col-assistant">
+            <div class="assistant" role="complementary" aria-label="Context Assistant">
+
+                <div class="asst-head">
+                    <span class="asst-role">Context Assistant</span>
+                    <div class="asst-state" id="asstState">
+                        <div class="dot"></div>
+                        <span id="asstStateText">Observing</span>
+                    </div>
+                </div>
+
+                <!-- BEFORE UPLOAD -->
+                <div class="asst-body" id="asstEmpty">
+                    <p class="asst-intro">I can start with files or a few answers.</p>
+
+                    <div class="asst-block">
+                        <div class="asst-block-lbl">Default path</div>
+                        <p class="asst-block-text">Field action through territory teams. Dealer-level risk, ranked for area managers.</p>
+                    </div>
+
+                    <p class="asst-note">I will ask only when your files create a real fork in what I should build.</p>
+
+                    <div class="asst-block">
+                        <div class="asst-block-lbl">Useful context</div>
+                        <p class="asst-block-text">Company name, region, or a review deck helps me calibrate faster.</p>
+                    </div>
+
+                    <button class="btn-ghost" style="margin-top:14px;" onclick="toggleCtx()">Tell me context</button>
+
+                    <div class="hidden" id="ctxArea" style="margin-top:12px;">
+                        <textarea class="ctx-textarea"
+                            placeholder="E.g. We sell paints through 8,000 dealers in South India. Field team is 180 people across 6 regions."
+                            aria-label="Describe your company or region"></textarea>
+                        <div class="ctx-row">
+                            <button class="btn-skip" style="flex:1;" onclick="toggleCtx()">Cancel</button>
+                            <button class="btn-answer" style="flex:1;" onclick="saveCtx()">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AFTER UPLOAD -->
+                <div class="asst-body hidden" id="asstActive">
+
+                    <p class="asst-ready">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <circle cx="8" cy="8" r="7" stroke="#047857" stroke-width="1.5"/>
+                            <path d="M5 8l2.5 2.5L11 5.5" stroke="#047857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        I can start.
+                    </p>
+
+                    <div class="assumptions-box">
+                        <div class="assumptions-lbl">Assumptions</div>
+                        <div class="assumption-row">
+                            <span class="akey">Target</span>
+                            <span class="aval">Dealer</span>
+                            <button class="acorrect">Correct</button>
+                        </div>
+                        <div class="assumption-row">
+                            <span class="akey">Risk</span>
+                            <span class="aval">Sales drop vs own history</span>
+                            <button class="acorrect">Correct</button>
+                        </div>
+                        <div class="assumption-row">
+                            <span class="akey">Output</span>
+                            <span class="aval">Area manager call list</span>
+                            <button class="acorrect">Correct</button>
+                        </div>
+                        <div class="assumption-row">
+                            <span class="akey">Missing</span>
+                            <span class="aval missing">Owner mapping</span>
+                            <button class="acorrect add">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- Evidence fork -->
+                    <div class="hidden" id="evidenceFork">
+                        <div class="fork-head">
+                            <div class="fork-lbl">Evidence fork</div>
+                            <p class="fork-note">This upload has both dealer sales and contractor engagement. Which first read should I build?</p>
+                        </div>
+                        <div class="question-box">
+                            <div class="radio-opts" role="radiogroup" aria-label="Choose first read type">
+                                <div class="radio-opt">
+                                    <input type="radio" name="readType" value="dealer" id="opt-a">
+                                    <label for="opt-a">Dealer risk list</label>
+                                </div>
+                                <div class="radio-opt">
+                                    <input type="radio" name="readType" value="contractor" id="opt-b">
+                                    <label for="opt-b">Contractor engagement risk</label>
+                                </div>
+                                <div class="radio-opt">
+                                    <input type="radio" name="readType" value="both" id="opt-c">
+                                    <label for="opt-c">Show both if data links cleanly</label>
+                                </div>
+                                <div class="radio-opt">
+                                    <input type="radio" name="readType" value="infer" id="opt-d">
+                                    <label for="opt-d">Not sure, infer from the files</label>
+                                </div>
+                            </div>
+                            <div class="asst-acts" style="margin-top:14px;">
+                                <button class="btn-skip" onclick="skipFork()">Continue with dealer risk</button>
+                                <button class="btn-answer" onclick="answerFork()">Confirm choice</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recorded assumption -->
+                    <div class="recorded hidden" id="recorded">
+                        <div class="recorded-lbl">Assumption recorded</div>
+                        <p class="recorded-text" id="recordedText">First read: dealer risk list.</p>
+                        <p class="recorded-note">You can change this later.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- WHAT NEXT -->
+    <section class="what-next" aria-label="What happens next">
+        <div class="what-next-lbl">Process</div>
+        <h2 class="what-next-title">What I will do next</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">01</div>
+                <div class="step-text">Read files and documents</div>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <div class="step-text">Infer company, customer entity, file grain, and useful fields</div>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <div class="step-text">Ask only blocking questions</div>
+            </div>
+            <div class="step">
+                <div class="step-num">04</div>
+                <div class="step-text">Build a first risk read with assumptions visible</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script>
+/* ── FILE TYPE MAP ─────────────────────────── */
+const TYPE_MAP = {
+    secondary:  { meaning:'Invoice-line sales',  conf:86 },
+    sales:      { meaning:'Invoice-line sales',  conf:83 },
+    primary:    { meaning:'Primary sales',       conf:82 },
+    dealer:     { meaning:'Dealer master',       conf:91 },
+    master:     { meaning:'Dealer master',       conf:88 },
+    target:     { meaning:'Target sheet',        conf:89 },
+    territory:  { meaning:'Territory file',      conf:87 },
+    beat:       { meaning:'Beat plan',           conf:90 },
+    watchlist:  { meaning:'Watchlist',           conf:93 },
+    scheme:     { meaning:'Scheme circular',     conf:85 },
+    credit:     { meaning:'Credit aging',        conf:88 },
+    aging:      { meaning:'Credit aging',        conf:87 },
+    return:     { meaning:'Returns data',        conf:82 },
+    loyalty:    { meaning:'Loyalty points',      conf:84 },
+    review:     { meaning:'Review deck',         conf:78 },
+    deck:       { meaning:'Review deck',         conf:76 },
+    field:      { meaning:'Field visit log',     conf:80 },
+    visit:      { meaning:'Field visit log',     conf:81 },
+    claim:      { meaning:'Service claims',      conf:85 },
+};
+function inferType(name) {
+    const l = name.toLowerCase();
+    for (const [k,v] of Object.entries(TYPE_MAP)) if (l.includes(k)) return v;
+    return { meaning:'Sales document', conf:72 };
+}
+function fmtSize(b) {
+    if (b < 1024) return b + ' B';
+    if (b < 1048576) return (b/1024).toFixed(0) + ' KB';
+    return (b/1048576).toFixed(1) + ' MB';
+}
+function esc(t) { const d=document.createElement('div'); d.appendChild(document.createTextNode(t)); return d.innerHTML; }
+
+/* ── FILE MANAGER ──────────────────────────── */
+const files = [];
+let nextId = 0;
+
+function addFile(name, size) {
+    const id = ++nextId;
+    const t  = inferType(name);
+    files.push({ id, name, size: size || (Math.random()*13000+500|0)*1024, meaning:t.meaning, conf:t.conf, status:'received' });
+    renderCard(files[files.length-1]);
+    refreshCount();
+    if (files.length === 1) setTimeout(onFirstUpload, 350);
+    setTimeout(() => setStatus(id,'reading'), 300);
+    setTimeout(() => {
+        setStatus(id,'understood');
+        const done = files.filter(f => f.status==='understood').length;
+        if (done >= 2) setTimeout(showFork, 500);
+    }, 2400 + (Math.random()*700|0));
+}
+
+function renderCard(f) {
+    document.getElementById('noFiles').classList.add('hidden');
+    const el = document.createElement('div');
+    el.className = 'file-card s-received';
+    el.id = 'fc-' + f.id;
+    el.setAttribute('role','listitem');
+    el.innerHTML = `
+      <div class="file-main">
+        <div class="file-name">${esc(f.name)}</div>
+        <div class="file-meta">
+          <span class="file-size">${fmtSize(f.size)}</span>
+          <span class="file-meaning" id="fm-${f.id}">${esc(f.meaning)}</span>
+          <span class="file-conf">${f.conf}%</span>
+        </div>
+        <div class="file-acts">
+          <button class="file-act" onclick="changeMeaning(${f.id})">Change meaning</button>
+          <button class="file-act" onclick="document.getElementById('fileInput').click()">Add related file</button>
+          <button class="file-act rm" onclick="removeFile(${f.id})">Remove</button>
+        </div>
+      </div>
+      <div class="status-badge badge-received" id="fb-${f.id}" aria-live="polite">
+        <div class="dot"></div><span>Received</span>
+      </div>`;
+    document.getElementById('fileList').appendChild(el);
+}
+
+const STATUS_DEF = {
+    received:      ['s-received',    'badge-received',    'Received'],
+    reading:       ['s-reading',     'badge-reading',     'Reading'],
+    understood:    ['s-understood',  'badge-understood',  'Understood'],
+    'needs-clarify':['s-needs-clarify','badge-needs-clarify','Needs clarification'],
+};
+function setStatus(id, s) {
+    const f = files.find(x=>x.id===id); if (!f) return;
+    f.status = s;
+    const card = document.getElementById('fc-'+id);
+    const badge = document.getElementById('fb-'+id);
+    if (!card||!badge) return;
+    const [cCls,bCls,label] = STATUS_DEF[s] || STATUS_DEF.received;
+    card.className = 'file-card ' + cCls;
+    badge.className = 'status-badge ' + bCls;
+    badge.setAttribute('aria-label','Status: '+label);
+    badge.innerHTML = `<div class="dot"></div><span>${label}</span>`;
+}
+function refreshCount() {
+    const b = document.getElementById('countBadge');
+    b.textContent = `${files.length} file${files.length===1?'':'s'}`;
+    b.classList.remove('hidden');
+}
+function onFirstUpload() {
+    document.getElementById('addMore').classList.remove('hidden');
+    document.getElementById('firstRead').classList.remove('hidden');
+    document.getElementById('asstEmpty').classList.add('hidden');
+    document.getElementById('asstActive').classList.remove('hidden');
+    const s = document.getElementById('asstState');
+    s.classList.add('active');
+    document.getElementById('asstStateText').textContent = 'Active';
+}
+function showFork() {
+    const f = document.getElementById('evidenceFork');
+    if (!f.classList.contains('hidden')) return;
+    f.classList.remove('hidden');
+}
+function removeFile(id) {
+    const el = document.getElementById('fc-'+id); if (!el) return;
+    el.style.transition = 'opacity .18s, transform .18s';
+    el.style.opacity = '0'; el.style.transform = 'translateX(8px)';
+    setTimeout(() => {
+        el.remove();
+        files.splice(files.findIndex(f=>f.id===id),1);
+        refreshCount();
+        if (files.length===0) resetAll();
+    }, 180);
+}
+function resetAll() {
+    document.getElementById('noFiles').classList.remove('hidden');
+    document.getElementById('countBadge').classList.add('hidden');
+    document.getElementById('addMore').classList.add('hidden');
+    document.getElementById('firstRead').classList.add('hidden');
+    document.getElementById('asstEmpty').classList.remove('hidden');
+    document.getElementById('asstActive').classList.add('hidden');
+    document.getElementById('asstState').classList.remove('active');
+    document.getElementById('asstStateText').textContent = 'Observing';
+    document.getElementById('evidenceFork').classList.add('hidden');
+    document.getElementById('recorded').classList.add('hidden');
+}
+function changeMeaning(id) {
+    const f = files.find(x=>x.id===id); if (!f) return;
+    const el = document.getElementById('fm-'+id); if (!el) return;
+    const parent = el.closest('.file-main');
+    const ex = parent.querySelector('.meaning-picker');
+    if (ex) { ex.remove(); return; }
+    const opts = [...new Set(Object.values(TYPE_MAP).map(v=>v.meaning))].slice(0,8);
+    const picker = document.createElement('div');
+    picker.className = 'meaning-picker';
+    picker.style.cssText = 'margin-top:8px;background:var(--white);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);animation:fadeIn .2s ease;';
+    opts.forEach(m => {
+        const btn = document.createElement('button');
+        btn.textContent = m;
+        btn.style.cssText = 'display:block;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--bd);color:var(--t2);font-family:var(--fb);font-size:.8rem;font-weight:500;padding:8px 12px;cursor:pointer;transition:background var(--tr),color var(--tr);';
+        btn.onmouseenter = () => { btn.style.background='var(--blue-dim)'; btn.style.color='var(--blue)'; };
+        btn.onmouseleave = () => { btn.style.background=''; btn.style.color='var(--t2)'; };
+        btn.onclick = () => { f.meaning = m; el.textContent = m; picker.remove(); };
+        picker.appendChild(btn);
+    });
+    parent.appendChild(picker);
+}
+
+/* ── ASSISTANT ─────────────────────────────── */
+function skipFork() {
+    document.getElementById('evidenceFork').classList.add('hidden');
+    document.getElementById('recordedText').textContent = 'First read: dealer risk list.';
+    document.getElementById('recorded').querySelector('.recorded-lbl').textContent = 'Assumption recorded';
+    document.getElementById('recorded').classList.remove('hidden');
+}
+function answerFork() {
+    const sel = document.querySelector('input[name="readType"]:checked');
+    if (!sel) {
+        const qb = document.querySelector('.question-box');
+        qb.style.outline = '2px solid '+getComputedStyle(document.documentElement).getPropertyValue('--blue');
+        setTimeout(()=>{ qb.style.outline=''; }, 700);
+        return;
+    }
+    document.getElementById('evidenceFork').classList.add('hidden');
+    const labels = { dealer:'First read: dealer risk list.', contractor:'First read: contractor engagement risk.', both:'First read: both views if data links cleanly.', infer:'First read: inferred from uploaded files.' };
+    document.getElementById('recordedText').textContent = labels[sel.value] || labels.dealer;
+    document.getElementById('recorded').querySelector('.recorded-lbl').textContent = 'Choice recorded';
+    document.getElementById('recorded').classList.remove('hidden');
+}
+function startAnalysis() {
+    const btn = document.getElementById('analyzeBtn');
+    btn.innerHTML = 'Starting analysis…';
+    btn.disabled = true;
+    setTimeout(() => { window.location.href = 'workroom.html'; }, 1000);
+}
+function toggleCtx() { document.getElementById('ctxArea').classList.toggle('hidden'); }
+function saveCtx() {
+    const ta = document.querySelector('#ctxArea textarea');
+    toggleCtx();
+    if (ta && ta.value.trim()) {
+        const note = document.querySelector('#asstEmpty .asst-note');
+        if (note) { note.textContent='Context saved. I will apply it to my assumptions.'; note.style.color='var(--ok)'; }
+    }
+}
+function sim(name) { addFile(name, (Math.random()*12000+700|0)*1024); }
+
+/* ── DRAG & DROP ───────────────────────────── */
+const zone  = document.getElementById('uploadZone');
+const input = document.getElementById('fileInput');
+const browse = document.getElementById('browseBtn');
+
+browse.addEventListener('click', e => { e.stopPropagation(); input.click(); });
+zone.addEventListener('click',   e => { if (e.target!==browse) input.click(); });
+zone.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') { e.preventDefault(); input.click(); } });
+input.addEventListener('change', e => { Array.from(e.target.files).forEach(f=>addFile(f.name,f.size)); e.target.value=''; });
+zone.addEventListener('dragover',  e => { e.preventDefault(); zone.classList.add('drag-over'); });
+zone.addEventListener('dragleave', e => { if (!zone.contains(e.relatedTarget)) zone.classList.remove('drag-over'); });
+zone.addEventListener('drop', e => {
+    e.preventDefault(); zone.classList.remove('drag-over');
+    Array.from(e.dataTransfer.files).forEach(f=>addFile(f.name,f.size));
+});
+document.getElementById('addMoreBtn').addEventListener('click', () => input.click());
+document.addEventListener('dragover', e => e.preventDefault());
+</script>
+</body>
+</html>

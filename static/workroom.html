@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DotAI Churn Model — Data Workroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#F4F5F7;--white:#FFFFFF;--s1:#EEF0F4;--s2:#E5E8EE;
+  --bd:#D4D8E1;--bd-l:#C2C8D4;
+  --navy:#1C3461;--navy-mid:#254D9A;--navy-dim:#EBF0F8;
+  --blue:#2563EB;--blue-hi:#1D4ED8;--blue-dim:#EFF6FF;
+  --t1:#0F172A;--t2:#475569;--t3:#94A3B8;
+  --ok:#047857;--ok-bg:#ECFDF5;--ok-bd:#A7F3D0;
+  --warn:#B45309;--warn-bg:#FFFBEB;--warn-bd:#FDE68A;
+  --err:#B91C1C;--err-bg:#FEF2F2;--err-bd:#FCA5A5;
+  --fd:'Montserrat',sans-serif;--fb:'Nunito Sans',sans-serif;--fm:'JetBrains Mono',monospace;
+  --r:6px;--r2:10px;
+  --sh:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.05);
+  --sh2:0 2px 8px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.05);
+  --tr:.15s ease;
+}
+
+html{font-size:15px;scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--t1);min-height:100vh;line-height:1.65;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px}
+
+/* ── HEADER ── */
+.site-header{background:var(--white);border-bottom:1px solid var(--bd);height:56px;display:flex;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.header-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;width:100%;gap:16px}
+.header-left{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand{font-family:var(--fd);font-size:.9375rem;font-weight:700;color:var(--navy);letter-spacing:.01em;display:flex;align-items:center;gap:8px;text-decoration:none}
+.brand-mark{width:28px;height:28px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand-mark svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.header-pills{display:flex;align-items:center;gap:8px}
+.pill{border-radius:100px;padding:3px 12px;font-size:.72rem;font-family:var(--fd);font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.pill-session{background:var(--s1);border:1px solid var(--bd);color:var(--t2)}
+.pill-phase{background:var(--blue-dim);border:1px solid #BFDBFE;color:var(--blue)}
+.pill-phase.phase-checking{background:var(--blue-dim);border-color:#BFDBFE;color:var(--blue)}
+.pill-phase.phase-ready{background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok)}
+.header-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.user-avatar{width:30px;height:30px;background:var(--navy-dim);border:1.5px solid var(--bd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:.65rem;font-weight:700;color:var(--navy-mid);flex-shrink:0}
+.user-name{font-size:.875rem;color:var(--t2);font-weight:500}
+.btn-text-hdr{background:none;border:none;color:var(--t3);font-family:var(--fb);font-size:.8rem;font-weight:600;cursor:pointer;transition:color var(--tr);padding:0}
+.btn-text-hdr:hover{color:var(--t2)}
+.btn-outlined-hdr{background:none;border:1px solid var(--bd);color:var(--t2);font-family:var(--fb);font-size:.8rem;font-weight:500;padding:5px 14px;border-radius:var(--r);cursor:pointer;transition:var(--tr)}
+.btn-outlined-hdr:hover{border-color:var(--t2);color:var(--t1)}
+
+/* ── PROCESSING SCREEN ── */
+#processingScreen{position:fixed;inset:0;z-index:200;background:var(--bg);display:flex;flex-direction:column}
+#processingScreen .site-header{flex-shrink:0}
+.processing-body{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 28px}
+.processing-card{background:var(--white);border:1px solid var(--bd);border-top:3px solid var(--navy);border-radius:var(--r2);box-shadow:var(--sh2);padding:36px 40px;width:100%;max-width:540px}
+.proc-eyebrow{font-family:var(--fd);font-size:.68rem;font-weight:700;color:var(--blue);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.proc-title{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:22px}
+.proc-bar-track{height:4px;background:var(--s2);border-radius:100px;margin-bottom:26px;overflow:hidden}
+.proc-bar-fill{height:100%;background:var(--navy);border-radius:100px;width:0%;transition:width .6s ease}
+.proc-log{display:flex;flex-direction:column;gap:9px;min-height:160px;margin-bottom:22px}
+.proc-line{display:flex;align-items:flex-start;gap:10px;font-size:.8375rem;color:var(--t2);opacity:0;animation:logIn .28s ease forwards}
+@keyframes logIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.proc-icon{font-family:var(--fm);font-size:.78rem;flex-shrink:0;margin-top:1px;width:16px;text-align:center}
+.proc-icon.ok{color:var(--ok)}
+.proc-icon.spin{color:var(--blue);display:inline-block;animation:spin .9s linear infinite}
+.proc-icon.pending{color:var(--t3)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.proc-line-text{}
+.proc-footer{display:flex;justify-content:flex-end}
+.btn-skip-proc{background:none;border:none;color:var(--t3);font-family:var(--fb);font-size:.8375rem;font-weight:600;cursor:pointer;padding:0;transition:color var(--tr);display:flex;align-items:center;gap:6px}
+.btn-skip-proc:hover{color:var(--blue)}
+
+/* ── WORKROOM ── */
+#workroomContent{display:none}
+#workroomContent.visible{display:block;animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+.page{max-width:1280px;margin:0 auto;padding:24px 28px 120px}
+
+/* ── PHASE TRACK ── */
+.phase-track{display:flex;align-items:center;margin-bottom:18px}
+.phase-step{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.phase-circle{width:24px;height:24px;border-radius:50%;border:2px solid var(--bd);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:.65rem;font-weight:700;color:var(--t3);background:var(--white);flex-shrink:0;transition:all .4s ease}
+.phase-step.done  .phase-circle{background:var(--ok);border-color:var(--ok);color:#fff}
+.phase-step.active .phase-circle{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 0 0 3px rgba(28,52,97,.14)}
+.phase-label{font-family:var(--fd);font-size:.72rem;font-weight:600;color:var(--t3);white-space:nowrap;transition:color .4s ease}
+.phase-step.done   .phase-label{color:var(--ok)}
+.phase-step.active .phase-label{color:var(--navy)}
+.phase-connector{flex:1;height:1px;background:var(--bd);min-width:16px;max-width:56px;margin:0 10px}
+
+/* ── PROGRESS SUMMARY ── */
+.progress-bar{background:var(--white);border:1px solid var(--bd);border-radius:var(--r2);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:var(--sh);margin-bottom:22px;border-left:4px solid var(--warn);transition:border-left-color .4s,background .4s,border-color .4s}
+.progress-bar.pb-q2{border-left-color:var(--blue)}
+.progress-bar.pb-ready{border-left-color:var(--ok);background:var(--ok-bg);border-color:var(--ok-bd)}
+.pb-text{flex:1}
+.pb-title{font-family:var(--fd);font-size:.9375rem;font-weight:700;color:var(--navy);margin-bottom:3px}
+.pb-sub{font-size:.875rem;color:var(--t2)}
+.pb-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+
+/* ── WORKROOM GRID ── */
+.workroom-grid{display:grid;grid-template-columns:1fr 384px;gap:22px;align-items:start;margin-bottom:22px}
+.col-left{display:flex;flex-direction:column;gap:18px}
+.col-right{position:sticky;top:68px;align-self:start;display:flex;flex-direction:column;gap:14px}
+
+/* ── SECTION HEADER ── */
+.sec-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.sec-title{font-family:var(--fd);font-size:.68rem;font-weight:700;color:var(--t3);letter-spacing:.12em;text-transform:uppercase}
+.sec-act{background:none;border:none;color:var(--blue);font-family:var(--fb);font-size:.78rem;font-weight:600;cursor:pointer;padding:0;transition:color var(--tr)}
+.sec-act:hover{color:var(--blue-hi)}
+
+/* ── FILE EVIDENCE CARD ── */
+.fev-card{background:var(--white);border:1px solid var(--bd);border-left:4px solid var(--ok);border-radius:var(--r2);padding:18px 20px;box-shadow:var(--sh)}
+.fev-card.needs{border-left-color:var(--warn)}
+.fev-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px}
+.fev-info{flex:1}
+.fev-name{font-family:var(--fm);font-size:.875rem;font-weight:500;color:var(--t1);margin-bottom:3px}
+.fev-stats{font-family:var(--fm);font-size:.72rem;color:var(--t3);display:flex;gap:10px;margin-bottom:6px}
+.fev-meaning{font-size:.875rem;color:var(--navy-mid);font-weight:600;display:flex;align-items:center;gap:6px}
+.fev-meaning::before{content:'→';opacity:.45;font-weight:400}
+.fev-badge{display:flex;align-items:center;gap:6px;font-family:var(--fd);font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:var(--r);white-space:nowrap;flex-shrink:0;align-self:flex-start;border:1px solid transparent}
+.fev-badge .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.fbg-ok{background:var(--ok-bg);color:var(--ok);border-color:var(--ok-bd)}
+.fbg-ok .dot{background:var(--ok)}
+.fbg-warn{background:var(--warn-bg);color:var(--warn);border-color:var(--warn-bd)}
+.fbg-warn .dot{background:var(--warn)}
+
+/* Evidence field table */
+.ev-table{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin-bottom:14px}
+.ev-thead{display:grid;grid-template-columns:130px 140px 1fr;padding:5px 12px;border-bottom:1px solid var(--bd)}
+.ev-thead span{font-family:var(--fd);font-size:.6rem;font-weight:700;color:var(--t3);letter-spacing:.1em;text-transform:uppercase}
+.ev-row{display:grid;grid-template-columns:130px 140px 1fr;padding:7px 12px;border-bottom:1px solid var(--bd);align-items:center}
+.ev-row:last-child{border-bottom:none}
+.ev-row:nth-child(even){background:var(--white)}
+.ev-fname{font-family:var(--fm);font-size:.775rem;color:var(--t1)}
+.ev-ftype{font-size:.775rem;color:var(--navy-mid);font-weight:600}
+.ev-fstat{font-size:.75rem;color:var(--t3)}
+
+.fev-actions{display:flex;gap:16px}
+.fev-act{background:none;border:none;color:var(--t3);font-family:var(--fb);font-size:.775rem;font-weight:500;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:2px;transition:color var(--tr)}
+.fev-act:hover{color:var(--blue)}
+.fev-act.danger:hover{color:var(--err)}
+
+/* ── ASSUMPTIONS PANEL ── */
+.assumptions-panel{background:var(--white);border:1px solid var(--bd);border-radius:var(--r2);box-shadow:var(--sh);overflow:hidden}
+.assm-table{width:100%;border-collapse:collapse}
+.assm-row td{padding:9px 16px;border-bottom:1px solid var(--bd);vertical-align:middle}
+.assm-row:last-child td{border-bottom:none}
+.assm-row.hl-amber td{background:var(--warn-bg)}
+.assm-row.hl-blue  td{background:var(--blue-dim)}
+
+.td-label{font-family:var(--fd);font-size:.63rem;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;white-space:nowrap;width:120px}
+.td-val{font-size:.8375rem;font-weight:500;color:var(--t1);min-width:140px}
+.td-val.unknown{color:var(--warn)}
+.td-val.missing{color:var(--t3);font-style:italic;font-weight:400}
+.td-src{width:155px}
+.td-act{width:55px;text-align:right}
+
+.sb{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;font-family:var(--fd);font-size:.6rem;font-weight:700;white-space:nowrap;border:1px solid transparent;letter-spacing:.03em}
+.sb-data    {background:var(--blue-dim);color:var(--blue);border-color:#BFDBFE}
+.sb-confirmed{background:var(--ok-bg);color:var(--ok);border-color:var(--ok-bd)}
+.sb-needs   {background:var(--warn-bg);color:var(--warn);border-color:var(--warn-bd)}
+.sb-default {background:var(--s2);color:var(--t3)}
+.sb-missing {background:var(--s1);color:var(--t3);font-style:italic}
+
+.act-btn{background:none;border:none;color:var(--t3);font-family:var(--fb);font-size:.75rem;font-weight:600;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:2px;transition:color var(--tr);white-space:nowrap}
+.act-btn:hover{color:var(--blue)}
+.act-btn.add{color:var(--blue)}
+.act-btn.add:hover{color:var(--blue-hi)}
+.act-btn.warn{color:var(--warn)}
+
+/* ── QUESTION CARD ── */
+.question-card{background:var(--white);border:1px solid var(--bd);border-top:3px solid var(--warn);border-radius:var(--r2);box-shadow:var(--sh2);overflow:hidden;transition:border-top-color .4s ease}
+.question-card.qc-q2{border-top-color:var(--blue)}
+
+.qc-head{background:var(--s1);padding:11px 16px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between}
+.qc-tag{font-family:var(--fd);font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.qc-tag.blocking{color:var(--err)}
+.qc-tag.checking{color:var(--blue)}
+.qc-num{font-family:var(--fd);font-size:.65rem;font-weight:600;color:var(--t3)}
+
+.qc-body{padding:16px}
+.q-text{font-family:var(--fd);font-size:.9375rem;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.35}
+.q-why{font-size:.8rem;color:var(--t2);line-height:1.55;padding:10px 12px;background:var(--s1);border-radius:var(--r);border-left:2px solid var(--bd);margin-bottom:14px}
+.q-why strong{color:var(--t1);font-weight:600}
+
+.radio-opts{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.radio-opt{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;border-radius:var(--r);border:1px solid transparent;transition:all var(--tr);cursor:pointer}
+.radio-opt:hover{background:var(--s1);border-color:var(--bd)}
+.radio-opt:has(input:checked){background:var(--blue-dim);border-color:#BFDBFE}
+.radio-opt input[type=radio]{appearance:none;-webkit-appearance:none;width:15px;height:15px;border:1.5px solid var(--bd);border-radius:50%;flex-shrink:0;cursor:pointer;transition:all var(--tr);margin-top:2px}
+.radio-opt input[type=radio]:checked{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 3px var(--blue-dim)}
+.radio-opt label{cursor:pointer;line-height:1.3}
+.ro-main{font-size:.8125rem;color:var(--t2);font-weight:500;display:block}
+.ro-detail{font-family:var(--fm);font-size:.68rem;color:var(--t3);display:block;margin-top:2px}
+.radio-opt:has(input:checked) .ro-main{color:var(--blue-hi);font-weight:600}
+
+/* Context toggle */
+.ctx-toggle{background:none;border:none;color:var(--blue);font-family:var(--fb);font-size:.78rem;font-weight:600;cursor:pointer;padding:0;margin-bottom:10px;display:flex;align-items:center;gap:6px;transition:color var(--tr)}
+.ctx-toggle:hover{color:var(--blue-hi)}
+.ctx-area{margin-bottom:12px;display:none}
+.ctx-area.open{display:block;animation:fadeIn .2s ease}
+.ctx-textarea{width:100%;background:var(--s1);border:1px solid var(--bd);color:var(--t1);font-family:var(--fb);font-size:.875rem;padding:9px 12px;border-radius:var(--r);resize:vertical;min-height:70px;outline:none;line-height:1.5;transition:border-color var(--tr)}
+.ctx-textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.ctx-textarea::placeholder{color:var(--t3);font-style:italic}
+
+.q-actions{display:flex;flex-direction:column;gap:7px}
+.btn-navy{background:var(--navy);color:#fff;border:none;font-family:var(--fd);font-size:.875rem;font-weight:700;padding:10px 18px;border-radius:var(--r);cursor:pointer;transition:all var(--tr);text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-navy:hover{background:var(--navy-mid)}
+.btn-outline-q{background:none;border:1px solid var(--bd);color:var(--t2);font-family:var(--fb);font-size:.8125rem;font-weight:600;padding:8px 16px;border-radius:var(--r);cursor:pointer;transition:all var(--tr);text-align:center}
+.btn-outline-q:hover{background:var(--s1);color:var(--t1)}
+.btn-dashed-q{background:none;border:1px dashed var(--bd);color:var(--t3);font-family:var(--fb);font-size:.8rem;font-weight:500;padding:8px 14px;border-radius:var(--r);cursor:pointer;transition:all var(--tr);text-align:center}
+.btn-dashed-q:hover{border-color:var(--blue);color:var(--blue)}
+
+/* ── START MODEL PANEL ── */
+.start-model-panel{background:var(--navy);border-radius:var(--r2);padding:22px;box-shadow:0 2px 12px rgba(28,52,97,.2);animation:fadeUp .35s ease-out}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.smp-lbl{font-family:var(--fd);font-size:.63rem;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.smp-title{font-family:var(--fd);font-size:.9375rem;font-weight:700;color:#fff;margin-bottom:14px}
+.smp-items{display:flex;flex-direction:column;gap:5px;margin-bottom:20px}
+.smp-item{font-size:.8125rem;color:rgba(255,255,255,.72);display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.smp-item::before{content:'·';flex-shrink:0;opacity:.7}
+.smp-acts{display:flex;flex-direction:column;gap:8px}
+.btn-start{background:#fff;color:var(--navy);border:none;font-family:var(--fd);font-size:.9rem;font-weight:700;padding:12px 22px;border-radius:var(--r);cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-start:hover{background:#EFF6FF;transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.btn-start:active{transform:translateY(0)}
+.btn-smp-ghost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.8);font-family:var(--fd);font-size:.78rem;font-weight:600;padding:9px 16px;border-radius:var(--r);cursor:pointer;transition:all var(--tr);text-align:center}
+.btn-smp-ghost:hover{background:rgba(255,255,255,.2)}
+
+/* ── UPLOAD MORE CARD ── */
+.upload-more-card{background:var(--white);border:1px dashed var(--bd);border-radius:var(--r2);padding:16px 18px;box-shadow:var(--sh)}
+.umc-title{font-family:var(--fd);font-size:.68rem;font-weight:700;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.umc-hint{font-size:.8rem;color:var(--t3);margin-bottom:12px;line-height:1.45}
+.btn-upload-more{width:100%;background:var(--s1);border:1px solid var(--bd);color:var(--t2);font-family:var(--fb);font-size:.8125rem;font-weight:600;padding:9px 16px;border-radius:var(--r);cursor:pointer;transition:all var(--tr);text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-upload-more:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-dim)}
+
+/* ── NEW FILE NOTIFICATION ── */
+.new-file-notify{background:var(--blue-dim);border:1px solid #BFDBFE;border-radius:var(--r);padding:12px 14px;display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;animation:fadeIn .3s ease}
+.nfn-icon{color:var(--blue);flex-shrink:0;margin-top:1px}
+.nfn-text{font-size:.8125rem;color:var(--t2);line-height:1.4}
+.nfn-text strong{color:var(--t1);font-weight:600}
+
+/* ── GATE SECTION ── */
+.gate-section{background:var(--white);border:1px solid var(--bd);border-radius:var(--r2);padding:20px 22px;box-shadow:var(--sh)}
+.gate-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.gate-title{font-family:var(--fd);font-size:.68rem;font-weight:700;color:var(--t3);letter-spacing:.12em;text-transform:uppercase}
+.gate-items{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:16px}
+.gate-item{border:1px solid var(--bd);border-radius:var(--r);padding:12px 12px;background:var(--s1);display:flex;flex-direction:column;gap:6px;transition:all .4s ease}
+.gi-label{font-family:var(--fd);font-size:.7rem;font-weight:600;color:var(--t2);line-height:1.3}
+.gi-status{font-family:var(--fd);font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;display:flex;align-items:center;gap:5px}
+.gs-ready   {color:var(--ok)}
+.gs-assumed {color:var(--blue)}
+.gs-needs   {color:var(--warn)}
+.gs-blocking{color:var(--err)}
+.gate-item.gi-ready   {background:var(--ok-bg);border-color:var(--ok-bd)}
+.gate-item.gi-assumed {background:var(--blue-dim);border-color:#BFDBFE}
+.gate-item.gi-needs   {background:var(--warn-bg);border-color:var(--warn-bd)}
+.gate-item.gi-blocking{background:var(--err-bg);border-color:var(--err-bd)}
+
+/* Conclusion */
+.conclusion{border-radius:var(--r);padding:13px 16px;border:1px solid var(--bd);transition:all .4s ease}
+.conclusion.cc-err    {background:var(--err-bg);border-color:var(--err-bd)}
+.conclusion.cc-warn   {background:var(--warn-bg);border-color:var(--warn-bd)}
+.conclusion.cc-ok     {background:var(--ok-bg);border-color:var(--ok-bd)}
+.conclusion-lbl{font-family:var(--fd);font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.cc-err  .conclusion-lbl{color:var(--err)}
+.cc-warn .conclusion-lbl{color:var(--warn)}
+.cc-ok   .conclusion-lbl{color:var(--ok)}
+.conclusion-text{font-size:.8375rem;color:var(--t1);font-weight:500;line-height:1.5}
+
+/* ── DEMO BAR ── */
+.demo-bar{position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);padding:10px 28px;display:flex;align-items:center;gap:10px;box-shadow:0 -2px 12px rgba(0,0,0,.15)}
+.demo-lbl{font-family:var(--fd);font-size:.63rem;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:.12em;text-transform:uppercase;margin-right:4px;flex-shrink:0}
+.btn-demo{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.75);font-family:var(--fd);font-size:.68rem;font-weight:700;padding:5px 14px;border-radius:var(--r);cursor:pointer;transition:all var(--tr);white-space:nowrap}
+.btn-demo:hover{background:rgba(255,255,255,.2);color:#fff}
+.btn-demo.active{background:#fff;color:var(--navy);border-color:#fff}
+.demo-sep{width:1px;height:18px;background:rgba(255,255,255,.15);margin:0 6px;flex-shrink:0}
+
+/* ── UTILITY ── */
+.hidden{display:none!important}
+.fade-in{animation:fadeIn .3s ease}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .workroom-grid{grid-template-columns:1fr 340px}
+  .gate-items{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:840px){
+  .workroom-grid{grid-template-columns:1fr}
+  .col-right{position:static}
+  .gate-items{grid-template-columns:repeat(3,1fr)}
+  .phase-label{display:none}
+}
+@media(max-width:560px){
+  .page{padding:16px 16px 110px}
+  .header-inner{padding:0 16px}
+  .gate-items{grid-template-columns:repeat(2,1fr)}
+  .processing-card{padding:28px 22px}
+  .user-name{display:none}
+  .header-pills{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     PROCESSING SCREEN
+═══════════════════════════════════ -->
+<div id="processingScreen">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="upload.html" class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3v10" stroke-width="2"/><circle cx="8" cy="8" r="2.5" stroke-width="1.5"/></svg>
+          </div>
+          DotAI Churn Model
+        </a>
+      </div>
+      <div class="header-right">
+        <div class="user-avatar">SD</div>
+        <span class="user-name">Srinath D.</span>
+      </div>
+    </div>
+  </header>
+  <div class="processing-body">
+    <div class="processing-card">
+      <div class="proc-eyebrow">Analysis started</div>
+      <h2 class="proc-title">Reading your files</h2>
+      <div class="proc-bar-track"><div class="proc-bar-fill" id="procBar"></div></div>
+      <div class="proc-log" id="procLog"></div>
+      <div class="proc-footer">
+        <button class="btn-skip-proc" onclick="skipProcessing()">
+          Skip to results
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     WORKROOM CONTENT
+═══════════════════════════════════ -->
+<div id="workroomContent">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="upload.html" class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3v10" stroke-width="2"/><circle cx="8" cy="8" r="2.5" stroke-width="1.5"/></svg>
+          </div>
+          DotAI Churn Model
+        </a>
+        <div class="header-pills">
+          <span class="pill pill-session">Unnamed session</span>
+          <span class="pill pill-phase" id="headerPhasePill">Understanding data</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="user-avatar">SD</div>
+        <span class="user-name">Srinath D.</span>
+        <button class="btn-text-hdr">Save</button>
+        <button class="btn-outlined-hdr" onclick="window.location.href='upload.html'">Exit</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- PHASE TRACK -->
+    <div class="phase-track" id="phaseTrack" aria-label="Progress">
+      <div class="phase-step done" id="ps1">
+        <div class="phase-circle">✓</div>
+        <span class="phase-label">Reading files</span>
+      </div>
+      <div class="phase-connector"></div>
+      <div class="phase-step active" id="ps2">
+        <div class="phase-circle">2</div>
+        <span class="phase-label">Understanding data</span>
+      </div>
+      <div class="phase-connector"></div>
+      <div class="phase-step" id="ps3">
+        <div class="phase-circle">3</div>
+        <span class="phase-label">Checking readiness</span>
+      </div>
+      <div class="phase-connector"></div>
+      <div class="phase-step" id="ps4">
+        <div class="phase-circle">4</div>
+        <span class="phase-label">Ready to model</span>
+      </div>
+    </div>
+
+    <!-- PROGRESS SUMMARY -->
+    <div class="progress-bar" id="progressBar">
+      <div class="pb-text">
+        <div class="pb-title" id="pbTitle">Building your data understanding</div>
+        <div class="pb-sub"  id="pbSub">I found 2 files. I can start modeling after 2 remaining checks.</div>
+      </div>
+      <div class="pb-right">
+        <button class="btn-outlined-hdr" onclick="document.getElementById('wkFileInput').click()">+ Add files</button>
+      </div>
+    </div>
+
+    <!-- WORKROOM GRID -->
+    <div class="workroom-grid">
+
+      <!-- ── LEFT: EVIDENCE BOARD ── -->
+      <div class="col-left">
+
+        <!-- NEW FILE NOTIFICATION (hidden until upload) -->
+        <div id="newFileNotify" class="new-file-notify hidden">
+          <div class="nfn-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#2563EB" stroke-width="1.5"/><path d="M8 5v4M8 11v.5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="nfn-text"><strong id="nfnFileName">New file received.</strong> I am checking whether this adds context to the analysis.</div>
+        </div>
+
+        <!-- EVIDENCE BOARD HEADING -->
+        <div class="sec-hdr">
+          <div class="sec-title">Evidence Board</div>
+        </div>
+
+        <!-- FILE 1 -->
+        <div class="fev-card">
+          <div class="fev-top">
+            <div class="fev-info">
+              <div class="fev-name">secondary_sales.csv</div>
+              <div class="fev-stats">
+                <span>12,976 KB</span>
+                <span>·</span>
+                <span>48,234 rows</span>
+              </div>
+              <div class="fev-meaning">Invoice-line dealer sales</div>
+            </div>
+            <div class="fev-badge fbg-ok"><div class="dot"></div>Understood</div>
+          </div>
+          <div class="ev-table">
+            <div class="ev-thead">
+              <span>Column</span><span>Interpretation</span><span>Evidence</span>
+            </div>
+            <div class="ev-row"><span class="ev-fname">dealer_code</span><span class="ev-ftype">Customer key</span><span class="ev-fstat">94% rows · 18,420 unique values</span></div>
+            <div class="ev-row"><span class="ev-fname">invoice_date</span><span class="ev-ftype">Date field</span><span class="ev-fstat">Apr 2024 → Mar 2026 · 24 months</span></div>
+            <div class="ev-row"><span class="ev-fname">net_sales</span><span class="ev-ftype">Value field</span><span class="ev-fstat">₹ assumed · avg ₹1.2L/dealer/mo</span></div>
+            <div class="ev-row"><span class="ev-fname">sku_code</span><span class="ev-ftype">Product key</span><span class="ev-fstat">847 unique products</span></div>
+            <div class="ev-row"><span class="ev-fname">state</span><span class="ev-ftype">Region</span><span class="ev-fstat">18 states</span></div>
+            <div class="ev-row"><span class="ev-fname">territory</span><span class="ev-ftype">Sub-region</span><span class="ev-fstat">156 territories</span></div>
+          </div>
+          <div class="fev-actions">
+            <button class="fev-act">Change meaning</button>
+            <button class="fev-act">Add context</button>
+            <button class="fev-act danger">Mark not relevant</button>
+          </div>
+        </div>
+
+        <!-- FILE 2 -->
+        <div class="fev-card">
+          <div class="fev-top">
+            <div class="fev-info">
+              <div class="fev-name">dealer_master.xlsx</div>
+              <div class="fev-stats">
+                <span>284 KB</span>
+                <span>·</span>
+                <span>18,420 rows</span>
+              </div>
+              <div class="fev-meaning">Dealer master</div>
+            </div>
+            <div class="fev-badge fbg-ok"><div class="dot"></div>Understood</div>
+          </div>
+          <div class="ev-table">
+            <div class="ev-thead">
+              <span>Column</span><span>Interpretation</span><span>Evidence</span>
+            </div>
+            <div class="ev-row"><span class="ev-fname">dealer_code</span><span class="ev-ftype">Join key</span><span class="ev-fstat">Matches 94% of sales rows</span></div>
+            <div class="ev-row"><span class="ev-fname">dealer_name</span><span class="ev-ftype">Name field</span><span class="ev-fstat">Hindi/English names present</span></div>
+            <div class="ev-row"><span class="ev-fname">territory</span><span class="ev-ftype">Region link</span><span class="ev-fstat">156 territories · 18 states</span></div>
+            <div class="ev-row"><span class="ev-fname">owner_name</span><span class="ev-ftype">RSM/owner</span><span class="ev-fstat">83% populated</span></div>
+            <div class="ev-row"><span class="ev-fname">credit_limit</span><span class="ev-ftype">Financial</span><span class="ev-fstat">Not used in risk model</span></div>
+          </div>
+          <div class="fev-actions">
+            <button class="fev-act">Change meaning</button>
+            <button class="fev-act">Add context</button>
+            <button class="fev-act danger">Mark not relevant</button>
+          </div>
+        </div>
+
+        <!-- ADDITIONAL UPLOADED FILES (dynamic) -->
+        <div id="extraFiles"></div>
+
+        <!-- ASSUMPTIONS -->
+        <div>
+          <div class="sec-hdr">
+            <div class="sec-title">Assumptions</div>
+            <button class="sec-act">Edit all</button>
+          </div>
+          <div class="assumptions-panel">
+            <table class="assm-table" aria-label="Current assumptions">
+              <tbody>
+                <tr class="assm-row" id="ar-target">
+                  <td class="td-label">Target entity</td>
+                  <td class="td-val">Dealer</td>
+                  <td class="td-src"><span class="sb sb-data">Inferred from data</span></td>
+                  <td class="td-act"><button class="act-btn">Edit</button></td>
+                </tr>
+                <tr class="assm-row hl-amber" id="ar-custkey">
+                  <td class="td-label">Customer key</td>
+                  <td class="td-val unknown" id="av-custkey">Unknown — 2 candidates</td>
+                  <td class="td-src"><span class="sb sb-needs" id="as-custkey">Needs confirmation</span></td>
+                  <td class="td-act"><button class="act-btn warn" id="ab-custkey">!</button></td>
+                </tr>
+                <tr class="assm-row" id="ar-date">
+                  <td class="td-label">Date field</td>
+                  <td class="td-val">invoice_date</td>
+                  <td class="td-src"><span class="sb sb-data">Inferred from data</span></td>
+                  <td class="td-act"><button class="act-btn">Edit</button></td>
+                </tr>
+                <tr class="assm-row" id="ar-value">
+                  <td class="td-label">Value field</td>
+                  <td class="td-val">net_sales</td>
+                  <td class="td-src"><span class="sb sb-data">Inferred from data</span></td>
+                  <td class="td-act"><button class="act-btn">Edit</button></td>
+                </tr>
+                <tr class="assm-row" id="ar-history">
+                  <td class="td-label">History</td>
+                  <td class="td-val">Apr 2024 – Mar 2026</td>
+                  <td class="td-src"><span class="sb sb-data">Inferred from data</span></td>
+                  <td class="td-act"></td>
+                </tr>
+                <tr class="assm-row" id="ar-risk">
+                  <td class="td-label">Risk direction</td>
+                  <td class="td-val" id="av-risk">Sales drop vs baseline</td>
+                  <td class="td-src"><span class="sb sb-default" id="as-risk">Default assumption</span></td>
+                  <td class="td-act"><button class="act-btn" id="ab-risk">Edit</button></td>
+                </tr>
+                <tr class="assm-row" id="ar-owner">
+                  <td class="td-label">Owner mapping</td>
+                  <td class="td-val missing">—</td>
+                  <td class="td-src"><span class="sb sb-missing">Missing, not blocking</span></td>
+                  <td class="td-act"><button class="act-btn add">Add</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /col-left -->
+
+      <!-- ── RIGHT: QUESTION + UPLOAD ── -->
+      <div class="col-right">
+
+        <!-- QUESTION CARD (visible in blocked + q2) -->
+        <div class="question-card" id="questionCard">
+          <div class="qc-head">
+            <span class="qc-tag blocking" id="qcTag">Before modeling — Blocking</span>
+            <span class="qc-num" id="qcNum">Question 1 of 2</span>
+          </div>
+          <div class="qc-body">
+            <div class="q-text" id="qText">I found two customer identifiers. Which one is the dealer?</div>
+            <div class="q-why" id="qWhy">
+              <strong>dealer_code</strong> appears in 94% of rows. <strong>distributor_code</strong> appears in 38% of rows. These may be the same entity with different names. The customer identifier is the foundation of every risk score — if I use the wrong column, risk scores will not be meaningful.
+            </div>
+
+            <!-- Q1 options -->
+            <div class="radio-opts" id="q1Opts">
+              <div class="radio-opt">
+                <input type="radio" name="q1" id="q1a" value="dealer_code">
+                <label for="q1a">
+                  <span class="ro-main">dealer_code</span>
+                  <span class="ro-detail">94% coverage · 18,420 unique values</span>
+                </label>
+              </div>
+              <div class="radio-opt">
+                <input type="radio" name="q1" id="q1b" value="distributor_code">
+                <label for="q1b">
+                  <span class="ro-main">distributor_code</span>
+                  <span class="ro-detail">38% coverage · may be a different entity</span>
+                </label>
+              </div>
+              <div class="radio-opt">
+                <input type="radio" name="q1" id="q1c" value="same">
+                <label for="q1c">
+                  <span class="ro-main">Both refer to the same dealer</span>
+                  <span class="ro-detail">Different name, same value — I will merge them</span>
+                </label>
+              </div>
+              <div class="radio-opt">
+                <input type="radio" name="q1" id="q1d" value="neither">
+                <label for="q1d">
+                  <span class="ro-main">Neither — I need to upload a dealer master</span>
+                  <span class="ro-detail">I will upload a file with the correct identifier</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Q2 options (hidden) -->
+            <div class="radio-opts hidden" id="q2Opts">
+              <div class="radio-opt">
+                <input type="radio" name="q2" id="q2a" value="sales">
+                <label for="q2a">
+                  <span class="ro-main">Net sales decline vs own 6-month baseline</span>
+                  <span class="ro-detail">Default · revenue-focused</span>
+                </label>
+              </div>
+              <div class="radio-opt">
+                <input type="radio" name="q2" id="q2b" value="frequency">
+                <label for="q2b">
+                  <span class="ro-main">Order frequency drop</span>
+                  <span class="ro-detail">Catches earlier disengagement</span>
+                </label>
+              </div>
+              <div class="radio-opt">
+                <input type="radio" name="q2" id="q2c" value="both">
+                <label for="q2c">
+                  <span class="ro-main">Both — composite risk score</span>
+                  <span class="ro-detail">Weighted combination of both signals</span>
+                </label>
+              </div>
+              <div class="radio-opt">
+                <input type="radio" name="q2" id="q2d" value="model">
+                <label for="q2d">
+                  <span class="ro-main">Not sure — let the model decide</span>
+                  <span class="ro-detail">I will use the data to weight signals</span>
+                </label>
+              </div>
+            </div>
+
+            <button class="ctx-toggle" onclick="toggleCtx()" id="ctxToggle">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Add context
+            </button>
+            <div class="ctx-area" id="ctxArea">
+              <textarea class="ctx-textarea" placeholder="Tell me in your words, or paste notes from your team." aria-label="Add context"></textarea>
+            </div>
+
+            <div class="q-actions" id="qActions">
+              <!-- Q1 actions -->
+              <div id="q1Actions">
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  <button class="btn-dashed-q" onclick="document.getElementById('wkFileInput').click()">Upload dealer master instead</button>
+                  <button class="btn-outline-q" onclick="skipQ1()">Continue with dealer_code</button>
+                  <button class="btn-navy" onclick="confirmQ1()">
+                    Confirm
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7h9M8.5 3.5L12 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                </div>
+              </div>
+              <!-- Q2 actions (hidden) -->
+              <div id="q2Actions" class="hidden">
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  <button class="btn-outline-q" onclick="skipQ2()">Continue with net sales decline</button>
+                  <button class="btn-navy" onclick="confirmQ2()">
+                    Confirm
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7h9M8.5 3.5L12 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- START MODEL PANEL (hidden until ready) -->
+        <div class="start-model-panel hidden" id="startModelPanel">
+          <div class="smp-lbl">Ready to model</div>
+          <div class="smp-title">I will build the first model using:</div>
+          <div class="smp-items">
+            <div class="smp-item">Dealer-level history from Apr 2024 to Mar 2026</div>
+            <div class="smp-item">Net sales decline and order frequency vs each dealer's own baseline</div>
+            <div class="smp-item">18,420 dealers across 18 states</div>
+            <div class="smp-item">24 months of transaction history</div>
+          </div>
+          <div class="smp-acts">
+            <button class="btn-start" onclick="startModel()">
+              Start model
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.5 7h9M8.5 3.5L12 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="btn-smp-ghost">Change assumptions</button>
+            <button class="btn-smp-ghost" onclick="document.getElementById('wkFileInput').click()">Add more files</button>
+          </div>
+        </div>
+
+        <!-- UPLOAD MORE -->
+        <div class="upload-more-card">
+          <div class="umc-title">Add more files</div>
+          <div class="umc-hint">Dealer master, owner map, watchlist, scheme file, review deck</div>
+          <button class="btn-upload-more" onclick="document.getElementById('wkFileInput').click()">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 10V4M7 4L4.5 6.5M7 4L9.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 11h10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></svg>
+            Upload more files
+          </button>
+          <input type="file" id="wkFileInput" multiple accept=".csv,.xlsx,.xls,.pdf,.pptx,.ppt,.docx,.doc,.txt" style="display:none" aria-label="Upload additional files">
+        </div>
+
+      </div><!-- /col-right -->
+    </div><!-- /workroom-grid -->
+
+    <!-- ── MODEL READINESS GATE ── -->
+    <div class="gate-section">
+      <div class="gate-hdr">
+        <span class="gate-title">Model Readiness</span>
+      </div>
+      <div class="gate-items" id="gateItems">
+        <div class="gate-item gi-blocking" id="gi1">
+          <div class="gi-label">Customer entity identified</div>
+          <div class="gi-status gs-blocking"><span>!</span> Needs answer</div>
+        </div>
+        <div class="gate-item gi-assumed" id="gi2">
+          <div class="gi-label">Date history usable</div>
+          <div class="gi-status gs-assumed"><span>~</span> Assumed</div>
+        </div>
+        <div class="gate-item gi-ready" id="gi3">
+          <div class="gi-label">Value measure identified</div>
+          <div class="gi-status gs-ready"><span>✓</span> Ready</div>
+        </div>
+        <div class="gate-item gi-assumed" id="gi4">
+          <div class="gi-label">Data grain understood</div>
+          <div class="gi-status gs-assumed"><span>~</span> Assumed</div>
+        </div>
+        <div class="gate-item gi-needs" id="gi5">
+          <div class="gi-label">Risk definition accepted</div>
+          <div class="gi-status gs-needs"><span>?</span> Needs answer</div>
+        </div>
+        <div class="gate-item gi-assumed" id="gi6">
+          <div class="gi-label">Output scope safe</div>
+          <div class="gi-status gs-assumed"><span>~</span> Assumed</div>
+        </div>
+      </div>
+      <div class="conclusion cc-err" id="conclusion">
+        <div class="conclusion-lbl">Cannot start yet</div>
+        <div class="conclusion-text" id="conclusionText">I need to confirm which column identifies the dealer before modeling. Upload a dealer master, choose a column, or confirm dealer_code is correct.</div>
+      </div>
+    </div>
+
+  </main>
+</div><!-- /workroomContent -->
+
+<!-- ═══════════════════════════════════
+     DEMO BAR
+═══════════════════════════════════ -->
+<div class="demo-bar">
+  <span class="demo-lbl">Demo state:</span>
+  <button class="btn-demo" id="db-proc"  onclick="demoGoto('processing')">Processing</button>
+  <button class="btn-demo active" id="db-blocked" onclick="demoGoto('blocked')">Blocked</button>
+  <button class="btn-demo" id="db-q2"    onclick="demoGoto('q2')">Q2</button>
+  <button class="btn-demo" id="db-ready" onclick="demoGoto('ready')">Ready to model</button>
+  <div class="demo-sep"></div>
+  <button class="btn-demo" onclick="replayProcessing()">↺ Replay processing</button>
+</div>
+
+<script>
+/* ═══════════════════════════════════
+   PROCESSING ANIMATION
+═══════════════════════════════════ */
+const LOG_LINES = [
+  { icon:'ok',   text:'secondary_sales.csv — 48,234 rows' },
+  { icon:'ok',   text:'dealer_master.xlsx — 18,420 dealer records' },
+  { icon:'spin', text:'Identifying entity, date, and value columns…' },
+  { icon:'ok',   text:'dealer_code joins 94% of transaction rows' },
+  { icon:'spin', text:'Checking history range…' },
+  { icon:'ok',   text:'24 months · Apr 2024 to Mar 2026' },
+  { icon:'ok',   text:'Evidence board ready · 2 checks needed before modeling' },
+];
+
+let procTimer = null;
+let procRunning = false;
+
+function startProcessing() {
+  const log = document.getElementById('procLog');
+  const bar = document.getElementById('procBar');
+  log.innerHTML = '';
+  bar.style.width = '0%';
+  procRunning = true;
+
+  LOG_LINES.forEach((line, i) => {
+    procTimer = setTimeout(() => {
+      if (!procRunning) return;
+      const el = document.createElement('div');
+      el.className = 'proc-line';
+      el.style.animationDelay = '0ms';
+      const iconMap = { ok:'✓', spin:'⟳', pending:'·' };
+      el.innerHTML = `<span class="proc-icon ${line.icon}">${iconMap[line.icon]||'·'}</span><span class="proc-line-text">${line.text}</span>`;
+      log.appendChild(el);
+      bar.style.width = `${Math.round(((i+1)/LOG_LINES.length)*92)}%`;
+    }, i * 420);
+  });
+
+  setTimeout(() => {
+    if (!procRunning) return;
+    bar.style.width = '100%';
+    setTimeout(() => {
+      if (!procRunning) return;
+      finishProcessing();
+    }, 600);
+  }, LOG_LINES.length * 420 + 300);
+}
+
+function finishProcessing() {
+  procRunning = false;
+  const screen = document.getElementById('processingScreen');
+  screen.style.animation = 'fadeOut .5s ease forwards';
+  setTimeout(() => {
+    screen.style.display = 'none';
+    showWorkroom('blocked');
+  }, 480);
+}
+
+function skipProcessing() {
+  procRunning = false;
+  clearTimeout(procTimer);
+  document.getElementById('processingScreen').style.display = 'none';
+  showWorkroom('blocked');
+}
+
+function replayProcessing() {
+  document.getElementById('processingScreen').style.display = 'flex';
+  document.getElementById('processingScreen').style.animation = 'fadeIn .3s ease';
+  document.getElementById('workroomContent').style.display = 'none';
+  startProcessing();
+  setDemoActive('db-proc');
+}
+
+/* ═══════════════════════════════════
+   STATE MACHINE
+═══════════════════════════════════ */
+let currentState = 'blocked';
+
+function showWorkroom(state) {
+  document.getElementById('workroomContent').classList.add('visible');
+  setState(state);
+}
+
+function setState(state) {
+  currentState = state;
+
+  // Phase track
+  const steps = {
+    blocked: { done:[1], active:2, none:[3,4] },
+    q2:      { done:[1,2], active:3, none:[4] },
+    ready:   { done:[1,2,3], active:4, none:[] },
+  }[state];
+
+  [1,2,3,4].forEach(n => {
+    const el = document.getElementById('ps'+n);
+    el.classList.remove('done','active');
+    const circle = el.querySelector('.phase-circle');
+    if (steps.done.includes(n)) {
+      el.classList.add('done');
+      circle.textContent = '✓';
+    } else if (steps.active === n) {
+      el.classList.add('active');
+      circle.textContent = n;
+    } else {
+      circle.textContent = n;
+    }
+  });
+
+  // Progress bar
+  const pb = document.getElementById('progressBar');
+  pb.classList.remove('pb-q2','pb-ready');
+  const { title, sub, pbClass, phasePill, phasePillClass } = STATE_DATA[state];
+  document.getElementById('pbTitle').textContent = title;
+  document.getElementById('pbSub').textContent   = sub;
+  if (pbClass) pb.classList.add(pbClass);
+  const pill = document.getElementById('headerPhasePill');
+  pill.textContent = phasePill;
+  pill.className = 'pill pill-phase ' + phasePillClass;
+
+  // Question card vs start model panel
+  const qCard   = document.getElementById('questionCard');
+  const smpanel = document.getElementById('startModelPanel');
+
+  if (state === 'ready') {
+    qCard.classList.add('hidden');
+    smpanel.classList.remove('hidden');
+  } else {
+    qCard.classList.remove('hidden');
+    smpanel.classList.add('hidden');
+
+    // Question card content
+    if (state === 'blocked') {
+      qCard.classList.remove('qc-q2');
+      document.getElementById('qcTag').textContent = 'Before modeling — Blocking';
+      document.getElementById('qcTag').className = 'qc-tag blocking';
+      document.getElementById('qcNum').textContent = 'Question 1 of 2';
+      document.getElementById('qText').textContent = 'I found two customer identifiers. Which one is the dealer?';
+      document.getElementById('qWhy').innerHTML = '<strong>dealer_code</strong> appears in 94% of rows. <strong>distributor_code</strong> appears in 38% of rows. These may be the same entity with different names. The customer identifier is the foundation of every risk score — if I use the wrong column, risk scores will not be meaningful.';
+      document.getElementById('q1Opts').classList.remove('hidden');
+      document.getElementById('q2Opts').classList.add('hidden');
+      document.getElementById('q1Actions').classList.remove('hidden');
+      document.getElementById('q2Actions').classList.add('hidden');
+    } else {
+      qCard.classList.add('qc-q2');
+      document.getElementById('qcTag').textContent = 'One decision remaining';
+      document.getElementById('qcTag').className = 'qc-tag checking';
+      document.getElementById('qcNum').textContent = 'Question 2 of 2';
+      document.getElementById('qText').textContent = 'I found two churn signals. Which should rank dealer risk?';
+      document.getElementById('qWhy').innerHTML = 'Net sales decline captures revenue risk. Order frequency drop catches disengagement earlier — dealers who stop ordering before revenue shows impact. Both are valid; the choice determines who appears at the top of the risk list.';
+      document.getElementById('q1Opts').classList.add('hidden');
+      document.getElementById('q2Opts').classList.remove('hidden');
+      document.getElementById('q1Actions').classList.add('hidden');
+      document.getElementById('q2Actions').classList.remove('hidden');
+    }
+  }
+
+  // Assumptions
+  updateAssumptions(state);
+
+  // Gate
+  updateGate(state);
+
+  // Demo bar
+  const dbMap = { blocked:'db-blocked', q2:'db-q2', ready:'db-ready' };
+  setDemoActive(dbMap[state]);
+}
+
+const STATE_DATA = {
+  blocked: {
+    title: 'Building your data understanding',
+    sub: 'I found 2 files. I can start modeling after 2 remaining checks.',
+    pbClass: '',
+    phasePill: 'Understanding data',
+    phasePillClass: '',
+  },
+  q2: {
+    title: 'Checking readiness',
+    sub: 'Customer identity confirmed. One more decision before modeling can start.',
+    pbClass: 'pb-q2',
+    phasePill: 'Checking readiness',
+    phasePillClass: 'phase-checking',
+  },
+  ready: {
+    title: 'Ready to model',
+    sub: 'All checks complete. You can start the model now.',
+    pbClass: 'pb-ready',
+    phasePill: 'Ready to model',
+    phasePillClass: 'phase-ready',
+  },
+};
+
+function updateAssumptions(state) {
+  const ck_row = document.getElementById('ar-custkey');
+  const ck_val = document.getElementById('av-custkey');
+  const ck_src = document.getElementById('as-custkey');
+  const ck_btn = document.getElementById('ab-custkey');
+  const rk_row = document.getElementById('ar-risk');
+  const rk_val = document.getElementById('av-risk');
+  const rk_src = document.getElementById('as-risk');
+  const rk_btn = document.getElementById('ab-risk');
+
+  // Remove all highlights first
+  document.querySelectorAll('.assm-row').forEach(r => {
+    r.classList.remove('hl-amber','hl-blue');
+  });
+
+  if (state === 'blocked') {
+    ck_val.textContent   = 'Unknown — 2 candidates';
+    ck_val.className     = 'td-val unknown';
+    ck_src.textContent   = 'Needs confirmation';
+    ck_src.className     = 'sb sb-needs';
+    ck_btn.textContent   = '!';
+    ck_btn.className     = 'act-btn warn';
+    ck_row.classList.add('hl-amber');
+
+    rk_val.textContent   = 'Sales drop vs baseline';
+    rk_src.className     = 'sb sb-default';
+    rk_src.textContent   = 'Default assumption';
+    rk_btn.textContent   = 'Edit';
+    rk_btn.className     = 'act-btn';
+
+  } else if (state === 'q2') {
+    ck_val.textContent   = 'dealer_code';
+    ck_val.className     = 'td-val';
+    ck_src.textContent   = 'Confirmed';
+    ck_src.className     = 'sb sb-confirmed';
+    ck_btn.textContent   = '';
+    ck_btn.className     = '';
+
+    rk_val.textContent   = 'Unknown — 2 signals found';
+    rk_val.className     = 'td-val unknown';
+    rk_src.textContent   = 'Needs confirmation';
+    rk_src.className     = 'sb sb-needs';
+    rk_btn.textContent   = '!';
+    rk_btn.className     = 'act-btn warn';
+    rk_row.classList.add('hl-amber');
+
+  } else { // ready
+    ck_val.textContent   = 'dealer_code';
+    ck_val.className     = 'td-val';
+    ck_src.textContent   = 'Confirmed';
+    ck_src.className     = 'sb sb-confirmed';
+    ck_btn.textContent   = '';
+
+    rk_val.textContent   = 'Net sales + order frequency';
+    rk_val.className     = 'td-val';
+    rk_src.textContent   = 'Confirmed';
+    rk_src.className     = 'sb sb-confirmed';
+    rk_btn.textContent   = 'Edit';
+    rk_btn.className     = 'act-btn';
+  }
+}
+
+function updateGate(state) {
+  if (state === 'blocked') {
+    setGate(1, 'gi-blocking', 'gs-blocking', '!', 'Needs answer');
+    setGate(2, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setGate(3, 'gi-ready',    'gs-ready',    '✓', 'Ready');
+    setGate(4, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setGate(5, 'gi-needs',    'gs-needs',    '?', 'Needs answer');
+    setGate(6, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setConclusion('cc-err', 'Cannot start yet', 'I need to confirm which column identifies the dealer before modeling. Upload a dealer master, choose a column, or confirm dealer_code is correct.');
+  } else if (state === 'q2') {
+    setGate(1, 'gi-ready',    'gs-ready',    '✓', 'Ready');
+    setGate(2, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setGate(3, 'gi-ready',    'gs-ready',    '✓', 'Ready');
+    setGate(4, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setGate(5, 'gi-needs',    'gs-needs',    '?', 'Needs answer');
+    setGate(6, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setConclusion('cc-warn', 'Almost ready', 'I can start modeling after one more decision on risk definition. Net sales or order frequency — either is sufficient.');
+  } else {
+    setGate(1, 'gi-ready',    'gs-ready',    '✓', 'Ready');
+    setGate(2, 'gi-ready',    'gs-ready',    '✓', 'Ready');
+    setGate(3, 'gi-ready',    'gs-ready',    '✓', 'Ready');
+    setGate(4, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setGate(5, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setGate(6, 'gi-assumed',  'gs-assumed',  '~', 'Assumed');
+    setConclusion('cc-ok', 'Ready', 'I can build a dealer-level risk view with current files. Validation will use 24 months of history across 18,420 dealers.');
+  }
+}
+
+function setGate(n, itemClass, statusClass, icon, label) {
+  const el = document.getElementById('gi'+n);
+  el.className = 'gate-item ' + itemClass;
+  el.querySelector('.gi-status').className = 'gi-status ' + statusClass;
+  el.querySelector('.gi-status').innerHTML = `<span>${icon}</span> ${label}`;
+}
+
+function setConclusion(cls, lbl, txt) {
+  const el = document.getElementById('conclusion');
+  el.className = 'conclusion ' + cls;
+  el.querySelector('.conclusion-lbl').textContent = lbl;
+  document.getElementById('conclusionText').textContent = txt;
+}
+
+/* ── Q1 HANDLERS ── */
+function confirmQ1() {
+  const sel = document.querySelector('input[name="q1"]:checked');
+  if (!sel) { flashCard(); return; }
+  transitionState('q2');
+}
+function skipQ1() { transitionState('q2'); }
+
+/* ── Q2 HANDLERS ── */
+function confirmQ2() {
+  const sel = document.querySelector('input[name="q2"]:checked');
+  if (!sel) { flashCard(); return; }
+  transitionState('ready');
+}
+function skipQ2() { transitionState('ready'); }
+
+function flashCard() {
+  const qb = document.getElementById('questionCard');
+  qb.style.outline = '2px solid var(--blue)';
+  setTimeout(() => { qb.style.outline = ''; }, 700);
+}
+
+function transitionState(to) {
+  const wk = document.getElementById('workroomContent');
+  wk.style.opacity = '0.6';
+  wk.style.transition = 'opacity .25s ease';
+  setTimeout(() => {
+    setState(to);
+    wk.style.opacity = '1';
+  }, 220);
+}
+
+/* ── START MODEL ── */
+function startModel() {
+  const btn = document.querySelector('.btn-start');
+  btn.innerHTML = 'Starting…';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Model started`;
+    btn.style.background = '#ECFDF5';
+    btn.style.color = '#047857';
+  }, 1200);
+}
+
+/* ── CONTEXT TOGGLE ── */
+function toggleCtx() {
+  const area = document.getElementById('ctxArea');
+  const btn  = document.getElementById('ctxToggle');
+  area.classList.toggle('open');
+  btn.querySelector('svg').style.transform = area.classList.contains('open') ? 'rotate(45deg)' : '';
+}
+
+/* ── UPLOAD MORE ── */
+document.getElementById('wkFileInput').addEventListener('change', function(e) {
+  Array.from(e.target.files).forEach(f => addExtraFile(f.name, f.size));
+  e.target.value = '';
+});
+
+function addExtraFile(name, size) {
+  const notify = document.getElementById('newFileNotify');
+  document.getElementById('nfnFileName').textContent = 'New file received: ' + name + '.';
+  notify.classList.remove('hidden');
+  setTimeout(() => {
+    notify.style.transition = 'opacity .4s';
+    notify.style.opacity = '0';
+    setTimeout(() => { notify.classList.add('hidden'); notify.style.opacity = ''; }, 400);
+  }, 5000);
+
+  const container = document.getElementById('extraFiles');
+  const card = document.createElement('div');
+  card.className = 'fev-card fade-in';
+  card.innerHTML = `
+    <div class="fev-top">
+      <div class="fev-info">
+        <div class="fev-name">${escHtml(name)}</div>
+        <div class="fev-stats"><span>${fmtSize(size||1024*1024)}</span></div>
+        <div class="fev-meaning">Reading…</div>
+      </div>
+      <div class="fev-badge" style="background:var(--blue-dim);color:var(--blue);border-color:#BFDBFE">
+        <div class="dot" style="background:var(--blue);animation:blink 1s infinite"></div>Reading
+      </div>
+    </div>`;
+  container.appendChild(card);
+
+  setTimeout(() => {
+    card.querySelector('.fev-meaning').textContent = 'Sales document';
+    const badge = card.querySelector('.fev-badge');
+    badge.className = 'fev-badge fbg-ok';
+    badge.innerHTML = '<div class="dot"></div>Understood';
+  }, 2400);
+}
+
+function fmtSize(b) {
+  if (b<1024) return b+' B';
+  if (b<1048576) return (b/1024).toFixed(0)+' KB';
+  return (b/1048576).toFixed(1)+' MB';
+}
+function escHtml(t) { const d=document.createElement('div'); d.appendChild(document.createTextNode(t)); return d.innerHTML; }
+
+/* ── DEMO BAR ── */
+function demoGoto(state) {
+  if (state === 'processing') {
+    replayProcessing();
+  } else {
+    document.getElementById('processingScreen').style.display = 'none';
+    document.getElementById('workroomContent').classList.add('visible');
+    setState(state);
+  }
+}
+function setDemoActive(id) {
+  document.querySelectorAll('.btn-demo').forEach(b => b.classList.remove('active'));
+  if (id) document.getElementById(id)?.classList.add('active');
+}
+
+/* ── INIT ── */
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
+startProcessing();
+setDemoActive('db-proc');
+</script>
+</body>
+</html>
