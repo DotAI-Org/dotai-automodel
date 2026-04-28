@@ -12,6 +12,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 ## About
 Churn prediction system with an 8-stage ML pipeline, LLM-based evaluation,
 agent loop, WebSocket chat, and Google OAuth.
@@ -37,9 +46,9 @@ URL: https://churn-tool.onrender.com
 
 ## Project Structure
 
-- **Backend** (`app/`): 36 Python files → [backend/INDEX.md](backend/INDEX.md)
-- **Frontend** (`static/`): 4 files → [frontend/INDEX.md](frontend/INDEX.md)
-- **Config/Other**: 55 files
+- **Backend** (`app/`): 37 Python files → [backend/INDEX.md](backend/INDEX.md)
+- **Frontend** (`static/`): 6 files → [frontend/INDEX.md](frontend/INDEX.md)
+- **Config/Other**: 61 files
 
 ### Backend Folders
 
@@ -50,6 +59,7 @@ URL: https://churn-tool.onrender.com
 - `app/db/` — `engine.py`, `models.py`
 - `app/features/` — `tier3_field.py`, `tier3_loyalty.py`, `tier3_master.py`, `tier3_returns.py`, `tier3_service.py`
 - `app/llm/` — `client.py`
+- `app/loops/` — `context_loop.py`
 - `app/models/` — `schemas.py`
 - `app/stages/` — `s1_upload.py`, `s2_column_map.py`, `s3_churn_window.py`, `s3_field_analysis.py`, `s3_hypothesis.py`, `s4_cross_source.py`, `s4_features.py`, `s4_pruning.py`, `s5_labels.py`, `s6_train.py`, `s7_results.py`, `s8_inference.py`
 
@@ -282,7 +292,28 @@ Patterns: 12 entries
   - How to Test
   - How to Deploy
 
+### `documentation/Roadmap/OrchestratorAgentHLD.md`
+- Orchestrator Agent HLD
+  - Purpose
+  - Market Boundary
+  - Core Idea
+  - UX Promise
+
 ### `documentation/Roadmap/SOTA.md`
+
+### `documentation/Roadmap/SevenLoopsHLD.md`
+- Seven Loops HLD
+  - Goal
+  - Loop 1: Context Loop
+  - Loop 2: Data Understanding Loop
+  - Loop 3: Data Readiness Loop
+
+### `documentation/Roadmap/ToolingLayerHLD.md`
+- Analytics Tooling Layer HLD
+  - Purpose
+  - Relationship To Seven-Loop Orchestration
+  - Design Principle
+  - Tooling Layer Responsibilities
 
 ### `documentation/Roadmap/changesProposedbyCodex.md`
 - Changes Proposed by Codex
@@ -451,6 +482,27 @@ Patterns: 12 entries
   - WebSocket Connections
   - `static/index-old.html`
     - Functions
+
+### `documentation/frontend/Page1Requirements.md`
+- Page 1 Design Brief: Intake And Upload
+  - Page Purpose
+  - Target User
+  - User Mindset
+  - Main Principle
+
+### `documentation/frontend/Page2requirements.md`
+- Page 2 Design Brief: Data Workroom
+  - Page Purpose
+  - Product Promise
+  - Target User Mindset
+  - Main Principle
+
+### `documentation/frontend/Page3requirements.md`
+- Page 3 Design Brief: Model Workshop And Results
+  - Page Purpose
+  - Product Promise
+  - Target User Mindset
+  - Main Principle
 
 ### `pytest.ini`
 Sections: `pytest`

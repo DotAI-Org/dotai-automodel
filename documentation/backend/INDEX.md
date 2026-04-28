@@ -683,6 +683,38 @@ complaint_category, warranty_status, csat_score, tat_days.
   - `generate_structured` → `os.os.environ.get`
   - `generate_structured` → `google.genai.types.GenerateContentConfig`
 
+## `app/loops/`
+
+### `context_loop.py`
+> Context loop for collecting the user's sales action contract.
+
+- **class `ContextQuestion(BaseModel)`** (line 80)
+  > Question used to fill one missing context slot.
+- **class `ActionContextBrief(BaseModel)`** (line 89)
+  > Context artifact that allows later loops to proceed.
+- **class `ContextLoopResult(BaseModel)`** (line 103)
+  > Result of one context-loop pass.
+- `run_context_loop(answers, available_columns)` (line 113)
+  > Return the context-loop state with the next question or final brief.
+- `_normalize_answers(answers)` (line 137)
+  > Normalize supported answer shapes without inventing missing values.
+- `_missing_slots(answers)` (line 153)
+  > Return required slots that do not have usable values.
+- `_question_for(slot, available_columns)` (line 166)
+  > Build the next question for a missing slot.
+- `_build_brief(answers)` (line 181)
+  > Build the action context brief from complete answers.
+- `_normalize_text(value)` (line 207)
+  > Convert a scalar value to trimmed text.
+- `_normalize_output_columns(value)` (line 214)
+  > Convert list or comma text output columns into clean column names.
+- `_has_text(value)` (line 233)
+  > Return whether a value contains usable text.
+- `_merge_suggestions(primary, fallback)` (line 238)
+  > Merge available columns with defaults while preserving order.
+- `_parse_capacity_count(value)` (line 247)
+  > Extract the first integer from a capacity answer.
+
 ## `app/models/`
 
 ### `schemas.py`

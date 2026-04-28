@@ -263,3 +263,69 @@ Type: html
 ### Event Listeners
 
 - `keydown` (1 listener)
+
+## `static/upload.html`
+Type: html
+
+### Functions
+
+- `inferType(name)` (line 24)
+- `fmtSize(b)` (line 29)
+- `esc(t)` (line 34)
+- `addFile(name, size)` (line 40)
+- `renderCard(f)` (line 55)
+- `setStatus(id, s)` (line 87)
+- `refreshCount()` (line 99)
+- `onFirstUpload()` (line 104)
+- `showFork()` (line 113)
+- `removeFile(id)` (line 118)
+- `resetAll()` (line 129)
+- `changeMeaning(id)` (line 141)
+- `skipFork()` (line 164)
+- `answerFork()` (line 170)
+- `startAnalysis()` (line 184)
+- `toggleCtx()` (line 190)
+- `saveCtx()` (line 191)
+- `sim(name)` (line 199)
+
+### Event Listeners
+
+- `change` (1 listener)
+- `click` (3 listeners)
+- `dragleave` (1 listener)
+- `dragover` (2 listeners)
+- `drop` (1 listener)
+- `keydown` (1 listener)
+
+## `static/workroom.html`
+Type: html
+
+### Functions
+
+- `startProcessing()` (line 18)
+- `finishProcessing()` (line 48)
+- `skipProcessing()` (line 58)
+- `replayProcessing()` (line 65)
+- `showWorkroom(state)` (line 78)
+- `setState(state)` (line 83)
+- `updateAssumptions(state)` (line 191)
+- `updateGate(state)` (line 253)
+- `setGate(n, itemClass, statusClass, icon, label)` (line 281)
+- `setConclusion(cls, lbl, txt)` (line 288)
+- `confirmQ1()` (line 296)
+- `skipQ1()` (line 301)
+- `confirmQ2()` (line 304)
+- `skipQ2()` (line 309)
+- `flashCard()` (line 311)
+- `transitionState(to)` (line 317)
+- `startModel()` (line 328)
+- `toggleCtx()` (line 340)
+- `addExtraFile(name, size)` (line 353)
+- `fmtSize(b)` (line 387)
+- `escHtml(t)` (line 392)
+- `demoGoto(state)` (line 395)
+- `setDemoActive(id)` (line 404)
+
+### Event Listeners
+
+- `change` (1 listener)
